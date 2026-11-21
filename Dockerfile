@@ -33,4 +33,8 @@ EXPOSE 4600
 RUN chown -R node:node /app
 USER node
 
+# Liveness: the review UI answers /api/challenges when healthy.
+HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
+  CMD node -e "fetch('http://127.0.0.1:'+(process.env.COMBINATOR_UI_PORT||4600)+'/api/challenges').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"
+
 CMD ["node", "dist/server.js"]

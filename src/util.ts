@@ -29,9 +29,10 @@ export function relativizePaths<T>(value: T, roots: string[]): T {
     }
     if (Array.isArray(v)) return v.map(walk);
     if (v !== null && typeof v === "object") {
-      const out: Record<string, unknown> = {};
-      for (const [k, val] of Object.entries(v as Record<string, unknown>)) out[k] = walk(val);
-      return out;
+      // Rebuild without computed member assignment (no object-injection surface).
+      return Object.fromEntries(
+        Object.entries(v as Record<string, unknown>).map(([k, val]) => [k, walk(val)]),
+      );
     }
     return v;
   };
