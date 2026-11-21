@@ -3,9 +3,9 @@
 - **Mode:** ideation
 - **Review context:** absent (specification_derived)
 - **Requirements/criteria:** 5
-- **Verification:** passed
+- **Verification:** partial
 - **Source integrity critical:** no (sources unchanged)
-- **LLM:** mock/deterministic-mock-v1, 7 call(s), ≈ $0.000516
+- **LLM:** mock/deterministic-mock-v1, 7 call(s), ≈ $0.000439
 
 ## Ideas
 

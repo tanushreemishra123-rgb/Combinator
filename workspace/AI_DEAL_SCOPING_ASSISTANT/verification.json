@@ -11,44 +11,39 @@
     },
     {
       "name": "Candidate assembled (base + approved transplants)",
-      "state": "passed",
-      "detail": "Base SUB_001 copied; 0 transplant(s) applied, 0 rolled back."
+      "state": "failed",
+      "detail": "No Copilot-approved base could be selected; candidate not assembled. Accept or select a base decision, then regenerate."
     },
     {
       "name": "Dependency installation",
       "command": "npm install --no-audit --no-fund --ignore-scripts",
-      "state": "failed",
-      "detail": "Exit -4058. stderr tail: ",
-      "durationMs": 14
+      "state": "skipped",
+      "detail": "Dynamic verification not executed in this pass. Re-run with --verify-exec to run it."
     },
     {
       "name": "Build",
-      "command": "npm run build",
-      "state": "failed",
-      "detail": "Exit -4058. stderr tail: ",
-      "durationMs": 7
+      "state": "skipped",
+      "detail": "Dynamic verification not executed in this pass. Re-run with --verify-exec to run it."
     },
     {
       "name": "Application startup (smoke)",
-      "state": "not_verifiable",
-      "detail": "No command discovered for this step in the candidate."
+      "state": "skipped",
+      "detail": "Dynamic verification not executed in this pass. Re-run with --verify-exec to run it."
     },
     {
       "name": "Organizer smoke tests",
-      "state": "not_verifiable",
-      "detail": "No command discovered for this step in the candidate."
+      "state": "skipped",
+      "detail": "Dynamic verification not executed in this pass. Re-run with --verify-exec to run it."
     },
     {
       "name": "Unit / integration tests",
-      "command": "npm test -- --run",
-      "state": "failed",
-      "detail": "Exit -4058. stderr tail: ",
-      "durationMs": 7
+      "state": "skipped",
+      "detail": "Dynamic verification not executed in this pass. Re-run with --verify-exec to run it."
     },
     {
       "name": "Regression comparison vs base",
-      "state": "not_verifiable",
-      "detail": "Base and candidate test suites must both run to compare; not both available in this environment."
+      "state": "skipped",
+      "detail": "Requires dynamic execution (--verify-exec)."
     },
     {
       "name": "Approved-capability verification",

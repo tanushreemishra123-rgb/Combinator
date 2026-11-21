@@ -25,11 +25,11 @@
       "recommendation": "OPT_2j166qh",
       "reasoning": "SUB_002 has the highest grounded base suitability (100): coverage≈100%, tests=complete, build=present, risk=low.",
       "risk": "low",
-      "state": "accepted",
+      "state": "pending",
       "selectedSource": "OPT_2j166qh",
-      "copilotComment": "Accepted by the submission author for the included fixture workspace.",
+      "copilotComment": null,
       "regenerationRequired": true,
-      "updatedAt": "2026-11-21T10:32:09.822Z"
+      "updatedAt": "proposed"
     },
     {
       "id": "DEC_2dk5yqh",
@@ -55,11 +55,11 @@
       "recommendation": "OPT_7luweka",
       "reasoning": "SUB_001 covers \"Reliability Feedback\" more strongly than the base. SUB_001 shows the strongest grounded coverage (complete) for this requirement.",
       "risk": "high",
-      "state": "accepted",
+      "state": "pending",
       "selectedSource": "OPT_7luweka",
-      "copilotComment": "Accepted by the submission author for the included fixture workspace.",
+      "copilotComment": null,
       "regenerationRequired": true,
-      "updatedAt": "2026-11-21T10:32:09.823Z"
+      "updatedAt": "proposed"
     }
   ]
 }

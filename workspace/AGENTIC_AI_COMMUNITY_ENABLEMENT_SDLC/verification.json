@@ -2,17 +2,17 @@
   "challengeId": "AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC",
   "mode": "ideation",
   "candidate": "synthesized-concept/concept.md",
-  "overall": "passed",
+  "overall": "partial",
   "steps": [
     {
       "name": "Mandatory evaluation areas covered",
-      "state": "passed",
-      "detail": "5/5 areas have at least one accepted idea with grounded evidence."
+      "state": "partial",
+      "detail": "0/5 areas have at least one accepted idea with grounded evidence."
     },
     {
       "name": "Accepted ideas present / rejected ideas absent",
-      "state": "passed",
-      "detail": "6 accepted idea(s) represented; 0 rejected or unselected idea(s) are not presented as accepted."
+      "state": "partial",
+      "detail": "0 accepted idea(s) represented. 6 idea decision(s) remain pending and are excluded from the candidate."
     },
     {
       "name": "Contradictions have recorded decisions",
@@ -27,14 +27,14 @@
     {
       "name": "Assumptions and generated synthesis labeled",
       "state": "passed",
-      "detail": "1 bridging/assumption statement(s) explicitly labeled; generated provenance entries flagged generated=true."
+      "detail": "0 bridging/assumption statement(s) explicitly labeled; generated provenance entries flagged generated=true."
     },
     {
       "name": "Internal consistency & provenance completeness",
-      "state": "passed",
-      "detail": "7 provenance entries link concept content to sources."
+      "state": "partial",
+      "detail": "0 provenance entries link concept content to sources."
     }
   ],
-  "honestSummary": "Synthesized concept covers mandatory areas, represents only accepted ideas, records contradiction decisions, and labels all assumptions.",
+  "honestSummary": "Synthesis produced with gaps noted above; partial/failed steps are reported honestly rather than masked.",
   "sourceIntegrityOk": true
 }

@@ -25,11 +25,11 @@
       "recommendation": "OPT_6rcrzi4",
       "reasoning": "SUB_001 has the highest grounded base suitability (90): coverage≈100%, tests=complete, build=present, risk=high.",
       "risk": "high",
-      "state": "accepted",
+      "state": "pending",
       "selectedSource": "OPT_6rcrzi4",
-      "copilotComment": "Accepted by the submission author for the included fixture workspace.",
+      "copilotComment": null,
       "regenerationRequired": true,
-      "updatedAt": "2026-11-21T10:30:38.224Z"
+      "updatedAt": "proposed"
     }
   ]
 }

@@ -15,7 +15,7 @@
           "specificationDerived": false,
           "sourceLocation": {
             "kind": "specification",
-            "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\review-context\\ai-learning-adventure.json",
+            "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\review-context\\ai-learning-adventure.json",
             "locator": "requirements[0].constraints[0]",
             "excerpt": "Must be browser-accessible with no native app installation required."
           }
@@ -26,7 +26,7 @@
           "specificationDerived": false,
           "sourceLocation": {
             "kind": "specification",
-            "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\review-context\\ai-learning-adventure.json",
+            "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\review-context\\ai-learning-adventure.json",
             "locator": "requirements[0].constraints[1]",
             "excerpt": "Must allow users to start or continue the learning journey from the landing experience."
           }
@@ -35,7 +35,7 @@
       "specificationDerived": false,
       "sourceLocation": {
         "kind": "specification",
-        "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\review-context\\ai-learning-adventure.json",
+        "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\review-context\\ai-learning-adventure.json",
         "locator": "requirements[0]",
         "excerpt": "Browser-accessible learning adventure landing page"
       }
@@ -51,7 +51,7 @@
           "specificationDerived": false,
           "sourceLocation": {
             "kind": "specification",
-            "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\review-context\\ai-learning-adventure.json",
+            "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\review-context\\ai-learning-adventure.json",
             "locator": "requirements[1].constraints[0]",
             "excerpt": "Must include 5–10 pre-seeded AI learning missions."
           }
@@ -62,7 +62,7 @@
           "specificationDerived": false,
           "sourceLocation": {
             "kind": "specification",
-            "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\review-context\\ai-learning-adventure.json",
+            "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\review-context\\ai-learning-adventure.json",
             "locator": "requirements[1].constraints[1]",
             "excerpt": "Each mission must include title, difficulty, objective, lesson content and completion status."
           }
@@ -71,7 +71,7 @@
       "specificationDerived": false,
       "sourceLocation": {
         "kind": "specification",
-        "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\review-context\\ai-learning-adventure.json",
+        "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\review-context\\ai-learning-adventure.json",
         "locator": "requirements[1]",
         "excerpt": "Pre-seeded AI learning missions"
       }
@@ -87,7 +87,7 @@
           "specificationDerived": false,
           "sourceLocation": {
             "kind": "specification",
-            "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\review-context\\ai-learning-adventure.json",
+            "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\review-context\\ai-learning-adventure.json",
             "locator": "requirements[2].constraints[0]",
             "excerpt": "Must include mission-linked quizzes, flashcards or checkpoints."
           }
@@ -98,7 +98,7 @@
           "specificationDerived": false,
           "sourceLocation": {
             "kind": "specification",
-            "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\review-context\\ai-learning-adventure.json",
+            "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\review-context\\ai-learning-adventure.json",
             "locator": "requirements[2].constraints[1]",
             "excerpt": "Must provide explanations, review guidance or learning feedback."
           }
@@ -107,7 +107,7 @@
       "specificationDerived": false,
       "sourceLocation": {
         "kind": "specification",
-        "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\review-context\\ai-learning-adventure.json",
+        "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\review-context\\ai-learning-adventure.json",
         "locator": "requirements[2]",
         "excerpt": "Mission practice activities"
       }
@@ -123,7 +123,7 @@
           "specificationDerived": false,
           "sourceLocation": {
             "kind": "specification",
-            "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\review-context\\ai-learning-adventure.json",
+            "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\review-context\\ai-learning-adventure.json",
             "locator": "requirements[3].constraints[0]",
             "excerpt": "Must answer mission-related questions in beginner-friendly language."
           }
@@ -134,7 +134,7 @@
           "specificationDerived": false,
           "sourceLocation": {
             "kind": "specification",
-            "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\review-context\\ai-learning-adventure.json",
+            "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\review-context\\ai-learning-adventure.json",
             "locator": "requirements[3].constraints[1]",
             "excerpt": "Must adapt to learner level, preference or mission context."
           }
@@ -143,7 +143,7 @@
       "specificationDerived": false,
       "sourceLocation": {
         "kind": "specification",
-        "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\review-context\\ai-learning-adventure.json",
+        "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\review-context\\ai-learning-adventure.json",
         "locator": "requirements[3]",
         "excerpt": "Personalized AI tutor"
       }
@@ -159,7 +159,7 @@
           "specificationDerived": false,
           "sourceLocation": {
             "kind": "specification",
-            "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\review-context\\ai-learning-adventure.json",
+            "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\review-context\\ai-learning-adventure.json",
             "locator": "requirements[4].constraints[0]",
             "excerpt": "Must support explanations, hints, feedback and next-step recommendations."
           }
@@ -170,7 +170,7 @@
           "specificationDerived": false,
           "sourceLocation": {
             "kind": "specification",
-            "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\review-context\\ai-learning-adventure.json",
+            "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\review-context\\ai-learning-adventure.json",
             "locator": "requirements[4].constraints[1]",
             "excerpt": "Feedback must connect to learning content and not be only a generic chatbot."
           }
@@ -179,7 +179,7 @@
       "specificationDerived": false,
       "sourceLocation": {
         "kind": "specification",
-        "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\review-context\\ai-learning-adventure.json",
+        "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\review-context\\ai-learning-adventure.json",
         "locator": "requirements[4]",
         "excerpt": "AI Only Mode and AI feedback flow"
       }
@@ -195,7 +195,7 @@
           "specificationDerived": false,
           "sourceLocation": {
             "kind": "specification",
-            "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\review-context\\ai-learning-adventure.json",
+            "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\review-context\\ai-learning-adventure.json",
             "locator": "requirements[5].constraints[0]",
             "excerpt": "Must track missions and quiz/checkpoint results."
           }
@@ -206,7 +206,7 @@
           "specificationDerived": false,
           "sourceLocation": {
             "kind": "specification",
-            "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\review-context\\ai-learning-adventure.json",
+            "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\review-context\\ai-learning-adventure.json",
             "locator": "requirements[5].constraints[1]",
             "excerpt": "Must include progress, badges, milestones or completion state."
           }
@@ -215,7 +215,7 @@
       "specificationDerived": false,
       "sourceLocation": {
         "kind": "specification",
-        "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\review-context\\ai-learning-adventure.json",
+        "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\review-context\\ai-learning-adventure.json",
         "locator": "requirements[5]",
         "excerpt": "Progress tracking and gamification"
       }
@@ -231,7 +231,7 @@
           "specificationDerived": false,
           "sourceLocation": {
             "kind": "specification",
-            "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\review-context\\ai-learning-adventure.json",
+            "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\review-context\\ai-learning-adventure.json",
             "locator": "requirements[6].constraints[0]",
             "excerpt": "Admins can add or edit missions, questions and flashcards."
           }
@@ -242,7 +242,7 @@
           "specificationDerived": false,
           "sourceLocation": {
             "kind": "specification",
-            "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\review-context\\ai-learning-adventure.json",
+            "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\review-context\\ai-learning-adventure.json",
             "locator": "requirements[6].constraints[1]",
             "excerpt": "Admins can enable, disable, preview, publish and unpublish content."
           }
@@ -251,7 +251,7 @@
       "specificationDerived": false,
       "sourceLocation": {
         "kind": "specification",
-        "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\review-context\\ai-learning-adventure.json",
+        "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\review-context\\ai-learning-adventure.json",
         "locator": "requirements[6]",
         "excerpt": "Content management for missions and questions"
       }
@@ -267,7 +267,7 @@
           "specificationDerived": false,
           "sourceLocation": {
             "kind": "specification",
-            "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\review-context\\ai-learning-adventure.json",
+            "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\review-context\\ai-learning-adventure.json",
             "locator": "requirements[7].constraints[0]",
             "excerpt": "Must include committed missions, practice content, flashcards and progress data."
           }
@@ -278,7 +278,7 @@
           "specificationDerived": false,
           "sourceLocation": {
             "kind": "specification",
-            "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\review-context\\ai-learning-adventure.json",
+            "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\review-context\\ai-learning-adventure.json",
             "locator": "requirements[7].constraints[1]",
             "excerpt": "Must run locally with sufficient committed seed content."
           }
@@ -287,7 +287,7 @@
       "specificationDerived": false,
       "sourceLocation": {
         "kind": "specification",
-        "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\review-context\\ai-learning-adventure.json",
+        "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\review-context\\ai-learning-adventure.json",
         "locator": "requirements[7]",
         "excerpt": "Seed content and local review reliability"
       }
@@ -303,7 +303,7 @@
           "specificationDerived": false,
           "sourceLocation": {
             "kind": "specification",
-            "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\review-context\\ai-learning-adventure.json",
+            "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\review-context\\ai-learning-adventure.json",
             "locator": "requirements[8].constraints[0]",
             "excerpt": "Must provide mock/sample AI or clear setup guidance when no key exists."
           }
@@ -314,7 +314,7 @@
           "specificationDerived": false,
           "sourceLocation": {
             "kind": "specification",
-            "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\review-context\\ai-learning-adventure.json",
+            "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\review-context\\ai-learning-adventure.json",
             "locator": "requirements[8].constraints[1]",
             "excerpt": "README covers setup, AI configuration, fallback, learner and admin flows."
           }
@@ -323,7 +323,7 @@
       "specificationDerived": false,
       "sourceLocation": {
         "kind": "specification",
-        "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\review-context\\ai-learning-adventure.json",
+        "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\review-context\\ai-learning-adventure.json",
         "locator": "requirements[8]",
         "excerpt": "AI fallback and documentation"
       }

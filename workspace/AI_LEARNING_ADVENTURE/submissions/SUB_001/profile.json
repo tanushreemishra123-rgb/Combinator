@@ -1,7 +1,7 @@
 {
   "submissionId": "SUB_001",
   "kind": "code",
-  "rootPath": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001",
+  "rootPath": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001",
   "applications": [
     {
       "path": "submissions\\SUB_001\\signal-and-spark",
@@ -17,13 +17,13 @@
     "summary": "Detected 1 application unit(s): frontend at submissions\\SUB_001\\signal-and-spark (React, TypeScript, Vite). Detected 1 unit(s); languages: React, TypeScript, Vite.",
     "evidence": [
       {
-        "id": "EV_1rb2226",
+        "id": "EV_a28k2f4",
         "statement": "frontend unit (React, TypeScript, Vite)",
         "locations": [
           {
             "kind": "file",
             "submissionId": "SUB_001",
-            "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark",
+            "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark",
             "excerpt": "application root"
           }
         ],
@@ -40,13 +40,13 @@
     ],
     "evidence": [
       {
-        "id": "EV_7uqpd0z",
+        "id": "EV_6wa3ocs",
         "statement": "scripts present: dev, build, preview, typecheck, test",
         "locations": [
           {
             "kind": "file",
             "submissionId": "SUB_001",
-            "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\package.json",
+            "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\package.json",
             "excerpt": "package.json scripts"
           }
         ],
@@ -62,13 +62,13 @@
     ],
     "evidence": [
       {
-        "id": "EV_abdxlyk",
+        "id": "EV_54jzp18",
         "statement": "3 test file(s) found",
         "locations": [
           {
             "kind": "test",
             "submissionId": "SUB_001",
-            "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\App.test.tsx",
+            "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\App.test.tsx",
             "excerpt": "example of 3 test files"
           }
         ],
@@ -84,31 +84,31 @@
       "score": 9.9,
       "evidence": [
         {
-          "id": "EV_3xrtfmk",
+          "id": "EV_485ja18",
           "statement": "Grounded evidence for \"Browser-accessible learning adventure landing page\" (5 files, 12 hits, strength 9.9)",
           "locations": [
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\README.md",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\README.md",
               "excerpt": "matches: browser, learning, installation"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\App.tsx",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\App.tsx",
               "excerpt": "matches: browser, learning"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\data\\seed.ts",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\data\\seed.ts",
               "excerpt": "matches: learning, allow, users"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\features\\AdminView.tsx",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\features\\AdminView.tsx",
               "excerpt": "matches: learning, required"
             }
           ],
@@ -124,31 +124,31 @@
       "score": 20,
       "evidence": [
         {
-          "id": "EV_663ajqz",
+          "id": "EV_2v0kq8q",
           "statement": "Grounded evidence for \"Pre-seeded AI learning missions\" (16 files, 89 hits, strength 20.0)",
           "locations": [
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\README.md",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\README.md",
               "excerpt": "matches: learning, missions, include, mission, difficulty"
             },
             {
               "kind": "test",
               "submissionId": "SUB_001",
-              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\App.test.tsx",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\App.test.tsx",
               "excerpt": "matches: seeded, learning, missions, mission, title"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\App.tsx",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\App.tsx",
               "excerpt": "matches: learning, missions, mission"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\components\\Header.tsx",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\components\\Header.tsx",
               "excerpt": "matches: learning, mission"
             }
           ],
@@ -164,31 +164,31 @@
       "score": 18.5,
       "evidence": [
         {
-          "id": "EV_aczcm96",
+          "id": "EV_8nqk4i8",
           "statement": "Grounded evidence for \"Mission practice activities\" (15 files, 52 hits, strength 18.5)",
           "locations": [
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\README.md",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\README.md",
               "excerpt": "matches: mission, practice, include, quizzes, flashcards"
             },
             {
               "kind": "test",
               "submissionId": "SUB_001",
-              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\App.test.tsx",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\App.test.tsx",
               "excerpt": "matches: mission, flashcards"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\App.tsx",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\App.tsx",
               "excerpt": "matches: mission, practice"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\components\\Header.tsx",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\components\\Header.tsx",
               "excerpt": "matches: mission, practice"
             }
           ],
@@ -204,31 +204,31 @@
       "score": 18.4,
       "evidence": [
         {
-          "id": "EV_9qp9ufk",
+          "id": "EV_8y8othy",
           "statement": "Grounded evidence for \"Personalized AI tutor\" (16 files, 54 hits, strength 18.4)",
           "locations": [
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\README.md",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\README.md",
               "excerpt": "matches: tutor, answer, mission, questions"
             },
             {
               "kind": "test",
               "submissionId": "SUB_001",
-              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\App.test.tsx",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\App.test.tsx",
               "excerpt": "matches: tutor, mission, questions, beginner"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\App.tsx",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\App.tsx",
               "excerpt": "matches: tutor, mission"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\components\\Header.tsx",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\components\\Header.tsx",
               "excerpt": "matches: tutor, mission"
             }
           ],
@@ -244,25 +244,25 @@
       "score": 8.8,
       "evidence": [
         {
-          "id": "EV_ka5fq59",
+          "id": "EV_24pznq4",
           "statement": "Grounded evidence for \"AI Only Mode and AI feedback flow\" (3 files, 13 hits, strength 8.8)",
           "locations": [
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\README.md",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\README.md",
               "excerpt": "matches: feedback, support, explanations, hints, recommendations"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\data\\seed.ts",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\data\\seed.ts",
               "excerpt": "matches: feedback, support, explanations, learning, chatbot"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\features\\MissionView.tsx",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\features\\MissionView.tsx",
               "excerpt": "matches: feedback, learning"
             }
           ],
@@ -278,31 +278,31 @@
       "score": 18.7,
       "evidence": [
         {
-          "id": "EV_44liscv",
+          "id": "EV_8rxubgb",
           "statement": "Grounded evidence for \"Progress tracking and gamification\" (15 files, 56 hits, strength 18.7)",
           "locations": [
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\README.md",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\README.md",
               "excerpt": "matches: progress, missions, checkpoint, include, badges"
             },
             {
               "kind": "test",
               "submissionId": "SUB_001",
-              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\App.test.tsx",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\App.test.tsx",
               "excerpt": "matches: progress, missions, milestones"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\App.tsx",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\App.tsx",
               "excerpt": "matches: progress, missions"
             },
             {
               "kind": "test",
               "submissionId": "SUB_001",
-              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\data\\seed.test.ts",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\data\\seed.test.ts",
               "excerpt": "matches: missions, checkpoint"
             }
           ],
@@ -318,31 +318,31 @@
       "score": 19.7,
       "evidence": [
         {
-          "id": "EV_9bneafu",
+          "id": "EV_aimuzos",
           "statement": "Grounded evidence for \"Content management for missions and questions\" (15 files, 71 hits, strength 19.7)",
           "locations": [
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\README.md",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\README.md",
               "excerpt": "matches: missions, questions, flashcards, enable, disable"
             },
             {
               "kind": "test",
               "submissionId": "SUB_001",
-              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\App.test.tsx",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\App.test.tsx",
               "excerpt": "matches: missions, questions, flashcards, disable, publish"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\App.tsx",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\App.tsx",
               "excerpt": "matches: missions, preview"
             },
             {
               "kind": "test",
               "submissionId": "SUB_001",
-              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\data\\seed.test.ts",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\data\\seed.test.ts",
               "excerpt": "matches: missions, questions, flashcards"
             }
           ],
@@ -358,31 +358,31 @@
       "score": 20,
       "evidence": [
         {
-          "id": "EV_c9g2u45",
+          "id": "EV_4ruuxwr",
           "statement": "Grounded evidence for \"Seed content and local review reliability\" (16 files, 84 hits, strength 20.0)",
           "locations": [
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\README.md",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\README.md",
               "excerpt": "matches: local, review, include, committed, missions"
             },
             {
               "kind": "test",
               "submissionId": "SUB_001",
-              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\App.test.tsx",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\App.test.tsx",
               "excerpt": "matches: local, missions, flashcards, progress"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\App.tsx",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\App.tsx",
               "excerpt": "matches: local, review, missions, practice, progress"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\components\\Header.tsx",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\components\\Header.tsx",
               "excerpt": "matches: practice, progress"
             }
           ],
@@ -398,31 +398,31 @@
       "score": 14.1,
       "evidence": [
         {
-          "id": "EV_1voutox",
+          "id": "EV_8bdu93u",
           "statement": "Grounded evidence for \"AI fallback and documentation\" (7 files, 22 hits, strength 14.1)",
           "locations": [
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\README.md",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\README.md",
               "excerpt": "matches: fallback, provide, sample, clear, setup"
             },
             {
               "kind": "test",
               "submissionId": "SUB_001",
-              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\App.test.tsx",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\App.test.tsx",
               "excerpt": "matches: fallback, sample, clear"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\data\\seed.ts",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\data\\seed.ts",
               "excerpt": "matches: documentation, provide, sample, clear"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\features\\JourneyView.tsx",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\features\\JourneyView.tsx",
               "excerpt": "matches: sample, clear"
             }
           ],
@@ -447,7 +447,7 @@
         {
           "kind": "reviewer_comment",
           "submissionId": "SUB_001",
-          "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\reviews\\SUB_001\\final-result.json",
+          "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\reviews\\SUB_001\\final-result.json",
           "excerpt": "finalScore=100"
         }
       ],

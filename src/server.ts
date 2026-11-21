@@ -22,11 +22,12 @@ import { runChallenge } from "./orchestrator.js";
 import { applyDecisionChange } from "./decisions.js";
 import { pick } from "./util.js";
 import type { DecisionState, DecisionWorkspace } from "./types.js";
+import { fileURLToPath } from "node:url";
 
 const cfg = loadConfig();
 const PACK = resolvePackRoot(process.env.COMBINATOR_PACK || "./starter-pack");
 const OUT = resolve(process.env.COMBINATOR_OUT || "./workspace");
-const PUBLIC = resolve(new URL("../public", import.meta.url).pathname);
+const PUBLIC = fileURLToPath(new URL("../public/", import.meta.url));
 
 const MIME: Record<string, string> = {
   ".html": "text/html; charset=utf-8",
