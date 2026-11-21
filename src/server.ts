@@ -23,7 +23,6 @@ import { runChallenge } from "./orchestrator.js";
 import { applyDecisionChange } from "./decisions.js";
 import { pick } from "./util.js";
 import type { DecisionState, DecisionWorkspace } from "./types.js";
-import { fileURLToPath } from "node:url";
 
 const cfg = loadConfig();
 const PACK = resolvePackRoot(process.env.COMBINATOR_PACK || "./starter-pack");
