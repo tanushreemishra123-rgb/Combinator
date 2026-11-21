@@ -6,6 +6,8 @@
 # CI config — none of which are the solution's own source to remediate.
 scan:
   skip-dirs:
+    - workspace
+    - workspace-local-test
     - starter-pack
     - workspace
     - node_modules
