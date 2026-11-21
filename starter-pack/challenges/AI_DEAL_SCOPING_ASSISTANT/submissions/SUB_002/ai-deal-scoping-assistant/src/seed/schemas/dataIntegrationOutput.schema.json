@@ -1,0 +1,276 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "domains": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sources": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "owner": {
+            "default": "To be confirmed with customer",
+            "type": "string"
+          },
+          "classification": {
+            "default": "internal",
+            "type": "string",
+            "enum": [
+              "public",
+              "internal",
+              "confidential",
+              "regulated"
+            ]
+          },
+          "requirementIds": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "description",
+          "sources",
+          "owner",
+          "classification",
+          "requirementIds"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "topics": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "topic": {
+            "type": "string",
+            "enum": [
+              "ownership",
+              "ingestion",
+              "transactional-storage",
+              "analytical-storage",
+              "data-quality",
+              "metadata-governance",
+              "retention",
+              "privacy-security",
+              "reporting-analytics",
+              "backup-recovery"
+            ]
+          },
+          "approach": {
+            "type": "string",
+            "minLength": 1
+          },
+          "services": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "requirementIds": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "topic",
+          "approach",
+          "services",
+          "requirementIds"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "integrations": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "system": {
+            "type": "string",
+            "minLength": 1
+          },
+          "systemType": {
+            "default": "external",
+            "type": "string",
+            "enum": [
+              "internal",
+              "external"
+            ]
+          },
+          "direction": {
+            "default": "bidirectional",
+            "type": "string",
+            "enum": [
+              "inbound",
+              "outbound",
+              "bidirectional"
+            ]
+          },
+          "pattern": {
+            "default": "api",
+            "type": "string",
+            "enum": [
+              "api",
+              "event",
+              "batch",
+              "file"
+            ]
+          },
+          "protocol": {
+            "default": "REST/JSON over HTTPS",
+            "type": "string"
+          },
+          "authentication": {
+            "type": "string",
+            "minLength": 1
+          },
+          "errorHandling": {
+            "type": "string",
+            "minLength": 1
+          },
+          "retry": {
+            "type": "string",
+            "minLength": 1
+          },
+          "monitoring": {
+            "type": "string",
+            "minLength": 1
+          },
+          "dataSync": {
+            "default": "",
+            "type": "string"
+          },
+          "requirementIds": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "componentIds": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "complexity": {
+            "default": "Medium",
+            "type": "string",
+            "enum": [
+              "Low",
+              "Medium",
+              "High",
+              "Very High"
+            ]
+          },
+          "readiness": {
+            "default": "unknown",
+            "type": "string",
+            "enum": [
+              "confirmed",
+              "unknown"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "system",
+          "systemType",
+          "direction",
+          "pattern",
+          "protocol",
+          "authentication",
+          "errorHandling",
+          "retry",
+          "monitoring",
+          "dataSync",
+          "requirementIds",
+          "componentIds",
+          "complexity",
+          "readiness"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "flows": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "from": {
+            "type": "string",
+            "minLength": 1
+          },
+          "to": {
+            "type": "string",
+            "minLength": 1
+          },
+          "payload": {
+            "default": "",
+            "type": "string"
+          },
+          "mechanism": {
+            "default": "",
+            "type": "string"
+          }
+        },
+        "required": [
+          "from",
+          "to",
+          "payload",
+          "mechanism"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "domains",
+    "topics",
+    "integrations",
+    "flows"
+  ],
+  "additionalProperties": false
+}

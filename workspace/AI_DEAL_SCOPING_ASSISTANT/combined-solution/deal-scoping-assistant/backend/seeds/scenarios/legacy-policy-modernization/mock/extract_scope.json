@@ -1,0 +1,1215 @@
+{
+  "items": [
+    {
+      "temp_id": "t1",
+      "type": "SYS",
+      "title": "Vekter Policy Administration System",
+      "description": "Legacy Java monolith running across twelve on-premises application servers in Oslo with warm standby in Gothenburg.",
+      "priority": "high",
+      "origin": "customer_stated",
+      "quotes": [
+        {
+          "segment_id": "D1.S5",
+          "quote": "Our policy administration system (\"Vekter\") was built in 2011 on an internal Java monolith. It runs on twelve application servers in our own data centre in Oslo, with a warm standby in Gothenburg."
+        }
+      ],
+      "related_ids": [],
+      "tags": [
+        "migration"
+      ],
+      "absence_note": "",
+      "nfr_category": null,
+      "integration_system": "",
+      "integration_direction": null,
+      "integration_pattern": null,
+      "gap_criticality": null,
+      "question_id": "",
+      "assumption_id": "",
+      "why_it_matters": "",
+      "affected_ids": [],
+      "impact_if_wrong": ""
+    },
+    {
+      "temp_id": "t2",
+      "type": "DATA",
+      "title": "Vekter Oracle Database and PL/SQL Logic",
+      "description": "Contains 4.2 TB of data in Oracle 12c with approximately 340 PL/SQL packages embedding core business logic.",
+      "priority": "high",
+      "origin": "customer_stated",
+      "quotes": [
+        {
+          "segment_id": "D1.S5",
+          "quote": "The database is Oracle 12c (about 4.2 TB), and roughly 340 PL/SQL packages contain business logic that is not represented anywhere in the Java codebase."
+        }
+      ],
+      "related_ids": [
+        "t1"
+      ],
+      "tags": [
+        "data",
+        "migration"
+      ],
+      "absence_note": "",
+      "nfr_category": null,
+      "integration_system": "",
+      "integration_direction": null,
+      "integration_pattern": null,
+      "gap_criticality": null,
+      "question_id": "",
+      "assumption_id": "",
+      "why_it_matters": "",
+      "affected_ids": [],
+      "impact_if_wrong": ""
+    },
+    {
+      "temp_id": "t3",
+      "type": "SYS",
+      "title": "Control-M Batch Scheduling",
+      "description": "Legacy scheduler executing 47 overnight batch jobs requiring completion prior to 06:00 CET.",
+      "priority": "high",
+      "origin": "customer_stated",
+      "quotes": [
+        {
+          "segment_id": "D1.S5",
+          "quote": "Overnight processing consists of 47 batch jobs scheduled in Control-M; the longest (premium accrual and renewal generation) runs 4 hours 40 minutes and must finish before 06:00 CET."
+        }
+      ],
+      "related_ids": [],
+      "tags": [
+        "performance",
+        "migration"
+      ],
+      "absence_note": "",
+      "nfr_category": null,
+      "integration_system": "",
+      "integration_direction": null,
+      "integration_pattern": null,
+      "gap_criticality": null,
+      "question_id": "",
+      "assumption_id": "",
+      "why_it_matters": "",
+      "affected_ids": [],
+      "impact_if_wrong": ""
+    },
+    {
+      "temp_id": "t4",
+      "type": "INT",
+      "title": "Legacy Broker and Reinsurance SOAP Services",
+      "description": "Interfacing broker and reinsurance traffic via 23 SOAP web services utilizing WS-Security with X.509 tokens.",
+      "priority": "must",
+      "origin": "customer_stated",
+      "quotes": [
+        {
+          "segment_id": "D1.S5",
+          "quote": "Integration with brokers and the reinsurance platform is via 23 SOAP web services, several of which still use WS-Security with X.509 tokens."
+        }
+      ],
+      "related_ids": [],
+      "tags": [
+        "integration",
+        "security"
+      ],
+      "absence_note": "",
+      "nfr_category": null,
+      "integration_system": "Brokers and Reinsurance Platform",
+      "integration_direction": "bidirectional",
+      "integration_pattern": "api",
+      "gap_criticality": null,
+      "question_id": "",
+      "assumption_id": "",
+      "why_it_matters": "",
+      "affected_ids": [],
+      "impact_if_wrong": ""
+    },
+    {
+      "temp_id": "t5",
+      "type": "CON",
+      "title": "Data Centre Lease Expiration",
+      "description": "The Oslo data centre lease terminates in Q3 2028 without option for renewal.",
+      "priority": "must",
+      "origin": "customer_stated",
+      "quotes": [
+        {
+          "segment_id": "D1.S6",
+          "quote": "First, our data centre lease ends in Q3 2028 and will not be renewed."
+        }
+      ],
+      "related_ids": [],
+      "tags": [
+        "migration"
+      ],
+      "absence_note": "",
+      "nfr_category": null,
+      "integration_system": "",
+      "integration_direction": null,
+      "integration_pattern": null,
+      "gap_criticality": null,
+      "question_id": "",
+      "assumption_id": "",
+      "why_it_matters": "",
+      "affected_ids": [],
+      "impact_if_wrong": ""
+    },
+    {
+      "temp_id": "t6",
+      "type": "BR",
+      "title": "Oslo Data Centre Exit",
+      "description": "Complete migration out of the Oslo facility before lease expiry preserving complete policy and claims history.",
+      "priority": "must",
+      "origin": "customer_stated",
+      "quotes": [
+        {
+          "segment_id": "D1.S8",
+          "quote": "1. Exit the Oslo data centre before the lease expiry, with no loss of policy or claims history."
+        }
+      ],
+      "related_ids": [
+        "t5"
+      ],
+      "tags": [
+        "migration",
+        "data"
+      ],
+      "absence_note": "",
+      "nfr_category": null,
+      "integration_system": "",
+      "integration_direction": null,
+      "integration_pattern": null,
+      "gap_criticality": null,
+      "question_id": "",
+      "assumption_id": "",
+      "why_it_matters": "",
+      "affected_ids": [],
+      "impact_if_wrong": ""
+    },
+    {
+      "temp_id": "t7",
+      "type": "BR",
+      "title": "Batch Window Reduction",
+      "description": "Compress overnight batch processing time to under 90 minutes from the current 4 hours 40 minutes.",
+      "priority": "high",
+      "origin": "customer_stated",
+      "quotes": [
+        {
+          "segment_id": "D1.S8",
+          "quote": "2. Reduce the overnight batch window from 4 hours 40 minutes to under 90 minutes."
+        }
+      ],
+      "related_ids": [
+        "t3"
+      ],
+      "tags": [
+        "performance"
+      ],
+      "absence_note": "",
+      "nfr_category": null,
+      "integration_system": "",
+      "integration_direction": null,
+      "integration_pattern": null,
+      "gap_criticality": null,
+      "question_id": "",
+      "assumption_id": "",
+      "why_it_matters": "",
+      "affected_ids": [],
+      "impact_if_wrong": ""
+    },
+    {
+      "temp_id": "t8",
+      "type": "BR",
+      "title": "Enable Policyholder Self-Service",
+      "description": "Deliver modern direct digital servicing capabilities to policyholders.",
+      "priority": "high",
+      "origin": "customer_stated",
+      "quotes": [
+        {
+          "segment_id": "D1.S8",
+          "quote": "3. Enable a policyholder self-service portal (quote, view documents, change address, add a vehicle, start a claim)."
+        }
+      ],
+      "related_ids": [],
+      "tags": [
+        "ux"
+      ],
+      "absence_note": "",
+      "nfr_category": null,
+      "integration_system": "",
+      "integration_direction": null,
+      "integration_pattern": null,
+      "gap_criticality": null,
+      "question_id": "",
+      "assumption_id": "",
+      "why_it_matters": "",
+      "affected_ids": [],
+      "impact_if_wrong": ""
+    },
+    {
+      "temp_id": "t9",
+      "type": "BR",
+      "title": "Accelerate Product Launch Velocity",
+      "description": "Shorten the time to release new insurance product variants from 9-14 months down to under 3 months.",
+      "priority": "high",
+      "origin": "customer_stated",
+      "quotes": [
+        {
+          "segment_id": "D1.S8",
+          "quote": "4. Reduce the time to launch a new product variant from the current 9–14 months to under 3 months."
+        }
+      ],
+      "related_ids": [],
+      "tags": [],
+      "absence_note": "",
+      "nfr_category": null,
+      "integration_system": "",
+      "integration_direction": null,
+      "integration_pattern": null,
+      "gap_criticality": null,
+      "question_id": "",
+      "assumption_id": "",
+      "why_it_matters": "",
+      "affected_ids": [],
+      "impact_if_wrong": ""
+    },
+    {
+      "temp_id": "t10",
+      "type": "BR",
+      "title": "Total Cost of Ownership Neutrality",
+      "description": "Maintain total cost of ownership at or below baseline from the third operating year onward.",
+      "priority": "medium",
+      "origin": "customer_stated",
+      "quotes": [
+        {
+          "segment_id": "D1.S8",
+          "quote": "5. Keep the total cost of ownership flat or lower from year 3 onward."
+        }
+      ],
+      "related_ids": [],
+      "tags": [],
+      "absence_note": "",
+      "nfr_category": null,
+      "integration_system": "",
+      "integration_direction": null,
+      "integration_pattern": null,
+      "gap_criticality": null,
+      "question_id": "",
+      "assumption_id": "",
+      "why_it_matters": "",
+      "affected_ids": [],
+      "impact_if_wrong": ""
+    },
+    {
+      "temp_id": "t11",
+      "type": "FR",
+      "title": "Core Policy Lifecycle Management",
+      "description": "Support full policy operations including new business, mid-term adjustments, renewals, cancellations, and reinstatements.",
+      "priority": "must",
+      "origin": "customer_stated",
+      "quotes": [
+        {
+          "segment_id": "D1.S10",
+          "quote": "1. Policy lifecycle: new business, mid-term adjustment, renewal, cancellation, reinstatement."
+        }
+      ],
+      "related_ids": [],
+      "tags": [],
+      "absence_note": "",
+      "nfr_category": null,
+      "integration_system": "",
+      "integration_direction": null,
+      "integration_pattern": null,
+      "gap_criticality": null,
+      "question_id": "",
+      "assumption_id": "",
+      "why_it_matters": "",
+      "affected_ids": [],
+      "impact_if_wrong": ""
+    },
+    {
+      "temp_id": "t12",
+      "type": "PER",
+      "title": "Business Product Configurator",
+      "description": "Business operators responsible for defining and modifying product specifications without IT developer involvement.",
+      "priority": "high",
+      "origin": "customer_stated",
+      "quotes": [
+        {
+          "segment_id": "D1.S10",
+          "quote": "2. Product configuration for motor, home and small-commercial property, maintained by business users rather than developers."
+        }
+      ],
+      "related_ids": [],
+      "tags": [],
+      "absence_note": "",
+      "nfr_category": null,
+      "integration_system": "",
+      "integration_direction": null,
+      "integration_pattern": null,
+      "gap_criticality": null,
+      "question_id": "",
+      "assumption_id": "",
+      "why_it_matters": "",
+      "affected_ids": [],
+      "impact_if_wrong": ""
+    },
+    {
+      "temp_id": "t13",
+      "type": "FR",
+      "title": "Business-Led Product Configuration",
+      "description": "Provide administrative capabilities for business staff to configure motor, home, and small-commercial lines.",
+      "priority": "must",
+      "origin": "customer_stated",
+      "quotes": [
+        {
+          "segment_id": "D1.S10",
+          "quote": "2. Product configuration for motor, home and small-commercial property, maintained by business users rather than developers."
+        }
+      ],
+      "related_ids": [
+        "t12"
+      ],
+      "tags": [],
+      "absence_note": "",
+      "nfr_category": null,
+      "integration_system": "",
+      "integration_direction": null,
+      "integration_pattern": null,
+      "gap_criticality": null,
+      "question_id": "",
+      "assumption_id": "",
+      "why_it_matters": "",
+      "affected_ids": [],
+      "impact_if_wrong": ""
+    },
+    {
+      "temp_id": "t14",
+      "type": "FR",
+      "title": "Premium Rating and NCB Calculation",
+      "description": "Calculate premiums preserving existing rating tables and no-claims-bonus step calculations.",
+      "priority": "must",
+      "origin": "customer_stated",
+      "quotes": [
+        {
+          "segment_id": "D1.S10",
+          "quote": "3. Premium calculation, including the existing rating tables and the no-claims-bonus ladder."
+        }
+      ],
+      "related_ids": [],
+      "tags": [],
+      "absence_note": "",
+      "nfr_category": null,
+      "integration_system": "",
+      "integration_direction": null,
+      "integration_pattern": null,
+      "gap_criticality": null,
+      "question_id": "",
+      "assumption_id": "",
+      "why_it_matters": "",
+      "affected_ids": [],
+      "impact_if_wrong": ""
+    },
+    {
+      "temp_id": "t15",
+      "type": "FR",
+      "title": "Multilingual Document Generation",
+      "description": "Produce policy schedules, certificates, and renewal notices across Norwegian, Swedish, Danish, and English.",
+      "priority": "must",
+      "origin": "customer_stated",
+      "quotes": [
+        {
+          "segment_id": "D1.S10",
+          "quote": "4. Document generation (policy schedule, certificate, renewal notice) in Norwegian, Swedish, Danish and English."
+        }
+      ],
+      "related_ids": [],
+      "tags": [],
+      "absence_note": "",
+      "nfr_category": null,
+      "integration_system": "",
+      "integration_direction": null,
+      "integration_pattern": null,
+      "gap_criticality": null,
+      "question_id": "",
+      "assumption_id": "",
+      "why_it_matters": "",
+      "affected_ids": [],
+      "impact_if_wrong": ""
+    },
+    {
+      "temp_id": "t16",
+      "type": "PER",
+      "title": "Policyholder",
+      "description": "End-customer interacting with insurance services through digital self-service channels.",
+      "priority": "high",
+      "origin": "customer_stated",
+      "quotes": [
+        {
+          "segment_id": "D1.S10",
+          "quote": "5. Customer self-service portal covering the journeys in 3.2 item 3. First release targets our existing online customers, about 5,000 active users per month."
+        }
+      ],
+      "related_ids": [],
+      "tags": [
+        "ux"
+      ],
+      "absence_note": "",
+      "nfr_category": null,
+      "integration_system": "",
+      "integration_direction": null,
+      "integration_pattern": null,
+      "gap_criticality": null,
+      "question_id": "",
+      "assumption_id": "",
+      "why_it_matters": "",
+      "affected_ids": [],
+      "impact_if_wrong": ""
+    },
+    {
+      "temp_id": "t17",
+      "type": "FR",
+      "title": "Policyholder Self-Service Portal",
+      "description": "Provide quotation, document viewing, address updates, vehicle additions, and first notice of loss for 5,000 monthly users.",
+      "priority": "high",
+      "origin": "customer_stated",
+      "quotes": [
+        {
+          "segment_id": "D1.S10",
+          "quote": "5. Customer self-service portal covering the journeys in 3.2 item 3. First release targets our existing online customers, about 5,000 active users per month."
+        }
+      ],
+      "related_ids": [
+        "t8",
+        "t16"
+      ],
+      "tags": [
+        "ux"
+      ],
+      "absence_note": "",
+      "nfr_category": null,
+      "integration_system": "",
+      "integration_direction": null,
+      "integration_pattern": null,
+      "gap_criticality": null,
+      "question_id": "",
+      "assumption_id": "",
+      "why_it_matters": "",
+      "affected_ids": [],
+      "impact_if_wrong": ""
+    },
+    {
+      "temp_id": "t18",
+      "type": "PER",
+      "title": "Broker",
+      "description": "External intermediary interacting with policy administration via integration endpoints.",
+      "priority": "high",
+      "origin": "customer_stated",
+      "quotes": [
+        {
+          "segment_id": "D1.S10",
+          "quote": "6. Broker portal, retaining the current SOAP contracts for at least 24 months after go-live."
+        }
+      ],
+      "related_ids": [],
+      "tags": [],
+      "absence_note": "",
+      "nfr_category": null,
+      "integration_system": "",
+      "integration_direction": null,
+      "integration_pattern": null,
+      "gap_criticality": null,
+      "question_id": "",
+      "assumption_id": "",
+      "why_it_matters": "",
+      "affected_ids": [],
+      "impact_if_wrong": ""
+    },
+    {
+      "temp_id": "t19",
+      "type": "INT",
+      "title": "Broker Portal Backward Compatibility",
+      "description": "Maintain existing broker SOAP interfaces unchanged for at least 24 months post-cutover.",
+      "priority": "must",
+      "origin": "customer_stated",
+      "quotes": [
+        {
+          "segment_id": "D1.S10",
+          "quote": "6. Broker portal, retaining the current SOAP contracts for at least 24 months after go-live."
+        }
+      ],
+      "related_ids": [
+        "t4",
+        "t18"
+      ],
+      "tags": [
+        "integration"
+      ],
+      "absence_note": "",
+      "nfr_category": null,
+      "integration_system": "Broker Portal",
+      "integration_direction": "inbound",
+      "integration_pattern": "api",
+      "gap_criticality": null,
+      "question_id": "",
+      "assumption_id": "",
+      "why_it_matters": "",
+      "affected_ids": [],
+      "impact_if_wrong": ""
+    },
+    {
+      "temp_id": "t20",
+      "type": "FR",
+      "title": "Claims Intake Handover",
+      "description": "Capture initial claim details and hand over claims adjudication to the external system.",
+      "priority": "must",
+      "origin": "customer_stated",
+      "quotes": [
+        {
+          "segment_id": "D1.S10",
+          "quote": "7. Claims intake only. Claims adjudication stays in our existing Guidewire ClaimCenter instance."
+        }
+      ],
+      "related_ids": [],
+      "tags": [
+        "integration"
+      ],
+      "absence_note": "",
+      "nfr_category": null,
+      "integration_system": "",
+      "integration_direction": null,
+      "integration_pattern": null,
+      "gap_criticality": null,
+      "question_id": "",
+      "assumption_id": "",
+      "why_it_matters": "",
+      "affected_ids": [],
+      "impact_if_wrong": ""
+    },
+    {
+      "temp_id": "t21",
+      "type": "NFR",
+      "title": "Policy Enquiry Latency",
+      "description": "Process 95% of policy enquiry requests within 400 milliseconds.",
+      "priority": "high",
+      "origin": "customer_stated",
+      "quotes": [
+        {
+          "segment_id": "D1.S12",
+          "quote": "1. Policy enquiry response under 400 ms at the 95th percentile."
+        }
+      ],
+      "related_ids": [],
+      "tags": [
+        "performance"
+      ],
+      "absence_note": "",
+      "nfr_category": "performance",
+      "integration_system": "",
+      "integration_direction": null,
+      "integration_pattern": null,
+      "gap_criticality": null,
+      "question_id": "",
+      "assumption_id": "",
+      "why_it_matters": "",
+      "affected_ids": [],
+      "impact_if_wrong": ""
+    },
+    {
+      "temp_id": "t22",
+      "type": "NFR",
+      "title": "Operational Daytime Availability",
+      "description": "Guarantee 99.9% platform availability during operating hours from 06:00 to 22:00 CET.",
+      "priority": "high",
+      "origin": "customer_stated",
+      "quotes": [
+        {
+          "segment_id": "D1.S12",
+          "quote": "2. 99.9% availability during 06:00–22:00 CET, planned maintenance excluded."
+        }
+      ],
+      "related_ids": [],
+      "tags": [
+        "performance"
+      ],
+      "absence_note": "",
+      "nfr_category": "availability",
+      "integration_system": "",
+      "integration_direction": null,
+      "integration_pattern": null,
+      "gap_criticality": null,
+      "question_id": "",
+      "assumption_id": "",
+      "why_it_matters": "",
+      "affected_ids": [],
+      "impact_if_wrong": ""
+    },
+    {
+      "temp_id": "t23",
+      "type": "NFR",
+      "title": "Disaster Recovery Targets",
+      "description": "Ensure a maximum recovery point objective of 15 minutes and recovery time objective of 4 hours for policy data.",
+      "priority": "must",
+      "origin": "customer_stated",
+      "quotes": [
+        {
+          "segment_id": "D1.S12",
+          "quote": "3. RPO 15 minutes, RTO 4 hours for policy data."
+        }
+      ],
+      "related_ids": [],
+      "tags": [
+        "data"
+      ],
+      "absence_note": "",
+      "nfr_category": "availability",
+      "integration_system": "",
+      "integration_direction": null,
+      "integration_pattern": null,
+      "gap_criticality": null,
+      "question_id": "",
+      "assumption_id": "",
+      "why_it_matters": "",
+      "affected_ids": [],
+      "impact_if_wrong": ""
+    },
+    {
+      "temp_id": "t24",
+      "type": "SEC",
+      "title": "EU/EEA Data Residency and Regulatory Compliance",
+      "description": "Confine all EU/EEA personal data to EU/EEA borders under GDPR, Norwegian FSA ICT rules, and DORA oversight.",
+      "priority": "must",
+      "origin": "customer_stated",
+      "quotes": [
+        {
+          "segment_id": "D1.S12",
+          "quote": "4. All personal data of EU/EEA data subjects must remain within the EU/EEA. We are subject to GDPR and to the Norwegian Financial Supervisory Authority's ICT regulations, and DORA applies to us from a contractual-oversight perspective."
+        }
+      ],
+      "related_ids": [],
+      "tags": [
+        "security",
+        "compliance"
+      ],
+      "absence_note": "",
+      "nfr_category": null,
+      "integration_system": "",
+      "integration_direction": null,
+      "integration_pattern": null,
+      "gap_criticality": null,
+      "question_id": "",
+      "assumption_id": "",
+      "why_it_matters": "",
+      "affected_ids": [],
+      "impact_if_wrong": ""
+    },
+    {
+      "temp_id": "t25",
+      "type": "SEC",
+      "title": "Policy Audit Trail Retention",
+      "description": "Record immutable audit logs for every policy state mutation and retain them for 10 years.",
+      "priority": "must",
+      "origin": "customer_stated",
+      "quotes": [
+        {
+          "segment_id": "D1.S12",
+          "quote": "5. Audit trail of every policy state change, retained for 10 years."
+        }
+      ],
+      "related_ids": [],
+      "tags": [
+        "security",
+        "compliance"
+      ],
+      "absence_note": "",
+      "nfr_category": null,
+      "integration_system": "",
+      "integration_direction": null,
+      "integration_pattern": null,
+      "gap_criticality": null,
+      "question_id": "",
+      "assumption_id": "",
+      "why_it_matters": "",
+      "affected_ids": [],
+      "impact_if_wrong": ""
+    },
+    {
+      "temp_id": "t26",
+      "type": "NFR",
+      "title": "Zero-Downtime Deployment Capability",
+      "description": "Support blue/green deployments to eliminate the historical 6-hour release outages.",
+      "priority": "must",
+      "origin": "customer_stated",
+      "quotes": [
+        {
+          "segment_id": "D1.S12",
+          "quote": "6. The platform must support a blue/green or equivalent release approach; we currently take a 6-hour outage per release and this is no longer acceptable."
+        }
+      ],
+      "related_ids": [],
+      "tags": [],
+      "absence_note": "",
+      "nfr_category": "maintainability",
+      "integration_system": "",
+      "integration_direction": null,
+      "integration_pattern": null,
+      "gap_criticality": null,
+      "question_id": "",
+      "assumption_id": "",
+      "why_it_matters": "",
+      "affected_ids": [],
+      "impact_if_wrong": ""
+    },
+    {
+      "temp_id": "t27",
+      "type": "TECH",
+      "title": "Microsoft Azure Group Standard",
+      "description": "Deploy to existing non-production and production Azure landing zones in Norway East and West Europe.",
+      "priority": "must",
+      "origin": "customer_stated",
+      "quotes": [
+        {
+          "segment_id": "D1.S14",
+          "quote": "Our group IT standard is Microsoft Azure. We have an existing Enterprise Agreement, two landing zones (non-production and production) in Norway East and West Europe, and Microsoft Entra ID is our corporate identity provider."
+        }
+      ],
+      "related_ids": [],
+      "tags": [
+        "security"
+      ],
+      "absence_note": "",
+      "nfr_category": null,
+      "integration_system": "",
+      "integration_direction": null,
+      "integration_pattern": null,
+      "gap_criticality": null,
+      "question_id": "",
+      "assumption_id": "",
+      "why_it_matters": "",
+      "affected_ids": [],
+      "impact_if_wrong": ""
+    },
+    {
+      "temp_id": "t28",
+      "type": "TECH",
+      "title": "Evaluation of Target Database Engine",
+      "description": "PostgreSQL is under consideration as the target relational store alongside DBA concerns over PL/SQL migration.",
+      "priority": "medium",
+      "origin": "customer_stated",
+      "quotes": [
+        {
+          "segment_id": "D1.S14",
+          "quote": "We would consider PostgreSQL as the target database, but the decision has not been made and the DBA team has raised concerns about the PL/SQL estate. Please state clearly what you assume."
+        }
+      ],
+      "related_ids": [
+        "t2"
+      ],
+      "tags": [
+        "data",
+        "migration"
+      ],
+      "absence_note": "",
+      "nfr_category": null,
+      "integration_system": "",
+      "integration_direction": null,
+      "integration_pattern": null,
+      "gap_criticality": null,
+      "question_id": "",
+      "assumption_id": "",
+      "why_it_matters": "",
+      "affected_ids": [],
+      "impact_if_wrong": ""
+    },
+    {
+      "temp_id": "t29",
+      "type": "CON",
+      "title": "Mandatory Phased Migration Strategy",
+      "description": "Delivery via single big-bang cutover is explicitly prohibited by customer policy.",
+      "priority": "must",
+      "origin": "customer_stated",
+      "quotes": [
+        {
+          "segment_id": "D1.S15",
+          "quote": "We will not accept a full rewrite delivered as a single cutover. Describe a phased approach."
+        }
+      ],
+      "related_ids": [],
+      "tags": [
+        "migration"
+      ],
+      "absence_note": "",
+      "nfr_category": null,
+      "integration_system": "",
+      "integration_direction": null,
+      "integration_pattern": null,
+      "gap_criticality": null,
+      "question_id": "",
+      "assumption_id": "",
+      "why_it_matters": "",
+      "affected_ids": [],
+      "impact_if_wrong": ""
+    },
+    {
+      "temp_id": "t30",
+      "type": "INT",
+      "title": "Guidewire ClaimCenter Integration",
+      "description": "Integrate policy administration with on-premises Guidewire ClaimCenter via REST and JMS protocols.",
+      "priority": "must",
+      "origin": "customer_stated",
+      "quotes": [
+        {
+          "segment_id": "D1.S17",
+          "quote": "- Guidewire ClaimCenter (on-premises, REST and JMS)"
+        }
+      ],
+      "related_ids": [
+        "t20"
+      ],
+      "tags": [
+        "integration"
+      ],
+      "absence_note": "",
+      "nfr_category": null,
+      "integration_system": "Guidewire ClaimCenter",
+      "integration_direction": "bidirectional",
+      "integration_pattern": "event",
+      "gap_criticality": null,
+      "question_id": "",
+      "assumption_id": "",
+      "why_it_matters": "",
+      "affected_ids": [],
+      "impact_if_wrong": ""
+    },
+    {
+      "temp_id": "t31",
+      "type": "INT",
+      "title": "SAP S/4HANA Finance Integration",
+      "description": "Transmit financial premium postings to SAP S/4HANA via daily batch transfer.",
+      "priority": "high",
+      "origin": "customer_stated",
+      "quotes": [
+        {
+          "segment_id": "D1.S17",
+          "quote": "- SAP S/4HANA finance (premium postings, currently a nightly flat file)"
+        }
+      ],
+      "related_ids": [],
+      "tags": [
+        "integration",
+        "data"
+      ],
+      "absence_note": "",
+      "nfr_category": null,
+      "integration_system": "SAP S/4HANA",
+      "integration_direction": "outbound",
+      "integration_pattern": "batch",
+      "gap_criticality": null,
+      "question_id": "",
+      "assumption_id": "",
+      "why_it_matters": "",
+      "affected_ids": [],
+      "impact_if_wrong": ""
+    },
+    {
+      "temp_id": "t32",
+      "type": "INT",
+      "title": "Credit and Sanctions Screening Gateway",
+      "description": "Perform underwriting credit checks and regulatory sanctions screening via external SOAP gateway.",
+      "priority": "high",
+      "origin": "customer_stated",
+      "quotes": [
+        {
+          "segment_id": "D1.S17",
+          "quote": "- Experian-style credit and sanctions screening via a third-party gateway (SOAP)"
+        }
+      ],
+      "related_ids": [],
+      "tags": [
+        "integration",
+        "security"
+      ],
+      "absence_note": "",
+      "nfr_category": null,
+      "integration_system": "Credit and Sanctions Gateway",
+      "integration_direction": "outbound",
+      "integration_pattern": "api",
+      "gap_criticality": null,
+      "question_id": "",
+      "assumption_id": "",
+      "why_it_matters": "",
+      "affected_ids": [],
+      "impact_if_wrong": ""
+    },
+    {
+      "temp_id": "t33",
+      "type": "INT",
+      "title": "Vehicle Registry Lookup Service",
+      "description": "Query external vehicle registry over REST with strict throttling at 5 requests per second.",
+      "priority": "high",
+      "origin": "customer_stated",
+      "quotes": [
+        {
+          "segment_id": "D1.S17",
+          "quote": "- Bisnode-equivalent vehicle registry lookup (REST, rate limited to 5 requests/second)"
+        }
+      ],
+      "related_ids": [],
+      "tags": [
+        "integration",
+        "performance"
+      ],
+      "absence_note": "",
+      "nfr_category": null,
+      "integration_system": "Vehicle Registry",
+      "integration_direction": "outbound",
+      "integration_pattern": "api",
+      "gap_criticality": null,
+      "question_id": "",
+      "assumption_id": "",
+      "why_it_matters": "",
+      "affected_ids": [],
+      "impact_if_wrong": ""
+    },
+    {
+      "temp_id": "t34",
+      "type": "INT",
+      "title": "Corporate Data Warehouse Feed",
+      "description": "Extract nightly operational data feeds into SQL Server 2019 data warehouse.",
+      "priority": "high",
+      "origin": "customer_stated",
+      "quotes": [
+        {
+          "segment_id": "D1.S17",
+          "quote": "- Corporate data warehouse on SQL Server 2019, fed by nightly extracts"
+        }
+      ],
+      "related_ids": [],
+      "tags": [
+        "integration",
+        "data",
+        "reporting"
+      ],
+      "absence_note": "",
+      "nfr_category": null,
+      "integration_system": "Corporate Data Warehouse",
+      "integration_direction": "outbound",
+      "integration_pattern": "batch",
+      "gap_criticality": null,
+      "question_id": "",
+      "assumption_id": "",
+      "why_it_matters": "",
+      "affected_ids": [],
+      "impact_if_wrong": ""
+    },
+    {
+      "temp_id": "t35",
+      "type": "INT",
+      "title": "OpenText Document Archive Integration",
+      "description": "Store and retrieve policy document assets via OpenText WebDAV interface.",
+      "priority": "high",
+      "origin": "customer_stated",
+      "quotes": [
+        {
+          "segment_id": "D1.S17",
+          "quote": "- Document archive (OpenText), WebDAV interface"
+        }
+      ],
+      "related_ids": [
+        "t15"
+      ],
+      "tags": [
+        "integration",
+        "data"
+      ],
+      "absence_note": "",
+      "nfr_category": null,
+      "integration_system": "OpenText Document Archive",
+      "integration_direction": "bidirectional",
+      "integration_pattern": "file",
+      "gap_criticality": null,
+      "question_id": "",
+      "assumption_id": "",
+      "why_it_matters": "",
+      "affected_ids": [],
+      "impact_if_wrong": ""
+    },
+    {
+      "temp_id": "t36",
+      "type": "CON",
+      "title": "Annual Production Change Freeze",
+      "description": "Deployments to production environments are blocked annually between 1 December and 15 January.",
+      "priority": "must",
+      "origin": "customer_stated",
+      "quotes": [
+        {
+          "segment_id": "D1.S19",
+          "quote": "- Our change freeze runs from 1 December to 15 January each year."
+        }
+      ],
+      "related_ids": [],
+      "tags": [],
+      "absence_note": "",
+      "nfr_category": null,
+      "integration_system": "",
+      "integration_direction": null,
+      "integration_pattern": null,
+      "gap_criticality": null,
+      "question_id": "",
+      "assumption_id": "",
+      "why_it_matters": "",
+      "affected_ids": [],
+      "impact_if_wrong": ""
+    },
+    {
+      "temp_id": "t37",
+      "type": "CON",
+      "title": "Legacy SME Team Availability Limit",
+      "description": "A maximum of 4 individuals out of the 14-person Vekter team can be assigned to modernization tasks.",
+      "priority": "must",
+      "origin": "customer_stated",
+      "quotes": [
+        {
+          "segment_id": "D1.S19",
+          "quote": "- The Vekter team is 14 people; at most 4 can be released to the programme at any time."
+        }
+      ],
+      "related_ids": [
+        "t1"
+      ],
+      "tags": [],
+      "absence_note": "",
+      "nfr_category": null,
+      "integration_system": "",
+      "integration_direction": null,
+      "integration_pattern": null,
+      "gap_criticality": null,
+      "question_id": "",
+      "assumption_id": "",
+      "why_it_matters": "",
+      "affected_ids": [],
+      "impact_if_wrong": ""
+    },
+    {
+      "temp_id": "t38",
+      "type": "CON",
+      "title": "Self-Service Portal Initial Delivery Deadline",
+      "description": "Production launch of the self-service portal must occur within 9 months following contract signing.",
+      "priority": "must",
+      "origin": "customer_stated",
+      "quotes": [
+        {
+          "segment_id": "D1.S19",
+          "quote": "- We expect a first production release of the self-service portal within 9 months of contract signature."
+        }
+      ],
+      "related_ids": [
+        "t17"
+      ],
+      "tags": [],
+      "absence_note": "",
+      "nfr_category": null,
+      "integration_system": "",
+      "integration_direction": null,
+      "integration_pattern": null,
+      "gap_criticality": null,
+      "question_id": "",
+      "assumption_id": "",
+      "why_it_matters": "",
+      "affected_ids": [],
+      "impact_if_wrong": ""
+    },
+    {
+      "temp_id": "t39",
+      "type": "RISK",
+      "title": "PL/SQL Logic Migration Complexity",
+      "description": "Undecided strategy on porting 340 PL/SQL packages creates technical complexity for application and database tiers.",
+      "priority": "high",
+      "origin": "customer_stated",
+      "quotes": [
+        {
+          "segment_id": "D1.S22",
+          "quote": "Two further points are undecided: whether the PL/SQL logic is re-platformed as-is or re-expressed in the new application tier, and whether the broker SOAP services are fronted by a gateway or reimplemented. We would like your view on both."
+        }
+      ],
+      "related_ids": [
+        "t2",
+        "t28"
+      ],
+      "tags": [
+        "data",
+        "migration"
+      ],
+      "absence_note": "",
+      "nfr_category": null,
+      "integration_system": "",
+      "integration_direction": null,
+      "integration_pattern": null,
+      "gap_criticality": null,
+      "question_id": "",
+      "assumption_id": "",
+      "why_it_matters": "",
+      "affected_ids": [],
+      "impact_if_wrong": ""
+    },
+    {
+      "temp_id": "t40",
+      "type": "RISK",
+      "title": "Broker SOAP Gateway Architecture Strategy",
+      "description": "Unresolved approach between façade gateway encapsulation or full reimplementation poses delivery trade-offs.",
+      "priority": "medium",
+      "origin": "customer_stated",
+      "quotes": [
+        {
+          "segment_id": "D1.S22",
+          "quote": "Two further points are undecided: whether the PL/SQL logic is re-platformed as-is or re-expressed in the new application tier, and whether the broker SOAP services are fronted by a gateway or reimplemented. We would like your view on both."
+        }
+      ],
+      "related_ids": [
+        "t4",
+        "t19"
+      ],
+      "tags": [
+        "integration"
+      ],
+      "absence_note": "",
+      "nfr_category": null,
+      "integration_system": "",
+      "integration_direction": null,
+      "integration_pattern": null,
+      "gap_criticality": null,
+      "question_id": "",
+      "assumption_id": "",
+      "why_it_matters": "",
+      "affected_ids": [],
+      "impact_if_wrong": ""
+    },
+    {
+      "temp_id": "t41",
+      "type": "RISK",
+      "title": "Customer Portal User Base Expansion",
+      "description": "Potential expansion from 5,000 monthly users to the full 1.2 million policyholder population impacts scaling.",
+      "priority": "medium",
+      "origin": "customer_stated",
+      "quotes": [
+        {
+          "segment_id": "D1.S21",
+          "quote": "We have not yet agreed internally whether the customer portal will be opened to all policyholders at first release or only to those who already use online servicing. Please size for the stated 5,000 monthly active users, and describe how your proposal would change if the scope moved to the full policyholder base."
+        }
+      ],
+      "related_ids": [
+        "t17"
+      ],
+      "tags": [
+        "scalability"
+      ],
+      "absence_note": "",
+      "nfr_category": null,
+      "integration_system": "",
+      "integration_direction": null,
+      "integration_pattern": null,
+      "gap_criticality": null,
+      "question_id": "",
+      "assumption_id": "",
+      "why_it_matters": "",
+      "affected_ids": [],
+      "impact_if_wrong": ""
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "id": "activate-the-fallback",
+  "title": "Activate the Fallback",
+  "difficulty": "advanced",
+  "tagline": "Keep going when the model goes down",
+  "concepts": ["fallback", "retry", "alternate provider", "validator"],
+  "order": 7,
+  "objective": "Ship the outage notice even when the model writing it is the thing that is down.",
+  "description": "There is a Retry block in front of the model, and it is doing its job: two tries, both refused, run over. Retrying a provider that is down just fails twice as slowly. What this workflow needs is somewhere else to go. Add a Fallback block set to 'alternate provider' pointing at 'mock-backup'. When the main model is exhausted, the backup writes the notice instead - and says so, right in the output.",
+  "sample_input": {
+    "incident_id": "INC-2026-0142",
+    "service": "Checkout API",
+    "started_at": "2026-08-31T09:12:00Z",
+    "impact": "Roughly 8% of checkout requests are returning 503 errors."
+  },
+  "expected_output": "An outage notice with a headline, a body of at least a couple of sentences, and the name of the model that wrote it.",
+  "available_blocks": [
+    "input",
+    "retry",
+    "fallback",
+    "timeout",
+    "ai_model",
+    "validator",
+    "safe_stop",
+    "output"
+  ],
+  "starter_workflow": {
+    "id": "wf_activate_fallback",
+    "name": "Outage notice writer",
+    "nodes": [
+      {
+        "id": "brief_in",
+        "type": "input",
+        "label": "Incident brief",
+        "config": {},
+        "position": { "x": 60, "y": 200 }
+      },
+      {
+        "id": "model_retry",
+        "type": "retry",
+        "label": "Try twice",
+        "config": { "max_attempts": 2, "delay_ms": 0 },
+        "position": { "x": 300, "y": 200 }
+      },
+      {
+        "id": "write_notice",
+        "type": "ai_model",
+        "label": "Write the outage notice",
+        "config": {
+          "prompt_id": "outage_notice_v1",
+          "prompt": "Write a public outage notice from this incident brief. Return JSON with headline, body and written_by.",
+          "system": "You write calm, factual status-page notices. Always fill in written_by with which model you are.",
+          "expects_json": true,
+          "output_field": "notice"
+        },
+        "position": { "x": 780, "y": 200 }
+      },
+      {
+        "id": "check_notice",
+        "type": "validator",
+        "label": "Is the notice publishable?",
+        "config": {
+          "schema": {
+            "notice.headline": { "type": "string", "min": 5 },
+            "notice.body": { "type": "string", "min": 20 },
+            "notice.written_by": { "type": "string", "min": 3 }
+          },
+          "on_fail": "fail"
+        },
+        "position": { "x": 1020, "y": 200 }
+      },
+      {
+        "id": "notice_out",
+        "type": "output",
+        "label": "Publish the notice",
+        "config": { "field": "notice" },
+        "position": { "x": 1260, "y": 200 }
+      }
+    ],
+    "edges": [
+      { "id": "e_brief_retry", "source": "brief_in", "target": "model_retry" },
+      { "id": "e_retry_write", "source": "model_retry", "target": "write_notice" },
+      { "id": "e_write_check", "source": "write_notice", "target": "check_notice" },
+      { "id": "e_check_out", "source": "check_notice", "target": "notice_out" }
+    ]
+  },
+  "solution_hint": "Splice a Fallback block between 'Try twice' and 'Write the outage notice'. Set its mode to 'alternate provider' and its provider to 'mock-backup'. Guards stack in a chain, so Retry runs out of attempts first and the Fallback catches what is left.",
+  "failure_scenarios": [
+    {
+      "id": "primary-down",
+      "label": "The main model is down",
+      "description": "The primary provider refuses the first two calls. Anything after that gets through.",
+      "rules": [
+        {
+          "node_id": "write_notice",
+          "kind": "model_error",
+          "first_n": 2,
+          "label": "primary provider unavailable",
+          "detail": {
+            "message": "The main model provider is not responding.",
+            "provider": "mock"
+          }
+        }
+      ]
+    }
+  ],
+  "completion_criteria": [
+    "A Fallback block stands behind the model",
+    "The fallback actually fires and rescues the step",
+    "The published notice says which model wrote it",
+    "The run finishes at the Output block"
+  ],
+  "completion_checks": [
+    { "kind": "block_used", "type": "fallback" },
+    { "kind": "event", "event": "fallback_used" },
+    { "kind": "output_field", "field": "written_by", "op": "not_empty" },
+    { "kind": "run_status", "in": ["completed"] }
+  ],
+  "mock_responses": {
+    "outage_notice_v1": {
+      "confidence": 0.92,
+      "data": {
+        "headline": "Checkout API returning errors for some customers",
+        "body": "Since 09:12 UTC a portion of checkout requests are failing with 503 errors, affecting roughly 8% of attempts. Our engineers are working on it now and we will update this notice every 30 minutes until it is resolved.",
+        "written_by": "primary model"
+      }
+    }
+  },
+  "mock_responses_by_provider": {
+    "mock-backup": {
+      "outage_notice_v1": {
+        "confidence": 0.81,
+        "data": {
+          "headline": "Checkout API degraded - written by the backup model",
+          "body": "Some checkout requests have been failing since 09:12 UTC. About 8% of attempts return an error. This notice was produced by the backup model because the main provider was unavailable, and it will be refreshed every 30 minutes.",
+          "written_by": "backup model (mock-backup)"
+        }
+      }
+    }
+  },
+  "tool_fixtures": {},
+  "retrieval_fixtures": {}
+}

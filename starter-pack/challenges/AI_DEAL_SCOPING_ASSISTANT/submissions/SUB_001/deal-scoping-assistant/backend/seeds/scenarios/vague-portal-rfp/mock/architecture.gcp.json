@@ -1,0 +1,768 @@
+{
+  "components": [
+    {
+      "req_ids": [
+        "FR_01",
+        "FR_02",
+        "FR_03",
+        "FR_04",
+        "FR_05",
+        "FR_06",
+        "NFR_01",
+        "BR_01",
+        "PER_02"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "ARC_01",
+      "name": "Customer Portal Frontend",
+      "area": "user_facing_applications",
+      "cloud_service": "Firebase Hosting",
+      "purpose": "Hosts the static and dynamic assets for the customer-facing web application.",
+      "supported_ids": [
+        "FR_01",
+        "FR_02",
+        "FR_03",
+        "FR_04",
+        "FR_05",
+        "FR_06",
+        "NFR_01",
+        "BR_01",
+        "PER_02"
+      ],
+      "rationale": "Provides fast, secure, and scalable hosting for web applications with built-in CDN capabilities.",
+      "trade_offs": [
+        "Firebase Hosting serves static assets only; server-side rendering would need Cloud Run in front of it."
+      ],
+      "dependencies": [
+        "ARC_02",
+        "ARC_04",
+        "ARC_10"
+      ],
+      "security_considerations": "Leverages Firebase's built-in security for content delivery and SSL.",
+      "environments": [
+        "dev",
+        "test",
+        "prod"
+      ]
+    },
+    {
+      "req_ids": [
+        "FR_01",
+        "FR_02",
+        "FR_03",
+        "FR_04",
+        "FR_05",
+        "FR_06",
+        "INT_01",
+        "INT_02",
+        "ASM_01",
+        "ASM_02"
+      ],
+      "basis": "inferred",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "ARC_02",
+      "name": "Backend API",
+      "area": "backend_services",
+      "cloud_service": "Cloud Run",
+      "purpose": "Provides the core business logic and APIs for the customer portal, handling requests from the frontend.",
+      "supported_ids": [
+        "FR_01",
+        "FR_02",
+        "FR_03",
+        "FR_04",
+        "FR_05",
+        "FR_06",
+        "INT_01",
+        "INT_02",
+        "ASM_01",
+        "ASM_02"
+      ],
+      "rationale": "Serverless container platform offers automatic scaling, cost efficiency, and simplified deployment for API services.",
+      "trade_offs": [
+        "Cloud Run scales to zero, so the first request after idle pays a cold start unless minimum instances are kept warm at a cost."
+      ],
+      "dependencies": [
+        "ARC_03",
+        "ARC_05",
+        "ARC_06",
+        "ARC_07",
+        "ARC_08",
+        "ARC_12"
+      ],
+      "security_considerations": "Requires proper IAM roles and service accounts, and secure configuration for environment variables.",
+      "environments": [
+        "dev",
+        "test",
+        "prod"
+      ]
+    },
+    {
+      "req_ids": [
+        "FR_01",
+        "FR_02",
+        "FR_03",
+        "FR_04",
+        "FR_05",
+        "FR_06",
+        "ASM_01"
+      ],
+      "basis": "inferred",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "ARC_03",
+      "name": "Relational Database",
+      "area": "databases_and_storage",
+      "cloud_service": "Cloud SQL for PostgreSQL",
+      "purpose": "Stores customer-specific data, portal configuration, and transactional information.",
+      "supported_ids": [
+        "FR_01",
+        "FR_02",
+        "FR_03",
+        "FR_04",
+        "FR_05",
+        "FR_06",
+        "ASM_01"
+      ],
+      "rationale": "Managed relational database service provides high availability, backups, and scalability without operational overhead.",
+      "trade_offs": [
+        "Cloud SQL is a single-region managed instance; cross-region high availability needs read replicas and adds cost and replication lag."
+      ],
+      "dependencies": [],
+      "security_considerations": "Requires strong access controls, encryption at rest and in transit, and regular backups.",
+      "environments": [
+        "dev",
+        "test",
+        "prod"
+      ]
+    },
+    {
+      "req_ids": [
+        "BR_01",
+        "PER_02",
+        "ASM_05"
+      ],
+      "basis": "assumed",
+      "validation_required": true,
+      "validation_reason": "Depends on pending assumption ASM_05.",
+      "id": "ARC_04",
+      "name": "Customer Identity Management",
+      "area": "identity_and_access_management",
+      "cloud_service": "Identity Platform",
+      "purpose": "Manages customer authentication and authorization for accessing the portal.",
+      "supported_ids": [
+        "BR_01",
+        "PER_02",
+        "ASM_05"
+      ],
+      "rationale": "A fully managed service for customer identity, supporting various authentication methods and MFA.",
+      "trade_offs": [
+        "Identity Platform is simple to adopt but customising login flows beyond its templates means owning more frontend code."
+      ],
+      "dependencies": [],
+      "security_considerations": "Handles user credentials securely, supports MFA, and integrates with standard identity protocols.",
+      "environments": [
+        "dev",
+        "test",
+        "prod"
+      ]
+    },
+    {
+      "req_ids": [
+        "INT_01",
+        "INT_02",
+        "FR_01",
+        "FR_02",
+        "ASM_02"
+      ],
+      "basis": "inferred",
+      "validation_required": true,
+      "validation_reason": "Depends on pending assumption ASM_02.",
+      "id": "ARC_05",
+      "name": "API Gateway",
+      "area": "apis",
+      "cloud_service": "API Gateway",
+      "purpose": "Provides a unified entry point for external systems and the frontend to interact with the backend services.",
+      "supported_ids": [
+        "INT_01",
+        "INT_02",
+        "FR_01",
+        "FR_02",
+        "ASM_02"
+      ],
+      "rationale": "Simplifies API management, enforces security policies, and routes requests to appropriate backend services.",
+      "trade_offs": [
+        "API Gateway adds a managed policy layer and a small per-call latency; it has fewer features than Apigee if advanced monetisation is ever needed."
+      ],
+      "dependencies": [
+        "ARC_02"
+      ],
+      "security_considerations": "Acts as the first line of defense, enforcing authentication, authorization, and rate limiting.",
+      "environments": [
+        "dev",
+        "test",
+        "prod"
+      ]
+    },
+    {
+      "req_ids": [
+        "INT_01",
+        "SYS_01",
+        "ASM_02"
+      ],
+      "basis": "assumed",
+      "validation_required": true,
+      "validation_reason": "Depends on pending assumption ASM_02.",
+      "id": "ARC_06",
+      "name": "TMS Integration Connector",
+      "area": "integration_components",
+      "cloud_service": "Integration Connectors",
+      "purpose": "Facilitates secure and reliable integration with the existing Transportation Management System (TMS).",
+      "supported_ids": [
+        "INT_01",
+        "SYS_01",
+        "ASM_02"
+      ],
+      "rationale": "Provides managed connectors for various enterprise systems, simplifying data exchange and reducing custom code.",
+      "trade_offs": [
+        "Integration Connectors cut custom code but depend on a supported connector for the TMS; an unsupported system falls back to a custom Cloud Run adapter."
+      ],
+      "dependencies": [
+        "ARC_02"
+      ],
+      "security_considerations": "Requires secure network connectivity (e.g., Private Service Connect) and credential management.",
+      "environments": [
+        "dev",
+        "test",
+        "prod"
+      ]
+    },
+    {
+      "req_ids": [
+        "INT_02",
+        "ASM_02"
+      ],
+      "basis": "assumed",
+      "validation_required": true,
+      "validation_reason": "Depends on pending assumption ASM_02.",
+      "id": "ARC_07",
+      "name": "Finance System Integration Connector",
+      "area": "integration_components",
+      "cloud_service": "Integration Connectors",
+      "purpose": "Facilitates secure and reliable integration with the existing Finance System for invoice retrieval.",
+      "supported_ids": [
+        "INT_02",
+        "ASM_02"
+      ],
+      "rationale": "Provides managed connectors for various enterprise systems, simplifying data exchange and reducing custom code.",
+      "trade_offs": [
+        "A managed connector limits control over batch windows and retries compared with a custom finance adapter."
+      ],
+      "dependencies": [
+        "ARC_02"
+      ],
+      "security_considerations": "Requires secure network connectivity (e.g., Private Service Connect) and credential management.",
+      "environments": [
+        "dev",
+        "test",
+        "prod"
+      ]
+    },
+    {
+      "req_ids": [
+        "FR_03",
+        "ASM_03"
+      ],
+      "basis": "assumed",
+      "validation_required": true,
+      "validation_reason": "Depends on pending assumption ASM_03.",
+      "id": "ARC_08",
+      "name": "Payment Gateway Orchestration",
+      "area": "integration_components",
+      "cloud_service": "Workflows",
+      "purpose": "Orchestrates the interaction with the external payment gateway for online invoice payments.",
+      "supported_ids": [
+        "FR_03",
+        "ASM_03"
+      ],
+      "rationale": "Serverless orchestration service allows defining and executing complex sequences of API calls and logic.",
+      "trade_offs": [
+        "Adds a layer of abstraction and potential latency compared to direct integration, but improves reliability and error handling."
+      ],
+      "dependencies": [
+        "ARC_02"
+      ],
+      "security_considerations": "Handles sensitive payment initiation, requiring secure credential management and error handling.",
+      "environments": [
+        "dev",
+        "test",
+        "prod"
+      ]
+    },
+    {
+      "req_ids": [
+        "NFR_01",
+        "ASM_05"
+      ],
+      "basis": "assumed",
+      "validation_required": true,
+      "validation_reason": "Depends on pending assumption ASM_05.",
+      "id": "ARC_09",
+      "name": "Virtual Private Cloud (VPC)",
+      "area": "security_controls",
+      "cloud_service": "Virtual Private Cloud",
+      "purpose": "Provides a logically isolated network environment for all cloud resources, ensuring secure communication.",
+      "supported_ids": [
+        "NFR_01",
+        "ASM_05"
+      ],
+      "rationale": "Essential for network isolation, defining custom IP address ranges, and configuring network policies.",
+      "trade_offs": [
+        "Private networking hardens the platform but every managed service then needs a private access path, which adds setup effort."
+      ],
+      "dependencies": [],
+      "security_considerations": "Forms the foundation of network security, enabling private IP addresses and firewall rules.",
+      "environments": [
+        "dev",
+        "test",
+        "prod"
+      ]
+    },
+    {
+      "req_ids": [
+        "NFR_01",
+        "ASM_01"
+      ],
+      "basis": "assumed",
+      "validation_required": true,
+      "validation_reason": "Depends on pending assumption ASM_01.",
+      "id": "ARC_10",
+      "name": "Global Load Balancer",
+      "area": "availability_and_scalability",
+      "cloud_service": "Cloud Load Balancing",
+      "purpose": "Distributes incoming user traffic across multiple instances of the frontend and backend services for high availability and performance.",
+      "supported_ids": [
+        "NFR_01",
+        "ASM_01"
+      ],
+      "rationale": "Provides global load balancing, SSL termination, and protection against DDoS attacks.",
+      "trade_offs": [
+        "A global load balancer is more than a single-region portal needs today; it is chosen so a second region can be added without re-architecting."
+      ],
+      "dependencies": [
+        "ARC_01",
+        "ARC_05"
+      ],
+      "security_considerations": "Integrates with Cloud Armor for WAF capabilities and DDoS protection.",
+      "environments": [
+        "prod"
+      ]
+    },
+    {
+      "req_ids": [
+        "NFR_01",
+        "ASM_05"
+      ],
+      "basis": "assumed",
+      "validation_required": true,
+      "validation_reason": "Depends on pending assumption ASM_05.",
+      "id": "ARC_11",
+      "name": "Web Application Firewall (WAF)",
+      "area": "security_controls",
+      "cloud_service": "Google Cloud Armor",
+      "purpose": "Protects the portal from common web vulnerabilities and DDoS attacks.",
+      "supported_ids": [
+        "NFR_01",
+        "ASM_05"
+      ],
+      "rationale": "Provides WAF capabilities and DDoS protection policies integrated with Cloud Load Balancing.",
+      "trade_offs": [
+        "Cloud Armor rules need tuning; strict defaults can block legitimate customer traffic until the rule set is reviewed."
+      ],
+      "dependencies": [
+        "ARC_10"
+      ],
+      "security_considerations": "Filters malicious traffic before it reaches the application, enhancing overall security posture.",
+      "environments": [
+        "prod"
+      ]
+    },
+    {
+      "req_ids": [
+        "NFR_01",
+        "ASM_05"
+      ],
+      "basis": "assumed",
+      "validation_required": true,
+      "validation_reason": "Depends on pending assumption ASM_05.",
+      "id": "ARC_12",
+      "name": "Secret Manager",
+      "area": "security_controls",
+      "cloud_service": "Secret Manager",
+      "purpose": "Securely stores and manages sensitive information such as API keys, database credentials, and integration secrets.",
+      "supported_ids": [
+        "NFR_01",
+        "ASM_05"
+      ],
+      "rationale": "Centralized secret management service reduces the risk of hardcoding credentials and improves security posture.",
+      "trade_offs": [
+        "Secret Manager is the right store, but services must fetch secrets at start-up, so rotation needs a restart or a refresh routine."
+      ],
+      "dependencies": [
+        "ARC_02",
+        "ARC_06",
+        "ARC_07",
+        "ARC_08"
+      ],
+      "security_considerations": "Ensures secrets are encrypted at rest and in transit, with fine-grained access control.",
+      "environments": [
+        "dev",
+        "test",
+        "prod"
+      ]
+    },
+    {
+      "req_ids": [
+        "NFR_01"
+      ],
+      "basis": "inferred",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "ARC_13",
+      "name": "Cloud Logging",
+      "area": "observability_and_monitoring",
+      "cloud_service": "Cloud Logging",
+      "purpose": "Collects and stores logs from all application components and infrastructure services.",
+      "supported_ids": [
+        "NFR_01"
+      ],
+      "rationale": "Provides a centralized logging solution for debugging, auditing, and security analysis.",
+      "trade_offs": [
+        "Retaining logs for audit increases storage cost; log sinks and exclusions must be designed early."
+      ],
+      "dependencies": [],
+      "security_considerations": "Logs may contain sensitive information and require appropriate access controls and retention policies.",
+      "environments": [
+        "dev",
+        "test",
+        "prod"
+      ]
+    },
+    {
+      "req_ids": [
+        "NFR_01"
+      ],
+      "basis": "inferred",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "ARC_14",
+      "name": "Cloud Monitoring",
+      "area": "observability_and_monitoring",
+      "cloud_service": "Cloud Monitoring",
+      "purpose": "Gathers metrics and provides dashboards and alerting for the health and performance of the portal.",
+      "supported_ids": [
+        "NFR_01"
+      ],
+      "rationale": "Offers comprehensive monitoring capabilities for cloud resources, enabling proactive issue detection.",
+      "trade_offs": [
+        "Useful dashboards and alerts take deliberate work; out of the box the metrics are raw and noisy."
+      ],
+      "dependencies": [],
+      "security_considerations": "Monitoring data should be protected with appropriate IAM roles to prevent unauthorized access.",
+      "environments": [
+        "dev",
+        "test",
+        "prod"
+      ]
+    },
+    {
+      "req_ids": [
+        "NFR_01"
+      ],
+      "basis": "inferred",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "ARC_15",
+      "name": "Error Reporting",
+      "area": "observability_and_monitoring",
+      "cloud_service": "Error Reporting",
+      "purpose": "Aggregates and analyzes application errors, providing real-time alerts and insights into error trends.",
+      "supported_ids": [
+        "NFR_01"
+      ],
+      "rationale": "Automatically identifies and groups application errors, simplifying debugging and incident response.",
+      "trade_offs": [
+        "Error Reporting groups exceptions well for Cloud Run but gives little insight into integration failures outside the service code."
+      ],
+      "dependencies": [
+        "ARC_13"
+      ],
+      "security_considerations": "Error details might contain sensitive data, requiring careful handling and access restrictions.",
+      "environments": [
+        "dev",
+        "test",
+        "prod"
+      ]
+    },
+    {
+      "req_ids": [
+        "NFR_01"
+      ],
+      "basis": "inferred",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "ARC_16",
+      "name": "CI/CD Pipeline",
+      "area": "deployment_and_runtime",
+      "cloud_service": "Cloud Build",
+      "purpose": "Automates the build, test, and packaging of application code into deployable artifacts.",
+      "supported_ids": [
+        "NFR_01"
+      ],
+      "rationale": "Provides a fully managed CI/CD service that integrates with source repositories and other Google Cloud services.",
+      "trade_offs": [
+        "Cloud Build keeps everything on one platform, but teams already on GitHub Actions or GitLab CI would maintain two pipeline styles."
+      ],
+      "dependencies": [
+        "ARC_17"
+      ],
+      "security_considerations": "Build processes should run with least privilege and scan for vulnerabilities.",
+      "environments": [
+        "dev",
+        "test",
+        "prod"
+      ]
+    },
+    {
+      "req_ids": [
+        "NFR_01"
+      ],
+      "basis": "inferred",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "ARC_17",
+      "name": "Deployment Automation",
+      "area": "deployment_and_runtime",
+      "cloud_service": "Cloud Deploy",
+      "purpose": "Manages the automated deployment of application artifacts across different environments.",
+      "supported_ids": [
+        "NFR_01"
+      ],
+      "rationale": "Provides continuous delivery to target environments, managing releases and rollbacks.",
+      "trade_offs": [
+        "Cloud Deploy adds a formal promotion flow, which slows small teams down until the pipeline stages are settled."
+      ],
+      "dependencies": [
+        "ARC_01",
+        "ARC_02"
+      ],
+      "security_considerations": "Deployment pipelines require strict access controls and audit trails.",
+      "environments": [
+        "dev",
+        "test",
+        "prod"
+      ]
+    }
+  ],
+  "flows": [
+    {
+      "from_id": "User",
+      "to_id": "ARC_10",
+      "label": "User Request",
+      "protocol": "HTTPS"
+    },
+    {
+      "from_id": "ARC_10",
+      "to_id": "ARC_11",
+      "label": "Filtered Request",
+      "protocol": "HTTPS"
+    },
+    {
+      "from_id": "ARC_11",
+      "to_id": "ARC_01",
+      "label": "Frontend Content",
+      "protocol": "HTTPS"
+    },
+    {
+      "from_id": "ARC_01",
+      "to_id": "ARC_04",
+      "label": "Authenticate User",
+      "protocol": "HTTPS"
+    },
+    {
+      "from_id": "ARC_01",
+      "to_id": "ARC_05",
+      "label": "API Request",
+      "protocol": "HTTPS"
+    },
+    {
+      "from_id": "ARC_05",
+      "to_id": "ARC_02",
+      "label": "Backend Call",
+      "protocol": "HTTPS"
+    },
+    {
+      "from_id": "ARC_02",
+      "to_id": "ARC_03",
+      "label": "Database Query",
+      "protocol": "SQL"
+    },
+    {
+      "from_id": "ARC_02",
+      "to_id": "ARC_06",
+      "label": "TMS Data",
+      "protocol": "API Call"
+    },
+    {
+      "from_id": "ARC_06",
+      "to_id": "TMS",
+      "label": "Tracking Request",
+      "protocol": "API Call"
+    },
+    {
+      "from_id": "ARC_02",
+      "to_id": "ARC_07",
+      "label": "Finance Data",
+      "protocol": "API Call"
+    },
+    {
+      "from_id": "ARC_07",
+      "to_id": "Finance System",
+      "label": "Invoice Request",
+      "protocol": "API Call"
+    },
+    {
+      "from_id": "ARC_02",
+      "to_id": "ARC_08",
+      "label": "Payment Initiate",
+      "protocol": "API Call"
+    },
+    {
+      "from_id": "ARC_08",
+      "to_id": "Payment Gateway",
+      "label": "Process Payment",
+      "protocol": "HTTPS"
+    },
+    {
+      "from_id": "ARC_02",
+      "to_id": "ARC_12",
+      "label": "Retrieve Secret",
+      "protocol": "API Call"
+    },
+    {
+      "from_id": "ARC_01",
+      "to_id": "ARC_13",
+      "label": "Application Logs",
+      "protocol": "Logs"
+    },
+    {
+      "from_id": "ARC_02",
+      "to_id": "ARC_13",
+      "label": "Application Logs",
+      "protocol": "Logs"
+    },
+    {
+      "from_id": "ARC_03",
+      "to_id": "ARC_13",
+      "label": "Database Logs",
+      "protocol": "Logs"
+    },
+    {
+      "from_id": "ARC_01",
+      "to_id": "ARC_14",
+      "label": "Application Metrics",
+      "protocol": "Metrics"
+    },
+    {
+      "from_id": "ARC_02",
+      "to_id": "ARC_14",
+      "label": "Application Metrics",
+      "protocol": "Metrics"
+    },
+    {
+      "from_id": "ARC_13",
+      "to_id": "ARC_15",
+      "label": "Error Events",
+      "protocol": "Errors"
+    }
+  ],
+  "environments": {
+    "dev": "All components will have dedicated development instances, often with reduced scale or shared resources. Developers will use ARC_16 (Cloud Build) and ARC_17 (Cloud Deploy) for automated deployments to this environment.",
+    "test": "A dedicated testing environment will mirror production as closely as possible in terms of services and configuration, but with test data. Deployments will be managed by ARC_17 (Cloud Deploy) after successful CI/CD runs.",
+    "prod": "The production environment will host the live customer portal, configured for high availability, scalability, and security, managed by ARC_17 (Cloud Deploy)."
+  },
+  "deployment_runtime": {
+    "req_ids": [
+      "NFR_01"
+    ],
+    "basis": "inferred",
+    "validation_required": false,
+    "validation_reason": "",
+    "text": "The customer portal frontend (ARC_01) will be deployed using Firebase Hosting for static content and client-side application. The backend API (ARC_02) will leverage Cloud Run for serverless container deployment, providing automatic scaling and simplified operations. Continuous integration and delivery will be managed by ARC_16 (Cloud Build) for building and testing, and ARC_17 (Cloud Deploy) for orchestrating deployments across environments.",
+    "arc_ids": [
+      "ARC_01",
+      "ARC_02",
+      "ARC_16",
+      "ARC_17"
+    ]
+  },
+  "availability_scalability": {
+    "req_ids": [
+      "NFR_01",
+      "ASM_01"
+    ],
+    "basis": "assumed",
+    "validation_required": true,
+    "validation_reason": "Depends on pending assumption ASM_01.",
+    "text": "High availability and scalability are achieved through several components. The customer portal frontend (ARC_01) benefits from Firebase Hosting's global CDN. The backend API (ARC_02) on Cloud Run automatically scales based on demand. A Global Load Balancer (ARC_10) distributes traffic, and Cloud SQL for PostgreSQL (ARC_03) provides a managed, highly available database. Google Cloud Armor (ARC_11) also contributes to availability by mitigating DDoS attacks.",
+    "arc_ids": [
+      "ARC_01",
+      "ARC_02",
+      "ARC_03",
+      "ARC_10",
+      "ARC_11"
+    ]
+  },
+  "backup_dr": {
+    "req_ids": [],
+    "basis": "recommended",
+    "validation_required": true,
+    "validation_reason": "This is a recommended practice not explicitly stated by the customer.",
+    "text": "Cloud SQL for PostgreSQL (ARC_03) provides automated backups and point-in-time recovery. Disaster recovery will involve cross-region replication for the database and infrastructure-as-code for rapid re-provisioning of stateless components in a new region.",
+    "arc_ids": [
+      "ARC_03"
+    ]
+  },
+  "observability": {
+    "req_ids": [
+      "NFR_01"
+    ],
+    "basis": "inferred",
+    "validation_required": false,
+    "validation_reason": "",
+    "text": "The solution will implement comprehensive observability using Google Cloud services. Cloud Logging (ARC_13) will centralize all application and infrastructure logs. Cloud Monitoring (ARC_14) will provide metrics, dashboards, and alerting for system health and performance. Error Reporting (ARC_15) will automatically detect and group application errors, facilitating rapid debugging and resolution.",
+    "arc_ids": [
+      "ARC_13",
+      "ARC_14",
+      "ARC_15"
+    ]
+  },
+  "security_controls": {
+    "req_ids": [
+      "NFR_01",
+      "ASM_05"
+    ],
+    "basis": "assumed",
+    "validation_required": true,
+    "validation_reason": "Depends on pending assumption ASM_05.",
+    "text": "Security is a core consideration, implemented through multiple layers. Customer authentication and authorization are handled by Identity Platform (ARC_04). Network isolation is provided by Virtual Private Cloud (ARC_09). Google Cloud Armor (ARC_11) acts as a Web Application Firewall (WAF) to protect against common web attacks. Sensitive data like API keys and credentials are securely managed using Secret Manager (ARC_12).",
+    "arc_ids": [
+      "ARC_04",
+      "ARC_09",
+      "ARC_11",
+      "ARC_12"
+    ]
+  }
+}

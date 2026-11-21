@@ -1,0 +1,164 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "summary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "items": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "business",
+              "persona",
+              "functional",
+              "nonFunctional",
+              "existingSystem",
+              "integration",
+              "data",
+              "security",
+              "technology",
+              "constraint",
+              "dependency",
+              "risk",
+              "gap",
+              "assumption",
+              "question"
+            ]
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1
+          },
+          "priority": {
+            "default": "Medium",
+            "type": "string",
+            "enum": [
+              "High",
+              "Medium",
+              "Low"
+            ]
+          },
+          "provenance": {
+            "type": "string",
+            "enum": [
+              "customer-stated",
+              "ai-inferred",
+              "assumed"
+            ]
+          },
+          "source": {
+            "default": null,
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "sectionId": {
+                    "default": "",
+                    "type": "string"
+                  },
+                  "sectionTitle": {
+                    "default": "",
+                    "type": "string"
+                  },
+                  "lineStart": {
+                    "default": 0,
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 9007199254740991
+                  },
+                  "lineEnd": {
+                    "default": 0,
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 9007199254740991
+                  },
+                  "quote": {
+                    "default": "",
+                    "type": "string"
+                  },
+                  "verified": {
+                    "default": false,
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "sectionId",
+                  "sectionTitle",
+                  "lineStart",
+                  "lineEnd",
+                  "quote",
+                  "verified"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "relatedIds": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "affectsInputs": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "expectedUsers",
+                "environments",
+                "deliveryDeadline",
+                "integrationReadiness",
+                "dataVolume",
+                "complianceScope",
+                "aiDataAvailability",
+                "targetRegions"
+              ]
+            }
+          },
+          "critical": {
+            "default": false,
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "id",
+          "kind",
+          "title",
+          "description",
+          "priority",
+          "provenance",
+          "source",
+          "relatedIds",
+          "affectsInputs",
+          "critical"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "summary",
+    "items"
+  ],
+  "additionalProperties": false
+}

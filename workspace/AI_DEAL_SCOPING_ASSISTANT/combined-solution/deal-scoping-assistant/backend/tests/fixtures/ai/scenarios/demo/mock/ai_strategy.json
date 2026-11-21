@@ -1,0 +1,98 @@
+{
+  "ai_requirements": [
+    {
+      "req_ids": [
+        "FR_01"
+      ],
+      "basis": "inferred",
+      "validation_required": false,
+      "validation_reason": "",
+      "text": "Status explanations must be accurate and must never invent a delivery date."
+    }
+  ],
+  "use_cases": [
+    {
+      "req_ids": [
+        "FR_01",
+        "INT_01"
+      ],
+      "basis": "recommended",
+      "validation_required": true,
+      "validation_reason": "Recommended beyond the stated scope.",
+      "id": "AI_01",
+      "name": "Plain-language delivery status",
+      "description": "Explains the raw status codes.",
+      "processing_class": "ai",
+      "pattern": "retrieval-augmented generation",
+      "model_options": [
+        "A managed general-purpose model"
+      ],
+      "retrieval_required": true,
+      "retrieval_notes": "Retrieves the shipment's own status history only.",
+      "orchestration": "One synchronous call per request, no agent loop.",
+      "prompt_and_structured_output": "A fixed prompt returns a short structured answer.",
+      "evaluation": "A labelled set of status histories is scored weekly.",
+      "responsible_ai_safety": "The answer is restricted to the retrieved status history.",
+      "monitoring_feedback": "Users can flag a wrong explanation.",
+      "human_review": "Support reviews every flagged answer.",
+      "data_privacy": "Only shipment data is sent; no customer identity leaves the platform."
+    }
+  ],
+  "deterministic_areas": [
+    {
+      "req_ids": [
+        "NFR_01"
+      ],
+      "basis": "inferred",
+      "validation_required": false,
+      "validation_reason": "",
+      "text": "Availability monitoring stays deterministic."
+    }
+  ],
+  "mandatory_human_decisions": [
+    {
+      "req_ids": [
+        "INT_01"
+      ],
+      "basis": "inferred",
+      "validation_required": false,
+      "validation_reason": "",
+      "text": "A disputed delivery is decided by a person."
+    }
+  ],
+  "architecture_pattern": "Retrieval-augmented generation over the shipment status store.",
+  "provider_options": [
+    {
+      "platform": "aws",
+      "provider": "Managed foundation models",
+      "models": [
+        "A managed general-purpose model"
+      ],
+      "rationale": "Keeps data in the selected platform."
+    },
+    {
+      "platform": "azure",
+      "provider": "Managed foundation models",
+      "models": [
+        "A managed general-purpose model"
+      ],
+      "rationale": "Same data boundary on Azure."
+    }
+  ],
+  "framework_recommendations": [
+    {
+      "req_ids": [
+        "FR_01"
+      ],
+      "basis": "recommended",
+      "validation_required": true,
+      "validation_reason": "A recommendation, not a customer requirement.",
+      "name": "LangChain",
+      "purpose": "Prompt and structured-output handling.",
+      "rationale": "The team needs structured answers validated before they reach the portal.",
+      "alternatives_considered": [
+        "Direct provider SDK"
+      ]
+    }
+  ]
+}

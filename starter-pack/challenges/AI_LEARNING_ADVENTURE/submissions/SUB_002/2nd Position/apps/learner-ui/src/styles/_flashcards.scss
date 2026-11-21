@@ -1,0 +1,339 @@
+@use './tokens' as tokens;
+
+.flashcard-deck {
+  display: flex;
+  flex-direction: column;
+  gap: tokens.$spacing-lg;
+  max-width: tokens.$size-content-width;
+  margin: 0 auto;
+  padding-bottom: tokens.$spacing-2xl;
+}
+
+.flashcard-deck__title {
+  margin: 0;
+  font-size: tokens.$typography-font-size-3xl;
+  line-height: tokens.$typography-line-height-tight;
+}
+
+.flashcard-deck__progress {
+  margin: 0;
+  font-size: tokens.$typography-font-size-md;
+  font-weight: tokens.$typography-font-weight-semibold;
+  color: tokens.$color-text-secondary;
+}
+
+.flashcard {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  height: 380px;
+  min-height: 380px;
+  margin: 0 auto;
+  perspective: 1200px;
+  -webkit-perspective: 1200px;
+  cursor: pointer;
+  user-select: none;
+  transition: transform tokens.$motion-duration-fast ease;
+}
+
+.flashcard:hover {
+  transform: translateY(-4px);
+}
+
+.flashcard__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: rotateY(0deg);
+  -webkit-transform: rotateY(0deg);
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  transform-origin: center center;
+  transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: tokens.$border-radius-lg;
+  box-shadow: tokens.$shadow-card;
+  color: tokens.$color-text-primary;
+  outline: none;
+}
+
+.flashcard--flipped .flashcard__inner,
+.flashcard__inner--flipped,
+.flashcard__inner.is-flipped {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+}
+
+.flashcard__face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: tokens.$border-radius-lg;
+  padding: tokens.$spacing-xl;
+  display: flex;
+  flex-direction: column;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transition: border-color tokens.$motion-duration-fast ease;
+  overflow-y: auto;
+}
+
+.flashcard__inner:hover .flashcard__face,
+.flashcard__inner:focus-visible .flashcard__face {
+  border-color: tokens.$color-brand-primary;
+}
+
+.flashcard__face--front {
+  background-color: tokens.$color-surface-tinted;
+  border: 2px solid tokens.$color-border-light-gray;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transform: rotateY(0deg) translateZ(1px);
+  -webkit-transform: rotateY(0deg) translateZ(1px);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flashcard__face--back {
+  background-color: tokens.$color-background-card-yellow;
+  border: 2px solid rgba(255, 140, 0, 0.3);
+  transform: rotateY(180deg) translateZ(1px);
+  -webkit-transform: rotateY(180deg) translateZ(1px);
+  justify-content: flex-start;
+  align-items: stretch;
+  text-align: left;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flashcard__concept {
+  font-size: tokens.$typography-font-size-3xl;
+  font-weight: tokens.$typography-font-weight-bold;
+  text-align: center;
+}
+
+.flashcard__sections {
+  display: flex;
+  flex-direction: column;
+  gap: tokens.$spacing-sm;
+  width: 100%;
+  margin: 0;
+}
+
+.flashcard__section dt {
+  font-size: tokens.$typography-font-size-sm;
+  font-weight: tokens.$typography-font-weight-bold;
+  color: tokens.$color-text-orange;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.flashcard__section dd {
+  margin: tokens.$spacing-2xs 0 0;
+  line-height: tokens.$typography-line-height-relaxed;
+}
+
+.flashcard-deck__ratings {
+  position: relative;
+  display: flex;
+  gap: tokens.$spacing-md;
+  justify-content: center;
+}
+
+.flashcard-deck__rating {
+  flex: 1;
+  max-width: 280px;
+  min-height: tokens.$size-control-height;
+  padding: tokens.$spacing-sm tokens.$spacing-lg;
+  font-size: tokens.$typography-font-size-lg;
+  font-weight: tokens.$typography-font-weight-semibold;
+  border: 2px solid tokens.$color-border-light-gray;
+  border-radius: tokens.$border-radius-pill;
+  background-color: tokens.$color-background-white;
+  cursor: pointer;
+}
+
+.flashcard-deck__rating--got:not(:disabled):hover,
+.flashcard-deck__rating--got.flashcard-deck__rating--active {
+  border-color: tokens.$color-state-completed;
+  color: tokens.$color-state-completed;
+}
+
+.flashcard-deck__rating--needs:not(:disabled):hover,
+.flashcard-deck__rating--needs.flashcard-deck__rating--active {
+  border-color: tokens.$color-state-in-progress;
+  color: tokens.$color-text-orange;
+}
+
+.flashcard-deck__rating:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.flashcard-deck__saving {
+  margin: 0;
+  text-align: center;
+  font-size: tokens.$typography-font-size-sm;
+  color: tokens.$color-text-orange;
+}
+
+.flashcard-deck__rating-status {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.flashcard-deck__rating-status .button {
+  pointer-events: auto;
+}
+
+.flashcard-deck__save-error {
+  margin: 0;
+  font-size: tokens.$typography-font-size-sm;
+  color: tokens.$color-text-red;
+}
+
+.flashcard-deck__footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: tokens.$spacing-sm;
+}
+
+.deck-summary {
+  display: flex;
+  flex-direction: column;
+  gap: tokens.$spacing-lg;
+  max-width: tokens.$size-content-width;
+  margin: 0 auto;
+  padding: tokens.$spacing-xl;
+  background-color: tokens.$color-background-white;
+  border-radius: tokens.$border-radius-lg;
+  box-shadow: tokens.$shadow-card;
+}
+
+.deck-summary__title {
+  margin: 0;
+  font-size: tokens.$typography-font-size-3xl;
+}
+
+.deck-summary__stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: tokens.$spacing-md;
+}
+
+.deck-summary__stat {
+  flex: 1;
+  min-width: 140px;
+  margin: 0;
+  padding: tokens.$spacing-md;
+  text-align: center;
+  border-radius: tokens.$border-radius-sm;
+  background-color: tokens.$color-surface-tinted;
+}
+
+.deck-summary__stat strong {
+  display: block;
+  font-size: tokens.$typography-font-size-xl;
+}
+
+.deck-summary__stat--known {
+  background-color: rgba(76, 175, 80, 0.1);
+}
+
+.deck-summary__stat--needs {
+  background-color: rgba(255, 140, 0, 0.12);
+}
+
+.deck-summary__save-error {
+  padding: tokens.$spacing-sm tokens.$spacing-md;
+  background-color: rgba(229, 57, 53, 0.08);
+  border-left: 4px solid tokens.$color-state-danger;
+  border-radius: tokens.$border-radius-sm;
+}
+
+.deck-summary__save-error p {
+  margin: 0 0 tokens.$spacing-xs;
+}
+
+.deck-summary__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: tokens.$spacing-sm;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flashcard__face {
+    transition: none;
+  }
+
+  .flashcard__inner {
+    transition-duration: 0.25s;
+  }
+}
+
+@media (max-width: tokens.$breakpoint-mobile) {
+  .flashcard-deck {
+    gap: tokens.$spacing-sm;
+    padding-bottom: tokens.$spacing-lg;
+  }
+
+  .flashcard-deck__title,
+  .deck-summary__title {
+    font-size: tokens.$typography-font-size-2xl;
+  }
+
+  .flashcard-deck__progress {
+    font-size: tokens.$typography-font-size-sm;
+  }
+
+  .flashcard {
+    height: 320px;
+    min-height: 320px;
+  }
+
+  .flashcard__inner {
+    border-radius: tokens.$border-radius-md;
+  }
+
+  .flashcard__face {
+    padding: tokens.$spacing-md;
+    border-radius: tokens.$border-radius-md;
+  }
+
+  .flashcard__concept {
+    font-size: tokens.$typography-font-size-2xl;
+  }
+
+  .flashcard-deck__ratings {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .flashcard-deck__rating {
+    max-width: none;
+    min-height: tokens.$size-control-height-mobile;
+    font-size: tokens.$typography-font-size-md;
+  }
+
+  .deck-summary {
+    gap: tokens.$spacing-md;
+    padding: tokens.$spacing-md;
+    border-radius: tokens.$border-radius-md;
+  }
+
+  .deck-summary__actions,
+  .deck-summary__actions .button {
+    width: 100%;
+  }
+}

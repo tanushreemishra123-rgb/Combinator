@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "1.0.0",
+  "challengeId": "AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC",
+  "title": "Agentic AI and Community Enablement in SDLC",
+  "challengeMode": "ideation",
+  "requirements": [],
+  "acceptedFormats": [
+    "docx",
+    "pdf",
+    "pptx"
+  ],
+  "maximumIdeasPerSubmission": 3,
+  "evaluationCriteria": [
+    "Originality",
+    "Feasibility",
+    "Scalability",
+    "Impact Potential",
+    "Alignment with Scope"
+  ]
+}

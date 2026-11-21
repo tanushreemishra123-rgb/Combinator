@@ -1,0 +1,63 @@
+{
+  "challengeId": "AI_LEARNING_ADVENTURE",
+  "mode": "code",
+  "candidate": "combined-solution/",
+  "overall": "partial",
+  "steps": [
+    {
+      "name": "Source integrity (before/after SHA-256)",
+      "state": "passed",
+      "detail": "No source artifact hash changed during processing."
+    },
+    {
+      "name": "Candidate assembled (base + approved transplants)",
+      "state": "passed",
+      "detail": "Base SUB_001 copied; 3 transplant(s) applied, 0 rolled back."
+    },
+    {
+      "name": "Dependency installation",
+      "command": "npm install --no-audit --no-fund --ignore-scripts",
+      "state": "skipped",
+      "detail": "Dynamic verification not executed in this pass. Re-run with --verify-exec to run it."
+    },
+    {
+      "name": "Build",
+      "command": "npm run build",
+      "state": "skipped",
+      "detail": "Dynamic verification not executed in this pass. Re-run with --verify-exec to run it."
+    },
+    {
+      "name": "Application startup (smoke)",
+      "state": "skipped",
+      "detail": "Dynamic verification not executed in this pass. Re-run with --verify-exec to run it."
+    },
+    {
+      "name": "Organizer smoke tests",
+      "state": "skipped",
+      "detail": "Dynamic verification not executed in this pass. Re-run with --verify-exec to run it."
+    },
+    {
+      "name": "Unit / integration tests",
+      "command": "npm test -- --run",
+      "state": "skipped",
+      "detail": "Dynamic verification not executed in this pass. Re-run with --verify-exec to run it."
+    },
+    {
+      "name": "Regression comparison vs base",
+      "state": "skipped",
+      "detail": "Requires dynamic execution (--verify-exec)."
+    },
+    {
+      "name": "Approved-capability verification",
+      "state": "partial",
+      "detail": "Transplanted capabilities present in candidate under _transplants/: REQ_kk9ov4, REQ_7xz6vy, REQ_eb283y. Functional confirmation requires dynamic tests."
+    },
+    {
+      "name": "Original scorecard re-evaluation",
+      "state": "not_verifiable",
+      "detail": "Starter-pack reviews are normalized score stubs without a re-runnable scorecard; re-evaluation is not possible without the original scorecard definition. Not fabricated."
+    }
+  ],
+  "honestSummary": "Static and integrity checks passed. Dynamic verification was not executed in this pass (run with --verify-exec); those steps are marked skipped, not passed.",
+  "sourceIntegrityOk": true
+}

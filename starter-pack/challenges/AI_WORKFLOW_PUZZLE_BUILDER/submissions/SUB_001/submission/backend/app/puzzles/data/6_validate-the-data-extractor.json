@@ -1,0 +1,158 @@
+{
+  "id": "validate-the-data-extractor",
+  "title": "Validate the Data Extractor",
+  "difficulty": "advanced",
+  "tagline": "Stop invalid data",
+  "concepts": ["structured output", "schema validation", "repair", "retry", "invalid JSON"],
+  "order": 6,
+  "objective": "Never let a broken record into the finance system.",
+  "description": "This workflow reads a messy forwarded email and pulls out a clean invoice record: who, what, how much, in which currency, due when. The Validator is already strict, and it is already told to send a wrong record back to the extractor for repair, with the problems spelled out. But the model does not always return a record at all - sometimes it replies with JSON that will not parse, and the step blows up before the Validator ever sees it. Protect the extractor itself with a Retry block so the first mangled reply costs you an attempt, not the run.",
+  "sample_input": {
+    "source": "forwarded-email",
+    "text": "hey - passing this on, sorry it's a mess. Vendor is Northwind Logistics (accounts@northwind.test). Their invoice NW-2291 landed today, 4820.50 EUR, payment terms net 30 so due 2026-04-15. Ref our contract from last spring. Thanks! -- J"
+  },
+  "expected_output": "An invoice record with name, email, invoice_number, amount_due (a number), currency (USD, EUR or GBP) and due_date.",
+  "available_blocks": [
+    "input",
+    "ai_model",
+    "retry",
+    "validator",
+    "human_review",
+    "fallback",
+    "safe_stop",
+    "output"
+  ],
+  "starter_workflow": {
+    "id": "wf_data_extractor",
+    "name": "Invoice extractor",
+    "nodes": [
+      {
+        "id": "text_in",
+        "type": "input",
+        "label": "Messy email",
+        "config": {},
+        "position": { "x": 60, "y": 200 }
+      },
+      {
+        "id": "extract",
+        "type": "ai_model",
+        "label": "Extract the invoice",
+        "config": {
+          "prompt_id": "contact_extraction_v1",
+          "prompt": "Extract a structured invoice record. Return JSON with name, email, invoice_number, amount_due, currency and due_date.",
+          "system": "You extract structured records. Return only valid JSON, never prose.",
+          "expects_json": true,
+          "output_field": "record"
+        },
+        "position": { "x": 320, "y": 200 }
+      },
+      {
+        "id": "check_record",
+        "type": "validator",
+        "label": "Does the record hold up?",
+        "config": {
+          "schema": {
+            "record.name": { "type": "string", "min": 3 },
+            "record.email": { "type": "string", "min": 5 },
+            "record.invoice_number": { "type": "string", "min": 3 },
+            "record.amount_due": { "type": "number", "min": 0 },
+            "record.currency": { "type": "string", "allowed": ["USD", "EUR", "GBP"] },
+            "record.due_date": { "type": "string", "min": 8 }
+          },
+          "on_fail": "repair",
+          "max_repairs": 1,
+          "review_prompt": "The extracted record does not match the invoice schema."
+        },
+        "position": { "x": 580, "y": 200 }
+      },
+      {
+        "id": "record_out",
+        "type": "output",
+        "label": "Clean record",
+        "config": { "field": "record" },
+        "position": { "x": 840, "y": 200 }
+      }
+    ],
+    "edges": [
+      { "id": "e_text_extract", "source": "text_in", "target": "extract" },
+      { "id": "e_extract_check", "source": "extract", "target": "check_record" },
+      { "id": "e_check_out", "source": "check_record", "target": "record_out" }
+    ]
+  },
+  "solution_hint": "The Validator can only catch a record it receives. A reply that will not parse never becomes one - it fails the step outright. Splice a Retry block between 'Messy email' and 'Extract the invoice' with max attempts 2: the second reply parses, the Validator checks it, and the record ships.",
+  "failure_scenarios": [
+    {
+      "id": "garbled-extractor",
+      "label": "The model returns broken JSON",
+      "description": "The extractor's first reply cannot be parsed at all. Its second reply is clean.",
+      "rules": [
+        {
+          "node_id": "extract",
+          "kind": "invalid_json",
+          "first_n": 1,
+          "label": "return unparseable JSON",
+          "detail": {
+            "message": "The extractor replied with JSON that could not be parsed."
+          }
+        }
+      ]
+    },
+    {
+      "id": "half-extracted",
+      "label": "The model forgets the due date",
+      "description": "The extractor's first record has no due_date. Sent back with the problem spelled out, its second answer is complete.",
+      "rules": [
+        {
+          "node_id": "extract",
+          "kind": "missing_field",
+          "first_n": 1,
+          "label": "drop record.due_date from the first answer",
+          "detail": { "field": "record.due_date" }
+        }
+      ]
+    }
+  ],
+  "completion_criteria": [
+    "A Retry block protects the extractor",
+    "The extractor recovers from its broken reply",
+    "The Validator passes on the repaired record",
+    "The clean record carries an invoice number",
+    "The run finishes at the Output block"
+  ],
+  "completion_checks": [
+    { "kind": "block_used", "type": "retry" },
+    { "kind": "recovered", "node_id": "extract" },
+    { "kind": "validation_passed", "node_id": "check_record" },
+    { "kind": "output_field", "field": "invoice_number", "op": "not_empty" },
+    { "kind": "run_status", "in": ["completed"] }
+  ],
+  "mock_responses": {
+    "contact_extraction_v1": {
+      "confidence": 0.89,
+      "data": {
+        "name": "Northwind Logistics",
+        "email": "accounts@northwind.test",
+        "invoice_number": "NW-2291",
+        "amount_due": 4820.5,
+        "currency": "EUR",
+        "due_date": "2026-04-15",
+        "payment_terms": "net 30"
+      }
+    },
+    "contact_extraction_v1#repair": {
+      "confidence": 0.93,
+      "data": {
+        "name": "Northwind Logistics",
+        "email": "accounts@northwind.test",
+        "invoice_number": "NW-2291",
+        "amount_due": 4820.5,
+        "currency": "EUR",
+        "due_date": "2026-04-15",
+        "payment_terms": "net 30"
+      }
+    }
+  },
+  "mock_responses_by_provider": {},
+  "tool_fixtures": {},
+  "retrieval_fixtures": {}
+}

@@ -1,0 +1,79 @@
+@use '../../../styles/tokens' as t;
+
+.strip {
+  display: flex;
+  flex-direction: column;
+  gap: t.$spacing-2;
+  padding: t.$spacing-3 t.$spacing-4;
+  background: t.$color-background-attention-warning;
+  border: t.$border-width-default solid t.$color-border-badge-warning;
+  border-radius: t.$border-radius-md;
+}
+
+.title {
+  font-size: t.$typography-font-size-2xs;
+  font-weight: t.$typography-font-weight-semibold;
+  letter-spacing: t.$typography-letter-spacing-wider;
+  text-transform: uppercase;
+  color: t.$color-text-warning;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: t.$spacing-1;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.item {
+  display: flex;
+  align-items: baseline;
+  gap: t.$spacing-2;
+  font-size: t.$typography-font-size-sm;
+  color: t.$color-text-primary;
+}
+
+.marker {
+  flex-shrink: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: t.$border-radius-full;
+  background: t.$color-border-warning;
+  transform: translateY(-1px);
+}
+
+.danger {
+  .marker {
+    background: t.$color-border-danger;
+  }
+}
+
+.link {
+  padding: 0;
+  background: transparent;
+  border: none;
+  color: t.$color-text-primary;
+  font: inherit;
+  text-align: left;
+  text-decoration: underline;
+  cursor: pointer;
+
+  &:hover {
+    color: t.$color-text-accent;
+  }
+
+  &:focus-visible {
+    outline: t.$border-width-active solid t.$color-border-focus;
+    outline-offset: 2px;
+  }
+}
+
+.danger .link {
+  color: t.$color-text-danger;
+
+  &:hover {
+    color: t.$color-text-danger;
+  }
+}

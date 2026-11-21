@@ -1,0 +1,68 @@
+flowchart TB
+    subgraph IN["Starter pack (read-only, immutable)"]
+        MAN[manifest.json]
+        CTX[challenge-context.json]
+        RC[review-context/*.json]
+        SUB[submissions/]
+        REV[reviews/ scorecards/]
+        VER[verification-config.json]
+    end
+
+    subgraph CORE["Combinator (TypeScript / Node)"]
+        ING[ingest<br/>validate + discover]
+        INT[integrity<br/>SHA-256 before/after]
+        RCE[review-context engine<br/>supplied | derived]
+        PROF[profiling<br/>code + ideation]
+        DOC[doc ingest<br/>PDF / DOCX / PPTX]
+        EVI[evidence fusion<br/>+ requirement matrix]
+        DEC[decision workspace<br/>7 states]
+        CODE[code mode<br/>base + transplant + verify]
+        IDEA[ideation mode<br/>contradictions + synthesis]
+        LLM[LLM adapter<br/>mock · OpenAI · Bedrock]
+        SAFE[(SafeFs<br/>write-confined + audited)]
+    end
+
+    subgraph OUT["workspace/CHALLENGE_ID (source of truth)"]
+        WM[workspace-manifest.json]
+        ARC[active-review-context + reconciliation<br/>+ source-location-map + status]
+        MX[requirement-matrix .json/.md]
+        DJ[decisions.json]
+        PR[provenance.json]
+        CN[contradictions.json]
+        VF[verification.json]
+        CS[combined-solution/ · synthesized-concept/]
+        UZ[usage-report + audit-log + integrity-report]
+    end
+
+    UI[Local review UI<br/>inspect · decide · regenerate]
+
+    MAN --> ING
+    CTX --> RCE
+    RC --> RCE
+    SUB --> PROF
+    SUB --> DOC
+    REV --> EVI
+    VER --> CODE
+
+    ING --> INT
+    ING --> PROF
+    DOC --> PROF
+    RCE --> PROF
+    PROF --> EVI
+    LLM -. narration .-> PROF
+    LLM -. narration .-> IDEA
+    EVI --> DEC
+    DEC --> CODE
+    DEC --> IDEA
+    PROF --> CODE
+    PROF --> IDEA
+
+    CODE --> SAFE
+    IDEA --> SAFE
+    RCE --> SAFE
+    EVI --> SAFE
+    INT --> SAFE
+    SAFE --> OUT
+
+    OUT <--> UI
+    UI -- decision change --> DEC

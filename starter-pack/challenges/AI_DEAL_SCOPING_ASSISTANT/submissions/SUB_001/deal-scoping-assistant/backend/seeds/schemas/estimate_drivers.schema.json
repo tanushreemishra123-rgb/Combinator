@@ -1,0 +1,314 @@
+{
+  "$defs": {
+    "Basis": {
+      "enum": [
+        "customer",
+        "inferred",
+        "assumed",
+        "recommended"
+      ],
+      "title": "Basis",
+      "type": "string"
+    },
+    "Complexity": {
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "very_high"
+      ],
+      "title": "Complexity",
+      "type": "string"
+    },
+    "DriverPhase": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "description": "Delivery phase name.",
+          "title": "Name",
+          "type": "string"
+        },
+        "workstream_ids": {
+          "description": "Workstreams delivered in the phase.",
+          "items": {
+            "type": "string"
+          },
+          "title": "Workstream Ids",
+          "type": "array"
+        },
+        "milestones": {
+          "description": "Milestones at the phase end.",
+          "items": {
+            "type": "string"
+          },
+          "title": "Milestones",
+          "type": "array"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "title": "DriverPhase",
+      "type": "object"
+    },
+    "DriverWorkstream": {
+      "additionalProperties": false,
+      "properties": {
+        "req_ids": {
+          "description": "Scope item ids this element is grounded in.",
+          "items": {
+            "type": "string"
+          },
+          "title": "Req Ids",
+          "type": "array"
+        },
+        "basis": {
+          "$ref": "#/$defs/Basis",
+          "description": "customer, inferred, assumed or recommended."
+        },
+        "validation_required": {
+          "default": false,
+          "description": "True when a human must validate this element before use.",
+          "title": "Validation Required",
+          "type": "boolean"
+        },
+        "validation_reason": {
+          "default": "",
+          "description": "Why human validation is required, when it is.",
+          "title": "Validation Reason",
+          "type": "string"
+        },
+        "id": {
+          "description": "Workstream id, aligned with the functional scope.",
+          "title": "Id",
+          "type": "string"
+        },
+        "name": {
+          "description": "Workstream name.",
+          "title": "Name",
+          "type": "string"
+        },
+        "capability_ids": {
+          "description": "Capability ids included.",
+          "items": {
+            "type": "string"
+          },
+          "title": "Capability Ids",
+          "type": "array"
+        },
+        "integration_ids": {
+          "description": "IA ids included.",
+          "items": {
+            "type": "string"
+          },
+          "title": "Integration Ids",
+          "type": "array"
+        },
+        "ai_use_case_ids": {
+          "description": "AI use case ids included.",
+          "items": {
+            "type": "string"
+          },
+          "title": "Ai Use Case Ids",
+          "type": "array"
+        },
+        "arc_ids": {
+          "description": "Architecture component ids.",
+          "items": {
+            "type": "string"
+          },
+          "title": "Arc Ids",
+          "type": "array"
+        },
+        "domain_ids": {
+          "description": "Data domain ids included.",
+          "items": {
+            "type": "string"
+          },
+          "title": "Domain Ids",
+          "type": "array"
+        },
+        "derived_complexity": {
+          "$ref": "#/$defs/Complexity",
+          "description": "Summary complexity of the workstream."
+        },
+        "roles": {
+          "description": "Roles or skill categories needed.",
+          "items": {
+            "type": "string"
+          },
+          "title": "Roles",
+          "type": "array"
+        },
+        "risks": {
+          "description": "Delivery risks for the workstream.",
+          "items": {
+            "type": "string"
+          },
+          "title": "Risks",
+          "type": "array"
+        },
+        "dependencies": {
+          "description": "Dependencies to resolve.",
+          "items": {
+            "type": "string"
+          },
+          "title": "Dependencies",
+          "type": "array"
+        }
+      },
+      "required": [
+        "basis",
+        "id",
+        "name",
+        "derived_complexity"
+      ],
+      "title": "DriverWorkstream",
+      "type": "object"
+    },
+    "EstimateUnit": {
+      "additionalProperties": false,
+      "properties": {
+        "unit_id": {
+          "description": "Id of the estimated unit, for example CAP_01 or IA_02.",
+          "title": "Unit Id",
+          "type": "string"
+        },
+        "unit_type": {
+          "$ref": "#/$defs/UnitType",
+          "description": "What kind of unit this is."
+        },
+        "workstream_id": {
+          "description": "Workstream the unit belongs to.",
+          "title": "Workstream Id",
+          "type": "string"
+        },
+        "complexity": {
+          "$ref": "#/$defs/Complexity",
+          "description": "Complexity level; editable by the reviewer."
+        },
+        "drivers": {
+          "description": "Why the unit has this complexity.",
+          "items": {
+            "type": "string"
+          },
+          "title": "Drivers",
+          "type": "array"
+        }
+      },
+      "required": [
+        "unit_id",
+        "unit_type",
+        "workstream_id",
+        "complexity"
+      ],
+      "title": "EstimateUnit",
+      "type": "object"
+    },
+    "Statement": {
+      "additionalProperties": false,
+      "description": "A single grounded sentence used for list sections.",
+      "properties": {
+        "req_ids": {
+          "description": "Scope item ids this element is grounded in.",
+          "items": {
+            "type": "string"
+          },
+          "title": "Req Ids",
+          "type": "array"
+        },
+        "basis": {
+          "$ref": "#/$defs/Basis",
+          "description": "customer, inferred, assumed or recommended."
+        },
+        "validation_required": {
+          "default": false,
+          "description": "True when a human must validate this element before use.",
+          "title": "Validation Required",
+          "type": "boolean"
+        },
+        "validation_reason": {
+          "default": "",
+          "description": "Why human validation is required, when it is.",
+          "title": "Validation Reason",
+          "type": "string"
+        },
+        "text": {
+          "description": "The statement itself.",
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "basis",
+        "text"
+      ],
+      "title": "Statement",
+      "type": "object"
+    },
+    "UnitType": {
+      "enum": [
+        "capability",
+        "integration",
+        "ai_use_case",
+        "architecture_component",
+        "data_domain"
+      ],
+      "title": "UnitType",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "units": {
+      "description": "Estimated units.",
+      "items": {
+        "$ref": "#/$defs/EstimateUnit"
+      },
+      "title": "Units",
+      "type": "array"
+    },
+    "workstreams": {
+      "description": "Workstreams.",
+      "items": {
+        "$ref": "#/$defs/DriverWorkstream"
+      },
+      "title": "Workstreams",
+      "type": "array"
+    },
+    "phases": {
+      "description": "Delivery phases.",
+      "items": {
+        "$ref": "#/$defs/DriverPhase"
+      },
+      "title": "Phases",
+      "type": "array"
+    },
+    "delivery_risks": {
+      "description": "Delivery risks.",
+      "items": {
+        "$ref": "#/$defs/Statement"
+      },
+      "title": "Delivery Risks",
+      "type": "array"
+    },
+    "estimation_assumptions": {
+      "description": "Assumptions the estimate rests on.",
+      "items": {
+        "$ref": "#/$defs/Statement"
+      },
+      "title": "Estimation Assumptions",
+      "type": "array"
+    },
+    "exclusions": {
+      "description": "What the estimate excludes, e.g. licences.",
+      "items": {
+        "$ref": "#/$defs/Statement"
+      },
+      "title": "Exclusions",
+      "type": "array"
+    }
+  },
+  "title": "EstimateDrivers",
+  "type": "object"
+}

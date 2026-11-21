@@ -1,0 +1,624 @@
+{
+  "components": [
+    {
+      "req_ids": [
+        "FR_05",
+        "BR_03"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "ARC_01",
+      "name": "Self-Service Portal Frontend",
+      "area": "user_facing_applications",
+      "cloud_service": "Firebase Hosting",
+      "purpose": "Serves the static web assets for the policyholder self-service portal.",
+      "supported_ids": [
+        "FR_05",
+        "BR_03"
+      ],
+      "rationale": "Firebase Hosting provides fast, secure, and low-latency delivery of web application assets globally.",
+      "trade_offs": [
+        "Requires a separate backend API for dynamic operations."
+      ],
+      "dependencies": [
+        "ARC_03"
+      ],
+      "security_considerations": "Integrated with Google Cloud Armor and SSL certificates.",
+      "environments": [
+        "dev",
+        "test",
+        "prod"
+      ]
+    },
+    {
+      "req_ids": [
+        "SYS_01",
+        "FR_01",
+        "FR_03",
+        "FR_04",
+        "NFR_01",
+        "NFR_04"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "ARC_02",
+      "name": "Policy Core Microservices",
+      "area": "backend_services",
+      "cloud_service": "Google Kubernetes Engine",
+      "purpose": "Hosts the core policy lifecycle management and rating microservices.",
+      "supported_ids": [
+        "SYS_01",
+        "FR_01",
+        "FR_03",
+        "FR_04",
+        "NFR_01",
+        "NFR_04"
+      ],
+      "rationale": "GKE provides robust container orchestration, supporting zero-downtime blue/green deployments and high scalability.",
+      "trade_offs": [
+        "Higher operational complexity compared to Cloud Run, but necessary for complex enterprise workloads."
+      ],
+      "dependencies": [
+        "ARC_04",
+        "ARC_06",
+        "ARC_08"
+      ],
+      "security_considerations": "Uses Workload Identity and private clusters to restrict network access.",
+      "environments": [
+        "dev",
+        "test",
+        "prod"
+      ]
+    },
+    {
+      "req_ids": [
+        "INT_01",
+        "INT_02",
+        "INT_05",
+        "INT_06",
+        "RISK_02",
+        "ASM_04"
+      ],
+      "basis": "assumed",
+      "validation_required": true,
+      "validation_reason": "Requires confirmation of SOAP-to-REST facade approach.",
+      "id": "ARC_03",
+      "name": "API Management & Broker Gateway",
+      "area": "apis",
+      "cloud_service": "Apigee API Management",
+      "purpose": "Exposes and secures APIs, including legacy SOAP-to-REST translation for brokers.",
+      "supported_ids": [
+        "INT_01",
+        "INT_02",
+        "INT_05",
+        "INT_06",
+        "RISK_02",
+        "ASM_04"
+      ],
+      "rationale": "Apigee provides advanced API management, security, and mediation policies required for legacy SOAP compatibility.",
+      "trade_offs": [
+        "Higher cost, but offers comprehensive enterprise API governance."
+      ],
+      "dependencies": [
+        "ARC_02"
+      ],
+      "security_considerations": "Enforces WS-Security, X.509 token validation, and rate limiting.",
+      "environments": [
+        "dev",
+        "test",
+        "prod"
+      ]
+    },
+    {
+      "req_ids": [
+        "DATA_01",
+        "TECH_02",
+        "NFR_01",
+        "NFR_03",
+        "ASM_01"
+      ],
+      "basis": "assumed",
+      "validation_required": true,
+      "validation_reason": "Requires confirmation of PostgreSQL migration strategy and PL/SQL conversion feasibility.",
+      "id": "ARC_04",
+      "name": "Relational Operational Database",
+      "area": "databases_and_storage",
+      "cloud_service": "AlloyDB for PostgreSQL",
+      "purpose": "Stores policy and claims operational data, running converted PL/SQL logic.",
+      "supported_ids": [
+        "DATA_01",
+        "TECH_02",
+        "NFR_01",
+        "NFR_03",
+        "ASM_01"
+      ],
+      "rationale": "AlloyDB offers high-performance PostgreSQL compatibility with superior speed and availability, meeting strict latency and DR targets.",
+      "trade_offs": [
+        "Higher cost than standard Cloud SQL, but necessary for demanding enterprise workloads."
+      ],
+      "dependencies": [],
+      "security_considerations": "Data is encrypted at rest with customer-managed keys and accessible only via private IP.",
+      "environments": [
+        "dev",
+        "test",
+        "prod"
+      ]
+    },
+    {
+      "req_ids": [
+        "FR_05",
+        "PER_02"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "ARC_05",
+      "name": "Policyholder Identity Provider",
+      "area": "identity_and_access_management",
+      "cloud_service": "Identity Platform",
+      "purpose": "Manages authentication and identity for policyholders accessing the self-service portal.",
+      "supported_ids": [
+        "FR_05",
+        "PER_02"
+      ],
+      "rationale": "Identity Platform provides a secure, developer-friendly, and highly scalable identity service.",
+      "trade_offs": [
+        "Externalized identity management requires integration with backend APIs."
+      ],
+      "dependencies": [
+        "ARC_01"
+      ],
+      "security_considerations": "Supports multi-factor authentication and secure token-based access.",
+      "environments": [
+        "dev",
+        "test",
+        "prod"
+      ]
+    },
+    {
+      "req_ids": [
+        "INT_03",
+        "FR_06"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "ARC_06",
+      "name": "Enterprise Service Bus",
+      "area": "messaging_and_event_processing",
+      "cloud_service": "Pub/Sub",
+      "purpose": "Provides asynchronous messaging and event integration with Guidewire ClaimCenter.",
+      "supported_ids": [
+        "INT_03",
+        "FR_06"
+      ],
+      "rationale": "Pub/Sub is a fully managed, real-time messaging service that guarantees delivery and scales automatically.",
+      "trade_offs": [
+        "Requires event-driven application design."
+      ],
+      "dependencies": [
+        "ARC_02"
+      ],
+      "security_considerations": "Access controlled via IAM and encrypted with Cloud KMS.",
+      "environments": [
+        "dev",
+        "test",
+        "prod"
+      ]
+    },
+    {
+      "req_ids": [
+        "SYS_02",
+        "BR_02",
+        "INT_04",
+        "INT_07",
+        "ASM_02"
+      ],
+      "basis": "assumed",
+      "validation_required": true,
+      "validation_reason": "Requires confirmation of batch orchestration tool selection.",
+      "id": "ARC_07",
+      "name": "Batch Process Orchestration Engine",
+      "area": "integration_components",
+      "cloud_service": "Cloud Composer",
+      "purpose": "Orchestrates overnight batch jobs, financial transfers, and data warehouse feeds.",
+      "supported_ids": [
+        "SYS_02",
+        "BR_02",
+        "INT_04",
+        "INT_07",
+        "ASM_02"
+      ],
+      "rationale": "Cloud Composer (managed Apache Airflow) provides powerful workflow orchestration to compress the batch window.",
+      "trade_offs": [
+        "Requires authoring DAGs in Python, replacing legacy Control-M configurations."
+      ],
+      "dependencies": [
+        "ARC_02",
+        "ARC_04"
+      ],
+      "security_considerations": "Runs in a private environment with IAM-controlled access.",
+      "environments": [
+        "dev",
+        "test",
+        "prod"
+      ]
+    },
+    {
+      "req_ids": [
+        "FR_04",
+        "INT_08"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "ARC_08",
+      "name": "Document Asset Repository",
+      "area": "databases_and_storage",
+      "cloud_service": "Cloud Storage",
+      "purpose": "Stores generated policy documents, certificates, and schedules.",
+      "supported_ids": [
+        "FR_04",
+        "INT_08"
+      ],
+      "rationale": "Cloud Storage provides highly durable, secure, and cost-effective object storage.",
+      "trade_offs": [
+        "Requires integration with OpenText via WebDAV or API."
+      ],
+      "dependencies": [
+        "ARC_02"
+      ],
+      "security_considerations": "Enforces bucket-level IAM policies and object versioning.",
+      "environments": [
+        "dev",
+        "test",
+        "prod"
+      ]
+    },
+    {
+      "req_ids": [
+        "NFR_02",
+        "SEC_02"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "ARC_09",
+      "name": "Central Observability Platform",
+      "area": "observability_and_monitoring",
+      "cloud_service": "Cloud Monitoring",
+      "purpose": "Monitors system health, performance metrics, and operational availability.",
+      "supported_ids": [
+        "NFR_02",
+        "SEC_02"
+      ],
+      "rationale": "Cloud Monitoring provides deep visibility into GCP infrastructure and application performance.",
+      "trade_offs": [
+        "Requires proper configuration of dashboards and alerting thresholds."
+      ],
+      "dependencies": [
+        "ARC_02",
+        "ARC_04"
+      ],
+      "security_considerations": "Access restricted to authorized operations staff.",
+      "environments": [
+        "dev",
+        "test",
+        "prod"
+      ]
+    },
+    {
+      "req_ids": [
+        "NFR_01"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "ARC_10",
+      "name": "Application Insights Engine",
+      "area": "observability_and_monitoring",
+      "cloud_service": "Cloud Trace",
+      "purpose": "Provides distributed tracing to analyze latency and performance bottlenecks.",
+      "supported_ids": [
+        "NFR_01"
+      ],
+      "rationale": "Cloud Trace helps optimize policy enquiry latency to meet the 400ms target.",
+      "trade_offs": [
+        "Adds minor overhead to application requests."
+      ],
+      "dependencies": [
+        "ARC_02"
+      ],
+      "security_considerations": "Tracing data does not contain sensitive personally identifiable information.",
+      "environments": [
+        "dev",
+        "test",
+        "prod"
+      ]
+    },
+    {
+      "req_ids": [
+        "SEC_01",
+        "FR_05"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "ARC_11",
+      "name": "Global Edge Security & WAF",
+      "area": "security_controls",
+      "cloud_service": "Google Cloud Armor",
+      "purpose": "Protects public-facing endpoints from DDoS attacks and web exploits.",
+      "supported_ids": [
+        "SEC_01",
+        "FR_05"
+      ],
+      "rationale": "Google Cloud Armor provides enterprise-grade security at the edge of Google's network.",
+      "trade_offs": [
+        "Requires careful tuning of WAF rules to prevent false positives."
+      ],
+      "dependencies": [
+        "ARC_01",
+        "ARC_03"
+      ],
+      "security_considerations": "Configured with OWASP Top 10 protection rules.",
+      "environments": [
+        "dev",
+        "test",
+        "prod"
+      ]
+    },
+    {
+      "req_ids": [
+        "SEC_01",
+        "INT_01"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "ARC_12",
+      "name": "Enterprise Key Vault",
+      "area": "security_controls",
+      "cloud_service": "Secret Manager",
+      "purpose": "Securely stores and manages API keys, database credentials, and certificates.",
+      "supported_ids": [
+        "SEC_01",
+        "INT_01"
+      ],
+      "rationale": "Secret Manager provides a central, secure repository for sensitive configuration data.",
+      "trade_offs": [
+        "Requires application integration to fetch secrets at runtime."
+      ],
+      "dependencies": [],
+      "security_considerations": "Access is strictly controlled via IAM and audited.",
+      "environments": [
+        "dev",
+        "test",
+        "prod"
+      ]
+    },
+    {
+      "req_ids": [
+        "NFR_04",
+        "BR_04"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "ARC_13",
+      "name": "Enterprise CI/CD Pipeline",
+      "area": "deployment_and_runtime",
+      "cloud_service": "Cloud Build",
+      "purpose": "Automates the build, test, and deployment of application containers.",
+      "supported_ids": [
+        "NFR_04",
+        "BR_04"
+      ],
+      "rationale": "Cloud Build integrates seamlessly with GKE and supports automated blue/green deployment strategies.",
+      "trade_offs": [
+        "Requires maintaining build configuration files."
+      ],
+      "dependencies": [
+        "ARC_02"
+      ],
+      "security_considerations": "Uses container analysis to scan for vulnerabilities before deployment.",
+      "environments": [
+        "dev",
+        "test",
+        "prod"
+      ]
+    },
+    {
+      "req_ids": [
+        "TECH_01",
+        "SEC_01"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "ARC_14",
+      "name": "Infrastructure as Code Engine",
+      "area": "environments_dev_test_prod",
+      "cloud_service": "Infrastructure Manager",
+      "purpose": "Provisions and manages GCP resources using declarative configuration.",
+      "supported_ids": [
+        "TECH_01",
+        "SEC_01"
+      ],
+      "rationale": "Infrastructure Manager automates environment provisioning, ensuring consistency across dev, test, and prod.",
+      "trade_offs": [
+        "Requires learning Terraform-based configurations."
+      ],
+      "dependencies": [],
+      "security_considerations": "Enforces state file encryption and access controls.",
+      "environments": [
+        "dev",
+        "test",
+        "prod"
+      ]
+    }
+  ],
+  "flows": [
+    {
+      "from_id": "ARC_01",
+      "to_id": "ARC_03",
+      "label": "API Requests",
+      "protocol": "HTTPS REST"
+    },
+    {
+      "from_id": "ARC_03",
+      "to_id": "ARC_02",
+      "label": "Route Requests",
+      "protocol": "HTTPS REST"
+    },
+    {
+      "from_id": "ARC_02",
+      "to_id": "ARC_04",
+      "label": "Query Data",
+      "protocol": "gRPC/SQL"
+    },
+    {
+      "from_id": "ARC_02",
+      "to_id": "ARC_08",
+      "label": "Store Documents",
+      "protocol": "HTTPS"
+    },
+    {
+      "from_id": "ARC_02",
+      "to_id": "ARC_06",
+      "label": "Publish Events",
+      "protocol": "gRPC"
+    },
+    {
+      "from_id": "ARC_07",
+      "to_id": "ARC_02",
+      "label": "Trigger Batches",
+      "protocol": "HTTPS REST"
+    },
+    {
+      "from_id": "ARC_07",
+      "to_id": "ARC_04",
+      "label": "Extract Data",
+      "protocol": "gRPC/SQL"
+    },
+    {
+      "from_id": "ARC_01",
+      "to_id": "ARC_05",
+      "label": "Authenticate",
+      "protocol": "HTTPS"
+    },
+    {
+      "from_id": "ARC_03",
+      "to_id": "ARC_12",
+      "label": "Fetch Secrets",
+      "protocol": "gRPC"
+    },
+    {
+      "from_id": "ARC_02",
+      "to_id": "ARC_10",
+      "label": "Send Traces",
+      "protocol": "gRPC"
+    },
+    {
+      "from_id": "ARC_02",
+      "to_id": "ARC_09",
+      "label": "Send Metrics",
+      "protocol": "gRPC"
+    },
+    {
+      "from_id": "ARC_11",
+      "to_id": "ARC_01",
+      "label": "Protect Traffic",
+      "protocol": "HTTPS"
+    },
+    {
+      "from_id": "ARC_11",
+      "to_id": "ARC_03",
+      "label": "Protect APIs",
+      "protocol": "HTTPS"
+    },
+    {
+      "from_id": "ARC_13",
+      "to_id": "ARC_02",
+      "label": "Deploy Containers",
+      "protocol": "HTTPS"
+    }
+  ],
+  "environments": {
+    "dev": "Sandbox environment with minimal sizing, using Cloud SQL for PostgreSQL instead of AlloyDB to optimize costs.",
+    "test": "Staging environment mirroring production configuration for performance testing and integration validation.",
+    "prod": "Highly available multi-zone production environment with full AlloyDB clustering and GKE autoscaling."
+  },
+  "deployment_runtime": {
+    "req_ids": [
+      "NFR_04",
+      "BR_04"
+    ],
+    "basis": "customer",
+    "validation_required": false,
+    "validation_reason": "",
+    "text": "The deployment runtime leverages Google Kubernetes Engine (GKE) for containerized microservices, managed via Cloud Build and Cloud Deploy to support zero-downtime blue/green deployments.",
+    "arc_ids": [
+      "ARC_02",
+      "ARC_13"
+    ]
+  },
+  "availability_scalability": {
+    "req_ids": [
+      "NFR_02",
+      "RISK_03"
+    ],
+    "basis": "customer",
+    "validation_required": false,
+    "validation_reason": "",
+    "text": "High availability is achieved through multi-zone GKE clusters and AlloyDB for PostgreSQL, with Cloud Load Balancing distributing traffic and autoscaling to handle up to 1.2 million users.",
+    "arc_ids": [
+      "ARC_02",
+      "ARC_04"
+    ]
+  },
+  "backup_dr": {
+    "req_ids": [
+      "NFR_03"
+    ],
+    "basis": "customer",
+    "validation_required": false,
+    "validation_reason": "",
+    "text": "Disaster recovery is supported by AlloyDB cross-region replication and automated backups to Cloud Storage, ensuring an RPO of 15 minutes and RTO of 4 hours.",
+    "arc_ids": [
+      "ARC_04",
+      "ARC_08"
+    ]
+  },
+  "observability": {
+    "req_ids": [
+      "NFR_01",
+      "SEC_02"
+    ],
+    "basis": "customer",
+    "validation_required": false,
+    "validation_reason": "",
+    "text": "Observability is established using Cloud Monitoring for infrastructure metrics and Cloud Trace for distributed tracing to guarantee policy enquiry latency remains under 400ms.",
+    "arc_ids": [
+      "ARC_09",
+      "ARC_10"
+    ]
+  },
+  "security_controls": {
+    "req_ids": [
+      "SEC_01",
+      "SEC_02"
+    ],
+    "basis": "customer",
+    "validation_required": false,
+    "validation_reason": "",
+    "text": "Security controls include Google Cloud Armor for WAF protection, Secret Manager for credential storage, and Cloud Logging for immutable audit trails retained for 10 years.",
+    "arc_ids": [
+      "ARC_11",
+      "ARC_12",
+      "ARC_09"
+    ]
+  }
+}

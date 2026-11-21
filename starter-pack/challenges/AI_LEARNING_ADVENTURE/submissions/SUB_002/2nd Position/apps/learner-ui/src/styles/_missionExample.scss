@@ -1,0 +1,119 @@
+@use './tokens' as tokens;
+
+.worked-example {
+  display: flex;
+  flex-direction: column;
+  gap: tokens.$spacing-md;
+}
+
+.worked-example__pair {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: tokens.$spacing-md;
+}
+
+.worked-example__card {
+  display: flex;
+  flex-direction: column;
+  gap: tokens.$spacing-xs;
+  padding: tokens.$spacing-lg;
+  border-radius: tokens.$border-radius-md;
+  border: 2px solid tokens.$color-border-light-gray;
+}
+
+.worked-example__card--before {
+  border-color: tokens.$color-border-red;
+  background-color: tokens.$color-background-cream;
+}
+
+.worked-example__card--after {
+  border-color: tokens.$color-brand-accent-green;
+  background-color: tokens.$color-surface-tinted;
+}
+
+.worked-example__label {
+  margin: 0;
+  font-size: tokens.$typography-font-size-md;
+  font-weight: tokens.$typography-font-weight-semibold;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: tokens.$color-text-secondary;
+}
+
+.worked-example__text {
+  margin: 0;
+  padding: tokens.$spacing-md;
+  font-family: tokens.$typography-font-family-sans;
+  white-space: pre-wrap;
+  background-color: tokens.$color-background-white;
+  border-radius: tokens.$border-radius-sm;
+}
+
+.worked-example__annotations {
+  margin: 0;
+  padding-left: tokens.$spacing-lg;
+  display: flex;
+  flex-direction: column;
+  gap: tokens.$spacing-2xs;
+  color: tokens.$color-text-secondary;
+}
+
+.scenario-example {
+  display: flex;
+  flex-direction: column;
+  gap: tokens.$spacing-md;
+  max-width: 60ch;
+}
+
+.scenario-example__narrative {
+  padding: tokens.$spacing-lg;
+  background-color: tokens.$color-background-card-yellow;
+  border-radius: tokens.$border-radius-sm;
+}
+
+@media (max-width: tokens.$breakpoint-mobile) {
+  .worked-example__pair {
+    grid-template-columns: 1fr;
+  }
+
+  .worked-example__card,
+  .scenario-example__narrative {
+    padding: tokens.$spacing-sm;
+  }
+
+  .worked-example__label {
+    font-size: tokens.$typography-font-size-sm;
+  }
+
+  .worked-example__text {
+    padding: tokens.$spacing-sm;
+    overflow-x: auto;
+  }
+}
+
+.scenario-example__narrative p {
+  margin: 0;
+  line-height: tokens.$typography-line-height-relaxed;
+}
+
+.scenario-example__prompt {
+  margin: 0;
+  font-weight: tokens.$typography-font-weight-medium;
+  color: tokens.$color-text-purple;
+}
+
+.scenario-example__takeaway {
+  padding: tokens.$spacing-sm tokens.$spacing-md;
+  border: 2px dashed tokens.$color-brand-primary;
+  border-radius: tokens.$border-radius-sm;
+}
+
+.scenario-example__takeaway summary {
+  cursor: pointer;
+  font-weight: tokens.$typography-font-weight-semibold;
+  color: tokens.$color-text-purple;
+}
+
+.scenario-example__takeaway p {
+  margin: tokens.$spacing-xs 0 0;
+}

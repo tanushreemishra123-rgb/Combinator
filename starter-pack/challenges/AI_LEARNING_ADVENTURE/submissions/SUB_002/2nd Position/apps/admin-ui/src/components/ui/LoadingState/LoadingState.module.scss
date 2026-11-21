@@ -1,0 +1,29 @@
+@use '../../../styles/tokens' as t;
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: t.$spacing-2;
+  padding: t.$spacing-12 t.$spacing-4;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: t.$border-width-active solid t.$color-background-surface-muted;
+  border-top-color: t.$color-border-strong;
+  border-radius: t.$border-radius-full;
+  animation: loading-spin 0.7s linear infinite;
+}
+
+.label {
+  font-size: t.$typography-font-size-sm;
+  color: t.$color-text-muted;
+}
+
+@keyframes loading-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="700" viewBox="0 0 980 700" font-family="-apple-system,Segoe UI,Roboto,sans-serif">
+  <style>
+    .lbl{font-size:13px;fill:#1b1f27;} .h{font-size:13px;font-weight:700;fill:#0f1115;}
+    .box{fill:#ffffff;stroke:#c7cdd8;stroke-width:1.2;rx:8;}
+    .grp{fill:#f3f5f8;stroke:#d9dee6;stroke-width:1.4;rx:12;}
+    .core{fill:#eef4ff;stroke:#9cc0ff;}
+    .out{fill:#eefaf3;stroke:#9fe0bf;}
+    .safe{fill:#fff6e8;stroke:#e9c98a;}
+    .arr{stroke:#7a8699;stroke-width:1.4;fill:none;marker-end:url(#a);}
+    .dash{stroke:#b06cc9;stroke-width:1.3;fill:none;stroke-dasharray:4 3;marker-end:url(#a);}
+    text{dominant-baseline:middle;}
+  </style>
+  <defs>
+    <marker id="a" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#7a8699"/>
+    </marker>
+  </defs>
+
+  <!-- INPUT -->
+  <rect class="grp" x="20" y="20" width="250" height="300" rx="12"/>
+  <text class="h" x="36" y="42">Starter pack — read-only</text>
+  <rect class="box" x="36" y="58" width="218" height="34" rx="8"/><text class="lbl" x="48" y="75">manifest.json</text>
+  <rect class="box" x="36" y="100" width="218" height="34" rx="8"/><text class="lbl" x="48" y="117">challenge-context.json (spec)</text>
+  <rect class="box" x="36" y="142" width="218" height="34" rx="8"/><text class="lbl" x="48" y="159">review-context/*.json</text>
+  <rect class="box" x="36" y="184" width="218" height="34" rx="8"/><text class="lbl" x="48" y="201">submissions/ (code · docs)</text>
+  <rect class="box" x="36" y="226" width="218" height="34" rx="8"/><text class="lbl" x="48" y="243">reviews/ · scorecards/</text>
+  <rect class="box" x="36" y="268" width="218" height="34" rx="8"/><text class="lbl" x="48" y="285">verification-config.json</text>
+
+  <!-- CORE -->
+  <rect class="grp core" x="330" y="20" width="340" height="470" rx="12"/>
+  <text class="h" x="346" y="42">Combinator (TypeScript / Node)</text>
+  <rect class="box" x="346" y="58" width="150" height="34" rx="8"/><text class="lbl" x="356" y="75">ingest + validate</text>
+  <rect class="box" x="506" y="58" width="150" height="34" rx="8"/><text class="lbl" x="516" y="75">integrity SHA-256</text>
+  <rect class="box" x="346" y="100" width="310" height="34" rx="8"/><text class="lbl" x="356" y="117">review-context engine (supplied | derived)</text>
+  <rect class="box" x="346" y="142" width="150" height="34" rx="8"/><text class="lbl" x="356" y="159">profiling</text>
+  <rect class="box" x="506" y="142" width="150" height="34" rx="8"/><text class="lbl" x="516" y="159">doc ingest PDF/DOCX/PPTX</text>
+  <rect class="box" x="346" y="184" width="310" height="34" rx="8"/><text class="lbl" x="356" y="201">evidence fusion + requirement matrix</text>
+  <rect class="box" x="346" y="226" width="310" height="34" rx="8"/><text class="lbl" x="356" y="243">decision workspace (7 states)</text>
+  <rect class="box" x="346" y="268" width="150" height="46" rx="8"/><text class="lbl" x="356" y="285">code mode</text><text class="lbl" x="356" y="301" font-size="11">base+transplant+verify</text>
+  <rect class="box" x="506" y="268" width="150" height="46" rx="8"/><text class="lbl" x="516" y="285">ideation mode</text><text class="lbl" x="516" y="301" font-size="11">contradictions+synthesis</text>
+  <rect class="box" x="346" y="326" width="150" height="34" rx="8"/><text class="lbl" x="356" y="343">LLM adapter</text>
+  <rect class="box safe" x="506" y="326" width="150" height="34" rx="8"/><text class="lbl" x="516" y="343">SafeFs (confined)</text>
+  <text class="lbl" x="346" y="384" font-size="11" fill="#5a6475">mock · OpenAI · Bedrock — narration only; facts are computed</text>
+  <text class="lbl" x="346" y="404" font-size="11" fill="#5a6475">Deterministic core → runs fully in mock mode, no key</text>
+
+  <!-- OUTPUT -->
+  <rect class="grp out" x="730" y="20" width="230" height="470" rx="12"/>
+  <text class="h" x="746" y="42">workspace/ID — truth</text>
+  <rect class="box" x="746" y="58" width="198" height="30" rx="8"/><text class="lbl" x="756" y="73" font-size="12">workspace-manifest.json</text>
+  <rect class="box" x="746" y="94" width="198" height="30" rx="8"/><text class="lbl" x="756" y="109" font-size="12">active-review-context (+3)</text>
+  <rect class="box" x="746" y="130" width="198" height="30" rx="8"/><text class="lbl" x="756" y="145" font-size="12">requirement-matrix .json/.md</text>
+  <rect class="box" x="746" y="166" width="198" height="30" rx="8"/><text class="lbl" x="756" y="181" font-size="12">decisions.json</text>
+  <rect class="box" x="746" y="202" width="198" height="30" rx="8"/><text class="lbl" x="756" y="217" font-size="12">provenance.json</text>
+  <rect class="box" x="746" y="238" width="198" height="30" rx="8"/><text class="lbl" x="756" y="253" font-size="12">contradictions.json</text>
+  <rect class="box" x="746" y="274" width="198" height="30" rx="8"/><text class="lbl" x="756" y="289" font-size="12">verification.json</text>
+  <rect class="box" x="746" y="310" width="198" height="30" rx="8"/><text class="lbl" x="756" y="325" font-size="12">combined-solution / concept</text>
+  <rect class="box" x="746" y="346" width="198" height="30" rx="8"/><text class="lbl" x="756" y="361" font-size="12">usage · audit · integrity</text>
+
+  <!-- UI -->
+  <rect class="box" x="730" y="540" width="230" height="56" rx="10"/>
+  <text class="h" x="746" y="562">Local review UI</text>
+  <text class="lbl" x="746" y="580" font-size="12">inspect · decide · regenerate</text>
+
+  <!-- arrows -->
+  <path class="arr" d="M270 200 L330 170"/>
+  <path class="arr" d="M270 160 L330 117"/>
+  <path class="arr" d="M670 255 L730 255"/>
+  <path class="dash" d="M421 326 L421 218"/>
+  <path class="dash" d="M581 326 L581 314"/>
+  <path class="arr" d="M845 490 L845 540"/>
+  <path class="arr" d="M845 540 L845 490" />
+  <text class="lbl" x="250" y="520" font-size="12" fill="#5a6475">Files are the source of truth; the UI reads &amp; writes them, and a decision change triggers regeneration.</text>
+</svg>

@@ -1,0 +1,22 @@
+{
+  "name": "@ai-learning-adventure/api",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/server.ts",
+    "start": "node src/server.ts",
+    "test": "node test/db.smoke.ts && node test/api.contract.ts && node test/admin.contract.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@ai-learning-adventure/types": "workspace:*",
+    "better-sqlite3": "13.0.3",
+    "drizzle-orm": "0.45.2"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "9.6.0",
+    "@types/node": "26.2.0",
+    "typescript": "7.0.2"
+  }
+}

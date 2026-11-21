@@ -1,0 +1,20 @@
+{
+  "slug": "support-knowledge-assistant",
+  "title": "Agent-Assist Support Knowledge Assistant",
+  "scenario_type": "ai_enabled",
+  "customer_name": "Arbormill Software",
+  "industry": "B2B Software",
+  "opportunity_summary": "Agent-assist assistant embedded in Zendesk for 73 support and escalation staff handling 41,000 tickets a year. Retrieval over 2,400 pages of Confluence and public Markdown documentation, 340 SharePoint runbooks and 96,000 closed tickets; grounded reply drafting with sources shown, ticket classification and routing, and similar-ticket retrieval. Every outbound reply is human-approved. No cloud preference stated, so a platform recommendation with reasoning is required. PII redaction, EU data residency, no third-party training on customer data, 24-month audit retention, and a documented evaluation approach are mandatory.",
+  "requested_by": "Dana Okonkwo, VP Customer Support, Arbormill Software",
+  "preferred_cloud": null,
+  "expected_users": 73,
+  "target_regions": ["European Union", "United States"],
+  "delivery_deadline": "2026-09-30",
+  "regulatory_constraints": ["GDPR", "EU data residency clauses in three enterprise contracts"],
+  "demo_change": {
+    "description": "After the data protection officer's review of provider retention terms, the AI provider preference changes from the recommended platform's managed model service to open-weight models hosted in the customer's own EU region, so that inference and prompt retention stay inside the EU.",
+    "config_key": "ai_provider_preference",
+    "from": "platform_native",
+    "to": "open_source"
+  }
+}

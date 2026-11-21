@@ -1,0 +1,60 @@
+@use '../../../styles/tokens' as t;
+
+.tabs {
+  display: flex;
+  flex-direction: column;
+}
+
+.list {
+  display: flex;
+  align-items: stretch;
+  gap: t.$spacing-4;
+  border-bottom: t.$border-width-default solid t.$color-border-subtle;
+}
+
+.trigger {
+  display: inline-flex;
+  align-items: center;
+  padding: t.$spacing-2 0;
+  margin-bottom: -1px;
+  background: none;
+  border: none;
+  border-bottom: t.$border-width-active solid transparent;
+  color: t.$color-text-secondary;
+  font-family: inherit;
+  font-size: t.$typography-font-size-sm;
+  font-weight: t.$typography-font-weight-regular;
+  cursor: pointer;
+  transition:
+    border-color t.$transition-default,
+    color t.$transition-default;
+
+  &:hover:not(:disabled) {
+    color: t.$color-text-primary;
+  }
+
+  &:focus-visible {
+    outline: t.$border-width-active solid t.$color-border-focus;
+    outline-offset: -2px;
+  }
+
+  &:disabled {
+    color: t.$color-text-disabled;
+    cursor: not-allowed;
+  }
+}
+
+.active {
+  border-bottom-color: t.$color-border-strong;
+  color: t.$color-text-primary;
+  font-weight: t.$typography-font-weight-semibold;
+}
+
+.panel {
+  padding-top: t.$spacing-4;
+
+  &:focus-visible {
+    outline: t.$border-width-active solid t.$color-border-focus;
+    outline-offset: 2px;
+  }
+}

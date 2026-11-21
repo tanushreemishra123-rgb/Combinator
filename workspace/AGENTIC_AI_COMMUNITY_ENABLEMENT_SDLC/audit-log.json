@@ -1,0 +1,98 @@
+[
+  {
+    "at": "2026-11-20T13:33:18.922Z",
+    "op": "write",
+    "target": "/home/claude/tc-combinator/workspace/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/review-context-status.json",
+    "detail": "206 bytes"
+  },
+  {
+    "at": "2026-11-20T13:33:18.922Z",
+    "op": "write",
+    "target": "/home/claude/tc-combinator/workspace/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/active-review-context.json",
+    "detail": "2340 bytes"
+  },
+  {
+    "at": "2026-11-20T13:33:18.922Z",
+    "op": "write",
+    "target": "/home/claude/tc-combinator/workspace/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/review-context-reconciliation.json",
+    "detail": "500 bytes"
+  },
+  {
+    "at": "2026-11-20T13:33:18.923Z",
+    "op": "write",
+    "target": "/home/claude/tc-combinator/workspace/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/source-location-map.json",
+    "detail": "1257 bytes"
+  },
+  {
+    "at": "2026-11-20T13:33:19.474Z",
+    "op": "write",
+    "target": "/home/claude/tc-combinator/workspace/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/submissions/SUB_001/ideas.json",
+    "detail": "39679 bytes"
+  },
+  {
+    "at": "2026-11-20T13:33:19.529Z",
+    "op": "write",
+    "target": "/home/claude/tc-combinator/workspace/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/submissions/SUB_002/ideas.json",
+    "detail": "13345 bytes"
+  },
+  {
+    "at": "2026-11-20T13:33:19.551Z",
+    "op": "write",
+    "target": "/home/claude/tc-combinator/workspace/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/submissions/SUB_003/ideas.json",
+    "detail": "24580 bytes"
+  },
+  {
+    "at": "2026-11-20T13:33:19.552Z",
+    "op": "write",
+    "target": "/home/claude/tc-combinator/workspace/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/synthesized-concept/concept.md",
+    "detail": "9162 bytes"
+  },
+  {
+    "at": "2026-11-20T13:33:19.552Z",
+    "op": "write",
+    "target": "/home/claude/tc-combinator/workspace/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/decisions.json",
+    "detail": "5695 bytes"
+  },
+  {
+    "at": "2026-11-20T13:33:19.552Z",
+    "op": "write",
+    "target": "/home/claude/tc-combinator/workspace/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/requirement-matrix.json",
+    "detail": "26939 bytes"
+  },
+  {
+    "at": "2026-11-20T13:33:19.552Z",
+    "op": "write",
+    "target": "/home/claude/tc-combinator/workspace/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/requirement-matrix.md",
+    "detail": "974 bytes"
+  },
+  {
+    "at": "2026-11-20T13:33:19.553Z",
+    "op": "write",
+    "target": "/home/claude/tc-combinator/workspace/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/provenance.json",
+    "detail": "15213 bytes"
+  },
+  {
+    "at": "2026-11-20T13:33:19.553Z",
+    "op": "write",
+    "target": "/home/claude/tc-combinator/workspace/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/contradictions.json",
+    "detail": "106 bytes"
+  },
+  {
+    "at": "2026-11-20T13:33:19.553Z",
+    "op": "write",
+    "target": "/home/claude/tc-combinator/workspace/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/verification.json",
+    "detail": "1479 bytes"
+  },
+  {
+    "at": "2026-11-20T13:33:19.554Z",
+    "op": "write",
+    "target": "/home/claude/tc-combinator/workspace/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/integrity/integrity-report.json",
+    "detail": "5408 bytes"
+  },
+  {
+    "at": "2026-11-20T13:33:19.554Z",
+    "op": "write",
+    "target": "/home/claude/tc-combinator/workspace/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/usage-report.json",
+    "detail": "206 bytes"
+  }
+]

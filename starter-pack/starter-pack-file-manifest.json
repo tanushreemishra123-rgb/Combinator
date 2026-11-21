@@ -1,0 +1,230 @@
+{
+  "algorithm": "SHA-256",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "2ccaeeb0bda77af7db215cb3ed2821f77855a11363460bcd13e3b6ffc3b7668a",
+      "size": 625
+    },
+    {
+      "path": "challenges/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/README.md",
+      "sha256": "49e65dba5bb5a5f8599ccb1fd7ed882c1f15964342fce303fd3e9e5393e747b4",
+      "size": 214
+    },
+    {
+      "path": "challenges/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/challenge-context.json",
+      "sha256": "926f7063fcf5a3dd32e3e484fc782841bad36b78f16158d8711af13257270bd5",
+      "size": 433
+    },
+    {
+      "path": "challenges/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/challenge-package.json",
+      "sha256": "15b7b621f3e5e3847f55e8777185350a3e7274321e9ab87af596fa42994a40f3",
+      "size": 456
+    },
+    {
+      "path": "challenges/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/integrity/source-hashes.json",
+      "sha256": "622aa74cc82c569ce79a641c6dd2d1f2086c48e3c7eaf37e0157f8e91076b3f0",
+      "size": 101
+    },
+    {
+      "path": "challenges/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/reviews/SUB_001/final-result.json",
+      "sha256": "0dcc8c8f50747361dfe3d1918714556c3993f18fb18bc9f010626848452c1c46",
+      "size": 196
+    },
+    {
+      "path": "challenges/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/reviews/SUB_002/final-result.json",
+      "sha256": "4af79cf75b4a3f523d687c55fa85d37644abe046c9f1aaaa48ddb8d31d3006ff",
+      "size": 195
+    },
+    {
+      "path": "challenges/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/reviews/SUB_003/final-result.json",
+      "sha256": "6e7cf238c4026d17b2348feddb9b8ddc5a2378b6605af1ed0b816a11396074ce",
+      "size": 195
+    },
+    {
+      "path": "challenges/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/submissions/SUB_001/ADD_SUBMISSION_HERE.md",
+      "sha256": "40dd41a8c55f4d2f8d598efb094955860aa1a9e77cfae0dc683037b99d5e37ca",
+      "size": 97
+    },
+    {
+      "path": "challenges/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/submissions/SUB_002/ADD_SUBMISSION_HERE.md",
+      "sha256": "80ddff17f74be88e12069db1d29530fa2bdd3825e80c9a58dcbf12a47d816a43",
+      "size": 97
+    },
+    {
+      "path": "challenges/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/submissions/SUB_003/ADD_SUBMISSION_HERE.md",
+      "sha256": "ab4a154d8c54e6884008f89577b0091aca9cd55f3f4bb2656983ce6033f86f6d",
+      "size": 97
+    },
+    {
+      "path": "challenges/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/verification/verification-config.json",
+      "sha256": "1475f38bc55c5ca89f8b3d0fba8a62172518a7875a887614ff40f7dea7b087b0",
+      "size": 292
+    },
+    {
+      "path": "challenges/AI_DEAL_SCOPING_ASSISTANT/README.md",
+      "sha256": "7cab0bc8c9c272ee403d7ca063633f6a5241484997d7427a2e70f514548a3461",
+      "size": 181
+    },
+    {
+      "path": "challenges/AI_DEAL_SCOPING_ASSISTANT/challenge-context.json",
+      "sha256": "74b658fc865fd484901655d82b836f90906b3186e86ae4b8ba49da687c0d1ee6",
+      "size": 3954
+    },
+    {
+      "path": "challenges/AI_DEAL_SCOPING_ASSISTANT/challenge-package.json",
+      "sha256": "42356a4b0c6620465d86aa2c10dc40589afde3d1cb800647da8bacf2425215c8",
+      "size": 415
+    },
+    {
+      "path": "challenges/AI_DEAL_SCOPING_ASSISTANT/integrity/source-hashes.json",
+      "sha256": "622aa74cc82c569ce79a641c6dd2d1f2086c48e3c7eaf37e0157f8e91076b3f0",
+      "size": 101
+    },
+    {
+      "path": "challenges/AI_DEAL_SCOPING_ASSISTANT/reviews/SUB_001/final-result.json",
+      "sha256": "01747bc1eddc483d34e69f0f570db276ec6f46d32fcf644e0f2533ee06e0b52c",
+      "size": 210
+    },
+    {
+      "path": "challenges/AI_DEAL_SCOPING_ASSISTANT/reviews/SUB_002/final-result.json",
+      "sha256": "b9d0034732b1035576b567f94c4c33c9d204750b4221ec7b2f2849c1f4c8dd84",
+      "size": 210
+    },
+    {
+      "path": "challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/ADD_SUBMISSION_HERE.md",
+      "sha256": "c9db370dfcda3ac970410934735cf01f5339863bacd274f4528130dd39029b63",
+      "size": 87
+    },
+    {
+      "path": "challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_002/ADD_SUBMISSION_HERE.md",
+      "sha256": "571b006115e40b9bc2215435f70f0ec578c88d468f212e007d98cca1b49a6fd4",
+      "size": 87
+    },
+    {
+      "path": "challenges/AI_DEAL_SCOPING_ASSISTANT/verification/verification-config.json",
+      "sha256": "c2d99e055ca33371d9fa58e005686aec229a36b305aa70828d5c0c800f470ba6",
+      "size": 300
+    },
+    {
+      "path": "challenges/AI_LEARNING_ADVENTURE/README.md",
+      "sha256": "76351df83b20a23543d62a36db9eb82982dc59b914f9aada19ad3af8a68adecd",
+      "size": 173
+    },
+    {
+      "path": "challenges/AI_LEARNING_ADVENTURE/challenge-context.json",
+      "sha256": "a40973fe3952304e7b7b4d03ff8b945b353400b6ccda21fc1934a9c2b941c2fa",
+      "size": 4068
+    },
+    {
+      "path": "challenges/AI_LEARNING_ADVENTURE/challenge-package.json",
+      "sha256": "c41daa47360e0e34e98a004102c3d0f41624fdba8c97663bbf02bc0e4034e386",
+      "size": 407
+    },
+    {
+      "path": "challenges/AI_LEARNING_ADVENTURE/integrity/source-hashes.json",
+      "sha256": "622aa74cc82c569ce79a641c6dd2d1f2086c48e3c7eaf37e0157f8e91076b3f0",
+      "size": 101
+    },
+    {
+      "path": "challenges/AI_LEARNING_ADVENTURE/reviews/SUB_001/final-result.json",
+      "sha256": "01747bc1eddc483d34e69f0f570db276ec6f46d32fcf644e0f2533ee06e0b52c",
+      "size": 210
+    },
+    {
+      "path": "challenges/AI_LEARNING_ADVENTURE/reviews/SUB_002/final-result.json",
+      "sha256": "b9d0034732b1035576b567f94c4c33c9d204750b4221ec7b2f2849c1f4c8dd84",
+      "size": 210
+    },
+    {
+      "path": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_001/ADD_SUBMISSION_HERE.md",
+      "sha256": "c9db370dfcda3ac970410934735cf01f5339863bacd274f4528130dd39029b63",
+      "size": 87
+    },
+    {
+      "path": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/ADD_SUBMISSION_HERE.md",
+      "sha256": "571b006115e40b9bc2215435f70f0ec578c88d468f212e007d98cca1b49a6fd4",
+      "size": 87
+    },
+    {
+      "path": "challenges/AI_LEARNING_ADVENTURE/verification/verification-config.json",
+      "sha256": "c2d99e055ca33371d9fa58e005686aec229a36b305aa70828d5c0c800f470ba6",
+      "size": 300
+    },
+    {
+      "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/README.md",
+      "sha256": "0255ed23c0cbcb42f6f54d81b6c4462af9cb6f2a282f18705e1a33000aca36a0",
+      "size": 183
+    },
+    {
+      "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/challenge-context.json",
+      "sha256": "a9b84575da7a4cb5850a17b110c71872e458187d89c37ded2c556a09ec650c81",
+      "size": 3785
+    },
+    {
+      "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/challenge-package.json",
+      "sha256": "aeef898a33fc8c49f0acc4265522f818dfa4444ac5a938557caf9e3ab7ca638d",
+      "size": 417
+    },
+    {
+      "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/integrity/source-hashes.json",
+      "sha256": "622aa74cc82c569ce79a641c6dd2d1f2086c48e3c7eaf37e0157f8e91076b3f0",
+      "size": 101
+    },
+    {
+      "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/reviews/SUB_001/final-result.json",
+      "sha256": "01747bc1eddc483d34e69f0f570db276ec6f46d32fcf644e0f2533ee06e0b52c",
+      "size": 210
+    },
+    {
+      "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/reviews/SUB_002/final-result.json",
+      "sha256": "7f708919f00a6a035bd4688fbb7ecfa3e7b997ac41177d46d8bae2388f9b6899",
+      "size": 211
+    },
+    {
+      "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_001/ADD_SUBMISSION_HERE.md",
+      "sha256": "c9db370dfcda3ac970410934735cf01f5339863bacd274f4528130dd39029b63",
+      "size": 87
+    },
+    {
+      "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/ADD_SUBMISSION_HERE.md",
+      "sha256": "571b006115e40b9bc2215435f70f0ec578c88d468f212e007d98cca1b49a6fd4",
+      "size": 87
+    },
+    {
+      "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/verification/verification-config.json",
+      "sha256": "c2d99e055ca33371d9fa58e005686aec229a36b305aa70828d5c0c800f470ba6",
+      "size": 300
+    },
+    {
+      "path": "manifest.json",
+      "sha256": "1613a6d75e52a65d702a5e0c01717370d32f0c4932d24334f0a0e8b3d2173420",
+      "size": 1528
+    },
+    {
+      "path": "review-context/agentic-ai-community-enablement-sdlc.json",
+      "sha256": "430a4bb9d999411b038e1a133886ffd88727c6008e94511ce24003bdb2bc5910",
+      "size": 212
+    },
+    {
+      "path": "review-context/ai-deal-scoping-assistant.json",
+      "sha256": "211406252f1bebcf40fc2674fb5c733fcb2438bd517a8c90ee0707b58e71f02e",
+      "size": 3932
+    },
+    {
+      "path": "review-context/ai-learning-adventure.json",
+      "sha256": "39a7cb4e11d41db102d6f89298b2059237cda341db430ca4145a8eb2485b0219",
+      "size": 4052
+    },
+    {
+      "path": "review-context/ai-workflow-puzzle-builder.json",
+      "sha256": "2800440a00b5849475db868ae086ef679fdc67b23f6b001757d87e22a5a8146d",
+      "size": 3761
+    },
+    {
+      "path": "review-context/review-context-policy.json",
+      "sha256": "1f31461d71ccc844986256cc68edebd3985b21c36b39eb431289eb25f661aba9",
+      "size": 1156
+    }
+  ]
+}

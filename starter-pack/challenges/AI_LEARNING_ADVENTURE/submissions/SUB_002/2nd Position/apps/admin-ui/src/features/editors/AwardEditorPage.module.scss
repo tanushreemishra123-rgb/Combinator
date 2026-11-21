@@ -1,0 +1,18 @@
+@use '../../styles/tokens' as t;
+
+.form {
+  max-width: 640px;
+  display: flex;
+  flex-direction: column;
+  gap: t.$spacing-4;
+}
+
+.rule {
+  display: flex;
+  flex-direction: column;
+  gap: t.$spacing-4;
+  padding: t.$spacing-4;
+  border: t.$border-width-default solid t.$color-border-default;
+  border-radius: t.$border-radius-lg;
+  background: t.$color-background-surface-subtle;
+}

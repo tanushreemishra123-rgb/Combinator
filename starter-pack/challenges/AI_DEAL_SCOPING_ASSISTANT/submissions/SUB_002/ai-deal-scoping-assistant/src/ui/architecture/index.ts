@@ -1,0 +1,1 @@
+export { ArchitectureWorkspace } from './ArchitectureWorkspace';

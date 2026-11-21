@@ -1,0 +1,119 @@
+/**
+ * Shared plumbing for every use case: finding the active session, saving it, raising notices,
+ * running async work under a busy label and turning any thrown error into a readable notice - so a
+ * use case never rejects into the UI and never writes to the console.
+ */
+import { AiProviderError } from '../../ai';
+import type { AiErrorKind } from '../../ai';
+import type { GenerationMeta, ScopingSession } from '../../domain';
+import { IngestionError } from '../../ingestion';
+import { ScopeApprovalError, ScopeItemNotFoundError } from '../../scope';
+import type { AppState, NoticeTone, UseCaseDeps } from '../types';
+import { makeNotice } from './notices';
+
+/** A failure a use case raises on purpose; its message is written for the reviewer and shown as is. */
+export class UseCaseError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = 'UseCaseError';
+  }
+}
+
+const NO_ACTIVE_SESSION_TITLE = 'No active session';
+const NO_ACTIVE_SESSION_MESSAGE = 'Create a session or load a sample scenario before using this action.';
+
+const AI_ERROR_MESSAGES: ReadonlyMap<AiErrorKind, string> = new Map([
+  ['auth', 'The AI provider rejected the API key. Check the key in the AI settings, or switch to Mock AI mode.'],
+  ['rate-limit', 'The AI provider rate-limited the request. Wait a moment and try again, or switch to Mock AI mode.'],
+  ['network', 'The AI provider could not be reached. Check your internet connection and try again.'],
+  ['timeout', 'The AI provider did not respond in time. Try again, or choose a different model in the AI settings.'],
+  ['invalid-response', 'The AI provider returned a response that could not be used. Try again, or choose a different model.'],
+  ['provider', 'The AI provider reported a server error. Try again shortly, or switch to Mock AI mode.'],
+]);
+
+/** Error classes whose message is already written for the reviewer. */
+function isReadableError(error: unknown): error is Error {
+  return error instanceof UseCaseError || error instanceof IngestionError || error instanceof ScopeItemNotFoundError || error instanceof ScopeApprovalError;
+}
+
+/** Plain-language description of any failure; unknown errors never leak technical text to the UI. */
+export function describeError(error: unknown): string {
+  if (error instanceof AiProviderError) {
+    return AI_ERROR_MESSAGES.get(error.kind) ?? error.message;
+  }
+  if (isReadableError(error)) {
+    return error.message;
+  }
+  const name = error instanceof Error ? error.name : 'unknown error';
+  return `An unexpected problem occurred (${name}). Nothing was changed - try again.`;
+}
+
+export function notify(deps: UseCaseDeps, tone: NoticeTone, title: string, message: string): void {
+  deps.dispatch({ type: 'ADD_NOTICE', notice: makeNotice(tone, title, message) });
+}
+
+export function findActiveSession(state: AppState): ScopingSession | null {
+  return state.sessions.find((session) => session.id === state.activeSessionId) ?? null;
+}
+
+/** The active session, or null after telling the reviewer that one is needed. */
+export function requireActiveSession(deps: UseCaseDeps): ScopingSession | null {
+  const session = findActiveSession(deps.getState());
+  if (session === null) {
+    notify(deps, 'error', NO_ACTIVE_SESSION_TITLE, NO_ACTIVE_SESSION_MESSAGE);
+  }
+  return session;
+}
+
+/** Stamps `updatedAt` and saves; returns the saved object so callers keep threading it locally. */
+export function saveSession(deps: UseCaseDeps, session: ScopingSession): ScopingSession {
+  const saved: ScopingSession = { ...session, updatedAt: deps.now() };
+  deps.dispatch({ type: 'UPSERT_SESSION', session: saved });
+  return saved;
+}
+
+export interface BusyOptions<T> {
+  label: string;
+  stageId: string | null;
+  /** Title of the error notice raised when the task throws. */
+  errorTitle: string;
+  /** Returned instead of rejecting when the task throws. */
+  fallback: T;
+}
+
+/** Runs async work between START_BUSY and END_BUSY; a thrown error becomes an error notice. */
+export async function runBusy<T>(deps: UseCaseDeps, options: BusyOptions<T>, task: () => Promise<T>): Promise<T> {
+  deps.dispatch({ type: 'START_BUSY', label: options.label, stageId: options.stageId });
+  try {
+    return await task();
+  } catch (error) {
+    notify(deps, 'error', options.errorTitle, describeError(error));
+    return options.fallback;
+  } finally {
+    deps.dispatch({ type: 'END_BUSY' });
+  }
+}
+
+/** Runs synchronous work; a thrown error becomes an error notice and `fallback` is returned. */
+export function runGuarded<T>(deps: UseCaseDeps, errorTitle: string, fallback: T, task: () => T): T {
+  try {
+    return task();
+  } catch (error) {
+    notify(deps, 'error', errorTitle, describeError(error));
+    return fallback;
+  }
+}
+
+/** Which path produced a result: the provider label, plus the reason when live AI fell back to mock. */
+export function describeGenerationPath(meta: GenerationMeta): string {
+  return `Generated by ${meta.providerLabel}.`;
+}
+
+/** Warns that live AI failed and clearly-labelled mock output was used instead (never silent). */
+export function notifyFallback(deps: UseCaseDeps, subject: string, meta: GenerationMeta): void {
+  if (!meta.usedFallback) {
+    return;
+  }
+  const reason = meta.issues.find((issue) => issue.code === 'live-fallback')?.message ?? 'The live AI provider could not produce a usable result.';
+  notify(deps, 'warning', 'Live AI failed - mock output used', `${subject}: ${reason} The result is clearly labelled as ${meta.providerLabel}.`);
+}

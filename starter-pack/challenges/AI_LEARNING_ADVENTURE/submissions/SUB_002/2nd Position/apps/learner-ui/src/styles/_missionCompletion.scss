@@ -1,0 +1,130 @@
+@use './tokens' as tokens;
+
+.quiz-handoff__card {
+  display: flex;
+  flex-direction: column;
+  gap: tokens.$spacing-md;
+  align-items: flex-start;
+  padding: tokens.$spacing-lg;
+  background-color: tokens.$color-surface-tinted;
+  border-radius: tokens.$border-radius-md;
+}
+
+.quiz-handoff__card p {
+  margin: 0;
+}
+
+.mission-completion {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: tokens.$spacing-md;
+  padding: tokens.$spacing-lg;
+  overflow: hidden;
+}
+
+.mission-completion__confetti {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.mission-completion__confetti span {
+  position: absolute;
+  top: -12px;
+  width: 8px;
+  height: 14px;
+  border-radius: 2px;
+  animation: mission-confetti-fall 1.4s ease-out forwards;
+}
+
+.mission-completion__confetti span:nth-child(1) { left: 12%; background-color: tokens.$color-brand-secondary; }
+.mission-completion__confetti span:nth-child(2) { left: 30%; background-color: tokens.$color-brand-accent-green; animation-delay: 0.1s; }
+.mission-completion__confetti span:nth-child(3) { left: 48%; background-color: tokens.$color-brand-accent-blue; animation-delay: 0.2s; }
+.mission-completion__confetti span:nth-child(4) { left: 64%; background-color: tokens.$color-brand-accent-yellow; animation-delay: 0.05s; }
+.mission-completion__confetti span:nth-child(5) { left: 78%; background-color: tokens.$color-brand-primary; animation-delay: 0.15s; }
+.mission-completion__confetti span:nth-child(6) { left: 90%; background-color: tokens.$color-brand-accent-cyan; animation-delay: 0.25s; }
+
+@keyframes mission-confetti-fall {
+  from {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(140px) rotate(180deg);
+    opacity: 0;
+  }
+}
+
+.mission-completion__awards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: tokens.$spacing-md;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mission-completion__award {
+  display: inline-flex;
+  align-items: center;
+  gap: tokens.$spacing-xs;
+  padding: tokens.$spacing-xs tokens.$spacing-md;
+  color: tokens.$color-text-orange;
+  background-color: tokens.$color-background-card-yellow;
+  border-radius: tokens.$border-radius-pill;
+  animation: mission-badge-reveal tokens.$motion-duration-normal ease-out;
+}
+
+.mission-completion__award-name {
+  font-weight: tokens.$typography-font-weight-semibold;
+  color: tokens.$color-text-primary;
+}
+
+@keyframes mission-badge-reveal {
+  from {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.mission-completion__score {
+  margin: 0;
+  font-weight: tokens.$typography-font-weight-medium;
+}
+
+.mission-completion__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: tokens.$spacing-sm;
+}
+
+.mission-completion__back {
+  align-self: flex-start;
+}
+
+.mission-completion__checklist {
+  display: flex;
+  flex-direction: column;
+  gap: tokens.$spacing-sm;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mission-completion__checklist li {
+  display: flex;
+  align-items: center;
+  gap: tokens.$spacing-sm;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mission-completion__confetti span,
+  .mission-completion__award {
+    animation: none;
+  }
+}

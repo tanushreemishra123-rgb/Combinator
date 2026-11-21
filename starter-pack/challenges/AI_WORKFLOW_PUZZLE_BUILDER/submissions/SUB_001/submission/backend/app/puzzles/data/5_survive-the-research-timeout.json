@@ -1,0 +1,170 @@
+{
+  "id": "survive-the-research-timeout",
+  "title": "Survive the Research Timeout",
+  "difficulty": "intermediate",
+  "tagline": "Survive the timeout",
+  "concepts": ["timeout", "retry", "tools", "validator"],
+  "order": 5,
+  "objective": "Keep the research brief alive when a slow source hangs.",
+  "description": "Two sources feed this research brief: a fast status blog and a creaky old archive. A Timeout block already stops the archive from hanging forever - but stopping is all it does. One slow response and the whole brief dies. Put a Retry block in front of the Timeout so the archive gets a few tries before you give up on it. The archive is slow on its first two attempts and answers on the third.",
+  "sample_input": {
+    "topic": "Acme API rate limits after the March outage",
+    "requested_by": "research-desk"
+  },
+  "expected_output": "A brief with a headline, at least two key points, and both research sources listed.",
+  "available_blocks": [
+    "input",
+    "tool",
+    "retry",
+    "timeout",
+    "fallback",
+    "ai_model",
+    "validator",
+    "output"
+  ],
+  "starter_workflow": {
+    "id": "wf_research_timeout",
+    "name": "Research brief builder",
+    "nodes": [
+      {
+        "id": "topic_in",
+        "type": "input",
+        "label": "Research topic",
+        "config": {},
+        "position": { "x": 60, "y": 200 }
+      },
+      {
+        "id": "fetch_primary",
+        "type": "tool",
+        "label": "Fetch the status blog",
+        "config": {
+          "tool": "web_fetch",
+          "params": { "source": "acme-status-blog" },
+          "output_field": "source_a"
+        },
+        "position": { "x": 300, "y": 200 }
+      },
+      {
+        "id": "archive_timeout",
+        "type": "timeout",
+        "label": "Give up after 4s",
+        "config": { "timeout_ms": 4000 },
+        "position": { "x": 540, "y": 200 }
+      },
+      {
+        "id": "fetch_archive",
+        "type": "tool",
+        "label": "Fetch the research archive",
+        "config": {
+          "tool": "web_fetch",
+          "params": { "source": "research-archive" },
+          "output_field": "source_b"
+        },
+        "position": { "x": 780, "y": 200 }
+      },
+      {
+        "id": "synthesise",
+        "type": "ai_model",
+        "label": "Write the brief",
+        "config": {
+          "prompt_id": "research_brief_v1",
+          "prompt": "Write a research brief from the two sources. Return JSON with headline, key_points and sources.",
+          "system": "You are a research analyst. Cite every source you used.",
+          "expects_json": true,
+          "output_field": "brief"
+        },
+        "position": { "x": 1020, "y": 200 }
+      },
+      {
+        "id": "check_brief",
+        "type": "validator",
+        "label": "Is the brief usable?",
+        "config": {
+          "schema": {
+            "brief.headline": { "type": "string", "min": 8 },
+            "brief.key_points": { "type": "array", "min": 2 },
+            "brief.sources": { "type": "array", "min": 2 }
+          },
+          "on_fail": "fail"
+        },
+        "position": { "x": 1260, "y": 200 }
+      },
+      {
+        "id": "brief_out",
+        "type": "output",
+        "label": "Publish the brief",
+        "config": { "field": "brief" },
+        "position": { "x": 1500, "y": 200 }
+      }
+    ],
+    "edges": [
+      { "id": "e_topic_primary", "source": "topic_in", "target": "fetch_primary" },
+      { "id": "e_primary_timeout", "source": "fetch_primary", "target": "archive_timeout" },
+      { "id": "e_timeout_archive", "source": "archive_timeout", "target": "fetch_archive" },
+      { "id": "e_archive_synth", "source": "fetch_archive", "target": "synthesise" },
+      { "id": "e_synth_check", "source": "synthesise", "target": "check_brief" },
+      { "id": "e_check_out", "source": "check_brief", "target": "brief_out" }
+    ]
+  },
+  "solution_hint": "Drop a Retry block between 'Fetch the status blog' and 'Give up after 4s', and set max attempts to 3. Guards stack: the Retry decides how many tries the archive gets, the Timeout decides how long each try may take.",
+  "failure_scenarios": [
+    {
+      "id": "slow-archive",
+      "label": "The archive hangs",
+      "description": "The research archive does not respond on the first two attempts. The third attempt comes back normally.",
+      "rules": [
+        {
+          "node_id": "fetch_archive",
+          "kind": "timeout",
+          "first_n": 2,
+          "label": "hang the archive fetch",
+          "detail": { "message": "The research archive did not respond in time." }
+        }
+      ]
+    }
+  ],
+  "completion_criteria": [
+    "A Retry block protects the archive fetch",
+    "The archive fetch recovers instead of ending the run",
+    "The published brief lists its sources",
+    "The run finishes at the Output block"
+  ],
+  "completion_checks": [
+    { "kind": "block_used", "type": "retry" },
+    { "kind": "recovered", "node_id": "fetch_archive" },
+    { "kind": "output_field", "field": "sources", "op": "not_empty" },
+    { "kind": "run_status", "in": ["completed"] }
+  ],
+  "mock_responses": {
+    "research_brief_v1": {
+      "confidence": 0.9,
+      "data": {
+        "headline": "Acme tightened API rate limits after the March outage",
+        "key_points": [
+          "Acme cut the burst allowance from 240 to 120 requests per minute on 14 March.",
+          "The archive shows the same limits were briefly trialled in 2024 and rolled back.",
+          "Customers on the legacy plan keep the old limits until renewal."
+        ],
+        "sources": ["acme-status-blog", "research-archive"]
+      }
+    }
+  },
+  "mock_responses_by_provider": {},
+  "tool_fixtures": {
+    "web_fetch": {
+      "sources": {
+        "acme-status-blog": {
+          "url": "https://status.acme.test/posts/rate-limits",
+          "title": "Rate limit changes following the March incident",
+          "content": "On 14 March we reduced the burst allowance from 240 to 120 requests per minute for all new plans. Legacy plans keep their previous limits until renewal."
+        },
+        "research-archive": {
+          "url": "https://archive.research.test/acme/rate-limits",
+          "title": "Acme rate limit history, 2023 to 2026",
+          "content": "Acme trialled a 120 request per minute burst allowance in 2024 and rolled it back after two weeks. The March 2026 change reinstated it permanently."
+        }
+      }
+    }
+  },
+  "retrieval_fixtures": {}
+}

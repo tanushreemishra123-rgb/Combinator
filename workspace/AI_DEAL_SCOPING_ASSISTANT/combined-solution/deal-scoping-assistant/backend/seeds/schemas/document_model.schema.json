@@ -1,0 +1,153 @@
+{
+  "$defs": {
+    "Block": {
+      "additionalProperties": false,
+      "description": "One renderable block; only the fields matching `type` are filled.",
+      "properties": {
+        "type": {
+          "$ref": "#/$defs/BlockType",
+          "description": "Block kind."
+        },
+        "text": {
+          "default": "",
+          "description": "Text for heading, paragraph, image caption or code.",
+          "title": "Text",
+          "type": "string"
+        },
+        "level": {
+          "default": 2,
+          "description": "Heading level.",
+          "maximum": 6,
+          "minimum": 1,
+          "title": "Level",
+          "type": "integer"
+        },
+        "items": {
+          "description": "Entries of a bullet list.",
+          "items": {
+            "type": "string"
+          },
+          "title": "Items",
+          "type": "array"
+        },
+        "headers": {
+          "description": "Table header cells.",
+          "items": {
+            "type": "string"
+          },
+          "title": "Headers",
+          "type": "array"
+        },
+        "rows": {
+          "description": "Table body rows.",
+          "items": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "title": "Rows",
+          "type": "array"
+        },
+        "image_ref": {
+          "default": "",
+          "description": "Image key or data URL for image blocks.",
+          "title": "Image Ref",
+          "type": "string"
+        },
+        "language": {
+          "default": "",
+          "description": "Language of a code block, e.g. mermaid.",
+          "title": "Language",
+          "type": "string"
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "title": "Block",
+      "type": "object"
+    },
+    "BlockType": {
+      "enum": [
+        "heading",
+        "paragraph",
+        "bullet_list",
+        "table",
+        "image",
+        "code"
+      ],
+      "title": "BlockType",
+      "type": "string"
+    },
+    "Section": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "description": "Stable section id, e.g. executive_summary.",
+          "title": "Id",
+          "type": "string"
+        },
+        "title": {
+          "description": "Section title as printed.",
+          "title": "Title",
+          "type": "string"
+        },
+        "blocks": {
+          "description": "Blocks in document order.",
+          "items": {
+            "$ref": "#/$defs/Block"
+          },
+          "title": "Blocks",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "title"
+      ],
+      "title": "Section",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "title": {
+      "description": "Document title.",
+      "title": "Title",
+      "type": "string"
+    },
+    "subtitle": {
+      "default": "",
+      "description": "Customer and session subtitle.",
+      "title": "Subtitle",
+      "type": "string"
+    },
+    "generated_at": {
+      "description": "When the package was built.",
+      "format": "date-time",
+      "title": "Generated At",
+      "type": "string"
+    },
+    "disclaimer": {
+      "default": "This document is an AI-assisted internal planning output based on customer requirements and stated assumptions. It requires review and validation by qualified sales, architecture, delivery, security, and commercial stakeholders. It is not a final quote, contractual commitment, or delivery guarantee.",
+      "description": "Mandatory statement printed at the top and bottom.",
+      "title": "Disclaimer",
+      "type": "string"
+    },
+    "sections": {
+      "description": "Sections in spec order.",
+      "items": {
+        "$ref": "#/$defs/Section"
+      },
+      "title": "Sections",
+      "type": "array"
+    }
+  },
+  "required": [
+    "title",
+    "generated_at"
+  ],
+  "title": "DocumentModel",
+  "type": "object"
+}

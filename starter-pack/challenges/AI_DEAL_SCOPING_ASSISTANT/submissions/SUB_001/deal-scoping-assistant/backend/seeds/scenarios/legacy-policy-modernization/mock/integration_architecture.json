@@ -1,0 +1,352 @@
+{
+  "integrations": [
+    {
+      "req_ids": [
+        "INT_01"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "IA_01",
+      "name": "Legacy Broker and Reinsurance SOAP Integration",
+      "source_system": "Brokers and Reinsurance Platform",
+      "target_system": "API Management & Broker Gateway",
+      "direction": "bidirectional",
+      "pattern": "api",
+      "auth_approach": "WS-Security with X.509 tokens.",
+      "error_handling": "SOAP faults returned to caller.",
+      "retry_behavior": "Client-managed retries.",
+      "monitoring": "Monitored via API gateway logs.",
+      "sync_considerations": "Requires real-time request-response processing.",
+      "arc_ids": [
+        "ARC_03",
+        "ARC_02"
+      ]
+    },
+    {
+      "req_ids": [
+        "INT_02"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "IA_02",
+      "name": "Broker Portal Backward Compatibility Integration",
+      "source_system": "Broker Portal",
+      "target_system": "API Management & Broker Gateway",
+      "direction": "inbound",
+      "pattern": "api",
+      "auth_approach": "WS-Security with X.509 tokens.",
+      "error_handling": "SOAP faults returned to caller.",
+      "retry_behavior": "Client-managed retries.",
+      "monitoring": "Monitored via API gateway logs.",
+      "sync_considerations": "Maintains legacy SOAP interface unchanged.",
+      "arc_ids": [
+        "ARC_03",
+        "ARC_02"
+      ]
+    },
+    {
+      "req_ids": [
+        "INT_03"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "IA_03",
+      "name": "Guidewire ClaimCenter Integration",
+      "source_system": "Policy Core Microservices",
+      "target_system": "Guidewire ClaimCenter",
+      "direction": "bidirectional",
+      "pattern": "event",
+      "auth_approach": "OAuth 2.0 client credentials.",
+      "error_handling": "Dead-letter queueing on Enterprise Service Bus.",
+      "retry_behavior": "Exponential backoff with jitter.",
+      "monitoring": "Queue depth and message processing latency monitoring.",
+      "sync_considerations": "Asynchronous event-driven synchronization.",
+      "arc_ids": [
+        "ARC_06",
+        "ARC_02"
+      ]
+    },
+    {
+      "req_ids": [
+        "INT_04"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "IA_04",
+      "name": "SAP S/4HANA Finance Integration",
+      "source_system": "Batch Process Orchestration Engine",
+      "target_system": "SAP S/4HANA",
+      "direction": "outbound",
+      "pattern": "batch",
+      "auth_approach": "Secure SFTP keys or API credentials.",
+      "error_handling": "Alerting on batch failure with partial rollback.",
+      "retry_behavior": "Automated job retry up to 3 times.",
+      "monitoring": "Batch execution status in orchestration engine.",
+      "sync_considerations": "Daily overnight batch transfer.",
+      "arc_ids": [
+        "ARC_07",
+        "ARC_04"
+      ]
+    },
+    {
+      "req_ids": [
+        "INT_05"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "IA_05",
+      "name": "Credit and Sanctions Screening Gateway Integration",
+      "source_system": "Policy Core Microservices",
+      "target_system": "Credit and Sanctions Gateway",
+      "direction": "outbound",
+      "pattern": "api",
+      "auth_approach": "SOAP WS-Security or API key.",
+      "error_handling": "Synchronous error response with fallback to manual review.",
+      "retry_behavior": "Immediate retry on network timeout.",
+      "monitoring": "API latency and failure rate tracking.",
+      "sync_considerations": "Real-time transactional check.",
+      "arc_ids": [
+        "ARC_02",
+        "ARC_03"
+      ]
+    },
+    {
+      "req_ids": [
+        "INT_06"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "IA_06",
+      "name": "Vehicle Registry Lookup Service Integration",
+      "source_system": "Policy Core Microservices",
+      "target_system": "Vehicle Registry",
+      "direction": "outbound",
+      "pattern": "api",
+      "auth_approach": "OAuth 2.0 client credentials.",
+      "error_handling": "Graceful degradation with user-friendly error messages.",
+      "retry_behavior": "Rate-limited retry with exponential backoff.",
+      "monitoring": "Throttling metrics and request rate monitoring.",
+      "sync_considerations": "Real-time lookup with strict 5 RPS throttling.",
+      "arc_ids": [
+        "ARC_02",
+        "ARC_03"
+      ]
+    },
+    {
+      "req_ids": [
+        "INT_07"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "IA_07",
+      "name": "Corporate Data Warehouse Feed Integration",
+      "source_system": "Relational Operational Database",
+      "target_system": "Corporate Data Warehouse",
+      "direction": "outbound",
+      "pattern": "batch",
+      "auth_approach": "Database credentials or managed identity.",
+      "error_handling": "Job failure alerts and automated rollback.",
+      "retry_behavior": "Scheduled retry on next window or manual trigger.",
+      "monitoring": "Data pipeline execution logs and row counts.",
+      "sync_considerations": "Nightly incremental data extraction.",
+      "arc_ids": [
+        "ARC_07",
+        "ARC_04"
+      ]
+    },
+    {
+      "req_ids": [
+        "INT_08"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "IA_08",
+      "name": "OpenText Document Archive Integration",
+      "source_system": "Policy Core Microservices",
+      "target_system": "OpenText Document Archive",
+      "direction": "bidirectional",
+      "pattern": "file",
+      "auth_approach": "WebDAV basic auth over HTTPS or client certificates.",
+      "error_handling": "Transactional rollback of policy state if file upload fails.",
+      "retry_behavior": "Queue-based retry for document uploads.",
+      "monitoring": "File transfer success rates and storage latency.",
+      "sync_considerations": "Real-time document storage and retrieval.",
+      "arc_ids": [
+        "ARC_02",
+        "ARC_08"
+      ]
+    }
+  ],
+  "internal_systems": [
+    {
+      "req_ids": [
+        "INT_03"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "name": "Guidewire ClaimCenter",
+      "description": "On-premises claims management system."
+    },
+    {
+      "req_ids": [
+        "INT_04"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "name": "SAP S/4HANA",
+      "description": "Enterprise financial system."
+    },
+    {
+      "req_ids": [
+        "INT_07"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "name": "Corporate Data Warehouse",
+      "description": "SQL Server 2019 data warehouse for reporting."
+    },
+    {
+      "req_ids": [
+        "INT_08"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "name": "OpenText Document Archive",
+      "description": "Document management and archiving system."
+    }
+  ],
+  "external_systems": [
+    {
+      "req_ids": [
+        "INT_01"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "name": "Brokers and Reinsurance Platform",
+      "description": "External broker and reinsurance partner systems."
+    },
+    {
+      "req_ids": [
+        "INT_02"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "name": "Broker Portal",
+      "description": "External portal used by brokers to access policy services."
+    },
+    {
+      "req_ids": [
+        "INT_05"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "name": "Credit and Sanctions Gateway",
+      "description": "External service for credit checks and sanctions screening."
+    },
+    {
+      "req_ids": [
+        "INT_06"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "name": "Vehicle Registry",
+      "description": "External public registry for vehicle details."
+    }
+  ],
+  "flows": [
+    {
+      "from_id": "Brokers and Reinsurance Platform",
+      "to_id": "ARC_03",
+      "label": "SOAP requests",
+      "protocol": "HTTPS SOAP"
+    },
+    {
+      "from_id": "Broker Portal",
+      "to_id": "ARC_03",
+      "label": "SOAP requests",
+      "protocol": "HTTPS SOAP"
+    },
+    {
+      "from_id": "ARC_03",
+      "to_id": "ARC_02",
+      "label": "REST API calls",
+      "protocol": "HTTPS REST"
+    },
+    {
+      "from_id": "ARC_02",
+      "to_id": "ARC_04",
+      "label": "Database queries and updates",
+      "protocol": "SQL"
+    },
+    {
+      "from_id": "ARC_02",
+      "to_id": "ARC_06",
+      "label": "Policy events",
+      "protocol": "AMQP/JMS"
+    },
+    {
+      "from_id": "ARC_06",
+      "to_id": "Guidewire ClaimCenter",
+      "label": "Policy sync events",
+      "protocol": "JMS/REST"
+    },
+    {
+      "from_id": "Guidewire ClaimCenter",
+      "to_id": "ARC_06",
+      "label": "Claim updates",
+      "protocol": "JMS/REST"
+    },
+    {
+      "from_id": "ARC_07",
+      "to_id": "ARC_04",
+      "label": "Read operational data",
+      "protocol": "SQL"
+    },
+    {
+      "from_id": "ARC_07",
+      "to_id": "SAP S/4HANA",
+      "label": "Daily premium postings",
+      "protocol": "SFTP/HTTPS Batch"
+    },
+    {
+      "from_id": "ARC_02",
+      "to_id": "Credit and Sanctions Gateway",
+      "label": "Credit and sanctions checks",
+      "protocol": "HTTPS SOAP"
+    },
+    {
+      "from_id": "ARC_02",
+      "to_id": "Vehicle Registry",
+      "label": "Vehicle lookup requests",
+      "protocol": "HTTPS REST"
+    },
+    {
+      "from_id": "ARC_07",
+      "to_id": "Corporate Data Warehouse",
+      "label": "Nightly data feed",
+      "protocol": "SQL Bulk Copy"
+    },
+    {
+      "from_id": "ARC_02",
+      "to_id": "OpenText Document Archive",
+      "label": "Document upload and retrieval",
+      "protocol": "WebDAV HTTPS"
+    }
+  ]
+}

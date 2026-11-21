@@ -1,0 +1,370 @@
+{
+  "overview": "This document outlines the requirements for a new customer portal for Ridgeline Freight Solutions. The portal aims to enhance customer experience by providing self-service capabilities for shipment tracking and invoice management, thereby reducing the operational burden on internal teams.",
+  "business_problem": "The current process for handling customer inquiries regarding shipment status and invoices is manual, leading to significant operational overhead for Ridgeline Freight Solutions' internal teams and a suboptimal customer experience.",
+  "objectives": [
+    {
+      "req_ids": [
+        "BR_01"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "text": "Establish a modern customer portal to improve customer experience and reduce manual operational overhead."
+    },
+    {
+      "req_ids": [
+        "BR_02"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "text": "Minimize the time the operations team spends manually answering tracking and invoice queries."
+    }
+  ],
+  "personas": [
+    {
+      "req_ids": [
+        "PER_01"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "name": "Operations Team",
+      "description": "Internal staff members who currently handle high volumes of manual customer inquiries.",
+      "needs": [
+        "Reduce manual inquiry workload for tracking and invoices."
+      ]
+    },
+    {
+      "req_ids": [
+        "PER_02"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "name": "Customers",
+      "description": "External clients who require access to shipment tracking, invoices, and online services.",
+      "needs": [
+        "Access real-time shipment tracking information.",
+        "View and download invoices.",
+        "Utilize online services for payments and queries."
+      ]
+    },
+    {
+      "req_ids": [
+        "PER_03"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "name": "IT Manager",
+      "description": "Bill, the IT Manager, who manages the TMS and network infrastructure.",
+      "needs": [
+        "Provide technical details for TMS and network integration."
+      ]
+    }
+  ],
+  "user_journeys": [
+    {
+      "req_ids": [
+        "FR_01",
+        "PER_02"
+      ],
+      "basis": "inferred",
+      "validation_required": true,
+      "validation_reason": "User journeys are inferred from customer requirements and need validation.",
+      "name": "Track an Active Shipment",
+      "actor": "Customer",
+      "steps": [
+        "Customer logs into the portal.",
+        "Customer navigates to the shipment tracking section.",
+        "Customer views a list of their active shipments.",
+        "Customer selects a specific shipment.",
+        "Customer views the current location and status details for the selected shipment."
+      ]
+    },
+    {
+      "req_ids": [
+        "FR_02",
+        "PER_02"
+      ],
+      "basis": "inferred",
+      "validation_required": true,
+      "validation_reason": "User journeys are inferred from customer requirements and need validation.",
+      "name": "View and Download an Invoice",
+      "actor": "Customer",
+      "steps": [
+        "Customer logs into the portal.",
+        "Customer navigates to the invoices section.",
+        "Customer views a list of their available invoices.",
+        "Customer selects an invoice to view details.",
+        "Customer downloads a copy of the invoice document."
+      ]
+    },
+    {
+      "req_ids": [
+        "FR_04",
+        "PER_02"
+      ],
+      "basis": "inferred",
+      "validation_required": true,
+      "validation_reason": "User journeys are inferred from customer requirements and need validation.",
+      "name": "Submit a Shipment Query",
+      "actor": "Customer",
+      "steps": [
+        "Customer logs into the portal.",
+        "Customer navigates to a specific shipment's details.",
+        "Customer initiates a new support query related to that shipment.",
+        "Customer enters the details of their query.",
+        "Customer submits the query through the portal."
+      ]
+    }
+  ],
+  "functional_requirements": [
+    {
+      "req_ids": [
+        "FR_01"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "req_id": "FR_01",
+      "statement": "The portal shall allow logged-in customers to view their active shipments and their current locations.",
+      "acceptance_conditions": [
+        "A logged-in customer can see a list of all their active shipments.",
+        "For each active shipment, the customer can view its current location and status."
+      ]
+    },
+    {
+      "req_ids": [
+        "FR_02"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "req_id": "FR_02",
+      "statement": "The portal shall enable customers to view and download copies of their invoices.",
+      "acceptance_conditions": [
+        "A logged-in customer can see a list of all their invoices.",
+        "A logged-in customer can download a PDF copy of any listed invoice."
+      ]
+    },
+    {
+      "req_ids": [
+        "FR_03"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "req_id": "FR_03",
+      "statement": "The portal shall provide customers with the option to pay their invoices online.",
+      "acceptance_conditions": [
+        "A logged-in customer can select an invoice and initiate an online payment process.",
+        "The customer can successfully complete an online payment for an invoice through the portal."
+      ]
+    },
+    {
+      "req_ids": [
+        "FR_04"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "req_id": "FR_04",
+      "statement": "The portal shall allow customers to submit support queries regarding specific shipments directly within the portal.",
+      "acceptance_conditions": [
+        "A logged-in customer can initiate a support query linked to a specific shipment.",
+        "The customer can enter and submit text details for their query."
+      ]
+    },
+    {
+      "req_ids": [
+        "FR_05"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "req_id": "FR_05",
+      "statement": "The portal shall allow customers to book cargo collections online through the portal.",
+      "acceptance_conditions": [
+        "A logged-in customer can access a form to book a new cargo collection.",
+        "The customer can submit the necessary details for a collection request."
+      ]
+    },
+    {
+      "req_ids": [
+        "FR_06"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "req_id": "FR_06",
+      "statement": "The portal shall provide customers with monthly summaries of their shipment volumes.",
+      "acceptance_conditions": [
+        "A logged-in customer can view a summary report of their shipment volumes for each month."
+      ]
+    }
+  ],
+  "non_functional_requirements": [
+    {
+      "req_ids": [
+        "NFR_01"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "req_id": "NFR_01",
+      "statement": "The portal must feature a clean, modern user interface optimized for mobile devices.",
+      "acceptance_conditions": [
+        "The portal's user interface renders correctly and is fully functional on common mobile device browsers.",
+        "All interactive elements are appropriately sized and positioned for touch interaction on mobile devices."
+      ]
+    }
+  ],
+  "integrations": [
+    {
+      "req_ids": [
+        "INT_01"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "text": "The portal will integrate with the existing Transportation Management System (TMS) to retrieve real-time shipment tracking details."
+    },
+    {
+      "req_ids": [
+        "INT_02"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "text": "The portal will integrate with the finance system to retrieve invoice documents for customer access."
+    }
+  ],
+  "dependencies": [
+    {
+      "req_ids": [
+        "DEP_01"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "text": "Detailed technical questions regarding TMS and network integration depend on the IT Manager returning from holiday."
+    }
+  ],
+  "assumptions": [
+    {
+      "req_ids": [
+        "ASM_01"
+      ],
+      "basis": "assumed",
+      "validation_required": true,
+      "validation_reason": "This assumption requires customer confirmation regarding expected user and shipment volumes.",
+      "text": "We assume the portal will support up to 5,000 active customers and 10,000 daily tracking requests."
+    },
+    {
+      "req_ids": [
+        "ASM_02"
+      ],
+      "basis": "assumed",
+      "validation_required": true,
+      "validation_reason": "This assumption requires customer confirmation regarding the API capabilities of their TMS and Finance systems.",
+      "text": "We assume both the TMS and Finance systems expose modern, documented REST APIs for integration."
+    },
+    {
+      "req_ids": [
+        "ASM_03"
+      ],
+      "basis": "assumed",
+      "validation_required": true,
+      "validation_reason": "This assumption requires customer confirmation on the preferred payment gateway.",
+      "text": "We assume Stripe will be used as the payment gateway, utilizing hosted checkout to minimize PCI compliance scope."
+    },
+    {
+      "req_ids": [
+        "ASM_04"
+      ],
+      "basis": "assumed",
+      "validation_required": true,
+      "validation_reason": "This assumption requires customer confirmation on the target cloud platform.",
+      "text": "We assume the portal will be hosted on AWS using standard serverless or containerized services."
+    },
+    {
+      "req_ids": [
+        "ASM_05"
+      ],
+      "basis": "assumed",
+      "validation_required": true,
+      "validation_reason": "This assumption requires customer confirmation on specific security and authentication standards.",
+      "text": "We assume standard web security practices and standard username/password authentication with MFA."
+    },
+    {
+      "req_ids": [
+        "ASM_06"
+      ],
+      "basis": "assumed",
+      "validation_required": true,
+      "validation_reason": "This assumption requires customer confirmation on the project timeline and budget.",
+      "text": "We assume a standard 4-month implementation timeline for the initial MVP release."
+    }
+  ],
+  "risks": [],
+  "out_of_scope": [],
+  "open_questions": [
+    {
+      "req_ids": [
+        "Q_01"
+      ],
+      "basis": "inferred",
+      "validation_required": true,
+      "validation_reason": "These questions require customer input to proceed with accurate sizing and planning.",
+      "text": "What are the expected numbers of active portal users and daily shipment tracking requests?"
+    },
+    {
+      "req_ids": [
+        "Q_02"
+      ],
+      "basis": "inferred",
+      "validation_required": true,
+      "validation_reason": "These questions require customer input to proceed with accurate sizing and planning.",
+      "text": "What are the specific product names, versions, and API capabilities of your TMS and Finance systems?"
+    },
+    {
+      "req_ids": [
+        "Q_03"
+      ],
+      "basis": "inferred",
+      "validation_required": true,
+      "validation_reason": "These questions require customer input to proceed with accurate sizing and planning.",
+      "text": "Which payment gateway provider should be integrated for online payments?"
+    },
+    {
+      "req_ids": [
+        "Q_04"
+      ],
+      "basis": "inferred",
+      "validation_required": true,
+      "validation_reason": "These questions require customer input to proceed with accurate sizing and planning.",
+      "text": "Do you have a preferred cloud provider or hosting environment for the portal?"
+    },
+    {
+      "req_ids": [
+        "Q_05"
+      ],
+      "basis": "inferred",
+      "validation_required": true,
+      "validation_reason": "These questions require customer input to proceed with accurate sizing and planning.",
+      "text": "Are there specific security standards or authentication requirements we must adhere to?"
+    },
+    {
+      "req_ids": [
+        "Q_06"
+      ],
+      "basis": "inferred",
+      "validation_required": true,
+      "validation_reason": "These questions require customer input to proceed with accurate sizing and planning.",
+      "text": "What is your target go-live date and the allocated budget for this portal initiative?"
+    }
+  ],
+  "traceability": []
+}

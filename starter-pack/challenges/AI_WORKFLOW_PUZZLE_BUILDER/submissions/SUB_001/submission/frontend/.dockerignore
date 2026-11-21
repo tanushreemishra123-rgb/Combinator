@@ -1,0 +1,28 @@
+# Dependencies and build output - npm ci installs deps inside the image
+node_modules/
+dist/
+dist-ssr/
+
+# Secrets and local config
+.env
+.env.*
+*.local
+
+# Docker build files themselves + repo metadata
+Dockerfile
+.dockerignore
+.gitignore
+
+# Editor / OS noise
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*

@@ -1,0 +1,243 @@
+{
+  "$defs": {
+    "AiProviderPreference": {
+      "enum": [
+        "platform_native",
+        "openai",
+        "anthropic",
+        "google",
+        "open_source",
+        "none"
+      ],
+      "title": "AiProviderPreference",
+      "type": "string"
+    },
+    "BlendedRateMode": {
+      "enum": [
+        "role_mix",
+        "explicit"
+      ],
+      "title": "BlendedRateMode",
+      "type": "string"
+    },
+    "DataMigration": {
+      "enum": [
+        "none",
+        "light",
+        "heavy"
+      ],
+      "title": "DataMigration",
+      "type": "string"
+    },
+    "RoleRate": {
+      "additionalProperties": false,
+      "properties": {
+        "role": {
+          "description": "Role or skill category.",
+          "minLength": 1,
+          "title": "Role",
+          "type": "string"
+        },
+        "rate_per_person_week": {
+          "description": "Rate for one person-week of that role.",
+          "minimum": 0,
+          "title": "Rate Per Person Week",
+          "type": "number"
+        }
+      },
+      "required": [
+        "role",
+        "rate_per_person_week"
+      ],
+      "title": "RoleRate",
+      "type": "object"
+    },
+    "SecurityLevel": {
+      "enum": [
+        "standard",
+        "elevated",
+        "regulated"
+      ],
+      "title": "SecurityLevel",
+      "type": "string"
+    },
+    "TeamSizeEntry": {
+      "additionalProperties": false,
+      "properties": {
+        "workstream_type": {
+          "description": "Workstream type the team size applies to.",
+          "title": "Workstream Type",
+          "type": "string"
+        },
+        "team_size": {
+          "description": "People working on that workstream in parallel.",
+          "exclusiveMinimum": 0,
+          "title": "Team Size",
+          "type": "number"
+        }
+      },
+      "required": [
+        "workstream_type",
+        "team_size"
+      ],
+      "title": "TeamSizeEntry",
+      "type": "object"
+    },
+    "TestingLevel": {
+      "enum": [
+        "standard",
+        "extended"
+      ],
+      "title": "TestingLevel",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "description": "Estimation and solution inputs held on the session (PLAN sections 2 and 5).",
+  "properties": {
+    "rate_card_id": {
+      "default": "",
+      "description": "Selected rate card; it carries the currency.",
+      "title": "Rate Card Id",
+      "type": "string"
+    },
+    "rate_overrides": {
+      "description": "Per-role rates that replace the card's rate for this session only.",
+      "items": {
+        "$ref": "#/$defs/RoleRate"
+      },
+      "title": "Rate Overrides",
+      "type": "array"
+    },
+    "expected_users": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Expected user volume; missing volume reduces confidence.",
+      "title": "Expected Users"
+    },
+    "target_regions": {
+      "description": "Regions the solution must serve.",
+      "items": {
+        "type": "string"
+      },
+      "title": "Target Regions",
+      "type": "array"
+    },
+    "delivery_deadline": {
+      "anyOf": [
+        {
+          "format": "date",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Required delivery date, when the customer stated one.",
+      "title": "Delivery Deadline"
+    },
+    "security_level": {
+      "$ref": "#/$defs/SecurityLevel",
+      "default": "standard",
+      "description": "Security and compliance level."
+    },
+    "regulatory_constraints": {
+      "description": "Regulations such as GDPR, HIPAA or PCI-DSS.",
+      "items": {
+        "type": "string"
+      },
+      "title": "Regulatory Constraints",
+      "type": "array"
+    },
+    "ai_provider_preference": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/AiProviderPreference"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Customer preference for the AI provider."
+    },
+    "contingency_pct": {
+      "default": 15.0,
+      "description": "Contingency percentage applied once to the ROM range, 15 means 15%.",
+      "maximum": 100,
+      "minimum": 0,
+      "title": "Contingency Pct",
+      "type": "number"
+    },
+    "blended_rate_mode": {
+      "$ref": "#/$defs/BlendedRateMode",
+      "default": "role_mix",
+      "description": "How the blended rate is derived."
+    },
+    "explicit_blended_rate": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Blended rate per person-week when mode is explicit.",
+      "title": "Explicit Blended Rate"
+    },
+    "productivity_factor": {
+      "default": 1.0,
+      "description": "Productivity assumption used for the timeline.",
+      "maximum": 1.2,
+      "minimum": 0.5,
+      "title": "Productivity Factor",
+      "type": "number"
+    },
+    "working_weeks_per_month": {
+      "default": 4.0,
+      "description": "Working weeks per month used for timeline reporting.",
+      "exclusiveMinimum": 0,
+      "title": "Working Weeks Per Month",
+      "type": "number"
+    },
+    "environments_count": {
+      "default": 3,
+      "description": "Number of environments (dev, test, prod, ...).",
+      "minimum": 1,
+      "title": "Environments Count",
+      "type": "integer"
+    },
+    "testing_level": {
+      "$ref": "#/$defs/TestingLevel",
+      "default": "standard",
+      "description": "Testing depth required."
+    },
+    "data_migration": {
+      "$ref": "#/$defs/DataMigration",
+      "default": "none",
+      "description": "Data migration or transformation effort."
+    },
+    "team_sizes": {
+      "description": "Team size overrides per workstream type.",
+      "items": {
+        "$ref": "#/$defs/TeamSizeEntry"
+      },
+      "title": "Team Sizes",
+      "type": "array"
+    }
+  },
+  "title": "SessionConfig",
+  "type": "object"
+}

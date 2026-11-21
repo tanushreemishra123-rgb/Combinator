@@ -1,0 +1,1373 @@
+{
+  "summary": "Meridian Assurance Group needs its legacy .NET/Oracle ClaimsDesk portal replaced with a cloud-native claims platform on Azure, integrated with Guidewire ClaimCenter, SAP S/4HANA and Okta, serving roughly 242,000 internal and policyholder users within a 46-week window; the SAP integration pattern and the phasing of the policyholder status tracker remain open.",
+  "items": [
+    {
+      "id": "BR_01",
+      "kind": "business",
+      "title": "Reduce claim-intake processing time",
+      "description": "Reduce average claim-intake processing time from 45 minutes to under 15 minutes per first-notice-of-loss event.",
+      "priority": "High",
+      "provenance": "customer-stated",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "BR1. The solution must reduce average claim-intake processing time from 45 minutes to under 15 minutes per first-notice-of-loss.",
+        "verified": false
+      },
+      "relatedIds": [],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "BR_02",
+      "kind": "business",
+      "title": "Unified claim, policy and payment view for examiners",
+      "description": "Give claims examiners a single screen showing policy, claim and payment status without switching between ClaimsDesk and Guidewire ClaimCenter.",
+      "priority": "High",
+      "provenance": "customer-stated",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "BR2. The solution must give claims examiners a single screen that shows policy, claim and payment status without switching between ClaimsDesk and Guidewire ClaimCenter.",
+        "verified": false
+      },
+      "relatedIds": [],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "BR_03",
+      "kind": "business",
+      "title": "Improve first-contact resolution for simple claims",
+      "description": "Improve first-contact resolution for straightforward auto glass and windshield claims, reducing reliance on phone-based adjusters.",
+      "priority": "Medium",
+      "provenance": "customer-stated",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "BR3. The solution should improve first-contact resolution for straightforward auto glass and windshield claims to reduce reliance on phone-based adjusters.",
+        "verified": false
+      },
+      "relatedIds": [],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "BR_04",
+      "kind": "business",
+      "title": "Enable direct agent claim submission",
+      "description": "Support the 340 independent agents submitting new claims directly rather than routing through the call centre.",
+      "priority": "High",
+      "provenance": "customer-stated",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "BR4. The solution must support our 340 independent agents submitting new claims directly rather than calling our call centre.",
+        "verified": false
+      },
+      "relatedIds": [],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "BR_05",
+      "kind": "business",
+      "title": "Policyholder claim-status tracker (candidate)",
+      "description": "Introduce a policyholder-facing status tracker so claimants can check progress without calling an examiner.",
+      "priority": "Low",
+      "provenance": "customer-stated",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "BR5. The solution could introduce a policyholder-facing status tracker so claimants can check progress without calling an examiner.",
+        "verified": false
+      },
+      "relatedIds": [
+        "GAP_02"
+      ],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "FR_01",
+      "kind": "functional",
+      "title": "Claim record lifecycle management",
+      "description": "Claims examiners create, update and close a claim record, including reserve amounts synchronised from Guidewire ClaimCenter.",
+      "priority": "High",
+      "provenance": "customer-stated",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "FR1. Claims examiners must be able to create, update and close a claim record, including reserve amounts synchronised from Guidewire ClaimCenter.",
+        "verified": false
+      },
+      "relatedIds": [
+        "SYS_01",
+        "INT_01"
+      ],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "FR_02",
+      "kind": "functional",
+      "title": "First-notice-of-loss document upload",
+      "description": "Agents upload first-notice-of-loss documents, including photos, estimates and police reports, directly against a claim.",
+      "priority": "High",
+      "provenance": "customer-stated",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "FR2. The portal must let agents upload first-notice-of-loss documents, including photos, estimates and police reports, directly against a claim.",
+        "verified": false
+      },
+      "relatedIds": [],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "FR_03",
+      "kind": "functional",
+      "title": "Consolidated claim timeline",
+      "description": "Display a consolidated claim timeline combining ClaimsDesk activity, Guidewire ClaimCenter reserve changes and SAP S/4HANA payment postings.",
+      "priority": "High",
+      "provenance": "customer-stated",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "FR3. The portal must display a consolidated claim timeline combining ClaimsDesk activity, Guidewire ClaimCenter reserve changes and SAP S/4HANA payment postings.",
+        "verified": false
+      },
+      "relatedIds": [
+        "SYS_01",
+        "SYS_02"
+      ],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "FR_04",
+      "kind": "functional",
+      "title": "Automated payment posting to SAP S/4HANA",
+      "description": "Claims examiners approve a payment that posts automatically to SAP S/4HANA as a journal entry without manual re-entry.",
+      "priority": "High",
+      "provenance": "customer-stated",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "FR4. Claims examiners must be able to approve a payment that then posts automatically to SAP S/4HANA as a journal entry without manual re-entry.",
+        "verified": false
+      },
+      "relatedIds": [
+        "SYS_02",
+        "INT_02",
+        "GAP_01"
+      ],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "FR_05",
+      "kind": "functional",
+      "title": "Policyholder self-service claim status",
+      "description": "Policyholders view claim status, upload additional documents and message their assigned adjuster.",
+      "priority": "Medium",
+      "provenance": "customer-stated",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "FR5. The portal should let policyholders view claim status, upload additional documents and message their assigned adjuster.",
+        "verified": false
+      },
+      "relatedIds": [
+        "GAP_02"
+      ],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "FR_06",
+      "kind": "functional",
+      "title": "Supervisor reassignment and workload view",
+      "description": "Supervisors reassign claims between examiners and view team workload dashboards.",
+      "priority": "High",
+      "provenance": "customer-stated",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "FR6. Supervisors must be able to reassign claims between examiners and view team workload dashboards.",
+        "verified": false
+      },
+      "relatedIds": [],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "FR_07",
+      "kind": "functional",
+      "title": "Agent-scoped claim visibility",
+      "description": "Independent agents see the status of claims they submitted but never see claims submitted by other agencies.",
+      "priority": "High",
+      "provenance": "customer-stated",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "FR9. Independent agents must be able to see the status of claims they submitted but must not see claims submitted by other agencies.",
+        "verified": false
+      },
+      "relatedIds": [
+        "PER_02",
+        "SEC_03"
+      ],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "FR_08",
+      "kind": "functional",
+      "title": "Seven-year claim history retention",
+      "description": "Retain full claim history for at least seven years to satisfy state insurance record-keeping rules.",
+      "priority": "High",
+      "provenance": "customer-stated",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "FR7. The portal must retain full claim history for at least seven years to satisfy state insurance record-keeping rules.",
+        "verified": false
+      },
+      "relatedIds": [],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "FR_09",
+      "kind": "functional",
+      "title": "SIU flagging with automatic notification",
+      "description": "Let examiners flag a claim for special-investigation-unit review, notifying the SIU team automatically.",
+      "priority": "Medium",
+      "provenance": "customer-stated",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "FR8. The portal should allow examiners to flag a claim for special-investigation-unit review, notifying the SIU team automatically.",
+        "verified": false
+      },
+      "relatedIds": [
+        "PER_01"
+      ],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "FR_10",
+      "kind": "functional",
+      "title": "Advisory reserve-range suggestion for examiners",
+      "description": "Offer examiners a suggested reserve range based on similar historical claims, clearly marked as advisory only.",
+      "priority": "Low",
+      "provenance": "customer-stated",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "FR10. The portal could offer examiners a suggested reserve range based on similar historical claims, clearly marked as advisory only.",
+        "verified": false
+      },
+      "relatedIds": [
+        "PER_01",
+        "FR_01"
+      ],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "NFR_01",
+      "kind": "nonFunctional",
+      "title": "99.9% availability during business hours",
+      "description": "The portal must be available 99.9% of the time during business hours, 7am to 9pm Pacific, Monday through Saturday.",
+      "priority": "High",
+      "provenance": "customer-stated",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "NFR1. The portal must be available 99.9% of the time during business hours, 7am to 9pm Pacific, Monday through Saturday.",
+        "verified": false
+      },
+      "relatedIds": [],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "NFR_02",
+      "kind": "nonFunctional",
+      "title": "Sub-2-second claim search performance",
+      "description": "Claim search results must return within 2 seconds for 95% of queries under normal load.",
+      "priority": "High",
+      "provenance": "customer-stated",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "NFR2. Claim search results must return within 2 seconds for 95% of queries under normal load.",
+        "verified": false
+      },
+      "relatedIds": [],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "NFR_03",
+      "kind": "nonFunctional",
+      "title": "Registered user base of approximately 242,000",
+      "description": "The system must support 1,850 internal staff and approximately 240,000 active policyholders as registered users.",
+      "priority": "High",
+      "provenance": "customer-stated",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "NFR3. The system must support 1,850 internal staff and approximately 240,000 active policyholders as registered users.",
+        "verified": false
+      },
+      "relatedIds": [],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "NFR_04",
+      "kind": "nonFunctional",
+      "title": "Claim-data RPO/RTO targets",
+      "description": "Recovery point objective for claim data must be under 15 minutes and recovery time objective must be under 4 hours.",
+      "priority": "High",
+      "provenance": "customer-stated",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "NFR5. Recovery point objective for claim data must be under 15 minutes and recovery time objective must be under 4 hours.",
+        "verified": false
+      },
+      "relatedIds": [],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "NFR_05",
+      "kind": "nonFunctional",
+      "title": "WCAG 2.1 AA accessibility",
+      "description": "The portal must meet WCAG 2.1 AA accessibility standards because several agent partners have accessibility requirements on staff.",
+      "priority": "High",
+      "provenance": "customer-stated",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "NFR6. The portal must be accessible to WCAG 2.1 AA standards because several of our agent partners have accessibility requirements on staff.",
+        "verified": false
+      },
+      "relatedIds": [
+        "GAP_03"
+      ],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "NFR_06",
+      "kind": "nonFunctional",
+      "title": "900 concurrent sessions during catastrophe events",
+      "description": "Support at least 900 concurrent internal sessions during a regional catastrophe event without degradation.",
+      "priority": "High",
+      "provenance": "customer-stated",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "NFR4. The portal must support at least 900 concurrent internal sessions during a regional catastrophe event without degradation.",
+        "verified": false
+      },
+      "relatedIds": [],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "NFR_07",
+      "kind": "nonFunctional",
+      "title": "Immutable seven-year audit log",
+      "description": "Capture all claim and payment activity in an immutable audit log retained for a minimum of seven years.",
+      "priority": "High",
+      "provenance": "customer-stated",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "NFR7. All claim and payment activity must be captured in an immutable audit log retained for a minimum of seven years.",
+        "verified": false
+      },
+      "relatedIds": [],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "INT_01",
+      "kind": "integration",
+      "title": "Guidewire ClaimCenter integration",
+      "description": "Integrate with Guidewire ClaimCenter for reserve and payment-authorisation data, in near real time.",
+      "priority": "High",
+      "provenance": "customer-stated",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "INT1. The portal must integrate with Guidewire ClaimCenter for reserve and payment-authorisation data, in near real time.",
+        "verified": false
+      },
+      "relatedIds": [
+        "SYS_01"
+      ],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "INT_02",
+      "kind": "integration",
+      "title": "SAP S/4HANA payment-posting integration",
+      "description": "Integrate with SAP S/4HANA to post approved claim payments as finance journal entries.",
+      "priority": "High",
+      "provenance": "customer-stated",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "INT2. The portal must integrate with SAP S/4HANA to post approved claim payments as finance journal entries.",
+        "verified": false
+      },
+      "relatedIds": [
+        "SYS_02",
+        "GAP_01"
+      ],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "INT_03",
+      "kind": "integration",
+      "title": "Okta SSO federation",
+      "description": "Federate authentication through Okta using SAML or OIDC for all internal staff.",
+      "priority": "High",
+      "provenance": "customer-stated",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "INT3. The portal must federate authentication through Okta using SAML or OIDC for all internal staff.",
+        "verified": false
+      },
+      "relatedIds": [
+        "SYS_03"
+      ],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "INT_04",
+      "kind": "integration",
+      "title": "Agent-facing claim-submission API",
+      "description": "Expose a secure API for the 340 independent agents' agency-management systems to submit first-notice-of-loss data.",
+      "priority": "High",
+      "provenance": "customer-stated",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "INT5. The portal must expose a secure API for the 340 independent agents' agency-management systems to submit first-notice-of-loss data.",
+        "verified": false
+      },
+      "relatedIds": [
+        "PER_02"
+      ],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "INT_05",
+      "kind": "integration",
+      "title": "Twilio SMS/email claim notifications",
+      "description": "Send SMS and email notifications through the existing Twilio account when a claim status changes.",
+      "priority": "Medium",
+      "provenance": "customer-stated",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "INT6. The portal should send SMS and email notifications through our existing Twilio account when a claim status changes.",
+        "verified": false
+      },
+      "relatedIds": [],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "INT_06",
+      "kind": "integration",
+      "title": "Hyland OnBase document-imaging integration",
+      "description": "Integrate with the document-imaging vendor, currently Hyland OnBase, to retrieve scanned historical claim files.",
+      "priority": "Medium",
+      "provenance": "customer-stated",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "INT4. The portal should integrate with our document-imaging vendor, currently Hyland OnBase, to retrieve scanned historical claim files.",
+        "verified": false
+      },
+      "relatedIds": [
+        "SYS_05"
+      ],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "DATA_01",
+      "kind": "data",
+      "title": "Legacy claim data migration",
+      "description": "Migrate claim, policy and payment data from the legacy ClaimsDesk Oracle 19c database with full referential integrity.",
+      "priority": "High",
+      "provenance": "customer-stated",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "DATA1. Claim, policy and payment data must be migrated from the legacy ClaimsDesk Oracle 19c database with full referential integrity.",
+        "verified": false
+      },
+      "relatedIds": [
+        "SYS_04"
+      ],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "DATA_02",
+      "kind": "data",
+      "title": "Scanned attachment migration",
+      "description": "Migrate or link the 1.1 TB of scanned attachments without loss of the original document metadata.",
+      "priority": "High",
+      "provenance": "customer-stated",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "DATA2. The 1.1 TB of scanned attachments must be migrated or linked without loss of the original document metadata.",
+        "verified": false
+      },
+      "relatedIds": [],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "DATA_03",
+      "kind": "data",
+      "title": "Claim and policyholder PII classification",
+      "description": "Classify and handle claim and policyholder data as personally identifiable information throughout the platform.",
+      "priority": "High",
+      "provenance": "customer-stated",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "DATA3. Claim and policyholder data is personally identifiable information and must be classified and handled accordingly.",
+        "verified": false
+      },
+      "relatedIds": [],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "DATA_04",
+      "kind": "data",
+      "title": "Migration reconciliation checks",
+      "description": "Confirm migrated claim totals reconcile exactly against the legacy ClaimsDesk reporting extracts before cutover.",
+      "priority": "High",
+      "provenance": "customer-stated",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "DATA5. Data quality checks must confirm that migrated claim totals reconcile exactly against the legacy ClaimsDesk reporting extracts before cutover.",
+        "verified": false
+      },
+      "relatedIds": [
+        "SYS_04"
+      ],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "DATA_05",
+      "kind": "data",
+      "title": "Cold-storage archival for claims over seven years (candidate)",
+      "description": "Archive historical claim data older than seven years to cold storage rather than keep it in the primary database.",
+      "priority": "Low",
+      "provenance": "customer-stated",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "DATA4. Historical claim data older than seven years may be archived to cold storage rather than kept in the primary database.",
+        "verified": false
+      },
+      "relatedIds": [
+        "DATA_01"
+      ],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "SEC_01",
+      "kind": "security",
+      "title": "GDPR scope for EU-resident policyholders",
+      "description": "Comply with the EU General Data Protection Regulation for the subset of policyholders who are EU residents on international travel riders.",
+      "priority": "High",
+      "provenance": "customer-stated",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "SEC1. The solution must comply with the EU General Data Protection Regulation for the subset of policyholders who are EU residents on international travel riders.",
+        "verified": false
+      },
+      "relatedIds": [
+        "ASM_01"
+      ],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "SEC_02",
+      "kind": "security",
+      "title": "Encryption at rest and in transit",
+      "description": "Encrypt all personal data at rest and in transit using current industry-standard algorithms.",
+      "priority": "High",
+      "provenance": "customer-stated",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "SEC2. All personal data must be encrypted at rest and in transit using current industry-standard algorithms.",
+        "verified": false
+      },
+      "relatedIds": [],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "SEC_03",
+      "kind": "security",
+      "title": "Role-based claim access control",
+      "description": "Restrict examiners to claims assigned to their team via role-based access control, with supervisor override logged.",
+      "priority": "High",
+      "provenance": "customer-stated",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "SEC3. Role-based access control must ensure examiners only see claims assigned to their team, with supervisor override logged.",
+        "verified": false
+      },
+      "relatedIds": [],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "SEC_04",
+      "kind": "security",
+      "title": "MFA for payment approval",
+      "description": "Enforce multi-factor authentication for all internal staff accessing claim payment-approval functions.",
+      "priority": "High",
+      "provenance": "customer-stated",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "SEC4. Multi-factor authentication must be enforced for all internal staff accessing claim payment approval functions.",
+        "verified": false
+      },
+      "relatedIds": [],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "SEC_05",
+      "kind": "security",
+      "title": "Third-party penetration testing",
+      "description": "Undergo a third-party penetration test before go-live and annually thereafter.",
+      "priority": "High",
+      "provenance": "customer-stated",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "SEC5. The solution must undergo a third-party penetration test before go-live and annually thereafter.",
+        "verified": false
+      },
+      "relatedIds": [],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "SEC_06",
+      "kind": "security",
+      "title": "Revocable scoped API credentials for agents",
+      "description": "Issue independent agents accessing the agent API scoped API credentials that can be revoked individually.",
+      "priority": "High",
+      "provenance": "customer-stated",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "SEC6. Independent agents accessing the agent API must be issued scoped API credentials that can be revoked individually.",
+        "verified": false
+      },
+      "relatedIds": [
+        "PER_02",
+        "INT_04"
+      ],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "TECH_01",
+      "kind": "technology",
+      "title": "Azure as target cloud platform",
+      "description": "The infrastructure team standardised on Microsoft Azure and prefers the new claims portal to run on Azure.",
+      "priority": "High",
+      "provenance": "customer-stated",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "TECH1. Our infrastructure team standardised on Microsoft Azure two years ago and we would prefer the new claims portal to run on Azure.",
+        "verified": false
+      },
+      "relatedIds": [],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "TECH_02",
+      "kind": "technology",
+      "title": "Managed PostgreSQL or Azure SQL database",
+      "description": "Open to a managed PostgreSQL or Azure SQL database as the system of record, replacing the Oracle 19c instance.",
+      "priority": "Medium",
+      "provenance": "customer-stated",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "TECH2. We are open to a managed PostgreSQL or Azure SQL database as the system of record, replacing the Oracle 19c instance.",
+        "verified": false
+      },
+      "relatedIds": [],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "TECH_03",
+      "kind": "technology",
+      "title": "React / .NET staff skill alignment",
+      "description": "The internal engineering team has React and .NET experience, so a stack the staff can support after handover is preferred.",
+      "priority": "Medium",
+      "provenance": "customer-stated",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "TECH3. Our internal engineering team has React and .NET experience, so a stack that our staff can support after handover is preferred.",
+        "verified": false
+      },
+      "relatedIds": [],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "CON_01",
+      "kind": "constraint",
+      "title": "46-week go-live target",
+      "description": "Go live before the June 2027 policy renewal season, a target of 46 weeks from contract signature.",
+      "priority": "High",
+      "provenance": "customer-stated",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "CON1. The new portal must go live before our June 2027 policy renewal season begins, which the program office has translated into a target of 46 weeks from contract signature.",
+        "verified": false
+      },
+      "relatedIds": [],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "CON_02",
+      "kind": "constraint",
+      "title": "60-day parallel-run stabilisation",
+      "description": "Legacy ClaimsDesk must keep running in parallel with the new portal for a 60-day stabilisation period after cutover.",
+      "priority": "Medium",
+      "provenance": "customer-stated",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "CON2. Legacy ClaimsDesk must keep running in parallel with the new portal for a 60-day stabilisation period after cutover.",
+        "verified": false
+      },
+      "relatedIds": [],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "CON_03",
+      "kind": "constraint",
+      "title": "Limited customer staffing for the program",
+      "description": "The claims operations team can dedicate at most two business analysts and one QA lead part-time; the delivery partner staffs the rest.",
+      "priority": "Medium",
+      "provenance": "customer-stated",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "CON3. Our claims operations team can dedicate at most two business analysts and one QA lead to this program part-time; the delivery partner is expected to staff the rest.",
+        "verified": false
+      },
+      "relatedIds": [],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "CON_04",
+      "kind": "constraint",
+      "title": "Idaho pilot before statewide rollout",
+      "description": "Pilot the rollout with the Idaho claims team before statewide rollout to Washington and Oregon.",
+      "priority": "High",
+      "provenance": "customer-stated",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "CON4. A pilot rollout to the Idaho claims team is required before statewide rollout to Washington and Oregon.",
+        "verified": false
+      },
+      "relatedIds": [],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "CON_05",
+      "kind": "constraint",
+      "title": "Policy Admin System excluded from this engagement",
+      "description": "The legacy Policy Admin System mainframe is being retired by a separate program and is out of scope for this engagement.",
+      "priority": "Medium",
+      "provenance": "customer-stated",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "A separate legacy mainframe, referred to internally as the Policy Admin System, is being retired by a different program and is out of scope for this engagement.",
+        "verified": false
+      },
+      "relatedIds": [],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "SYS_01",
+      "kind": "existingSystem",
+      "title": "Guidewire ClaimCenter",
+      "description": "Used by claims examiners for reserve setting and payment authorisation; must keep exchanging claim status and payment data with the new portal.",
+      "priority": "Medium",
+      "provenance": "customer-stated",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "Guidewire ClaimCenter is used by our claims examiners for reserve setting and payment authorisation; ClaimsDesk must continue to exchange claim status and payment data with it.",
+        "verified": false
+      },
+      "relatedIds": [],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "SYS_02",
+      "kind": "existingSystem",
+      "title": "SAP S/4HANA",
+      "description": "The finance and general-ledger system of record; every approved claim payment must post to it as a journal entry.",
+      "priority": "Medium",
+      "provenance": "customer-stated",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "SAP S/4HANA is our finance and general-ledger system of record; every approved claim payment must post to SAP as a journal entry.",
+        "verified": false
+      },
+      "relatedIds": [],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "SYS_03",
+      "kind": "existingSystem",
+      "title": "Okta",
+      "description": "The corporate identity provider, already issuing SSO for 1,850 internal staff across claims, underwriting and finance.",
+      "priority": "Medium",
+      "provenance": "customer-stated",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "Okta is our corporate identity provider and already issues SSO for 1,850 internal staff across claims, underwriting and finance.",
+        "verified": false
+      },
+      "relatedIds": [],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "SYS_04",
+      "kind": "existingSystem",
+      "title": "Legacy ClaimsDesk Portal",
+      "description": "The current claims intake and adjudication system, built in 2011 on .NET Framework 4.8 with an Oracle 19c database, being replaced by this program.",
+      "priority": "Medium",
+      "provenance": "customer-stated",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "The current claims intake and adjudication system, internally called ClaimsDesk, was built in 2011 on .NET Framework 4.8 with an Oracle 19c database.",
+        "verified": false
+      },
+      "relatedIds": [],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "SYS_05",
+      "kind": "existingSystem",
+      "title": "Hyland OnBase",
+      "description": "The document-imaging vendor holding scanned historical claim files that the new portal must retrieve from.",
+      "priority": "Medium",
+      "provenance": "customer-stated",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "INT4. The portal should integrate with our document-imaging vendor, currently Hyland OnBase, to retrieve scanned historical claim files.",
+        "verified": false
+      },
+      "relatedIds": [
+        "INT_06"
+      ],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "PER_01",
+      "kind": "persona",
+      "title": "Claims Examiner",
+      "description": "Internal staff who create, update and close claim records and approve reserve and payment decisions.",
+      "priority": "Medium",
+      "provenance": "ai-inferred",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "FR1. Claims examiners must be able to create, update and close a claim record, including reserve amounts synchronised from Guidewire ClaimCenter.",
+        "verified": false
+      },
+      "relatedIds": [],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "PER_02",
+      "kind": "persona",
+      "title": "Independent Agent",
+      "description": "One of 340 independent agents who submit new claims on behalf of policyholders and track their own submissions.",
+      "priority": "Medium",
+      "provenance": "ai-inferred",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "We write personal auto, homeowners and small commercial policies through a network of 340 independent agents.",
+        "verified": false
+      },
+      "relatedIds": [],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "PER_03",
+      "kind": "persona",
+      "title": "Policyholder",
+      "description": "One of roughly 240,000 registered policyholders who check claim status, upload additional documents and message their assigned adjuster.",
+      "priority": "Medium",
+      "provenance": "ai-inferred",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "FR5. The portal should let policyholders view claim status, upload additional documents and message their assigned adjuster.",
+        "verified": false
+      },
+      "relatedIds": [],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "PER_04",
+      "kind": "persona",
+      "title": "Claims Supervisor",
+      "description": "Supervisors who reassign claims between examiners and follow team workload on dashboards.",
+      "priority": "Medium",
+      "provenance": "ai-inferred",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "FR6. Supervisors must be able to reassign claims between examiners and view team workload dashboards.",
+        "verified": false
+      },
+      "relatedIds": [],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "DEP_01",
+      "kind": "dependency",
+      "title": "Hyland OnBase contract renewal timing",
+      "description": "The Hyland OnBase document-imaging contract renews in November 2026, which may constrain when a future consolidation decision can be made.",
+      "priority": "Medium",
+      "provenance": "ai-inferred",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "The Enterprise Architect flagged that the Hyland OnBase contract renews in November 2026 and asked whether the new portal could eventually replace it, but this is explicitly out of scope for this phase.",
+        "verified": false
+      },
+      "relatedIds": [
+        "GAP_04"
+      ],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "RSK_01",
+      "kind": "risk",
+      "title": "Continued manual re-keying if integration slips",
+      "description": "If the Guidewire ClaimCenter integration is delayed, examiners keep re-keying claim details between systems, the top complaint raised in engagement surveys.",
+      "priority": "Medium",
+      "provenance": "ai-inferred",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "Adjusters currently rediscover claim details by re-keying data between ClaimsDesk and Guidewire ClaimCenter, which our claims VP flagged as the single biggest source of processing delay.",
+        "verified": false
+      },
+      "relatedIds": [],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "RSK_02",
+      "kind": "risk",
+      "title": "Historical data migration integrity risk",
+      "description": "Nineteen years of claim history and 1.1 TB of scanned attachments raise the risk of incomplete or inconsistent migration if reconciliation controls are weak.",
+      "priority": "Medium",
+      "provenance": "ai-inferred",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "The existing ClaimsDesk database holds nineteen years of claim history, roughly 4.2 TB of structured data plus 1.1 TB of scanned PDF and image attachments.",
+        "verified": false
+      },
+      "relatedIds": [
+        "DATA_01"
+      ],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "GAP_01",
+      "kind": "gap",
+      "title": "SAP S/4HANA integration pattern unconfirmed",
+      "description": "It is not yet known whether SAP S/4HANA exposes a REST API for journal posting or only IDoc/BAPI interfaces, which changes the integration design.",
+      "priority": "Medium",
+      "provenance": "ai-inferred",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "The IT Director could not yet confirm whether SAP S/4HANA exposes a REST API or only IDoc/BAPI interfaces for journal posting and will follow up after checking with the SAP basis team.",
+        "verified": false
+      },
+      "relatedIds": [
+        "INT_02",
+        "Q_01"
+      ],
+      "affectsInputs": [
+        "integrationReadiness"
+      ],
+      "critical": true
+    },
+    {
+      "id": "GAP_02",
+      "kind": "gap",
+      "title": "Policyholder status tracker phase undecided",
+      "description": "Whether the policyholder-facing status tracker ships in the initial release or a fast-follow phase has not been decided.",
+      "priority": "Medium",
+      "provenance": "ai-inferred",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "No decision has been made yet on whether the policyholder-facing status tracker (FR5) ships in the initial release or a fast-follow phase.",
+        "verified": false
+      },
+      "relatedIds": [
+        "FR_05",
+        "Q_02"
+      ],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "GAP_03",
+      "kind": "gap",
+      "title": "Specific agent accessibility requirements unspecified",
+      "description": "The RFP references accessibility requirements among agent-partner staff without naming the specific standard beyond WCAG 2.1 AA or which agents are affected.",
+      "priority": "Medium",
+      "provenance": "ai-inferred",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "NFR6. The portal must be accessible to WCAG 2.1 AA standards because several of our agent partners have accessibility requirements on staff.",
+        "verified": false
+      },
+      "relatedIds": [],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "GAP_04",
+      "kind": "gap",
+      "title": "Hyland OnBase future-consolidation scope unclear",
+      "description": "Whether the new portal should eventually replace Hyland OnBase is an open question the Enterprise Architect raised but explicitly deferred.",
+      "priority": "Medium",
+      "provenance": "ai-inferred",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "The Enterprise Architect flagged that the Hyland OnBase contract renews in November 2026 and asked whether the new portal could eventually replace it, but this is explicitly out of scope for this phase.",
+        "verified": false
+      },
+      "relatedIds": [
+        "DEP_01",
+        "Q_03"
+      ],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "ASM_01",
+      "kind": "assumption",
+      "title": "GDPR scope limited to EU-resident travel-rider policyholders",
+      "description": "GDPR obligations apply only to the EU-resident policyholder subset covered by international travel riders, not the broader domestic book, exactly as the customer scoped it.",
+      "priority": "Medium",
+      "provenance": "customer-stated",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "SEC1. The solution must comply with the EU General Data Protection Regulation for the subset of policyholders who are EU residents on international travel riders.",
+        "verified": false
+      },
+      "relatedIds": [
+        "SEC_01"
+      ],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "ASM_02",
+      "kind": "assumption",
+      "title": "No hosting extension for ClaimsDesk",
+      "description": "Assumed ClaimsDesk cannot remain in production past its vendor-support window even with compensating controls, since no extension option was mentioned.",
+      "priority": "Medium",
+      "provenance": "assumed",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "ClaimsDesk is reaching end of vendor support and cannot be hosted on any current-generation Windows Server release.",
+        "verified": false
+      },
+      "relatedIds": [],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "Q_01",
+      "kind": "question",
+      "title": "Does SAP S/4HANA expose a REST API for journal posting?",
+      "description": "Confirm whether SAP S/4HANA exposes a REST API for journal posting, or only IDoc/BAPI interfaces, before finalising the integration design.",
+      "priority": "Medium",
+      "provenance": "ai-inferred",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "The IT Director could not yet confirm whether SAP S/4HANA exposes a REST API or only IDoc/BAPI interfaces for journal posting and will follow up after checking with the SAP basis team.",
+        "verified": false
+      },
+      "relatedIds": [
+        "GAP_01",
+        "INT_02"
+      ],
+      "affectsInputs": [
+        "integrationReadiness"
+      ],
+      "critical": true
+    },
+    {
+      "id": "Q_02",
+      "kind": "question",
+      "title": "Will the policyholder status tracker ship in the initial release?",
+      "description": "Confirm whether the policyholder-facing status tracker ships in the initial release or a fast-follow phase.",
+      "priority": "Medium",
+      "provenance": "ai-inferred",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "No decision has been made yet on whether the policyholder-facing status tracker (FR5) ships in the initial release or a fast-follow phase.",
+        "verified": false
+      },
+      "relatedIds": [
+        "GAP_02",
+        "FR_05"
+      ],
+      "affectsInputs": [],
+      "critical": false
+    },
+    {
+      "id": "Q_03",
+      "kind": "question",
+      "title": "Should the portal eventually replace Hyland OnBase?",
+      "description": "Confirm whether the new portal is expected to eventually replace Hyland OnBase and, if so, in which phase.",
+      "priority": "Medium",
+      "provenance": "ai-inferred",
+      "source": {
+        "sectionId": "",
+        "sectionTitle": "",
+        "lineStart": 0,
+        "lineEnd": 0,
+        "quote": "The Enterprise Architect flagged that the Hyland OnBase contract renews in November 2026 and asked whether the new portal could eventually replace it, but this is explicitly out of scope for this phase.",
+        "verified": false
+      },
+      "relatedIds": [
+        "DEP_01",
+        "GAP_04"
+      ],
+      "affectsInputs": [],
+      "critical": false
+    }
+  ]
+}

@@ -1,0 +1,356 @@
+/**
+ * React Flow internals only.
+ *
+ * Everything that can be a Tailwind class lives on the components; what stays
+ * here is what React Flow renders itself - handles, edges, controls, minimap -
+ * plus the `.selected` parent selector we cannot reach from the node. Every
+ * colour reads a token from index.css, so both themes are covered for free.
+ *
+ * ---------------------------------------------------------------------------
+ * CANVAS MOTION - every animation here, and the state that triggers it.
+ * Nothing on this list runs on an idle canvas; each one reports a change the
+ * user or a run just made. All of them are switched off at the bottom of this
+ * file under `prefers-reduced-motion: reduce`.
+ *
+ *  1. `node-pop`      180ms, once   .block-node[data-fresh='true']
+ *     A card the user just added (palette click or drag-drop) scales up from
+ *     0.92 and fades in. `fresh` is set by `addBlock` only, so loading a
+ *     puzzle stays still; the card clears it on `animationend`.
+ *
+ *  2. `edge-draw`     260ms, once   .edge-draw overlay path
+ *     A wire the user just connected (or re-routed) draws itself from source
+ *     to target - `pathLength: 1` with dashoffset 1 → 0 - while the finished
+ *     line waits at `opacity: 0` (`.edge-drawing`). `fresh` is set in
+ *     `onConnect`/`reconnect`; the overlay clears it on `animationend`, so
+ *     edges from a loaded puzzle never draw.
+ *
+ *  3. signal dot      1.1s, loops   .edge-signal (SVG <animateMotion>)
+ *     While a step is running or retrying, a dot travels along the wire that
+ *     feeds it: the work is moving between these two blocks. Loops because
+ *     the state it reports is itself ongoing. This is React Flow's documented
+ *     "Animating Edges" pattern - <BaseEdge id path> plus a <circle> carried
+ *     by <animateMotion path={edgePath}> - and the library's own `animated`
+ *     dashes stay on underneath, which is why the dot is kept small. SMIL
+ *     ignores media queries, so reduced motion drops it in WorkflowCanvas.
+ *
+ *  4. `status-pop`    320ms, once   .status-dot[data-pop='true']
+ *     `card-flash`    320ms, once   .status-flash ring overlay
+ *     A step just landed on completed / recovered / failed / paused /
+ *     safely_stopped: the status dot (with its ring) pulses 1 → 1.35 → 1 and
+ *     a ring flashes off the card edge. Both elements are keyed on the status
+ *     value, so every change restarts them. `running`/`retrying` are excluded
+ *     (they already breathe) and so are `pending`/`skipped` - nothing landed.
+ *     `paused` pops and then keeps breathing: it is waiting on the user.
+ *
+ *  5. hover lift      120ms          .block-node:hover
+ *     -1px and a stronger shadow - the card is grabbable. Cancelled while a
+ *     run owns the canvas (`.canvas[data-locked='true']`), where nothing is
+ *     draggable and the lift would be a lie.
+ *
+ *  6. fit-to-view     400ms, once   WorkflowCanvas, locked false → true
+ *     Starting a run pans/zooms the whole workflow into frame once, before
+ *     the statuses start painting. Not CSS - the instance API, `fitView({
+ *     duration: 400, padding: 0.28, maxZoom: 1 })` from `useReactFlow()`.
+ *     The same options go to <Controls fitViewOptions> so its fit button
+ *     tweens too.
+ * ---------------------------------------------------------------------------
+ */
+
+.canvas .react-flow__attribution {
+  background: transparent;
+  font-size: 0.62rem;
+  opacity: 0.4;
+}
+
+.canvas .react-flow__attribution a {
+  color: var(--muted-foreground);
+}
+
+/* ---------- Selection & validation, from the node's React Flow wrapper ---------- */
+
+.canvas .react-flow__node.selected .block-node {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--primary) 25%, transparent);
+}
+
+/* Last, so a flagged node stays visibly flagged even while selected. */
+.canvas .react-flow__node .block-node[data-invalid='true'] {
+  border-color: var(--destructive);
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--destructive) 25%, transparent);
+}
+
+/* ---------- Ports ----------
+   16px hit area, 10px visible port: the target is finger-sized, the port is
+   not. The circle is card-filled with a border, so it reads as a socket on the
+   card's edge rather than a dot floating next to it. */
+
+.canvas .react-flow__handle {
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  min-height: 16px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+}
+
+.canvas .react-flow__handle::after {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  border-radius: 999px;
+  border: 1.5px solid color-mix(in oklab, var(--muted-foreground) 50%, var(--border));
+  background: var(--card);
+  transition:
+    border-color 120ms ease,
+    background 120ms ease,
+    transform 120ms ease;
+}
+
+.canvas .react-flow__handle:hover::after,
+.canvas .react-flow__handle.connectionindicator:hover::after,
+.canvas .react-flow__handle.connectingfrom::after,
+.canvas .react-flow__handle.connectingto::after {
+  border-color: var(--primary);
+  background: color-mix(in oklab, var(--primary) 35%, var(--card));
+  transform: scale(1.2);
+}
+
+.canvas .react-flow__handle-top {
+  top: -8px;
+  transform: translate(-50%, 0);
+}
+
+.canvas .react-flow__handle-bottom {
+  bottom: -8px;
+  transform: translate(-50%, 0);
+}
+
+.canvas .react-flow__handle--true {
+  left: auto;
+  right: 20px;
+  transform: none;
+}
+.canvas .react-flow__handle--true::after {
+  border-color: var(--status-completed);
+  background: color-mix(in oklab, var(--status-completed) 30%, var(--card));
+}
+
+.canvas .react-flow__handle--false {
+  left: 20px;
+  transform: none;
+}
+.canvas .react-flow__handle--false::after {
+  border-color: var(--status-failed);
+  background: color-mix(in oklab, var(--status-failed) 30%, var(--card));
+}
+
+/* ---------- Edges ---------- */
+
+.canvas .react-flow__edge-path {
+  stroke: color-mix(in oklab, var(--muted-foreground) 45%, transparent);
+  stroke-width: 1.6;
+}
+
+.canvas .react-flow__edge:hover .react-flow__edge-path,
+.canvas .react-flow__edge.selected .react-flow__edge-path {
+  stroke: var(--primary);
+  stroke-width: 2;
+}
+
+/* The step in flight pulls its incoming edge along - React Flow's own `animated`
+   dash keyframes, recoloured to a token and otherwise left alone. */
+.canvas .react-flow__edge.animated .react-flow__edge-path {
+  stroke: var(--status-running);
+}
+
+.canvas .react-flow__connectionline path {
+  stroke: var(--primary);
+  stroke-width: 2;
+  stroke-dasharray: 5 4;
+}
+
+/* ---------- 2. Wire draw-in ---------- */
+
+/* The finished line hides while the overlay draws it, so the wire appears once. */
+.canvas .react-flow__edge-path.edge-drawing {
+  opacity: 0;
+}
+
+.canvas .edge-draw {
+  stroke: color-mix(in oklab, var(--muted-foreground) 45%, transparent);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-dasharray: 1;
+  animation: edge-draw 260ms cubic-bezier(0.32, 0.72, 0.35, 1) forwards;
+}
+
+@keyframes edge-draw {
+  from {
+    stroke-dashoffset: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* ---------- 3. Signal dot on the active wire ----------
+   The dot itself is filled inline in FlowEdge, the way React Flow's "Animating
+   Edges" example does it; only the soft halo behind it needs a mix. */
+
+.canvas .edge-signal-glow {
+  fill: color-mix(in oklab, var(--status-running) 18%, transparent);
+}
+
+/* ---------- Controls & minimap ---------- */
+
+.canvas .react-flow__controls {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-panel);
+}
+
+.canvas .react-flow__controls-button {
+  border: 0;
+  border-bottom: 1px solid var(--border);
+  background: var(--card);
+  fill: var(--muted-foreground);
+}
+
+.canvas .react-flow__controls-button:hover {
+  background: var(--muted);
+  fill: var(--foreground);
+}
+
+.canvas .react-flow__minimap,
+.canvas .react-flow__minimap svg {
+  width: 148px;
+  height: 104px;
+}
+
+.canvas .react-flow__minimap {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--card);
+  box-shadow: var(--shadow-panel);
+}
+
+/* Below this width the minimap costs more canvas than it gives back. */
+@media (max-width: 1180px) {
+  .canvas .react-flow__minimap {
+    display: none;
+  }
+}
+
+/* ---------- 1. Node arrival pop ---------- */
+
+.canvas .react-flow__node .block-node[data-fresh='true'] {
+  animation: node-pop 180ms cubic-bezier(0.22, 0.9, 0.32, 1) both;
+}
+
+@keyframes node-pop {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ---------- 4. Status pop ---------- */
+
+.canvas .status-dot[data-pop='true'] {
+  animation: status-pop 320ms cubic-bezier(0.34, 1.4, 0.5, 1) both;
+}
+
+/* Paused pops once, then goes on breathing - it is still waiting on the user. */
+.canvas .status-dot[data-pop='true'][data-status='paused'] {
+  animation:
+    status-pop 320ms cubic-bezier(0.34, 1.4, 0.5, 1) both,
+    status-breathe 2.2s ease-in-out 320ms infinite;
+}
+
+@keyframes status-pop {
+  0% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(1.35);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes status-breathe {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.45;
+  }
+}
+
+/* The ring that flashes off the card edge as the status lands. */
+.canvas .block-node .status-flash {
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  border: 2px solid var(--tone);
+  pointer-events: none;
+  animation: card-flash 320ms ease-out both;
+}
+
+@keyframes card-flash {
+  from {
+    opacity: 0.75;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(1.035);
+  }
+}
+
+/* ---------- 5. Hover lift ----------
+   The lift itself is a Tailwind pair on the card (`hover:-translate-y-px`,
+   which in Tailwind v4 writes the `translate` property, not `transform`).
+   While a run owns the canvas nothing is draggable, so the card must not
+   offer to be picked up. */
+
+.canvas[data-locked='true'] .react-flow__node .block-node:hover {
+  translate: none;
+}
+
+/* ---------- Reduced motion ----------
+   Every canvas animation off. The signal dot is SMIL and the fitView tween is
+   JavaScript, so those two are dropped in the components instead; the rules
+   below also make sure a wire that never got to draw is still visible. */
+
+@media (prefers-reduced-motion: reduce) {
+  .canvas .block-node,
+  .canvas .block-node .status-flash,
+  .canvas .status-dot,
+  .canvas .edge-draw,
+  .canvas .react-flow__edge.animated .react-flow__edge-path,
+  .canvas .react-flow__handle::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .canvas .react-flow__node .block-node:hover {
+    translate: none;
+  }
+
+  .canvas .react-flow__edge-path.edge-drawing {
+    opacity: 1;
+  }
+
+  .canvas .edge-draw,
+  .canvas .edge-signal {
+    display: none;
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "tc-combinator",
+  "version": "1.0.0",
+  "description": "Topcoder Combinator — AI-assisted base-plus-transplant / idea-synthesis engine with evidence, provenance and verification.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "bin": {
+    "combinator": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx src/cli.ts",
+    "combinator": "tsx src/cli.ts",
+    "ui": "tsx src/server.ts",
+    "test": "node --test --import tsx \"test/**/*.test.ts\"",
+    "run:all": "tsx src/cli.ts run-all --pack ./starter-pack",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@aws-sdk/client-bedrock-runtime": "3.705.0",
+    "adm-zip": "0.5.16",
+    "fast-xml-parser": "4.5.1",
+    "mammoth": "1.8.0",
+    "openai": "4.77.0",
+    "pdfjs-dist": "4.9.155",
+    "zod": "3.24.1"
+  },
+  "devDependencies": {
+    "@types/adm-zip": "0.5.7",
+    "@types/node": "22.10.2",
+    "tsx": "4.19.2",
+    "typescript": "5.7.2"
+  }
+}

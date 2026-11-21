@@ -1,0 +1,59 @@
+{
+  "integrations": [
+    {
+      "req_ids": [
+        "INT_01"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "IA_01",
+      "name": "Logistics status feed",
+      "source_system": "Logistics system",
+      "target_system": "Customer portal",
+      "direction": "inbound",
+      "pattern": "api",
+      "auth_approach": "Mutual TLS with a rotated client certificate.",
+      "error_handling": "Failed calls are logged and retried; the portal shows the last known status.",
+      "retry_behavior": "Three retries with exponential backoff.",
+      "monitoring": "Call volume, error rate and latency are alerted on.",
+      "sync_considerations": "Status is polled every five minutes; the portal shows the fetch time.",
+      "arc_ids": [
+        "ARC_02",
+        "ARC_03"
+      ]
+    }
+  ],
+  "internal_systems": [
+    {
+      "req_ids": [
+        "FR_01"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "name": "Customer portal",
+      "description": "The new portal."
+    }
+  ],
+  "external_systems": [
+    {
+      "req_ids": [
+        "INT_01"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "name": "Logistics system",
+      "description": "Existing shipment system of record."
+    }
+  ],
+  "flows": [
+    {
+      "from_id": "Logistics system",
+      "to_id": "ARC_02",
+      "label": "shipment status",
+      "protocol": "HTTPS REST"
+    }
+  ]
+}

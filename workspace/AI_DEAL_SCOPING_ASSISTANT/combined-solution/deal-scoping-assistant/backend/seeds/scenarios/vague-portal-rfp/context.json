@@ -1,0 +1,20 @@
+{
+  "slug": "vague-portal-rfp",
+  "title": "Customer Portal Enquiry (Incomplete Requirements)",
+  "scenario_type": "missing_information",
+  "customer_name": "Ridgeline Freight Solutions",
+  "industry": "Logistics and Freight Forwarding",
+  "opportunity_summary": "A short, informal email asking for a customer portal with shipment tracking, invoice access and possibly online payment. Almost every sizing input is missing: no user volumes, no shipment volumes, no security or compliance detail, no named TMS or finance system, no target platform, no deadline and no budget. The only integration hint is 'our TMS'. This scenario exercises gap detection, clarification questions and reduced estimate confidence.",
+  "requested_by": "Greg Halloran, Operations Director, Ridgeline Freight Solutions",
+  "preferred_cloud": null,
+  "expected_users": null,
+  "target_regions": [],
+  "delivery_deadline": null,
+  "regulatory_constraints": [],
+  "demo_change": {
+    "description": "The customer answers the highest-priority clarification question about portal volumes: approximately 20,000 named customer users are expected to have portal accounts. The expected-user input moves from unknown to 20,000, which unblocks the scalability, performance-testing and infrastructure estimate lines and raises estimate confidence.",
+    "config_key": "expected_users",
+    "from": null,
+    "to": 20000
+  }
+}

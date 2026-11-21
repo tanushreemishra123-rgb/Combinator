@@ -1,0 +1,623 @@
+{
+  "submissionId": "SUB_002",
+  "kind": "code",
+  "rootPath": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002",
+  "applications": [
+    {
+      "path": "submissions/SUB_002/2nd Position",
+      "stack": [
+        "Docker"
+      ],
+      "role": "unknown"
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui",
+      "stack": [
+        "Docker",
+        "Next.js",
+        "React",
+        "TypeScript"
+      ],
+      "role": "frontend"
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api",
+      "stack": [
+        "Docker",
+        "Drizzle",
+        "TypeScript"
+      ],
+      "role": "backend"
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui",
+      "stack": [
+        "Docker",
+        "React",
+        "TypeScript",
+        "Vite"
+      ],
+      "role": "frontend"
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner",
+      "stack": [
+        "TypeScript"
+      ],
+      "role": "shared"
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/types",
+      "stack": [
+        "TypeScript"
+      ],
+      "role": "shared"
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/admin-ui/integration",
+      "stack": [
+        "React",
+        "TypeScript",
+        "Vite"
+      ],
+      "role": "frontend"
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/learner-ui/integration",
+      "stack": [
+        "React",
+        "TypeScript",
+        "Vite"
+      ],
+      "role": "frontend"
+    }
+  ],
+  "architecture": {
+    "summary": "Detected 8 application unit(s): unknown at submissions/SUB_002/2nd Position (Docker); frontend at submissions/SUB_002/2nd Position/apps/admin-ui (Docker, Next.js, React, TypeScript); backend at submissions/SUB_002/2nd Position/apps/api (Docker, Drizzle, TypeScript); frontend at submissions/SUB_002/2nd Position/apps/learner-ui (Docker, React, TypeScript, Vite); shared at submissions/SUB_002/2nd Position/packages/learner (TypeScript); shared at submissions/SUB_002/2nd Position/packages/types (TypeScript); frontend at submissions/SUB_002/2nd Position/test/admin-ui/integration (React, TypeScript, Vite); frontend at submissions/SUB_002/2nd Position/test/learner-ui/integration (React, TypeScript, Vite). Detected 8 unit(s); languages: Docker, Next.js, React, TypeScript, Drizzle, Vite.",
+    "evidence": [
+      {
+        "id": "EV_da3tcv1",
+        "statement": "unknown unit (Docker)",
+        "locations": [
+          {
+            "kind": "file",
+            "submissionId": "SUB_002",
+            "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position",
+            "excerpt": "application root"
+          }
+        ],
+        "origin": "source",
+        "confidence": "high"
+      },
+      {
+        "id": "EV_a7pws48",
+        "statement": "frontend unit (Docker, Next.js, React, TypeScript)",
+        "locations": [
+          {
+            "kind": "file",
+            "submissionId": "SUB_002",
+            "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui",
+            "excerpt": "application root"
+          }
+        ],
+        "origin": "source",
+        "confidence": "high"
+      },
+      {
+        "id": "EV_9mkc27x",
+        "statement": "backend unit (Docker, Drizzle, TypeScript)",
+        "locations": [
+          {
+            "kind": "file",
+            "submissionId": "SUB_002",
+            "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/api",
+            "excerpt": "application root"
+          }
+        ],
+        "origin": "source",
+        "confidence": "high"
+      },
+      {
+        "id": "EV_9i67oup",
+        "statement": "frontend unit (Docker, React, TypeScript, Vite)",
+        "locations": [
+          {
+            "kind": "file",
+            "submissionId": "SUB_002",
+            "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/learner-ui",
+            "excerpt": "application root"
+          }
+        ],
+        "origin": "source",
+        "confidence": "high"
+      }
+    ]
+  },
+  "build": {
+    "state": "complete",
+    "commands": [
+      "npm run build  (2nd Position/apps/admin-ui)",
+      "npm run start  (2nd Position/apps/admin-ui)",
+      "npm run dev  (2nd Position/apps/admin-ui)",
+      "npm run start  (2nd Position/apps/api)",
+      "npm run dev  (2nd Position/apps/api)",
+      "npm run build  (2nd Position/apps/learner-ui)",
+      "npm run start  (2nd Position/apps/learner-ui)",
+      "npm run dev  (2nd Position/apps/learner-ui)",
+      "npm run build  (2nd Position)",
+      "npm run start  (2nd Position)",
+      "npm run dev  (2nd Position)"
+    ],
+    "evidence": [
+      {
+        "id": "EV_5ypjhbk",
+        "statement": "scripts present: dev, build, start, tokens:build, typecheck",
+        "locations": [
+          {
+            "kind": "file",
+            "submissionId": "SUB_002",
+            "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/package.json",
+            "excerpt": "package.json scripts"
+          }
+        ],
+        "origin": "source",
+        "confidence": "high"
+      },
+      {
+        "id": "EV_2nxjft3",
+        "statement": "scripts present: dev, start, test, typecheck",
+        "locations": [
+          {
+            "kind": "file",
+            "submissionId": "SUB_002",
+            "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/api/package.json",
+            "excerpt": "package.json scripts"
+          }
+        ],
+        "origin": "source",
+        "confidence": "high"
+      },
+      {
+        "id": "EV_6nskt84",
+        "statement": "scripts present: dev, build, preview, start, typecheck, test",
+        "locations": [
+          {
+            "kind": "file",
+            "submissionId": "SUB_002",
+            "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/learner-ui/package.json",
+            "excerpt": "package.json scripts"
+          }
+        ],
+        "origin": "source",
+        "confidence": "high"
+      },
+      {
+        "id": "EV_d4waqz0",
+        "statement": "scripts present: dev, build, start, test",
+        "locations": [
+          {
+            "kind": "file",
+            "submissionId": "SUB_002",
+            "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/package.json",
+            "excerpt": "package.json scripts"
+          }
+        ],
+        "origin": "source",
+        "confidence": "high"
+      }
+    ]
+  },
+  "tests": {
+    "state": "complete",
+    "frameworks": [
+      "Vitest"
+    ],
+    "evidence": [
+      {
+        "id": "EV_8js8ehp",
+        "statement": "28 test file(s) found",
+        "locations": [
+          {
+            "kind": "test",
+            "submissionId": "SUB_002",
+            "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/packages/learner/test/ai.test.ts",
+            "excerpt": "example of 28 test files"
+          }
+        ],
+        "origin": "source",
+        "confidence": "high"
+      }
+    ]
+  },
+  "requirementCoverage": [
+    {
+      "requirementId": "REQ_kk9ov4",
+      "state": "complete",
+      "score": 17.3,
+      "evidence": [
+        {
+          "id": "EV_5ikrlqp",
+          "statement": "Grounded evidence for \"Browser-accessible learning adventure landing page\" (214 files, 498 hits, strength 17.3)",
+          "locations": [
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/AGENTS.md",
+              "excerpt": "matches: learning, adventure, required"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/README.md",
+              "excerpt": "matches: browser, learning, adventure, required, users"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/package.json",
+              "excerpt": "matches: learning, adventure"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/components/PublishGateDialog.tsx",
+              "excerpt": "matches: learning, adventure, required, allow"
+            }
+          ],
+          "origin": "source",
+          "confidence": "high"
+        }
+      ],
+      "notes": "Grounded in 214 file(s); 21 test file(s); strength 17.3."
+    },
+    {
+      "requirementId": "REQ_6gf9j9",
+      "state": "complete",
+      "score": 19.4,
+      "evidence": [
+        {
+          "id": "EV_58ceh8u",
+          "statement": "Grounded evidence for \"Pre-seeded AI learning missions\" (212 files, 925 hits, strength 19.4)",
+          "locations": [
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/README.md",
+              "excerpt": "matches: learning, missions, include, mission, title"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/components/PreviewDialog.tsx",
+              "excerpt": "matches: mission, title"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/components/PublishGateDialog.tsx",
+              "excerpt": "matches: learning, include, mission, title"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/components/layout/AdminShell.tsx",
+              "excerpt": "matches: missions, mission, title"
+            }
+          ],
+          "origin": "source",
+          "confidence": "high"
+        }
+      ],
+      "notes": "Grounded in 212 file(s); 28 test file(s); strength 19.4."
+    },
+    {
+      "requirementId": "REQ_jj1gly",
+      "state": "complete",
+      "score": 17.8,
+      "evidence": [
+        {
+          "id": "EV_9bm0ney",
+          "statement": "Grounded evidence for \"Mission practice activities\" (127 files, 355 hits, strength 17.8)",
+          "locations": [
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/README.md",
+              "excerpt": "matches: mission, practice, include, linked, quizzes"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/components/PublishGateDialog.tsx",
+              "excerpt": "matches: mission, include, linked, flashcards"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/components/layout/AdminShell.tsx",
+              "excerpt": "matches: mission, flashcards"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/Accordion/Accordion.tsx",
+              "excerpt": "matches: include, provide"
+            }
+          ],
+          "origin": "source",
+          "confidence": "high"
+        }
+      ],
+      "notes": "Grounded in 127 file(s); 19 test file(s); strength 17.8."
+    },
+    {
+      "requirementId": "REQ_ittjzz",
+      "state": "complete",
+      "score": 18,
+      "evidence": [
+        {
+          "id": "EV_36n66op",
+          "statement": "Grounded evidence for \"Personalized AI tutor\" (119 files, 361 hits, strength 18.0)",
+          "locations": [
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/README.md",
+              "excerpt": "matches: tutor, answer, mission, related, questions"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/components/PublishGateDialog.tsx",
+              "excerpt": "matches: mission, questions"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/components/layout/AdminShell.tsx",
+              "excerpt": "matches: mission, questions"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/features/assignments/AssignmentBoard.tsx",
+              "excerpt": "matches: mission, questions"
+            }
+          ],
+          "origin": "source",
+          "confidence": "high"
+        }
+      ],
+      "notes": "Grounded in 119 file(s); 21 test file(s); strength 18.0."
+    },
+    {
+      "requirementId": "REQ_7xz6vy",
+      "state": "complete",
+      "score": 17.7,
+      "evidence": [
+        {
+          "id": "EV_7hznw3q",
+          "statement": "Grounded evidence for \"AI Only Mode and AI feedback flow\" (50 files, 134 hits, strength 17.7)",
+          "locations": [
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/README.md",
+              "excerpt": "matches: feedback, support, explanations, hints, recommendations"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/features/settings/SettingsPage.tsx",
+              "excerpt": "matches: explanations, learning"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/api/API.md",
+              "excerpt": "matches: support, learning"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/api/mission-data/flashcards.json",
+              "excerpt": "matches: feedback, support, learning, generic, chatbot"
+            }
+          ],
+          "origin": "source",
+          "confidence": "high"
+        }
+      ],
+      "notes": "Grounded in 50 file(s); 5 test file(s); strength 17.7."
+    },
+    {
+      "requirementId": "REQ_la65cg",
+      "state": "complete",
+      "score": 18.2,
+      "evidence": [
+        {
+          "id": "EV_c0eox1m",
+          "statement": "Grounded evidence for \"Progress tracking and gamification\" (166 files, 538 hits, strength 18.2)",
+          "locations": [
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/README.md",
+              "excerpt": "matches: progress, tracking, track, missions, checkpoint"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/components/PublishGateDialog.tsx",
+              "excerpt": "matches: results, include"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/components/layout/AdminShell.tsx",
+              "excerpt": "matches: missions, badges"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/README.md",
+              "excerpt": "matches: progress, missions"
+            }
+          ],
+          "origin": "source",
+          "confidence": "high"
+        }
+      ],
+      "notes": "Grounded in 166 file(s); 24 test file(s); strength 18.2."
+    },
+    {
+      "requirementId": "REQ_tsgt7r",
+      "state": "complete",
+      "score": 18.7,
+      "evidence": [
+        {
+          "id": "EV_1oklmo3",
+          "statement": "Grounded evidence for \"Content management for missions and questions\" (120 files, 441 hits, strength 18.7)",
+          "locations": [
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/README.md",
+              "excerpt": "matches: management, missions, questions, flashcards, preview"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/components/PublishGateDialog.tsx",
+              "excerpt": "matches: questions, flashcards, enable, disable, publish"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/components/StatusBadge.tsx",
+              "excerpt": "matches: enable, disable, publish"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/components/layout/AdminShell.tsx",
+              "excerpt": "matches: missions, questions, admins, flashcards"
+            }
+          ],
+          "origin": "source",
+          "confidence": "high"
+        }
+      ],
+      "notes": "Grounded in 120 file(s); 16 test file(s); strength 18.7."
+    },
+    {
+      "requirementId": "REQ_1s0p7i",
+      "state": "complete",
+      "score": 18.3,
+      "evidence": [
+        {
+          "id": "EV_nym3owi",
+          "statement": "Grounded evidence for \"Seed content and local review reliability\" (176 files, 585 hits, strength 18.3)",
+          "locations": [
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/README.md",
+              "excerpt": "matches: local, review, include, missions, practice"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/components/PreviewDialog.tsx",
+              "excerpt": "matches: local, review, progress"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/components/PublishGateDialog.tsx",
+              "excerpt": "matches: review, include, flashcards"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/components/layout/AdminShell.tsx",
+              "excerpt": "matches: missions, flashcards"
+            }
+          ],
+          "origin": "source",
+          "confidence": "high"
+        }
+      ],
+      "notes": "Grounded in 176 file(s); 26 test file(s); strength 18.3."
+    },
+    {
+      "requirementId": "REQ_eb283y",
+      "state": "complete",
+      "score": 18,
+      "evidence": [
+        {
+          "id": "EV_dcqj945",
+          "statement": "Grounded evidence for \"AI fallback and documentation\" (51 files, 153 hits, strength 18.0)",
+          "locations": [
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/README.md",
+              "excerpt": "matches: fallback, provide, sample, clear, setup"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/api/mission-data/flashcards.json",
+              "excerpt": "matches: provide, clear"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/api/mission-data/missions.json",
+              "excerpt": "matches: provide, clear, guidance, covers"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/api/mission-data/questions.json",
+              "excerpt": "matches: provide, clear, guidance"
+            }
+          ],
+          "origin": "source",
+          "confidence": "high"
+        }
+      ],
+      "notes": "Grounded in 51 file(s); 14 test file(s); strength 18.0."
+    }
+  ],
+  "strengths": [
+    "Has automated tests (Vitest).",
+    "Build/start scripts are present and discoverable.",
+    "Covers ~100% of active requirements (grounded)."
+  ],
+  "weaknesses": [
+    "Integration risk high (8 app units, langs: Docker, Next.js, React, TypeScript, Drizzle, Vite)."
+  ],
+  "reviewEvidence": [
+    {
+      "id": "EV_5u44feu",
+      "statement": "Normalized review final score: 100 (normalized AI review available).",
+      "locations": [
+        {
+          "kind": "reviewer_comment",
+          "submissionId": "SUB_002",
+          "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/reviews/SUB_002/final-result.json",
+          "excerpt": "finalScore=100"
+        }
+      ],
+      "origin": "review_ai",
+      "confidence": "medium"
+    }
+  ],
+  "compatibilityRisk": "high",
+  "baseSuitability": {
+    "score": 90,
+    "reasoning": "coverage≈100%, tests=complete, build=present, risk=high."
+  }
+}

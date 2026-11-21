@@ -1,0 +1,54 @@
+name: SAST (OpenGrep)
+
+# Runs the exact deterministic scorecard command on every push and prints the
+# ERROR / WARNING counts, plus a per-finding summary, so you can see your score
+# before submitting. opengrep-results.json is uploaded as an artifact.
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  opengrep:
+    name: OpenGrep r/all
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install OpenGrep
+        run: |
+          curl -fsSL https://raw.githubusercontent.com/opengrep/opengrep/main/install.sh | bash
+          echo "$HOME/.opengrep/cli/latest" >> "$GITHUB_PATH"
+
+      - name: Version
+        run: opengrep --version
+
+      - name: Run scorecard scan
+        run: |
+          opengrep --config=r/all --exclude-rule=bbp-pattern-inject --json --verbose . \
+            > opengrep-results.json || true
+
+      - name: Summarize findings (the numbers that are scored)
+        run: |
+          node -e '
+            const r = JSON.parse(require("fs").readFileSync("opengrep-results.json","utf8"));
+            const res = r.results || [];
+            const by = s => res.filter(x => (x.extra||{}).severity === s);
+            const err = by("ERROR"), warn = by("WARNING");
+            const row = x => `  ${(x.extra.severity||"").padEnd(7)} ${x.check_id}\n      ${x.path}:${(x.start||{}).line}`;
+            console.log("================ OpenGrep scorecard summary ================");
+            console.log("ERROR   count:", err.length, " (scorecard 1.1.1 — target 0)");
+            console.log("WARNING count:", warn.length, " (scorecard 1.1.2 — target 0)");
+            console.log("-----------------------------------------------------------");
+            if (err.length)  { console.log("\nERROR findings:");   err.forEach(x => console.log(row(x))); }
+            if (warn.length) { console.log("\nWARNING findings:"); warn.forEach(x => console.log(row(x))); }
+            if (!err.length && !warn.length) console.log("\nCLEAN: 0 ERROR / 0 WARNING — scorecard 100.");
+          '
+
+      - name: Upload full report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: opengrep-results
+          path: opengrep-results.json

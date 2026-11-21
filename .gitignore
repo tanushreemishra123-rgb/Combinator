@@ -1,0 +1,9 @@
+node_modules/
+dist/
+*.log
+.env
+.DS_Store
+# Generated workspaces are produced by `combinator run`.
+# A delivered copy is committed under workspace/ for review; local re-runs overwrite it.
+/tmp-analysis/
+coverage/

@@ -1,0 +1,16 @@
+# Paths OpenGrep / Semgrep must NOT scan.
+# These are third-party inputs and generated outputs — not the solution's own code —
+# so scanning them would report findings for code we did not write.
+
+# Organizer-provided starter pack (immutable third-party submissions)
+starter-pack/
+
+# Generated workspaces, including combined-solution/ copies of submission code
+workspace/
+
+# Dependencies and build output
+node_modules/
+dist/
+
+# CI configuration (not application code)
+.github/

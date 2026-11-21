@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Topcoder Combinator — Review UI</title>
+    <style>
+      :root {
+        --bg: #0f1115; --panel: #171a21; --panel2: #1e222b; --line: #2a2f3a;
+        --ink: #e7eaf0; --muted: #9aa3b2; --accent: #5b9dff; --good: #3fb67f;
+        --warn: #e0a84e; --bad: #e5675f; --chip: #242a35;
+      }
+      @media (prefers-color-scheme: light) {
+        :root { --bg:#f6f7f9; --panel:#fff; --panel2:#f0f2f5; --line:#e2e5ea;
+          --ink:#1b1f27; --muted:#5a6475; --chip:#eef1f5; }
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; font: 14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+        background: var(--bg); color: var(--ink); }
+      header { padding: 14px 20px; border-bottom: 1px solid var(--line); display:flex; align-items:center; gap:14px; background:var(--panel); position:sticky; top:0; z-index:5;}
+      header h1 { font-size: 15px; margin: 0; font-weight: 650; }
+      header .sub { color: var(--muted); font-size: 12px; }
+      .layout { display: grid; grid-template-columns: 260px 1fr; min-height: calc(100vh - 52px); }
+      aside { border-right: 1px solid var(--line); padding: 14px; background: var(--panel); }
+      aside h2 { font-size: 11px; letter-spacing:.08em; text-transform: uppercase; color: var(--muted); margin: 0 0 10px; }
+      .chal { padding: 9px 11px; border-radius: 8px; cursor: pointer; margin-bottom: 6px; border:1px solid transparent; }
+      .chal:hover { background: var(--panel2); }
+      .chal.active { background: var(--panel2); border-color: var(--line); }
+      .chal .mode { font-size: 11px; color: var(--muted); }
+      main { padding: 22px 26px; max-width: 1100px; }
+      .tag { display:inline-block; padding:2px 8px; border-radius:999px; background:var(--chip); font-size:11px; color:var(--muted); }
+      .tag.good{color:var(--good);} .tag.warn{color:var(--warn);} .tag.bad{color:var(--bad);}
+      .card { background: var(--panel); border:1px solid var(--line); border-radius:12px; padding:16px 18px; margin-bottom:16px; }
+      .card h3 { margin:0 0 10px; font-size:14px; }
+      .muted{color:var(--muted);} .row{display:flex; gap:10px; flex-wrap:wrap; align-items:center;}
+      table { width:100%; border-collapse: collapse; font-size:13px; }
+      th,td { text-align:left; padding:7px 9px; border-bottom:1px solid var(--line); vertical-align:top;}
+      th { color:var(--muted); font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:.04em;}
+      .state-complete{color:var(--good);} .state-partial{color:var(--warn);}
+      .state-missing,.state-failed{color:var(--bad);} .state-not_verifiable,.state-skipped{color:var(--muted);}
+      .state-passed{color:var(--good);}
+      .decision { border:1px solid var(--line); border-radius:10px; padding:12px 14px; margin-bottom:10px; background:var(--panel2);}
+      .decision .title{font-weight:600;}
+      .btns{display:flex; gap:6px; flex-wrap:wrap; margin-top:8px;}
+      button { font: inherit; border:1px solid var(--line); background:var(--panel); color:var(--ink);
+        padding:5px 10px; border-radius:7px; cursor:pointer;}
+      button:hover{border-color:var(--accent);}
+      button.p{background:var(--accent); color:#fff; border-color:var(--accent);}
+      select, input[type=text]{font:inherit; background:var(--panel); color:var(--ink); border:1px solid var(--line); border-radius:7px; padding:5px 8px;}
+      .st{font-size:11px; padding:2px 8px; border-radius:999px; background:var(--chip);}
+      pre{white-space:pre-wrap; background:var(--panel2); padding:12px; border-radius:8px; font-size:12.5px; overflow:auto; max-height:420px;}
+      .evi{font-size:12px; color:var(--muted); margin-top:4px;}
+      .spin{color:var(--muted); font-size:12px;}
+      a{color:var(--accent);}
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Topcoder Combinator</h1>
+      <span class="sub">Copilot review workspace · files are the source of truth</span>
+      <span id="busy" class="spin"></span>
+    </header>
+    <div class="layout">
+      <aside>
+        <h2>Challenges</h2>
+        <div id="chalList"></div>
+      </aside>
+      <main id="main"><p class="muted">Select a challenge to review its combined candidate, decisions and verification.</p></main>
+    </div>
+    <script>
+      const $ = (s, el = document) => el.querySelector(s);
+      let current = null, bundle = null;
+      const busy = (on) => ($("#busy").textContent = on ? "working…" : "");
+
+      async function loadChallenges() {
+        const r = await fetch("/api/challenges").then((r) => r.json());
+        const list = $("#chalList");
+        list.innerHTML = "";
+        for (const id of r.challenges) {
+          const d = document.createElement("div");
+          d.className = "chal" + (id === current ? " active" : "");
+          d.innerHTML = `<div>${id}</div>`;
+          d.onclick = () => selectChallenge(id);
+          list.appendChild(d);
+        }
+      }
+
+      async function selectChallenge(id) {
+        current = id;
+        await loadChallenges();
+        busy(true);
+        bundle = await fetch("/api/workspace/" + id).then((r) => r.json());
+        busy(false);
+        render();
+      }
+
+      function stateTag(s) { return `<span class="st state-${s}">${s}</span>`; }
+
+      function renderMatrix(m) {
+        if (!m) return "";
+        const sources = [...new Set(m.rows.flatMap((r) => r.cells.map((c) => c.sourceId)))];
+        let h = `<div class="card"><h3>Requirement matrix <span class="muted">(${m.mode})</span></h3><table><thead><tr><th>Requirement</th>`;
+        for (const s of sources) h += `<th>${s}</th>`;
+        h += `<th>Recommended</th><th>Conf.</th></tr></thead><tbody>`;
+        for (const row of m.rows) {
+          h += `<tr><td>${row.requirementTitle}<div class="evi">${row.requirementId}</div></td>`;
+          for (const s of sources) {
+            const c = row.cells.find((c) => c.sourceId === s);
+            h += `<td>${c ? `<span class="state-${c.state}">${c.state}</span> <span class="muted">${c.score ?? ""}</span>` : "—"}</td>`;
+          }
+          h += `<td><b>${row.recommendedSource ?? "—"}</b></td><td class="muted">${row.confidence}</td></tr>`;
+        }
+        h += `</tbody></table></div>`;
+        return h;
+      }
+
+      function renderDecisions(dw) {
+        if (!dw) return "";
+        let h = `<div class="card"><h3>Copilot decisions <span class="muted">(${dw.decisions.length})</span></h3>`;
+        for (const d of dw.decisions) {
+          const opts = d.options.map((o) => `<option value="${o.id}">${o.label}</option>`).join("");
+          h += `<div class="decision">
+            <div class="row"><span class="title">${d.title}</span> ${stateTag(d.state)} <span class="muted">${d.kind}</span></div>
+            <div class="evi">${d.reasoning}</div>
+            <div class="btns">
+              <button class="p" onclick="decide('${d.id}','accepted')">Accept</button>
+              <button onclick="decide('${d.id}','rejected')">Reject</button>
+              <button onclick="decideAlt('${d.id}', this)">Alternative…</button>
+              <select data-alt="${d.id}">${opts}</select>
+              <button onclick="decide('${d.id}','blocked')">Block</button>
+              <button onclick="decide('${d.id}','manual_review')">Manual</button>
+            </div>
+            ${d.copilotComment ? `<div class="evi">💬 ${d.copilotComment}</div>` : ""}
+          </div>`;
+        }
+        h += `</div>`;
+        return h;
+      }
+
+      function renderVerification(v) {
+        if (!v) return "";
+        let h = `<div class="card"><h3>Verification <span class="st state-${v.overall}">${v.overall}</span></h3>`;
+        h += `<table><tbody>`;
+        for (const s of v.steps) h += `<tr><td>${s.name}</td><td class="state-${s.state}">${s.state}</td><td class="muted">${s.detail}</td></tr>`;
+        h += `</tbody></table><div class="evi" style="margin-top:8px">${v.honestSummary}</div></div>`;
+        return h;
+      }
+
+      function render() {
+        if (!bundle) return;
+        const m = bundle.manifest || {};
+        let h = `<div class="row" style="margin-bottom:14px">
+          <h2 style="margin:0">${(m.title) || current}</h2>
+          <span class="tag">${m.mode}</span>
+          <span class="tag ${m.integrityCritical ? "bad" : "good"}">integrity ${m.integrityCritical ? "CRITICAL" : "ok"}</span>
+          <span class="tag">review-context: ${m.reviewContextMode || "?"}</span>
+          <span class="tag ${m.verificationOverall === "passed" ? "good" : m.verificationOverall === "failed" ? "bad" : "warn"}">verify: ${m.verificationOverall}</span>
+          ${bundle.usage ? `<span class="tag">LLM ${bundle.usage.provider}/${bundle.usage.model} · ${bundle.usage.calls} calls · ~$${bundle.usage.approxCostUsd}</span>` : ""}
+        </div>`;
+        h += renderDecisions(bundle.decisions);
+        h += renderMatrix(bundle.matrix);
+        h += renderVerification(bundle.verification);
+        if (bundle.concept) h += `<div class="card"><h3>Synthesized concept</h3><pre>${escapeHtml(bundle.concept)}</pre></div>`;
+        if (bundle.provenance) h += `<div class="card"><h3>Provenance (${bundle.provenance.entries.length})</h3><pre>${escapeHtml(JSON.stringify(bundle.provenance.entries, null, 2))}</pre></div>`;
+        $("#main").innerHTML = h;
+      }
+
+      function escapeHtml(s){return String(s).replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));}
+
+      async function decide(decisionId, state, selectedOptionId) {
+        const comment = state === "blocked" || state === "manual_review" ? prompt("Comment (optional):") || undefined : undefined;
+        busy(true);
+        const res = await fetch("/api/decide/" + current, {
+          method: "POST", headers: { "content-type": "application/json" },
+          body: JSON.stringify({ decisionId, state, selectedOptionId, comment }),
+        }).then((r) => r.json());
+        busy(false);
+        if (res.error) return alert("Error: " + res.error);
+        bundle = res.workspace;
+        render();
+      }
+      function decideAlt(decisionId, btn) {
+        const sel = btn.parentElement.querySelector(`select[data-alt="${decisionId}"]`);
+        decide(decisionId, "alternative_selected", sel.value);
+      }
+
+      loadChallenges();
+    </script>
+  </body>
+</html>

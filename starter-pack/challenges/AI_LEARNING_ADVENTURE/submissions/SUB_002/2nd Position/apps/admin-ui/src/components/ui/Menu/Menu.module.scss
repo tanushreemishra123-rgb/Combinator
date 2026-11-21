@@ -1,0 +1,102 @@
+@use '../../../styles/tokens' as t;
+
+.root {
+  display: inline-flex;
+}
+
+.trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: t.$spacing-1;
+  padding: t.$spacing-1 t.$spacing-2;
+  background: transparent;
+  border: none;
+  border-radius: t.$border-radius-md;
+  color: t.$color-text-secondary;
+  font-family: inherit;
+  font-size: t.$typography-font-size-sm;
+  cursor: pointer;
+  transition:
+    background-color t.$transition-default,
+    color t.$transition-default;
+
+  &:hover:not(:disabled) {
+    background: t.$color-background-surface-muted;
+    color: t.$color-text-primary;
+  }
+
+  &:focus-visible {
+    outline: t.$border-width-active solid t.$color-border-focus;
+    outline-offset: 2px;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+  }
+}
+
+.content {
+  position: fixed;
+  z-index: t.$z-index-menu;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 160px;
+  padding: t.$spacing-1;
+  background: t.$color-background-surface;
+  border: t.$border-width-default solid t.$color-border-default;
+  border-radius: t.$border-radius-md;
+  box-shadow: t.$shadow-dropdown;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: t.$spacing-2;
+  width: 100%;
+  padding: t.$spacing-2 t.$spacing-3;
+  background: transparent;
+  border: none;
+  border-radius: t.$border-radius-sm;
+  color: t.$color-text-primary;
+  font-family: inherit;
+  font-size: t.$typography-font-size-sm;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color t.$transition-default;
+
+  &:hover:not(:disabled) {
+    background: t.$color-background-surface-subtle;
+  }
+
+  &:focus-visible {
+    outline: t.$border-width-active solid t.$color-border-focus;
+    outline-offset: -2px;
+  }
+
+  &:disabled {
+    color: t.$color-text-disabled;
+    cursor: not-allowed;
+  }
+}
+
+.destructive {
+  color: t.$color-text-danger;
+
+  &:hover:not(:disabled) {
+    background: t.$color-background-badge-danger;
+  }
+}
+
+.itemIcon {
+  display: inline-flex;
+  align-items: center;
+}
+
+.separator {
+  height: 1px;
+  margin: t.$spacing-1 0;
+  background: t.$color-border-subtle;
+}

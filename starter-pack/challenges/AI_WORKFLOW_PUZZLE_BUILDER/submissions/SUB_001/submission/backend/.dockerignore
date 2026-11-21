@@ -1,0 +1,31 @@
+# Virtualenv and caches - never belong in the image
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Secrets and local config - the container gets env vars from Compose
+.env
+.env.*
+!.env.example
+
+# Docker build files themselves + repo metadata
+Dockerfile
+.dockerignore
+.gitignore
+
+# Dev-only tooling - not needed at runtime
+tests/
+pytest.ini
+ruff.toml
+requirements-dev.txt
+
+# Editor / OS noise
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.log

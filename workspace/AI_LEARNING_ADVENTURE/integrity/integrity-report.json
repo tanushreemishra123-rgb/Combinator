@@ -1,0 +1,4499 @@
+{
+  "challengeId": "AI_LEARNING_ADVENTURE",
+  "before": [
+    {
+      "path": "README.md",
+      "sha256": "76351df83b20a23543d62a36db9eb82982dc59b914f9aada19ad3af8a68adecd",
+      "bytes": 173
+    },
+    {
+      "path": "challenge-context.json",
+      "sha256": "a40973fe3952304e7b7b4d03ff8b945b353400b6ccda21fc1934a9c2b941c2fa",
+      "bytes": 4068
+    },
+    {
+      "path": "challenge-package.json",
+      "sha256": "c41daa47360e0e34e98a004102c3d0f41624fdba8c97663bbf02bc0e4034e386",
+      "bytes": 407
+    },
+    {
+      "path": "integrity/source-hashes.json",
+      "sha256": "622aa74cc82c569ce79a641c6dd2d1f2086c48e3c7eaf37e0157f8e91076b3f0",
+      "bytes": 101
+    },
+    {
+      "path": "reviews/SUB_001/final-result.json",
+      "sha256": "01747bc1eddc483d34e69f0f570db276ec6f46d32fcf644e0f2533ee06e0b52c",
+      "bytes": 210
+    },
+    {
+      "path": "reviews/SUB_002/final-result.json",
+      "sha256": "b9d0034732b1035576b567f94c4c33c9d204750b4221ec7b2f2849c1f4c8dd84",
+      "bytes": 210
+    },
+    {
+      "path": "submissions/SUB_001/signal-and-spark/.gitignore",
+      "sha256": "663183d0b06a00c845e18eabeffc86e3003c2b507675baa7cdc3372ae7460d09",
+      "bytes": 136
+    },
+    {
+      "path": "submissions/SUB_001/signal-and-spark/README.md",
+      "sha256": "cc8f0552eac8780f24f3d3be999346ff3d9d4ed69d6b1fd520644e2b6b055c2f",
+      "bytes": 4457
+    },
+    {
+      "path": "submissions/SUB_001/signal-and-spark/THIRD_PARTY_NOTICES.txt",
+      "sha256": "ea501ce1676c63510fdbf287e22b7b681f1496cd6f9c26cf60186b49513cf18c",
+      "bytes": 2209
+    },
+    {
+      "path": "submissions/SUB_001/signal-and-spark/index.html",
+      "sha256": "b471d1dbbf538dd07ce84c04acb4bee09fc1e630126da35b8baeeb752d91edc1",
+      "bytes": 456
+    },
+    {
+      "path": "submissions/SUB_001/signal-and-spark/package-lock.json",
+      "sha256": "8ff591ee3f66af6d2440b75de84bd8be14486a2b7bd2856a1c1badc40ef3f456",
+      "bytes": 94200
+    },
+    {
+      "path": "submissions/SUB_001/signal-and-spark/package.json",
+      "sha256": "b844d6aa1a174c14fecc3819be1a05637e816091c0ad869797ed7700b3867caf",
+      "bytes": 670
+    },
+    {
+      "path": "submissions/SUB_001/signal-and-spark/src/App.test.tsx",
+      "sha256": "c1e75bbc64ea1bc9bfe821e6779757436f30bfd06395ff8f17d2a4b832f959c4",
+      "bytes": 3114
+    },
+    {
+      "path": "submissions/SUB_001/signal-and-spark/src/App.tsx",
+      "sha256": "829310bf2ed697b5987b1b868df89a401d6299785170211b7a39fb0864b32a5d",
+      "bytes": 3887
+    },
+    {
+      "path": "submissions/SUB_001/signal-and-spark/src/components/Brand.tsx",
+      "sha256": "e6ac99fc81ff719b89e4d15da66cd30034ab5e5362fc9e093281b4e8766292b2",
+      "bytes": 2530
+    },
+    {
+      "path": "submissions/SUB_001/signal-and-spark/src/components/Header.tsx",
+      "sha256": "275588fac2363ee95ca769f6dcbc4ca9a167bc4bc1663cdc6ca9b7f3eeff5b5f",
+      "bytes": 1514
+    },
+    {
+      "path": "submissions/SUB_001/signal-and-spark/src/components/Ui.tsx",
+      "sha256": "5b7e3c5fd01c96863b19b245421b781c5617e7fb86cebba35cc4f1aaa9dbf044",
+      "bytes": 740
+    },
+    {
+      "path": "submissions/SUB_001/signal-and-spark/src/data/seed.test.ts",
+      "sha256": "cd2b83039af49d0f00f52f68331964437fcf1c4839654af0736164cbc49b159b",
+      "bytes": 1848
+    },
+    {
+      "path": "submissions/SUB_001/signal-and-spark/src/data/seed.ts",
+      "sha256": "ef5c56969cedfb35278b40f188b4e1c6ec0dd3e0c465d0fc5049600441fa2ae1",
+      "bytes": 34205
+    },
+    {
+      "path": "submissions/SUB_001/signal-and-spark/src/features/AdminView.tsx",
+      "sha256": "4d766e49c98b219b23e1ba68a4392a3ba7d28232cce76d95358d2ba534744883",
+      "bytes": 12559
+    },
+    {
+      "path": "submissions/SUB_001/signal-and-spark/src/features/JourneyView.tsx",
+      "sha256": "d23bf1c9583d56248f93c137caf88d6498c67ea60b46b4d339e3a75936984b40",
+      "bytes": 5904
+    },
+    {
+      "path": "submissions/SUB_001/signal-and-spark/src/features/MissionView.tsx",
+      "sha256": "93f8a9a331a4a227c06778d61ea7a8a66471bae96220bc3a301c89cfcf16b0de",
+      "bytes": 12659
+    },
+    {
+      "path": "submissions/SUB_001/signal-and-spark/src/features/PracticeView.tsx",
+      "sha256": "087d779e4e64218b530413242ab5d762424ceb86b8366d6faee5038d9d1b5e43",
+      "bytes": 4890
+    },
+    {
+      "path": "submissions/SUB_001/signal-and-spark/src/features/ProgressView.tsx",
+      "sha256": "300a1f485bfb78f00222608261e785a3fc3de08e0a0b2c3896f507db5550ee14",
+      "bytes": 3017
+    },
+    {
+      "path": "submissions/SUB_001/signal-and-spark/src/features/TutorView.tsx",
+      "sha256": "9035ef67808fa0dea715bdf4c2f85428391119bdd192f430f3494ebe216c10e2",
+      "bytes": 4514
+    },
+    {
+      "path": "submissions/SUB_001/signal-and-spark/src/lib/storage.ts",
+      "sha256": "69f9a45bfb65affce174ce8bc51bb33236fd84f82002061b5ae161e6637f3a84",
+      "bytes": 5062
+    },
+    {
+      "path": "submissions/SUB_001/signal-and-spark/src/lib/tutor.test.ts",
+      "sha256": "8a52841fbcdd4398679f5a47d79410e5a0448e4535129e4c2a2034b03cd40f65",
+      "bytes": 1515
+    },
+    {
+      "path": "submissions/SUB_001/signal-and-spark/src/lib/tutor.ts",
+      "sha256": "4b06b7a76e0ab2fd4c9b424713962920c2989a871f325baddd1379c53d5e5594",
+      "bytes": 4287
+    },
+    {
+      "path": "submissions/SUB_001/signal-and-spark/src/main.tsx",
+      "sha256": "9abbafa120f0cd4ed04b6d76ea696f353578e118b7bc975767ef41528dd5d5a0",
+      "bytes": 231
+    },
+    {
+      "path": "submissions/SUB_001/signal-and-spark/src/styles.css",
+      "sha256": "7307381126f348af28334808b053b017b0d246bc6a1e601ae6ce733f58d83b37",
+      "bytes": 44293
+    },
+    {
+      "path": "submissions/SUB_001/signal-and-spark/src/types.ts",
+      "sha256": "e27e6c8bc5673ac4decf3c493ea98d5c8ca61713b9a03ec7e7597c06287fcfae",
+      "bytes": 1282
+    },
+    {
+      "path": "submissions/SUB_001/signal-and-spark/src/vite-env.d.ts",
+      "sha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5",
+      "bytes": 38
+    },
+    {
+      "path": "submissions/SUB_001/signal-and-spark/tsconfig.app.json",
+      "sha256": "e34b9e86ade5665af88225644c777328180aaaf9c4a39624968c4284f4fce3ef",
+      "bytes": 540
+    },
+    {
+      "path": "submissions/SUB_001/signal-and-spark/tsconfig.json",
+      "sha256": "770b4140bbb581e2dfd9ea9946ffc9c75a1d86ba7d2db5f77c83e37cbdf9d808",
+      "bytes": 119
+    },
+    {
+      "path": "submissions/SUB_001/signal-and-spark/tsconfig.node.json",
+      "sha256": "4de39227e37a661a1639473f6ecff13131b6779d575e2f0634bbf085403799fa",
+      "bytes": 251
+    },
+    {
+      "path": "submissions/SUB_001/signal-and-spark/vite.config.ts",
+      "sha256": "c50bc02fdf52a5cd4c7329008a2e5cf6e43114a11ebac77b4443ba45ecc3033c",
+      "bytes": 315
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/.dockerignore",
+      "sha256": "8a90770e260fcb830c861fa86900db99b7351085d3c5f5277dc1e886d1fded92",
+      "bytes": 163
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/.env.example",
+      "sha256": "03b3d18502394518a085b3e0d8502e444d6784398dc86f5cb0c6b9f16b5461e7",
+      "bytes": 288
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/.gitignore",
+      "sha256": "2ad64f4f40a8379b262045c3369cf3a5e891abe2cb107052d91f069fee177333",
+      "bytes": 76
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/AGENTS.md",
+      "sha256": "4a83b696d8073dade77755ba2ed79af9e4e339e563b477f4b7115c6c193b470d",
+      "bytes": 1063
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/CLAUDE.md",
+      "sha256": "918b1c90559355ef78f33fdf3562f2b021ef8bdfd8a5c8415e5decd44934de55",
+      "bytes": 10
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/README.md",
+      "sha256": "1ea23b3923031f1d59a33bac5016f570bb5da289032e5dfb833f8e501a8703f0",
+      "bytes": 12818
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/ai-learning-adventure-demo.webm",
+      "sha256": "dd74eb4c81a6504fb5ef3a08ca032d08ba7547d325f6a82ec889f37ccc0dcd3f",
+      "bytes": 14932546
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/Dockerfile",
+      "sha256": "73f63f41341be9cf72f8b9bf86ef7ff3bd91f9d97dd7277eff7f8ad83f134406",
+      "bytes": 1544
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/next-env.d.ts",
+      "sha256": "600c688e996ede98733389475220d324c7682155d37318a8f513388b8ccebc6e",
+      "bytes": 290
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/next.config.mjs",
+      "sha256": "58fb7eab7076187daa205d8a316cf05256ef3154c059a12ddeb7e9b478299836",
+      "bytes": 396
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/package.json",
+      "sha256": "a60e429540d7362c35f2d316b3e41401d7c9c97c26e8bbc58aeb51034ef0096c",
+      "bytes": 743
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/scripts/build-tokens.js",
+      "sha256": "f626d15d73fc1fb9481ab1bf4566ec5b5d5466b44dc98240ff4c97575068cc34",
+      "bytes": 3535
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ConfirmDialog.tsx",
+      "sha256": "5f92275315715de015b5c88e94e86f78db1df0445d4b2c47647ec58162f002f8",
+      "bytes": 996
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/PreviewDialog.module.scss",
+      "sha256": "ab50bf3c1db784ad3265ba3ac37c6bd0662058a568414eddbd575c1c71948c92",
+      "bytes": 641
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/PreviewDialog.tsx",
+      "sha256": "9fc242f9afd543af2886dfd31ec5e2d41c8549dee4b8290fa905f00ea736aefb",
+      "bytes": 2563
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/PublishGateDialog.module.scss",
+      "sha256": "e80ed86d5529aaa0052a20c6cab408859fb339b0beb4a9d6481059f096af9938",
+      "bytes": 964
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/PublishGateDialog.tsx",
+      "sha256": "b61990839dfb44b037a097147abd863b64abe61b41fc4f983e63cc0f8845c939",
+      "bytes": 7326
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/StatusBadge.tsx",
+      "sha256": "cd1c1bfc9686c1c4a9a9688d21925b0d70e169f81fd86cd681430bfe41d6a3ab",
+      "bytes": 653
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/layout/AdminShell.module.scss",
+      "sha256": "9de90ff1dd2bcca40afd7c98c1465f056b9eda8b48b4b9d6b7867dbf19184ba9",
+      "bytes": 1862
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/layout/AdminShell.tsx",
+      "sha256": "a4ed3bc8c4903e4a63fce86b631ef51afea7ef1d7a188e2e3b8a4d61c499a74c",
+      "bytes": 2226
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/Accordion/Accordion.module.scss",
+      "sha256": "557ebb69c5a794eeeba296cfb84ad6fc3e49036b031640249b682549205326f4",
+      "bytes": 1241
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/Accordion/Accordion.tsx",
+      "sha256": "48f834e499a443bd0c9f67559ad982ade022f2d550d4db56888ee63a77b67033",
+      "bytes": 5320
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/AttentionStrip/AttentionStrip.module.scss",
+      "sha256": "1c243f92365955110b20fbcadb91d5a8626cea862a52e4f099b06fa2e129b90f",
+      "bytes": 1491
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/AttentionStrip/AttentionStrip.tsx",
+      "sha256": "9436a14c55f704f1c2677125a74df24e5dc9931a667ccb162d0d7f6ea0592be6",
+      "bytes": 1433
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/Badge/Badge.module.scss",
+      "sha256": "144b110f4d35a82947a3c512b39bb051c844b260f515a6a90c61a36ca40e6d0e",
+      "bytes": 1362
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/Badge/Badge.tsx",
+      "sha256": "5870de4a5a6271ad61e1d55969e70e918b456b23879c38a31d1982f93083d4d3",
+      "bytes": 610
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/Button/Button.module.scss",
+      "sha256": "3b53252368b08b63e1d11b38f7fba28bc81e20fbe187b7fce852f67b68b190df",
+      "bytes": 1770
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/Button/Button.tsx",
+      "sha256": "81ccb0d28679f36a22cc1b18ac99a79149bcf45b454d85007ac5796a1ae12dc5",
+      "bytes": 1168
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/Checkbox/Checkbox.module.scss",
+      "sha256": "97e8f3761aec48884948cffb82de74d48f2c3cded7aa2053e642017820003a28",
+      "bytes": 1461
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/Checkbox/Checkbox.tsx",
+      "sha256": "b03875d287afa73d6933dd4347ac07034fd78cd717d0a83251e52113c75715ba",
+      "bytes": 1721
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/Dialog/Dialog.module.scss",
+      "sha256": "384ac82d77aba52b85ac374607edf1372579e0c417b475eec605d120febc79b5",
+      "bytes": 2210
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/Dialog/Dialog.tsx",
+      "sha256": "a8e13de1bb37ba7a64b95ff96dfac235944f08968189b65ff3f5a872695f5b26",
+      "bytes": 4015
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/EmptyState/EmptyState.module.scss",
+      "sha256": "fc6d0386486ef86da67d1d1f19bd89ff9befe05097f1da552b11f90152d342e0",
+      "bytes": 699
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/EmptyState/EmptyState.tsx",
+      "sha256": "9560e5c3f0a5c5edfbc0e42492c07abca98521305f7b10f9f48fceaf5f6a336a",
+      "bytes": 769
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/ErrorState/ErrorState.module.scss",
+      "sha256": "d33f2388cee6c58d3a84b9b3839d91a745bbb7738dbf1f2577f3cf6ccca80488",
+      "bytes": 583
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/ErrorState/ErrorState.tsx",
+      "sha256": "b9a9694c990db729a78628873b7411343a8b7ec69f6eda5f48bf712afc4d1191",
+      "bytes": 654
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/FilterToolbar/FilterToolbar.module.scss",
+      "sha256": "541c6a942db534d9dd6f37a115e821c422d60eac2014118ed80fae92e60edec9",
+      "bytes": 183
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/FilterToolbar/FilterToolbar.tsx",
+      "sha256": "3d39204004ae86721db718fb47df97475c7f14b9dad178a4a02c06921ecc52c4",
+      "bytes": 398
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/IconButton/IconButton.module.scss",
+      "sha256": "66bcb330a4fe3caf9d8c10c895ed3eb154fb7e5c54398a3b6fa7ea005a2c47e7",
+      "bytes": 889
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/IconButton/IconButton.tsx",
+      "sha256": "32cb43dca9df199c96ed8a3f059fb2531fe78b56af5796749ce6b7c71e29a916",
+      "bytes": 567
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/LoadingState/LoadingState.module.scss",
+      "sha256": "7bc542c333386e072e90b622d447a745a328b322f05dc4f2936494d39d71b06e",
+      "bytes": 582
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/LoadingState/LoadingState.tsx",
+      "sha256": "dcbf5ab033dade5f51647546dcf3466f6eefa9623db739b475dc5d77eeef7745",
+      "bytes": 453
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/Menu/Menu.module.scss",
+      "sha256": "28d5c58f09c864ca309e908ad560cca24ef5d50d734517624c2c7ca96849613d",
+      "bytes": 2109
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/Menu/Menu.tsx",
+      "sha256": "a0607b4ecb8954f78d43ce150f1e80554d88846fbf5167f93f10e8ad611edf09",
+      "bytes": 7105
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/Pagination/Pagination.module.scss",
+      "sha256": "61371ff086be29dabe404ad59511d4509d990818edc99c1e8a615bf928c091af",
+      "bytes": 1298
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/Pagination/Pagination.tsx",
+      "sha256": "8486c6fb8859aae6bb8c14ebec762bef44a1bac5185c6013636b86efba5e115e",
+      "bytes": 2041
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/README.md",
+      "sha256": "41a866ad1541e914d2e8efd538d8cb8d7d56462fd263236d203162f2efc98f38",
+      "bytes": 35058
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/RadioGroup/RadioGroup.module.scss",
+      "sha256": "1ee346242ac0a2114ccddfdacf4b2de3d2a5b153afff9cd4a32843c88fa8e173",
+      "bytes": 1898
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/RadioGroup/RadioGroup.tsx",
+      "sha256": "089c8c6a7500dc855e76b4a04061b721a1a1bb89e7ed2969bf4906a3143cb1f1",
+      "bytes": 2067
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/SegmentedGroup/SegmentedGroup.module.scss",
+      "sha256": "e83b5024dd4babc16ff02a9e2e0d7929e2ec8237a6359467b52997b141a32631",
+      "bytes": 1288
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/SegmentedGroup/SegmentedGroup.tsx",
+      "sha256": "e1bab2f0c9884f9113153077a0747e26067bc17502c41a0b605e904a547699c3",
+      "bytes": 1219
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/Select/Select.module.scss",
+      "sha256": "84e5e782bbdc55fcc2baf07e6ae114ea6e3cc2e5ab84b806bb6b0dd1a1857f46",
+      "bytes": 1763
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/Select/Select.tsx",
+      "sha256": "79d55517ac18890b57cdb5bb0a8aac1c4ed94d7a5b59f8fab0142a1358e58ebc",
+      "bytes": 2541
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/Switch/Switch.module.scss",
+      "sha256": "38fbc7ecae178a5e32eb6966ebe58c6d147bdf4d52cf8b1bfd3c940faac0da59",
+      "bytes": 1342
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/Switch/Switch.tsx",
+      "sha256": "5d3bc2fdd59c3bd3301112346984cc55c4ddeb32383bc1878290d0ab0b874456",
+      "bytes": 1268
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/Table/Table.module.scss",
+      "sha256": "750c2c8caf3ed3e803c38c692b0d1ab41e2d119791ee235975a648f97a23861f",
+      "bytes": 2446
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/Table/Table.tsx",
+      "sha256": "f2406232bc45a0755afa84e4cdf75003922bcacc7bd204837d4826f6bb410cfe",
+      "bytes": 4530
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/Tabs/Tabs.module.scss",
+      "sha256": "89a47e0059ec521f020e5c0867b896c2f339bc958be2223dc5af6f3cb180c067",
+      "bytes": 1256
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/Tabs/Tabs.tsx",
+      "sha256": "41bcb37545bcd4d5783d2cf21088e75bb244f6757bbfe76c6e2a35a342b21404",
+      "bytes": 4272
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/TextArea/TextArea.module.scss",
+      "sha256": "d8f2591948e84f9b9f6dad6dbeb3a40aeb37a9f467038e97ebadf4587138b86e",
+      "bytes": 1522
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/TextArea/TextArea.tsx",
+      "sha256": "02bb57b89bb877ab8bef64e3cbec2b2c4e269742c5e69b5b06d49e8cb6fa0454",
+      "bytes": 1319
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/TextInput/TextInput.module.scss",
+      "sha256": "e5e03a27d2944ddf873fa7065dcf53848f5ec58ac96a6e1ebe5bcd53cffc8e88",
+      "bytes": 1702
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/TextInput/TextInput.tsx",
+      "sha256": "b56553b28809cc270fb82b075bb39af6162f2d4953d77bd61236a72ec77d1d90",
+      "bytes": 1484
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/Tooltip/Tooltip.module.scss",
+      "sha256": "cd4c0f09a8ece30d115dc4aaebbb5be17da07fafb5d34255ad95079b3c222bb3",
+      "bytes": 1022
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/Tooltip/Tooltip.tsx",
+      "sha256": "df8b109220a29edce218ff28328fcb58cc74e464d4090c0cad053cd05f1ae93c",
+      "bytes": 769
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/Typography/Typography.module.scss",
+      "sha256": "1aba4c802eaccee5541c4edafcec343054ae62d93f4b8edf6dd61b13486ec208",
+      "bytes": 2223
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/Typography/Typography.tsx",
+      "sha256": "feff9f92f3e53dc7da8790d012df7c5177f7dfbe84bfeba18b81e3c5b9f8d885",
+      "bytes": 2147
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/cx.ts",
+      "sha256": "d072fed817c1c489578df5f7a73858dec3d0d96374d145abc4d91c845064397c",
+      "bytes": 157
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/index.ts",
+      "sha256": "b288eb46669a02316572950f86dc4b9d87cbdf8b3ec6227fe4d2a986265f0687",
+      "bytes": 897
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/features/assignments/AssignmentBoard.module.scss",
+      "sha256": "a83e7d416ba50f8742c47f40f65c1038a6e65539bfce6e8916b681407b21f303",
+      "bytes": 3018
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/features/assignments/AssignmentBoard.tsx",
+      "sha256": "a2f53872f64a4bf89edfd44fa699dd38782d8ecad5d700d64dcab5d49904d5ae",
+      "bytes": 24879
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/features/curriculum/CurriculumPage.module.scss",
+      "sha256": "fd70ffddfac542f79354b1c2de2a7b1d116c7c0dc3bdddd614833118e680f3d4",
+      "bytes": 1532
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/features/curriculum/CurriculumPage.tsx",
+      "sha256": "03938fdbe331b9a4bf33f6b54029f831ad3951d3ab70646c81b08480ad8e0c32",
+      "bytes": 9624
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/features/editors/AwardEditorPage.module.scss",
+      "sha256": "c01432df2fd3f0affafc5e6a5160d5c37068768221332991dc83cd6bfcd477a1",
+      "bytes": 381
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/features/editors/AwardEditorPage.tsx",
+      "sha256": "d8b3698b22ef11d5a5c3a3bd6d7e7e910098ed670d067ea9f9854669e0b01234",
+      "bytes": 10549
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/features/editors/EditorFooter.module.scss",
+      "sha256": "7410ed94bd2fa40d418a80a1ebe7b625de5b19ef898323c35c07767d2d2f08fb",
+      "bytes": 770
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/features/editors/EditorFooter.tsx",
+      "sha256": "5c5df23e3163271d45d7f6be135bec32bae25352616c339502ea4de35516c2b2",
+      "bytes": 2532
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/features/editors/FlashcardEditorPage.module.scss",
+      "sha256": "567ff9650c30b8c9a577930053957346dfbade2ed4172670ae51bd527732953f",
+      "bytes": 1198
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/features/editors/FlashcardEditorPage.tsx",
+      "sha256": "015ec41673b03a2c670a93d328aaa218b93f440a8f3263f1c1b85cb283505e19",
+      "bytes": 8042
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/features/editors/MissionEditorPage.module.scss",
+      "sha256": "6912d0741186d175538df8060141303dfeb49b7a1f1d99ffcd42f5d2e2262337",
+      "bytes": 1281
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/features/editors/MissionEditorPage.tsx",
+      "sha256": "410bc2293efdef71f6017b7a384a94ec8c7632128280e0756609dc62cae71348",
+      "bytes": 25193
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/features/editors/QuestionEditorPage.module.scss",
+      "sha256": "f9b3ef879054c4ede3aad9d5760b1e5ce6327e092dc90567cf632a09e1395e85",
+      "bytes": 2023
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/features/editors/QuestionEditorPage.tsx",
+      "sha256": "c4cd120aa120c65e13ac63fdab59dd948ade221c156db94c8e80bfa1bc81a4d1",
+      "bytes": 15010
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/features/editors/useEditor.ts",
+      "sha256": "dee1f1f072f6930bd520548113e5973445f9c51a4ef23f664953e3a9cd384b30",
+      "bytes": 3397
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/features/inventory/InventoryPage.tsx",
+      "sha256": "0ed7fd7b989e82274bbfe34477574e7e08c88eabce5422de81891888fc39f4bd",
+      "bytes": 18485
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/features/settings/SettingsPage.module.scss",
+      "sha256": "56c4a361f3a7b8330f9faf233f711791a48ef0832c8564ab0c5268894a64fe96",
+      "bytes": 1385
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/features/settings/SettingsPage.tsx",
+      "sha256": "e9dfdd0279856b8770a944be8cf33d20e1ba475923f5c359b3cf89d27d902104",
+      "bytes": 12187
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/lib/api.ts",
+      "sha256": "bd656f1420571fe154c577b572dda7a724417f3cea447e0eebafb2c8d55cdd47",
+      "bytes": 6527
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/lib/hooks.ts",
+      "sha256": "d78ef53a5c60ce3d5a40ead23893f4da9ec99a461cc66aacf0994c40f5aab2fe",
+      "bytes": 1280
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/lib/labels.ts",
+      "sha256": "b5830471191ad16bb8fc00c705ddde68083daccfb24c5983a400e7bf9de83548",
+      "bytes": 2238
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/pages/$.tsx",
+      "sha256": "1a52159421687f7a0fb54b58de4d353e575452926336339d3bb5c0d6bf049b1e",
+      "bytes": 16310
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/pages/_app.tsx",
+      "sha256": "d3a07a07ab15d26b6e09520cbd3e259f8ba08c3d0bc8e299c836d283fc94e08b",
+      "bytes": 263
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/pages/badges/[id].tsx",
+      "sha256": "42dae4023af9214912ff92d02521bf07f4bff79d2411645fd7e92e2d66373f32",
+      "bytes": 417
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/pages/badges/index.tsx",
+      "sha256": "e1f7ce8f2ddb0f184f172c0dc19b11d99afe0fec468fefbdf50f2f511f6805aa",
+      "bytes": 208
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/pages/curriculum.tsx",
+      "sha256": "6ef966df27286084d6228121824ed5a4429d9f60f24b8921093c2b953628f34a",
+      "bytes": 193
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/pages/flashcards/[id].tsx",
+      "sha256": "8dbd463f794511882820a70ed78b8ba381f9266d15136d591d44ba03c0d0af41",
+      "bytes": 437
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/pages/flashcards/index.tsx",
+      "sha256": "25d82ff7e83aaaca5ccc87a941a2d79c87beade1cf8c11bc49d3ddf10955a733",
+      "bytes": 220
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/pages/index.tsx",
+      "sha256": "09459399888411608142c38024eede92ccd7851795d16d7bb875e5f489afe55e",
+      "bytes": 302
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/pages/missions/[id].tsx",
+      "sha256": "cc10dc80f11fe54de39df76b7822c5e5e886a690689b699824c33e9494349320",
+      "bytes": 427
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/pages/missions/assignments.tsx",
+      "sha256": "0a75674905f6816309ef2fd139b70788190168f9f970e698fbb147a6abd727d5",
+      "bytes": 207
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/pages/missions/index.tsx",
+      "sha256": "21b3e350e204623ce4a003814a8a0cb63cb5ad3bdd024467a5858d0f72c5a05f",
+      "bytes": 214
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/pages/questions/[id].tsx",
+      "sha256": "62fa2eef62a2c7e031e8a1a0a581ccd3dae8ec03a49f4c8b644220ea29614532",
+      "bytes": 432
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/pages/questions/index.tsx",
+      "sha256": "857a71d007743d0d1778c621930546ae2fb98dcc302ce39f486616c84e35ff96",
+      "bytes": 217
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/pages/settings.tsx",
+      "sha256": "79690a35d6af865df5d503c70696719052cb094d262f9f28ec0596cd3a77777c",
+      "bytes": 181
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/styles/_tokens.scss",
+      "sha256": "89ceffe989411afcf55a6fda964caf6b0c4e40d086ccc08a233ca805da8d9387",
+      "bytes": 3902
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/styles/main.scss",
+      "sha256": "39a6621e1a1e61d32ddca964e4198e86fb9b2f0a861572629ca7269ce149e49d",
+      "bytes": 1516
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/styles/tokens.js",
+      "sha256": "21c1b5d29c702a406fbd860374bb9201611e251a13bd52e86d911cc59cd9adba",
+      "bytes": 8653
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/styles/tokens.json",
+      "sha256": "584f6e7febdef252b1c3d2148aa611facb4f52b0e0ea5dd288fb737d1b97292b",
+      "bytes": 3464
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/tsconfig.json",
+      "sha256": "fe1cfcae443e4b4e766e2bdbd5e82e9fd55f314ba49f9b00ed9b1c402562b46d",
+      "bytes": 434
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/API.md",
+      "sha256": "78c9bccd3707d64d367d459b73cb41aae7cc13df912519af00a6cf15e0a2dc8c",
+      "bytes": 9943
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/Dockerfile",
+      "sha256": "211c42b7e347196e321d0ccd9124c8bcee42a932b375a68ddfc1701f4fce2dd8",
+      "bytes": 1132
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/mission-data/awards.json",
+      "sha256": "6d10042dd1b496d5e68c23f7a7b785a9b98c77f300308464ff52c959ec3bbcb8",
+      "bytes": 8124
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/mission-data/flashcards.json",
+      "sha256": "6ca19f8b2a6628f8e4cd3500ba4f00595f44721ec23fd990298631186443fc5a",
+      "bytes": 29757
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/mission-data/missions.json",
+      "sha256": "c9c5dcbe579cceecaf699ba4dcf9ab4e69e5c6414a652600a8c529bbd7e6d833",
+      "bytes": 25022
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/mission-data/questions.json",
+      "sha256": "863e310bc8df074eb3c9a6e985f7f8ac01b126e2222e5284d7d5cddb52857ada",
+      "bytes": 72104
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/mission-data/sample-progress.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "bytes": 3
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/package.json",
+      "sha256": "98308798cd5c54c6a7624e9a81119ca71b5adaf43d1b8da2e3e84f827a43643b",
+      "bytes": 586
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/src/app.ts",
+      "sha256": "b20decbca8633dce0c94a0599818ba7309783f300032bfb984b789596c9c6b4d",
+      "bytes": 6480
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/src/config.ts",
+      "sha256": "ecc742f2835e471500f16d7747f11a2dc0dbe06a1d6b50bd82ae6863857e31c0",
+      "bytes": 1240
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/src/context.ts",
+      "sha256": "905f52835171dd6e4ac3e1dbc93491bc1bafb975bc9617736bf95bb04889bb1c",
+      "bytes": 182
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/src/db/client.ts",
+      "sha256": "5f391ee1765fee973c11b3f5b4ee36c3501d950ef895807ae44cd50242bb8c80",
+      "bytes": 6539
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/src/db/repositories/admin.repository.ts",
+      "sha256": "baa60d2da63cbe97d8d29dd90172c679aaaa90b724669e72050300e0855c6a97",
+      "bytes": 7864
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/src/db/repositories/content.repository.ts",
+      "sha256": "27c8cff74c7292561be9e6a4e85eff3308444cd84bf680683f45ca53271084fd",
+      "bytes": 3478
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/src/db/repositories/progress.repository.ts",
+      "sha256": "fcccd3825202476274e5de83e8c06fd78b55cef1628f6def1025da1ccb394267",
+      "bytes": 5493
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/src/db/schema.ts",
+      "sha256": "f857b0155ae2e59a6542c6fb3a8a601c920b290c55bf3d5bdc54fbd83a0b14a7",
+      "bytes": 11705
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/src/db/seed.ts",
+      "sha256": "18548f0c2ff9339cbb24ace4b5dc6ee70004f0e455126f25dcc0c8e2bd593e65",
+      "bytes": 1841
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/src/http/errors.ts",
+      "sha256": "7d1a1ce22ec68e842589b9e993ed0930ea715c6d7723cf0fb52f74cfba385aa9",
+      "bytes": 804
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/src/http/response.ts",
+      "sha256": "790eb8f0dc2f6c5c32507afea59e133fcd83a48c2b154043cb0f6347f0fdb962",
+      "bytes": 4044
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/src/routes/admin.routes.ts",
+      "sha256": "7bde819b2890da9b95ff7d5231afae0db02218ab6c71a072ad4b593b9cd19f96",
+      "bytes": 7794
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/src/routes/catalog.routes.ts",
+      "sha256": "ac3b23a78040f76bd8a21159da19cca0ad846b861020f763fae5dbd6e6e80b58",
+      "bytes": 1091
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/src/routes/mission.routes.ts",
+      "sha256": "8632a82ded53fbd5c1ae84feb58765996252a1c27591106ce2ca14a9815c5961",
+      "bytes": 450
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/src/routes/progress.routes.ts",
+      "sha256": "edb4986bafff441d33e567410bea1fb05dcc09f348957e51f1449e6831b7bb1f",
+      "bytes": 5864
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/src/server.ts",
+      "sha256": "8ff4d414e8ac83c8035bf9dd477e74584eaacc232fca44934c3d3dcb0bba0db6",
+      "bytes": 1087
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/src/services/admin.service.ts",
+      "sha256": "8a1723a1689c4e6ff282a72f1d8c9b53438d54cd3f3e7cef9f89d3cc90a6fbda",
+      "bytes": 65402
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/src/services/catalog.service.ts",
+      "sha256": "4dcaee7a68d96418bb67dd686e0e0feed1be40d4cfb81a0a432e93dd43793585",
+      "bytes": 6877
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/src/services/preview.service.ts",
+      "sha256": "d85a7bf7f90c3718c60b2e6da82e0ca4e36103452f3055fdaa06baf5d080814b",
+      "bytes": 950
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/src/services/progress.service.ts",
+      "sha256": "29ccb63dc1d675e5803d51a8fe90beeb85a7254dbe4255b3a191b2449396ebdf",
+      "bytes": 28102
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/test/admin.contract.ts",
+      "sha256": "6f9c0b081660a5883e453108c041b07319df7a591b015e4635219b9f32765563",
+      "bytes": 18956
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/test/api.contract.ts",
+      "sha256": "dd7f5db7521c76c74c78c7315568ec90740cc46ef0bc0cf79c8cd1cc5eeb571a",
+      "bytes": 18791
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/test/db.smoke.ts",
+      "sha256": "f59a3d11cd10a93e6674862318569a01340c6872985f99cb4565f8cb46ec9b5c",
+      "bytes": 7726
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/tsconfig.json",
+      "sha256": "a60f17c0d3dd2316aa8b40b86fc35deb262b7f5c5c1e39d73562574d1964515d",
+      "bytes": 164
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/Dockerfile",
+      "sha256": "d3955dc3d2c87b0506b3c4ce4cac727de2fc3a432fd7ab09eaa861d1a7107bce",
+      "bytes": 1160
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/index.html",
+      "sha256": "df9bb677b37a5f6df8dd4c020d66d1ed5719b1e5e615be83657a05258b222b16",
+      "bytes": 449
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/nginx.conf",
+      "sha256": "3138771e5b66b486ebc0877a584fe3ee39beaf52b7542894ec437e5ecd0b5242",
+      "bytes": 929
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/package.json",
+      "sha256": "4af6a0993a72fda960867f47196833186f00f6cf17c5592950b0a9664e4f20ab",
+      "bytes": 935
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/public/favicon.svg",
+      "sha256": "81f61bbc9bbe6fed14aa0f9ec43a5473e3d53064a73ec0af92e34da280f32576",
+      "bytes": 114
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/scripts/build-tokens.js",
+      "sha256": "961e55baafed2f96aa54761076dfd2a516d32f73bfc08bbacc3866dcdcad1d47",
+      "bytes": 4316
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/app/AppBootstrap.tsx",
+      "sha256": "200450abd7403f3d7a96b6a186b62432c6da712eb9e739640bb693cafe4cd35c",
+      "bytes": 2622
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/app/AppShell.tsx",
+      "sha256": "6a321a6293bc7e1e939fedc0d9a1c895a241aeef057e474d6797c4afa8ee440a",
+      "bytes": 1506
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/app/AppView.tsx",
+      "sha256": "02cd0275b3ead312c248deb300340c04b7f1208947a28df7123dbedb5ccdcd02",
+      "bytes": 5089
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/app/ErrorBoundary.tsx",
+      "sha256": "1b27f0c529642b16b2c2813be51e6d67466897b4cdfd86e3f0df8947d4bc6b0e",
+      "bytes": 1077
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/app/GlobalHeader.tsx",
+      "sha256": "ae459562403f1886fc49cdbd72f5a49bab752a9eeba0d1aae95f17dd247be3bd",
+      "bytes": 5388
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/app/LearnerApp.tsx",
+      "sha256": "c44abd45e7b8d94924f2f4e29aae14fb92d398cb109c2b0339ce03bd5e92029c",
+      "bytes": 352
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/app/PlaceholderView.tsx",
+      "sha256": "5db85fc6867bae85f9a0c3974f80c9d1cae1543d2e0c1720d866d204cb93aea0",
+      "bytes": 365
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/app/ScreenNavigation.tsx",
+      "sha256": "5710b37adb9975c3f8d9ea1c99a1c85814af34288afd1bc2705c1b5ae3bb0829",
+      "bytes": 997
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/components/AiAvailabilityBanner.tsx",
+      "sha256": "03a185599dd1e73b8a49d419ed67499cb9c09dd514f9a9c6dd70700127fe1093",
+      "bytes": 816
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/components/AwardDialog.tsx",
+      "sha256": "2d7e885f0937c114ef01aab2c7caa580075f3af23943cf8922e47f670e79fcd2",
+      "bytes": 2918
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/components/LevelUpBanner.tsx",
+      "sha256": "2292d53a127db103d7c3697e61d6cda53f8f9ebb26622566baa14192ba489bcb",
+      "bytes": 1087
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/components/LiveRegion.tsx",
+      "sha256": "3ab92181401a20d3dc2c4f7c0ef7025c8e4cc46e9f63a26e55348403bf52136b",
+      "bytes": 370
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/env.d.ts",
+      "sha256": "492526514a82ea4d2871307c395ee9d81023b36435e58075cb96e088ea60edf5",
+      "bytes": 325
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/ai-feedback/components/AiResultCard.tsx",
+      "sha256": "ebc20656bcb7ed1cfc0256e8eab62844ffc94b54726b5b6bf9bcd40424e3ee1a",
+      "bytes": 1305
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/ai-feedback/components/AnswerFeedbackCard.tsx",
+      "sha256": "9069377e24dbe5c687b5cd72f74a4f67531905b24cd723f37720ba78b25dc580",
+      "bytes": 2196
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/ai-feedback/components/HintPanel.tsx",
+      "sha256": "51a43dca55765e4f1cfde41081344ff1c6c1ad08a26b149d2366190aae7beef3",
+      "bytes": 1230
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/ai-feedback/components/SummaryCard.tsx",
+      "sha256": "a38e745e89f1866b0c34fbdcd633da7e750c8da4dffb7133027740dba5e0ef77",
+      "bytes": 1646
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/ai-feedback/hooks/useAnswerFeedback.ts",
+      "sha256": "01181c2e14c1f53cc25d0679a1861043aa49c19fd852bf6e77d47846f7769e23",
+      "bytes": 3499
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/ai-feedback/hooks/useHint.ts",
+      "sha256": "5fec28a3944ce627c89dc1875ed74be7de38aa4d73f23d614fad9c0757d1a382",
+      "bytes": 3427
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/ai-feedback/hooks/useMissionSummary.ts",
+      "sha256": "877a7e2abf8f6abe3d5184c0dab58d29c803b2b66a17838ec4e3aaac30d693a5",
+      "bytes": 3682
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/ai-provider/AiProviderRuntime.tsx",
+      "sha256": "13680bfb863a32e3771026c1cf800309e29f5d09b7947a913d2e250d01413faa",
+      "bytes": 9049
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/ai-provider/aiProviderStorage.ts",
+      "sha256": "662b4c0eb2925bb8cca29907e7b0a4a1928923d6e9413af462c25df08ab79a49",
+      "bytes": 4716
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/ai-provider/components/AiMockNotice.tsx",
+      "sha256": "1d8f9648b7881932639351e252fd17a9d9145ee2ebb08d260ed4ebde519616ec",
+      "bytes": 683
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/ai-provider/components/AiProviderSettingsCard.tsx",
+      "sha256": "f0e039916a9299d1dc2f2ec88853ba986015010560afa4658c5963edb0140716",
+      "bytes": 6709
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/ai-provider/components/AiRequestErrorCard.tsx",
+      "sha256": "7e012e08f605ff0fd0f73b3b1ac4e4df7d385592798dc37557beba59e2d05d39",
+      "bytes": 895
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/ai-provider/components/ProviderStatusPill.tsx",
+      "sha256": "e0cc65acca1fc1e9a9e1a2d2ae5be7d82075699c795bc04abcf178a3cd8e9bd5",
+      "bytes": 579
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/ai-provider/hooks/useAiAvailability.ts",
+      "sha256": "124f592419e742e6f5d9bf9be0adfbcb04ce762d7abb9b7dabc22c3c82124951",
+      "bytes": 1242
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/ai-provider/hooks/useAiProviderSettings.ts",
+      "sha256": "7997e7996442d19bd4c0757dc0b1b552cdf8509d5f365123c9b670f8a31fca9e",
+      "bytes": 4697
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/mission/components/CheckpointStep.tsx",
+      "sha256": "c510642f11d57a82ddd91b256e8769962f5c26fb07bd8cf33f80134e348771c1",
+      "bytes": 15846
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/mission/components/DeferredAiAction.tsx",
+      "sha256": "e0d132754484b4e5bcc98622f090e40223e32958e832751a0638aa65dc117c86",
+      "bytes": 945
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/mission/components/ExampleStep.tsx",
+      "sha256": "63464723f3ce7de7788681b4cbf78ff3894f7fef47ed89eed6c4437fb85b47ab",
+      "bytes": 2179
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/mission/components/HomeView.tsx",
+      "sha256": "ab3932a542af2d3a0b35d84464e6a3c8c19d2742686d93603c26357d169bd617",
+      "bytes": 6236
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/mission/components/JourneyPreview.tsx",
+      "sha256": "40ed05e48c640d1653f3490be2dddddea5951ff55caf2a9d0207da72ea33bb02",
+      "bytes": 1224
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/mission/components/JourneyPrimaryAction.tsx",
+      "sha256": "71a0668e9f93bc558a00dd906e957edb82b309c9713100f1331d21ca2000dbaf",
+      "bytes": 1520
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/mission/components/KeyTermPopover.tsx",
+      "sha256": "2a94cbf87caa598dd244b1cfe71dcb475f862b38f56d3ad42542569344883167",
+      "bytes": 2252
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/mission/components/LessonBlockView.tsx",
+      "sha256": "26d6b927a0894dc62e2102861600c9fb70f2b45332d963f0c56583a322bb4cc4",
+      "bytes": 1306
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/mission/components/LessonStep.tsx",
+      "sha256": "72b078b66d674e2809b412122e74a8d918ebe32f0695a7b738d621bf10f8518c",
+      "bytes": 2101
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/mission/components/MapListToggle.tsx",
+      "sha256": "00323dd8e10e70407a9af3d661873928a633053faa2a5f2cb322785ecff0d89a",
+      "bytes": 835
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/mission/components/MissionBrowserToolbar.tsx",
+      "sha256": "3a4ef526420b79d1e92ad2ba20752650afb1bc1be057750b49b1d6ed42e2ddc3",
+      "bytes": 2540
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/mission/components/MissionBrowserView.tsx",
+      "sha256": "06d26a270bceb109cae118a8595e937620b50c7afb1b14165ff8170f533b95eb",
+      "bytes": 1191
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/mission/components/MissionCompletionPanel.tsx",
+      "sha256": "d09c858e264d5c3837645fa7153565414a1f8800b5ce488af7fec8117ab36402",
+      "bytes": 6687
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/mission/components/MissionFilterBar.tsx",
+      "sha256": "1692d0f73d6fb1383025b252698d9e7a5da541347c899c30e63d0b804012d7d8",
+      "bytes": 2477
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/mission/components/MissionHeader.tsx",
+      "sha256": "48bef4c20fb66ee2fa97ed8b02257f8a6964f5b3a127920c2547668b4672e7bb",
+      "bytes": 1760
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/mission/components/MissionList.tsx",
+      "sha256": "20fd1c109fcbeacfdccba3a724804414cf3a1dd70dcfb1ae785fb79ad64a6292",
+      "bytes": 4246
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/mission/components/MissionMap.tsx",
+      "sha256": "ea9b092deae18927ecb3a62164b92161b9a9625eb727b36bc6154db83866d796",
+      "bytes": 3272
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/mission/components/MissionNode.tsx",
+      "sha256": "c36b83c8748bba20a03deabec21acabc7d233d58313b3e237bb21af3937a522f",
+      "bytes": 3780
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/mission/components/MissionPlayerView.tsx",
+      "sha256": "e9ef51217a99fc9f9de40211d922afbcc2cae387b7326056d79228d8edaf10f0",
+      "bytes": 4296
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/mission/components/MissionStepBar.tsx",
+      "sha256": "811b31b51bc75e615cf6f96fa0520c5c875442c21472a4ce2a74e9fc441817a0",
+      "bytes": 1900
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/mission/components/MissionStepDots.tsx",
+      "sha256": "5bc5b2d2456d5987359da7b8bcc631b49a7becb0fbc361a404d7dde9d8c031c4",
+      "bytes": 2248
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/mission/components/QuizHandoffStep.tsx",
+      "sha256": "a0eeab01a5fe8cffb9d33ea55321ac98b2e0158ac427d3c841f4a368cb3f0a6e",
+      "bytes": 919
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/mission/components/StartOverControl.tsx",
+      "sha256": "9b776c292a8a72ded0db49faaace4ce42fc3d74116e0dec19c0dfa660052343a",
+      "bytes": 2108
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/mission/components/ValueCard.tsx",
+      "sha256": "9a223a52c65ff1ca5026861ed8027340f8457b3728e02c76d901edf1556d1ac7",
+      "bytes": 477
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/mission/hooks/useCheckpoint.ts",
+      "sha256": "05a3df63b6c8fb85fc6d11a979178073861af3e36bcebc2688ded48f843b4a11",
+      "bytes": 2845
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/mission/hooks/useJourneyEntry.ts",
+      "sha256": "115746dedc939ee037ea99ff90ce3d99c269f917a4ded19d3adaddbd7932e27e",
+      "bytes": 2843
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/mission/hooks/useMissionBrowser.ts",
+      "sha256": "5a7f368b155f72e400822488e67b841e86accf6ee91f8b0b835de3fb11db6abb",
+      "bytes": 4359
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/mission/hooks/useMissionCompletion.ts",
+      "sha256": "f408f55d8d162920ef64ddaa95973cd7754cd0511a07833181318ae76df6250a",
+      "bytes": 2041
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/mission/hooks/useMissionPlayer.ts",
+      "sha256": "4962da04597bad9e1c299e199850e7d91422e06d1c9999a5369717088b4fa9ce",
+      "bytes": 8541
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/practice/components/FlashcardPlayer.tsx",
+      "sha256": "5b13a11a6b050f0b2b502d271ea7fcc02f1125081e106607deeef86bc9e4a9c9",
+      "bytes": 7671
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/practice/components/FlashcardView.tsx",
+      "sha256": "8577705b5724224502fb54963da73162655443739bbd721bd35186a6be554854",
+      "bytes": 3046
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/practice/components/QuizResults.tsx",
+      "sha256": "2315dd7affeb504d23b2c1d6f56c6060962a6ae80670d4dc6f1d01757f52e074",
+      "bytes": 9388
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/practice/components/QuizRunner.tsx",
+      "sha256": "17c2d88eb236ea3d06edc6744c35371f5437500de5581357ab91fe92d81eb775",
+      "bytes": 17621
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/practice/components/QuizView.tsx",
+      "sha256": "ad035ffd973d8879b5b052d001aef78b59e79a95c86d207c4b3131120549ab8c",
+      "bytes": 1633
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/practice/components/ReviewHub.tsx",
+      "sha256": "5589786438b74af061eda91853524ec1c9abbfbb13dd0494c3917e462a7bc25c",
+      "bytes": 3746
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/practice/hooks/useFlashcardDeck.ts",
+      "sha256": "5c2e3f8111b4bf6d8fa51c505b9f789f12ba5d831d1ecbaa4e93315833516b9b",
+      "bytes": 8638
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/practice/hooks/useQuizResults.ts",
+      "sha256": "5fedad93cc9ab168c0d9a8e78fea66aa56c906e5c609ce46f817c1044c81f9d0",
+      "bytes": 5235
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/practice/hooks/useQuizSession.ts",
+      "sha256": "8304665d4e43cdca3bd28e41dccbd27cce5b1318340a739fe6b16384677668fa",
+      "bytes": 13603
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/practice/hooks/useReviewDeck.ts",
+      "sha256": "5461a98774e265883ed9a48cf0f8038c67513f7dd6b15de8c1d59c325f6f6302",
+      "bytes": 3488
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/progress/components/BadgeCollection.tsx",
+      "sha256": "83a718f64f84dabe0c3e1e460ea2c4f2377041cc31408b2ecff37f33cf1192e8",
+      "bytes": 3424
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/progress/components/JourneyCompleteCard.tsx",
+      "sha256": "09e26c73399d973653c2854ffe2e0d2d38a7c6aa73a5707c464d7988a930932d",
+      "bytes": 1291
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/progress/components/JourneyLadder.tsx",
+      "sha256": "489eae377c720b5586154edf72fd957ebc1a26fb0390cfc93b77708c290faf81",
+      "bytes": 2060
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/progress/components/MilestoneList.tsx",
+      "sha256": "b03e83ab6659b1ec72586ebb659bb3316ed19c2d57edd8700667c75e87bd2645",
+      "bytes": 3232
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/progress/components/MissionProgressList.tsx",
+      "sha256": "702d66997f6326a46517e56099a6fbd3a9aa42fc8f1d7ac7f35495ae2d56f9c1",
+      "bytes": 2440
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/progress/components/NextSteps.tsx",
+      "sha256": "fae62bd5052d8066eac26bfce126ae90285ec79085f5ac64727c69b2c272be67",
+      "bytes": 2987
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/progress/components/ProgressSummary.tsx",
+      "sha256": "596e1fe6e8e57b7e36fd710aab16145eaa9d06403d7e1fd2bfbe2893852d4364",
+      "bytes": 2280
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/progress/components/ProgressView.tsx",
+      "sha256": "fa4141e6550ba78be8008ed28668f5b7e01039fc70674c47b227845475b61ab5",
+      "bytes": 2842
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/progress/components/RecommendationCard.tsx",
+      "sha256": "39534b5c38892e5cb8f85f761e68c14f75be5961438ea3891bc8a8529757f263",
+      "bytes": 2275
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/progress/components/ReviewRecommendationBanner.tsx",
+      "sha256": "3a75e1ef29a691584958ee4087267642eae33f0c4a62085e0f4b552f4aa12bea",
+      "bytes": 1212
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/progress/components/ScoreHistory.tsx",
+      "sha256": "c758301bad1bac583f8c32ec12c5d35011994c4776a40eda5aac493c473489c7",
+      "bytes": 3002
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/progress/hooks/useAwards.ts",
+      "sha256": "a8828e232370c6241103df85c969acf1e5168be80ca9699509a6df6579ae60a3",
+      "bytes": 2147
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/progress/hooks/useGlobalProgress.ts",
+      "sha256": "677c7c1bc0a8a2414fe917035cde8a4420c21d9c7aa7c977958d16cbea64504f",
+      "bytes": 2018
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/progress/hooks/useLearningRecommendation.ts",
+      "sha256": "e188ccedd2f32a8affe779ef0b194090a016acdc0bd4a1bf914c96d6bf2c4b5f",
+      "bytes": 3270
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/progress/hooks/useProgressDashboard.ts",
+      "sha256": "9aac56e931361620d57b7963bfb9a45eb710ef343fba4a3aee3b19044bdfabcb",
+      "bytes": 3450
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/settings/components/SettingsView.tsx",
+      "sha256": "7644323b788d047ecaa285743a08581c0b93919c622f2e88eebbe46d7e3db3e1",
+      "bytes": 815
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/tutor/components/AiOnlyHeader.tsx",
+      "sha256": "5e6c16b475f9e2233cf3e8ff61674cfd6b4ab73b386b1d383b454d5513175c95",
+      "bytes": 5135
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/tutor/components/AiOnlyPicker.tsx",
+      "sha256": "96a2219c5c29dce1250317bce151fdd85c5d1dba0b381ccae1b456dd000ce7b8",
+      "bytes": 4642
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/tutor/components/AiOnlyQuickActions.tsx",
+      "sha256": "a01e1698f483cb150d697481d682ad9ab3098b87cfb29cdf355243fdadd1c924",
+      "bytes": 1274
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/tutor/components/AiOnlyScopeRail.tsx",
+      "sha256": "c974ab92af8aa55400c136198d9e3688fea57916b42d671f63556006fd30ecf7",
+      "bytes": 3707
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/tutor/components/AiOnlyScopeSheet.tsx",
+      "sha256": "0c906a5a14d9ad744378c576540322216510e49d38e6968eaf621f5f2e437ede",
+      "bytes": 1584
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/tutor/components/AiOnlyView.tsx",
+      "sha256": "81d343c79f6bc0e1b46e865805f54bdfef49f1ed90fbf30936a8de0e22eda76f",
+      "bytes": 6486
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/tutor/components/InlineTutorPanel.tsx",
+      "sha256": "ce3533b644b4522d2794cd36272772d778fc31e95b4e53651b3f78d321b409bb",
+      "bytes": 8869
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/tutor/components/QuestionSelectDropdown.tsx",
+      "sha256": "310c980877c025ac98e31046025fea6853d2eefb918e0ea8ede755b334b42e35",
+      "bytes": 5853
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/tutor/components/TutorComposer.tsx",
+      "sha256": "5e9c9380c46dc77fe5313129f69ce710aa1187a68d6cdca0a075ac0a87ab488f",
+      "bytes": 2112
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/tutor/components/TutorConversation.tsx",
+      "sha256": "d1dd5025705bac7566c0bdb89df87e10b7fdfae4444b8af5e4458d9d8e7eaa06",
+      "bytes": 7212
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/tutor/components/WalkthroughTurnCard.tsx",
+      "sha256": "03b50beb8c55c8a3ffe90f8679a2e83881cefc14f7bb60fc3323e3dfa4da191d",
+      "bytes": 7977
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/tutor/hooks/useAiOnlyQuickActions.ts",
+      "sha256": "303c70c65103f5922e39e8c2b29751c61f565e098b598d6dddf2a43a38ee9bcc",
+      "bytes": 8805
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/tutor/hooks/useAiOnlySession.ts",
+      "sha256": "701829a1f08a4360ba14002b28c09af939291fd008e38bf22741f82a9a982419",
+      "bytes": 13645
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/tutor/hooks/useConversationalWalkthrough.ts",
+      "sha256": "0118ebd39141aedbcbde3fafe99ed233df149613ce605ad81c0f219529295e6c",
+      "bytes": 9995
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/tutor/hooks/usePublishedMissionDetails.ts",
+      "sha256": "3dc56590a9d4cedca3f499285d9ff2bf9888bd153df351fb6a16c2305e674e3f",
+      "bytes": 1951
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/tutor/hooks/useTutor.ts",
+      "sha256": "24d67fdaf9f53a036991878467a91a137aab0c665c13780290706566a747fda4",
+      "bytes": 7077
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/hooks/api/client.ts",
+      "sha256": "2e67f895279f2566a9a281745dfdbe155fe985a405f8c25d95055d1e0818537e",
+      "bytes": 5086
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/hooks/api/keys.ts",
+      "sha256": "8faef1790d782581f35a7be7dd86f0ea44f61bc7f7e05a37103106864006c1d3",
+      "bytes": 984
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/hooks/api/useCatalog.ts",
+      "sha256": "768861013cccab62db69aadab7937d90d6f3d6af821775f396010c5fe9846aca",
+      "bytes": 701
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/hooks/api/useMission.ts",
+      "sha256": "3af8ff58f3761da21a0d0b40baa08490f68ab02f5ab711e7c3a4bc8bd2c33d26",
+      "bytes": 838
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/hooks/api/useProgress.ts",
+      "sha256": "08f92443f8e491a119aea424bf9862f7f94d86df6f20ddc8f0a631f38d931eb8",
+      "bytes": 754
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/hooks/api/useProgressMutations.ts",
+      "sha256": "e838d82ec74d22bc837d39262533cd7772e8f71deb823f4aa3d6a290e40befc5",
+      "bytes": 13117
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/hooks/ui/useFocusReturn.ts",
+      "sha256": "0d39e3c60f85dfba142cb4b8ce24ae109cf7a4eb82cce9d6b3047f47b68da14c",
+      "bytes": 2486
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/hooks/ui/useKeyboardShortcut.ts",
+      "sha256": "d77bfb03b9af0088d4b2f0859db6e307fdeb3ee132fa2234cc2c977b57b22807",
+      "bytes": 1842
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/hooks/ui/useLiveAnnouncement.ts",
+      "sha256": "d20a70c89fa062b82437ab149548e51814d508f202e38b4461aed8f744d6a13d",
+      "bytes": 1824
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/hooks/useAiTask.ts",
+      "sha256": "ba5fa6fb6dc37efec5bb235b41dff15efebcffe0cb99b95c92af90df36cd2a97",
+      "bytes": 4099
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/hooks/useAppNavigation.ts",
+      "sha256": "b0ecd0e9ea4273351a40757235a60d2b205660da76520202ea702791268b4a9f",
+      "bytes": 1760
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/hooks/useBootstrapData.ts",
+      "sha256": "f411b6e4e39b015f1e10c69004b020f7428cd00c40004a7c61193ebfbc1f66b9",
+      "bytes": 2389
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/hooks/useStartMission.ts",
+      "sha256": "3dad65682425bede620f815525deb4f1377b9f071e2170300ec93cb13a2ba5c3",
+      "bytes": 1051
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/main.tsx",
+      "sha256": "f85bc6324acb0a8b59df1b93da62f8b1550cd779ba48c78b14b28d5a69e6a0f2",
+      "bytes": 386
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/preview/PreviewBootstrap.tsx",
+      "sha256": "34164a94fe5a1bf8ad18d16237aec771e66ae62e509e1c322697212b21faf474",
+      "bytes": 3594
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/preview/previewMode.ts",
+      "sha256": "c4e9e72d630e547be4019c943965cead29fe0fdc12edf899abf0c5d4805bd08b",
+      "bytes": 1594
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/store/aiSlice.ts",
+      "sha256": "ae7edd11bd9add444c7d2af0eb72a07674b2a8eb5dd0ba8be3891a08e6b3ec55",
+      "bytes": 21330
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/store/flashcardSessionSlice.ts",
+      "sha256": "6c7c9a9b2f1432138cc83848a6ff6bc36d497c0ea1da6811979b1cd8ddb46243",
+      "bytes": 7097
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/store/index.ts",
+      "sha256": "bf51a20f3f09e7b74a950fbe84bfbdaa598a4bed4af9b95dc782b33ec1819107",
+      "bytes": 3615
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/store/missionSessionSlice.ts",
+      "sha256": "2a8daa6a328329550a293dbd3b686d18e6359ce4e6fe7a0f17863d3b1ba238a8",
+      "bytes": 5358
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/store/navigationSlice.ts",
+      "sha256": "9fede275fbf1b89ef4f350c8de84558c44da4a46ba6cbba6685862dac8112a37",
+      "bytes": 7044
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/store/preferencesSlice.ts",
+      "sha256": "e4c7e2cef4be1365159e80321ac196f53c52905731ef0b4bbb72444f0bde50de",
+      "bytes": 7318
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/store/progressProjectionSlice.ts",
+      "sha256": "1d4e849e1b50568640d9b3ab2fbf145ac8873f43cfff363eef979e4395baf514",
+      "bytes": 6100
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/store/quizSessionSlice.ts",
+      "sha256": "a071bfe1cdfdc06e77d2bc531ef84cc9ad7227d6277675d5d40addd69f3641e4",
+      "bytes": 13219
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/styles/_ai.scss",
+      "sha256": "76b9f86fa2e8cca0e23bb901ead87b3e67e8a021214510eea51bb08bea4ef0ed",
+      "bytes": 6352
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/styles/_aiOnly.scss",
+      "sha256": "82d263a09516d97c127fba9d4cfcba316a358305f13b68696b27d7641b3202c3",
+      "bytes": 25436
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/styles/_aiProvider.scss",
+      "sha256": "abe2edcbda0270597c49ab98073ed17ed5fd9b1d20f8ea2e4b48da72182f3f50",
+      "bytes": 5954
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/styles/_awards.scss",
+      "sha256": "245dc4f6a29a83220db368ecf7eb3d5581602b7ea6af920fb90c8e00169802b8",
+      "bytes": 5351
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/styles/_buttons.scss",
+      "sha256": "5b4e972a7e132baf6be5ed2aef7d736d87ceacc9d7508aecd2a1b018da091a56",
+      "bytes": 2142
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/styles/_checkpoint.scss",
+      "sha256": "32a6237aed33051d77604d43597733369b419e494ca7899b745eb485f93152f8",
+      "bytes": 5805
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/styles/_flashcards.scss",
+      "sha256": "247569dab9da42bdd08f259c318211787b3f2623c5ac750d782010af24afc74e",
+      "bytes": 7632
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/styles/_globalHeader.scss",
+      "sha256": "011153791fdfafdc0a424b18854f8afec2b54229cc46f1a9554cc2636c45aa4b",
+      "bytes": 3396
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/styles/_home.scss",
+      "sha256": "b9d48481d1d3c687d7e2f96d8849744ff5553c1cb38244826a8652af2b5ebc86",
+      "bytes": 8034
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/styles/_lessonContent.scss",
+      "sha256": "0ae9f8d6ef86932e9c68ff72298b8eddd88de01bf9b7d9d3a7d33c5b8e0995aa",
+      "bytes": 3408
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/styles/_missionBrowser.scss",
+      "sha256": "bba01163599ff5ee0797d63ad535cfdd28c7c464f6b9661dfac2cf3c5396ba6e",
+      "bytes": 4723
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/styles/_missionCompletion.scss",
+      "sha256": "e2fc75283f5a6b50502df493eca94e3133dabb728ad8279747167aef51d4e23e",
+      "bytes": 3186
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/styles/_missionExample.scss",
+      "sha256": "0c46df68ba3972e24072be2eca0274e2be6cb8a53202b00aadcc80bd70f3cc28",
+      "bytes": 2700
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/styles/_missionList.scss",
+      "sha256": "5bc330bf052405df1319d18f03d3e77305822c729cd3d38a783ac2207c0a0197",
+      "bytes": 3834
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/styles/_missionMap.scss",
+      "sha256": "83814cc47710f8d920cb016438f01928ec20e7b7531da521e7d6f7195a1abeec",
+      "bytes": 7144
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/styles/_missionPlayer.scss",
+      "sha256": "732dab2c967223344c03e454fcec8bf492fdedaab7750279040e7ef7c9891392",
+      "bytes": 6043
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/styles/_progress.scss",
+      "sha256": "9bdacd42c0141361473b4a0177e341f0ece479027781941e9f6b6ae10ce9d20f",
+      "bytes": 6915
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/styles/_quiz.scss",
+      "sha256": "63ae1e34985f114c772b3ef1a1c5bdc8a2f56a53650228e76d53e666f08ef7bd",
+      "bytes": 7318
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/styles/_quizResults.scss",
+      "sha256": "31cfe64bf176da1c4ba232934165ab19cc28ae7e0ad547245a723e61e2b768cc",
+      "bytes": 6843
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/styles/_recommendations.scss",
+      "sha256": "13b23449c87cd6ca69c2318abd5c77eb5e1051e0ba7cea8f82c3eb4ef340567d",
+      "bytes": 3458
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/styles/_review.scss",
+      "sha256": "a072193d5bec2b5d36c6345d9e41cbbce2d7a767dfd91cc992749241a49947f6",
+      "bytes": 1553
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/styles/_scoreHistory.scss",
+      "sha256": "07730b9f99e8fa6d3f027a154be26b930e8328e255a41aa99a3bb3219e40e3cf",
+      "bytes": 863
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/styles/_screenNavigation.scss",
+      "sha256": "525d405de230cfb68e0f8e417d7ee6b1cf306a10fd301cc46ad71083c37bade7",
+      "bytes": 1709
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/styles/_tokens.scss",
+      "sha256": "26df4042bcd81fe0ad0cc6e515630648dccc0515dc796db3643df46d55d2c946",
+      "bytes": 3458
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/styles/_utilities.scss",
+      "sha256": "ae0b50fc1ab906a6bcbcfbc4d9af0b9939ea6c0cf7fba9befec7a27d0993d7e0",
+      "bytes": 181
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/styles/main.scss",
+      "sha256": "ff87b86d3abd6c29995cb7745ca18d7e4392102fde56c9348459d2c26f4071b5",
+      "bytes": 4420
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/styles/tokens.js",
+      "sha256": "42e3db5931aeb78c013f06f6dc434c9ab82d078a1572a69152781aaee6cecf70",
+      "bytes": 7829
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/styles/tokens.json",
+      "sha256": "8cd761e1af93b83ac8aaf5b5c84967c9989bc3d6dda349dab0246c3a60eb4401",
+      "bytes": 3337
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/test/ai-only-mode.smoke.tsx",
+      "sha256": "c6c3add40cc4b8ebcd091da7e45d41aa2ffc1fe6f2fee3814a50f3bcb0d6ae02",
+      "bytes": 19391
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/test/ai-provider.smoke.tsx",
+      "sha256": "dee4f188473e668cb68a68ec6387a271fb6d447fbd68a56df33b02b1f16285bd",
+      "bytes": 13569
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/test/app-shell.smoke.tsx",
+      "sha256": "e73c70e51fbda5f9a4bc9108999a44501aeef2c41c9271e568114d68c942c689",
+      "bytes": 9895
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/test/fixtures.ts",
+      "sha256": "a0e34615416323015c38c35dfb772a87086c40a64590780d6777cc7a89812a9d",
+      "bytes": 18569
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/test/harness.tsx",
+      "sha256": "401399edf61a08271d5cc575511250badd0bcd248e4f6d1275d900d5788c4d0d",
+      "bytes": 1524
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/test/mission.smoke.tsx",
+      "sha256": "5e7e0403b11d050eec57c8b45329844f829992996fc03a56c65d79d31abfa0f8",
+      "bytes": 18158
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/test/practice.smoke.tsx",
+      "sha256": "6bbfe7e103618b7edb9abad99db24191294e5dd82e8a0522095918690c9a32e1",
+      "bytes": 24283
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/test/progress.smoke.tsx",
+      "sha256": "a21c90ecf37bce0007e578d4820abcd4c7fde84e5be53fe8a0c2c86ea5f40f50",
+      "bytes": 12804
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/tsconfig.json",
+      "sha256": "e2f06c089da847cd8032c2310f22fde48716a015202d0efb5d0c7c4cfaf8a7ad",
+      "bytes": 220
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/vite.config.ts",
+      "sha256": "a56772199caf3adfa98c2e78b6352602cc8474d9cbf6a4b63934824b64928fe3",
+      "bytes": 476
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/vitest.config.ts",
+      "sha256": "0d4231dc6936279b8c7814698a7bde52840be44b18179e00cd571410cd287b24",
+      "bytes": 271
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/docker-compose.yml",
+      "sha256": "09079ab299ea6e6c03272a07877555df7d0a6183fc2b74ae6a2e27715b5dea48",
+      "bytes": 1648
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/package.json",
+      "sha256": "1f1e8a514a3fc8af3dce36a7ed9478242399817545d0ad9aeac8673742a17bda",
+      "bytes": 308
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/package.json",
+      "sha256": "b048ca3cd3379e970b4781b25655985793ee29b9c0ee4f2959a8b1109c85f5f2",
+      "bytes": 490
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/src/ai/aiOnly.ts",
+      "sha256": "8088ee1d846a6475f07584cb56d25a78fbe49866cd2d008a3e1d69cb3c58e50b",
+      "bytes": 5623
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/src/ai/context.ts",
+      "sha256": "4b9cd572f5f68799aee702b73ac13f02115664057c7131bbb262f044406d0dec",
+      "bytes": 5818
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/src/ai/guardrails.ts",
+      "sha256": "5dbcb352f8ee8bc0006e184ecf36deb1c8020b5c7483b2b3199db565b45fa15c",
+      "bytes": 2111
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/src/ai/index.ts",
+      "sha256": "bb6c1aba52af8e6829b0541f27e03f06eea619fc660687d19f37277bf716e71c",
+      "bytes": 363
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/src/ai/mockLibrary.ts",
+      "sha256": "e8c858648dd6aabf2edd34706edee9da9aa30bdf1cc71aca7a20d888b9192060",
+      "bytes": 9628
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/src/ai/normalize.ts",
+      "sha256": "b48d70535d8ebd78b2beef7978ce03771f5e9170f37475dae5587332b9c843ed",
+      "bytes": 3916
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/src/ai/openAiCompatible.ts",
+      "sha256": "ee30e1d3dfe5cd3d82108c0a339eb93ca19aae8e049999b876cdeea6d22c3484",
+      "bytes": 6639
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/src/ai/parsers.ts",
+      "sha256": "1a4090bc8be0ba4ce49f388910765eacbc432c7bd4eceb348bc7b76ab3127926",
+      "bytes": 2857
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/src/ai/prompts.ts",
+      "sha256": "7c1ec444706f70d3f025dc6ce08955cbea8de5b84a4ebe11ff1420cf9a7238fc",
+      "bytes": 3008
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/src/ai/provider.ts",
+      "sha256": "4eccccb5138c546d2aa15ac598f0905716d5697d3fdd0301e7bc6f835d051970",
+      "bytes": 4855
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/src/ai/providerErrors.ts",
+      "sha256": "cab2ae526171ffc1250f5bba1c00626a9c52fe85829164300e5963f60a477967",
+      "bytes": 3405
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/src/ai/providerFactory.ts",
+      "sha256": "86130219d93a8b571374a3d4c69cd9d9fa1d9e9cfccbe7d7e9c7e633e04e4bdc",
+      "bytes": 1229
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/src/awards.ts",
+      "sha256": "2be53417f3032d72231d5328e566359480bd71fd61304ea04089c1a2d8c732a7",
+      "bytes": 6381
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/src/checkpoint.ts",
+      "sha256": "ea4728197960b61f4b8bf3c2316d7f6f64f5a5a328249d8fdef68f4505547fbe",
+      "bytes": 4387
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/src/flashcards.ts",
+      "sha256": "c2b96d8b45ec2b986b6be81bf43f6ba993cdebef1b779731b4660807ad7fdb23",
+      "bytes": 3070
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/src/index.ts",
+      "sha256": "7ae9fbe51cc82769689841fbe655b72df56c59d68f4400a0186e7bac2d2d9665",
+      "bytes": 498
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/src/journeyEntry.ts",
+      "sha256": "426729b2dd094abbe346bff8670d1d5182308dd0a3a91b5f2d87626bc2a7cba3",
+      "bytes": 1480
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/src/labels.ts",
+      "sha256": "ad06480a204e24ddf8cdc141b5fad2244871c3098ebbb5c5d7f1fd43068a8014",
+      "bytes": 650
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/src/levels.ts",
+      "sha256": "1590c86a7487054de6a85fa490b97ae8adbee45b8eb25b12375456c234bcde60",
+      "bytes": 2892
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/src/missionAvailability.ts",
+      "sha256": "1e314cdbd804c423361cd04882ace75855e7d7518f9f1fdc416506cb16c077b9",
+      "bytes": 2459
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/src/missionBrowser.ts",
+      "sha256": "1e9bed222597a9ecebdbaa8732a05b21b50c3771b551624e3bc126ffdb2068f0",
+      "bytes": 2509
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/src/missionCompletion.ts",
+      "sha256": "5b89c6565e140c4d6b0a04b2e7d7224feaefb4e0faec1663a3c26b0735b67b11",
+      "bytes": 2100
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/src/missionSteps.ts",
+      "sha256": "e25d9234893fbad49a7c607a297ec77f05ed6e63275dda935ecc2437a6e6054d",
+      "bytes": 1394
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/src/progress.ts",
+      "sha256": "a141fbdc87d0241673cafc8d386fed2a866c49b53c3d0aaada1ef7a2fb1c468d",
+      "bytes": 4329
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/src/quiz.ts",
+      "sha256": "46dc660f0693c227a0d07b52166b68d1883ceef8481cab30ba603d9ed8e8f2eb",
+      "bytes": 6962
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/src/recommendations.ts",
+      "sha256": "63563c203fc3006fb52b8ac73226824ed03de7fcb11eff9f87bcd153b7dd53d3",
+      "bytes": 3247
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/src/tracks.ts",
+      "sha256": "bb59e764ec1dc5c523425a786d63620a3d6fb3f23397da4e01a6b632cd007576",
+      "bytes": 2034
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/test/ai.test.ts",
+      "sha256": "849159c8712d8385ed3d645e14b8303769ffbb005e11276b5beacb74d9ea284b",
+      "bytes": 16817
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/test/awards.test.ts",
+      "sha256": "28b7c2ac6c7ad1548e8785b44e7ee61f391bbcf1614fbc3bc4684e8d8e6ff185",
+      "bytes": 10718
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/test/checkpoint.test.ts",
+      "sha256": "94d4ff19edfb45691fa5a48b0f3dffe05513785e419fb0ef89fecfd91f9d812a",
+      "bytes": 6406
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/test/fixtures.ts",
+      "sha256": "4edb5f1ed8123941d1c697effa8fc9de5543df3f52dfc2f677b86461da949d64",
+      "bytes": 3933
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/test/flashcards.test.ts",
+      "sha256": "60dc7f4c8118ee688091b1c7778bee67dae5de0eb17d695aaf7de3a0f486ef12",
+      "bytes": 4821
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/test/journeyEntry.test.ts",
+      "sha256": "c4b0ff400ce66fa5ae4d8b9eef6030e6836ff6e456f709ad966a47fbf15045d8",
+      "bytes": 2822
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/test/levels.test.ts",
+      "sha256": "8d956c71b568b73dc0713cd2a1dc9b52080ddb122d47bfa3dd90a4829ec4ebf1",
+      "bytes": 5002
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/test/missionAvailability.test.ts",
+      "sha256": "c239b7fd8039f9821a7f90327cde56e20e70a5fe8b78f1dcddccb698118257af",
+      "bytes": 2979
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/test/missionBrowser.test.ts",
+      "sha256": "5efde6e490d84e2b16d32805099e1c9ffdb728af11541bfd720604afd0385463",
+      "bytes": 4497
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/test/missionCompletion.test.ts",
+      "sha256": "09b6a9a3c36fb3aa84f0c720751eefda5fd2aeab47d4ee3f295eb57e5117f37d",
+      "bytes": 3729
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/test/missionSteps.test.ts",
+      "sha256": "93313973c5d8e197712ee09e7a5f2a7486a48690f81fa40f43e0e6b905ead040",
+      "bytes": 2065
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/test/progress.test.ts",
+      "sha256": "0734e0c49cad375f6b16ff22d6cc735ce5e0b73ba81a616214d6641d68f22aa2",
+      "bytes": 3826
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/test/quiz.test.ts",
+      "sha256": "ee149d3b4958ba5a0ccd9cfb2a56946d755c8cf48e97c3689885264540bc888d",
+      "bytes": 6961
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/test/recommendations.test.ts",
+      "sha256": "4396375feea6a34108a78311ce29f761f19c0baf0f8c2218300bf08edb860578",
+      "bytes": 7252
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/tsconfig.json",
+      "sha256": "ff14d2d1919435b3e689c0943ff2d70eca215bbd33bc66b783dac277fe4eed1f",
+      "bytes": 163
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/types/package.json",
+      "sha256": "40efdbfa6e4b95d474b078d2ba241ddf68146f0076bbc033e0a59b2745127a6c",
+      "bytes": 315
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/types/src/admin.ts",
+      "sha256": "92295604637dfb1393363ca231798c517b5d2f1e3042af9930a3f862604a8a7f",
+      "bytes": 4900
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/types/src/ai.ts",
+      "sha256": "eabafa9b1863bc4a77eb16e5bceecbd2145dbc5730020ff2e02966ddc853f5bc",
+      "bytes": 4790
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/types/src/api.ts",
+      "sha256": "3855827cafada7e1487a91b3f883efd796e7d3c30d0ec9dc0fe4214b9a9f75f4",
+      "bytes": 2463
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/types/src/content.ts",
+      "sha256": "c79728c7b634eb924c5496a821f762ba5965dfbe896d50356de3bc7ab7687a2e",
+      "bytes": 3931
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/types/src/index.ts",
+      "sha256": "35a44f8ea6d3be6538639d737dcb4e3f41fa2851dc3db675c74e3c7cc87347a3",
+      "bytes": 177
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/types/src/progress.ts",
+      "sha256": "6b3495158c2e6cd5dcf6d1b15c1b62d9f2f9f644d18d4992f0df7a3e097d61d2",
+      "bytes": 1726
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/types/src/recommendation.ts",
+      "sha256": "b0d8480605f15ccc5f717a5553058c56bbec42cc83eb66ae35cc881d99eb680b",
+      "bytes": 531
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/types/tsconfig.json",
+      "sha256": "ff14d2d1919435b3e689c0943ff2d70eca215bbd33bc66b783dac277fe4eed1f",
+      "bytes": 163
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/pnpm-lock.yaml",
+      "sha256": "ba5eda27101caec27845bbe243d7351763f4777e33d8d9b1aa68f93976d46de3",
+      "bytes": 127212
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/pnpm-workspace.yaml",
+      "sha256": "b5f43648ca0494c64cb84f783ccbe8bc676f8573ff61dbfcefc71b332f23156c",
+      "bytes": 721
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/admin-ui/integration/AdminRoute.tsx",
+      "sha256": "cb2655dec44600aa1a7ae78be0194bc4f3e54080e0a85800c6f6434ec00140c2",
+      "bytes": 2116
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/admin-ui/integration/TEST_CASES.md",
+      "sha256": "c9f35a37176f72dfbb8b9e2b78b2a151e84ea165922f2032ede8e9c9b74f4f44",
+      "bytes": 17365
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/admin-ui/integration/assignments-curriculum.integration.test.tsx",
+      "sha256": "e181d61624283737e3de37871a16b8eb86f11e160d834b0bea01aaf81998377d",
+      "bytes": 12307
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/admin-ui/integration/harness.tsx",
+      "sha256": "fec3b9c8254651a311447e3e6e2d8437064b84c1104bcf427629bb830a9e3957",
+      "bytes": 4670
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/admin-ui/integration/helpers/api.ts",
+      "sha256": "ede149dbf789bfe92492995e70d1b8c6de4057ee851f0a72fa17cae9e376e478",
+      "bytes": 8502
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/admin-ui/integration/helpers/drivers.ts",
+      "sha256": "262a0243af9a5a35ec204e151096bc45a1f771295c77ad3a664619db09a0e4e6",
+      "bytes": 3241
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/admin-ui/integration/helpers/environment.ts",
+      "sha256": "6eb5aa9faee1d12b5aad3b4fa67bb08f7c8a819876d826922561a23713eb404a",
+      "bytes": 2951
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/admin-ui/integration/helpers/fixtures.ts",
+      "sha256": "14151868e054bc22dc714e86d3b0a54091b136cd9cb7aa2deb14c59611641e1a",
+      "bytes": 5306
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/admin-ui/integration/helpers/mock-next-link.tsx",
+      "sha256": "1edf8bff9df05811276967afc3095f18cfd12ab4a20a20b01bfe02f1f4705fc6",
+      "bytes": 1319
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/admin-ui/integration/helpers/mock-next-router.ts",
+      "sha256": "f76ad1a1cdd4b23ae34ee0ac7f6729ab24d136c17a50211ece1ec202eed8b1e7",
+      "bytes": 107
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/admin-ui/integration/helpers/router.tsx",
+      "sha256": "ecfdeff20371a20bc4f9c4ce16d8c54cb56d1a1f181e8bbacfa3ff874562daa2",
+      "bytes": 3549
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/admin-ui/integration/helpers/setup.ts",
+      "sha256": "fc508640e368fbd4e09037d2281cfef36669e1e03d854121289ba781d528143b",
+      "bytes": 735
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/admin-ui/integration/inventory.integration.test.tsx",
+      "sha256": "992c9bf72ed3bc8e6e9134718e24089480e5376bf854d79d3741a499a31becd0",
+      "bytes": 17556
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/admin-ui/integration/mission-editor.integration.test.tsx",
+      "sha256": "4306b89354e3ee4a86f6d74259622cb31367157da5cce9065ea4d539dec5980d",
+      "bytes": 20403
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/admin-ui/integration/package.json",
+      "sha256": "3bd1fcd8bbc8825097ed09ad16bc3b9b33ee645b90db31258ed8547587e30180",
+      "bytes": 896
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/admin-ui/integration/practice-award-editors.integration.test.tsx",
+      "sha256": "a5373ce644f094e3c39ddbc275c60a5b26a812ce9c263c7d2f00746012e7901f",
+      "bytes": 19279
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/admin-ui/integration/publishing.integration.test.tsx",
+      "sha256": "d5e998c8c09c82d1395aa1c19e8078021987e1c7674f20d6a2ba306508be0371",
+      "bytes": 12339
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/admin-ui/integration/resilience-accessibility.integration.test.tsx",
+      "sha256": "f35ea6e19d98b51afda9aa7f15b8749f50eb414bd2382b9de962e032595f7c4e",
+      "bytes": 14894
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/admin-ui/integration/settings.integration.test.tsx",
+      "sha256": "83fa96f9f1d6408351216e0733212a74d5aa6ed4291fa33c6b85c722a710633d",
+      "bytes": 12731
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/admin-ui/integration/tsconfig.json",
+      "sha256": "ad530294d53027991f26992c6930321298603b7970f303a3690b86ededf8fd74",
+      "bytes": 346
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/admin-ui/integration/vitest.config.ts",
+      "sha256": "42d4b2bfb6d591d3a1e23e5935a359d8f7bd04333bcc14e3457f3db87d43d218",
+      "bytes": 706
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/learner-ui/integration/TEST_CASES.md",
+      "sha256": "0d464e1ada0af037e364d25e442838f5782e4291aa42f919c6309e4935b8ba29",
+      "bytes": 13225
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/learner-ui/integration/ai.integration.test.tsx",
+      "sha256": "13c3a3b773000100771d7af242755a452a953d01a0bd8f5c68f76cc90c01b97a",
+      "bytes": 17262
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/learner-ui/integration/fixtures/mission-data/awards.json",
+      "sha256": "6d10042dd1b496d5e68c23f7a7b785a9b98c77f300308464ff52c959ec3bbcb8",
+      "bytes": 8124
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/learner-ui/integration/fixtures/mission-data/flashcards.json",
+      "sha256": "6ca19f8b2a6628f8e4cd3500ba4f00595f44721ec23fd990298631186443fc5a",
+      "bytes": 29757
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/learner-ui/integration/fixtures/mission-data/missions.json",
+      "sha256": "c9c5dcbe579cceecaf699ba4dcf9ab4e69e5c6414a652600a8c529bbd7e6d833",
+      "bytes": 25022
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/learner-ui/integration/fixtures/mission-data/questions.json",
+      "sha256": "863e310bc8df074eb3c9a6e985f7f8ac01b126e2222e5284d7d5cddb52857ada",
+      "bytes": 72104
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/learner-ui/integration/fixtures/mission-data/sample-progress.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "bytes": 3
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/learner-ui/integration/flashcards-review.integration.test.tsx",
+      "sha256": "55df8ce01b001f4d749bb906dd33d4f3befd831ca21ce468be4071e14f177463",
+      "bytes": 11072
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/learner-ui/integration/harness.tsx",
+      "sha256": "7e82191b45c49ffd0027e7350413bb58c91d39cf1c146d08c2899d898e0d14b3",
+      "bytes": 5366
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/learner-ui/integration/helpers/api.ts",
+      "sha256": "932452e6d0cc300e0aba4e24575bead30444f38d704a0e5f1363798a3cb6bb68",
+      "bytes": 5417
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/learner-ui/integration/helpers/database.ts",
+      "sha256": "d2b90d60ffa72e87fbe74c3cea7e9872a8ad727e7ace60011ac30b807e2ce9fc",
+      "bytes": 766
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/learner-ui/integration/helpers/drivers.ts",
+      "sha256": "9cde1d7ea53e97b2f4a95616d79f34a0ca624fe8d67b3d0cc89a384c8eb82200",
+      "bytes": 7005
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/learner-ui/integration/helpers/fixtures.ts",
+      "sha256": "b0a117b234053909960442e830737a46b00418ac4450a65219e029a124b38af0",
+      "bytes": 5557
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/learner-ui/integration/helpers/setup.ts",
+      "sha256": "16b8883a61abf5f6b0a266c3d6b7ef9febcd89ec492cd08294df0f398ef3b473",
+      "bytes": 1097
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/learner-ui/integration/journey-browser.integration.test.tsx",
+      "sha256": "e80aeecb167de07219dec243a67d38c7c28839e726b07bb9960d50a5b4bd63eb",
+      "bytes": 13532
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/learner-ui/integration/mission-learning.integration.test.tsx",
+      "sha256": "58cacde9e11c12899ec3a771cf045bbfdfbc9f38832e16873651d95cc8c2e56f",
+      "bytes": 12943
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/learner-ui/integration/openai.integration.test.tsx",
+      "sha256": "bde1ca3a8bcfdbd21255ce1fd3e273dee8b177fb507a24a3a31fa24f91116853",
+      "bytes": 14785
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/learner-ui/integration/package.json",
+      "sha256": "bd3d3b34b6f9e202055949204c26f04ba4a4d0cd4cd6f0b6067ffd33e4219fc9",
+      "bytes": 837
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/learner-ui/integration/persistence-resilience-accessibility.integration.test.tsx",
+      "sha256": "f01b6a25a24ffe69779b4663e5f57c33fd66146716098dda772f6ee8c7bc509d",
+      "bytes": 16586
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/learner-ui/integration/progress-awards.integration.test.tsx",
+      "sha256": "45100fe059d90158241048ee8b912b1f550bfe7855a53ae738eeeee516a6d164",
+      "bytes": 10719
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/learner-ui/integration/quiz.integration.test.tsx",
+      "sha256": "b859fba399f06c4317130462e71259bc762311ffb57c217b219fc303e478881c",
+      "bytes": 14630
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/learner-ui/integration/scripts/dump_fixtures.py",
+      "sha256": "738f081ff44928bf1c187016ceb49e6e8995765881bdf348b961ed44585ad111",
+      "bytes": 1123
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/learner-ui/integration/tsconfig.json",
+      "sha256": "099ca799e2d3d6f5718d49390ea2bde8f2b62f287a71323f1f36e56bb30d305d",
+      "bytes": 278
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/learner-ui/integration/vitest.config.ts",
+      "sha256": "5400164ad9bd580ce37a9e271e3c3e55af945706726d1b293f57dbe4fb033ad5",
+      "bytes": 210
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/tsconfig.base.json",
+      "sha256": "1669894c089dd6a0ab919bf83a577bc006fe49ce0de13e1eee07ae47dee540a8",
+      "bytes": 409
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/turbo.json",
+      "sha256": "042a5f509cd441382ad6e71d8b01f2cbc20d412e34e2cda7fe60fb3f07e1fd2a",
+      "bytes": 318
+    },
+    {
+      "path": "verification/verification-config.json",
+      "sha256": "c2d99e055ca33371d9fa58e005686aec229a36b305aa70828d5c0c800f470ba6",
+      "bytes": 300
+    }
+  ],
+  "after": [
+    {
+      "path": "README.md",
+      "sha256": "76351df83b20a23543d62a36db9eb82982dc59b914f9aada19ad3af8a68adecd",
+      "bytes": 173
+    },
+    {
+      "path": "challenge-context.json",
+      "sha256": "a40973fe3952304e7b7b4d03ff8b945b353400b6ccda21fc1934a9c2b941c2fa",
+      "bytes": 4068
+    },
+    {
+      "path": "challenge-package.json",
+      "sha256": "c41daa47360e0e34e98a004102c3d0f41624fdba8c97663bbf02bc0e4034e386",
+      "bytes": 407
+    },
+    {
+      "path": "integrity/source-hashes.json",
+      "sha256": "622aa74cc82c569ce79a641c6dd2d1f2086c48e3c7eaf37e0157f8e91076b3f0",
+      "bytes": 101
+    },
+    {
+      "path": "reviews/SUB_001/final-result.json",
+      "sha256": "01747bc1eddc483d34e69f0f570db276ec6f46d32fcf644e0f2533ee06e0b52c",
+      "bytes": 210
+    },
+    {
+      "path": "reviews/SUB_002/final-result.json",
+      "sha256": "b9d0034732b1035576b567f94c4c33c9d204750b4221ec7b2f2849c1f4c8dd84",
+      "bytes": 210
+    },
+    {
+      "path": "submissions/SUB_001/signal-and-spark/.gitignore",
+      "sha256": "663183d0b06a00c845e18eabeffc86e3003c2b507675baa7cdc3372ae7460d09",
+      "bytes": 136
+    },
+    {
+      "path": "submissions/SUB_001/signal-and-spark/README.md",
+      "sha256": "cc8f0552eac8780f24f3d3be999346ff3d9d4ed69d6b1fd520644e2b6b055c2f",
+      "bytes": 4457
+    },
+    {
+      "path": "submissions/SUB_001/signal-and-spark/THIRD_PARTY_NOTICES.txt",
+      "sha256": "ea501ce1676c63510fdbf287e22b7b681f1496cd6f9c26cf60186b49513cf18c",
+      "bytes": 2209
+    },
+    {
+      "path": "submissions/SUB_001/signal-and-spark/index.html",
+      "sha256": "b471d1dbbf538dd07ce84c04acb4bee09fc1e630126da35b8baeeb752d91edc1",
+      "bytes": 456
+    },
+    {
+      "path": "submissions/SUB_001/signal-and-spark/package-lock.json",
+      "sha256": "8ff591ee3f66af6d2440b75de84bd8be14486a2b7bd2856a1c1badc40ef3f456",
+      "bytes": 94200
+    },
+    {
+      "path": "submissions/SUB_001/signal-and-spark/package.json",
+      "sha256": "b844d6aa1a174c14fecc3819be1a05637e816091c0ad869797ed7700b3867caf",
+      "bytes": 670
+    },
+    {
+      "path": "submissions/SUB_001/signal-and-spark/src/App.test.tsx",
+      "sha256": "c1e75bbc64ea1bc9bfe821e6779757436f30bfd06395ff8f17d2a4b832f959c4",
+      "bytes": 3114
+    },
+    {
+      "path": "submissions/SUB_001/signal-and-spark/src/App.tsx",
+      "sha256": "829310bf2ed697b5987b1b868df89a401d6299785170211b7a39fb0864b32a5d",
+      "bytes": 3887
+    },
+    {
+      "path": "submissions/SUB_001/signal-and-spark/src/components/Brand.tsx",
+      "sha256": "e6ac99fc81ff719b89e4d15da66cd30034ab5e5362fc9e093281b4e8766292b2",
+      "bytes": 2530
+    },
+    {
+      "path": "submissions/SUB_001/signal-and-spark/src/components/Header.tsx",
+      "sha256": "275588fac2363ee95ca769f6dcbc4ca9a167bc4bc1663cdc6ca9b7f3eeff5b5f",
+      "bytes": 1514
+    },
+    {
+      "path": "submissions/SUB_001/signal-and-spark/src/components/Ui.tsx",
+      "sha256": "5b7e3c5fd01c96863b19b245421b781c5617e7fb86cebba35cc4f1aaa9dbf044",
+      "bytes": 740
+    },
+    {
+      "path": "submissions/SUB_001/signal-and-spark/src/data/seed.test.ts",
+      "sha256": "cd2b83039af49d0f00f52f68331964437fcf1c4839654af0736164cbc49b159b",
+      "bytes": 1848
+    },
+    {
+      "path": "submissions/SUB_001/signal-and-spark/src/data/seed.ts",
+      "sha256": "ef5c56969cedfb35278b40f188b4e1c6ec0dd3e0c465d0fc5049600441fa2ae1",
+      "bytes": 34205
+    },
+    {
+      "path": "submissions/SUB_001/signal-and-spark/src/features/AdminView.tsx",
+      "sha256": "4d766e49c98b219b23e1ba68a4392a3ba7d28232cce76d95358d2ba534744883",
+      "bytes": 12559
+    },
+    {
+      "path": "submissions/SUB_001/signal-and-spark/src/features/JourneyView.tsx",
+      "sha256": "d23bf1c9583d56248f93c137caf88d6498c67ea60b46b4d339e3a75936984b40",
+      "bytes": 5904
+    },
+    {
+      "path": "submissions/SUB_001/signal-and-spark/src/features/MissionView.tsx",
+      "sha256": "93f8a9a331a4a227c06778d61ea7a8a66471bae96220bc3a301c89cfcf16b0de",
+      "bytes": 12659
+    },
+    {
+      "path": "submissions/SUB_001/signal-and-spark/src/features/PracticeView.tsx",
+      "sha256": "087d779e4e64218b530413242ab5d762424ceb86b8366d6faee5038d9d1b5e43",
+      "bytes": 4890
+    },
+    {
+      "path": "submissions/SUB_001/signal-and-spark/src/features/ProgressView.tsx",
+      "sha256": "300a1f485bfb78f00222608261e785a3fc3de08e0a0b2c3896f507db5550ee14",
+      "bytes": 3017
+    },
+    {
+      "path": "submissions/SUB_001/signal-and-spark/src/features/TutorView.tsx",
+      "sha256": "9035ef67808fa0dea715bdf4c2f85428391119bdd192f430f3494ebe216c10e2",
+      "bytes": 4514
+    },
+    {
+      "path": "submissions/SUB_001/signal-and-spark/src/lib/storage.ts",
+      "sha256": "69f9a45bfb65affce174ce8bc51bb33236fd84f82002061b5ae161e6637f3a84",
+      "bytes": 5062
+    },
+    {
+      "path": "submissions/SUB_001/signal-and-spark/src/lib/tutor.test.ts",
+      "sha256": "8a52841fbcdd4398679f5a47d79410e5a0448e4535129e4c2a2034b03cd40f65",
+      "bytes": 1515
+    },
+    {
+      "path": "submissions/SUB_001/signal-and-spark/src/lib/tutor.ts",
+      "sha256": "4b06b7a76e0ab2fd4c9b424713962920c2989a871f325baddd1379c53d5e5594",
+      "bytes": 4287
+    },
+    {
+      "path": "submissions/SUB_001/signal-and-spark/src/main.tsx",
+      "sha256": "9abbafa120f0cd4ed04b6d76ea696f353578e118b7bc975767ef41528dd5d5a0",
+      "bytes": 231
+    },
+    {
+      "path": "submissions/SUB_001/signal-and-spark/src/styles.css",
+      "sha256": "7307381126f348af28334808b053b017b0d246bc6a1e601ae6ce733f58d83b37",
+      "bytes": 44293
+    },
+    {
+      "path": "submissions/SUB_001/signal-and-spark/src/types.ts",
+      "sha256": "e27e6c8bc5673ac4decf3c493ea98d5c8ca61713b9a03ec7e7597c06287fcfae",
+      "bytes": 1282
+    },
+    {
+      "path": "submissions/SUB_001/signal-and-spark/src/vite-env.d.ts",
+      "sha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5",
+      "bytes": 38
+    },
+    {
+      "path": "submissions/SUB_001/signal-and-spark/tsconfig.app.json",
+      "sha256": "e34b9e86ade5665af88225644c777328180aaaf9c4a39624968c4284f4fce3ef",
+      "bytes": 540
+    },
+    {
+      "path": "submissions/SUB_001/signal-and-spark/tsconfig.json",
+      "sha256": "770b4140bbb581e2dfd9ea9946ffc9c75a1d86ba7d2db5f77c83e37cbdf9d808",
+      "bytes": 119
+    },
+    {
+      "path": "submissions/SUB_001/signal-and-spark/tsconfig.node.json",
+      "sha256": "4de39227e37a661a1639473f6ecff13131b6779d575e2f0634bbf085403799fa",
+      "bytes": 251
+    },
+    {
+      "path": "submissions/SUB_001/signal-and-spark/vite.config.ts",
+      "sha256": "c50bc02fdf52a5cd4c7329008a2e5cf6e43114a11ebac77b4443ba45ecc3033c",
+      "bytes": 315
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/.dockerignore",
+      "sha256": "8a90770e260fcb830c861fa86900db99b7351085d3c5f5277dc1e886d1fded92",
+      "bytes": 163
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/.env.example",
+      "sha256": "03b3d18502394518a085b3e0d8502e444d6784398dc86f5cb0c6b9f16b5461e7",
+      "bytes": 288
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/.gitignore",
+      "sha256": "2ad64f4f40a8379b262045c3369cf3a5e891abe2cb107052d91f069fee177333",
+      "bytes": 76
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/AGENTS.md",
+      "sha256": "4a83b696d8073dade77755ba2ed79af9e4e339e563b477f4b7115c6c193b470d",
+      "bytes": 1063
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/CLAUDE.md",
+      "sha256": "918b1c90559355ef78f33fdf3562f2b021ef8bdfd8a5c8415e5decd44934de55",
+      "bytes": 10
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/README.md",
+      "sha256": "1ea23b3923031f1d59a33bac5016f570bb5da289032e5dfb833f8e501a8703f0",
+      "bytes": 12818
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/ai-learning-adventure-demo.webm",
+      "sha256": "dd74eb4c81a6504fb5ef3a08ca032d08ba7547d325f6a82ec889f37ccc0dcd3f",
+      "bytes": 14932546
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/Dockerfile",
+      "sha256": "73f63f41341be9cf72f8b9bf86ef7ff3bd91f9d97dd7277eff7f8ad83f134406",
+      "bytes": 1544
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/next-env.d.ts",
+      "sha256": "600c688e996ede98733389475220d324c7682155d37318a8f513388b8ccebc6e",
+      "bytes": 290
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/next.config.mjs",
+      "sha256": "58fb7eab7076187daa205d8a316cf05256ef3154c059a12ddeb7e9b478299836",
+      "bytes": 396
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/package.json",
+      "sha256": "a60e429540d7362c35f2d316b3e41401d7c9c97c26e8bbc58aeb51034ef0096c",
+      "bytes": 743
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/scripts/build-tokens.js",
+      "sha256": "f626d15d73fc1fb9481ab1bf4566ec5b5d5466b44dc98240ff4c97575068cc34",
+      "bytes": 3535
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ConfirmDialog.tsx",
+      "sha256": "5f92275315715de015b5c88e94e86f78db1df0445d4b2c47647ec58162f002f8",
+      "bytes": 996
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/PreviewDialog.module.scss",
+      "sha256": "ab50bf3c1db784ad3265ba3ac37c6bd0662058a568414eddbd575c1c71948c92",
+      "bytes": 641
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/PreviewDialog.tsx",
+      "sha256": "9fc242f9afd543af2886dfd31ec5e2d41c8549dee4b8290fa905f00ea736aefb",
+      "bytes": 2563
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/PublishGateDialog.module.scss",
+      "sha256": "e80ed86d5529aaa0052a20c6cab408859fb339b0beb4a9d6481059f096af9938",
+      "bytes": 964
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/PublishGateDialog.tsx",
+      "sha256": "b61990839dfb44b037a097147abd863b64abe61b41fc4f983e63cc0f8845c939",
+      "bytes": 7326
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/StatusBadge.tsx",
+      "sha256": "cd1c1bfc9686c1c4a9a9688d21925b0d70e169f81fd86cd681430bfe41d6a3ab",
+      "bytes": 653
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/layout/AdminShell.module.scss",
+      "sha256": "9de90ff1dd2bcca40afd7c98c1465f056b9eda8b48b4b9d6b7867dbf19184ba9",
+      "bytes": 1862
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/layout/AdminShell.tsx",
+      "sha256": "a4ed3bc8c4903e4a63fce86b631ef51afea7ef1d7a188e2e3b8a4d61c499a74c",
+      "bytes": 2226
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/Accordion/Accordion.module.scss",
+      "sha256": "557ebb69c5a794eeeba296cfb84ad6fc3e49036b031640249b682549205326f4",
+      "bytes": 1241
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/Accordion/Accordion.tsx",
+      "sha256": "48f834e499a443bd0c9f67559ad982ade022f2d550d4db56888ee63a77b67033",
+      "bytes": 5320
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/AttentionStrip/AttentionStrip.module.scss",
+      "sha256": "1c243f92365955110b20fbcadb91d5a8626cea862a52e4f099b06fa2e129b90f",
+      "bytes": 1491
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/AttentionStrip/AttentionStrip.tsx",
+      "sha256": "9436a14c55f704f1c2677125a74df24e5dc9931a667ccb162d0d7f6ea0592be6",
+      "bytes": 1433
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/Badge/Badge.module.scss",
+      "sha256": "144b110f4d35a82947a3c512b39bb051c844b260f515a6a90c61a36ca40e6d0e",
+      "bytes": 1362
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/Badge/Badge.tsx",
+      "sha256": "5870de4a5a6271ad61e1d55969e70e918b456b23879c38a31d1982f93083d4d3",
+      "bytes": 610
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/Button/Button.module.scss",
+      "sha256": "3b53252368b08b63e1d11b38f7fba28bc81e20fbe187b7fce852f67b68b190df",
+      "bytes": 1770
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/Button/Button.tsx",
+      "sha256": "81ccb0d28679f36a22cc1b18ac99a79149bcf45b454d85007ac5796a1ae12dc5",
+      "bytes": 1168
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/Checkbox/Checkbox.module.scss",
+      "sha256": "97e8f3761aec48884948cffb82de74d48f2c3cded7aa2053e642017820003a28",
+      "bytes": 1461
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/Checkbox/Checkbox.tsx",
+      "sha256": "b03875d287afa73d6933dd4347ac07034fd78cd717d0a83251e52113c75715ba",
+      "bytes": 1721
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/Dialog/Dialog.module.scss",
+      "sha256": "384ac82d77aba52b85ac374607edf1372579e0c417b475eec605d120febc79b5",
+      "bytes": 2210
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/Dialog/Dialog.tsx",
+      "sha256": "a8e13de1bb37ba7a64b95ff96dfac235944f08968189b65ff3f5a872695f5b26",
+      "bytes": 4015
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/EmptyState/EmptyState.module.scss",
+      "sha256": "fc6d0386486ef86da67d1d1f19bd89ff9befe05097f1da552b11f90152d342e0",
+      "bytes": 699
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/EmptyState/EmptyState.tsx",
+      "sha256": "9560e5c3f0a5c5edfbc0e42492c07abca98521305f7b10f9f48fceaf5f6a336a",
+      "bytes": 769
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/ErrorState/ErrorState.module.scss",
+      "sha256": "d33f2388cee6c58d3a84b9b3839d91a745bbb7738dbf1f2577f3cf6ccca80488",
+      "bytes": 583
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/ErrorState/ErrorState.tsx",
+      "sha256": "b9a9694c990db729a78628873b7411343a8b7ec69f6eda5f48bf712afc4d1191",
+      "bytes": 654
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/FilterToolbar/FilterToolbar.module.scss",
+      "sha256": "541c6a942db534d9dd6f37a115e821c422d60eac2014118ed80fae92e60edec9",
+      "bytes": 183
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/FilterToolbar/FilterToolbar.tsx",
+      "sha256": "3d39204004ae86721db718fb47df97475c7f14b9dad178a4a02c06921ecc52c4",
+      "bytes": 398
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/IconButton/IconButton.module.scss",
+      "sha256": "66bcb330a4fe3caf9d8c10c895ed3eb154fb7e5c54398a3b6fa7ea005a2c47e7",
+      "bytes": 889
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/IconButton/IconButton.tsx",
+      "sha256": "32cb43dca9df199c96ed8a3f059fb2531fe78b56af5796749ce6b7c71e29a916",
+      "bytes": 567
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/LoadingState/LoadingState.module.scss",
+      "sha256": "7bc542c333386e072e90b622d447a745a328b322f05dc4f2936494d39d71b06e",
+      "bytes": 582
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/LoadingState/LoadingState.tsx",
+      "sha256": "dcbf5ab033dade5f51647546dcf3466f6eefa9623db739b475dc5d77eeef7745",
+      "bytes": 453
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/Menu/Menu.module.scss",
+      "sha256": "28d5c58f09c864ca309e908ad560cca24ef5d50d734517624c2c7ca96849613d",
+      "bytes": 2109
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/Menu/Menu.tsx",
+      "sha256": "a0607b4ecb8954f78d43ce150f1e80554d88846fbf5167f93f10e8ad611edf09",
+      "bytes": 7105
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/Pagination/Pagination.module.scss",
+      "sha256": "61371ff086be29dabe404ad59511d4509d990818edc99c1e8a615bf928c091af",
+      "bytes": 1298
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/Pagination/Pagination.tsx",
+      "sha256": "8486c6fb8859aae6bb8c14ebec762bef44a1bac5185c6013636b86efba5e115e",
+      "bytes": 2041
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/README.md",
+      "sha256": "41a866ad1541e914d2e8efd538d8cb8d7d56462fd263236d203162f2efc98f38",
+      "bytes": 35058
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/RadioGroup/RadioGroup.module.scss",
+      "sha256": "1ee346242ac0a2114ccddfdacf4b2de3d2a5b153afff9cd4a32843c88fa8e173",
+      "bytes": 1898
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/RadioGroup/RadioGroup.tsx",
+      "sha256": "089c8c6a7500dc855e76b4a04061b721a1a1bb89e7ed2969bf4906a3143cb1f1",
+      "bytes": 2067
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/SegmentedGroup/SegmentedGroup.module.scss",
+      "sha256": "e83b5024dd4babc16ff02a9e2e0d7929e2ec8237a6359467b52997b141a32631",
+      "bytes": 1288
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/SegmentedGroup/SegmentedGroup.tsx",
+      "sha256": "e1bab2f0c9884f9113153077a0747e26067bc17502c41a0b605e904a547699c3",
+      "bytes": 1219
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/Select/Select.module.scss",
+      "sha256": "84e5e782bbdc55fcc2baf07e6ae114ea6e3cc2e5ab84b806bb6b0dd1a1857f46",
+      "bytes": 1763
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/Select/Select.tsx",
+      "sha256": "79d55517ac18890b57cdb5bb0a8aac1c4ed94d7a5b59f8fab0142a1358e58ebc",
+      "bytes": 2541
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/Switch/Switch.module.scss",
+      "sha256": "38fbc7ecae178a5e32eb6966ebe58c6d147bdf4d52cf8b1bfd3c940faac0da59",
+      "bytes": 1342
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/Switch/Switch.tsx",
+      "sha256": "5d3bc2fdd59c3bd3301112346984cc55c4ddeb32383bc1878290d0ab0b874456",
+      "bytes": 1268
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/Table/Table.module.scss",
+      "sha256": "750c2c8caf3ed3e803c38c692b0d1ab41e2d119791ee235975a648f97a23861f",
+      "bytes": 2446
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/Table/Table.tsx",
+      "sha256": "f2406232bc45a0755afa84e4cdf75003922bcacc7bd204837d4826f6bb410cfe",
+      "bytes": 4530
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/Tabs/Tabs.module.scss",
+      "sha256": "89a47e0059ec521f020e5c0867b896c2f339bc958be2223dc5af6f3cb180c067",
+      "bytes": 1256
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/Tabs/Tabs.tsx",
+      "sha256": "41bcb37545bcd4d5783d2cf21088e75bb244f6757bbfe76c6e2a35a342b21404",
+      "bytes": 4272
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/TextArea/TextArea.module.scss",
+      "sha256": "d8f2591948e84f9b9f6dad6dbeb3a40aeb37a9f467038e97ebadf4587138b86e",
+      "bytes": 1522
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/TextArea/TextArea.tsx",
+      "sha256": "02bb57b89bb877ab8bef64e3cbec2b2c4e269742c5e69b5b06d49e8cb6fa0454",
+      "bytes": 1319
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/TextInput/TextInput.module.scss",
+      "sha256": "e5e03a27d2944ddf873fa7065dcf53848f5ec58ac96a6e1ebe5bcd53cffc8e88",
+      "bytes": 1702
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/TextInput/TextInput.tsx",
+      "sha256": "b56553b28809cc270fb82b075bb39af6162f2d4953d77bd61236a72ec77d1d90",
+      "bytes": 1484
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/Tooltip/Tooltip.module.scss",
+      "sha256": "cd4c0f09a8ece30d115dc4aaebbb5be17da07fafb5d34255ad95079b3c222bb3",
+      "bytes": 1022
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/Tooltip/Tooltip.tsx",
+      "sha256": "df8b109220a29edce218ff28328fcb58cc74e464d4090c0cad053cd05f1ae93c",
+      "bytes": 769
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/Typography/Typography.module.scss",
+      "sha256": "1aba4c802eaccee5541c4edafcec343054ae62d93f4b8edf6dd61b13486ec208",
+      "bytes": 2223
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/Typography/Typography.tsx",
+      "sha256": "feff9f92f3e53dc7da8790d012df7c5177f7dfbe84bfeba18b81e3c5b9f8d885",
+      "bytes": 2147
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/cx.ts",
+      "sha256": "d072fed817c1c489578df5f7a73858dec3d0d96374d145abc4d91c845064397c",
+      "bytes": 157
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/index.ts",
+      "sha256": "b288eb46669a02316572950f86dc4b9d87cbdf8b3ec6227fe4d2a986265f0687",
+      "bytes": 897
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/features/assignments/AssignmentBoard.module.scss",
+      "sha256": "a83e7d416ba50f8742c47f40f65c1038a6e65539bfce6e8916b681407b21f303",
+      "bytes": 3018
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/features/assignments/AssignmentBoard.tsx",
+      "sha256": "a2f53872f64a4bf89edfd44fa699dd38782d8ecad5d700d64dcab5d49904d5ae",
+      "bytes": 24879
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/features/curriculum/CurriculumPage.module.scss",
+      "sha256": "fd70ffddfac542f79354b1c2de2a7b1d116c7c0dc3bdddd614833118e680f3d4",
+      "bytes": 1532
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/features/curriculum/CurriculumPage.tsx",
+      "sha256": "03938fdbe331b9a4bf33f6b54029f831ad3951d3ab70646c81b08480ad8e0c32",
+      "bytes": 9624
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/features/editors/AwardEditorPage.module.scss",
+      "sha256": "c01432df2fd3f0affafc5e6a5160d5c37068768221332991dc83cd6bfcd477a1",
+      "bytes": 381
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/features/editors/AwardEditorPage.tsx",
+      "sha256": "d8b3698b22ef11d5a5c3a3bd6d7e7e910098ed670d067ea9f9854669e0b01234",
+      "bytes": 10549
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/features/editors/EditorFooter.module.scss",
+      "sha256": "7410ed94bd2fa40d418a80a1ebe7b625de5b19ef898323c35c07767d2d2f08fb",
+      "bytes": 770
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/features/editors/EditorFooter.tsx",
+      "sha256": "5c5df23e3163271d45d7f6be135bec32bae25352616c339502ea4de35516c2b2",
+      "bytes": 2532
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/features/editors/FlashcardEditorPage.module.scss",
+      "sha256": "567ff9650c30b8c9a577930053957346dfbade2ed4172670ae51bd527732953f",
+      "bytes": 1198
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/features/editors/FlashcardEditorPage.tsx",
+      "sha256": "015ec41673b03a2c670a93d328aaa218b93f440a8f3263f1c1b85cb283505e19",
+      "bytes": 8042
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/features/editors/MissionEditorPage.module.scss",
+      "sha256": "6912d0741186d175538df8060141303dfeb49b7a1f1d99ffcd42f5d2e2262337",
+      "bytes": 1281
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/features/editors/MissionEditorPage.tsx",
+      "sha256": "410bc2293efdef71f6017b7a384a94ec8c7632128280e0756609dc62cae71348",
+      "bytes": 25193
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/features/editors/QuestionEditorPage.module.scss",
+      "sha256": "f9b3ef879054c4ede3aad9d5760b1e5ce6327e092dc90567cf632a09e1395e85",
+      "bytes": 2023
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/features/editors/QuestionEditorPage.tsx",
+      "sha256": "c4cd120aa120c65e13ac63fdab59dd948ade221c156db94c8e80bfa1bc81a4d1",
+      "bytes": 15010
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/features/editors/useEditor.ts",
+      "sha256": "dee1f1f072f6930bd520548113e5973445f9c51a4ef23f664953e3a9cd384b30",
+      "bytes": 3397
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/features/inventory/InventoryPage.tsx",
+      "sha256": "0ed7fd7b989e82274bbfe34477574e7e08c88eabce5422de81891888fc39f4bd",
+      "bytes": 18485
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/features/settings/SettingsPage.module.scss",
+      "sha256": "56c4a361f3a7b8330f9faf233f711791a48ef0832c8564ab0c5268894a64fe96",
+      "bytes": 1385
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/features/settings/SettingsPage.tsx",
+      "sha256": "e9dfdd0279856b8770a944be8cf33d20e1ba475923f5c359b3cf89d27d902104",
+      "bytes": 12187
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/lib/api.ts",
+      "sha256": "bd656f1420571fe154c577b572dda7a724417f3cea447e0eebafb2c8d55cdd47",
+      "bytes": 6527
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/lib/hooks.ts",
+      "sha256": "d78ef53a5c60ce3d5a40ead23893f4da9ec99a461cc66aacf0994c40f5aab2fe",
+      "bytes": 1280
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/lib/labels.ts",
+      "sha256": "b5830471191ad16bb8fc00c705ddde68083daccfb24c5983a400e7bf9de83548",
+      "bytes": 2238
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/pages/$.tsx",
+      "sha256": "1a52159421687f7a0fb54b58de4d353e575452926336339d3bb5c0d6bf049b1e",
+      "bytes": 16310
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/pages/_app.tsx",
+      "sha256": "d3a07a07ab15d26b6e09520cbd3e259f8ba08c3d0bc8e299c836d283fc94e08b",
+      "bytes": 263
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/pages/badges/[id].tsx",
+      "sha256": "42dae4023af9214912ff92d02521bf07f4bff79d2411645fd7e92e2d66373f32",
+      "bytes": 417
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/pages/badges/index.tsx",
+      "sha256": "e1f7ce8f2ddb0f184f172c0dc19b11d99afe0fec468fefbdf50f2f511f6805aa",
+      "bytes": 208
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/pages/curriculum.tsx",
+      "sha256": "6ef966df27286084d6228121824ed5a4429d9f60f24b8921093c2b953628f34a",
+      "bytes": 193
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/pages/flashcards/[id].tsx",
+      "sha256": "8dbd463f794511882820a70ed78b8ba381f9266d15136d591d44ba03c0d0af41",
+      "bytes": 437
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/pages/flashcards/index.tsx",
+      "sha256": "25d82ff7e83aaaca5ccc87a941a2d79c87beade1cf8c11bc49d3ddf10955a733",
+      "bytes": 220
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/pages/index.tsx",
+      "sha256": "09459399888411608142c38024eede92ccd7851795d16d7bb875e5f489afe55e",
+      "bytes": 302
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/pages/missions/[id].tsx",
+      "sha256": "cc10dc80f11fe54de39df76b7822c5e5e886a690689b699824c33e9494349320",
+      "bytes": 427
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/pages/missions/assignments.tsx",
+      "sha256": "0a75674905f6816309ef2fd139b70788190168f9f970e698fbb147a6abd727d5",
+      "bytes": 207
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/pages/missions/index.tsx",
+      "sha256": "21b3e350e204623ce4a003814a8a0cb63cb5ad3bdd024467a5858d0f72c5a05f",
+      "bytes": 214
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/pages/questions/[id].tsx",
+      "sha256": "62fa2eef62a2c7e031e8a1a0a581ccd3dae8ec03a49f4c8b644220ea29614532",
+      "bytes": 432
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/pages/questions/index.tsx",
+      "sha256": "857a71d007743d0d1778c621930546ae2fb98dcc302ce39f486616c84e35ff96",
+      "bytes": 217
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/pages/settings.tsx",
+      "sha256": "79690a35d6af865df5d503c70696719052cb094d262f9f28ec0596cd3a77777c",
+      "bytes": 181
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/styles/_tokens.scss",
+      "sha256": "89ceffe989411afcf55a6fda964caf6b0c4e40d086ccc08a233ca805da8d9387",
+      "bytes": 3902
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/styles/main.scss",
+      "sha256": "39a6621e1a1e61d32ddca964e4198e86fb9b2f0a861572629ca7269ce149e49d",
+      "bytes": 1516
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/styles/tokens.js",
+      "sha256": "21c1b5d29c702a406fbd860374bb9201611e251a13bd52e86d911cc59cd9adba",
+      "bytes": 8653
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/src/styles/tokens.json",
+      "sha256": "584f6e7febdef252b1c3d2148aa611facb4f52b0e0ea5dd288fb737d1b97292b",
+      "bytes": 3464
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/admin-ui/tsconfig.json",
+      "sha256": "fe1cfcae443e4b4e766e2bdbd5e82e9fd55f314ba49f9b00ed9b1c402562b46d",
+      "bytes": 434
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/API.md",
+      "sha256": "78c9bccd3707d64d367d459b73cb41aae7cc13df912519af00a6cf15e0a2dc8c",
+      "bytes": 9943
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/Dockerfile",
+      "sha256": "211c42b7e347196e321d0ccd9124c8bcee42a932b375a68ddfc1701f4fce2dd8",
+      "bytes": 1132
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/mission-data/awards.json",
+      "sha256": "6d10042dd1b496d5e68c23f7a7b785a9b98c77f300308464ff52c959ec3bbcb8",
+      "bytes": 8124
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/mission-data/flashcards.json",
+      "sha256": "6ca19f8b2a6628f8e4cd3500ba4f00595f44721ec23fd990298631186443fc5a",
+      "bytes": 29757
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/mission-data/missions.json",
+      "sha256": "c9c5dcbe579cceecaf699ba4dcf9ab4e69e5c6414a652600a8c529bbd7e6d833",
+      "bytes": 25022
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/mission-data/questions.json",
+      "sha256": "863e310bc8df074eb3c9a6e985f7f8ac01b126e2222e5284d7d5cddb52857ada",
+      "bytes": 72104
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/mission-data/sample-progress.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "bytes": 3
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/package.json",
+      "sha256": "98308798cd5c54c6a7624e9a81119ca71b5adaf43d1b8da2e3e84f827a43643b",
+      "bytes": 586
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/src/app.ts",
+      "sha256": "b20decbca8633dce0c94a0599818ba7309783f300032bfb984b789596c9c6b4d",
+      "bytes": 6480
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/src/config.ts",
+      "sha256": "ecc742f2835e471500f16d7747f11a2dc0dbe06a1d6b50bd82ae6863857e31c0",
+      "bytes": 1240
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/src/context.ts",
+      "sha256": "905f52835171dd6e4ac3e1dbc93491bc1bafb975bc9617736bf95bb04889bb1c",
+      "bytes": 182
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/src/db/client.ts",
+      "sha256": "5f391ee1765fee973c11b3f5b4ee36c3501d950ef895807ae44cd50242bb8c80",
+      "bytes": 6539
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/src/db/repositories/admin.repository.ts",
+      "sha256": "baa60d2da63cbe97d8d29dd90172c679aaaa90b724669e72050300e0855c6a97",
+      "bytes": 7864
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/src/db/repositories/content.repository.ts",
+      "sha256": "27c8cff74c7292561be9e6a4e85eff3308444cd84bf680683f45ca53271084fd",
+      "bytes": 3478
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/src/db/repositories/progress.repository.ts",
+      "sha256": "fcccd3825202476274e5de83e8c06fd78b55cef1628f6def1025da1ccb394267",
+      "bytes": 5493
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/src/db/schema.ts",
+      "sha256": "f857b0155ae2e59a6542c6fb3a8a601c920b290c55bf3d5bdc54fbd83a0b14a7",
+      "bytes": 11705
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/src/db/seed.ts",
+      "sha256": "18548f0c2ff9339cbb24ace4b5dc6ee70004f0e455126f25dcc0c8e2bd593e65",
+      "bytes": 1841
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/src/http/errors.ts",
+      "sha256": "7d1a1ce22ec68e842589b9e993ed0930ea715c6d7723cf0fb52f74cfba385aa9",
+      "bytes": 804
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/src/http/response.ts",
+      "sha256": "790eb8f0dc2f6c5c32507afea59e133fcd83a48c2b154043cb0f6347f0fdb962",
+      "bytes": 4044
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/src/routes/admin.routes.ts",
+      "sha256": "7bde819b2890da9b95ff7d5231afae0db02218ab6c71a072ad4b593b9cd19f96",
+      "bytes": 7794
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/src/routes/catalog.routes.ts",
+      "sha256": "ac3b23a78040f76bd8a21159da19cca0ad846b861020f763fae5dbd6e6e80b58",
+      "bytes": 1091
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/src/routes/mission.routes.ts",
+      "sha256": "8632a82ded53fbd5c1ae84feb58765996252a1c27591106ce2ca14a9815c5961",
+      "bytes": 450
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/src/routes/progress.routes.ts",
+      "sha256": "edb4986bafff441d33e567410bea1fb05dcc09f348957e51f1449e6831b7bb1f",
+      "bytes": 5864
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/src/server.ts",
+      "sha256": "8ff4d414e8ac83c8035bf9dd477e74584eaacc232fca44934c3d3dcb0bba0db6",
+      "bytes": 1087
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/src/services/admin.service.ts",
+      "sha256": "8a1723a1689c4e6ff282a72f1d8c9b53438d54cd3f3e7cef9f89d3cc90a6fbda",
+      "bytes": 65402
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/src/services/catalog.service.ts",
+      "sha256": "4dcaee7a68d96418bb67dd686e0e0feed1be40d4cfb81a0a432e93dd43793585",
+      "bytes": 6877
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/src/services/preview.service.ts",
+      "sha256": "d85a7bf7f90c3718c60b2e6da82e0ca4e36103452f3055fdaa06baf5d080814b",
+      "bytes": 950
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/src/services/progress.service.ts",
+      "sha256": "29ccb63dc1d675e5803d51a8fe90beeb85a7254dbe4255b3a191b2449396ebdf",
+      "bytes": 28102
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/test/admin.contract.ts",
+      "sha256": "6f9c0b081660a5883e453108c041b07319df7a591b015e4635219b9f32765563",
+      "bytes": 18956
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/test/api.contract.ts",
+      "sha256": "dd7f5db7521c76c74c78c7315568ec90740cc46ef0bc0cf79c8cd1cc5eeb571a",
+      "bytes": 18791
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/test/db.smoke.ts",
+      "sha256": "f59a3d11cd10a93e6674862318569a01340c6872985f99cb4565f8cb46ec9b5c",
+      "bytes": 7726
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/api/tsconfig.json",
+      "sha256": "a60f17c0d3dd2316aa8b40b86fc35deb262b7f5c5c1e39d73562574d1964515d",
+      "bytes": 164
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/Dockerfile",
+      "sha256": "d3955dc3d2c87b0506b3c4ce4cac727de2fc3a432fd7ab09eaa861d1a7107bce",
+      "bytes": 1160
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/index.html",
+      "sha256": "df9bb677b37a5f6df8dd4c020d66d1ed5719b1e5e615be83657a05258b222b16",
+      "bytes": 449
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/nginx.conf",
+      "sha256": "3138771e5b66b486ebc0877a584fe3ee39beaf52b7542894ec437e5ecd0b5242",
+      "bytes": 929
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/package.json",
+      "sha256": "4af6a0993a72fda960867f47196833186f00f6cf17c5592950b0a9664e4f20ab",
+      "bytes": 935
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/public/favicon.svg",
+      "sha256": "81f61bbc9bbe6fed14aa0f9ec43a5473e3d53064a73ec0af92e34da280f32576",
+      "bytes": 114
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/scripts/build-tokens.js",
+      "sha256": "961e55baafed2f96aa54761076dfd2a516d32f73bfc08bbacc3866dcdcad1d47",
+      "bytes": 4316
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/app/AppBootstrap.tsx",
+      "sha256": "200450abd7403f3d7a96b6a186b62432c6da712eb9e739640bb693cafe4cd35c",
+      "bytes": 2622
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/app/AppShell.tsx",
+      "sha256": "6a321a6293bc7e1e939fedc0d9a1c895a241aeef057e474d6797c4afa8ee440a",
+      "bytes": 1506
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/app/AppView.tsx",
+      "sha256": "02cd0275b3ead312c248deb300340c04b7f1208947a28df7123dbedb5ccdcd02",
+      "bytes": 5089
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/app/ErrorBoundary.tsx",
+      "sha256": "1b27f0c529642b16b2c2813be51e6d67466897b4cdfd86e3f0df8947d4bc6b0e",
+      "bytes": 1077
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/app/GlobalHeader.tsx",
+      "sha256": "ae459562403f1886fc49cdbd72f5a49bab752a9eeba0d1aae95f17dd247be3bd",
+      "bytes": 5388
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/app/LearnerApp.tsx",
+      "sha256": "c44abd45e7b8d94924f2f4e29aae14fb92d398cb109c2b0339ce03bd5e92029c",
+      "bytes": 352
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/app/PlaceholderView.tsx",
+      "sha256": "5db85fc6867bae85f9a0c3974f80c9d1cae1543d2e0c1720d866d204cb93aea0",
+      "bytes": 365
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/app/ScreenNavigation.tsx",
+      "sha256": "5710b37adb9975c3f8d9ea1c99a1c85814af34288afd1bc2705c1b5ae3bb0829",
+      "bytes": 997
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/components/AiAvailabilityBanner.tsx",
+      "sha256": "03a185599dd1e73b8a49d419ed67499cb9c09dd514f9a9c6dd70700127fe1093",
+      "bytes": 816
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/components/AwardDialog.tsx",
+      "sha256": "2d7e885f0937c114ef01aab2c7caa580075f3af23943cf8922e47f670e79fcd2",
+      "bytes": 2918
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/components/LevelUpBanner.tsx",
+      "sha256": "2292d53a127db103d7c3697e61d6cda53f8f9ebb26622566baa14192ba489bcb",
+      "bytes": 1087
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/components/LiveRegion.tsx",
+      "sha256": "3ab92181401a20d3dc2c4f7c0ef7025c8e4cc46e9f63a26e55348403bf52136b",
+      "bytes": 370
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/env.d.ts",
+      "sha256": "492526514a82ea4d2871307c395ee9d81023b36435e58075cb96e088ea60edf5",
+      "bytes": 325
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/ai-feedback/components/AiResultCard.tsx",
+      "sha256": "ebc20656bcb7ed1cfc0256e8eab62844ffc94b54726b5b6bf9bcd40424e3ee1a",
+      "bytes": 1305
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/ai-feedback/components/AnswerFeedbackCard.tsx",
+      "sha256": "9069377e24dbe5c687b5cd72f74a4f67531905b24cd723f37720ba78b25dc580",
+      "bytes": 2196
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/ai-feedback/components/HintPanel.tsx",
+      "sha256": "51a43dca55765e4f1cfde41081344ff1c6c1ad08a26b149d2366190aae7beef3",
+      "bytes": 1230
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/ai-feedback/components/SummaryCard.tsx",
+      "sha256": "a38e745e89f1866b0c34fbdcd633da7e750c8da4dffb7133027740dba5e0ef77",
+      "bytes": 1646
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/ai-feedback/hooks/useAnswerFeedback.ts",
+      "sha256": "01181c2e14c1f53cc25d0679a1861043aa49c19fd852bf6e77d47846f7769e23",
+      "bytes": 3499
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/ai-feedback/hooks/useHint.ts",
+      "sha256": "5fec28a3944ce627c89dc1875ed74be7de38aa4d73f23d614fad9c0757d1a382",
+      "bytes": 3427
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/ai-feedback/hooks/useMissionSummary.ts",
+      "sha256": "877a7e2abf8f6abe3d5184c0dab58d29c803b2b66a17838ec4e3aaac30d693a5",
+      "bytes": 3682
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/ai-provider/AiProviderRuntime.tsx",
+      "sha256": "13680bfb863a32e3771026c1cf800309e29f5d09b7947a913d2e250d01413faa",
+      "bytes": 9049
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/ai-provider/aiProviderStorage.ts",
+      "sha256": "662b4c0eb2925bb8cca29907e7b0a4a1928923d6e9413af462c25df08ab79a49",
+      "bytes": 4716
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/ai-provider/components/AiMockNotice.tsx",
+      "sha256": "1d8f9648b7881932639351e252fd17a9d9145ee2ebb08d260ed4ebde519616ec",
+      "bytes": 683
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/ai-provider/components/AiProviderSettingsCard.tsx",
+      "sha256": "f0e039916a9299d1dc2f2ec88853ba986015010560afa4658c5963edb0140716",
+      "bytes": 6709
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/ai-provider/components/AiRequestErrorCard.tsx",
+      "sha256": "7e012e08f605ff0fd0f73b3b1ac4e4df7d385592798dc37557beba59e2d05d39",
+      "bytes": 895
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/ai-provider/components/ProviderStatusPill.tsx",
+      "sha256": "e0cc65acca1fc1e9a9e1a2d2ae5be7d82075699c795bc04abcf178a3cd8e9bd5",
+      "bytes": 579
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/ai-provider/hooks/useAiAvailability.ts",
+      "sha256": "124f592419e742e6f5d9bf9be0adfbcb04ce762d7abb9b7dabc22c3c82124951",
+      "bytes": 1242
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/ai-provider/hooks/useAiProviderSettings.ts",
+      "sha256": "7997e7996442d19bd4c0757dc0b1b552cdf8509d5f365123c9b670f8a31fca9e",
+      "bytes": 4697
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/mission/components/CheckpointStep.tsx",
+      "sha256": "c510642f11d57a82ddd91b256e8769962f5c26fb07bd8cf33f80134e348771c1",
+      "bytes": 15846
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/mission/components/DeferredAiAction.tsx",
+      "sha256": "e0d132754484b4e5bcc98622f090e40223e32958e832751a0638aa65dc117c86",
+      "bytes": 945
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/mission/components/ExampleStep.tsx",
+      "sha256": "63464723f3ce7de7788681b4cbf78ff3894f7fef47ed89eed6c4437fb85b47ab",
+      "bytes": 2179
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/mission/components/HomeView.tsx",
+      "sha256": "ab3932a542af2d3a0b35d84464e6a3c8c19d2742686d93603c26357d169bd617",
+      "bytes": 6236
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/mission/components/JourneyPreview.tsx",
+      "sha256": "40ed05e48c640d1653f3490be2dddddea5951ff55caf2a9d0207da72ea33bb02",
+      "bytes": 1224
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/mission/components/JourneyPrimaryAction.tsx",
+      "sha256": "71a0668e9f93bc558a00dd906e957edb82b309c9713100f1331d21ca2000dbaf",
+      "bytes": 1520
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/mission/components/KeyTermPopover.tsx",
+      "sha256": "2a94cbf87caa598dd244b1cfe71dcb475f862b38f56d3ad42542569344883167",
+      "bytes": 2252
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/mission/components/LessonBlockView.tsx",
+      "sha256": "26d6b927a0894dc62e2102861600c9fb70f2b45332d963f0c56583a322bb4cc4",
+      "bytes": 1306
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/mission/components/LessonStep.tsx",
+      "sha256": "72b078b66d674e2809b412122e74a8d918ebe32f0695a7b738d621bf10f8518c",
+      "bytes": 2101
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/mission/components/MapListToggle.tsx",
+      "sha256": "00323dd8e10e70407a9af3d661873928a633053faa2a5f2cb322785ecff0d89a",
+      "bytes": 835
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/mission/components/MissionBrowserToolbar.tsx",
+      "sha256": "3a4ef526420b79d1e92ad2ba20752650afb1bc1be057750b49b1d6ed42e2ddc3",
+      "bytes": 2540
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/mission/components/MissionBrowserView.tsx",
+      "sha256": "06d26a270bceb109cae118a8595e937620b50c7afb1b14165ff8170f533b95eb",
+      "bytes": 1191
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/mission/components/MissionCompletionPanel.tsx",
+      "sha256": "d09c858e264d5c3837645fa7153565414a1f8800b5ce488af7fec8117ab36402",
+      "bytes": 6687
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/mission/components/MissionFilterBar.tsx",
+      "sha256": "1692d0f73d6fb1383025b252698d9e7a5da541347c899c30e63d0b804012d7d8",
+      "bytes": 2477
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/mission/components/MissionHeader.tsx",
+      "sha256": "48bef4c20fb66ee2fa97ed8b02257f8a6964f5b3a127920c2547668b4672e7bb",
+      "bytes": 1760
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/mission/components/MissionList.tsx",
+      "sha256": "20fd1c109fcbeacfdccba3a724804414cf3a1dd70dcfb1ae785fb79ad64a6292",
+      "bytes": 4246
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/mission/components/MissionMap.tsx",
+      "sha256": "ea9b092deae18927ecb3a62164b92161b9a9625eb727b36bc6154db83866d796",
+      "bytes": 3272
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/mission/components/MissionNode.tsx",
+      "sha256": "c36b83c8748bba20a03deabec21acabc7d233d58313b3e237bb21af3937a522f",
+      "bytes": 3780
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/mission/components/MissionPlayerView.tsx",
+      "sha256": "e9ef51217a99fc9f9de40211d922afbcc2cae387b7326056d79228d8edaf10f0",
+      "bytes": 4296
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/mission/components/MissionStepBar.tsx",
+      "sha256": "811b31b51bc75e615cf6f96fa0520c5c875442c21472a4ce2a74e9fc441817a0",
+      "bytes": 1900
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/mission/components/MissionStepDots.tsx",
+      "sha256": "5bc5b2d2456d5987359da7b8bcc631b49a7becb0fbc361a404d7dde9d8c031c4",
+      "bytes": 2248
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/mission/components/QuizHandoffStep.tsx",
+      "sha256": "a0eeab01a5fe8cffb9d33ea55321ac98b2e0158ac427d3c841f4a368cb3f0a6e",
+      "bytes": 919
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/mission/components/StartOverControl.tsx",
+      "sha256": "9b776c292a8a72ded0db49faaace4ce42fc3d74116e0dec19c0dfa660052343a",
+      "bytes": 2108
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/mission/components/ValueCard.tsx",
+      "sha256": "9a223a52c65ff1ca5026861ed8027340f8457b3728e02c76d901edf1556d1ac7",
+      "bytes": 477
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/mission/hooks/useCheckpoint.ts",
+      "sha256": "05a3df63b6c8fb85fc6d11a979178073861af3e36bcebc2688ded48f843b4a11",
+      "bytes": 2845
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/mission/hooks/useJourneyEntry.ts",
+      "sha256": "115746dedc939ee037ea99ff90ce3d99c269f917a4ded19d3adaddbd7932e27e",
+      "bytes": 2843
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/mission/hooks/useMissionBrowser.ts",
+      "sha256": "5a7f368b155f72e400822488e67b841e86accf6ee91f8b0b835de3fb11db6abb",
+      "bytes": 4359
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/mission/hooks/useMissionCompletion.ts",
+      "sha256": "f408f55d8d162920ef64ddaa95973cd7754cd0511a07833181318ae76df6250a",
+      "bytes": 2041
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/mission/hooks/useMissionPlayer.ts",
+      "sha256": "4962da04597bad9e1c299e199850e7d91422e06d1c9999a5369717088b4fa9ce",
+      "bytes": 8541
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/practice/components/FlashcardPlayer.tsx",
+      "sha256": "5b13a11a6b050f0b2b502d271ea7fcc02f1125081e106607deeef86bc9e4a9c9",
+      "bytes": 7671
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/practice/components/FlashcardView.tsx",
+      "sha256": "8577705b5724224502fb54963da73162655443739bbd721bd35186a6be554854",
+      "bytes": 3046
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/practice/components/QuizResults.tsx",
+      "sha256": "2315dd7affeb504d23b2c1d6f56c6060962a6ae80670d4dc6f1d01757f52e074",
+      "bytes": 9388
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/practice/components/QuizRunner.tsx",
+      "sha256": "17c2d88eb236ea3d06edc6744c35371f5437500de5581357ab91fe92d81eb775",
+      "bytes": 17621
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/practice/components/QuizView.tsx",
+      "sha256": "ad035ffd973d8879b5b052d001aef78b59e79a95c86d207c4b3131120549ab8c",
+      "bytes": 1633
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/practice/components/ReviewHub.tsx",
+      "sha256": "5589786438b74af061eda91853524ec1c9abbfbb13dd0494c3917e462a7bc25c",
+      "bytes": 3746
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/practice/hooks/useFlashcardDeck.ts",
+      "sha256": "5c2e3f8111b4bf6d8fa51c505b9f789f12ba5d831d1ecbaa4e93315833516b9b",
+      "bytes": 8638
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/practice/hooks/useQuizResults.ts",
+      "sha256": "5fedad93cc9ab168c0d9a8e78fea66aa56c906e5c609ce46f817c1044c81f9d0",
+      "bytes": 5235
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/practice/hooks/useQuizSession.ts",
+      "sha256": "8304665d4e43cdca3bd28e41dccbd27cce5b1318340a739fe6b16384677668fa",
+      "bytes": 13603
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/practice/hooks/useReviewDeck.ts",
+      "sha256": "5461a98774e265883ed9a48cf0f8038c67513f7dd6b15de8c1d59c325f6f6302",
+      "bytes": 3488
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/progress/components/BadgeCollection.tsx",
+      "sha256": "83a718f64f84dabe0c3e1e460ea2c4f2377041cc31408b2ecff37f33cf1192e8",
+      "bytes": 3424
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/progress/components/JourneyCompleteCard.tsx",
+      "sha256": "09e26c73399d973653c2854ffe2e0d2d38a7c6aa73a5707c464d7988a930932d",
+      "bytes": 1291
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/progress/components/JourneyLadder.tsx",
+      "sha256": "489eae377c720b5586154edf72fd957ebc1a26fb0390cfc93b77708c290faf81",
+      "bytes": 2060
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/progress/components/MilestoneList.tsx",
+      "sha256": "b03e83ab6659b1ec72586ebb659bb3316ed19c2d57edd8700667c75e87bd2645",
+      "bytes": 3232
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/progress/components/MissionProgressList.tsx",
+      "sha256": "702d66997f6326a46517e56099a6fbd3a9aa42fc8f1d7ac7f35495ae2d56f9c1",
+      "bytes": 2440
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/progress/components/NextSteps.tsx",
+      "sha256": "fae62bd5052d8066eac26bfce126ae90285ec79085f5ac64727c69b2c272be67",
+      "bytes": 2987
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/progress/components/ProgressSummary.tsx",
+      "sha256": "596e1fe6e8e57b7e36fd710aab16145eaa9d06403d7e1fd2bfbe2893852d4364",
+      "bytes": 2280
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/progress/components/ProgressView.tsx",
+      "sha256": "fa4141e6550ba78be8008ed28668f5b7e01039fc70674c47b227845475b61ab5",
+      "bytes": 2842
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/progress/components/RecommendationCard.tsx",
+      "sha256": "39534b5c38892e5cb8f85f761e68c14f75be5961438ea3891bc8a8529757f263",
+      "bytes": 2275
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/progress/components/ReviewRecommendationBanner.tsx",
+      "sha256": "3a75e1ef29a691584958ee4087267642eae33f0c4a62085e0f4b552f4aa12bea",
+      "bytes": 1212
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/progress/components/ScoreHistory.tsx",
+      "sha256": "c758301bad1bac583f8c32ec12c5d35011994c4776a40eda5aac493c473489c7",
+      "bytes": 3002
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/progress/hooks/useAwards.ts",
+      "sha256": "a8828e232370c6241103df85c969acf1e5168be80ca9699509a6df6579ae60a3",
+      "bytes": 2147
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/progress/hooks/useGlobalProgress.ts",
+      "sha256": "677c7c1bc0a8a2414fe917035cde8a4420c21d9c7aa7c977958d16cbea64504f",
+      "bytes": 2018
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/progress/hooks/useLearningRecommendation.ts",
+      "sha256": "e188ccedd2f32a8affe779ef0b194090a016acdc0bd4a1bf914c96d6bf2c4b5f",
+      "bytes": 3270
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/progress/hooks/useProgressDashboard.ts",
+      "sha256": "9aac56e931361620d57b7963bfb9a45eb710ef343fba4a3aee3b19044bdfabcb",
+      "bytes": 3450
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/settings/components/SettingsView.tsx",
+      "sha256": "7644323b788d047ecaa285743a08581c0b93919c622f2e88eebbe46d7e3db3e1",
+      "bytes": 815
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/tutor/components/AiOnlyHeader.tsx",
+      "sha256": "5e6c16b475f9e2233cf3e8ff61674cfd6b4ab73b386b1d383b454d5513175c95",
+      "bytes": 5135
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/tutor/components/AiOnlyPicker.tsx",
+      "sha256": "96a2219c5c29dce1250317bce151fdd85c5d1dba0b381ccae1b456dd000ce7b8",
+      "bytes": 4642
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/tutor/components/AiOnlyQuickActions.tsx",
+      "sha256": "a01e1698f483cb150d697481d682ad9ab3098b87cfb29cdf355243fdadd1c924",
+      "bytes": 1274
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/tutor/components/AiOnlyScopeRail.tsx",
+      "sha256": "c974ab92af8aa55400c136198d9e3688fea57916b42d671f63556006fd30ecf7",
+      "bytes": 3707
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/tutor/components/AiOnlyScopeSheet.tsx",
+      "sha256": "0c906a5a14d9ad744378c576540322216510e49d38e6968eaf621f5f2e437ede",
+      "bytes": 1584
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/tutor/components/AiOnlyView.tsx",
+      "sha256": "81d343c79f6bc0e1b46e865805f54bdfef49f1ed90fbf30936a8de0e22eda76f",
+      "bytes": 6486
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/tutor/components/InlineTutorPanel.tsx",
+      "sha256": "ce3533b644b4522d2794cd36272772d778fc31e95b4e53651b3f78d321b409bb",
+      "bytes": 8869
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/tutor/components/QuestionSelectDropdown.tsx",
+      "sha256": "310c980877c025ac98e31046025fea6853d2eefb918e0ea8ede755b334b42e35",
+      "bytes": 5853
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/tutor/components/TutorComposer.tsx",
+      "sha256": "5e9c9380c46dc77fe5313129f69ce710aa1187a68d6cdca0a075ac0a87ab488f",
+      "bytes": 2112
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/tutor/components/TutorConversation.tsx",
+      "sha256": "d1dd5025705bac7566c0bdb89df87e10b7fdfae4444b8af5e4458d9d8e7eaa06",
+      "bytes": 7212
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/tutor/components/WalkthroughTurnCard.tsx",
+      "sha256": "03b50beb8c55c8a3ffe90f8679a2e83881cefc14f7bb60fc3323e3dfa4da191d",
+      "bytes": 7977
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/tutor/hooks/useAiOnlyQuickActions.ts",
+      "sha256": "303c70c65103f5922e39e8c2b29751c61f565e098b598d6dddf2a43a38ee9bcc",
+      "bytes": 8805
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/tutor/hooks/useAiOnlySession.ts",
+      "sha256": "701829a1f08a4360ba14002b28c09af939291fd008e38bf22741f82a9a982419",
+      "bytes": 13645
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/tutor/hooks/useConversationalWalkthrough.ts",
+      "sha256": "0118ebd39141aedbcbde3fafe99ed233df149613ce605ad81c0f219529295e6c",
+      "bytes": 9995
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/tutor/hooks/usePublishedMissionDetails.ts",
+      "sha256": "3dc56590a9d4cedca3f499285d9ff2bf9888bd153df351fb6a16c2305e674e3f",
+      "bytes": 1951
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/features/tutor/hooks/useTutor.ts",
+      "sha256": "24d67fdaf9f53a036991878467a91a137aab0c665c13780290706566a747fda4",
+      "bytes": 7077
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/hooks/api/client.ts",
+      "sha256": "2e67f895279f2566a9a281745dfdbe155fe985a405f8c25d95055d1e0818537e",
+      "bytes": 5086
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/hooks/api/keys.ts",
+      "sha256": "8faef1790d782581f35a7be7dd86f0ea44f61bc7f7e05a37103106864006c1d3",
+      "bytes": 984
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/hooks/api/useCatalog.ts",
+      "sha256": "768861013cccab62db69aadab7937d90d6f3d6af821775f396010c5fe9846aca",
+      "bytes": 701
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/hooks/api/useMission.ts",
+      "sha256": "3af8ff58f3761da21a0d0b40baa08490f68ab02f5ab711e7c3a4bc8bd2c33d26",
+      "bytes": 838
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/hooks/api/useProgress.ts",
+      "sha256": "08f92443f8e491a119aea424bf9862f7f94d86df6f20ddc8f0a631f38d931eb8",
+      "bytes": 754
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/hooks/api/useProgressMutations.ts",
+      "sha256": "e838d82ec74d22bc837d39262533cd7772e8f71deb823f4aa3d6a290e40befc5",
+      "bytes": 13117
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/hooks/ui/useFocusReturn.ts",
+      "sha256": "0d39e3c60f85dfba142cb4b8ce24ae109cf7a4eb82cce9d6b3047f47b68da14c",
+      "bytes": 2486
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/hooks/ui/useKeyboardShortcut.ts",
+      "sha256": "d77bfb03b9af0088d4b2f0859db6e307fdeb3ee132fa2234cc2c977b57b22807",
+      "bytes": 1842
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/hooks/ui/useLiveAnnouncement.ts",
+      "sha256": "d20a70c89fa062b82437ab149548e51814d508f202e38b4461aed8f744d6a13d",
+      "bytes": 1824
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/hooks/useAiTask.ts",
+      "sha256": "ba5fa6fb6dc37efec5bb235b41dff15efebcffe0cb99b95c92af90df36cd2a97",
+      "bytes": 4099
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/hooks/useAppNavigation.ts",
+      "sha256": "b0ecd0e9ea4273351a40757235a60d2b205660da76520202ea702791268b4a9f",
+      "bytes": 1760
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/hooks/useBootstrapData.ts",
+      "sha256": "f411b6e4e39b015f1e10c69004b020f7428cd00c40004a7c61193ebfbc1f66b9",
+      "bytes": 2389
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/hooks/useStartMission.ts",
+      "sha256": "3dad65682425bede620f815525deb4f1377b9f071e2170300ec93cb13a2ba5c3",
+      "bytes": 1051
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/main.tsx",
+      "sha256": "f85bc6324acb0a8b59df1b93da62f8b1550cd779ba48c78b14b28d5a69e6a0f2",
+      "bytes": 386
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/preview/PreviewBootstrap.tsx",
+      "sha256": "34164a94fe5a1bf8ad18d16237aec771e66ae62e509e1c322697212b21faf474",
+      "bytes": 3594
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/preview/previewMode.ts",
+      "sha256": "c4e9e72d630e547be4019c943965cead29fe0fdc12edf899abf0c5d4805bd08b",
+      "bytes": 1594
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/store/aiSlice.ts",
+      "sha256": "ae7edd11bd9add444c7d2af0eb72a07674b2a8eb5dd0ba8be3891a08e6b3ec55",
+      "bytes": 21330
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/store/flashcardSessionSlice.ts",
+      "sha256": "6c7c9a9b2f1432138cc83848a6ff6bc36d497c0ea1da6811979b1cd8ddb46243",
+      "bytes": 7097
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/store/index.ts",
+      "sha256": "bf51a20f3f09e7b74a950fbe84bfbdaa598a4bed4af9b95dc782b33ec1819107",
+      "bytes": 3615
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/store/missionSessionSlice.ts",
+      "sha256": "2a8daa6a328329550a293dbd3b686d18e6359ce4e6fe7a0f17863d3b1ba238a8",
+      "bytes": 5358
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/store/navigationSlice.ts",
+      "sha256": "9fede275fbf1b89ef4f350c8de84558c44da4a46ba6cbba6685862dac8112a37",
+      "bytes": 7044
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/store/preferencesSlice.ts",
+      "sha256": "e4c7e2cef4be1365159e80321ac196f53c52905731ef0b4bbb72444f0bde50de",
+      "bytes": 7318
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/store/progressProjectionSlice.ts",
+      "sha256": "1d4e849e1b50568640d9b3ab2fbf145ac8873f43cfff363eef979e4395baf514",
+      "bytes": 6100
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/store/quizSessionSlice.ts",
+      "sha256": "a071bfe1cdfdc06e77d2bc531ef84cc9ad7227d6277675d5d40addd69f3641e4",
+      "bytes": 13219
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/styles/_ai.scss",
+      "sha256": "76b9f86fa2e8cca0e23bb901ead87b3e67e8a021214510eea51bb08bea4ef0ed",
+      "bytes": 6352
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/styles/_aiOnly.scss",
+      "sha256": "82d263a09516d97c127fba9d4cfcba316a358305f13b68696b27d7641b3202c3",
+      "bytes": 25436
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/styles/_aiProvider.scss",
+      "sha256": "abe2edcbda0270597c49ab98073ed17ed5fd9b1d20f8ea2e4b48da72182f3f50",
+      "bytes": 5954
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/styles/_awards.scss",
+      "sha256": "245dc4f6a29a83220db368ecf7eb3d5581602b7ea6af920fb90c8e00169802b8",
+      "bytes": 5351
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/styles/_buttons.scss",
+      "sha256": "5b4e972a7e132baf6be5ed2aef7d736d87ceacc9d7508aecd2a1b018da091a56",
+      "bytes": 2142
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/styles/_checkpoint.scss",
+      "sha256": "32a6237aed33051d77604d43597733369b419e494ca7899b745eb485f93152f8",
+      "bytes": 5805
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/styles/_flashcards.scss",
+      "sha256": "247569dab9da42bdd08f259c318211787b3f2623c5ac750d782010af24afc74e",
+      "bytes": 7632
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/styles/_globalHeader.scss",
+      "sha256": "011153791fdfafdc0a424b18854f8afec2b54229cc46f1a9554cc2636c45aa4b",
+      "bytes": 3396
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/styles/_home.scss",
+      "sha256": "b9d48481d1d3c687d7e2f96d8849744ff5553c1cb38244826a8652af2b5ebc86",
+      "bytes": 8034
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/styles/_lessonContent.scss",
+      "sha256": "0ae9f8d6ef86932e9c68ff72298b8eddd88de01bf9b7d9d3a7d33c5b8e0995aa",
+      "bytes": 3408
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/styles/_missionBrowser.scss",
+      "sha256": "bba01163599ff5ee0797d63ad535cfdd28c7c464f6b9661dfac2cf3c5396ba6e",
+      "bytes": 4723
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/styles/_missionCompletion.scss",
+      "sha256": "e2fc75283f5a6b50502df493eca94e3133dabb728ad8279747167aef51d4e23e",
+      "bytes": 3186
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/styles/_missionExample.scss",
+      "sha256": "0c46df68ba3972e24072be2eca0274e2be6cb8a53202b00aadcc80bd70f3cc28",
+      "bytes": 2700
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/styles/_missionList.scss",
+      "sha256": "5bc330bf052405df1319d18f03d3e77305822c729cd3d38a783ac2207c0a0197",
+      "bytes": 3834
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/styles/_missionMap.scss",
+      "sha256": "83814cc47710f8d920cb016438f01928ec20e7b7531da521e7d6f7195a1abeec",
+      "bytes": 7144
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/styles/_missionPlayer.scss",
+      "sha256": "732dab2c967223344c03e454fcec8bf492fdedaab7750279040e7ef7c9891392",
+      "bytes": 6043
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/styles/_progress.scss",
+      "sha256": "9bdacd42c0141361473b4a0177e341f0ece479027781941e9f6b6ae10ce9d20f",
+      "bytes": 6915
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/styles/_quiz.scss",
+      "sha256": "63ae1e34985f114c772b3ef1a1c5bdc8a2f56a53650228e76d53e666f08ef7bd",
+      "bytes": 7318
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/styles/_quizResults.scss",
+      "sha256": "31cfe64bf176da1c4ba232934165ab19cc28ae7e0ad547245a723e61e2b768cc",
+      "bytes": 6843
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/styles/_recommendations.scss",
+      "sha256": "13b23449c87cd6ca69c2318abd5c77eb5e1051e0ba7cea8f82c3eb4ef340567d",
+      "bytes": 3458
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/styles/_review.scss",
+      "sha256": "a072193d5bec2b5d36c6345d9e41cbbce2d7a767dfd91cc992749241a49947f6",
+      "bytes": 1553
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/styles/_scoreHistory.scss",
+      "sha256": "07730b9f99e8fa6d3f027a154be26b930e8328e255a41aa99a3bb3219e40e3cf",
+      "bytes": 863
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/styles/_screenNavigation.scss",
+      "sha256": "525d405de230cfb68e0f8e417d7ee6b1cf306a10fd301cc46ad71083c37bade7",
+      "bytes": 1709
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/styles/_tokens.scss",
+      "sha256": "26df4042bcd81fe0ad0cc6e515630648dccc0515dc796db3643df46d55d2c946",
+      "bytes": 3458
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/styles/_utilities.scss",
+      "sha256": "ae0b50fc1ab906a6bcbcfbc4d9af0b9939ea6c0cf7fba9befec7a27d0993d7e0",
+      "bytes": 181
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/styles/main.scss",
+      "sha256": "ff87b86d3abd6c29995cb7745ca18d7e4392102fde56c9348459d2c26f4071b5",
+      "bytes": 4420
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/styles/tokens.js",
+      "sha256": "42e3db5931aeb78c013f06f6dc434c9ab82d078a1572a69152781aaee6cecf70",
+      "bytes": 7829
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/styles/tokens.json",
+      "sha256": "8cd761e1af93b83ac8aaf5b5c84967c9989bc3d6dda349dab0246c3a60eb4401",
+      "bytes": 3337
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/test/ai-only-mode.smoke.tsx",
+      "sha256": "c6c3add40cc4b8ebcd091da7e45d41aa2ffc1fe6f2fee3814a50f3bcb0d6ae02",
+      "bytes": 19391
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/test/ai-provider.smoke.tsx",
+      "sha256": "dee4f188473e668cb68a68ec6387a271fb6d447fbd68a56df33b02b1f16285bd",
+      "bytes": 13569
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/test/app-shell.smoke.tsx",
+      "sha256": "e73c70e51fbda5f9a4bc9108999a44501aeef2c41c9271e568114d68c942c689",
+      "bytes": 9895
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/test/fixtures.ts",
+      "sha256": "a0e34615416323015c38c35dfb772a87086c40a64590780d6777cc7a89812a9d",
+      "bytes": 18569
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/test/harness.tsx",
+      "sha256": "401399edf61a08271d5cc575511250badd0bcd248e4f6d1275d900d5788c4d0d",
+      "bytes": 1524
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/test/mission.smoke.tsx",
+      "sha256": "5e7e0403b11d050eec57c8b45329844f829992996fc03a56c65d79d31abfa0f8",
+      "bytes": 18158
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/test/practice.smoke.tsx",
+      "sha256": "6bbfe7e103618b7edb9abad99db24191294e5dd82e8a0522095918690c9a32e1",
+      "bytes": 24283
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/src/test/progress.smoke.tsx",
+      "sha256": "a21c90ecf37bce0007e578d4820abcd4c7fde84e5be53fe8a0c2c86ea5f40f50",
+      "bytes": 12804
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/tsconfig.json",
+      "sha256": "e2f06c089da847cd8032c2310f22fde48716a015202d0efb5d0c7c4cfaf8a7ad",
+      "bytes": 220
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/vite.config.ts",
+      "sha256": "a56772199caf3adfa98c2e78b6352602cc8474d9cbf6a4b63934824b64928fe3",
+      "bytes": 476
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/apps/learner-ui/vitest.config.ts",
+      "sha256": "0d4231dc6936279b8c7814698a7bde52840be44b18179e00cd571410cd287b24",
+      "bytes": 271
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/docker-compose.yml",
+      "sha256": "09079ab299ea6e6c03272a07877555df7d0a6183fc2b74ae6a2e27715b5dea48",
+      "bytes": 1648
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/package.json",
+      "sha256": "1f1e8a514a3fc8af3dce36a7ed9478242399817545d0ad9aeac8673742a17bda",
+      "bytes": 308
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/package.json",
+      "sha256": "b048ca3cd3379e970b4781b25655985793ee29b9c0ee4f2959a8b1109c85f5f2",
+      "bytes": 490
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/src/ai/aiOnly.ts",
+      "sha256": "8088ee1d846a6475f07584cb56d25a78fbe49866cd2d008a3e1d69cb3c58e50b",
+      "bytes": 5623
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/src/ai/context.ts",
+      "sha256": "4b9cd572f5f68799aee702b73ac13f02115664057c7131bbb262f044406d0dec",
+      "bytes": 5818
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/src/ai/guardrails.ts",
+      "sha256": "5dbcb352f8ee8bc0006e184ecf36deb1c8020b5c7483b2b3199db565b45fa15c",
+      "bytes": 2111
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/src/ai/index.ts",
+      "sha256": "bb6c1aba52af8e6829b0541f27e03f06eea619fc660687d19f37277bf716e71c",
+      "bytes": 363
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/src/ai/mockLibrary.ts",
+      "sha256": "e8c858648dd6aabf2edd34706edee9da9aa30bdf1cc71aca7a20d888b9192060",
+      "bytes": 9628
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/src/ai/normalize.ts",
+      "sha256": "b48d70535d8ebd78b2beef7978ce03771f5e9170f37475dae5587332b9c843ed",
+      "bytes": 3916
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/src/ai/openAiCompatible.ts",
+      "sha256": "ee30e1d3dfe5cd3d82108c0a339eb93ca19aae8e049999b876cdeea6d22c3484",
+      "bytes": 6639
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/src/ai/parsers.ts",
+      "sha256": "1a4090bc8be0ba4ce49f388910765eacbc432c7bd4eceb348bc7b76ab3127926",
+      "bytes": 2857
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/src/ai/prompts.ts",
+      "sha256": "7c1ec444706f70d3f025dc6ce08955cbea8de5b84a4ebe11ff1420cf9a7238fc",
+      "bytes": 3008
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/src/ai/provider.ts",
+      "sha256": "4eccccb5138c546d2aa15ac598f0905716d5697d3fdd0301e7bc6f835d051970",
+      "bytes": 4855
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/src/ai/providerErrors.ts",
+      "sha256": "cab2ae526171ffc1250f5bba1c00626a9c52fe85829164300e5963f60a477967",
+      "bytes": 3405
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/src/ai/providerFactory.ts",
+      "sha256": "86130219d93a8b571374a3d4c69cd9d9fa1d9e9cfccbe7d7e9c7e633e04e4bdc",
+      "bytes": 1229
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/src/awards.ts",
+      "sha256": "2be53417f3032d72231d5328e566359480bd71fd61304ea04089c1a2d8c732a7",
+      "bytes": 6381
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/src/checkpoint.ts",
+      "sha256": "ea4728197960b61f4b8bf3c2316d7f6f64f5a5a328249d8fdef68f4505547fbe",
+      "bytes": 4387
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/src/flashcards.ts",
+      "sha256": "c2b96d8b45ec2b986b6be81bf43f6ba993cdebef1b779731b4660807ad7fdb23",
+      "bytes": 3070
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/src/index.ts",
+      "sha256": "7ae9fbe51cc82769689841fbe655b72df56c59d68f4400a0186e7bac2d2d9665",
+      "bytes": 498
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/src/journeyEntry.ts",
+      "sha256": "426729b2dd094abbe346bff8670d1d5182308dd0a3a91b5f2d87626bc2a7cba3",
+      "bytes": 1480
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/src/labels.ts",
+      "sha256": "ad06480a204e24ddf8cdc141b5fad2244871c3098ebbb5c5d7f1fd43068a8014",
+      "bytes": 650
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/src/levels.ts",
+      "sha256": "1590c86a7487054de6a85fa490b97ae8adbee45b8eb25b12375456c234bcde60",
+      "bytes": 2892
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/src/missionAvailability.ts",
+      "sha256": "1e314cdbd804c423361cd04882ace75855e7d7518f9f1fdc416506cb16c077b9",
+      "bytes": 2459
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/src/missionBrowser.ts",
+      "sha256": "1e9bed222597a9ecebdbaa8732a05b21b50c3771b551624e3bc126ffdb2068f0",
+      "bytes": 2509
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/src/missionCompletion.ts",
+      "sha256": "5b89c6565e140c4d6b0a04b2e7d7224feaefb4e0faec1663a3c26b0735b67b11",
+      "bytes": 2100
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/src/missionSteps.ts",
+      "sha256": "e25d9234893fbad49a7c607a297ec77f05ed6e63275dda935ecc2437a6e6054d",
+      "bytes": 1394
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/src/progress.ts",
+      "sha256": "a141fbdc87d0241673cafc8d386fed2a866c49b53c3d0aaada1ef7a2fb1c468d",
+      "bytes": 4329
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/src/quiz.ts",
+      "sha256": "46dc660f0693c227a0d07b52166b68d1883ceef8481cab30ba603d9ed8e8f2eb",
+      "bytes": 6962
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/src/recommendations.ts",
+      "sha256": "63563c203fc3006fb52b8ac73226824ed03de7fcb11eff9f87bcd153b7dd53d3",
+      "bytes": 3247
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/src/tracks.ts",
+      "sha256": "bb59e764ec1dc5c523425a786d63620a3d6fb3f23397da4e01a6b632cd007576",
+      "bytes": 2034
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/test/ai.test.ts",
+      "sha256": "849159c8712d8385ed3d645e14b8303769ffbb005e11276b5beacb74d9ea284b",
+      "bytes": 16817
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/test/awards.test.ts",
+      "sha256": "28b7c2ac6c7ad1548e8785b44e7ee61f391bbcf1614fbc3bc4684e8d8e6ff185",
+      "bytes": 10718
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/test/checkpoint.test.ts",
+      "sha256": "94d4ff19edfb45691fa5a48b0f3dffe05513785e419fb0ef89fecfd91f9d812a",
+      "bytes": 6406
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/test/fixtures.ts",
+      "sha256": "4edb5f1ed8123941d1c697effa8fc9de5543df3f52dfc2f677b86461da949d64",
+      "bytes": 3933
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/test/flashcards.test.ts",
+      "sha256": "60dc7f4c8118ee688091b1c7778bee67dae5de0eb17d695aaf7de3a0f486ef12",
+      "bytes": 4821
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/test/journeyEntry.test.ts",
+      "sha256": "c4b0ff400ce66fa5ae4d8b9eef6030e6836ff6e456f709ad966a47fbf15045d8",
+      "bytes": 2822
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/test/levels.test.ts",
+      "sha256": "8d956c71b568b73dc0713cd2a1dc9b52080ddb122d47bfa3dd90a4829ec4ebf1",
+      "bytes": 5002
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/test/missionAvailability.test.ts",
+      "sha256": "c239b7fd8039f9821a7f90327cde56e20e70a5fe8b78f1dcddccb698118257af",
+      "bytes": 2979
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/test/missionBrowser.test.ts",
+      "sha256": "5efde6e490d84e2b16d32805099e1c9ffdb728af11541bfd720604afd0385463",
+      "bytes": 4497
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/test/missionCompletion.test.ts",
+      "sha256": "09b6a9a3c36fb3aa84f0c720751eefda5fd2aeab47d4ee3f295eb57e5117f37d",
+      "bytes": 3729
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/test/missionSteps.test.ts",
+      "sha256": "93313973c5d8e197712ee09e7a5f2a7486a48690f81fa40f43e0e6b905ead040",
+      "bytes": 2065
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/test/progress.test.ts",
+      "sha256": "0734e0c49cad375f6b16ff22d6cc735ce5e0b73ba81a616214d6641d68f22aa2",
+      "bytes": 3826
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/test/quiz.test.ts",
+      "sha256": "ee149d3b4958ba5a0ccd9cfb2a56946d755c8cf48e97c3689885264540bc888d",
+      "bytes": 6961
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/test/recommendations.test.ts",
+      "sha256": "4396375feea6a34108a78311ce29f761f19c0baf0f8c2218300bf08edb860578",
+      "bytes": 7252
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/learner/tsconfig.json",
+      "sha256": "ff14d2d1919435b3e689c0943ff2d70eca215bbd33bc66b783dac277fe4eed1f",
+      "bytes": 163
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/types/package.json",
+      "sha256": "40efdbfa6e4b95d474b078d2ba241ddf68146f0076bbc033e0a59b2745127a6c",
+      "bytes": 315
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/types/src/admin.ts",
+      "sha256": "92295604637dfb1393363ca231798c517b5d2f1e3042af9930a3f862604a8a7f",
+      "bytes": 4900
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/types/src/ai.ts",
+      "sha256": "eabafa9b1863bc4a77eb16e5bceecbd2145dbc5730020ff2e02966ddc853f5bc",
+      "bytes": 4790
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/types/src/api.ts",
+      "sha256": "3855827cafada7e1487a91b3f883efd796e7d3c30d0ec9dc0fe4214b9a9f75f4",
+      "bytes": 2463
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/types/src/content.ts",
+      "sha256": "c79728c7b634eb924c5496a821f762ba5965dfbe896d50356de3bc7ab7687a2e",
+      "bytes": 3931
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/types/src/index.ts",
+      "sha256": "35a44f8ea6d3be6538639d737dcb4e3f41fa2851dc3db675c74e3c7cc87347a3",
+      "bytes": 177
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/types/src/progress.ts",
+      "sha256": "6b3495158c2e6cd5dcf6d1b15c1b62d9f2f9f644d18d4992f0df7a3e097d61d2",
+      "bytes": 1726
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/types/src/recommendation.ts",
+      "sha256": "b0d8480605f15ccc5f717a5553058c56bbec42cc83eb66ae35cc881d99eb680b",
+      "bytes": 531
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/packages/types/tsconfig.json",
+      "sha256": "ff14d2d1919435b3e689c0943ff2d70eca215bbd33bc66b783dac277fe4eed1f",
+      "bytes": 163
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/pnpm-lock.yaml",
+      "sha256": "ba5eda27101caec27845bbe243d7351763f4777e33d8d9b1aa68f93976d46de3",
+      "bytes": 127212
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/pnpm-workspace.yaml",
+      "sha256": "b5f43648ca0494c64cb84f783ccbe8bc676f8573ff61dbfcefc71b332f23156c",
+      "bytes": 721
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/admin-ui/integration/AdminRoute.tsx",
+      "sha256": "cb2655dec44600aa1a7ae78be0194bc4f3e54080e0a85800c6f6434ec00140c2",
+      "bytes": 2116
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/admin-ui/integration/TEST_CASES.md",
+      "sha256": "c9f35a37176f72dfbb8b9e2b78b2a151e84ea165922f2032ede8e9c9b74f4f44",
+      "bytes": 17365
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/admin-ui/integration/assignments-curriculum.integration.test.tsx",
+      "sha256": "e181d61624283737e3de37871a16b8eb86f11e160d834b0bea01aaf81998377d",
+      "bytes": 12307
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/admin-ui/integration/harness.tsx",
+      "sha256": "fec3b9c8254651a311447e3e6e2d8437064b84c1104bcf427629bb830a9e3957",
+      "bytes": 4670
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/admin-ui/integration/helpers/api.ts",
+      "sha256": "ede149dbf789bfe92492995e70d1b8c6de4057ee851f0a72fa17cae9e376e478",
+      "bytes": 8502
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/admin-ui/integration/helpers/drivers.ts",
+      "sha256": "262a0243af9a5a35ec204e151096bc45a1f771295c77ad3a664619db09a0e4e6",
+      "bytes": 3241
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/admin-ui/integration/helpers/environment.ts",
+      "sha256": "6eb5aa9faee1d12b5aad3b4fa67bb08f7c8a819876d826922561a23713eb404a",
+      "bytes": 2951
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/admin-ui/integration/helpers/fixtures.ts",
+      "sha256": "14151868e054bc22dc714e86d3b0a54091b136cd9cb7aa2deb14c59611641e1a",
+      "bytes": 5306
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/admin-ui/integration/helpers/mock-next-link.tsx",
+      "sha256": "1edf8bff9df05811276967afc3095f18cfd12ab4a20a20b01bfe02f1f4705fc6",
+      "bytes": 1319
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/admin-ui/integration/helpers/mock-next-router.ts",
+      "sha256": "f76ad1a1cdd4b23ae34ee0ac7f6729ab24d136c17a50211ece1ec202eed8b1e7",
+      "bytes": 107
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/admin-ui/integration/helpers/router.tsx",
+      "sha256": "ecfdeff20371a20bc4f9c4ce16d8c54cb56d1a1f181e8bbacfa3ff874562daa2",
+      "bytes": 3549
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/admin-ui/integration/helpers/setup.ts",
+      "sha256": "fc508640e368fbd4e09037d2281cfef36669e1e03d854121289ba781d528143b",
+      "bytes": 735
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/admin-ui/integration/inventory.integration.test.tsx",
+      "sha256": "992c9bf72ed3bc8e6e9134718e24089480e5376bf854d79d3741a499a31becd0",
+      "bytes": 17556
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/admin-ui/integration/mission-editor.integration.test.tsx",
+      "sha256": "4306b89354e3ee4a86f6d74259622cb31367157da5cce9065ea4d539dec5980d",
+      "bytes": 20403
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/admin-ui/integration/package.json",
+      "sha256": "3bd1fcd8bbc8825097ed09ad16bc3b9b33ee645b90db31258ed8547587e30180",
+      "bytes": 896
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/admin-ui/integration/practice-award-editors.integration.test.tsx",
+      "sha256": "a5373ce644f094e3c39ddbc275c60a5b26a812ce9c263c7d2f00746012e7901f",
+      "bytes": 19279
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/admin-ui/integration/publishing.integration.test.tsx",
+      "sha256": "d5e998c8c09c82d1395aa1c19e8078021987e1c7674f20d6a2ba306508be0371",
+      "bytes": 12339
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/admin-ui/integration/resilience-accessibility.integration.test.tsx",
+      "sha256": "f35ea6e19d98b51afda9aa7f15b8749f50eb414bd2382b9de962e032595f7c4e",
+      "bytes": 14894
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/admin-ui/integration/settings.integration.test.tsx",
+      "sha256": "83fa96f9f1d6408351216e0733212a74d5aa6ed4291fa33c6b85c722a710633d",
+      "bytes": 12731
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/admin-ui/integration/tsconfig.json",
+      "sha256": "ad530294d53027991f26992c6930321298603b7970f303a3690b86ededf8fd74",
+      "bytes": 346
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/admin-ui/integration/vitest.config.ts",
+      "sha256": "42d4b2bfb6d591d3a1e23e5935a359d8f7bd04333bcc14e3457f3db87d43d218",
+      "bytes": 706
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/learner-ui/integration/TEST_CASES.md",
+      "sha256": "0d464e1ada0af037e364d25e442838f5782e4291aa42f919c6309e4935b8ba29",
+      "bytes": 13225
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/learner-ui/integration/ai.integration.test.tsx",
+      "sha256": "13c3a3b773000100771d7af242755a452a953d01a0bd8f5c68f76cc90c01b97a",
+      "bytes": 17262
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/learner-ui/integration/fixtures/mission-data/awards.json",
+      "sha256": "6d10042dd1b496d5e68c23f7a7b785a9b98c77f300308464ff52c959ec3bbcb8",
+      "bytes": 8124
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/learner-ui/integration/fixtures/mission-data/flashcards.json",
+      "sha256": "6ca19f8b2a6628f8e4cd3500ba4f00595f44721ec23fd990298631186443fc5a",
+      "bytes": 29757
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/learner-ui/integration/fixtures/mission-data/missions.json",
+      "sha256": "c9c5dcbe579cceecaf699ba4dcf9ab4e69e5c6414a652600a8c529bbd7e6d833",
+      "bytes": 25022
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/learner-ui/integration/fixtures/mission-data/questions.json",
+      "sha256": "863e310bc8df074eb3c9a6e985f7f8ac01b126e2222e5284d7d5cddb52857ada",
+      "bytes": 72104
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/learner-ui/integration/fixtures/mission-data/sample-progress.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "bytes": 3
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/learner-ui/integration/flashcards-review.integration.test.tsx",
+      "sha256": "55df8ce01b001f4d749bb906dd33d4f3befd831ca21ce468be4071e14f177463",
+      "bytes": 11072
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/learner-ui/integration/harness.tsx",
+      "sha256": "7e82191b45c49ffd0027e7350413bb58c91d39cf1c146d08c2899d898e0d14b3",
+      "bytes": 5366
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/learner-ui/integration/helpers/api.ts",
+      "sha256": "932452e6d0cc300e0aba4e24575bead30444f38d704a0e5f1363798a3cb6bb68",
+      "bytes": 5417
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/learner-ui/integration/helpers/database.ts",
+      "sha256": "d2b90d60ffa72e87fbe74c3cea7e9872a8ad727e7ace60011ac30b807e2ce9fc",
+      "bytes": 766
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/learner-ui/integration/helpers/drivers.ts",
+      "sha256": "9cde1d7ea53e97b2f4a95616d79f34a0ca624fe8d67b3d0cc89a384c8eb82200",
+      "bytes": 7005
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/learner-ui/integration/helpers/fixtures.ts",
+      "sha256": "b0a117b234053909960442e830737a46b00418ac4450a65219e029a124b38af0",
+      "bytes": 5557
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/learner-ui/integration/helpers/setup.ts",
+      "sha256": "16b8883a61abf5f6b0a266c3d6b7ef9febcd89ec492cd08294df0f398ef3b473",
+      "bytes": 1097
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/learner-ui/integration/journey-browser.integration.test.tsx",
+      "sha256": "e80aeecb167de07219dec243a67d38c7c28839e726b07bb9960d50a5b4bd63eb",
+      "bytes": 13532
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/learner-ui/integration/mission-learning.integration.test.tsx",
+      "sha256": "58cacde9e11c12899ec3a771cf045bbfdfbc9f38832e16873651d95cc8c2e56f",
+      "bytes": 12943
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/learner-ui/integration/openai.integration.test.tsx",
+      "sha256": "bde1ca3a8bcfdbd21255ce1fd3e273dee8b177fb507a24a3a31fa24f91116853",
+      "bytes": 14785
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/learner-ui/integration/package.json",
+      "sha256": "bd3d3b34b6f9e202055949204c26f04ba4a4d0cd4cd6f0b6067ffd33e4219fc9",
+      "bytes": 837
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/learner-ui/integration/persistence-resilience-accessibility.integration.test.tsx",
+      "sha256": "f01b6a25a24ffe69779b4663e5f57c33fd66146716098dda772f6ee8c7bc509d",
+      "bytes": 16586
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/learner-ui/integration/progress-awards.integration.test.tsx",
+      "sha256": "45100fe059d90158241048ee8b912b1f550bfe7855a53ae738eeeee516a6d164",
+      "bytes": 10719
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/learner-ui/integration/quiz.integration.test.tsx",
+      "sha256": "b859fba399f06c4317130462e71259bc762311ffb57c217b219fc303e478881c",
+      "bytes": 14630
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/learner-ui/integration/scripts/dump_fixtures.py",
+      "sha256": "738f081ff44928bf1c187016ceb49e6e8995765881bdf348b961ed44585ad111",
+      "bytes": 1123
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/learner-ui/integration/tsconfig.json",
+      "sha256": "099ca799e2d3d6f5718d49390ea2bde8f2b62f287a71323f1f36e56bb30d305d",
+      "bytes": 278
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/test/learner-ui/integration/vitest.config.ts",
+      "sha256": "5400164ad9bd580ce37a9e271e3c3e55af945706726d1b293f57dbe4fb033ad5",
+      "bytes": 210
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/tsconfig.base.json",
+      "sha256": "1669894c089dd6a0ab919bf83a577bc006fe49ce0de13e1eee07ae47dee540a8",
+      "bytes": 409
+    },
+    {
+      "path": "submissions/SUB_002/2nd Position/turbo.json",
+      "sha256": "042a5f509cd441382ad6e71d8b01f2cbc20d412e34e2cda7fe60fb3f07e1fd2a",
+      "bytes": 318
+    },
+    {
+      "path": "verification/verification-config.json",
+      "sha256": "c2d99e055ca33371d9fa58e005686aec229a36b305aa70828d5c0c800f470ba6",
+      "bytes": 300
+    }
+  ],
+  "mismatches": [],
+  "critical": false
+}

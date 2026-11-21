@@ -1,0 +1,164 @@
+{
+  "REQ_kk9ov4": {
+    "kind": "specification",
+    "path": "/home/claude/tc-combinator/starter-pack/review-context/ai-learning-adventure.json",
+    "locator": "requirements[0]",
+    "excerpt": "Browser-accessible learning adventure landing page"
+  },
+  "CONSTR_iy4d5a": {
+    "kind": "specification",
+    "path": "/home/claude/tc-combinator/starter-pack/review-context/ai-learning-adventure.json",
+    "locator": "requirements[0].constraints[0]",
+    "excerpt": "Must be browser-accessible with no native app installation required."
+  },
+  "CONSTR_zasjfn": {
+    "kind": "specification",
+    "path": "/home/claude/tc-combinator/starter-pack/review-context/ai-learning-adventure.json",
+    "locator": "requirements[0].constraints[1]",
+    "excerpt": "Must allow users to start or continue the learning journey from the landing experience."
+  },
+  "REQ_6gf9j9": {
+    "kind": "specification",
+    "path": "/home/claude/tc-combinator/starter-pack/review-context/ai-learning-adventure.json",
+    "locator": "requirements[1]",
+    "excerpt": "Pre-seeded AI learning missions"
+  },
+  "CONSTR_j0ogat": {
+    "kind": "specification",
+    "path": "/home/claude/tc-combinator/starter-pack/review-context/ai-learning-adventure.json",
+    "locator": "requirements[1].constraints[0]",
+    "excerpt": "Must include 5–10 pre-seeded AI learning missions."
+  },
+  "CONSTR_1q1poa": {
+    "kind": "specification",
+    "path": "/home/claude/tc-combinator/starter-pack/review-context/ai-learning-adventure.json",
+    "locator": "requirements[1].constraints[1]",
+    "excerpt": "Each mission must include title, difficulty, objective, lesson content and completion status."
+  },
+  "REQ_jj1gly": {
+    "kind": "specification",
+    "path": "/home/claude/tc-combinator/starter-pack/review-context/ai-learning-adventure.json",
+    "locator": "requirements[2]",
+    "excerpt": "Mission practice activities"
+  },
+  "CONSTR_2a3mpy": {
+    "kind": "specification",
+    "path": "/home/claude/tc-combinator/starter-pack/review-context/ai-learning-adventure.json",
+    "locator": "requirements[2].constraints[0]",
+    "excerpt": "Must include mission-linked quizzes, flashcards or checkpoints."
+  },
+  "CONSTR_zyv1yt": {
+    "kind": "specification",
+    "path": "/home/claude/tc-combinator/starter-pack/review-context/ai-learning-adventure.json",
+    "locator": "requirements[2].constraints[1]",
+    "excerpt": "Must provide explanations, review guidance or learning feedback."
+  },
+  "REQ_ittjzz": {
+    "kind": "specification",
+    "path": "/home/claude/tc-combinator/starter-pack/review-context/ai-learning-adventure.json",
+    "locator": "requirements[3]",
+    "excerpt": "Personalized AI tutor"
+  },
+  "CONSTR_dmkt41": {
+    "kind": "specification",
+    "path": "/home/claude/tc-combinator/starter-pack/review-context/ai-learning-adventure.json",
+    "locator": "requirements[3].constraints[0]",
+    "excerpt": "Must answer mission-related questions in beginner-friendly language."
+  },
+  "CONSTR_hafjg2": {
+    "kind": "specification",
+    "path": "/home/claude/tc-combinator/starter-pack/review-context/ai-learning-adventure.json",
+    "locator": "requirements[3].constraints[1]",
+    "excerpt": "Must adapt to learner level, preference or mission context."
+  },
+  "REQ_7xz6vy": {
+    "kind": "specification",
+    "path": "/home/claude/tc-combinator/starter-pack/review-context/ai-learning-adventure.json",
+    "locator": "requirements[4]",
+    "excerpt": "AI Only Mode and AI feedback flow"
+  },
+  "CONSTR_zmv2mc": {
+    "kind": "specification",
+    "path": "/home/claude/tc-combinator/starter-pack/review-context/ai-learning-adventure.json",
+    "locator": "requirements[4].constraints[0]",
+    "excerpt": "Must support explanations, hints, feedback and next-step recommendations."
+  },
+  "CONSTR_do2gla": {
+    "kind": "specification",
+    "path": "/home/claude/tc-combinator/starter-pack/review-context/ai-learning-adventure.json",
+    "locator": "requirements[4].constraints[1]",
+    "excerpt": "Feedback must connect to learning content and not be only a generic chatbot."
+  },
+  "REQ_la65cg": {
+    "kind": "specification",
+    "path": "/home/claude/tc-combinator/starter-pack/review-context/ai-learning-adventure.json",
+    "locator": "requirements[5]",
+    "excerpt": "Progress tracking and gamification"
+  },
+  "CONSTR_irt471": {
+    "kind": "specification",
+    "path": "/home/claude/tc-combinator/starter-pack/review-context/ai-learning-adventure.json",
+    "locator": "requirements[5].constraints[0]",
+    "excerpt": "Must track missions and quiz/checkpoint results."
+  },
+  "CONSTR_i79qzn": {
+    "kind": "specification",
+    "path": "/home/claude/tc-combinator/starter-pack/review-context/ai-learning-adventure.json",
+    "locator": "requirements[5].constraints[1]",
+    "excerpt": "Must include progress, badges, milestones or completion state."
+  },
+  "REQ_tsgt7r": {
+    "kind": "specification",
+    "path": "/home/claude/tc-combinator/starter-pack/review-context/ai-learning-adventure.json",
+    "locator": "requirements[6]",
+    "excerpt": "Content management for missions and questions"
+  },
+  "CONSTR_91h4w7": {
+    "kind": "specification",
+    "path": "/home/claude/tc-combinator/starter-pack/review-context/ai-learning-adventure.json",
+    "locator": "requirements[6].constraints[0]",
+    "excerpt": "Admins can add or edit missions, questions and flashcards."
+  },
+  "CONSTR_xhcqxr": {
+    "kind": "specification",
+    "path": "/home/claude/tc-combinator/starter-pack/review-context/ai-learning-adventure.json",
+    "locator": "requirements[6].constraints[1]",
+    "excerpt": "Admins can enable, disable, preview, publish and unpublish content."
+  },
+  "REQ_1s0p7i": {
+    "kind": "specification",
+    "path": "/home/claude/tc-combinator/starter-pack/review-context/ai-learning-adventure.json",
+    "locator": "requirements[7]",
+    "excerpt": "Seed content and local review reliability"
+  },
+  "CONSTR_dbjf9z": {
+    "kind": "specification",
+    "path": "/home/claude/tc-combinator/starter-pack/review-context/ai-learning-adventure.json",
+    "locator": "requirements[7].constraints[0]",
+    "excerpt": "Must include committed missions, practice content, flashcards and progress data."
+  },
+  "CONSTR_r75rnc": {
+    "kind": "specification",
+    "path": "/home/claude/tc-combinator/starter-pack/review-context/ai-learning-adventure.json",
+    "locator": "requirements[7].constraints[1]",
+    "excerpt": "Must run locally with sufficient committed seed content."
+  },
+  "REQ_eb283y": {
+    "kind": "specification",
+    "path": "/home/claude/tc-combinator/starter-pack/review-context/ai-learning-adventure.json",
+    "locator": "requirements[8]",
+    "excerpt": "AI fallback and documentation"
+  },
+  "CONSTR_abkr15": {
+    "kind": "specification",
+    "path": "/home/claude/tc-combinator/starter-pack/review-context/ai-learning-adventure.json",
+    "locator": "requirements[8].constraints[0]",
+    "excerpt": "Must provide mock/sample AI or clear setup guidance when no key exists."
+  },
+  "CONSTR_ou90ag": {
+    "kind": "specification",
+    "path": "/home/claude/tc-combinator/starter-pack/review-context/ai-learning-adventure.json",
+    "locator": "requirements[8].constraints[1]",
+    "excerpt": "README covers setup, AI configuration, fallback, learner and admin flows."
+  }
+}

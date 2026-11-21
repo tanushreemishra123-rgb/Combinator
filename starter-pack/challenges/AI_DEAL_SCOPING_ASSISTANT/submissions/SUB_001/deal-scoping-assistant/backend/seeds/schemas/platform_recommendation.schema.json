@@ -1,0 +1,94 @@
+{
+  "$defs": {
+    "Basis": {
+      "enum": [
+        "customer",
+        "inferred",
+        "assumed",
+        "recommended"
+      ],
+      "title": "Basis",
+      "type": "string"
+    },
+    "CloudPlatform": {
+      "enum": [
+        "aws",
+        "azure",
+        "gcp"
+      ],
+      "title": "CloudPlatform",
+      "type": "string"
+    },
+    "PlatformAlternative": {
+      "additionalProperties": false,
+      "properties": {
+        "platform": {
+          "$ref": "#/$defs/CloudPlatform",
+          "description": "Alternative cloud platform."
+        },
+        "why_not": {
+          "description": "Why it was not recommended.",
+          "title": "Why Not",
+          "type": "string"
+        }
+      },
+      "required": [
+        "platform",
+        "why_not"
+      ],
+      "title": "PlatformAlternative",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "req_ids": {
+      "description": "Scope item ids this element is grounded in.",
+      "items": {
+        "type": "string"
+      },
+      "title": "Req Ids",
+      "type": "array"
+    },
+    "basis": {
+      "$ref": "#/$defs/Basis",
+      "description": "customer, inferred, assumed or recommended."
+    },
+    "validation_required": {
+      "default": false,
+      "description": "True when a human must validate this element before use.",
+      "title": "Validation Required",
+      "type": "boolean"
+    },
+    "validation_reason": {
+      "default": "",
+      "description": "Why human validation is required, when it is.",
+      "title": "Validation Reason",
+      "type": "string"
+    },
+    "recommended": {
+      "$ref": "#/$defs/CloudPlatform",
+      "description": "Recommended cloud platform."
+    },
+    "rationale": {
+      "description": "Why this platform fits the requirements.",
+      "title": "Rationale",
+      "type": "string"
+    },
+    "alternatives": {
+      "description": "Platforms considered and rejected.",
+      "items": {
+        "$ref": "#/$defs/PlatformAlternative"
+      },
+      "title": "Alternatives",
+      "type": "array"
+    }
+  },
+  "required": [
+    "basis",
+    "recommended",
+    "rationale"
+  ],
+  "title": "PlatformRecommendation",
+  "type": "object"
+}

@@ -1,0 +1,385 @@
+/**
+ * Behaviour tests for the Data, Integration, and AI Workspace: prerequisite gating for both
+ * generation actions, meta lines, reviewed toggles, stale banners, busy state, all three tabs'
+ * content (including every empty/not-yet-generated state), the AI-provider selector routed through
+ * the config use case, and cross-workspace navigation. The state layer is mocked (fixed contract,
+ * see src/state/index.ts) so these tests never depend on another engineer's in-progress use-case or
+ * selector bodies, and `DiagramView` is mocked to a plain stand-in (its SVG renderer is a separate,
+ * in-progress contract, see src/ui/diagram).
+ */
+import { fireEvent, render, screen, within } from '@testing-library/react';
+import type { ScopingSession } from '../../domain';
+import { fixtureSession } from '../../test/fixtures';
+import { NavigationContext } from '../navigation';
+import type { WorkspaceNavigation } from '../navigation';
+import { StrategyWorkspace } from './StrategyWorkspace';
+import {
+  fixtureAiStrategyOutput,
+  fixtureAiUseCase,
+  fixtureArchitectureDesign,
+  fixtureDataIntegrationOutput,
+  fixtureFrameworkRecommendation,
+  fixtureGenerationMeta,
+  fixtureProcessingBoundary,
+} from './strategyFixtures';
+
+const { mockUseActiveSession, mockUseActions, mockUseBusy, mockStagePrerequisite } = vi.hoisted(() => ({
+  mockUseActiveSession: vi.fn(),
+  mockUseActions: vi.fn(),
+  mockUseBusy: vi.fn(),
+  mockStagePrerequisite: vi.fn(),
+}));
+
+vi.mock('../../state', () => ({
+  useActiveSession: mockUseActiveSession,
+  useActions: mockUseActions,
+  useBusy: mockUseBusy,
+  stagePrerequisite: mockStagePrerequisite,
+}));
+
+vi.mock('../diagram', () => ({
+  DiagramView: (props: { ariaLabel: string }) => <div>{props.ariaLabel}</div>,
+}));
+
+const actions = {
+  generateStage: vi.fn(),
+  setStageReviewed: vi.fn(),
+  updateSolutionConfig: vi.fn(),
+};
+
+function sessionWithOutputs(overrides: Partial<ScopingSession['outputs']> = {}, configOverrides: Partial<ScopingSession['config']> = {}): ScopingSession {
+  const session = fixtureSession();
+  return {
+    ...session,
+    config: { ...session.config, ...configOverrides },
+    outputs: { ...session.outputs, ...overrides },
+  };
+}
+
+function renderWorkspace(navigate: (workspace: string, focusId?: string) => void = vi.fn()) {
+  const navigation: WorkspaceNavigation = { activeWorkspace: 'strategy', focusId: null, navigate, clearFocus: vi.fn() };
+  return render(
+    <NavigationContext.Provider value={navigation}>
+      <StrategyWorkspace />
+    </NavigationContext.Provider>,
+  );
+}
+
+beforeEach(() => {
+  vi.clearAllMocks();
+  mockUseActions.mockReturnValue(actions);
+  mockUseBusy.mockReturnValue(null);
+  mockStagePrerequisite.mockReturnValue(null);
+});
+
+describe('StrategyContent - prerequisite gating', () => {
+  it('disables both generate actions and shows the prerequisite message when neither stage is ready', () => {
+    mockUseActiveSession.mockReturnValue(sessionWithOutputs());
+    mockStagePrerequisite.mockReturnValue('Generate the solution architecture before planning the data flow.');
+    renderWorkspace();
+
+    expect(screen.getByRole('button', { name: /Plan the data flow/ })).toBeDisabled();
+    expect(screen.getByRole('button', { name: /Select the AI approach/ })).toBeDisabled();
+    expect(screen.getAllByText('Generate the solution architecture before planning the data flow.').length).toBeGreaterThan(0);
+  });
+
+  it('never shows a blank panel before anything has been generated', () => {
+    mockUseActiveSession.mockReturnValue(sessionWithOutputs());
+    renderWorkspace();
+    expect(screen.getByText('No data strategy yet')).toBeInTheDocument();
+  });
+});
+
+describe('StrategyContent - generation', () => {
+  it('generates the data and integration strategy when its prerequisite is met', () => {
+    mockUseActiveSession.mockReturnValue(sessionWithOutputs());
+    renderWorkspace();
+
+    fireEvent.click(screen.getByRole('button', { name: 'Plan the data flow' }));
+    expect(actions.generateStage).toHaveBeenCalledWith('dataIntegration');
+  });
+
+  it('generates the AI solution approach when its prerequisite is met', () => {
+    mockUseActiveSession.mockReturnValue(sessionWithOutputs());
+    renderWorkspace();
+
+    fireEvent.click(screen.getByRole('button', { name: 'Select the AI approach' }));
+    expect(actions.generateStage).toHaveBeenCalledWith('aiStrategy');
+  });
+
+  it('shows the generation meta line and reviewed toggle, and switches to Regenerate once data exists', () => {
+    const meta = fixtureGenerationMeta();
+    mockUseActiveSession.mockReturnValue(
+      sessionWithOutputs({ dataIntegration: { data: fixtureDataIntegrationOutput(), status: 'current', reviewed: false, meta, staleReasons: [] } }),
+    );
+    renderWorkspace();
+
+    expect(screen.getByRole('button', { name: 'Regenerate data and integration strategy' })).toBeInTheDocument();
+    expect(screen.getByText(/Generated by Mock Heuristic Engine \(Mock AI\)/)).toBeInTheDocument();
+
+    fireEvent.click(screen.getByLabelText('Mark as reviewed'));
+    expect(actions.setStageReviewed).toHaveBeenCalledWith('dataIntegration', true);
+  });
+
+  it('shows a stale banner with reasons and regenerates from its own action', () => {
+    mockUseActiveSession.mockReturnValue(
+      sessionWithOutputs({
+        aiStrategy: {
+          data: fixtureAiStrategyOutput(),
+          status: 'stale',
+          reviewed: true,
+          meta: fixtureGenerationMeta(),
+          staleReasons: ['Requirement FR_03 changed after this section was generated.'],
+        },
+      }),
+    );
+    renderWorkspace();
+
+    const staleBanner = screen.getByText('This section is out of date').closest('div.stale-banner') as HTMLElement;
+    expect(within(staleBanner).getByText('Requirement FR_03 changed after this section was generated.')).toBeInTheDocument();
+
+    fireEvent.click(within(staleBanner).getByRole('button', { name: 'Regenerate AI solution approach' }));
+    expect(actions.generateStage).toHaveBeenCalledWith('aiStrategy');
+  });
+
+  it('shows the busy overlay over the active tab, and disables both actions while any generation is in flight', () => {
+    mockUseActiveSession.mockReturnValue(sessionWithOutputs());
+    mockUseBusy.mockReturnValue({ label: 'Planning the data flow...', stageId: 'dataIntegration' });
+    renderWorkspace();
+
+    // The data-strategy tab is active by default and dataIntegration is the busy stage; the other
+    // action is blocked too, since only one generation runs app-wide at a time.
+    expect(screen.getAllByText('Generating...').length).toBeGreaterThan(0);
+    expect(screen.getByRole('button', { name: /Plan the data flow/ })).toBeDisabled();
+    expect(screen.getByRole('button', { name: /Select the AI approach/ })).toBeDisabled();
+  });
+
+  it('shows validation notes when the generation meta recorded an issue', () => {
+    const meta = fixtureGenerationMeta({
+      issues: [{ severity: 'warning', code: 'unconfirmed-readiness', message: 'Integration INTEG_01 has unconfirmed API readiness.', refs: [] }],
+    });
+    mockUseActiveSession.mockReturnValue(
+      sessionWithOutputs({ dataIntegration: { data: fixtureDataIntegrationOutput(), status: 'current', reviewed: false, meta, staleReasons: [] } }),
+    );
+    renderWorkspace();
+
+    fireEvent.click(screen.getByText('1 validation note'));
+    expect(screen.getByText('Integration INTEG_01 has unconfirmed API readiness.')).toBeInTheDocument();
+  });
+});
+
+describe('StrategyContent - data strategy tab', () => {
+  function renderWithPlan(navigate: (workspace: string, focusId?: string) => void = vi.fn()) {
+    mockUseActiveSession.mockReturnValue(
+      sessionWithOutputs({
+        dataIntegration: { data: fixtureDataIntegrationOutput(), status: 'current', reviewed: true, meta: fixtureGenerationMeta(), staleReasons: [] },
+      }),
+    );
+    return renderWorkspace(navigate);
+  }
+
+  it('shows the data domains table with classification and requirement chips', () => {
+    renderWithPlan();
+    expect(screen.getByText('Member profile data')).toBeInTheDocument();
+    expect(screen.getByText('Confidential')).toBeInTheDocument();
+    expect(screen.getAllByRole('button', { name: 'FR_01' }).length).toBeGreaterThan(0);
+  });
+
+  it('renders all ten data topics in the spec wording, even ones the plan has not populated', () => {
+    renderWithPlan();
+    const expectedLabels = [
+      'Data ownership',
+      'Data ingestion',
+      'Transactional storage',
+      'Analytical storage',
+      'Data quality',
+      'Metadata and governance',
+      'Data retention',
+      'Privacy and security',
+      'Reporting and analytics',
+      'Backup and recovery',
+    ];
+    for (const label of expectedLabels) {
+      expect(screen.getByText(label)).toBeInTheDocument();
+    }
+    // Only "ownership" was populated by the fixture; every other topic falls back to its not-planned copy.
+    expect(screen.getAllByText(/has not been planned yet/).length).toBe(9);
+  });
+
+  it('navigates to the Customer Requirements Workspace when a requirement chip is clicked', () => {
+    const navigate = vi.fn();
+    renderWithPlan(navigate);
+    fireEvent.click(screen.getAllByRole('button', { name: 'FR_01' }).at(0) as HTMLElement);
+    expect(navigate).toHaveBeenCalledWith('requirements', 'FR_01');
+  });
+});
+
+describe('StrategyContent - integration architecture tab', () => {
+  function openIntegrationTab(design = fixtureArchitectureDesign()) {
+    mockUseActiveSession.mockReturnValue(
+      sessionWithOutputs({
+        dataIntegration: { data: fixtureDataIntegrationOutput(), status: 'current', reviewed: true, meta: fixtureGenerationMeta(), staleReasons: [] },
+        architecture: { data: design, status: 'current', reviewed: true, meta: fixtureGenerationMeta(), staleReasons: [] },
+      }),
+    );
+    renderWorkspace();
+    fireEvent.click(screen.getByRole('tab', { name: 'Integration architecture' }));
+  }
+
+  it('shows the integration inventory with system type, pattern, complexity and the readiness warning', () => {
+    openIntegrationTab();
+    expect(screen.getByText('Salesforce CRM profile sync')).toBeInTheDocument();
+    expect(screen.getByText('External system')).toBeInTheDocument();
+    expect(screen.getByText('API')).toBeInTheDocument();
+    expect(screen.getByText('Medium complexity')).toBeInTheDocument();
+    expect(screen.getByText('API readiness not confirmed')).toBeInTheDocument();
+  });
+
+  it('expands a row to reveal protocol, error handling, retry, monitoring and the implementing component', () => {
+    openIntegrationTab();
+    fireEvent.click(screen.getByRole('button', { name: 'Expand row' }));
+
+    expect(screen.getByText('REST/JSON over HTTPS')).toBeInTheDocument();
+    expect(screen.getByText('OAuth 2.0 client credentials')).toBeInTheDocument();
+    expect(screen.getByText('Integration Platform (Azure Logic Apps)')).toBeInTheDocument();
+  });
+
+  it('asks to generate the architecture first when the diagram has no design to draw from', () => {
+    mockUseActiveSession.mockReturnValue(
+      sessionWithOutputs({
+        dataIntegration: { data: fixtureDataIntegrationOutput(), status: 'current', reviewed: true, meta: fixtureGenerationMeta(), staleReasons: [] },
+      }),
+    );
+    renderWorkspace();
+    fireEvent.click(screen.getByRole('tab', { name: 'Integration architecture' }));
+
+    expect(screen.getByText(/Generate the cloud solution architecture first/)).toBeInTheDocument();
+  });
+
+  it('renders the data and integration diagram once the architecture design exists', () => {
+    openIntegrationTab();
+    expect(screen.getByText('Data and integration diagram for the AZURE architecture')).toBeInTheDocument();
+  });
+
+  it('describes each flow in plain language', () => {
+    openIntegrationTab();
+    const flowItem = screen.getByText(/Member profile updates via REST API over HTTPS/).closest('li.strategy-flow-item') as HTMLElement;
+    expect(within(flowItem).getByText('Salesforce CRM')).toBeInTheDocument();
+    expect(within(flowItem).getByText('Integration Platform')).toBeInTheDocument();
+  });
+});
+
+describe('StrategyContent - integration architecture tab empty states', () => {
+  it('shows an empty integrations state and an empty flows state when the plan has neither yet', () => {
+    mockUseActiveSession.mockReturnValue(
+      sessionWithOutputs({
+        dataIntegration: {
+          data: fixtureDataIntegrationOutput({ integrations: [], flows: [] }),
+          status: 'current',
+          reviewed: true,
+          meta: fixtureGenerationMeta(),
+          staleReasons: [],
+        },
+        architecture: { data: fixtureArchitectureDesign(), status: 'current', reviewed: true, meta: fixtureGenerationMeta(), staleReasons: [] },
+      }),
+    );
+    renderWorkspace();
+    fireEvent.click(screen.getByRole('tab', { name: 'Integration architecture' }));
+
+    expect(screen.getByText('No integrations yet')).toBeInTheDocument();
+    expect(screen.getByText('No data flows yet')).toBeInTheDocument();
+  });
+});
+
+describe('StrategyContent - AI solution approach tab', () => {
+  function openAiTab(strategy = fixtureAiStrategyOutput()) {
+    mockUseActiveSession.mockReturnValue(
+      sessionWithOutputs({ aiStrategy: { data: strategy, status: 'current', reviewed: true, meta: fixtureGenerationMeta(), staleReasons: [] } }),
+    );
+    renderWorkspace();
+    fireEvent.click(screen.getByRole('tab', { name: 'AI solution approach' }));
+  }
+
+  it('always shows the AI provider preference selector, even before anything has been generated', () => {
+    mockUseActiveSession.mockReturnValue(sessionWithOutputs());
+    renderWorkspace();
+    fireEvent.click(screen.getByRole('tab', { name: 'AI solution approach' }));
+
+    expect(screen.getByLabelText('AI provider preference')).toBeInTheDocument();
+    expect(screen.getByText('No AI solution approach yet')).toBeInTheDocument();
+  });
+
+  it('routes a changed provider preference through the config use case', () => {
+    mockUseActiveSession.mockReturnValue(sessionWithOutputs({}, { aiProviderPreference: 'no-preference' }));
+    renderWorkspace();
+    fireEvent.click(screen.getByRole('tab', { name: 'AI solution approach' }));
+
+    fireEvent.change(screen.getByLabelText('AI provider preference'), { target: { value: 'anthropic' } });
+    expect(actions.updateSolutionConfig).toHaveBeenCalledWith({ aiProviderPreference: 'anthropic' });
+  });
+
+  it('shows one card per AI use case with its pattern, model options and requirement chips', () => {
+    openAiTab();
+    expect(screen.getByText('Policy question assistant')).toBeInTheDocument();
+    expect(screen.getByText('Retrieval-augmented generation')).toBeInTheDocument();
+    expect(screen.getByText('Azure OpenAI GPT-4o, Anthropic Claude')).toBeInTheDocument();
+    expect(screen.getByText('Medium complexity')).toBeInTheDocument();
+  });
+
+  it('flags a use case that is missing a required safeguard instead of leaving it blank', () => {
+    openAiTab(fixtureAiStrategyOutput({ useCases: [fixtureAiUseCase({ safety: '', humanReview: '' })] }));
+    expect(screen.getByText('Missing safeguards')).toBeInTheDocument();
+    expect(screen.getByText(/Safety controls, Human review/)).toBeInTheDocument();
+  });
+
+  it('shows the AI vs deterministic vs human decision boundary table with distinct badges', () => {
+    openAiTab(
+      fixtureAiStrategyOutput({
+        boundaries: [
+          fixtureProcessingBoundary({ activity: 'Answering free-text policy questions', type: 'ai' }),
+          fixtureProcessingBoundary({ activity: 'Calculating the premium', type: 'deterministic', requirementIds: [] }),
+          fixtureProcessingBoundary({ activity: 'Approving a large claim', type: 'human-decision', requirementIds: [] }),
+        ],
+      }),
+    );
+    expect(screen.getByText('AI-automated')).toBeInTheDocument();
+    expect(screen.getByText('Deterministic rule')).toBeInTheDocument();
+    expect(screen.getByText('Human decision required')).toBeInTheDocument();
+  });
+
+  it('tags framework recommendations as AI-generated and shows the solution-specific rationale and alternatives', () => {
+    openAiTab(fixtureAiStrategyOutput({ frameworks: [fixtureFrameworkRecommendation()] }));
+    expect(screen.getByText('LangChain')).toBeInTheDocument();
+    expect(screen.getByText('AI-generated recommendation')).toBeInTheDocument();
+    expect(screen.getByText(/Coordinates retrieval and generation/)).toBeInTheDocument();
+
+    fireEvent.click(screen.getByText('Alternatives considered'));
+    expect(screen.getByText('LangGraph')).toBeInTheDocument();
+  });
+
+  it('shows the architecture, evaluation and responsible-AI prose panels', () => {
+    openAiTab();
+    expect(screen.getByText('AI architecture pattern')).toBeInTheDocument();
+    expect(screen.getByText('Prompt and structured-output management')).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'Evaluation approach' })).toBeInTheDocument();
+    expect(screen.getByText('Responsible AI and safety considerations')).toBeInTheDocument();
+    expect(screen.getByText('Monitoring and feedback')).toBeInTheDocument();
+    expect(screen.getByText('Data privacy')).toBeInTheDocument();
+    expect(screen.getByText('Responses cite the source document section.')).toBeInTheDocument();
+  });
+
+  it('shows the deterministic explanation and boundaries instead of use cases when AI is not applicable', () => {
+    openAiTab(fixtureAiStrategyOutput({ applicable: false, useCases: [], frameworks: [] }));
+    expect(screen.getByText('No AI-driven capability in the reviewed scope')).toBeInTheDocument();
+    expect(screen.queryByText('AI use cases')).not.toBeInTheDocument();
+  });
+});
+
+describe('StrategyContent - footer navigation', () => {
+  it('does not render its own footer nav (the app shell renders it once, see WorkspaceContainer)', () => {
+    mockUseActiveSession.mockReturnValue(sessionWithOutputs());
+    renderWorkspace();
+
+    expect(screen.queryByRole('navigation', { name: 'Workspace navigation' })).not.toBeInTheDocument();
+  });
+});

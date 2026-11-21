@@ -1,0 +1,57 @@
+@use '../../../styles/tokens' as t;
+
+.group {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px;
+  border: t.$border-width-default solid t.$color-border-default;
+  border-radius: t.$border-radius-md;
+  background: t.$color-background-surface;
+}
+
+.segment {
+  border: none;
+  border-radius: calc(#{t.$border-radius-md} - 2px);
+  background: t.$color-background-toggle-inactive;
+  color: t.$color-text-secondary;
+  font-family: inherit;
+  font-weight: t.$typography-font-weight-regular;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background-color t.$transition-default,
+    color t.$transition-default;
+
+  &:hover:not(:disabled):not(.active) {
+    background: t.$color-background-surface-muted;
+    color: t.$color-text-primary;
+  }
+
+  &:focus-visible {
+    outline: t.$border-width-active solid t.$color-border-focus;
+    outline-offset: 1px;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+  }
+}
+
+.sm .segment {
+  height: 24px;
+  padding: 0 t.$spacing-2;
+  font-size: t.$typography-font-size-xs;
+}
+
+.md .segment {
+  height: 28px;
+  padding: 0 t.$spacing-3;
+  font-size: t.$typography-font-size-sm;
+}
+
+.active {
+  background: t.$color-background-toggle-active;
+  color: t.$color-text-inverse;
+  font-weight: t.$typography-font-weight-medium;
+}

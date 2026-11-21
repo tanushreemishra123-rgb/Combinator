@@ -1,0 +1,137 @@
+{
+  "id": "repair-the-ticket-router",
+  "title": "Repair the Ticket Router",
+  "difficulty": "intermediate",
+  "tagline": "Ask a human when the AI is guessing",
+  "concepts": ["validator", "confidence threshold", "human review", "transform"],
+  "order": 4,
+  "objective": "Turn a shaky guess into a decision somebody actually made.",
+  "description": "This router reads a support ticket, picks a category, and files it. A Validator already checks that the category is one you allow and that the model was at least 70% sure. But when the model is unsure, the Validator simply kills the run - the ticket vanishes and nobody is told. Change what the Validator does on failure so a low-confidence guess pauses for a person, who can confirm or correct the category before the ticket is routed.",
+  "sample_input": {
+    "ticket_id": "TCK-4821",
+    "subject": "Invoice looks wrong again",
+    "body": "This is the second month my invoice has an extra seat on it. I removed that person in March. Can someone look at this before the next charge goes out?"
+  },
+  "expected_output": "A routed ticket carrying an allowed category, the classifier's summary, and a routing status - after a person confirmed or corrected the category.",
+  "available_blocks": [
+    "input",
+    "ai_model",
+    "validator",
+    "human_review",
+    "transform",
+    "condition",
+    "safe_stop",
+    "output"
+  ],
+  "starter_workflow": {
+    "id": "wf_ticket_router",
+    "name": "Support ticket router",
+    "nodes": [
+      {
+        "id": "ticket_in",
+        "type": "input",
+        "label": "Incoming ticket",
+        "config": {},
+        "position": { "x": 60, "y": 200 }
+      },
+      {
+        "id": "classify",
+        "type": "ai_model",
+        "label": "Classify the ticket",
+        "config": {
+          "prompt_id": "ticket_classification_v1",
+          "prompt": "Classify this support ticket. Return JSON with category (one of billing, technical, account, feedback), summary, suggested_queue and confidence (a number between 0 and 1 for how sure you are).",
+          "system": "You triage support tickets. Choose only from the allowed categories.",
+          "expects_json": true,
+          "output_field": "classification"
+        },
+        "position": { "x": 320, "y": 200 }
+      },
+      {
+        "id": "check_classification",
+        "type": "validator",
+        "label": "Is the category trustworthy?",
+        "config": {
+          "schema": {
+            "classification.category": {
+              "type": "string",
+              "allowed": ["billing", "technical", "account", "feedback"]
+            },
+            "classification.summary": { "type": "string", "min": 8 }
+          },
+          "confidence_threshold": 0.7,
+          "on_fail": "fail",
+          "review_prompt": "The classifier is not confident about this ticket. Confirm the category or correct it."
+        },
+        "position": { "x": 580, "y": 200 }
+      },
+      {
+        "id": "route",
+        "type": "transform",
+        "label": "File the ticket",
+        "config": {
+          "operation": "merge",
+          "values": { "routing_status": "routed", "routed_by": "ticket-router-workflow" }
+        },
+        "position": { "x": 840, "y": 200 }
+      },
+      {
+        "id": "router_out",
+        "type": "output",
+        "label": "Routed ticket",
+        "config": {},
+        "position": { "x": 1100, "y": 200 }
+      }
+    ],
+    "edges": [
+      { "id": "e_ticket_classify", "source": "ticket_in", "target": "classify" },
+      { "id": "e_classify_check", "source": "classify", "target": "check_classification" },
+      { "id": "e_check_route", "source": "check_classification", "target": "route" },
+      { "id": "e_route_out", "source": "route", "target": "router_out" }
+    ]
+  },
+  "solution_hint": "Open 'Is the category trustworthy?' and change 'When validation fails' from 'Fail the run' to 'Ask a human'. Re-run: the workflow pauses and shows you the shaky classification. Approve it, or edit the category, and the ticket carries on to the Output.",
+  "failure_scenarios": [
+    {
+      "id": "confused-classifier",
+      "label": "The classifier is confused",
+      "description": "The model returns a category it is only 30% sure about - well under the 70% bar the Validator enforces.",
+      "rules": [
+        {
+          "node_id": "classify",
+          "kind": "low_confidence",
+          "attempts": "all",
+          "label": "the classifier is unsure",
+          "detail": { "confidence": 0.3 }
+        }
+      ]
+    }
+  ],
+  "completion_criteria": [
+    "The category is checked against the list of allowed categories",
+    "A shaky guess pauses for a person instead of killing the run",
+    "A human decision is recorded on the run",
+    "The routed ticket reaches the Output with a category on it",
+    "The run finishes instead of failing"
+  ],
+  "completion_checks": [
+    { "kind": "block_used", "type": "validator" },
+    { "kind": "event", "event": "review_requested" },
+    { "kind": "event", "event": "review_decision" },
+    { "kind": "output_field", "field": "classification.category", "op": "not_empty" },
+    { "kind": "run_status", "in": ["completed"] }
+  ],
+  "mock_responses": {
+    "ticket_classification_v1": {
+      "confidence": 0.93,
+      "data": {
+        "category": "billing",
+        "summary": "Customer was charged for a seat they removed in March and wants it fixed before the next invoice.",
+        "suggested_queue": "Billing Tier 2"
+      }
+    }
+  },
+  "mock_responses_by_provider": {},
+  "tool_fixtures": {},
+  "retrieval_fixtures": {}
+}

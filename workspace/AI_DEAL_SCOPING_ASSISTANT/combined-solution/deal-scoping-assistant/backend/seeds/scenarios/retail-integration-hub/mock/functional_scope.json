@@ -1,0 +1,668 @@
+{
+  "capabilities": [
+    {
+      "req_ids": [
+        "INT_01",
+        "NFR_03",
+        "NFR_04",
+        "NFR_09"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "CAP_01",
+      "name": "E-commerce Order Ingestion",
+      "description": "Captures Shopify orders and sends them to SAP S/4HANA, ensuring low latency and high volume handling.",
+      "included_req_ids": [
+        "INT_01",
+        "NFR_03",
+        "NFR_04",
+        "NFR_09"
+      ],
+      "priority": "high",
+      "dependencies": [],
+      "module": "",
+      "workstream_id": "",
+      "delivery_package_id": "",
+      "scope_class": "customer_requested"
+    },
+    {
+      "req_ids": [
+        "INT_02",
+        "CON_01",
+        "NFR_04",
+        "NFR_09",
+        "NFR_11"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "CAP_02",
+      "name": "Outbound Order Fulfillment",
+      "description": "Processes sales orders for release to Nordkap Logistics via SFTP, adhering to scheduled drops and preparing for future API integration.",
+      "included_req_ids": [
+        "INT_02",
+        "CON_01",
+        "NFR_04",
+        "NFR_09",
+        "NFR_11"
+      ],
+      "priority": "high",
+      "dependencies": [],
+      "module": "",
+      "workstream_id": "",
+      "delivery_package_id": "",
+      "scope_class": "customer_requested"
+    },
+    {
+      "req_ids": [
+        "INT_03",
+        "FR_02",
+        "FR_08",
+        "FR_09"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "CAP_03",
+      "name": "Inbound 3PL Dispatch & Tracking",
+      "description": "Receives dispatch and tracking files from Nordkap Logistics, including detection for duplicate and sequence number gaps.",
+      "included_req_ids": [
+        "INT_03",
+        "FR_02",
+        "FR_08",
+        "FR_09"
+      ],
+      "priority": "high",
+      "dependencies": [],
+      "module": "",
+      "workstream_id": "",
+      "delivery_package_id": "",
+      "scope_class": "customer_requested"
+    },
+    {
+      "req_ids": [
+        "FR_01",
+        "NFR_02"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "CAP_04",
+      "name": "Customer Service Order Status Sync",
+      "description": "Synchronizes order status from fulfillment systems to Salesforce Service Cloud to provide consistent information for customer service agents.",
+      "included_req_ids": [
+        "FR_01",
+        "NFR_02"
+      ],
+      "priority": "high",
+      "dependencies": [],
+      "module": "",
+      "workstream_id": "",
+      "delivery_package_id": "",
+      "scope_class": "customer_requested"
+    },
+    {
+      "req_ids": [
+        "INT_04",
+        "NFR_01",
+        "NFR_05",
+        "FR_03",
+        "BR_02",
+        "CON_03"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "CAP_05",
+      "name": "Real-time Inventory Availability",
+      "description": "Provides near-real-time inventory availability, including Available-to-Promise (ATP) calculation, to Shopify and the in-house POS system to reduce overselling.",
+      "included_req_ids": [
+        "INT_04",
+        "NFR_01",
+        "NFR_05",
+        "FR_03",
+        "BR_02",
+        "CON_03"
+      ],
+      "priority": "high",
+      "dependencies": [],
+      "module": "",
+      "workstream_id": "",
+      "delivery_package_id": "",
+      "scope_class": "customer_requested"
+    },
+    {
+      "req_ids": [
+        "INT_07",
+        "NFR_06",
+        "DATA_01"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "CAP_06",
+      "name": "Product Master Data Distribution",
+      "description": "Distributes product master data, including price and tax class, from SAP to Shopify and Salesforce, supporting nightly full loads and daily deltas.",
+      "included_req_ids": [
+        "INT_07",
+        "NFR_06",
+        "DATA_01"
+      ],
+      "priority": "high",
+      "dependencies": [],
+      "module": "",
+      "workstream_id": "",
+      "delivery_package_id": "",
+      "scope_class": "customer_requested"
+    },
+    {
+      "req_ids": [
+        "FR_04"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "CAP_07",
+      "name": "Automated Returns Processing",
+      "description": "Automates the returns process across Salesforce, 3PL, and SAP to streamline operations.",
+      "included_req_ids": [
+        "FR_04"
+      ],
+      "priority": "high",
+      "dependencies": [],
+      "module": "",
+      "workstream_id": "",
+      "delivery_package_id": "",
+      "scope_class": "customer_requested"
+    },
+    {
+      "req_ids": [
+        "INT_08"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "CAP_08",
+      "name": "Finance Posting Integration",
+      "description": "Reconciles daily settlement files from the payment provider against Shopify orders and posts them to SAP.",
+      "included_req_ids": [
+        "INT_08"
+      ],
+      "priority": "high",
+      "dependencies": [],
+      "module": "",
+      "workstream_id": "",
+      "delivery_package_id": "",
+      "scope_class": "customer_requested"
+    },
+    {
+      "req_ids": [
+        "FR_06",
+        "FR_07",
+        "DATA_03"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "CAP_09",
+      "name": "Daily Three-Way Reconciliation & Reporting",
+      "description": "Performs daily reconciliation between Shopify orders, SAP sales orders, and 3PL dispatches, generating break reports and retaining results for compliance.",
+      "included_req_ids": [
+        "FR_06",
+        "FR_07",
+        "DATA_03"
+      ],
+      "priority": "must",
+      "dependencies": [],
+      "module": "",
+      "workstream_id": "",
+      "delivery_package_id": "",
+      "scope_class": "customer_requested"
+    },
+    {
+      "req_ids": [
+        "INT_05",
+        "INT_06"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "CAP_10",
+      "name": "Data Warehouse Feeds",
+      "description": "Provides nightly customer and order data, and an intraday order-events feed, to the Snowflake data warehouse for reporting and dashboards.",
+      "included_req_ids": [
+        "INT_05",
+        "INT_06"
+      ],
+      "priority": "medium",
+      "dependencies": [],
+      "module": "",
+      "workstream_id": "",
+      "delivery_package_id": "",
+      "scope_class": "customer_requested"
+    },
+    {
+      "req_ids": [
+        "FR_05",
+        "NFR_07",
+        "NFR_08",
+        "NFR_10",
+        "DATA_02"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "CAP_11",
+      "name": "Integration Platform Observability & Resilience",
+      "description": "Implements retry mechanisms with backoff, dead-letter destinations, an operator view for failed messages with replay capability, and integrates monitoring with Grafana. Message payloads are retained for 90 days.",
+      "included_req_ids": [
+        "FR_05",
+        "NFR_07",
+        "NFR_08",
+        "NFR_10",
+        "DATA_02"
+      ],
+      "priority": "high",
+      "dependencies": [],
+      "module": "",
+      "workstream_id": "",
+      "delivery_package_id": "",
+      "scope_class": "customer_requested"
+    },
+    {
+      "req_ids": [
+        "BR_01",
+        "SEC_01",
+        "SEC_02",
+        "TECH_02",
+        "TECH_03",
+        "TECH_04",
+        "TECH_05",
+        "TECH_06"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "CAP_12",
+      "name": "Platform Foundation & Security",
+      "description": "Establishes the core integration platform on AWS managed services, ensuring GDPR compliance for personal data and adhering to specified regional and architectural preferences. PCI compliance is explicitly out of scope.",
+      "included_req_ids": [
+        "BR_01",
+        "SEC_01",
+        "SEC_02",
+        "TECH_02",
+        "TECH_03",
+        "TECH_04",
+        "TECH_05",
+        "TECH_06"
+      ],
+      "priority": "must",
+      "dependencies": [],
+      "module": "",
+      "workstream_id": "",
+      "delivery_package_id": "",
+      "scope_class": "customer_requested"
+    }
+  ],
+  "modules": [
+    {
+      "req_ids": [
+        "INT_01",
+        "NFR_03",
+        "NFR_04",
+        "NFR_09",
+        "INT_02",
+        "CON_01",
+        "NFR_11",
+        "INT_03",
+        "FR_02",
+        "FR_08",
+        "FR_09",
+        "FR_01",
+        "NFR_02",
+        "FR_04",
+        "INT_08",
+        "FR_06",
+        "FR_07",
+        "DATA_03"
+      ],
+      "basis": "inferred",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "MOD_01",
+      "name": "Order to Cash",
+      "description": "Groups capabilities related to order processing, fulfillment, returns, finance, and reconciliation.",
+      "capability_ids": [
+        "CAP_01",
+        "CAP_02",
+        "CAP_03",
+        "CAP_04",
+        "CAP_07",
+        "CAP_08",
+        "CAP_09"
+      ]
+    },
+    {
+      "req_ids": [
+        "INT_04",
+        "NFR_01",
+        "NFR_05",
+        "FR_03",
+        "BR_02",
+        "CON_03",
+        "INT_07",
+        "NFR_06",
+        "DATA_01"
+      ],
+      "basis": "inferred",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "MOD_02",
+      "name": "Master Data & Inventory Management",
+      "description": "Groups capabilities for product master data distribution and real-time inventory availability.",
+      "capability_ids": [
+        "CAP_05",
+        "CAP_06"
+      ]
+    },
+    {
+      "req_ids": [
+        "INT_05",
+        "INT_06"
+      ],
+      "basis": "inferred",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "MOD_03",
+      "name": "Data & Analytics",
+      "description": "Groups capabilities for feeding data to the Snowflake data warehouse.",
+      "capability_ids": [
+        "CAP_10"
+      ]
+    },
+    {
+      "req_ids": [
+        "FR_05",
+        "NFR_07",
+        "NFR_08",
+        "NFR_10",
+        "DATA_02",
+        "BR_01",
+        "SEC_01",
+        "SEC_02",
+        "TECH_02",
+        "TECH_03",
+        "TECH_04",
+        "TECH_05",
+        "TECH_06"
+      ],
+      "basis": "inferred",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "MOD_04",
+      "name": "Integration Platform Services",
+      "description": "Groups core platform capabilities including observability, resilience, foundation, and security.",
+      "capability_ids": [
+        "CAP_11",
+        "CAP_12"
+      ]
+    }
+  ],
+  "workstreams": [
+    {
+      "req_ids": [
+        "INT_01",
+        "NFR_03",
+        "NFR_04",
+        "NFR_09",
+        "INT_02",
+        "CON_01",
+        "NFR_11",
+        "INT_03",
+        "FR_02",
+        "FR_08",
+        "FR_09",
+        "FR_01",
+        "NFR_02",
+        "INT_04",
+        "NFR_01",
+        "NFR_05",
+        "FR_03",
+        "BR_02",
+        "CON_03",
+        "INT_07",
+        "NFR_06",
+        "DATA_01",
+        "FR_04",
+        "INT_08",
+        "BR_01",
+        "SEC_01",
+        "SEC_02",
+        "TECH_02",
+        "TECH_03",
+        "TECH_04",
+        "TECH_05",
+        "TECH_06"
+      ],
+      "basis": "inferred",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "WS_01",
+      "name": "Core Integration Development",
+      "capability_ids": [
+        "CAP_01",
+        "CAP_02",
+        "CAP_03",
+        "CAP_04",
+        "CAP_05",
+        "CAP_06",
+        "CAP_07",
+        "CAP_08",
+        "CAP_12"
+      ]
+    },
+    {
+      "req_ids": [
+        "FR_06",
+        "FR_07",
+        "DATA_03",
+        "INT_05",
+        "INT_06"
+      ],
+      "basis": "inferred",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "WS_02",
+      "name": "Data & Reporting",
+      "capability_ids": [
+        "CAP_09",
+        "CAP_10"
+      ]
+    },
+    {
+      "req_ids": [
+        "FR_05",
+        "NFR_07",
+        "NFR_08",
+        "NFR_10",
+        "DATA_02"
+      ],
+      "basis": "inferred",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "WS_03",
+      "name": "Platform Operations & Monitoring",
+      "capability_ids": [
+        "CAP_11"
+      ]
+    }
+  ],
+  "delivery_packages": [
+    {
+      "req_ids": [
+        "INT_01",
+        "NFR_03",
+        "NFR_04",
+        "NFR_09",
+        "INT_02",
+        "CON_01",
+        "NFR_11",
+        "INT_03",
+        "FR_02",
+        "FR_08",
+        "FR_09",
+        "FR_01",
+        "NFR_02",
+        "INT_04",
+        "NFR_01",
+        "NFR_05",
+        "FR_03",
+        "BR_02",
+        "CON_03",
+        "INT_07",
+        "NFR_06",
+        "DATA_01",
+        "FR_05",
+        "NFR_07",
+        "NFR_08",
+        "NFR_10",
+        "DATA_02",
+        "BR_01",
+        "SEC_01",
+        "SEC_02",
+        "TECH_02",
+        "TECH_03",
+        "TECH_04",
+        "TECH_05",
+        "TECH_06"
+      ],
+      "basis": "inferred",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "DP_01",
+      "name": "Phase 1 - Core Order & Inventory Integration",
+      "capability_ids": [
+        "CAP_01",
+        "CAP_02",
+        "CAP_03",
+        "CAP_04",
+        "CAP_05",
+        "CAP_06",
+        "CAP_11",
+        "CAP_12"
+      ],
+      "engagement_model": "delivery_package"
+    },
+    {
+      "req_ids": [
+        "FR_04",
+        "INT_08",
+        "FR_06",
+        "FR_07",
+        "DATA_03",
+        "INT_05",
+        "INT_06"
+      ],
+      "basis": "inferred",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "DP_02",
+      "name": "Phase 2 - Extended Integrations & Reporting",
+      "capability_ids": [
+        "CAP_07",
+        "CAP_08",
+        "CAP_09",
+        "CAP_10"
+      ],
+      "engagement_model": "delivery_package"
+    }
+  ],
+  "out_of_scope": [
+    {
+      "req_ids": [
+        "BR_01",
+        "GAP_03",
+        "ASM_03"
+      ],
+      "basis": "assumed",
+      "validation_required": true,
+      "validation_reason": "Depends on pending assumption.",
+      "text": "Decommissioning of the 31 existing point-to-point integrations.",
+      "reason": "Assumed to be managed by the customer team (ASM_03)."
+    },
+    {
+      "req_ids": [
+        "GAP_05",
+        "ASM_05"
+      ],
+      "basis": "assumed",
+      "validation_required": true,
+      "validation_reason": "Depends on pending assumption.",
+      "text": "Historical data migration for the integration hub.",
+      "reason": "Assumed no historical data migration is required for the integration hub itself (ASM_05)."
+    }
+  ],
+  "recommended_enhancements": [
+    {
+      "req_ids": [
+        "NFR_01",
+        "BR_02",
+        "FR_03",
+        "INT_04",
+        "INT_05",
+        "INT_06"
+      ],
+      "basis": "recommended",
+      "validation_required": true,
+      "validation_reason": "Recommendation requires customer confirmation.",
+      "id": "ENH_01",
+      "description": "Implement predictive inventory management capabilities.",
+      "rationale": "Builds on real-time inventory (CAP_05) and data feeds to Snowflake (CAP_10) to proactively manage stock levels and further reduce overselling, addressing BR_02 and NFR_01.",
+      "related_req_ids": []
+    },
+    {
+      "req_ids": [
+        "FR_02",
+        "FR_05",
+        "NFR_07",
+        "NFR_08",
+        "NFR_10"
+      ],
+      "basis": "recommended",
+      "validation_required": true,
+      "validation_reason": "Recommendation requires customer confirmation.",
+      "id": "ENH_02",
+      "description": "Introduce proactive anomaly detection for integration flows.",
+      "rationale": "Extends integration observability (CAP_11) to automatically detect unusual patterns in integration flows or data, reducing manual monitoring effort and preventing issues like unnoticed sequence gaps (FR_02).",
+      "related_req_ids": []
+    },
+    {
+      "req_ids": [
+        "FR_05",
+        "NFR_10"
+      ],
+      "basis": "recommended",
+      "validation_required": true,
+      "validation_reason": "Recommendation requires customer confirmation.",
+      "id": "ENH_03",
+      "description": "Develop a self-service integration portal for business users.",
+      "rationale": "Empowers business users and analysts (PER_01, PER_04) to monitor integration health and potentially configure simple data mappings without developer intervention, building on CAP_11.",
+      "related_req_ids": []
+    },
+    {
+      "req_ids": [
+        "FR_01",
+        "NFR_02",
+        "INT_07"
+      ],
+      "basis": "recommended",
+      "validation_required": true,
+      "validation_reason": "Recommendation requires customer confirmation.",
+      "id": "ENH_04",
+      "description": "Integrate customer feedback from Salesforce Service Cloud with operational data.",
+      "rationale": "Enhances the customer feedback loop by combining insights from Salesforce Service Cloud (FR_01, NFR_02) with order and product data to identify common issues and improve product offerings or service processes.",
+      "related_req_ids": []
+    }
+  ]
+}

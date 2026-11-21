@@ -1,0 +1,86 @@
+@use './tokens' as tokens;
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: tokens.$spacing-xs;
+  min-height: tokens.$size-control-height;
+  padding: tokens.$spacing-sm tokens.$spacing-lg;
+  font-family: inherit;
+  font-size: tokens.$typography-font-size-lg;
+  font-weight: tokens.$typography-font-weight-semibold;
+  line-height: tokens.$typography-line-height-tight;
+  border: 2px solid transparent;
+  border-radius: tokens.$border-radius-pill;
+  cursor: pointer;
+  transition:
+    background-color tokens.$motion-duration-fast ease,
+    color tokens.$motion-duration-fast ease,
+    box-shadow tokens.$motion-duration-fast ease;
+}
+
+.button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.button--primary {
+  color: tokens.$color-text-on-primary;
+  background-color: tokens.$color-brand-secondary;
+  box-shadow: tokens.$shadow-button;
+}
+
+.button--primary:hover:not(:disabled) {
+  background-color: tokens.$color-text-orange;
+}
+
+.button--secondary {
+  color: tokens.$color-text-purple;
+  background-color: tokens.$color-background-white;
+  border-color: tokens.$color-brand-primary;
+}
+
+.button--secondary:hover:not(:disabled) {
+  background-color: tokens.$color-surface-tinted;
+}
+
+.button--ghost {
+  color: tokens.$color-text-purple;
+  background-color: transparent;
+  border-color: transparent;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.button--ghost:hover:not(:disabled) {
+  background-color: tokens.$color-surface-tinted;
+}
+
+.button--danger {
+  color: tokens.$color-text-on-primary;
+  background-color: tokens.$color-state-danger;
+}
+
+.button--danger:hover:not(:disabled) {
+  background-color: tokens.$color-text-red;
+}
+
+.button--small {
+  min-height: 48px;
+  padding: tokens.$spacing-xs tokens.$spacing-md;
+  font-size: tokens.$typography-font-size-md;
+}
+
+@media (max-width: tokens.$breakpoint-mobile) {
+  .button {
+    min-height: tokens.$size-control-height-mobile;
+    font-size: tokens.$typography-font-size-md;
+  }
+
+  .button--small {
+    min-height: 44px;
+    padding: tokens.$spacing-xs tokens.$spacing-sm;
+    font-size: tokens.$typography-font-size-sm;
+  }
+}

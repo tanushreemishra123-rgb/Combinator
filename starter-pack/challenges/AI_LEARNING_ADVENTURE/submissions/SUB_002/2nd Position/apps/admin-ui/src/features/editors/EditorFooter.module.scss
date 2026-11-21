@@ -1,0 +1,42 @@
+@use '../../styles/tokens' as t;
+
+.footer {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: t.$spacing-4;
+  padding: t.$spacing-3 t.$spacing-4;
+  background: t.$color-background-surface;
+  border-top: t.$border-width-default solid t.$color-border-default;
+  z-index: t.$z-index-sticky;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: t.$spacing-3;
+  min-width: 0;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: t.$spacing-2;
+}
+
+.unsaved {
+  color: t.$color-text-warning;
+  font-size: t.$typography-font-size-xs;
+}
+
+.saving {
+  color: t.$color-text-muted;
+  font-size: t.$typography-font-size-xs;
+}
+
+.error {
+  color: t.$color-text-danger;
+  font-size: t.$typography-font-size-xs;
+}

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "1.0.0",
+  "challengeId": "AI_DEAL_SCOPING_ASSISTANT",
+  "challengeMode": "code",
+  "submissionIds": [
+    "SUB_001",
+    "SUB_002"
+  ],
+  "reviewContextRef": "../../review-context/ai-deal-scoping-assistant.json",
+  "paths": {
+    "submissions": "submissions/",
+    "reviews": "reviews/",
+    "verification": "verification/",
+    "integrity": "integrity/"
+  },
+  "sourceInputsImmutable": true
+}

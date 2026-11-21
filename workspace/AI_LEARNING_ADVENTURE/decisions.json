@@ -1,0 +1,125 @@
+{
+  "challengeId": "AI_LEARNING_ADVENTURE",
+  "mode": "code",
+  "decisions": [
+    {
+      "id": "DEC_3q68ac4",
+      "kind": "base_selection",
+      "title": "Select the runnable base",
+      "options": [
+        {
+          "id": "OPT_6rcrzi4",
+          "sourceId": "SUB_001",
+          "label": "SUB_001 (wins 6 req(s), suitability 94)",
+          "evidence": [],
+          "compatibilityRisk": "low"
+        },
+        {
+          "id": "OPT_2j166qh",
+          "sourceId": "SUB_002",
+          "label": "SUB_002 (wins 3 req(s), suitability 90)",
+          "evidence": [],
+          "compatibilityRisk": "high"
+        }
+      ],
+      "recommendation": "OPT_6rcrzi4",
+      "reasoning": "SUB_001 has the highest grounded base suitability (94): coverage≈89%, tests=complete, build=present, risk=low.",
+      "risk": "low",
+      "state": "accepted",
+      "selectedSource": "OPT_6rcrzi4",
+      "copilotComment": "Auto-accepted agent recommendation (unattended generation pass).",
+      "regenerationRequired": true,
+      "updatedAt": "proposed"
+    },
+    {
+      "id": "DEC_7atncil",
+      "kind": "transplant",
+      "title": "Transplant for \"Browser-accessible learning adventure landing page\"",
+      "requirementId": "REQ_kk9ov4",
+      "options": [
+        {
+          "id": "OPT_7hxaeqz",
+          "sourceId": "SUB_002",
+          "label": "Transplant from SUB_002",
+          "evidence": [],
+          "compatibilityRisk": "high"
+        },
+        {
+          "id": "OPT_9aofqnv",
+          "sourceId": "SUB_001",
+          "label": "Keep base (SUB_001) as-is",
+          "evidence": [],
+          "compatibilityRisk": "low"
+        }
+      ],
+      "recommendation": "OPT_7hxaeqz",
+      "reasoning": "SUB_002 covers \"Browser-accessible learning adventure landing page\" more strongly than the base. SUB_002 shows the strongest grounded coverage (complete) for this requirement.",
+      "risk": "high",
+      "state": "accepted",
+      "selectedSource": "OPT_7hxaeqz",
+      "copilotComment": "Auto-accepted agent recommendation (unattended generation pass).",
+      "regenerationRequired": true,
+      "updatedAt": "proposed"
+    },
+    {
+      "id": "DEC_4881xu3",
+      "kind": "transplant",
+      "title": "Transplant for \"AI Only Mode and AI feedback flow\"",
+      "requirementId": "REQ_7xz6vy",
+      "options": [
+        {
+          "id": "OPT_9oahcmd",
+          "sourceId": "SUB_002",
+          "label": "Transplant from SUB_002",
+          "evidence": [],
+          "compatibilityRisk": "high"
+        },
+        {
+          "id": "OPT_8ydm2ps",
+          "sourceId": "SUB_001",
+          "label": "Keep base (SUB_001) as-is",
+          "evidence": [],
+          "compatibilityRisk": "low"
+        }
+      ],
+      "recommendation": "OPT_9oahcmd",
+      "reasoning": "SUB_002 covers \"AI Only Mode and AI feedback flow\" more strongly than the base. SUB_002 shows the strongest grounded coverage (complete) for this requirement.",
+      "risk": "high",
+      "state": "accepted",
+      "selectedSource": "OPT_9oahcmd",
+      "copilotComment": "Auto-accepted agent recommendation (unattended generation pass).",
+      "regenerationRequired": true,
+      "updatedAt": "proposed"
+    },
+    {
+      "id": "DEC_9fqeyum",
+      "kind": "transplant",
+      "title": "Transplant for \"AI fallback and documentation\"",
+      "requirementId": "REQ_eb283y",
+      "options": [
+        {
+          "id": "OPT_8g2czwa",
+          "sourceId": "SUB_002",
+          "label": "Transplant from SUB_002",
+          "evidence": [],
+          "compatibilityRisk": "high"
+        },
+        {
+          "id": "OPT_69y242t",
+          "sourceId": "SUB_001",
+          "label": "Keep base (SUB_001) as-is",
+          "evidence": [],
+          "compatibilityRisk": "low"
+        }
+      ],
+      "recommendation": "OPT_8g2czwa",
+      "reasoning": "SUB_002 covers \"AI fallback and documentation\" more strongly than the base. SUB_002 shows the strongest grounded coverage (complete) for this requirement.",
+      "risk": "high",
+      "state": "accepted",
+      "selectedSource": "OPT_8g2czwa",
+      "copilotComment": "Auto-accepted agent recommendation (unattended generation pass).",
+      "regenerationRequired": true,
+      "updatedAt": "proposed"
+    }
+  ]
+}

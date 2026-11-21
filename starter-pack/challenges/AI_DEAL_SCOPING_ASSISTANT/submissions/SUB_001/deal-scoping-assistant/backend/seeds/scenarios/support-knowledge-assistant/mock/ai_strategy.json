@@ -1,0 +1,262 @@
+{
+  "ai_requirements": [
+    {
+      "req_ids": [
+        "SEC_01"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "text": "Redact customer personal data, credentials, and hostnames prior to model invocation with auditable logging."
+    },
+    {
+      "req_ids": [
+        "SEC_02"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "text": "Ensure model inference and data persistence remain strictly within EU boundaries with zero cross-border retention."
+    },
+    {
+      "req_ids": [
+        "SEC_03"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "text": "Maintain an auditable log of model requests and cited sources for 24 months."
+    },
+    {
+      "req_ids": [
+        "SEC_04"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "text": "Enforce legal and technical guarantees preventing third-party model providers from training on customer support data."
+    },
+    {
+      "req_ids": [
+        "ASM_02",
+        "BR_01"
+      ],
+      "basis": "assumed",
+      "validation_required": true,
+      "validation_reason": "Latency threshold depends on customer confirmation of acceptable agent wait time.",
+      "text": "Target response generation latency under 4 seconds for agent sidebar draft streaming."
+    }
+  ],
+  "use_cases": [
+    {
+      "req_ids": [
+        "FR_01",
+        "FR_05",
+        "BR_01",
+        "SEC_01",
+        "SEC_03"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "AI_01",
+      "name": "Grounded Reply Drafting with Source Attribution",
+      "description": "Generates contextual support response drafts grounded in product docs, runbooks, and past tickets with cited source links.",
+      "processing_class": "ai",
+      "pattern": "Retrieval-Augmented Generation (RAG)",
+      "model_options": [
+        "Gemini 1.5 Pro",
+        "Claude 3.5 Sonnet",
+        "GPT-4o"
+      ],
+      "retrieval_required": true,
+      "retrieval_notes": "Hybrid vector and keyword search across enterprise vector indexes containing Confluence, GitHub, SharePoint, and historical tickets.",
+      "orchestration": "Step-based workflow with query optimization, metadata filtering, document retrieval, and response synthesis.",
+      "prompt_and_structured_output": "System prompts with strict schema validation enforcing structured output arrays for citations and confidence tags.",
+      "evaluation": "Offline evaluation using groundedness and response correctness metrics on historical reference tickets.",
+      "responsible_ai_safety": "Pre-inference PII scrubbing in ARC_10 and citation validation to prevent hallucinated advice.",
+      "monitoring_feedback": "Tracking agent edit distance, response acceptance rates, and latency metrics in ARC_11.",
+      "human_review": "Mandatory review and approval by support agents in ARC_01 prior to sending any response.",
+      "data_privacy": "EU regional model inference with zero vendor data logging and zero model training on customer data."
+    },
+    {
+      "req_ids": [
+        "FR_02",
+        "FR_03",
+        "BR_02"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "AI_02",
+      "name": "Ticket Classification and SLA Priority Suggestion",
+      "description": "Classifies incoming tickets by product line and issue type while suggesting priority based on SLA rules.",
+      "processing_class": "ai",
+      "pattern": "Structured Output Classification with Deterministic SLA Guardrails",
+      "model_options": [
+        "Gemini 1.5 Flash",
+        "Claude 3 Haiku",
+        "GPT-4o-mini"
+      ],
+      "retrieval_required": false,
+      "retrieval_notes": "No retrieval required; evaluates ticket payload and metadata directly.",
+      "orchestration": "Pipeline extracting classification tags and passing candidates to deterministic SLA mapping logic.",
+      "prompt_and_structured_output": "JSON schema enforcing enum values for category, issue type, and recommended priority level.",
+      "evaluation": "Precision and recall scoring evaluated against historical manual ticket routing records.",
+      "responsible_ai_safety": "PII filtering prior to classification with fallback to manual routing when confidence is low.",
+      "monitoring_feedback": "Real-time monitoring of ticket re-routing rates and agent override frequencies.",
+      "human_review": "Triage agents review and confirm predicted category and queue before ticket reassignment.",
+      "data_privacy": "Inference processed entirely within EU regional cloud boundaries."
+    },
+    {
+      "req_ids": [
+        "FR_04",
+        "DATA_01",
+        "SYS_03"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "AI_03",
+      "name": "Similar Past Ticket Retrieval",
+      "description": "Retrieves and displays top relevant historical tickets alongside their resolutions, filtering out obsolete advice.",
+      "processing_class": "ai",
+      "pattern": "Semantic Similarity Search with Metadata Decay Filtering",
+      "model_options": [
+        "Text-Embedding-004",
+        "text-embedding-3-large"
+      ],
+      "retrieval_required": true,
+      "retrieval_notes": "Vector search over ARC_08 filtered by product area and ticket resolution date cutoff.",
+      "orchestration": "Embedding creation and vector lookup with dynamic score boosting for recent resolutions.",
+      "prompt_and_structured_output": "Direct JSON structure returning ticket ID, subject summary, and resolution snippet.",
+      "evaluation": "Precision at K metrics against expert-curated similar ticket benchmark sets.",
+      "responsible_ai_safety": "Automatic stripping of internal hostnames and customer credentials from historical snippets.",
+      "monitoring_feedback": "Logging agent click-through and usage rates on suggested past tickets.",
+      "human_review": "Agents assess applicability of past resolutions before incorporating them into replies.",
+      "data_privacy": "Historical ticket vectors stored securely in enterprise EU vector database."
+    }
+  ],
+  "deterministic_areas": [
+    {
+      "req_ids": [
+        "FR_02",
+        "FR_03"
+      ],
+      "basis": "inferred",
+      "validation_required": false,
+      "validation_reason": "",
+      "text": "Queue routing execution and contractual SLA priority overrides are managed via rule-based business logic."
+    },
+    {
+      "req_ids": [
+        "SEC_01"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "text": "PII, credential, and internal hostname stripping is performed using deterministic pattern matching in ARC_10."
+    },
+    {
+      "req_ids": [
+        "NFR_03",
+        "DATA_01"
+      ],
+      "basis": "inferred",
+      "validation_required": false,
+      "validation_reason": "",
+      "text": "Bi-weekly ingestion scheduling and metadata timestamp filtering for deprecated ticket exclusion are handled deterministically."
+    }
+  ],
+  "mandatory_human_decisions": [
+    {
+      "req_ids": [
+        "FR_01",
+        "CON_01"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "text": "Final review, editing, and transmission of every outbound support reply to customers."
+    },
+    {
+      "req_ids": [
+        "FR_02",
+        "FR_03"
+      ],
+      "basis": "inferred",
+      "validation_required": false,
+      "validation_reason": "",
+      "text": "Manual confirmation of queue re-routing or SLA priority changes for edge-case tickets."
+    }
+  ],
+  "architecture_pattern": "Event-driven Retrieval-Augmented Generation (RAG) agent-assist architecture with modular multi-source ingestion and PII security proxy.",
+  "provider_options": [
+    {
+      "platform": "gcp",
+      "provider": "Google Cloud Platform",
+      "models": [
+        "Gemini 1.5 Pro",
+        "Gemini 1.5 Flash",
+        "Text-Embedding-004"
+      ],
+      "rationale": "Offers native EU regional processing in europe-west3 with guaranteed zero model training on customer data and strong enterprise integration support."
+    },
+    {
+      "platform": "aws",
+      "provider": "Amazon Web Services",
+      "models": [
+        "Claude 3.5 Sonnet",
+        "Claude 3 Haiku",
+        "Titan Embeddings"
+      ],
+      "rationale": "Bedrock EU Frankfurt endpoints provide isolated managed inference, zero data logging, and strict data residency compliance."
+    },
+    {
+      "platform": "azure",
+      "provider": "Microsoft Azure",
+      "models": [
+        "GPT-4o",
+        "GPT-4o-mini",
+        "text-embedding-3-large"
+      ],
+      "rationale": "Azure OpenAI EU Sweden and France regions offer enterprise data privacy guarantees and managed content safety guardrails."
+    }
+  ],
+  "framework_recommendations": [
+    {
+      "req_ids": [
+        "FR_01",
+        "FR_05",
+        "CON_03"
+      ],
+      "basis": "recommended",
+      "validation_required": false,
+      "validation_reason": "",
+      "name": "LangChain / LangGraph (TypeScript)",
+      "purpose": "Orchestrating stateful RAG workflows, structured JSON extraction, and citation mapping.",
+      "rationale": "Fits the 9-person platform team without requiring dedicated ML engineering, aligning cleanly with Node/React web components for Zendesk.",
+      "alternatives_considered": [
+        "Semantic Kernel",
+        "Custom Orchestration"
+      ]
+    },
+    {
+      "req_ids": [
+        "INT_02",
+        "INT_03",
+        "INT_04",
+        "DATA_01"
+      ],
+      "basis": "recommended",
+      "validation_required": false,
+      "validation_reason": "",
+      "name": "LlamaIndex",
+      "purpose": "Multi-source repository ingestion, document chunking, and metadata-based deprecation filtering.",
+      "rationale": "Provides built-in indexing pipelines and metadata filtering tailored for Confluence, SharePoint, and GitHub documentation.",
+      "alternatives_considered": [
+        "Custom Ingestion Scripts"
+      ]
+    }
+  ]
+}

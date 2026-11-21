@@ -1,0 +1,12 @@
+{
+  "status": "complete after source insertion",
+  "requiredChecks": [
+    "source integrity before and after processing",
+    "mode-appropriate end-to-end verification"
+  ],
+  "commands": {
+    "documentIngestion": "TBD",
+    "ideaExtraction": "TBD",
+    "synthesisVerification": "TBD"
+  }
+}

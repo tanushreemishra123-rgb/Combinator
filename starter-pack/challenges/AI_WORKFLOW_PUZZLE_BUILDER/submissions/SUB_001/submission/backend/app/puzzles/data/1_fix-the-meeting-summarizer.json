@@ -1,0 +1,145 @@
+{
+  "id": "fix-the-meeting-summarizer",
+  "title": "Fix the Meeting Summarizer",
+  "difficulty": "beginner",
+  "tagline": "Catch the summary that forgot who does what",
+  "concepts": ["validator", "structured output", "repair"],
+  "order": 1,
+  "objective": "Stop half-finished minutes from reaching your team.",
+  "description": "Your summarizer turns messy meeting notes into tidy minutes: a summary, the decisions, the action items, and the person who owns the follow-ups. Most of the time it is great. Every so often it forgets the owner - and nobody notices until the work quietly never happens. A Validator already sits in the workflow and spots the gap, but right now it is told to give up the moment something is wrong. Teach it to repair the summary instead.",
+  "sample_input": {
+    "meeting_title": "Billing hotfix stand-up",
+    "attendees": ["Priya Raman", "Daniel Osei", "Sam Whitfield"],
+    "notes": "Priya walked through the double-charge bug reported by two enterprise accounts. Team agreed to ship the billing hotfix on Friday. Daniel raised that the mobile redesign would slip; the group decided to postpone it to Q3 and tell the mobile squad. Sam will keep the status page updated until the fix lands."
+  },
+  "expected_output": "A minutes object carrying a summary, at least one decision, at least one action item, and the name of the person who owns the follow-ups.",
+  "available_blocks": [
+    "input",
+    "ai_model",
+    "validator",
+    "retry",
+    "human_review",
+    "safe_stop",
+    "output"
+  ],
+  "starter_workflow": {
+    "id": "wf_meeting_summarizer",
+    "name": "Meeting summarizer",
+    "nodes": [
+      {
+        "id": "notes_in",
+        "type": "input",
+        "label": "Meeting notes",
+        "config": {},
+        "position": { "x": 60, "y": 200 }
+      },
+      {
+        "id": "summarize",
+        "type": "ai_model",
+        "label": "Summarize the meeting",
+        "config": {
+          "prompt_id": "meeting_summary_v1",
+          "prompt": "Turn these meeting notes into minutes. Return JSON with summary, decisions, action_items and owner (the person accountable for the follow-ups).",
+          "system": "You are a meticulous meeting scribe. Never invent an owner you did not hear.",
+          "expects_json": true,
+          "output_field": "minutes"
+        },
+        "position": { "x": 320, "y": 200 }
+      },
+      {
+        "id": "check_minutes",
+        "type": "validator",
+        "label": "Are the minutes complete?",
+        "config": {
+          "schema": {
+            "minutes.summary": { "type": "string", "min": 12 },
+            "minutes.decisions": { "type": "array", "min": 1 },
+            "minutes.action_items": { "type": "array", "min": 1 },
+            "minutes.owner": { "type": "string", "min": 2 }
+          },
+          "on_fail": "fail",
+          "review_prompt": "The minutes are missing something. Fill in the gap or send them back."
+        },
+        "position": { "x": 580, "y": 200 }
+      },
+      {
+        "id": "minutes_out",
+        "type": "output",
+        "label": "Publish the minutes",
+        "config": { "field": "minutes" },
+        "position": { "x": 840, "y": 200 }
+      }
+    ],
+    "edges": [
+      { "id": "e_notes_summarize", "source": "notes_in", "target": "summarize" },
+      { "id": "e_summarize_check", "source": "summarize", "target": "check_minutes" },
+      { "id": "e_check_out", "source": "check_minutes", "target": "minutes_out" }
+    ]
+  },
+  "solution_hint": "The Validator is already looking in the right place - it is its reaction that is wrong. Open it and change 'When validation fails' from 'Fail the run' to 'Repair': the Validator sends the minutes back to the summarizer with the missing owner spelled out, and the corrected minutes are complete. ('Retry the previous step' also works - it just asks again without saying what was wrong. 'Use a safe default' stops the crash but ships a placeholder instead of real minutes.)",
+  "failure_scenarios": [
+    {
+      "id": "malformed-minutes",
+      "label": "The AI drops the owner",
+      "description": "On its first attempt the summarizer returns minutes with no owner for the follow-ups. Its second attempt is fine.",
+      "rules": [
+        {
+          "node_id": "summarize",
+          "kind": "missing_field",
+          "first_n": 1,
+          "label": "drop minutes.owner from the first answer",
+          "detail": { "field": "minutes.owner" }
+        }
+      ]
+    }
+  ],
+  "completion_criteria": [
+    "The run finishes at the Output block instead of failing",
+    "The Validator ends up passing, so the minutes really are complete",
+    "The published minutes name an owner for the follow-ups",
+    "The missing owner is repaired rather than accepted"
+  ],
+  "completion_checks": [
+    { "kind": "run_status", "in": ["completed"] },
+    { "kind": "validation_passed", "node_id": "check_minutes" },
+    { "kind": "output_field", "field": "owner", "op": "not_empty" },
+    { "kind": "recovered", "node_id": "check_minutes", "recovery_action": ["repair", "retry_upstream"] }
+  ],
+  "mock_responses": {
+    "meeting_summary_v1": {
+      "confidence": 0.94,
+      "data": {
+        "summary": "The team agreed to ship the billing hotfix on Friday and to postpone the mobile redesign to Q3.",
+        "decisions": [
+          "Ship the billing hotfix on Friday",
+          "Postpone the mobile redesign to Q3"
+        ],
+        "action_items": [
+          { "task": "Prepare the billing hotfix release notes", "owner": "Priya Raman" },
+          { "task": "Tell the mobile squad about the delay", "owner": "Daniel Osei" },
+          { "task": "Keep the status page updated until the fix lands", "owner": "Sam Whitfield" }
+        ],
+        "owner": "Priya Raman"
+      }
+    },
+    "meeting_summary_v1#repair": {
+      "confidence": 0.97,
+      "data": {
+        "summary": "The team agreed to ship the billing hotfix on Friday and to postpone the mobile redesign to Q3.",
+        "decisions": [
+          "Ship the billing hotfix on Friday",
+          "Postpone the mobile redesign to Q3"
+        ],
+        "action_items": [
+          { "task": "Prepare the billing hotfix release notes", "owner": "Priya Raman" },
+          { "task": "Tell the mobile squad about the delay", "owner": "Daniel Osei" },
+          { "task": "Keep the status page updated until the fix lands", "owner": "Sam Whitfield" }
+        ],
+        "owner": "Priya Raman"
+      }
+    }
+  },
+  "mock_responses_by_provider": {},
+  "tool_fixtures": {},
+  "retrieval_fixtures": {}
+}

@@ -1,0 +1,129 @@
+{
+  "id": "approve-before-sending",
+  "title": "Approve Before Sending",
+  "difficulty": "beginner",
+  "tagline": "Put a human in front of the send button",
+  "concepts": ["human review", "safe stop", "tools"],
+  "order": 2,
+  "objective": "Never let the AI talk to a customer without a person saying yes.",
+  "description": "This workflow drafts an apology to a customer and sends it. That is the whole problem: it sends it. Whatever the model writes goes straight out the door, tone, refund promise and all. Drop a Human Review block between the draft and the send so a person can approve it, edit it, or reject it. Rejecting routes the run to the Safe Stop that is already waiting on the canvas - nothing gets sent, and the run still ends on purpose.",
+  "sample_input": {
+    "customer": "Maya Chen",
+    "customer_email": "maya.chen@example.test",
+    "order_id": "ORD-55231",
+    "issue": "Charged twice for the same annual plan and has been waiting four days for a reply."
+  },
+  "expected_output": "Either a delivered reply the reviewer approved, or a safe stop explaining that the draft was rejected and nothing was sent.",
+  "available_blocks": [
+    "input",
+    "ai_model",
+    "human_review",
+    "tool",
+    "safe_stop",
+    "validator",
+    "output"
+  ],
+  "starter_workflow": {
+    "id": "wf_approve_before_sending",
+    "name": "Customer reply sender",
+    "nodes": [
+      {
+        "id": "request_in",
+        "type": "input",
+        "label": "Customer complaint",
+        "config": {},
+        "position": { "x": 60, "y": 200 }
+      },
+      {
+        "id": "draft_reply",
+        "type": "ai_model",
+        "label": "Draft the reply",
+        "config": {
+          "prompt_id": "customer_reply_v1",
+          "prompt": "Write a short, warm apology to this customer. Return JSON with subject, body and tone.",
+          "system": "You write on behalf of a support team. Be specific, never promise anything you were not told.",
+          "expects_json": true,
+          "output_field": "draft"
+        },
+        "position": { "x": 320, "y": 200 }
+      },
+      {
+        "id": "send_reply",
+        "type": "tool",
+        "label": "Send the reply",
+        "config": {
+          "tool": "send_message",
+          "params": {
+            "channel": "email",
+            "to": "maya.chen@example.test",
+            "message_field": "draft.body"
+          },
+          "output_field": "delivery"
+        },
+        "position": { "x": 840, "y": 200 }
+      },
+      {
+        "id": "reply_out",
+        "type": "output",
+        "label": "Done",
+        "config": {},
+        "position": { "x": 1100, "y": 200 }
+      },
+      {
+        "id": "stop_send",
+        "type": "safe_stop",
+        "label": "Nothing sent",
+        "config": {
+          "message": "The reviewer rejected the draft, so nothing was sent to the customer.",
+          "reason": "human_rejection"
+        },
+        "position": { "x": 840, "y": 380 }
+      }
+    ],
+    "edges": [
+      { "id": "e_request_draft", "source": "request_in", "target": "draft_reply" },
+      { "id": "e_draft_send", "source": "draft_reply", "target": "send_reply" },
+      { "id": "e_send_out", "source": "send_reply", "target": "reply_out" }
+    ]
+  },
+  "solution_hint": "Drag a Human Review block onto the canvas and splice it between 'Draft the reply' and 'Send the reply'. Allow approve, edit and reject. You do not need to wire the Safe Stop to anything - a rejection routes there on its own.",
+  "failure_scenarios": [
+    {
+      "id": "spicy-model",
+      "label": "The model gets shaky",
+      "description": "The draft comes back with a low confidence score - exactly the kind of message a person should read before a customer does.",
+      "rules": [
+        {
+          "node_id": "draft_reply",
+          "kind": "low_confidence",
+          "attempts": "all",
+          "label": "the model is unsure about this draft",
+          "detail": { "confidence": 0.34 }
+        }
+      ]
+    }
+  ],
+  "completion_criteria": [
+    "The draft pauses for a person before anything is sent",
+    "A reviewer's decision is recorded on the run",
+    "The run ends on purpose - either sent, or safely stopped"
+  ],
+  "completion_checks": [
+    { "kind": "block_used", "type": "human_review" },
+    { "kind": "event", "event": "review_decision" },
+    { "kind": "run_status", "in": ["completed", "safely_stopped"] }
+  ],
+  "mock_responses": {
+    "customer_reply_v1": {
+      "confidence": 0.88,
+      "data": {
+        "subject": "Sorry about the double charge on ORD-55231",
+        "body": "Hi Maya, you were charged twice for the same annual plan and then waited four days to hear from us. Both of those are on us. I have flagged order ORD-55231 for a refund of the duplicate charge and you should see it back on your card within five working days. Thank you for your patience.",
+        "tone": "apologetic"
+      }
+    }
+  },
+  "mock_responses_by_provider": {},
+  "tool_fixtures": {},
+  "retrieval_fixtures": {}
+}

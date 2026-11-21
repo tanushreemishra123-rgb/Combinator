@@ -1,0 +1,19 @@
+# Root-level ignore for anyone building an image from the repository root.
+# Each app also has its own .dockerignore for the compose builds.
+.git
+.venv
+**/.venv
+**/node_modules
+**/dist
+**/data
+**/.env
+**/.env.*
+!**/.env.example
+**/__pycache__
+**/.pytest_cache
+**/.mypy_cache
+**/.ruff_cache
+docs
+scripts
+*.md
+!README.md

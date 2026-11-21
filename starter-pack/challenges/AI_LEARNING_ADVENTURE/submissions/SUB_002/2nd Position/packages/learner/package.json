@@ -1,0 +1,24 @@
+{
+  "name": "@ai-learning-adventure/learner",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@ai-learning-adventure/types": "workspace:*",
+    "@ai-sdk/openai": "4.0.41",
+    "ai": "7.0.64",
+    "zod": "4.4.3"
+  },
+  "devDependencies": {
+    "typescript": "7.0.2"
+  }
+}

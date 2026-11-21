@@ -1,0 +1,89 @@
+@use '../../../styles/tokens' as t;
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: t.$spacing-2;
+  border: t.$border-width-default solid transparent;
+  border-radius: t.$border-radius-md;
+  font-family: inherit;
+  font-size: t.$typography-font-size-sm;
+  font-weight: t.$typography-font-weight-medium;
+  line-height: t.$typography-line-height-none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background-color t.$transition-default,
+    border-color t.$transition-default,
+    color t.$transition-default;
+
+  &:focus-visible {
+    outline: t.$border-width-active solid t.$color-border-focus;
+    outline-offset: 2px;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+  }
+}
+
+.label {
+  display: inline-flex;
+  align-items: center;
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sm {
+  height: t.$size-control-sm;
+  padding: 0 t.$spacing-3;
+}
+
+.md {
+  height: t.$size-control-md;
+  padding: 0 t.$spacing-4;
+}
+
+.primary {
+  background: t.$color-background-primary;
+  color: t.$color-text-inverse;
+
+  &:hover:not(:disabled) {
+    background: t.$color-background-primary-hover;
+  }
+}
+
+.outline {
+  background: t.$color-background-surface;
+  border-color: t.$color-border-default;
+  color: t.$color-text-primary;
+
+  &:hover:not(:disabled) {
+    background: t.$color-background-surface-subtle;
+  }
+}
+
+.ghost {
+  background: transparent;
+  color: t.$color-text-secondary;
+
+  &:hover:not(:disabled) {
+    background: t.$color-background-surface-subtle;
+    color: t.$color-text-primary;
+  }
+}
+
+.danger {
+  background: t.$color-background-danger;
+  color: t.$color-text-inverse;
+
+  &:hover:not(:disabled) {
+    background: t.$color-background-danger-hover;
+  }
+}

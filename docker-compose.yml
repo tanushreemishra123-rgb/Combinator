@@ -1,0 +1,31 @@
+# Reproducible setup. `docker compose run combinator ...` for the CLI,
+# `docker compose up ui` for the review UI.
+services:
+  # One-shot: generate workspaces for every fixture, then exit.
+  combinator:
+    build: .
+    image: tc-combinator
+    environment:
+      COMBINATOR_LLM_PROVIDER: ${COMBINATOR_LLM_PROVIDER:-mock}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      OPENAI_MODEL: ${OPENAI_MODEL:-gpt-4o-mini}
+      AWS_REGION: ${AWS_REGION:-}
+      BEDROCK_MODEL_ID: ${BEDROCK_MODEL_ID:-}
+    volumes:
+      - ./starter-pack:/app/starter-pack:ro      # sources mounted READ-ONLY
+      - ./workspace:/app/workspace
+    command: ["node", "dist/cli.js", "run-all", "--pack", "./starter-pack", "--out", "./workspace"]
+
+  # Long-running: the Copilot review UI.
+  ui:
+    build: .
+    image: tc-combinator
+    environment:
+      COMBINATOR_LLM_PROVIDER: ${COMBINATOR_LLM_PROVIDER:-mock}
+      COMBINATOR_UI_PORT: 4600
+    ports:
+      - "4600:4600"
+    volumes:
+      - ./starter-pack:/app/starter-pack:ro
+      - ./workspace:/app/workspace
+    command: ["node", "dist/server.js"]

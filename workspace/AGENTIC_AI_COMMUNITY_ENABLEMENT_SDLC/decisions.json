@@ -1,0 +1,180 @@
+{
+  "challengeId": "AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC",
+  "mode": "ideation",
+  "decisions": [
+    {
+      "id": "DEC_boeyru3",
+      "kind": "idea_element",
+      "title": "Include idea \"Empowering Topcoder community with a standard MCP endpoint for enabling agents\" (SUB_001)",
+      "options": [
+        {
+          "id": "OPT_am8vdmw",
+          "sourceId": "IDEA_7s9tg0c",
+          "label": "Include \"Empowering Topcoder community with a standard MCP endpoint for enabling agents\"",
+          "evidence": [],
+          "compatibilityRisk": "low"
+        },
+        {
+          "id": "OPT_5hjdx0x",
+          "sourceId": "IDEA_7s9tg0c:exclude",
+          "label": "Exclude this idea",
+          "evidence": [],
+          "compatibilityRisk": "low"
+        }
+      ],
+      "recommendation": "OPT_am8vdmw",
+      "reasoning": "Idea addresses 5/5 evaluation areas with grounded evidence.",
+      "risk": "low",
+      "state": "pending",
+      "selectedSource": "OPT_am8vdmw",
+      "copilotComment": null,
+      "regenerationRequired": true,
+      "updatedAt": "proposed"
+    },
+    {
+      "id": "DEC_7htth48",
+      "kind": "idea_element",
+      "title": "Include idea \"AI-CoPilot for self-service challenges Overview Topcoder in the past enabled self-service\" (SUB_001)",
+      "options": [
+        {
+          "id": "OPT_di1kkhd",
+          "sourceId": "IDEA_80cdn6x",
+          "label": "Include \"AI-CoPilot for self-service challenges Overview Topcoder in the past enabled self-service\"",
+          "evidence": [],
+          "compatibilityRisk": "low"
+        },
+        {
+          "id": "OPT_1yqdo9b",
+          "sourceId": "IDEA_80cdn6x:exclude",
+          "label": "Exclude this idea",
+          "evidence": [],
+          "compatibilityRisk": "low"
+        }
+      ],
+      "recommendation": "OPT_di1kkhd",
+      "reasoning": "Idea addresses 4/5 evaluation areas with grounded evidence.",
+      "risk": "low",
+      "state": "pending",
+      "selectedSource": "OPT_di1kkhd",
+      "copilotComment": null,
+      "regenerationRequired": true,
+      "updatedAt": "proposed"
+    },
+    {
+      "id": "DEC_4x58wh6",
+      "kind": "idea_element",
+      "title": "Include idea \"Challenge generator to keep the community engaged\" (SUB_001)",
+      "options": [
+        {
+          "id": "OPT_6eovgaz",
+          "sourceId": "IDEA_26438qy",
+          "label": "Include \"Challenge generator to keep the community engaged\"",
+          "evidence": [],
+          "compatibilityRisk": "low"
+        },
+        {
+          "id": "OPT_dyg431a",
+          "sourceId": "IDEA_26438qy:exclude",
+          "label": "Exclude this idea",
+          "evidence": [],
+          "compatibilityRisk": "low"
+        }
+      ],
+      "recommendation": "OPT_6eovgaz",
+      "reasoning": "Idea addresses 2/5 evaluation areas with grounded evidence.",
+      "risk": "low",
+      "state": "pending",
+      "selectedSource": "OPT_6eovgaz",
+      "copilotComment": null,
+      "regenerationRequired": true,
+      "updatedAt": "proposed"
+    },
+    {
+      "id": "DEC_1n4bwfo",
+      "kind": "idea_element",
+      "title": "Include idea \"Remediation\" (SUB_002)",
+      "options": [
+        {
+          "id": "OPT_5zc6dzv",
+          "sourceId": "IDEA_59dfyn4",
+          "label": "Include \"Remediation\"",
+          "evidence": [],
+          "compatibilityRisk": "low"
+        },
+        {
+          "id": "OPT_1b2pmc4",
+          "sourceId": "IDEA_59dfyn4:exclude",
+          "label": "Exclude this idea",
+          "evidence": [],
+          "compatibilityRisk": "low"
+        }
+      ],
+      "recommendation": "OPT_5zc6dzv",
+      "reasoning": "Idea addresses 4/5 evaluation areas with grounded evidence.",
+      "risk": "low",
+      "state": "pending",
+      "selectedSource": "OPT_5zc6dzv",
+      "copilotComment": null,
+      "regenerationRequired": true,
+      "updatedAt": "proposed"
+    },
+    {
+      "id": "DEC_39de0h7",
+      "kind": "idea_element",
+      "title": "Include idea \"AI Powered Design System Assistant\" (SUB_003)",
+      "options": [
+        {
+          "id": "OPT_9nzfnwg",
+          "sourceId": "IDEA_59rnz34",
+          "label": "Include \"AI Powered Design System Assistant\"",
+          "evidence": [],
+          "compatibilityRisk": "low"
+        },
+        {
+          "id": "OPT_3ewo1q1",
+          "sourceId": "IDEA_59rnz34:exclude",
+          "label": "Exclude this idea",
+          "evidence": [],
+          "compatibilityRisk": "low"
+        }
+      ],
+      "recommendation": "OPT_9nzfnwg",
+      "reasoning": "Idea addresses 4/5 evaluation areas with grounded evidence.",
+      "risk": "low",
+      "state": "pending",
+      "selectedSource": "OPT_9nzfnwg",
+      "copilotComment": null,
+      "regenerationRequired": true,
+      "updatedAt": "proposed"
+    },
+    {
+      "id": "DEC_7tlopvf",
+      "kind": "idea_element",
+      "title": "Include idea \"AI Powered Smart Code Reviewer\" (SUB_003)",
+      "options": [
+        {
+          "id": "OPT_9abucw7",
+          "sourceId": "IDEA_743c9rl",
+          "label": "Include \"AI Powered Smart Code Reviewer\"",
+          "evidence": [],
+          "compatibilityRisk": "low"
+        },
+        {
+          "id": "OPT_5nukx7q",
+          "sourceId": "IDEA_743c9rl:exclude",
+          "label": "Exclude this idea",
+          "evidence": [],
+          "compatibilityRisk": "low"
+        }
+      ],
+      "recommendation": "OPT_9abucw7",
+      "reasoning": "Idea addresses 4/5 evaluation areas with grounded evidence.",
+      "risk": "low",
+      "state": "pending",
+      "selectedSource": "OPT_9abucw7",
+      "copilotComment": null,
+      "regenerationRequired": true,
+      "updatedAt": "proposed"
+    }
+  ]
+}

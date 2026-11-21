@@ -1,0 +1,242 @@
+/*
+ * JSX SVG diagram renderer styles (src/ui/diagram). Colours and stroke styles differ per edge kind
+ * so the legend's meaning survives in print and for colour-blind reviewers (dash pattern + colour),
+ * not colour alone. Everything reads from src/styles/tokens.css.
+ */
+
+.diagram-toolbar {
+  align-items: center;
+}
+
+.diagram-zoom-level {
+  min-width: 3.5ch;
+  text-align: center;
+  color: var(--color-text-muted);
+}
+
+.diagram-scroll {
+  overflow: auto;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  padding: var(--space-2);
+}
+
+.diagram-svg {
+  display: block;
+  max-width: none;
+}
+
+/* Tiers */
+
+.diagram-tier-band {
+  fill: var(--color-surface-muted);
+  stroke: var(--color-border);
+}
+
+.diagram-tier-label {
+  fill: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Nodes */
+
+.diagram-node-box {
+  fill: var(--color-surface);
+  stroke: var(--color-border-strong);
+  stroke-width: 1.4;
+}
+
+.diagram-node-external .diagram-node-box {
+  stroke-dasharray: 5 4;
+  fill: var(--color-surface-sunken);
+}
+
+.diagram-node-interactive {
+  cursor: pointer;
+}
+
+.diagram-node-interactive .diagram-node-box {
+  transition: stroke var(--duration-fast) var(--easing-standard);
+}
+
+.diagram-node-interactive:hover .diagram-node-box,
+.diagram-node-interactive:focus-visible .diagram-node-box {
+  stroke: var(--color-primary-500);
+  stroke-width: 2;
+}
+
+.diagram-node-label {
+  fill: var(--color-text);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  text-anchor: middle;
+}
+
+.diagram-node-sublabel {
+  fill: var(--color-text-muted);
+  font-size: 10px;
+  text-anchor: middle;
+}
+
+.diagram-node-refs {
+  fill: var(--color-text-subtle);
+  font-size: 9px;
+  text-anchor: middle;
+}
+
+/* Edges - distinct stroke style per kind, not colour alone */
+
+.diagram-edge-path {
+  fill: none;
+  stroke-width: 1.6;
+}
+
+.diagram-edge-request .diagram-edge-path {
+  stroke: var(--color-primary-600);
+}
+
+.diagram-edge-event .diagram-edge-path {
+  stroke: var(--color-violet-fg);
+  stroke-dasharray: 6 4;
+}
+
+.diagram-edge-data .diagram-edge-path {
+  stroke: var(--color-teal-fg);
+}
+
+.diagram-edge-batch .diagram-edge-path {
+  stroke: var(--color-warning-solid);
+  stroke-dasharray: 10 4;
+}
+
+.diagram-edge-auth .diagram-edge-path {
+  stroke: var(--color-danger-solid);
+  stroke-dasharray: 1.5 3.5;
+  stroke-linecap: round;
+}
+
+.diagram-edge-telemetry .diagram-edge-path {
+  stroke: var(--color-text-subtle);
+  stroke-dasharray: 8 3 1.5 3;
+}
+
+.diagram-edge-label-bg {
+  fill: var(--color-surface);
+  opacity: 0.92;
+}
+
+.diagram-edge-label {
+  fill: var(--color-text-muted);
+  font-size: 9px;
+  text-anchor: middle;
+}
+
+/* Arrow markers mirror the edge's own stroke colour */
+
+.diagram-marker path {
+  stroke: none;
+}
+
+.diagram-marker-request path {
+  fill: var(--color-primary-600);
+}
+
+.diagram-marker-event path {
+  fill: var(--color-violet-fg);
+}
+
+.diagram-marker-data path {
+  fill: var(--color-teal-fg);
+}
+
+.diagram-marker-batch path {
+  fill: var(--color-warning-solid);
+}
+
+.diagram-marker-auth path {
+  fill: var(--color-danger-solid);
+}
+
+.diagram-marker-telemetry path {
+  fill: var(--color-text-subtle);
+}
+
+/* Legend */
+
+.diagram-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  padding: var(--space-2) 0;
+}
+
+.diagram-legend-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.diagram-legend-line {
+  stroke-width: 2;
+}
+
+.diagram-legend-request .diagram-legend-line {
+  stroke: var(--color-primary-600);
+}
+
+.diagram-legend-event .diagram-legend-line {
+  stroke: var(--color-violet-fg);
+  stroke-dasharray: 4 3;
+}
+
+.diagram-legend-data .diagram-legend-line {
+  stroke: var(--color-teal-fg);
+}
+
+.diagram-legend-batch .diagram-legend-line {
+  stroke: var(--color-warning-solid);
+  stroke-dasharray: 6 3;
+}
+
+.diagram-legend-auth .diagram-legend-line {
+  stroke: var(--color-danger-solid);
+  stroke-dasharray: 1 2.5;
+  stroke-linecap: round;
+}
+
+.diagram-legend-telemetry .diagram-legend-line {
+  stroke: var(--color-text-subtle);
+  stroke-dasharray: 5 2 1 2;
+}
+
+/* Text alternative */
+
+.diagram-text-alt {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.diagram-text-alt-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding-left: var(--space-2);
+}
+
+.diagram-text-alt-node {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--space-1);
+}
+
+.diagram-text-alt-node-button {
+  color: var(--color-primary-600);
+  font-weight: var(--font-weight-medium);
+  text-decoration: underline;
+}

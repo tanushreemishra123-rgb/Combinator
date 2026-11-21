@@ -1,0 +1,478 @@
+{
+  "$defs": {
+    "AnswerStatus": {
+      "enum": [
+        "open",
+        "answered",
+        "dismissed"
+      ],
+      "title": "AnswerStatus",
+      "type": "string"
+    },
+    "AssumptionDetails": {
+      "additionalProperties": false,
+      "properties": {
+        "requires_confirmation": {
+          "default": true,
+          "description": "True when the customer must confirm this assumption.",
+          "title": "Requires Confirmation",
+          "type": "boolean"
+        },
+        "confirmation_status": {
+          "$ref": "#/$defs/ConfirmationStatus",
+          "default": "pending",
+          "description": "Confirmation state of the assumption."
+        },
+        "impact_if_wrong": {
+          "default": "",
+          "description": "What changes in the solution if the assumption is wrong.",
+          "title": "Impact If Wrong",
+          "type": "string"
+        }
+      },
+      "title": "AssumptionDetails",
+      "type": "object"
+    },
+    "ConfirmationStatus": {
+      "enum": [
+        "pending",
+        "confirmed",
+        "rejected"
+      ],
+      "title": "ConfirmationStatus",
+      "type": "string"
+    },
+    "GapCriticality": {
+      "enum": [
+        "high",
+        "medium",
+        "low"
+      ],
+      "title": "GapCriticality",
+      "type": "string"
+    },
+    "GapDetails": {
+      "additionalProperties": false,
+      "properties": {
+        "criticality": {
+          "$ref": "#/$defs/GapCriticality",
+          "description": "How critical the missing information is."
+        },
+        "impacted_areas": {
+          "description": "Areas affected by the missing information.",
+          "items": {
+            "type": "string"
+          },
+          "title": "Impacted Areas",
+          "type": "array"
+        },
+        "question_id": {
+          "default": "",
+          "description": "Clarification question raised for this gap, if any.",
+          "title": "Question Id",
+          "type": "string"
+        },
+        "assumption_id": {
+          "default": "",
+          "description": "Assumption made for this gap, if any.",
+          "title": "Assumption Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "criticality"
+      ],
+      "title": "GapDetails",
+      "type": "object"
+    },
+    "IntegrationDetails": {
+      "additionalProperties": false,
+      "properties": {
+        "system": {
+          "description": "External or internal system involved.",
+          "title": "System",
+          "type": "string"
+        },
+        "direction": {
+          "$ref": "#/$defs/IntegrationDirection",
+          "description": "Direction of the information flow."
+        },
+        "pattern": {
+          "$ref": "#/$defs/IntegrationPattern",
+          "description": "Integration pattern: api, event, batch, file."
+        }
+      },
+      "required": [
+        "system",
+        "direction",
+        "pattern"
+      ],
+      "title": "IntegrationDetails",
+      "type": "object"
+    },
+    "IntegrationDirection": {
+      "enum": [
+        "inbound",
+        "outbound",
+        "bidirectional"
+      ],
+      "title": "IntegrationDirection",
+      "type": "string"
+    },
+    "IntegrationPattern": {
+      "enum": [
+        "api",
+        "event",
+        "batch",
+        "file"
+      ],
+      "title": "IntegrationPattern",
+      "type": "string"
+    },
+    "ItemStatus": {
+      "enum": [
+        "proposed",
+        "approved",
+        "modified",
+        "rejected"
+      ],
+      "title": "ItemStatus",
+      "type": "string"
+    },
+    "ItemType": {
+      "description": "The 15 scope categories; the value doubles as the id prefix (FR_01, NFR_02, ...).",
+      "enum": [
+        "BR",
+        "PER",
+        "FR",
+        "NFR",
+        "SYS",
+        "INT",
+        "DATA",
+        "SEC",
+        "TECH",
+        "CON",
+        "DEP",
+        "RISK",
+        "GAP",
+        "ASM",
+        "Q"
+      ],
+      "title": "ItemType",
+      "type": "string"
+    },
+    "NfrCategory": {
+      "enum": [
+        "performance",
+        "scalability",
+        "availability",
+        "security",
+        "compliance",
+        "usability",
+        "maintainability",
+        "observability"
+      ],
+      "title": "NfrCategory",
+      "type": "string"
+    },
+    "NfrDetails": {
+      "additionalProperties": false,
+      "properties": {
+        "category": {
+          "$ref": "#/$defs/NfrCategory",
+          "description": "Non-functional requirement category."
+        }
+      },
+      "required": [
+        "category"
+      ],
+      "title": "NfrDetails",
+      "type": "object"
+    },
+    "Origin": {
+      "enum": [
+        "customer_stated",
+        "ai_inferred",
+        "assumed"
+      ],
+      "title": "Origin",
+      "type": "string"
+    },
+    "Priority": {
+      "enum": [
+        "must",
+        "high",
+        "medium",
+        "low"
+      ],
+      "title": "Priority",
+      "type": "string"
+    },
+    "QuestionDetails": {
+      "additionalProperties": false,
+      "properties": {
+        "why_it_matters": {
+          "default": "",
+          "description": "Why the answer changes the solution.",
+          "title": "Why It Matters",
+          "type": "string"
+        },
+        "affected_ids": {
+          "description": "Scope item ids that depend on the answer.",
+          "items": {
+            "type": "string"
+          },
+          "title": "Affected Ids",
+          "type": "array"
+        },
+        "answer_status": {
+          "$ref": "#/$defs/AnswerStatus",
+          "default": "open",
+          "description": "Whether the question is open, answered or dismissed."
+        },
+        "answer": {
+          "default": "",
+          "description": "Answer recorded by the reviewer.",
+          "title": "Answer",
+          "type": "string"
+        }
+      },
+      "title": "QuestionDetails",
+      "type": "object"
+    },
+    "ScopeItemDetails": {
+      "additionalProperties": false,
+      "description": "Type-specific fields; exactly one block is filled, matching the item type.",
+      "properties": {
+        "nfr": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/NfrDetails"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Details for NFR items."
+        },
+        "integration": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/IntegrationDetails"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Details for INT items."
+        },
+        "gap": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/GapDetails"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Details for GAP items."
+        },
+        "assumption": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/AssumptionDetails"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Details for ASM items."
+        },
+        "question": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/QuestionDetails"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Details for Q items."
+        }
+      },
+      "title": "ScopeItemDetails",
+      "type": "object"
+    },
+    "SourceRef": {
+      "additionalProperties": false,
+      "properties": {
+        "document_id": {
+          "description": "Id of the source document the text came from.",
+          "title": "Document Id",
+          "type": "string"
+        },
+        "segment_id": {
+          "description": "Segment id inside that document, for example D1.S12.",
+          "title": "Segment Id",
+          "type": "string"
+        },
+        "quote": {
+          "description": "Exact customer text this item was taken from.",
+          "title": "Quote",
+          "type": "string"
+        },
+        "start": {
+          "default": 0,
+          "description": "Start offset of the quote in the document.",
+          "minimum": 0,
+          "title": "Start",
+          "type": "integer"
+        },
+        "end": {
+          "default": 0,
+          "description": "End offset of the quote in the document.",
+          "minimum": 0,
+          "title": "End",
+          "type": "integer"
+        },
+        "verified": {
+          "default": false,
+          "description": "True when the quote was matched against the segment text.",
+          "title": "Verified",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "document_id",
+        "segment_id",
+        "quote"
+      ],
+      "title": "SourceRef",
+      "type": "object"
+    },
+    "UpdatedBy": {
+      "enum": [
+        "ai",
+        "user"
+      ],
+      "title": "UpdatedBy",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "type": {
+      "$ref": "#/$defs/ItemType",
+      "description": "Scope category; also the id prefix."
+    },
+    "title": {
+      "description": "Short title of the item.",
+      "minLength": 1,
+      "title": "Title",
+      "type": "string"
+    },
+    "description": {
+      "default": "",
+      "description": "Full statement of the item.",
+      "title": "Description",
+      "type": "string"
+    },
+    "priority": {
+      "$ref": "#/$defs/Priority",
+      "default": "medium",
+      "description": "Review priority."
+    },
+    "origin": {
+      "$ref": "#/$defs/Origin",
+      "description": "customer_stated, ai_inferred or assumed."
+    },
+    "source_refs": {
+      "description": "References to the originating customer text.",
+      "items": {
+        "$ref": "#/$defs/SourceRef"
+      },
+      "title": "Source Refs",
+      "type": "array"
+    },
+    "related_ids": {
+      "description": "Related scope item ids (dependencies, questions).",
+      "items": {
+        "type": "string"
+      },
+      "title": "Related Ids",
+      "type": "array"
+    },
+    "tags": {
+      "description": "Tags used by change-impact rules, e.g. scalability.",
+      "items": {
+        "type": "string"
+      },
+      "title": "Tags",
+      "type": "array"
+    },
+    "notes": {
+      "default": "",
+      "description": "Reviewer notes.",
+      "title": "Notes",
+      "type": "string"
+    },
+    "absence_note": {
+      "default": "",
+      "description": "Why there is no source reference, for GAP and Q items.",
+      "title": "Absence Note",
+      "type": "string"
+    },
+    "details": {
+      "$ref": "#/$defs/ScopeItemDetails",
+      "description": "Type-specific fields."
+    },
+    "id": {
+      "description": "Stable per-session id such as FR_01.",
+      "title": "Id",
+      "type": "string"
+    },
+    "status": {
+      "$ref": "#/$defs/ItemStatus",
+      "default": "proposed",
+      "description": "Review status."
+    },
+    "version": {
+      "default": 1,
+      "description": "Item version, bumped on every change.",
+      "title": "Version",
+      "type": "integer"
+    },
+    "updated_by": {
+      "$ref": "#/$defs/UpdatedBy",
+      "default": "ai",
+      "description": "Who last changed the item."
+    },
+    "created_at": {
+      "description": "Creation timestamp.",
+      "format": "date-time",
+      "title": "Created At",
+      "type": "string"
+    },
+    "updated_at": {
+      "description": "Last update timestamp.",
+      "format": "date-time",
+      "title": "Updated At",
+      "type": "string"
+    }
+  },
+  "required": [
+    "type",
+    "title",
+    "origin",
+    "id",
+    "created_at",
+    "updated_at"
+  ],
+  "title": "ScopeItem",
+  "type": "object"
+}

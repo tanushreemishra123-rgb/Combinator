@@ -1,0 +1,54 @@
+@use '../../../styles/tokens' as t;
+
+.tooltip {
+  position: relative;
+  display: inline-flex;
+}
+
+.bubble {
+  position: absolute;
+  z-index: t.$z-index-tooltip;
+  padding: t.$spacing-1 t.$spacing-2;
+  border-radius: t.$border-radius-md;
+  background: t.$color-border-strong;
+  color: t.$color-text-inverse;
+  font-size: t.$typography-font-size-xs;
+  line-height: t.$typography-line-height-normal;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity t.$transition-default,
+    visibility t.$transition-default;
+}
+
+.tooltip:hover .bubble,
+.tooltip:focus-within .bubble {
+  opacity: 1;
+  visibility: visible;
+}
+
+.top .bubble {
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.bottom .bubble {
+  top: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.left .bubble {
+  right: calc(100% + 6px);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.right .bubble {
+  left: calc(100% + 6px);
+  top: 50%;
+  transform: translateY(-50%);
+}

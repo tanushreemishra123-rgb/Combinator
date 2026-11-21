@@ -1,0 +1,47 @@
+{
+  "overview": "A customer portal that shows live shipment status from the existing logistics system.",
+  "customer_objectives": [
+    {
+      "req_ids": [
+        "FR_01"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "text": "Cut the number of status calls to support."
+    }
+  ],
+  "solution_highlights": [
+    {
+      "req_ids": [
+        "INT_01"
+      ],
+      "basis": "inferred",
+      "validation_required": false,
+      "validation_reason": "",
+      "text": "The portal reads status through one governed integration."
+    }
+  ],
+  "key_risks": [
+    {
+      "req_ids": [
+        "NFR_01"
+      ],
+      "basis": "inferred",
+      "validation_required": false,
+      "validation_reason": "",
+      "text": "Availability outside business hours is not agreed."
+    }
+  ],
+  "next_steps": [
+    {
+      "req_ids": [
+        "INT_01"
+      ],
+      "basis": "inferred",
+      "validation_required": false,
+      "validation_reason": "",
+      "text": "Confirm the logistics API rate limits and credentials."
+    }
+  ]
+}

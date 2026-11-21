@@ -1,0 +1,77 @@
+@use '../../../styles/tokens' as t;
+
+.switch {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: t.$spacing-2;
+  cursor: pointer;
+
+  &:has(.input:disabled) {
+    cursor: not-allowed;
+    opacity: 0.55;
+  }
+}
+
+.disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  opacity: 0;
+}
+
+.track {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  width: 32px;
+  height: 18px;
+  margin-top: 1px;
+  padding: 2px;
+  border-radius: t.$border-radius-full;
+  background: t.$color-border-default;
+  transition: background-color t.$transition-default;
+}
+
+.thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: t.$border-radius-full;
+  background: t.$color-background-surface;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  transition: transform t.$transition-default;
+}
+
+.input:checked + .track {
+  background: t.$color-background-toggle-active;
+
+  .thumb {
+    transform: translateX(14px);
+  }
+}
+
+.input:focus-visible + .track {
+  outline: t.$border-width-active solid t.$color-border-focus;
+  outline-offset: 2px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.label {
+  font-size: t.$typography-font-size-sm;
+  color: t.$color-text-primary;
+}
+
+.description {
+  font-size: t.$typography-font-size-xs;
+  color: t.$color-text-muted;
+}

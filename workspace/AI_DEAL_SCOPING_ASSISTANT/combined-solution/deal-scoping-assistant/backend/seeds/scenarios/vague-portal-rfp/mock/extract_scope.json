@@ -1,0 +1,512 @@
+{
+  "items": [
+    {
+      "temp_id": "t1",
+      "type": "BR",
+      "title": "Customer Portal Initiative",
+      "description": "Establish a modern customer portal to improve customer experience and reduce manual operational overhead.",
+      "priority": "high",
+      "origin": "customer_stated",
+      "quotes": [
+        {
+          "segment_id": "D1.S4",
+          "quote": "We are looking at building a customer portal and I would like a proposal for our board meeting."
+        }
+      ],
+      "related_ids": [],
+      "tags": [
+        "ux"
+      ],
+      "absence_note": "",
+      "nfr_category": null,
+      "integration_system": "",
+      "integration_direction": null,
+      "integration_pattern": null,
+      "gap_criticality": null,
+      "question_id": "",
+      "assumption_id": "",
+      "why_it_matters": "",
+      "affected_ids": [],
+      "impact_if_wrong": ""
+    },
+    {
+      "temp_id": "t2",
+      "type": "BR",
+      "title": "Reduce Operations Workload",
+      "description": "Minimize the time the operations team spends manually answering tracking and invoice queries.",
+      "priority": "high",
+      "origin": "customer_stated",
+      "quotes": [
+        {
+          "segment_id": "D1.S5",
+          "quote": "Our customers ring or email us constantly asking two things: where is my shipment, and can you send me a copy of that invoice. It takes up a lot of the operations team's day and it makes us look dated next to the bigger players."
+        }
+      ],
+      "related_ids": [
+        "t3"
+      ],
+      "tags": [],
+      "absence_note": "",
+      "nfr_category": null,
+      "integration_system": "",
+      "integration_direction": null,
+      "integration_pattern": null,
+      "gap_criticality": null,
+      "question_id": "",
+      "assumption_id": "",
+      "why_it_matters": "",
+      "affected_ids": [],
+      "impact_if_wrong": ""
+    },
+    {
+      "temp_id": "t3",
+      "type": "PER",
+      "title": "Operations Team",
+      "description": "Internal staff members who currently handle high volumes of manual customer inquiries.",
+      "priority": "medium",
+      "origin": "customer_stated",
+      "quotes": [
+        {
+          "segment_id": "D1.S5",
+          "quote": "It takes up a lot of the operations team's day and it makes us look dated next to the bigger players."
+        }
+      ],
+      "related_ids": [],
+      "tags": [],
+      "absence_note": "",
+      "nfr_category": null,
+      "integration_system": "",
+      "integration_direction": null,
+      "integration_pattern": null,
+      "gap_criticality": null,
+      "question_id": "",
+      "assumption_id": "",
+      "why_it_matters": "",
+      "affected_ids": [],
+      "impact_if_wrong": ""
+    },
+    {
+      "temp_id": "t4",
+      "type": "PER",
+      "title": "Customers",
+      "description": "External clients who require access to shipment tracking, invoices, and online services.",
+      "priority": "high",
+      "origin": "customer_stated",
+      "quotes": [
+        {
+          "segment_id": "D1.S6",
+          "quote": "Customers log in, see their shipments, see where they are, download invoices and maybe pay them."
+        }
+      ],
+      "related_ids": [],
+      "tags": [
+        "ux"
+      ],
+      "absence_note": "",
+      "nfr_category": null,
+      "integration_system": "",
+      "integration_direction": null,
+      "integration_pattern": null,
+      "gap_criticality": null,
+      "question_id": "",
+      "assumption_id": "",
+      "why_it_matters": "",
+      "affected_ids": [],
+      "impact_if_wrong": ""
+    },
+    {
+      "temp_id": "t5",
+      "type": "FR",
+      "title": "Shipment Tracking View",
+      "description": "Allow logged-in customers to view their active shipments and their current locations.",
+      "priority": "must",
+      "origin": "customer_stated",
+      "quotes": [
+        {
+          "segment_id": "D1.S6",
+          "quote": "Customers log in, see their shipments, see where they are, download invoices and maybe pay them."
+        }
+      ],
+      "related_ids": [
+        "t4",
+        "t10"
+      ],
+      "tags": [
+        "ux"
+      ],
+      "absence_note": "",
+      "nfr_category": null,
+      "integration_system": "",
+      "integration_direction": null,
+      "integration_pattern": null,
+      "gap_criticality": null,
+      "question_id": "",
+      "assumption_id": "",
+      "why_it_matters": "",
+      "affected_ids": [],
+      "impact_if_wrong": ""
+    },
+    {
+      "temp_id": "t6",
+      "type": "FR",
+      "title": "Invoice Download",
+      "description": "Enable customers to view and download copies of their invoices directly from the portal.",
+      "priority": "must",
+      "origin": "customer_stated",
+      "quotes": [
+        {
+          "segment_id": "D1.S6",
+          "quote": "Customers log in, see their shipments, see where they are, download invoices and maybe pay them."
+        }
+      ],
+      "related_ids": [
+        "t4",
+        "t11"
+      ],
+      "tags": [
+        "ux"
+      ],
+      "absence_note": "",
+      "nfr_category": null,
+      "integration_system": "",
+      "integration_direction": null,
+      "integration_pattern": null,
+      "gap_criticality": null,
+      "question_id": "",
+      "assumption_id": "",
+      "why_it_matters": "",
+      "affected_ids": [],
+      "impact_if_wrong": ""
+    },
+    {
+      "temp_id": "t7",
+      "type": "FR",
+      "title": "Online Invoice Payment",
+      "description": "Provide customers with the option to pay their invoices online through the portal.",
+      "priority": "low",
+      "origin": "customer_stated",
+      "quotes": [
+        {
+          "segment_id": "D1.S6",
+          "quote": "Customers log in, see their shipments, see where they are, download invoices and maybe pay them."
+        }
+      ],
+      "related_ids": [
+        "t4"
+      ],
+      "tags": [
+        "ux"
+      ],
+      "absence_note": "",
+      "nfr_category": null,
+      "integration_system": "",
+      "integration_direction": null,
+      "integration_pattern": null,
+      "gap_criticality": null,
+      "question_id": "",
+      "assumption_id": "",
+      "why_it_matters": "",
+      "affected_ids": [],
+      "impact_if_wrong": ""
+    },
+    {
+      "temp_id": "t8",
+      "type": "NFR",
+      "title": "Mobile Responsiveness",
+      "description": "The portal must feature a clean, modern user interface optimized for mobile devices.",
+      "priority": "high",
+      "origin": "customer_stated",
+      "quotes": [
+        {
+          "segment_id": "D1.S6",
+          "quote": "Something clean and modern that works on a phone."
+        }
+      ],
+      "related_ids": [],
+      "tags": [
+        "ux"
+      ],
+      "absence_note": "",
+      "nfr_category": "usability",
+      "integration_system": "",
+      "integration_direction": null,
+      "integration_pattern": null,
+      "gap_criticality": null,
+      "question_id": "",
+      "assumption_id": "",
+      "why_it_matters": "",
+      "affected_ids": [],
+      "impact_if_wrong": ""
+    },
+    {
+      "temp_id": "t9",
+      "type": "SYS",
+      "title": "Transportation Management System (TMS)",
+      "description": "The existing internal system containing all shipment and tracking data.",
+      "priority": "must",
+      "origin": "customer_stated",
+      "quotes": [
+        {
+          "segment_id": "D1.S8",
+          "quote": "Tracking needs to come out of our TMS. That is where all the shipment data lives."
+        }
+      ],
+      "related_ids": [],
+      "tags": [
+        "data"
+      ],
+      "absence_note": "",
+      "nfr_category": null,
+      "integration_system": "",
+      "integration_direction": null,
+      "integration_pattern": null,
+      "gap_criticality": null,
+      "question_id": "",
+      "assumption_id": "",
+      "why_it_matters": "",
+      "affected_ids": [],
+      "impact_if_wrong": ""
+    },
+    {
+      "temp_id": "t10",
+      "type": "INT",
+      "title": "TMS Tracking Integration",
+      "description": "Integrate the portal with the TMS to retrieve real-time shipment tracking details.",
+      "priority": "must",
+      "origin": "customer_stated",
+      "quotes": [
+        {
+          "segment_id": "D1.S8",
+          "quote": "Tracking needs to come out of our TMS. That is where all the shipment data lives."
+        }
+      ],
+      "related_ids": [
+        "t9",
+        "t5"
+      ],
+      "tags": [
+        "integration",
+        "data"
+      ],
+      "absence_note": "",
+      "nfr_category": null,
+      "integration_system": "TMS",
+      "integration_direction": "inbound",
+      "integration_pattern": "api",
+      "gap_criticality": null,
+      "question_id": "",
+      "assumption_id": "",
+      "why_it_matters": "",
+      "affected_ids": [],
+      "impact_if_wrong": ""
+    },
+    {
+      "temp_id": "t11",
+      "type": "INT",
+      "title": "Finance System Invoice Integration",
+      "description": "Integrate the portal with the finance system to retrieve invoice documents.",
+      "priority": "high",
+      "origin": "customer_stated",
+      "quotes": [
+        {
+          "segment_id": "D1.S8",
+          "quote": "Invoices as well, though I think those sit somewhere else, I would need to check with finance."
+        }
+      ],
+      "related_ids": [
+        "t6"
+      ],
+      "tags": [
+        "integration",
+        "data"
+      ],
+      "absence_note": "",
+      "nfr_category": null,
+      "integration_system": "Finance System",
+      "integration_direction": "inbound",
+      "integration_pattern": "api",
+      "gap_criticality": null,
+      "question_id": "",
+      "assumption_id": "",
+      "why_it_matters": "",
+      "affected_ids": [],
+      "impact_if_wrong": ""
+    },
+    {
+      "temp_id": "t12",
+      "type": "FR",
+      "title": "Online Shipment Queries",
+      "description": "Allow customers to submit support queries regarding specific shipments directly within the portal.",
+      "priority": "medium",
+      "origin": "customer_stated",
+      "quotes": [
+        {
+          "segment_id": "D1.S8",
+          "quote": "3. It would be good if customers could raise a query on a shipment rather than emailing us."
+        }
+      ],
+      "related_ids": [
+        "t4"
+      ],
+      "tags": [
+        "ux"
+      ],
+      "absence_note": "",
+      "nfr_category": null,
+      "integration_system": "",
+      "integration_direction": null,
+      "integration_pattern": null,
+      "gap_criticality": null,
+      "question_id": "",
+      "assumption_id": "",
+      "why_it_matters": "",
+      "affected_ids": [],
+      "impact_if_wrong": ""
+    },
+    {
+      "temp_id": "t13",
+      "type": "FR",
+      "title": "Online Collection Booking",
+      "description": "Allow customers to book cargo collections online through the portal.",
+      "priority": "low",
+      "origin": "customer_stated",
+      "quotes": [
+        {
+          "segment_id": "D1.S8",
+          "quote": "4. Some of our bigger customers have asked for a way to book a collection online. I do not know if that is phase one or later."
+        }
+      ],
+      "related_ids": [
+        "t4"
+      ],
+      "tags": [
+        "ux"
+      ],
+      "absence_note": "",
+      "nfr_category": null,
+      "integration_system": "",
+      "integration_direction": null,
+      "integration_pattern": null,
+      "gap_criticality": null,
+      "question_id": "",
+      "assumption_id": "",
+      "why_it_matters": "",
+      "affected_ids": [],
+      "impact_if_wrong": ""
+    },
+    {
+      "temp_id": "t14",
+      "type": "FR",
+      "title": "Monthly Volume Reporting",
+      "description": "Provide customers with monthly summaries of their shipment volumes.",
+      "priority": "low",
+      "origin": "customer_stated",
+      "quotes": [
+        {
+          "segment_id": "D1.S8",
+          "quote": "5. Reporting would be nice. A couple of customers have asked for monthly volume summaries."
+        }
+      ],
+      "related_ids": [
+        "t4"
+      ],
+      "tags": [
+        "reporting"
+      ],
+      "absence_note": "",
+      "nfr_category": null,
+      "integration_system": "",
+      "integration_direction": null,
+      "integration_pattern": null,
+      "gap_criticality": null,
+      "question_id": "",
+      "assumption_id": "",
+      "why_it_matters": "",
+      "affected_ids": [],
+      "impact_if_wrong": ""
+    },
+    {
+      "temp_id": "t15",
+      "type": "PER",
+      "title": "IT Manager",
+      "description": "Bill, the IT Manager, who manages the TMS and network infrastructure.",
+      "priority": "medium",
+      "origin": "customer_stated",
+      "quotes": [
+        {
+          "segment_id": "D1.S9",
+          "quote": "We do have an IT manager, Bill, who looks after the TMS and our network. He can answer the detailed questions, but he is on holiday until the end of the month."
+        }
+      ],
+      "related_ids": [],
+      "tags": [],
+      "absence_note": "",
+      "nfr_category": null,
+      "integration_system": "",
+      "integration_direction": null,
+      "integration_pattern": null,
+      "gap_criticality": null,
+      "question_id": "",
+      "assumption_id": "",
+      "why_it_matters": "",
+      "affected_ids": [],
+      "impact_if_wrong": ""
+    },
+    {
+      "temp_id": "t16",
+      "type": "DEP",
+      "title": "IT Manager Availability",
+      "description": "Detailed technical questions regarding TMS and network integration depend on the IT Manager returning from holiday.",
+      "priority": "high",
+      "origin": "customer_stated",
+      "quotes": [
+        {
+          "segment_id": "D1.S9",
+          "quote": "He can answer the detailed questions, but he is on holiday until the end of the month."
+        }
+      ],
+      "related_ids": [
+        "t15"
+      ],
+      "tags": [],
+      "absence_note": "",
+      "nfr_category": null,
+      "integration_system": "",
+      "integration_direction": null,
+      "integration_pattern": null,
+      "gap_criticality": null,
+      "question_id": "",
+      "assumption_id": "",
+      "why_it_matters": "",
+      "affected_ids": [],
+      "impact_if_wrong": ""
+    },
+    {
+      "temp_id": "t17",
+      "type": "CON",
+      "title": "Quarterly Board Meeting Timeline",
+      "description": "The proposal and cost estimates are required for presentation at the upcoming quarterly board meeting.",
+      "priority": "medium",
+      "origin": "customer_stated",
+      "quotes": [
+        {
+          "segment_id": "D1.S10",
+          "quote": "On timing, the board meets quarterly and I would like to put something in front of them. Sooner is better but I would not say we have a hard date."
+        }
+      ],
+      "related_ids": [],
+      "tags": [],
+      "absence_note": "",
+      "nfr_category": null,
+      "integration_system": "",
+      "integration_direction": null,
+      "integration_pattern": null,
+      "gap_criticality": null,
+      "question_id": "",
+      "assumption_id": "",
+      "why_it_matters": "",
+      "affected_ids": [],
+      "impact_if_wrong": ""
+    }
+  ]
+}

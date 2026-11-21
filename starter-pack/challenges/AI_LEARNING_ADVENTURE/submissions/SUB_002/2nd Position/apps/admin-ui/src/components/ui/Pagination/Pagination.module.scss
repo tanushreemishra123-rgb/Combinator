@@ -1,0 +1,63 @@
+@use '../../../styles/tokens' as t;
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: t.$spacing-1;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: t.$size-control-sm;
+  padding: 0 t.$spacing-2;
+  background: transparent;
+  border: none;
+  border-radius: t.$border-radius-md;
+  color: t.$color-text-secondary;
+  font-family: inherit;
+  font-size: t.$typography-font-size-sm;
+  cursor: pointer;
+  transition:
+    background-color t.$transition-default,
+    color t.$transition-default;
+
+  &:hover:not(:disabled) {
+    background: t.$color-background-surface-muted;
+    color: t.$color-text-primary;
+  }
+
+  &:focus-visible {
+    outline: t.$border-width-active solid t.$color-border-focus;
+    outline-offset: 2px;
+  }
+
+  &:disabled {
+    color: t.$color-text-disabled;
+    cursor: not-allowed;
+  }
+}
+
+.page {
+  min-width: t.$size-control-sm;
+}
+
+.current {
+  background: t.$color-background-toggle-active;
+  color: t.$color-text-inverse;
+
+  &:hover:not(:disabled) {
+    background: t.$color-background-toggle-active;
+    color: t.$color-text-inverse;
+  }
+}
+
+.ellipsis {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: t.$size-control-sm;
+  height: t.$size-control-sm;
+  color: t.$color-text-muted;
+}

@@ -1,0 +1,12 @@
+@use '../../../styles/tokens' as t;
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: t.$spacing-3;
+
+  [data-align='end'] {
+    margin-left: auto;
+  }
+}

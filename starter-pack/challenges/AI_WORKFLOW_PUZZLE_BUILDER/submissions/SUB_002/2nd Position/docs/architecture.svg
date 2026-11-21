@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 680" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#5a6b8c"/>
+    </marker>
+  </defs>
+  <style>
+    .layer { fill: #f4f7fc; stroke: #c3cfe3; rx: 12; }
+    .box { fill: #ffffff; stroke: #7a8db0; stroke-width: 1.2; rx: 8; }
+    .accent { fill: #eef4ff; stroke: #4d7fd6; }
+    .guard { fill: #fff7ea; stroke: #d69a4d; }
+    .human { fill: #eefaf0; stroke: #4dae6e; }
+    .title { font-size: 15px; font-weight: bold; fill: #24314d; }
+    .label { font-size: 12.5px; fill: #24314d; }
+    .sub { font-size: 10.5px; fill: #5a6b8c; }
+    .edge { stroke: #5a6b8c; stroke-width: 1.4; fill: none; marker-end: url(#arrow); }
+    .edge-dashed { stroke-dasharray: 5 4; }
+  </style>
+
+  <rect x="0" y="0" width="960" height="680" fill="#ffffff"/>
+  <text x="480" y="26" text-anchor="middle" class="title" font-size="18">Workflow Puzzle Lab — Architecture (client-side SPA, no backend)</text>
+
+  <!-- UI layer -->
+  <rect class="layer" x="20" y="44" width="920" height="150" rx="12"/>
+  <text x="34" y="66" class="title">Builder UI (React, src/ui)</text>
+  <rect class="box" x="34" y="80" width="120" height="44"/>
+  <text x="94" y="99" text-anchor="middle" class="label">Puzzle gallery</text>
+  <text x="94" y="114" text-anchor="middle" class="sub">difficulty · progress</text>
+  <rect class="box accent" x="170" y="80" width="200" height="96"/>
+  <text x="270" y="99" text-anchor="middle" class="label">Workspace</text>
+  <text x="270" y="116" text-anchor="middle" class="sub">palette · drag-drop canvas</text>
+  <text x="270" y="130" text-anchor="middle" class="sub">branch lanes · step inspector</text>
+  <text x="270" y="146" text-anchor="middle" class="sub">retry/fallback upgrade chips</text>
+  <text x="270" y="162" text-anchor="middle" class="sub">validator ladder config</text>
+  <rect class="box" x="386" y="80" width="150" height="60"/>
+  <text x="461" y="99" text-anchor="middle" class="label">Run panel</text>
+  <text x="461" y="114" text-anchor="middle" class="sub">failure toggles · pace</text>
+  <text x="461" y="128" text-anchor="middle" class="sub">run / abort / resume</text>
+  <rect class="box" x="552" y="80" width="120" height="44"/>
+  <text x="612" y="99" text-anchor="middle" class="label">Trace panel</text>
+  <text x="612" y="114" text-anchor="middle" class="sub">live event stream</text>
+  <rect class="box" x="688" y="80" width="120" height="44"/>
+  <text x="748" y="99" text-anchor="middle" class="label">Reliability panel</text>
+  <text x="748" y="114" text-anchor="middle" class="sub">score · weaknesses</text>
+  <rect class="box human" x="824" y="80" width="106" height="60"/>
+  <text x="877" y="99" text-anchor="middle" class="label">Human review</text>
+  <text x="877" y="114" text-anchor="middle" class="sub">approve · edit</text>
+  <text x="877" y="128" text-anchor="middle" class="sub">reject (modal)</text>
+
+  <!-- State layer -->
+  <rect class="layer" x="20" y="216" width="340" height="86"/>
+  <text x="34" y="238" class="title">State (zustand + localStorage)</text>
+  <rect class="box" x="34" y="250" width="310" height="40"/>
+  <text x="189" y="268" text-anchor="middle" class="label">workflows · progress · checkpoints · settings</text>
+  <text x="189" y="283" text-anchor="middle" class="sub">workflowOps: insert / move / patch / upgrade (guard-railed)</text>
+
+  <!-- Engine layer -->
+  <rect class="layer" x="20" y="326" width="580" height="220"/>
+  <text x="34" y="348" class="title">Execution engine (src/engine)</text>
+  <rect class="box accent" x="34" y="362" width="250" height="52"/>
+  <text x="159" y="382" text-anchor="middle" class="label">Sequential executor</text>
+  <text x="159" y="398" text-anchor="middle" class="sub">linear flow + condition branches · trace events</text>
+  <rect class="box guard" x="34" y="426" width="250" height="52"/>
+  <text x="159" y="446" text-anchor="middle" class="label">Resilience stack</text>
+  <text x="159" y="462" text-anchor="middle" class="sub">attempts → retries → fallback → safe stop/fail</text>
+  <rect class="box guard" x="34" y="490" width="250" height="44"/>
+  <text x="159" y="508" text-anchor="middle" class="label">Validation ladder (Zod)</text>
+  <text x="159" y="523" text-anchor="middle" class="sub">retry-prev → repair → default → human → final</text>
+  <rect class="box" x="300" y="362" width="284" height="52"/>
+  <text x="442" y="382" text-anchor="middle" class="label">Workflow state &amp; checkpoints</text>
+  <text x="442" y="398" text-anchor="middle" class="sub">interrupt → save · resume → restore, never re-run</text>
+  <rect class="box" x="300" y="426" width="284" height="52"/>
+  <text x="442" y="446" text-anchor="middle" class="label">Execution trace (RunReport)</text>
+  <text x="442" y="462" text-anchor="middle" class="sub">inputs · outputs · attempts · decisions · statuses</text>
+  <rect class="box" x="300" y="490" width="284" height="44"/>
+  <text x="442" y="508" text-anchor="middle" class="label">Reliability feedback</text>
+  <text x="442" y="523" text-anchor="middle" class="sub">score · recovery observed · weakness lint</text>
+
+  <!-- Seed content layer -->
+  <rect class="layer" x="620" y="326" width="320" height="220"/>
+  <text x="634" y="348" class="title">Seed content (src/puzzles)</text>
+  <rect class="box" x="634" y="362" width="292" height="76"/>
+  <text x="780" y="382" text-anchor="middle" class="label">8 puzzle definitions</text>
+  <text x="780" y="398" text-anchor="middle" class="sub">samples · palettes · schemas · conditions</text>
+  <text x="780" y="412" text-anchor="middle" class="sub">failure configs · criteria · hints · solutions</text>
+  <text x="780" y="426" text-anchor="middle" class="sub">(committed, verified by tests)</text>
+  <rect class="box guard" x="634" y="450" width="292" height="52"/>
+  <text x="780" y="470" text-anchor="middle" class="label">Mock model provider &amp; tool simulator</text>
+  <text x="780" y="486" text-anchor="middle" class="sub">deterministic: scenario × attempt × provider</text>
+  <rect class="box" x="634" y="510" width="292" height="30"/>
+  <text x="780" y="529" text-anchor="middle" class="label sub">Retrieval sources (committed documents)</text>
+
+  <!-- Live provider -->
+  <rect class="box accent" x="330" y="596" width="300" height="52"/>
+  <text x="480" y="616" text-anchor="middle" class="label">Optional live AI provider (Anthropic API)</text>
+  <text x="480" y="632" text-anchor="middle" class="sub">AI steps only · off by default · mock mode needs nothing</text>
+
+  <!-- Edges -->
+  <path class="edge" d="M 270 178 L 270 250"/>
+  <text x="278" y="226" class="sub">edit ops</text>
+  <path class="edge" d="M 420 142 L 420 240 L 344 250"/>
+  <path class="edge" d="M 461 142 L 461 362"/>
+  <text x="469" y="322" class="sub">run(workflow, scenarios)</text>
+  <path class="edge" d="M 159 414 L 159 426"/>
+  <path class="edge" d="M 159 478 L 159 490"/>
+  <path class="edge" d="M 284 388 L 300 388"/>
+  <path class="edge" d="M 442 414 L 442 426"/>
+  <path class="edge" d="M 442 478 L 442 490"/>
+  <path class="edge" d="M 240 534 L 240 556 L 780 556 L 780 540"/>
+  <rect x="392" y="538" width="200" height="14" fill="#f4f7fc"/>
+  <text x="492" y="549" text-anchor="middle" class="sub">deterministic mock model &amp; tool calls</text>
+  <path class="edge" d="M 584 446 L 606 446 L 606 124"/>
+  <text x="560" y="212" class="sub">live trace events</text>
+  <path class="edge" d="M 584 512 L 616 512 L 616 208 L 748 208 L 748 124"/>
+  <text x="640" y="226" class="sub">RunReport → score</text>
+  <path class="edge edge-dashed" d="M 159 534 L 159 578 L 856 578 L 856 144"/>
+  <text x="380" y="573" class="sub">pause for human ⇄ recorded decision</text>
+  <path class="edge edge-dashed" d="M 100 534 L 100 622 L 330 622"/>
+  <text x="112" y="606" class="sub">live mode (AI steps only)</text>
+  <path class="edge" d="M 780 326 L 780 204 L 380 204 L 380 176"/>
+  <text x="700" y="198" text-anchor="middle" class="sub">puzzle briefs · palettes · criteria · hints</text>
+</svg>
