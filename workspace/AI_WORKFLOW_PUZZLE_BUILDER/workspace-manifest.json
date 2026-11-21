@@ -2,7 +2,7 @@
   "challengeId": "AI_WORKFLOW_PUZZLE_BUILDER",
   "title": "AI Workflow Puzzle Builder",
   "mode": "code",
-  "generatedAt": "2026-11-21T11:01:47.324Z",
+  "generatedAt": "2026-11-21T11:27:31.400Z",
   "combinatorVersion": "1.0.0",
   "reviewContextMode": "provided_with_spec_reconciliation",
   "artifacts": [
@@ -34,8 +34,8 @@
     "retries": 0,
     "failures": 0,
     "approxCostUsd": 0.000103,
-    "processingMs": 413
+    "processingMs": 14800
   },
   "integrityCritical": false,
-  "verificationOverall": "failed"
+  "verificationOverall": "partial"
 }

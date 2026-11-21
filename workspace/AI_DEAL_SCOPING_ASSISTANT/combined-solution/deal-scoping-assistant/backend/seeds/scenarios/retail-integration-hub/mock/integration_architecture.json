@@ -1,0 +1,343 @@
+{
+  "integrations": [
+    {
+      "req_ids": [
+        "INT_01",
+        "NFR_03",
+        "NFR_04"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "IA_01",
+      "name": "Shopify Orders to SAP S/4HANA",
+      "source_system": "Shopify Plus Storefront",
+      "target_system": "SAP S/4HANA",
+      "direction": "outbound",
+      "pattern": "api",
+      "auth_approach": "OAuth 2.0 authentication with encrypted credentials stored in key management service.",
+      "error_handling": "Failed order payloads are captured and routed to a dead-letter queue for operator inspection.",
+      "retry_behavior": "Exponential backoff retry mechanism handles transient errors automatically.",
+      "monitoring": "Integration latency and throughput are exported to central observability dashboards.",
+      "sync_considerations": "Near-real-time ingestion ensures order delivery latency remains under two minutes.",
+      "arc_ids": [
+        "ARC_01",
+        "ARC_02",
+        "ARC_03"
+      ]
+    },
+    {
+      "req_ids": [
+        "INT_02",
+        "NFR_11"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "IA_02",
+      "name": "Order Release to Nordkap Logistics",
+      "source_system": "SAP S/4HANA",
+      "target_system": "Nordkap Logistics (3PL)",
+      "direction": "outbound",
+      "pattern": "file",
+      "auth_approach": "SSH key-based SFTP authentication with keys stored in key management service.",
+      "error_handling": "Transport failures generate operational alerts and store payload state for manual retry.",
+      "retry_behavior": "Scheduled retries with backoff occur prior to alerting operations.",
+      "monitoring": "SFTP transport and file batch statuses are tracked via central metrics.",
+      "sync_considerations": "Built with modular file adapters to facilitate seamless future migration to direct APIs.",
+      "arc_ids": [
+        "ARC_04",
+        "ARC_05"
+      ]
+    },
+    {
+      "req_ids": [
+        "INT_03"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "IA_03",
+      "name": "Nordkap Dispatch and Tracking Confirmations",
+      "source_system": "Nordkap Logistics (3PL)",
+      "target_system": "SAP S/4HANA",
+      "direction": "inbound",
+      "pattern": "file",
+      "auth_approach": "SSH key-based SFTP authentication.",
+      "error_handling": "Invalid file formats or parsing errors move files to dead-letter storage and notify administrators.",
+      "retry_behavior": "Automatic re-processing on file delivery with backoff for file lock conflicts.",
+      "monitoring": "File ingest counts and processing status reported to monitoring dashboard.",
+      "sync_considerations": "Inbound files trigger inventory and shipment status updates across systems.",
+      "arc_ids": [
+        "ARC_02",
+        "ARC_03",
+        "ARC_04"
+      ]
+    },
+    {
+      "req_ids": [
+        "INT_04",
+        "NFR_01",
+        "NFR_05"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "IA_04",
+      "name": "Inventory Position to Shopify and POS",
+      "source_system": "SAP S/4HANA",
+      "target_system": "Shopify Plus Storefront, In-house POS System",
+      "direction": "outbound",
+      "pattern": "api",
+      "auth_approach": "OAuth 2.0 and API token authentication.",
+      "error_handling": "Failed sync operations push messages to a dead-letter queue for review.",
+      "retry_behavior": "Exponential backoff retries transient delivery failures.",
+      "monitoring": "Inventory freshness and sync frequency are monitored against five-minute target thresholds.",
+      "sync_considerations": "Consolidates stock position from SAP and 3PL to calculate available-to-promise inventory.",
+      "arc_ids": [
+        "ARC_01",
+        "ARC_02",
+        "ARC_03"
+      ]
+    },
+    {
+      "req_ids": [
+        "INT_05"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "IA_05",
+      "name": "Customer and Order Data to Snowflake (Nightly)",
+      "source_system": "SAP S/4HANA",
+      "target_system": "Snowflake Data Warehouse",
+      "direction": "outbound",
+      "pattern": "batch",
+      "auth_approach": "Encrypted database connector authentication.",
+      "error_handling": "Batch job failures trigger alerts and record failed status for operator replay.",
+      "retry_behavior": "Nightly batch rerun logic with exponential backoff on connection timeout.",
+      "monitoring": "Batch execution duration and record counts monitored via metrics logging.",
+      "sync_considerations": "Delta sync reduces load by exporting only modified customer and order records.",
+      "arc_ids": [
+        "ARC_05",
+        "ARC_06"
+      ]
+    },
+    {
+      "req_ids": [
+        "INT_06"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "IA_06",
+      "name": "Intraday Order Events Feed to Snowflake",
+      "source_system": "Enterprise Messaging Hub",
+      "target_system": "Snowflake Data Warehouse",
+      "direction": "outbound",
+      "pattern": "event",
+      "auth_approach": "Encrypted service token authentication.",
+      "error_handling": "Event streaming errors push failed events to a dead-letter destination.",
+      "retry_behavior": "Immediate backoff retries for streaming channel interruptions.",
+      "monitoring": "Streaming lag and payload counts monitored on real-time dashboards.",
+      "sync_considerations": "Streams order status events continuously to support operational reporting.",
+      "arc_ids": [
+        "ARC_02",
+        "ARC_03"
+      ]
+    },
+    {
+      "req_ids": [
+        "INT_07",
+        "NFR_06",
+        "DATA_01"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "IA_07",
+      "name": "Product Master from SAP to Shopify and Salesforce",
+      "source_system": "SAP S/4HANA",
+      "target_system": "Shopify Plus Storefront, Salesforce Service Cloud",
+      "direction": "outbound",
+      "pattern": "api",
+      "auth_approach": "OAuth 2.0 using stored service credentials.",
+      "error_handling": "Failed product synchronization records are saved to dead-letter queue.",
+      "retry_behavior": "Exponential backoff retry mechanism for API endpoint rate limits.",
+      "monitoring": "Full load and delta synchronization metrics reported to central monitoring.",
+      "sync_considerations": "Handles nightly full updates for 9,000 SKUs alongside intraday delta updates.",
+      "arc_ids": [
+        "ARC_01",
+        "ARC_03",
+        "ARC_05"
+      ]
+    },
+    {
+      "req_ids": [
+        "INT_08",
+        "DATA_03"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "IA_08",
+      "name": "Finance Postings from Payment Provider to SAP",
+      "source_system": "Payment Provider",
+      "target_system": "SAP S/4HANA",
+      "direction": "inbound",
+      "pattern": "file",
+      "auth_approach": "Secure SFTP channel with key management integration.",
+      "error_handling": "Reconciliation discrepancies are flagged in operational tables for operator review.",
+      "retry_behavior": "Scheduled retry logic for missing or locked daily settlement files.",
+      "monitoring": "Reconciliation batch status and match rates tracked in observability engine.",
+      "sync_considerations": "Performs 3-way reconciliation between settlement files, order data, and SAP ledger.",
+      "arc_ids": [
+        "ARC_04",
+        "ARC_05",
+        "ARC_06"
+      ]
+    }
+  ],
+  "internal_systems": [
+    {
+      "req_ids": [
+        "SYS_03"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "name": "SAP S/4HANA",
+      "description": "Core ERP system managing product master data, purchasing, general ledger, and stock inventory."
+    },
+    {
+      "req_ids": [
+        "SYS_04"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "name": "Salesforce Service Cloud",
+      "description": "Customer service system handling order enquiries and returns authorizations."
+    },
+    {
+      "req_ids": [
+        "SYS_06"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "name": "Snowflake Data Warehouse",
+      "description": "Central data warehouse providing reporting and real-time operational dashboards."
+    },
+    {
+      "req_ids": [
+        "SYS_07"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "name": "In-house POS System",
+      "description": "Point-of-sale software running in physical store locations."
+    }
+  ],
+  "external_systems": [
+    {
+      "req_ids": [
+        "SYS_02"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "name": "Shopify Plus Storefront",
+      "description": "Primary e-commerce storefront for customer orders and product displays."
+    },
+    {
+      "req_ids": [
+        "SYS_05"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "name": "Nordkap Logistics (3PL)",
+      "description": "Third-party logistics partner operating warehouse fulfillment centres."
+    },
+    {
+      "req_ids": [
+        "INT_08"
+      ],
+      "basis": "inferred",
+      "validation_required": true,
+      "validation_reason": "Specific payment gateway provider name and SFTP structure need verification during detailed design.",
+      "name": "Payment Provider",
+      "description": "External payment gateway providing daily settlement files for reconciliation."
+    }
+  ],
+  "flows": [
+    {
+      "from_id": "Shopify Plus Storefront",
+      "to_id": "ARC_01",
+      "label": "Order Capture Payload",
+      "protocol": "HTTPS REST"
+    },
+    {
+      "from_id": "ARC_01",
+      "to_id": "ARC_02",
+      "label": "Inbound Order Event",
+      "protocol": "AMQP"
+    },
+    {
+      "from_id": "ARC_02",
+      "to_id": "ARC_03",
+      "label": "Order Processing & Transformation",
+      "protocol": "HTTPS"
+    },
+    {
+      "from_id": "ARC_03",
+      "to_id": "SAP S/4HANA",
+      "label": "Sales Order Creation",
+      "protocol": "HTTPS REST"
+    },
+    {
+      "from_id": "SAP S/4HANA",
+      "to_id": "ARC_03",
+      "label": "Stock & Master Data Delta",
+      "protocol": "HTTPS REST"
+    },
+    {
+      "from_id": "ARC_03",
+      "to_id": "ARC_04",
+      "label": "Fulfillment File Export",
+      "protocol": "SFTP"
+    },
+    {
+      "from_id": "ARC_04",
+      "to_id": "Nordkap Logistics (3PL)",
+      "label": "Order Release Batch",
+      "protocol": "SFTP"
+    },
+    {
+      "from_id": "Nordkap Logistics (3PL)",
+      "to_id": "ARC_04",
+      "label": "Dispatch Confirmation File",
+      "protocol": "SFTP"
+    },
+    {
+      "from_id": "Payment Provider",
+      "to_id": "ARC_04",
+      "label": "Daily Settlement File",
+      "protocol": "SFTP"
+    },
+    {
+      "from_id": "ARC_05",
+      "to_id": "ARC_06",
+      "label": "Reconciliation Audit Record",
+      "protocol": "SQL"
+    },
+    {
+      "from_id": "ARC_02",
+      "to_id": "Snowflake Data Warehouse",
+      "label": "Intraday Order Event Stream",
+      "protocol": "HTTPS REST"
+    }
+  ]
+}

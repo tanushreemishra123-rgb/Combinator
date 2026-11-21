@@ -1,0 +1,577 @@
+{
+  "overview": "Arbormill Software requires an agent-assist solution embedded within Zendesk to support 73 frontline agents and escalation engineers handling 41,000 annual support tickets. The system indexes 2,400 Confluence pages, public GitHub Markdown documentation, 340 SharePoint runbooks, and 96,000 historical tickets to provide grounded draft replies, ticket classification, priority recommendations, and similar ticket retrieval.",
+  "business_problem": "Support agents face high average handle times of 14 minutes and a ticket misrouting rate of 22% due to manual knowledge retrieval across fragmented documentation sources. The lack of automated context retrieval slows resolution times and increases escalation friction across engineering teams.",
+  "objectives": [
+    {
+      "req_ids": [
+        "BR_01"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "text": "Reduce average ticket handle time from 14 minutes down to under 9 minutes using AI-assisted drafting and search retrieval."
+    },
+    {
+      "req_ids": [
+        "BR_02"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "text": "Reduce ticket re-routing rate from 22% to below 5% through automated ticket classification."
+    }
+  ],
+  "personas": [
+    {
+      "req_ids": [
+        "PER_01"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "name": "Support Agents",
+      "description": "Frontline customer support staff in Dublin and Austin handling ticket triage and customer communication.",
+      "needs": [
+        "Faster search across disparate documentation repositories",
+        "AI-assisted draft replies grounded in accurate documentation"
+      ]
+    },
+    {
+      "req_ids": [
+        "PER_02"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "name": "Escalation Engineers",
+      "description": "Technical specialists handling complex customer issues and maintaining engineering runbooks.",
+      "needs": [
+        "Direct access to SharePoint runbooks and technical resolutions",
+        "Accurate triage and ticket routing for escalated technical issues"
+      ]
+    }
+  ],
+  "user_journeys": [
+    {
+      "req_ids": [
+        "FR_02",
+        "FR_03",
+        "INT_01",
+        "FR_05"
+      ],
+      "basis": "inferred",
+      "validation_required": false,
+      "validation_reason": "",
+      "name": "Ticket Triage and Automated Routing",
+      "actor": "Support Agent",
+      "steps": [
+        "Customer submits a new ticket to Zendesk.",
+        "System ingests ticket data via Zendesk API integration.",
+        "System classifies issue category and product area while suggesting priority tier.",
+        "Ticket is automatically routed to the designated queue for support triage."
+      ]
+    },
+    {
+      "req_ids": [
+        "FR_01",
+        "FR_05",
+        "SEC_01",
+        "INT_01"
+      ],
+      "basis": "inferred",
+      "validation_required": false,
+      "validation_reason": "",
+      "name": "Grounded Reply Generation and Approval",
+      "actor": "Support Agent",
+      "steps": [
+        "Agent opens customer ticket in the Zendesk workspace.",
+        "System redacts sensitive PII and queries documentation vector store.",
+        "System displays grounded draft response with inline source citations in sidebar panel.",
+        "Agent reviews draft, modifies text if necessary, and approves outbound response."
+      ]
+    },
+    {
+      "req_ids": [
+        "FR_04",
+        "FR_05",
+        "DATA_01",
+        "SYS_03"
+      ],
+      "basis": "inferred",
+      "validation_required": false,
+      "validation_reason": "",
+      "name": "Similar Ticket Retrieval and Resolution",
+      "actor": "Escalation Engineer",
+      "steps": [
+        "Escalation engineer opens complex customer ticket in Zendesk.",
+        "System queries historical ticket database filtering out deprecated procedures.",
+        "System presents top three matching past tickets with resolution steps in sidebar.",
+        "Engineer applies verified resolution steps to resolve customer issue."
+      ]
+    }
+  ],
+  "functional_requirements": [
+    {
+      "req_ids": [
+        "FR_01"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "req_id": "FR_01",
+      "statement": "Generate suggested replies grounded in documentation and historical tickets, displaying cited sources for human review.",
+      "acceptance_conditions": [
+        "Every generated draft displays clickable inline source citations.",
+        "No reply is dispatched to customer without explicit agent approval."
+      ]
+    },
+    {
+      "req_ids": [
+        "FR_02"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "req_id": "FR_02",
+      "statement": "Classify incoming tickets by product area and issue category and route to designated queues.",
+      "acceptance_conditions": [
+        "Incoming tickets are tagged with product area and category labels.",
+        "Misrouting rate remains below specified operational target."
+      ]
+    },
+    {
+      "req_ids": [
+        "FR_03"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "req_id": "FR_03",
+      "statement": "Provide priority recommendation options respecting contractual SLA tiers and routing rules.",
+      "acceptance_conditions": [
+        "Priority recommendations align with customer SLA agreements.",
+        "Agents can accept or override suggested priority assignments."
+      ]
+    },
+    {
+      "req_ids": [
+        "FR_04"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "req_id": "FR_04",
+      "statement": "Retrieve and present top three most relevant past tickets along with resolution details.",
+      "acceptance_conditions": [
+        "Sidebar displays up to three relevant historical tickets.",
+        "Retrieved tickets show associated resolution summaries."
+      ]
+    },
+    {
+      "req_ids": [
+        "FR_05"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "req_id": "FR_05",
+      "statement": "Provide embedded Zendesk side-panel interface displaying drafts, citations, and similar tickets.",
+      "acceptance_conditions": [
+        "Sidebar panel renders within standard Zendesk agent ticket view.",
+        "Agents can insert generated draft text directly into response editor."
+      ]
+    }
+  ],
+  "non_functional_requirements": [
+    {
+      "req_ids": [
+        "NFR_01"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "req_id": "NFR_01",
+      "statement": "Support annual ticket volume of 41,000 growing at 18% year-over-year with daily peaks of 280 tickets.",
+      "acceptance_conditions": [
+        "System maintains throughput during peak loads of 280 tickets per day.",
+        "Storage and vector indexes scale automatically for annual growth."
+      ]
+    },
+    {
+      "req_ids": [
+        "SEC_01"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "req_id": "SEC_01",
+      "statement": "Redact customer personal data, credentials, and internal hostnames prior to model invocation with audit logs.",
+      "acceptance_conditions": [
+        "PII and hostnames are sanitized before LLM API calls.",
+        "Audit logs record all redactions with verifiable timestamps."
+      ]
+    },
+    {
+      "req_ids": [
+        "SEC_02"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "req_id": "SEC_02",
+      "statement": "Ensure inference and data persistence remain strictly within EU boundaries without cross-border prompt retention.",
+      "acceptance_conditions": [
+        "Model endpoints and data storage reside exclusively in EU data centers.",
+        "No prompt text is retained outside EU boundaries."
+      ]
+    },
+    {
+      "req_ids": [
+        "SEC_03"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "req_id": "SEC_03",
+      "statement": "Retain auditable record of model call timestamps and cited documents for 24 months for every generated draft.",
+      "acceptance_conditions": [
+        "Logs capture timestamp, prompt ID, and cited documents for 24 months.",
+        "Audit data is exportable for compliance verification."
+      ]
+    },
+    {
+      "req_ids": [
+        "SEC_04"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "req_id": "SEC_04",
+      "statement": "Enforce contractual guarantees preventing third-party model providers from training on customer data.",
+      "acceptance_conditions": [
+        "Provider contracts explicitly prohibit model training on submitted data.",
+        "API endpoints operate under zero-data-retention policy."
+      ]
+    },
+    {
+      "req_ids": [
+        "NFR_02"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "req_id": "NFR_02",
+      "statement": "Establish documented operating procedure and error detection mechanism for inaccurate responses.",
+      "acceptance_conditions": [
+        "Documented governance workflow covers error logging and remediation.",
+        "Feedback mechanism captures agent edits to draft responses."
+      ]
+    },
+    {
+      "req_ids": [
+        "NFR_03"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "req_id": "NFR_03",
+      "statement": "Update knowledge indexes on bi-weekly cadence aligning with product release cycles.",
+      "acceptance_conditions": [
+        "Knowledge repositories are re-indexed every two weeks.",
+        "Outdated release documentation is refreshed automatically."
+      ]
+    },
+    {
+      "req_ids": [
+        "DATA_01"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "req_id": "DATA_01",
+      "statement": "Filter or down-weight outdated guidance and deprecated procedures from historical ticket archives.",
+      "acceptance_conditions": [
+        "Deprecated resolutions are omitted or ranked below active documentation.",
+        "Filtering logic respects version tags and resolution dates."
+      ]
+    },
+    {
+      "req_ids": [
+        "DATA_02"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "req_id": "DATA_02",
+      "statement": "Support disambiguation of overlapping technical terms across four distinct product lines.",
+      "acceptance_conditions": [
+        "Search queries incorporate product context tags to resolve term ambiguity.",
+        "Draft replies use correct product-specific terminology."
+      ]
+    },
+    {
+      "req_ids": [
+        "NFR_04"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "req_id": "NFR_04",
+      "statement": "Implement offline and online evaluation framework for answer quality and generation accuracy.",
+      "acceptance_conditions": [
+        "Offline benchmark suite tests retrieval and generation precision.",
+        "Online metrics track agent draft acceptance rate."
+      ]
+    },
+    {
+      "req_ids": [
+        "TECH_01"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "req_id": "TECH_01",
+      "statement": "Evaluate and recommend cloud platform provider with comparative trade-off and lock-in analysis.",
+      "acceptance_conditions": [
+        "Cloud evaluation deliverable compares AWS, Azure, and GCP EU options.",
+        "Architecture recommendation includes lock-in risk assessment."
+      ]
+    },
+    {
+      "req_ids": [
+        "CON_02"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "req_id": "CON_02",
+      "statement": "Deploy initial operational release in front of support agents by end of Q3 2026.",
+      "acceptance_conditions": [
+        "Production release operational in Zendesk by Q3 2026 deadline."
+      ]
+    },
+    {
+      "req_ids": [
+        "CON_03"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "req_id": "CON_03",
+      "statement": "Design solution maintainability for 9-person platform team with zero ML engineers.",
+      "acceptance_conditions": [
+        "Solution relies on managed services requiring minimal low-level ML maintenance."
+      ]
+    }
+  ],
+  "integrations": [
+    {
+      "req_ids": [
+        "INT_01",
+        "SYS_03"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "text": "Bidirectional Zendesk integration to ingest tickets and embed agent-assist UI panel."
+    },
+    {
+      "req_ids": [
+        "INT_02",
+        "SYS_01"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "text": "Inbound Confluence Cloud connector to index 2,400 internal documentation pages."
+    },
+    {
+      "req_ids": [
+        "INT_03",
+        "SYS_02"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "text": "Inbound GitHub connector to index public Markdown documentation files."
+    },
+    {
+      "req_ids": [
+        "INT_04",
+        "SYS_04"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "text": "Inbound SharePoint connector to index 340 engineering runbooks."
+    }
+  ],
+  "dependencies": [
+    {
+      "req_ids": [
+        "SYS_01",
+        "SYS_02",
+        "SYS_03",
+        "SYS_04"
+      ],
+      "basis": "inferred",
+      "validation_required": false,
+      "validation_reason": "",
+      "text": "API access permissions and service credentials for Zendesk, Confluence Cloud, GitHub, and SharePoint."
+    }
+  ],
+  "assumptions": [
+    {
+      "req_ids": [
+        "ASM_01",
+        "GAP_01",
+        "Q_01"
+      ],
+      "basis": "assumed",
+      "validation_required": true,
+      "validation_reason": "Cloud provider ownership pending customer confirmation.",
+      "text": "Solution will deploy into customer-provided AWS or Azure EU region account using managed EU-resident LLM endpoints."
+    },
+    {
+      "req_ids": [
+        "ASM_02",
+        "GAP_02",
+        "Q_02"
+      ],
+      "basis": "assumed",
+      "validation_required": true,
+      "validation_reason": "Draft generation latency target pending customer confirmation.",
+      "text": "System response time is budgeted for p95 latency under 4 seconds for streaming reply draft rendering in Zendesk sidebar."
+    },
+    {
+      "req_ids": [
+        "ASM_03",
+        "GAP_03",
+        "Q_03"
+      ],
+      "basis": "assumed",
+      "validation_required": true,
+      "validation_reason": "Zendesk app authentication mechanism pending confirmation.",
+      "text": "Zendesk sidebar client authenticates via standard Zendesk Apps Framework using signed JWT and OAuth 2.0."
+    },
+    {
+      "req_ids": [
+        "ASM_04",
+        "GAP_04",
+        "Q_04"
+      ],
+      "basis": "assumed",
+      "validation_required": true,
+      "validation_reason": "Ticket deprecation metadata rules open for confirmation.",
+      "text": "Tickets older than 24 months or marked with deprecated tags are excluded or down-weighted using ticket metadata."
+    },
+    {
+      "req_ids": [
+        "ASM_05",
+        "GAP_05",
+        "Q_05"
+      ],
+      "basis": "assumed",
+      "validation_required": true,
+      "validation_reason": "Repository access control rules pending confirmation.",
+      "text": "All indexed knowledge repositories represent shared internal technical documentation accessible to all 73 agents."
+    },
+    {
+      "req_ids": [
+        "ASM_06",
+        "GAP_06",
+        "Q_06"
+      ],
+      "basis": "assumed",
+      "validation_required": true,
+      "validation_reason": "Quantitative acceptance benchmark threshold pending customer confirmation.",
+      "text": "Production release requires exceeding 85% classification accuracy and 90% grounded correctness on test dataset."
+    }
+  ],
+  "risks": [
+    {
+      "req_ids": [
+        "CON_03"
+      ],
+      "basis": "inferred",
+      "validation_required": false,
+      "validation_reason": "",
+      "text": "Lack of internal ML engineering staff could delay resolution of complex retrieval or model drift issues."
+    }
+  ],
+  "out_of_scope": [
+    {
+      "req_ids": [
+        "CON_01"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "text": "Direct customer-facing chatbot or conversational interface.",
+      "reason": "Customer explicitly excluded direct end-user facing conversational tools for this project phase."
+    }
+  ],
+  "open_questions": [
+    {
+      "req_ids": [
+        "Q_01",
+        "GAP_01"
+      ],
+      "basis": "inferred",
+      "validation_required": false,
+      "validation_reason": "",
+      "text": "Does Arbormill have an existing EU cloud subscription (AWS, Azure, or GCP) to host this solution?"
+    },
+    {
+      "req_ids": [
+        "Q_02",
+        "GAP_02"
+      ],
+      "basis": "inferred",
+      "validation_required": false,
+      "validation_reason": "",
+      "text": "What is the maximum acceptable latency for generating a grounded reply draft in the Zendesk sidebar?"
+    },
+    {
+      "req_ids": [
+        "Q_03",
+        "GAP_03"
+      ],
+      "basis": "inferred",
+      "validation_required": false,
+      "validation_reason": "",
+      "text": "Will the Zendesk sidebar app authenticate via Zendesk OAuth 2.0 or an existing enterprise IdP?"
+    },
+    {
+      "req_ids": [
+        "Q_04",
+        "GAP_04"
+      ],
+      "basis": "inferred",
+      "validation_required": false,
+      "validation_reason": "",
+      "text": "What specific metadata fields or tags should be used to filter or down-rank deprecated historical tickets?"
+    },
+    {
+      "req_ids": [
+        "Q_05",
+        "GAP_05"
+      ],
+      "basis": "inferred",
+      "validation_required": false,
+      "validation_reason": "",
+      "text": "Are all indexed Confluence pages, GitHub docs, and SharePoint runbooks universally accessible to all agents?"
+    },
+    {
+      "req_ids": [
+        "Q_06",
+        "GAP_06"
+      ],
+      "basis": "inferred",
+      "validation_required": false,
+      "validation_reason": "",
+      "text": "What specific accuracy metrics and sample evaluation dataset size are required to approve production rollout?"
+    }
+  ],
+  "traceability": []
+}

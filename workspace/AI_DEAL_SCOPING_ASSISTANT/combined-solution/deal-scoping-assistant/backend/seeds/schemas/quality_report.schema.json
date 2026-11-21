@@ -1,0 +1,264 @@
+{
+  "$defs": {
+    "ArtifactKind": {
+      "enum": [
+        "prd",
+        "functional_scope",
+        "platform_recommendation",
+        "architecture",
+        "data_strategy",
+        "integration_architecture",
+        "ai_strategy",
+        "estimate_drivers",
+        "estimate",
+        "executive_summary"
+      ],
+      "title": "ArtifactKind",
+      "type": "string"
+    },
+    "CheckId": {
+      "enum": [
+        "QG_01",
+        "QG_02",
+        "QG_03",
+        "QG_04",
+        "QG_05",
+        "QG_06",
+        "QG_07",
+        "QG_08",
+        "QG_09",
+        "QG_10",
+        "QG_11",
+        "QG_12",
+        "QG_13",
+        "QG_14",
+        "QG_15",
+        "QG_16"
+      ],
+      "title": "CheckId",
+      "type": "string"
+    },
+    "CheckStatus": {
+      "enum": [
+        "passed",
+        "warning",
+        "failed",
+        "not_applicable"
+      ],
+      "title": "CheckStatus",
+      "type": "string"
+    },
+    "ConfidenceLevel": {
+      "enum": [
+        "high",
+        "medium",
+        "low"
+      ],
+      "title": "ConfidenceLevel",
+      "type": "string"
+    },
+    "ExportStatus": {
+      "enum": [
+        "ready",
+        "review_required",
+        "blocked"
+      ],
+      "title": "ExportStatus",
+      "type": "string"
+    },
+    "QualityCheckResult": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/CheckId",
+          "description": "Check id from the catalogue, QG_01 to QG_16."
+        },
+        "name": {
+          "description": "Short name of the check.",
+          "title": "Name",
+          "type": "string"
+        },
+        "severity": {
+          "$ref": "#/$defs/Severity",
+          "description": "How serious a finding of this check is."
+        },
+        "status": {
+          "$ref": "#/$defs/CheckStatus",
+          "description": "Outcome of the check."
+        },
+        "message": {
+          "description": "What the check found.",
+          "title": "Message",
+          "type": "string"
+        },
+        "affected_ids": {
+          "description": "Scope or artifact element ids involved.",
+          "items": {
+            "type": "string"
+          },
+          "title": "Affected Ids",
+          "type": "array"
+        },
+        "remediation": {
+          "default": "",
+          "description": "What the reviewer should do about it.",
+          "title": "Remediation",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "severity",
+        "status",
+        "message"
+      ],
+      "title": "QualityCheckResult",
+      "type": "object"
+    },
+    "QualitySummary": {
+      "additionalProperties": false,
+      "properties": {
+        "coverage_pct": {
+          "description": "Share of FR/NFR/INT/DATA/SEC requirements covered.",
+          "maximum": 100,
+          "minimum": 0,
+          "title": "Coverage Pct",
+          "type": "number"
+        },
+        "uncovered_requirements": {
+          "description": "Number of uncovered requirements.",
+          "minimum": 0,
+          "title": "Uncovered Requirements",
+          "type": "integer"
+        },
+        "unresolved_questions": {
+          "description": "Number of open clarification questions.",
+          "minimum": 0,
+          "title": "Unresolved Questions",
+          "type": "integer"
+        },
+        "unsupported_recommendations": {
+          "description": "Elements referencing no approved requirement.",
+          "minimum": 0,
+          "title": "Unsupported Recommendations",
+          "type": "integer"
+        },
+        "estimate_confidence": {
+          "$ref": "#/$defs/ConfidenceLevel",
+          "description": "Overall estimate confidence."
+        },
+        "export_status": {
+          "$ref": "#/$defs/ExportStatus",
+          "description": "ready, review_required or blocked."
+        }
+      },
+      "required": [
+        "coverage_pct",
+        "uncovered_requirements",
+        "unresolved_questions",
+        "unsupported_recommendations",
+        "estimate_confidence",
+        "export_status"
+      ],
+      "title": "QualitySummary",
+      "type": "object"
+    },
+    "Severity": {
+      "enum": [
+        "info",
+        "warning",
+        "error"
+      ],
+      "title": "Severity",
+      "type": "string"
+    },
+    "ValidationItem": {
+      "additionalProperties": false,
+      "description": "One thing a human must confirm before the package is used.",
+      "properties": {
+        "id": {
+          "description": "Assumption id or generated element id.",
+          "title": "Id",
+          "type": "string"
+        },
+        "kind": {
+          "description": "assumption or element.",
+          "title": "Kind",
+          "type": "string"
+        },
+        "artifact": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ArtifactKind"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Artifact the element belongs to, for elements."
+        },
+        "reason": {
+          "description": "Why a human has to validate it.",
+          "title": "Reason",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "reason"
+      ],
+      "title": "ValidationItem",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "session_id": {
+      "description": "Session the report belongs to.",
+      "title": "Session Id",
+      "type": "string"
+    },
+    "scope_version": {
+      "description": "Scope version the report was run against.",
+      "title": "Scope Version",
+      "type": "integer"
+    },
+    "checks": {
+      "description": "Check results.",
+      "items": {
+        "$ref": "#/$defs/QualityCheckResult"
+      },
+      "title": "Checks",
+      "type": "array"
+    },
+    "summary": {
+      "$ref": "#/$defs/QualitySummary",
+      "description": "Summary shown before export."
+    },
+    "items_requiring_human_validation": {
+      "description": "Pending assumptions and elements flagged for review.",
+      "items": {
+        "$ref": "#/$defs/ValidationItem"
+      },
+      "title": "Items Requiring Human Validation",
+      "type": "array"
+    },
+    "created_at": {
+      "description": "When the gate was run.",
+      "format": "date-time",
+      "title": "Created At",
+      "type": "string"
+    }
+  },
+  "required": [
+    "session_id",
+    "scope_version",
+    "summary",
+    "created_at"
+  ],
+  "title": "QualityReport",
+  "type": "object"
+}

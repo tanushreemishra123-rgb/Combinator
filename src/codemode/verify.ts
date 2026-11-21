@@ -29,9 +29,13 @@ export function runCommand(
   opts: { cwd: string; timeoutMs: number },
 ): Promise<{ code: number | null; stdout: string; stderr: string; timedOut: boolean }> {
   return new Promise((resolve) => {
+    const windowsNpm = process.platform === "win32" && (cmd === "npm" || cmd === "npm.cmd");
+    const executable = windowsNpm ? process.env.ComSpec || "cmd.exe" : cmd;
+    const executableArgs = windowsNpm ? ["/d", "/s", "/c", "npm", ...args] : args;
+
     const child = execFile(
-      cmd,
-      args,
+      executable,
+      executableArgs,
       { cwd: opts.cwd, timeout: opts.timeoutMs, maxBuffer: 8 * 1024 * 1024, shell: false },
       (err, stdout, stderr) => {
         const timedOut = !!err && (err as NodeJS.ErrnoException).code === "ETIMEDOUT";

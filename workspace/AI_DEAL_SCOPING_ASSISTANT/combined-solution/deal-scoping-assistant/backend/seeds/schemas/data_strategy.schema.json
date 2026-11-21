@@ -1,0 +1,189 @@
+{
+  "$defs": {
+    "Basis": {
+      "enum": [
+        "customer",
+        "inferred",
+        "assumed",
+        "recommended"
+      ],
+      "title": "Basis",
+      "type": "string"
+    },
+    "DataDomain": {
+      "additionalProperties": false,
+      "properties": {
+        "req_ids": {
+          "description": "Scope item ids this element is grounded in.",
+          "items": {
+            "type": "string"
+          },
+          "title": "Req Ids",
+          "type": "array"
+        },
+        "basis": {
+          "$ref": "#/$defs/Basis",
+          "description": "customer, inferred, assumed or recommended."
+        },
+        "validation_required": {
+          "default": false,
+          "description": "True when a human must validate this element before use.",
+          "title": "Validation Required",
+          "type": "boolean"
+        },
+        "validation_reason": {
+          "default": "",
+          "description": "Why human validation is required, when it is.",
+          "title": "Validation Reason",
+          "type": "string"
+        },
+        "id": {
+          "description": "Data domain id such as DOM_01.",
+          "title": "Id",
+          "type": "string"
+        },
+        "name": {
+          "description": "Domain name.",
+          "title": "Name",
+          "type": "string"
+        },
+        "description": {
+          "description": "What data the domain holds.",
+          "title": "Description",
+          "type": "string"
+        },
+        "sources": {
+          "description": "Systems the data comes from.",
+          "items": {
+            "type": "string"
+          },
+          "title": "Sources",
+          "type": "array"
+        },
+        "owner": {
+          "default": "",
+          "description": "Business owner of the domain.",
+          "title": "Owner",
+          "type": "string"
+        }
+      },
+      "required": [
+        "basis",
+        "id",
+        "name",
+        "description"
+      ],
+      "title": "DataDomain",
+      "type": "object"
+    },
+    "NarrativeSection": {
+      "additionalProperties": false,
+      "description": "A prose section that also points at architecture components.",
+      "properties": {
+        "req_ids": {
+          "description": "Scope item ids this element is grounded in.",
+          "items": {
+            "type": "string"
+          },
+          "title": "Req Ids",
+          "type": "array"
+        },
+        "basis": {
+          "$ref": "#/$defs/Basis",
+          "description": "customer, inferred, assumed or recommended."
+        },
+        "validation_required": {
+          "default": false,
+          "description": "True when a human must validate this element before use.",
+          "title": "Validation Required",
+          "type": "boolean"
+        },
+        "validation_reason": {
+          "default": "",
+          "description": "Why human validation is required, when it is.",
+          "title": "Validation Reason",
+          "type": "string"
+        },
+        "text": {
+          "description": "Section content.",
+          "title": "Text",
+          "type": "string"
+        },
+        "arc_ids": {
+          "description": "Architecture component ids referenced by the section.",
+          "items": {
+            "type": "string"
+          },
+          "title": "Arc Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "basis",
+        "text"
+      ],
+      "title": "NarrativeSection",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "domains": {
+      "description": "Major data domains.",
+      "items": {
+        "$ref": "#/$defs/DataDomain"
+      },
+      "title": "Domains",
+      "type": "array"
+    },
+    "ingestion": {
+      "$ref": "#/$defs/NarrativeSection",
+      "description": "Data ingestion."
+    },
+    "transactional_storage": {
+      "$ref": "#/$defs/NarrativeSection",
+      "description": "Transactional storage."
+    },
+    "analytical_storage": {
+      "$ref": "#/$defs/NarrativeSection",
+      "description": "Analytical storage."
+    },
+    "quality": {
+      "$ref": "#/$defs/NarrativeSection",
+      "description": "Data quality."
+    },
+    "metadata_governance": {
+      "$ref": "#/$defs/NarrativeSection",
+      "description": "Metadata and governance."
+    },
+    "retention": {
+      "$ref": "#/$defs/NarrativeSection",
+      "description": "Data retention."
+    },
+    "privacy_security": {
+      "$ref": "#/$defs/NarrativeSection",
+      "description": "Privacy and security."
+    },
+    "reporting_analytics": {
+      "$ref": "#/$defs/NarrativeSection",
+      "description": "Reporting and analytics."
+    },
+    "backup_recovery": {
+      "$ref": "#/$defs/NarrativeSection",
+      "description": "Backup and recovery."
+    }
+  },
+  "required": [
+    "ingestion",
+    "transactional_storage",
+    "analytical_storage",
+    "quality",
+    "metadata_governance",
+    "retention",
+    "privacy_security",
+    "reporting_analytics",
+    "backup_recovery"
+  ],
+  "title": "DataStrategy",
+  "type": "object"
+}

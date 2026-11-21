@@ -1,5 +1,58 @@
 {
   "challengeId": "AI_DEAL_SCOPING_ASSISTANT",
   "mode": "code",
-  "entries": []
+  "entries": [
+    {
+      "target": "combined-solution/ (base)",
+      "sourceId": "SUB_001",
+      "sourcePath": "submissions\\SUB_001",
+      "decisionId": "DEC_8o3yiea",
+      "evidence": [
+        {
+          "id": "EV_b59qqoj",
+          "statement": "infra unit (Docker)",
+          "locations": [
+            {
+              "kind": "file",
+              "submissionId": "SUB_001",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant",
+              "excerpt": "application root"
+            }
+          ],
+          "origin": "source",
+          "confidence": "high"
+        },
+        {
+          "id": "EV_6zf09c4",
+          "statement": "backend unit (Docker, Python)",
+          "locations": [
+            {
+              "kind": "file",
+              "submissionId": "SUB_001",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\backend",
+              "excerpt": "application root"
+            }
+          ],
+          "origin": "source",
+          "confidence": "high"
+        },
+        {
+          "id": "EV_9x2rhyt",
+          "statement": "frontend unit (Docker, React, TypeScript, Vite)",
+          "locations": [
+            {
+              "kind": "file",
+              "submissionId": "SUB_001",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\frontend",
+              "excerpt": "application root"
+            }
+          ],
+          "origin": "source",
+          "confidence": "high"
+        }
+      ],
+      "generated": false,
+      "note": "Base copied verbatim (629 files)."
+    }
+  ]
 }

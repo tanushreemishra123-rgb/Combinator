@@ -25,11 +25,11 @@
       "recommendation": "OPT_6rcrzi4",
       "reasoning": "SUB_001 has the highest grounded base suitability (94): coverage≈89%, tests=complete, build=present, risk=low.",
       "risk": "low",
-      "state": "pending",
+      "state": "accepted",
       "selectedSource": "OPT_6rcrzi4",
-      "copilotComment": null,
+      "copilotComment": "Copilot accepted the recommended options.",
       "regenerationRequired": true,
-      "updatedAt": "proposed"
+      "updatedAt": "2026-11-21T11:25:19.022Z"
     },
     {
       "id": "DEC_7atncil",
@@ -55,11 +55,11 @@
       "recommendation": "OPT_7hxaeqz",
       "reasoning": "SUB_002 covers \"Browser-accessible learning adventure landing page\" more strongly than the base. SUB_002 shows the strongest grounded coverage (complete) for this requirement.",
       "risk": "high",
-      "state": "pending",
+      "state": "accepted",
       "selectedSource": "OPT_7hxaeqz",
-      "copilotComment": null,
+      "copilotComment": "Copilot accepted the recommended options.",
       "regenerationRequired": true,
-      "updatedAt": "proposed"
+      "updatedAt": "2026-11-21T11:25:19.023Z"
     },
     {
       "id": "DEC_4881xu3",
@@ -85,11 +85,11 @@
       "recommendation": "OPT_9oahcmd",
       "reasoning": "SUB_002 covers \"AI Only Mode and AI feedback flow\" more strongly than the base. SUB_002 shows the strongest grounded coverage (complete) for this requirement.",
       "risk": "high",
-      "state": "pending",
+      "state": "accepted",
       "selectedSource": "OPT_9oahcmd",
-      "copilotComment": null,
+      "copilotComment": "Copilot accepted the recommended options.",
       "regenerationRequired": true,
-      "updatedAt": "proposed"
+      "updatedAt": "2026-11-21T11:25:19.023Z"
     },
     {
       "id": "DEC_9fqeyum",
@@ -115,11 +115,11 @@
       "recommendation": "OPT_8g2czwa",
       "reasoning": "SUB_002 covers \"AI fallback and documentation\" more strongly than the base. SUB_002 shows the strongest grounded coverage (complete) for this requirement.",
       "risk": "high",
-      "state": "pending",
+      "state": "accepted",
       "selectedSource": "OPT_8g2czwa",
-      "copilotComment": null,
+      "copilotComment": "Copilot accepted the recommended options.",
       "regenerationRequired": true,
-      "updatedAt": "proposed"
+      "updatedAt": "2026-11-21T11:25:19.023Z"
     }
   ]
 }

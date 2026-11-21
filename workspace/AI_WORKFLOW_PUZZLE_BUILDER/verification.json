@@ -2,7 +2,7 @@
   "challengeId": "AI_WORKFLOW_PUZZLE_BUILDER",
   "mode": "code",
   "candidate": "combined-solution/",
-  "overall": "failed",
+  "overall": "partial",
   "steps": [
     {
       "name": "Source integrity (before/after SHA-256)",
@@ -11,44 +11,49 @@
     },
     {
       "name": "Candidate assembled (base + approved transplants)",
-      "state": "failed",
-      "detail": "No Copilot-approved base could be selected; candidate not assembled. Accept or select a base decision, then regenerate."
+      "state": "passed",
+      "detail": "Base SUB_002 copied; 1 transplant(s) applied, 0 rolled back."
     },
     {
       "name": "Dependency installation",
       "command": "npm install --no-audit --no-fund --ignore-scripts",
-      "state": "skipped",
-      "detail": "Dynamic verification not executed in this pass. Re-run with --verify-exec to run it."
+      "state": "passed",
+      "detail": "Completed with exit code 0.",
+      "durationMs": 1004
     },
     {
       "name": "Build",
-      "state": "skipped",
-      "detail": "Dynamic verification not executed in this pass. Re-run with --verify-exec to run it."
+      "command": "npm run build",
+      "state": "passed",
+      "detail": "Completed with exit code 0.",
+      "durationMs": 3127
     },
     {
       "name": "Application startup (smoke)",
-      "state": "skipped",
-      "detail": "Dynamic verification not executed in this pass. Re-run with --verify-exec to run it."
+      "state": "not_verifiable",
+      "detail": "No command discovered for this step in the candidate."
     },
     {
       "name": "Organizer smoke tests",
-      "state": "skipped",
-      "detail": "Dynamic verification not executed in this pass. Re-run with --verify-exec to run it."
+      "state": "not_verifiable",
+      "detail": "No command discovered for this step in the candidate."
     },
     {
       "name": "Unit / integration tests",
-      "state": "skipped",
-      "detail": "Dynamic verification not executed in this pass. Re-run with --verify-exec to run it."
+      "command": "npm test -- --run",
+      "state": "passed",
+      "detail": "Completed with exit code 0.",
+      "durationMs": 1537
     },
     {
       "name": "Regression comparison vs base",
-      "state": "skipped",
-      "detail": "Requires dynamic execution (--verify-exec)."
+      "state": "not_verifiable",
+      "detail": "Base and candidate test suites must both run to compare; not both available in this environment."
     },
     {
       "name": "Approved-capability verification",
-      "state": "not_verifiable",
-      "detail": "No transplants applied; base capabilities only."
+      "state": "partial",
+      "detail": "Transplanted capabilities present in candidate under _transplants/: REQ_63bstt. Functional confirmation requires dynamic tests."
     },
     {
       "name": "Original scorecard re-evaluation",
@@ -56,6 +61,6 @@
       "detail": "Starter-pack reviews are normalized score stubs without a re-runnable scorecard; re-evaluation is not possible without the original scorecard definition. Not fabricated."
     }
   ],
-  "honestSummary": "Candidate did NOT fully verify. Failed steps are recorded above; the last verified candidate is preserved and affected decisions should be marked blocked. This candidate is not presented as successful.",
+  "honestSummary": "Dynamic steps that could run are recorded with real results; steps that could not be verified are marked not_verifiable (never passed). No step is reported as successful without evidence.",
   "sourceIntegrityOk": true
 }

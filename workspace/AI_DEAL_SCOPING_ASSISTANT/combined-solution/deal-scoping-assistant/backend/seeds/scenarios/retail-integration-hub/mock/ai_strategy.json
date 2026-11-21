@@ -1,0 +1,193 @@
+{
+  "ai_requirements": [
+    {
+      "req_ids": [
+        "SEC_01",
+        "TECH_05"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "text": "All AI processing containing customer order or personal data must strictly comply with GDPR and reside within designated European AWS regions."
+    },
+    {
+      "req_ids": [
+        "NFR_02",
+        "FR_01"
+      ],
+      "basis": "inferred",
+      "validation_required": true,
+      "validation_reason": "Target handle time reduction relies on AI summarization latency and zero hallucination tolerance for order status.",
+      "text": "Order status assistance must provide sub-second retrieval latency and absolute factual accuracy without hallucinating dispatch states."
+    }
+  ],
+  "use_cases": [
+    {
+      "req_ids": [
+        "FR_06",
+        "FR_07",
+        "FR_05"
+      ],
+      "basis": "recommended",
+      "validation_required": true,
+      "validation_reason": "AI-assisted break triage is a recommended capability to streamline operator review.",
+      "id": "AI_01",
+      "name": "Automated Reconciliation Break Analysis and Triage",
+      "description": "Analyzes daily three-way reconciliation breaks between Shopify, SAP, and 3PL files to generate root-cause summaries and recommended corrective actions.",
+      "processing_class": "ai",
+      "pattern": "Retrieval-Augmented Generation and Classification",
+      "model_options": [
+        "Anthropic Claude 3.5 Sonnet",
+        "Amazon Bedrock Titan"
+      ],
+      "retrieval_required": true,
+      "retrieval_notes": "Retrieves error logs, historical sequence numbers, and payload transaction histories from the operational database.",
+      "orchestration": "Event-driven workflow triggered post-reconciliation run via integration workflow orchestrator.",
+      "prompt_and_structured_output": "Uses JSON schema output enforcement to generate structured break categories and action recommendations.",
+      "evaluation": "Evaluated against historical manual break reports for classification accuracy and explanation clarity.",
+      "responsible_ai_safety": "Restricted to internal system logs without generating external notifications automatically.",
+      "monitoring_feedback": "Tracks operator acceptance rate of recommended break resolutions via Web Management Portal.",
+      "human_review": "All AI-recommended break resolutions require human confirmation before triggering system adjustments.",
+      "data_privacy": "System log payloads analyzed by AI are sanitized to strip personal data before model processing."
+    },
+    {
+      "req_ids": [
+        "FR_01",
+        "NFR_02"
+      ],
+      "basis": "recommended",
+      "validation_required": true,
+      "validation_reason": "Requires validation of agent workflow integration with Salesforce Service Cloud.",
+      "id": "AI_02",
+      "name": "Customer Service Order Context Summarizer",
+      "description": "Summarizes multi-system order lifecycle events and 3PL tracking updates for customer service agents in Salesforce.",
+      "processing_class": "ai",
+      "pattern": "Summarization and Tool Augmentation",
+      "model_options": [
+        "Anthropic Claude 3.5 Haiku",
+        "Amazon Bedrock Anthropic Claude 3 Sonnet"
+      ],
+      "retrieval_required": true,
+      "retrieval_notes": "Retrieves order status, 3PL dispatch events, and return statuses across connected systems.",
+      "orchestration": "API Gateway-invoked microservice triggered on-demand by customer service agents.",
+      "prompt_and_structured_output": "Structured prompt templates returning bulleted status timelines and next-best-action guidance.",
+      "evaluation": "Monitored for summary conciseness and alignment with underlying system event logs.",
+      "responsible_ai_safety": "Guardrails filter out sensitive payment credentials and enforce read-only data access.",
+      "monitoring_feedback": "Monitors agent handle time metrics and explicit agent helpfulness ratings.",
+      "human_review": "Agents review the generated summary before taking customer-facing actions or initiating returns.",
+      "data_privacy": "Ensures personal data processing adheres to GDPR boundaries and avoids retention in model context buffers."
+    }
+  ],
+  "deterministic_areas": [
+    {
+      "req_ids": [
+        "INT_01",
+        "INT_02",
+        "INT_04",
+        "FR_03",
+        "INT_08"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "text": "Core order routing, inventory ATP calculation, SFTP payload transformation, and payment settlement matching must remain strictly deterministic."
+    },
+    {
+      "req_ids": [
+        "FR_02",
+        "FR_08",
+        "FR_09"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "text": "Sequence-gap detection, duplicate message identification, and initial three-way reconciliation matching logic must be executed by exact rule-based engines."
+    }
+  ],
+  "mandatory_human_decisions": [
+    {
+      "req_ids": [
+        "FR_06",
+        "FR_07",
+        "FR_05"
+      ],
+      "basis": "inferred",
+      "validation_required": false,
+      "validation_reason": "",
+      "text": "Approving financial journal adjustments or inventory write-offs stemming from daily reconciliation breaks must be performed manually."
+    },
+    {
+      "req_ids": [
+        "FR_04"
+      ],
+      "basis": "inferred",
+      "validation_required": false,
+      "validation_reason": "",
+      "text": "Authorizing high-value customer order refunds and overriding automated return rejections must remain a human operator decision."
+    }
+  ],
+  "architecture_pattern": "Event-Driven Integration Architecture with AI-Assisted Operational Intelligence and Human-in-the-Loop Triage",
+  "provider_options": [
+    {
+      "platform": "aws",
+      "provider": "Amazon Bedrock",
+      "models": [
+        "Anthropic Claude 3.5 Sonnet",
+        "Anthropic Claude 3.5 Haiku"
+      ],
+      "rationale": "Provides managed, serverless access to high-performing foundation models with native AWS IAM and GDPR region compliance."
+    },
+    {
+      "platform": "gcp",
+      "provider": "Vertex AI",
+      "models": [
+        "Gemini 1.5 Pro",
+        "Gemini 1.5 Flash"
+      ],
+      "rationale": "Offers low-latency structured output generation and native integration if GCP platform components are selected."
+    },
+    {
+      "platform": "any",
+      "provider": "Custom orchestration SDK",
+      "models": [
+        "OpenAI GPT-4o-mini"
+      ],
+      "rationale": "Provides model-agnostic abstraction for structured JSON output generation across cloud environments."
+    }
+  ],
+  "framework_recommendations": [
+    {
+      "req_ids": [
+        "TECH_02",
+        "TECH_03",
+        "NFR_10"
+      ],
+      "basis": "recommended",
+      "validation_required": true,
+      "validation_reason": "Framework selection should be confirmed by the delivery engineering team.",
+      "name": "Amazon Bedrock and Amazon Bedrock AgentCore",
+      "purpose": "Managed model invocation, prompt management, and guardrails for operational AI features within AWS.",
+      "rationale": "Aligns with customer preference for AWS managed services and avoids maintaining dedicated orchestration infrastructure.",
+      "alternatives_considered": [
+        "LangChain",
+        "Semantic Kernel"
+      ]
+    },
+    {
+      "req_ids": [
+        "FR_05",
+        "FR_06"
+      ],
+      "basis": "recommended",
+      "validation_required": true,
+      "validation_reason": "Requires validation against team language and serverless deployment preferences.",
+      "name": "Custom orchestration",
+      "purpose": "Lightweight, deterministic wrapping of model calls and JSON output validation within serverless integration functions.",
+      "rationale": "Keeps operational footprint minimal and guarantees strict validation of structured summaries without full framework overhead.",
+      "alternatives_considered": [
+        "Mastra",
+        "LangGraph"
+      ]
+    }
+  ]
+}

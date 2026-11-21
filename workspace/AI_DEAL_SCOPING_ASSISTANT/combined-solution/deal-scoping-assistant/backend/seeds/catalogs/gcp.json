@@ -1,0 +1,721 @@
+{
+  "platform": "gcp",
+  "display_name": "Google Cloud Platform",
+  "services": [
+    {
+      "name": "Compute Engine",
+      "category": "compute",
+      "areas": [
+        "deployment_and_runtime",
+        "backend_services",
+        "availability_and_scalability"
+      ],
+      "description": "Virtual machines with custom machine types, for rehost migrations and workloads needing OS control."
+    },
+    {
+      "name": "Managed Instance Groups",
+      "category": "compute",
+      "areas": [
+        "availability_and_scalability",
+        "deployment_and_runtime"
+      ],
+      "description": "Identical Compute Engine instances with autohealing, rolling updates and autoscaling."
+    },
+    {
+      "name": "Google Kubernetes Engine",
+      "category": "containers",
+      "areas": [
+        "deployment_and_runtime",
+        "backend_services",
+        "availability_and_scalability"
+      ],
+      "description": "Managed Kubernetes in Standard or Autopilot mode for portable container workloads."
+    },
+    {
+      "name": "Cloud Run",
+      "category": "serverless",
+      "areas": [
+        "deployment_and_runtime",
+        "backend_services",
+        "user_facing_applications",
+        "apis"
+      ],
+      "description": "Serverless containers with request-based autoscaling, scale to zero and revision-based traffic splitting."
+    },
+    {
+      "name": "Cloud Run functions",
+      "category": "serverless",
+      "areas": [
+        "backend_services",
+        "messaging_and_event_processing",
+        "deployment_and_runtime"
+      ],
+      "description": "Event-driven functions triggered by HTTP, Pub/Sub, storage and Eventarc events."
+    },
+    {
+      "name": "App Engine",
+      "category": "compute",
+      "areas": [
+        "deployment_and_runtime",
+        "backend_services"
+      ],
+      "description": "Managed application platform for standard runtimes with versioned deployments and traffic migration."
+    },
+    {
+      "name": "Batch",
+      "category": "compute",
+      "areas": [
+        "backend_services"
+      ],
+      "description": "Managed scheduling and execution of large batch and high-performance computing jobs."
+    },
+    {
+      "name": "Artifact Registry",
+      "category": "registry",
+      "areas": [
+        "deployment_and_runtime"
+      ],
+      "description": "Private registry for container images and language packages, with vulnerability scanning."
+    },
+    {
+      "name": "Cloud Load Balancing",
+      "category": "networking",
+      "areas": [
+        "availability_and_scalability",
+        "apis",
+        "backend_services"
+      ],
+      "description": "Global and regional load balancing with anycast addressing, health checks and TLS termination."
+    },
+    {
+      "name": "Cloud CDN",
+      "category": "cdn",
+      "areas": [
+        "user_facing_applications",
+        "availability_and_scalability"
+      ],
+      "description": "Edge caching of static and cacheable dynamic content on Google's global network."
+    },
+    {
+      "name": "Cloud DNS",
+      "category": "networking",
+      "areas": [
+        "availability_and_scalability",
+        "user_facing_applications"
+      ],
+      "description": "Authoritative public and private DNS zones with geolocation and failover routing policies."
+    },
+    {
+      "name": "Google Cloud Armor",
+      "category": "security",
+      "areas": [
+        "security_controls",
+        "availability_and_scalability"
+      ],
+      "description": "Web application firewall, DDoS mitigation and bot management at the load balancer edge."
+    },
+    {
+      "name": "Firebase Hosting",
+      "category": "hosting",
+      "areas": [
+        "user_facing_applications",
+        "deployment_and_runtime"
+      ],
+      "description": "Hosting for static and single-page front ends with preview channels and atomic rollback."
+    },
+    {
+      "name": "Virtual Private Cloud",
+      "category": "networking",
+      "areas": [
+        "security_controls",
+        "deployment_and_runtime"
+      ],
+      "description": "Global private network with subnets, firewall rules and flow logs."
+    },
+    {
+      "name": "Private Service Connect",
+      "category": "networking",
+      "areas": [
+        "security_controls",
+        "integration_components"
+      ],
+      "description": "Private consumption of Google and third-party services from inside a VPC."
+    },
+    {
+      "name": "Apigee API Management",
+      "category": "api",
+      "areas": [
+        "apis",
+        "integration_components",
+        "security_controls"
+      ],
+      "description": "Full API management: gateway, policies, developer portal, monetisation and traffic analytics."
+    },
+    {
+      "name": "API Gateway",
+      "category": "api",
+      "areas": [
+        "apis"
+      ],
+      "description": "Lightweight managed gateway fronting Cloud Run, Cloud Run functions and App Engine backends."
+    },
+    {
+      "name": "Cloud Storage",
+      "category": "storage",
+      "areas": [
+        "databases_and_storage",
+        "user_facing_applications",
+        "backup_and_disaster_recovery"
+      ],
+      "description": "Object storage with standard, nearline, coldline and archive classes and object lifecycle rules."
+    },
+    {
+      "name": "Filestore",
+      "category": "storage",
+      "areas": [
+        "databases_and_storage",
+        "backup_and_disaster_recovery"
+      ],
+      "description": "Managed NFS file shares with snapshots, for applications that expect a POSIX file system."
+    },
+    {
+      "name": "Cloud SQL for PostgreSQL",
+      "category": "database",
+      "areas": [
+        "databases_and_storage"
+      ],
+      "description": "Managed PostgreSQL with high availability, read replicas, point-in-time recovery and automated patching."
+    },
+    {
+      "name": "Cloud SQL for SQL Server",
+      "category": "database",
+      "areas": [
+        "databases_and_storage"
+      ],
+      "description": "Managed SQL Server for migrations of existing Microsoft-stack databases."
+    },
+    {
+      "name": "AlloyDB for PostgreSQL",
+      "category": "database",
+      "areas": [
+        "databases_and_storage",
+        "availability_and_scalability"
+      ],
+      "description": "PostgreSQL-compatible engine with a columnar accelerator for mixed transactional and analytical load."
+    },
+    {
+      "name": "Spanner",
+      "category": "database",
+      "areas": [
+        "databases_and_storage",
+        "availability_and_scalability"
+      ],
+      "description": "Horizontally scalable relational database with strong consistency and multi-region configurations."
+    },
+    {
+      "name": "Firestore",
+      "category": "database",
+      "areas": [
+        "databases_and_storage",
+        "user_facing_applications"
+      ],
+      "description": "Serverless document database with client SDKs, offline sync and real-time listeners."
+    },
+    {
+      "name": "Bigtable",
+      "category": "database",
+      "areas": [
+        "databases_and_storage",
+        "availability_and_scalability"
+      ],
+      "description": "Wide-column store for very high write throughput and time-series or event data."
+    },
+    {
+      "name": "Memorystore for Redis",
+      "category": "cache",
+      "areas": [
+        "databases_and_storage",
+        "availability_and_scalability"
+      ],
+      "description": "Managed Redis for session state, caching and rate limiting, with replica failover."
+    },
+    {
+      "name": "BigQuery",
+      "category": "data_warehouse",
+      "areas": [
+        "databases_and_storage"
+      ],
+      "description": "Serverless data warehouse with separated storage and compute, streaming inserts and in-database ML."
+    },
+    {
+      "name": "BigLake",
+      "category": "analytics",
+      "areas": [
+        "databases_and_storage"
+      ],
+      "description": "Unified table access and fine-grained permissions across object storage and warehouse data."
+    },
+    {
+      "name": "Looker",
+      "category": "analytics",
+      "areas": [
+        "user_facing_applications"
+      ],
+      "description": "Governed semantic modelling and embedded dashboards over warehouse data."
+    },
+    {
+      "name": "Looker Studio",
+      "category": "analytics",
+      "areas": [
+        "user_facing_applications"
+      ],
+      "description": "Self-service report and dashboard authoring for business users."
+    },
+    {
+      "name": "Dataflow",
+      "category": "etl",
+      "areas": [
+        "integration_components",
+        "databases_and_storage",
+        "messaging_and_event_processing"
+      ],
+      "description": "Managed Apache Beam for unified batch and streaming transformation pipelines."
+    },
+    {
+      "name": "Dataproc",
+      "category": "analytics",
+      "areas": [
+        "databases_and_storage"
+      ],
+      "description": "Managed Spark and Hadoop clusters for existing big-data jobs."
+    },
+    {
+      "name": "Datastream",
+      "category": "etl",
+      "areas": [
+        "integration_components",
+        "databases_and_storage"
+      ],
+      "description": "Serverless change data capture from operational databases into BigQuery and Cloud Storage."
+    },
+    {
+      "name": "Cloud Data Fusion",
+      "category": "etl",
+      "areas": [
+        "integration_components",
+        "databases_and_storage"
+      ],
+      "description": "Visual, connector-based data integration built on CDAP for teams without Beam skills."
+    },
+    {
+      "name": "Database Migration Service",
+      "category": "migration",
+      "areas": [
+        "integration_components",
+        "databases_and_storage"
+      ],
+      "description": "Continuous or one-off database migration into Cloud SQL, AlloyDB and Spanner."
+    },
+    {
+      "name": "Storage Transfer Service",
+      "category": "file_transfer",
+      "areas": [
+        "integration_components",
+        "backup_and_disaster_recovery"
+      ],
+      "description": "Scheduled transfer of object and file data from SFTP, S3-compatible and on-premises sources."
+    },
+    {
+      "name": "Pub/Sub",
+      "category": "messaging",
+      "areas": [
+        "messaging_and_event_processing",
+        "integration_components"
+      ],
+      "description": "Global publish/subscribe messaging with push and pull delivery, dead-letter topics and replay."
+    },
+    {
+      "name": "Eventarc",
+      "category": "messaging",
+      "areas": [
+        "messaging_and_event_processing",
+        "integration_components"
+      ],
+      "description": "Routes events from Google Cloud sources and CloudEvents producers to Cloud Run and workflows."
+    },
+    {
+      "name": "Workflows",
+      "category": "integration",
+      "areas": [
+        "integration_components",
+        "backend_services"
+      ],
+      "description": "Serverless orchestration of API calls and services with retries, callbacks and error handling."
+    },
+    {
+      "name": "Cloud Composer",
+      "category": "integration",
+      "areas": [
+        "integration_components",
+        "databases_and_storage"
+      ],
+      "description": "Managed Apache Airflow for scheduled data and integration pipelines with dependencies."
+    },
+    {
+      "name": "Cloud Scheduler",
+      "category": "integration",
+      "areas": [
+        "integration_components",
+        "messaging_and_event_processing"
+      ],
+      "description": "Managed cron that triggers HTTP endpoints, Pub/Sub topics and workflows."
+    },
+    {
+      "name": "Cloud Tasks",
+      "category": "messaging",
+      "areas": [
+        "messaging_and_event_processing",
+        "backend_services"
+      ],
+      "description": "Asynchronous task queues with per-task scheduling, rate limits and retry configuration."
+    },
+    {
+      "name": "Application Integration",
+      "category": "integration",
+      "areas": [
+        "integration_components"
+      ],
+      "description": "Low-code integration flows with triggers, data mapping, error handling and connector tasks."
+    },
+    {
+      "name": "Integration Connectors",
+      "category": "integration",
+      "areas": [
+        "integration_components"
+      ],
+      "description": "Managed connectors to SaaS and enterprise systems, reused by Application Integration and Workflows."
+    },
+    {
+      "name": "Knowledge Catalog",
+      "category": "governance",
+      "areas": [
+        "databases_and_storage",
+        "security_controls"
+      ],
+      "description": "Metadata catalog, lineage, data quality and governance across the data estate; formerly Dataplex."
+    },
+    {
+      "name": "Cloud Identity",
+      "category": "identity",
+      "areas": [
+        "identity_and_access_management"
+      ],
+      "description": "Directory, group and device management for workforce users."
+    },
+    {
+      "name": "Identity Platform",
+      "category": "identity",
+      "areas": [
+        "identity_and_access_management",
+        "user_facing_applications"
+      ],
+      "description": "Customer identity with sign-up, sign-in, MFA, social providers and SAML or OIDC federation."
+    },
+    {
+      "name": "Identity and Access Management",
+      "category": "identity",
+      "areas": [
+        "identity_and_access_management",
+        "security_controls"
+      ],
+      "description": "Roles, conditions and policy bindings that control access to Google Cloud resources."
+    },
+    {
+      "name": "Identity-Aware Proxy",
+      "category": "identity",
+      "areas": [
+        "identity_and_access_management",
+        "security_controls"
+      ],
+      "description": "Context-aware access to applications and VMs without exposing them on a VPN."
+    },
+    {
+      "name": "Workload Identity Federation",
+      "category": "identity",
+      "areas": [
+        "identity_and_access_management",
+        "security_controls"
+      ],
+      "description": "Short-lived credentials for external workloads, removing long-lived service account keys."
+    },
+    {
+      "name": "Workforce Identity Federation",
+      "category": "identity",
+      "areas": [
+        "identity_and_access_management"
+      ],
+      "description": "Federated console and API access for employees from an external identity provider."
+    },
+    {
+      "name": "Secret Manager",
+      "category": "secrets",
+      "areas": [
+        "security_controls",
+        "identity_and_access_management"
+      ],
+      "description": "Versioned storage of secrets with IAM-controlled access, rotation notifications and audit logs."
+    },
+    {
+      "name": "Cloud Key Management Service",
+      "category": "encryption",
+      "areas": [
+        "security_controls"
+      ],
+      "description": "Customer-managed encryption keys with regional key rings and automatic rotation."
+    },
+    {
+      "name": "Cloud HSM",
+      "category": "encryption",
+      "areas": [
+        "security_controls"
+      ],
+      "description": "FIPS 140-2 Level 3 hardware-backed keys for stricter key custody requirements."
+    },
+    {
+      "name": "Certificate Manager",
+      "category": "security",
+      "areas": [
+        "security_controls"
+      ],
+      "description": "Provisioning and renewal of TLS certificates for load balancers and edge services."
+    },
+    {
+      "name": "Security Command Center",
+      "category": "security",
+      "areas": [
+        "security_controls",
+        "observability_and_monitoring"
+      ],
+      "description": "Posture management, vulnerability findings and threat detection across the organisation."
+    },
+    {
+      "name": "Sensitive Data Protection",
+      "category": "security",
+      "areas": [
+        "security_controls",
+        "databases_and_storage"
+      ],
+      "description": "Discovery, classification, masking and tokenisation of sensitive and personal data."
+    },
+    {
+      "name": "VPC Service Controls",
+      "category": "security",
+      "areas": [
+        "security_controls"
+      ],
+      "description": "Service perimeters that limit data movement out of approved projects and networks."
+    },
+    {
+      "name": "Binary Authorization",
+      "category": "security",
+      "areas": [
+        "security_controls",
+        "deployment_and_runtime"
+      ],
+      "description": "Deploy-time enforcement that only attested container images reach production."
+    },
+    {
+      "name": "reCAPTCHA",
+      "category": "security",
+      "areas": [
+        "security_controls",
+        "user_facing_applications"
+      ],
+      "description": "Bot and abuse detection on sign-up, sign-in and other public endpoints."
+    },
+    {
+      "name": "Assured Workloads",
+      "category": "governance",
+      "areas": [
+        "security_controls",
+        "environments_dev_test_prod"
+      ],
+      "description": "Guardrails that keep a workload inside a chosen regulatory and data-residency boundary."
+    },
+    {
+      "name": "Cloud Logging",
+      "category": "observability",
+      "areas": [
+        "observability_and_monitoring"
+      ],
+      "description": "Centralised log ingestion, retention, log-based metrics and export sinks."
+    },
+    {
+      "name": "Cloud Monitoring",
+      "category": "observability",
+      "areas": [
+        "observability_and_monitoring"
+      ],
+      "description": "Metrics, uptime checks, dashboards, alerting policies and service-level objectives."
+    },
+    {
+      "name": "Cloud Trace",
+      "category": "observability",
+      "areas": [
+        "observability_and_monitoring"
+      ],
+      "description": "Distributed tracing with latency distribution analysis across services."
+    },
+    {
+      "name": "Error Reporting",
+      "category": "observability",
+      "areas": [
+        "observability_and_monitoring"
+      ],
+      "description": "Groups and alerts on application exceptions across services and languages."
+    },
+    {
+      "name": "Cloud Profiler",
+      "category": "observability",
+      "areas": [
+        "observability_and_monitoring"
+      ],
+      "description": "Continuous, low-overhead CPU and memory profiling of production workloads."
+    },
+    {
+      "name": "Google Cloud Managed Service for Prometheus",
+      "category": "observability",
+      "areas": [
+        "observability_and_monitoring"
+      ],
+      "description": "Managed Prometheus-compatible collection, storage and querying for container metrics."
+    },
+    {
+      "name": "Cloud Build",
+      "category": "cicd",
+      "areas": [
+        "deployment_and_runtime",
+        "environments_dev_test_prod"
+      ],
+      "description": "Managed build, test and container image pipelines triggered from source repositories."
+    },
+    {
+      "name": "Cloud Deploy",
+      "category": "cicd",
+      "areas": [
+        "deployment_and_runtime",
+        "environments_dev_test_prod"
+      ],
+      "description": "Managed progressive delivery to GKE and Cloud Run with approvals and one-click rollback."
+    },
+    {
+      "name": "Infrastructure Manager",
+      "category": "iac",
+      "areas": [
+        "deployment_and_runtime",
+        "environments_dev_test_prod"
+      ],
+      "description": "Managed Terraform execution for provisioning Google Cloud infrastructure."
+    },
+    {
+      "name": "Resource Manager",
+      "category": "governance",
+      "areas": [
+        "environments_dev_test_prod",
+        "identity_and_access_management"
+      ],
+      "description": "Organisation, folder and project hierarchy that separates environments and applies policy."
+    },
+    {
+      "name": "Organization Policy Service",
+      "category": "governance",
+      "areas": [
+        "environments_dev_test_prod",
+        "security_controls"
+      ],
+      "description": "Constraints applied across the resource hierarchy, such as allowed regions and external IP use."
+    },
+    {
+      "name": "Backup and DR Service",
+      "category": "backup",
+      "areas": [
+        "backup_and_disaster_recovery"
+      ],
+      "description": "Application-consistent backup, retention and recovery for VMs, databases and file systems."
+    },
+    {
+      "name": "Gemini Enterprise Agent Platform",
+      "category": "ai_ml",
+      "areas": [
+        "ai_and_ml_services"
+      ],
+      "description": "Platform for building, deploying, evaluating and governing models and agents; formerly Vertex AI."
+    },
+    {
+      "name": "Agent Search",
+      "category": "ai_ml",
+      "areas": [
+        "ai_and_ml_services"
+      ],
+      "description": "Managed retrieval and answer generation over connected websites and structured or unstructured data."
+    },
+    {
+      "name": "Vertex AI Vector Search",
+      "category": "ai_ml",
+      "areas": [
+        "ai_and_ml_services",
+        "databases_and_storage"
+      ],
+      "description": "Low-latency approximate nearest-neighbour search over embeddings for retrieval and recommendation."
+    },
+    {
+      "name": "Document AI",
+      "category": "ai_ml",
+      "areas": [
+        "ai_and_ml_services"
+      ],
+      "description": "Parsers that extract structured fields from contracts, invoices, forms and identity documents."
+    },
+    {
+      "name": "Speech-to-Text",
+      "category": "ai_ml",
+      "areas": [
+        "ai_and_ml_services"
+      ],
+      "description": "Batch and streaming transcription with model adaptation for domain vocabulary."
+    },
+    {
+      "name": "Text-to-Speech",
+      "category": "ai_ml",
+      "areas": [
+        "ai_and_ml_services"
+      ],
+      "description": "Speech synthesis with a range of voices and languages."
+    },
+    {
+      "name": "Cloud Translation",
+      "category": "ai_ml",
+      "areas": [
+        "ai_and_ml_services"
+      ],
+      "description": "Machine translation with glossaries and an adaptive translation option."
+    },
+    {
+      "name": "Cloud Natural Language",
+      "category": "ai_ml",
+      "areas": [
+        "ai_and_ml_services"
+      ],
+      "description": "Entity, sentiment and syntax analysis, plus custom text classification."
+    },
+    {
+      "name": "Model Armor",
+      "category": "ai_ml",
+      "areas": [
+        "ai_and_ml_services",
+        "security_controls"
+      ],
+      "description": "Screens prompts and model responses for prompt injection, sensitive data and harmful content."
+    }
+  ]
+}

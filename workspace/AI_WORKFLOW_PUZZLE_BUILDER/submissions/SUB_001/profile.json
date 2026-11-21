@@ -33,7 +33,7 @@
     "summary": "Detected 3 application unit(s): infra at submissions\\SUB_001\\submission (Docker); backend at submissions\\SUB_001\\submission\\backend (Docker, Python); frontend at submissions\\SUB_001\\submission\\frontend (Docker, React, TypeScript, Vite). Detected 3 unit(s); languages: Docker, Python, React, TypeScript, Vite.",
     "evidence": [
       {
-        "id": "EV_9q7vp3w",
+        "id": "EV_b59qqoj",
         "statement": "infra unit (Docker)",
         "locations": [
           {
@@ -47,7 +47,7 @@
         "confidence": "high"
       },
       {
-        "id": "EV_3ij7bjd",
+        "id": "EV_6zf09c4",
         "statement": "backend unit (Docker, Python)",
         "locations": [
           {
@@ -61,7 +61,7 @@
         "confidence": "high"
       },
       {
-        "id": "EV_6oxldaj",
+        "id": "EV_9x2rhyt",
         "statement": "frontend unit (Docker, React, TypeScript, Vite)",
         "locations": [
           {
@@ -84,7 +84,7 @@
     ],
     "evidence": [
       {
-        "id": "EV_byonrja",
+        "id": "EV_775pjqu",
         "statement": "scripts present: dev, build, lint, preview",
         "locations": [
           {
@@ -106,7 +106,7 @@
     ],
     "evidence": [
       {
-        "id": "EV_5wr68ww",
+        "id": "EV_bjzufsj",
         "statement": "18 test file(s) found",
         "locations": [
           {
@@ -128,7 +128,7 @@
       "score": 17.7,
       "evidence": [
         {
-          "id": "EV_62492tu",
+          "id": "EV_czarfvq",
           "statement": "Grounded evidence for \"Visual Workflow Builder\" (49 files, 130 hits, strength 17.7)",
           "locations": [
             {
@@ -168,7 +168,7 @@
       "score": 18,
       "evidence": [
         {
-          "id": "EV_90mz1og",
+          "id": "EV_dg5zkw1",
           "statement": "Grounded evidence for \"Pre-Seeded Workflow Puzzles\" (61 files, 186 hits, strength 18.0)",
           "locations": [
             {
@@ -208,7 +208,7 @@
       "score": 19.1,
       "evidence": [
         {
-          "id": "EV_4ed6u72",
+          "id": "EV_do9c1wp",
           "statement": "Grounded evidence for \"Workflow Execution and Step Trace\" (98 files, 401 hits, strength 19.1)",
           "locations": [
             {
@@ -248,7 +248,7 @@
       "score": 17.6,
       "evidence": [
         {
-          "id": "EV_7j6dg2z",
+          "id": "EV_plvqqnd",
           "statement": "Grounded evidence for \"Failure Simulation\" (43 files, 111 hits, strength 17.6)",
           "locations": [
             {
@@ -288,7 +288,7 @@
       "score": 18.3,
       "evidence": [
         {
-          "id": "EV_4msat6s",
+          "id": "EV_97wcdkk",
           "statement": "Grounded evidence for \"Recovery and Safe Failure Handling\" (64 files, 212 hits, strength 18.3)",
           "locations": [
             {
@@ -328,7 +328,7 @@
       "score": 17.9,
       "evidence": [
         {
-          "id": "EV_393ig4f",
+          "id": "EV_2irsdqo",
           "statement": "Grounded evidence for \"Output Validation\" (56 files, 163 hits, strength 17.9)",
           "locations": [
             {
@@ -368,7 +368,7 @@
       "score": 18.8,
       "evidence": [
         {
-          "id": "EV_e136x79",
+          "id": "EV_8w6f1xx",
           "statement": "Grounded evidence for \"Human Review and Approval\" (56 files, 211 hits, strength 18.8)",
           "locations": [
             {
@@ -408,7 +408,7 @@
       "score": 17.2,
       "evidence": [
         {
-          "id": "EV_bsm8n2x",
+          "id": "EV_64ve8wd",
           "statement": "Grounded evidence for \"Reliability Feedback\" (14 files, 31 hits, strength 17.2)",
           "locations": [
             {
@@ -448,7 +448,7 @@
       "score": 17.7,
       "evidence": [
         {
-          "id": "EV_727evjy",
+          "id": "EV_0p80tvv",
           "statement": "Grounded evidence for \"Local Execution, Mock AI, and Documentation\" (27 files, 73 hits, strength 17.7)",
           "locations": [
             {

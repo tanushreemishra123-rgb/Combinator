@@ -17,7 +17,7 @@
     "summary": "Detected 1 application unit(s): frontend at submissions\\SUB_001\\signal-and-spark (React, TypeScript, Vite). Detected 1 unit(s); languages: React, TypeScript, Vite.",
     "evidence": [
       {
-        "id": "EV_a28k2f4",
+        "id": "EV_1rb2226",
         "statement": "frontend unit (React, TypeScript, Vite)",
         "locations": [
           {
@@ -40,7 +40,7 @@
     ],
     "evidence": [
       {
-        "id": "EV_6wa3ocs",
+        "id": "EV_7uqpd0z",
         "statement": "scripts present: dev, build, preview, typecheck, test",
         "locations": [
           {
@@ -62,7 +62,7 @@
     ],
     "evidence": [
       {
-        "id": "EV_54jzp18",
+        "id": "EV_abdxlyk",
         "statement": "3 test file(s) found",
         "locations": [
           {
@@ -84,7 +84,7 @@
       "score": 9.9,
       "evidence": [
         {
-          "id": "EV_485ja18",
+          "id": "EV_3xrtfmk",
           "statement": "Grounded evidence for \"Browser-accessible learning adventure landing page\" (5 files, 12 hits, strength 9.9)",
           "locations": [
             {
@@ -124,7 +124,7 @@
       "score": 20,
       "evidence": [
         {
-          "id": "EV_2v0kq8q",
+          "id": "EV_663ajqz",
           "statement": "Grounded evidence for \"Pre-seeded AI learning missions\" (16 files, 89 hits, strength 20.0)",
           "locations": [
             {
@@ -164,7 +164,7 @@
       "score": 18.5,
       "evidence": [
         {
-          "id": "EV_8nqk4i8",
+          "id": "EV_aczcm96",
           "statement": "Grounded evidence for \"Mission practice activities\" (15 files, 52 hits, strength 18.5)",
           "locations": [
             {
@@ -204,7 +204,7 @@
       "score": 18.4,
       "evidence": [
         {
-          "id": "EV_8y8othy",
+          "id": "EV_9qp9ufk",
           "statement": "Grounded evidence for \"Personalized AI tutor\" (16 files, 54 hits, strength 18.4)",
           "locations": [
             {
@@ -244,7 +244,7 @@
       "score": 8.8,
       "evidence": [
         {
-          "id": "EV_24pznq4",
+          "id": "EV_ka5fq59",
           "statement": "Grounded evidence for \"AI Only Mode and AI feedback flow\" (3 files, 13 hits, strength 8.8)",
           "locations": [
             {
@@ -278,7 +278,7 @@
       "score": 18.7,
       "evidence": [
         {
-          "id": "EV_8rxubgb",
+          "id": "EV_44liscv",
           "statement": "Grounded evidence for \"Progress tracking and gamification\" (15 files, 56 hits, strength 18.7)",
           "locations": [
             {
@@ -318,7 +318,7 @@
       "score": 19.7,
       "evidence": [
         {
-          "id": "EV_aimuzos",
+          "id": "EV_9bneafu",
           "statement": "Grounded evidence for \"Content management for missions and questions\" (15 files, 71 hits, strength 19.7)",
           "locations": [
             {
@@ -358,7 +358,7 @@
       "score": 20,
       "evidence": [
         {
-          "id": "EV_4ruuxwr",
+          "id": "EV_c9g2u45",
           "statement": "Grounded evidence for \"Seed content and local review reliability\" (16 files, 84 hits, strength 20.0)",
           "locations": [
             {
@@ -398,7 +398,7 @@
       "score": 14.1,
       "evidence": [
         {
-          "id": "EV_8bdu93u",
+          "id": "EV_1voutox",
           "statement": "Grounded evidence for \"AI fallback and documentation\" (7 files, 22 hits, strength 14.1)",
           "locations": [
             {
