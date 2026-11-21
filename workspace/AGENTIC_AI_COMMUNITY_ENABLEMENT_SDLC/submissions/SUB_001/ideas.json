@@ -1,8 +1,8 @@
 [
   {
-    "ideaId": "IDEA_7s9tg0c",
+    "ideaId": "IDEA_7ua29ty",
     "submissionId": "SUB_001",
-    "title": "Empowering Topcoder community with a standard MCP endpoint for enabling agents",
+    "title": "Empowering Topcoder community with a standard MCP endpoint for enabling agents. Overview A",
     "problem": "Intent Recognition and Decomposition: ○ The agent’s LLM analyzes the query and deduces that the user’s goal is to evaluate their Java submission by comparing it against review feedback from similar challenges. ○ It infers two primary tasks: ■ Retrieve a list of challenges that are associated with the Java programming l…",
     "proposedAgents": "TopCoder Challenge Submission Agentic AI and Community Enablement in SDLC Idea1: Empowering Topcoder community with a standard MCP endpoint for enabling agents. Overview An AI agent is a computer program that understands its environment and autonomously takes actions to achieve de fi ned goals on behalf of a user or sy…",
     "sdlcPhases": [
@@ -34,7 +34,7 @@
               {
                 "kind": "page",
                 "submissionId": "SUB_001",
-                "ideaId": "IDEA_7s9tg0c",
+                "ideaId": "IDEA_7ua29ty",
                 "path": "/home/claude/tc-combinator/starter-pack/challenges/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/submissions/SUB_001/Idea-1-Topcoder-AI-Agents.pdf",
                 "locator": "p.2",
                 "excerpt": "In short, the core of this idea is to deploy a fl exible, open framework that enables any member to work with any LLM—ke"
@@ -56,7 +56,7 @@
               {
                 "kind": "page",
                 "submissionId": "SUB_001",
-                "ideaId": "IDEA_7s9tg0c",
+                "ideaId": "IDEA_7ua29ty",
                 "path": "/home/claude/tc-combinator/starter-pack/challenges/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/submissions/SUB_001/Idea-1-Topcoder-AI-Agents.pdf",
                 "locator": "p.2",
                 "excerpt": "2 ● Accessing challenge details and listings ● Submitting solutions to challenges ● Performing code reviews ● Managing p"
@@ -78,7 +78,7 @@
               {
                 "kind": "page",
                 "submissionId": "SUB_001",
-                "ideaId": "IDEA_7s9tg0c",
+                "ideaId": "IDEA_7ua29ty",
                 "path": "/home/claude/tc-combinator/starter-pack/challenges/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/submissions/SUB_001/Idea-1-Topcoder-AI-Agents.pdf",
                 "locator": "p.1",
                 "excerpt": "The potential applications are limitless, and as large language models (LLMs) become more sophisticated, these agents wi"
@@ -100,7 +100,7 @@
               {
                 "kind": "page",
                 "submissionId": "SUB_001",
-                "ideaId": "IDEA_7s9tg0c",
+                "ideaId": "IDEA_7ua29ty",
                 "path": "/home/claude/tc-combinator/starter-pack/challenges/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/submissions/SUB_001/Idea-1-Topcoder-AI-Agents.pdf",
                 "locator": "p.1",
                 "excerpt": "For Topcoder, such agents can enhance the quality of challenge submissions and streamline requirement gathering and clar"
@@ -122,7 +122,7 @@
               {
                 "kind": "page",
                 "submissionId": "SUB_001",
-                "ideaId": "IDEA_7s9tg0c",
+                "ideaId": "IDEA_7ua29ty",
                 "path": "/home/claude/tc-combinator/starter-pack/challenges/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/submissions/SUB_001/Idea-1-Topcoder-AI-Agents.pdf",
                 "locator": "p.2",
                 "excerpt": "2 ● Accessing challenge details and listings ● Submitting solutions to challenges ● Performing code reviews ● Managing p"
@@ -136,13 +136,13 @@
     },
     "evidence": [
       {
-        "id": "EV_avabcrq",
-        "statement": "Empowering Topcoder community with a standard MCP endpoint for enabling agents. Intent Recognition and Decomposition: ○ The agent’s LLM analyzes the query and deduces that the user’s goal is to evaluate their Java submission by comparing it",
+        "id": "EV_di3jw2p",
+        "statement": "Empowering Topcoder community with a standard MCP endpoint for enabling agents. Overview A. Intent Recognition and Decomposition: ○ The agent’s LLM analyzes the query and deduces that the user’s goal is to evaluate their Java submission by comparing it",
         "locations": [
           {
             "kind": "page",
             "submissionId": "SUB_001",
-            "ideaId": "IDEA_7s9tg0c",
+            "ideaId": "IDEA_7ua29ty",
             "path": "/home/claude/tc-combinator/starter-pack/challenges/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/submissions/SUB_001/Idea-1-Topcoder-AI-Agents.pdf",
             "locator": "p.1"
           }
@@ -151,16 +151,16 @@
         "confidence": "high"
       },
       {
-        "id": "EV_3tutu45",
-        "statement": "Idea titled \"Empowering Topcoder community with a standard MCP endpoint for enabling agents\"",
+        "id": "EV_c3gqedg",
+        "statement": "Idea titled \"Empowering Topcoder community with a standard MCP endpoint for enabling agents. Overview A\"",
         "locations": [
           {
             "kind": "page",
             "submissionId": "SUB_001",
-            "ideaId": "IDEA_7s9tg0c",
+            "ideaId": "IDEA_7ua29ty",
             "path": "/home/claude/tc-combinator/starter-pack/challenges/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/submissions/SUB_001/Idea-1-Topcoder-AI-Agents.pdf",
             "locator": "p.1",
-            "excerpt": "Empowering Topcoder community with a standard MCP endpoint for enabling agents"
+            "excerpt": "Empowering Topcoder community with a standard MCP endpoint for enabling agents. Overview A"
           }
         ],
         "origin": "source",
@@ -173,7 +173,7 @@
           {
             "kind": "page",
             "submissionId": "SUB_001",
-            "ideaId": "IDEA_7s9tg0c",
+            "ideaId": "IDEA_7ua29ty",
             "path": "/home/claude/tc-combinator/starter-pack/challenges/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/submissions/SUB_001/Idea-1-Topcoder-AI-Agents.pdf",
             "locator": "p.7",
             "excerpt": "Intent Recognition and Decomposition: ○ The agent’s LLM analyzes the query and deduces that the user’s goal is to evalua"
@@ -189,7 +189,7 @@
           {
             "kind": "page",
             "submissionId": "SUB_001",
-            "ideaId": "IDEA_7s9tg0c",
+            "ideaId": "IDEA_7ua29ty",
             "path": "/home/claude/tc-combinator/starter-pack/challenges/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/submissions/SUB_001/Idea-1-Topcoder-AI-Agents.pdf",
             "locator": "p.1",
             "excerpt": "TopCoder Challenge Submission Agentic AI and Community Enablement in SDLC Idea1: Empowering Topcoder community with a st"
@@ -205,7 +205,7 @@
           {
             "kind": "page",
             "submissionId": "SUB_001",
-            "ideaId": "IDEA_7s9tg0c",
+            "ideaId": "IDEA_7ua29ty",
             "path": "/home/claude/tc-combinator/starter-pack/challenges/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/submissions/SUB_001/Idea-1-Topcoder-AI-Agents.pdf",
             "locator": "p.7",
             "excerpt": "Aggregation: With the list of challenge IDs in hand, the agent framework makes an LLM request to determine the next step"
@@ -221,7 +221,7 @@
           {
             "kind": "page",
             "submissionId": "SUB_001",
-            "ideaId": "IDEA_7s9tg0c",
+            "ideaId": "IDEA_7ua29ty",
             "path": "/home/claude/tc-combinator/starter-pack/challenges/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/submissions/SUB_001/Idea-1-Topcoder-AI-Agents.pdf",
             "locator": "p.2",
             "excerpt": "2 ● Accessing challenge details and listings ● Submitting solutions to challenges ● Performing code reviews ● Managing p"
@@ -237,7 +237,7 @@
           {
             "kind": "page",
             "submissionId": "SUB_001",
-            "ideaId": "IDEA_7s9tg0c",
+            "ideaId": "IDEA_7ua29ty",
             "path": "/home/claude/tc-combinator/starter-pack/challenges/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/submissions/SUB_001/Idea-1-Topcoder-AI-Agents.pdf",
             "locator": "p.3",
             "excerpt": "3 connecting an LLM to a wide array of services, enabling agentic work fl ows without the need for bespoke integrations."
@@ -253,7 +253,7 @@
           {
             "kind": "page",
             "submissionId": "SUB_001",
-            "ideaId": "IDEA_7s9tg0c",
+            "ideaId": "IDEA_7ua29ty",
             "path": "/home/claude/tc-combinator/starter-pack/challenges/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/submissions/SUB_001/Idea-1-Topcoder-AI-Agents.pdf",
             "locator": "p.7",
             "excerpt": "7 “Can you analyze my submission written in Java based on reviews provided by Topcoder co-pilot for the same language?” "
@@ -269,7 +269,7 @@
           {
             "kind": "page",
             "submissionId": "SUB_001",
-            "ideaId": "IDEA_7s9tg0c",
+            "ideaId": "IDEA_7ua29ty",
             "path": "/home/claude/tc-combinator/starter-pack/challenges/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/submissions/SUB_001/Idea-1-Topcoder-AI-Agents.pdf",
             "locator": "p.9",
             "excerpt": "9 Given that many of the tools exposed via the MCP server interface provide access to sensitive data (such as challenge "
@@ -285,7 +285,7 @@
           {
             "kind": "page",
             "submissionId": "SUB_001",
-            "ideaId": "IDEA_7s9tg0c",
+            "ideaId": "IDEA_7ua29ty",
             "path": "/home/claude/tc-combinator/starter-pack/challenges/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/submissions/SUB_001/Idea-1-Topcoder-AI-Agents.pdf",
             "locator": "p.4",
             "excerpt": "○ Other Providers: The protocol is agnostic by design, meaning that as more frameworks and models (such as those from An"
@@ -301,7 +301,7 @@
           {
             "kind": "page",
             "submissionId": "SUB_001",
-            "ideaId": "IDEA_7s9tg0c",
+            "ideaId": "IDEA_7ua29ty",
             "path": "/home/claude/tc-combinator/starter-pack/challenges/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/submissions/SUB_001/Idea-1-Topcoder-AI-Agents.pdf",
             "locator": "p.1",
             "excerpt": "The potential applications are limitless, and as large language models (LLMs) become more sophisticated, these agents wi"
@@ -598,9 +598,9 @@
     ]
   },
   {
-    "ideaId": "IDEA_26438qy",
+    "ideaId": "IDEA_2tknuj1",
     "submissionId": "SUB_001",
-    "title": "Challenge generator to keep the community engaged",
+    "title": "Challenge generator to keep the community engaged. Overview Topcoder boasts an exceptional",
     "problem": "Keeping the community engaged: When there are less challenges available on Topcoder platform, such mock challenges can help new members to be educated while keeping existing members engaged . 2.",
     "proposedAgents": "Technology Leveraging state-of-the-art LLM platforms such as OpenAI or AWS Bedrock, the AI Agent will incorporate: ● Retrieval-Augmented Generation (RAG): To extract relevant insights from past challenges and inform the creation of new, contextually rich challenges. ● Function Calling Integration: To interface directly…",
     "sdlcPhases": [
@@ -668,7 +668,7 @@
               {
                 "kind": "page",
                 "submissionId": "SUB_001",
-                "ideaId": "IDEA_26438qy",
+                "ideaId": "IDEA_2tknuj1",
                 "path": "/home/claude/tc-combinator/starter-pack/challenges/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/submissions/SUB_001/Idea-3-Topcoder-AI-Agents.pdf",
                 "locator": "p.2",
                 "excerpt": "● Continuous Monitoring and Prompt Engineering: To evaluate the volume of existing challenges and optimize the frequency"
@@ -690,7 +690,7 @@
               {
                 "kind": "page",
                 "submissionId": "SUB_001",
-                "ideaId": "IDEA_26438qy",
+                "ideaId": "IDEA_2tknuj1",
                 "path": "/home/claude/tc-combinator/starter-pack/challenges/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/submissions/SUB_001/Idea-3-Topcoder-AI-Agents.pdf",
                 "locator": "p.1",
                 "excerpt": "TopCoder Challenge Submission Agentic AI and Community Enablement in SDLC Idea3: Challenge generator to keep the communi"
@@ -704,13 +704,13 @@
     },
     "evidence": [
       {
-        "id": "EV_6uub99d",
-        "statement": "Challenge generator to keep the community engaged. Keeping the community engaged: When there are less challenges available on Topcoder platform, such mock challenges can help new members to be educated while kee",
+        "id": "EV_dbj3kxj",
+        "statement": "Challenge generator to keep the community engaged. Overview Topcoder boasts an exceptional. Keeping the community engaged: When there are less challenges available on Topcoder platform, such mock challenges can help new members to be educated while kee",
         "locations": [
           {
             "kind": "page",
             "submissionId": "SUB_001",
-            "ideaId": "IDEA_26438qy",
+            "ideaId": "IDEA_2tknuj1",
             "path": "/home/claude/tc-combinator/starter-pack/challenges/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/submissions/SUB_001/Idea-3-Topcoder-AI-Agents.pdf",
             "locator": "p.1"
           }
@@ -719,16 +719,16 @@
         "confidence": "high"
       },
       {
-        "id": "EV_216br3y",
-        "statement": "Idea titled \"Challenge generator to keep the community engaged\"",
+        "id": "EV_6fcpreu",
+        "statement": "Idea titled \"Challenge generator to keep the community engaged. Overview Topcoder boasts an exceptional\"",
         "locations": [
           {
             "kind": "page",
             "submissionId": "SUB_001",
-            "ideaId": "IDEA_26438qy",
+            "ideaId": "IDEA_2tknuj1",
             "path": "/home/claude/tc-combinator/starter-pack/challenges/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/submissions/SUB_001/Idea-3-Topcoder-AI-Agents.pdf",
             "locator": "p.1",
-            "excerpt": "Challenge generator to keep the community engaged"
+            "excerpt": "Challenge generator to keep the community engaged. Overview Topcoder boasts an exceptional"
           }
         ],
         "origin": "source",
@@ -741,7 +741,7 @@
           {
             "kind": "page",
             "submissionId": "SUB_001",
-            "ideaId": "IDEA_26438qy",
+            "ideaId": "IDEA_2tknuj1",
             "path": "/home/claude/tc-combinator/starter-pack/challenges/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/submissions/SUB_001/Idea-3-Topcoder-AI-Agents.pdf",
             "locator": "p.2",
             "excerpt": "Keeping the community engaged: When there are less challenges available on Topcoder platform, such mock challenges can h"
@@ -757,7 +757,7 @@
           {
             "kind": "page",
             "submissionId": "SUB_001",
-            "ideaId": "IDEA_26438qy",
+            "ideaId": "IDEA_2tknuj1",
             "path": "/home/claude/tc-combinator/starter-pack/challenges/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/submissions/SUB_001/Idea-3-Topcoder-AI-Agents.pdf",
             "locator": "p.2",
             "excerpt": "Technology Leveraging state-of-the-art LLM platforms such as OpenAI or AWS Bedrock, the AI Agent will incorporate: ● Ret"
@@ -773,7 +773,7 @@
           {
             "kind": "page",
             "submissionId": "SUB_001",
-            "ideaId": "IDEA_26438qy",
+            "ideaId": "IDEA_2tknuj1",
             "path": "/home/claude/tc-combinator/starter-pack/challenges/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/submissions/SUB_001/Idea-3-Topcoder-AI-Agents.pdf",
             "locator": "p.2",
             "excerpt": "● Function Calling Integration: To interface directly with Topcoder’s challenge APIs, automating the posting process and"
@@ -789,7 +789,7 @@
           {
             "kind": "page",
             "submissionId": "SUB_001",
-            "ideaId": "IDEA_26438qy",
+            "ideaId": "IDEA_2tknuj1",
             "path": "/home/claude/tc-combinator/starter-pack/challenges/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/submissions/SUB_001/Idea-3-Topcoder-AI-Agents.pdf",
             "locator": "p.1",
             "excerpt": "The AI Agent will tap into a comprehensive repository of historical Topcoder challenges through a Retrieval-Augmented Ge"
@@ -805,7 +805,7 @@
           {
             "kind": "page",
             "submissionId": "SUB_001",
-            "ideaId": "IDEA_26438qy",
+            "ideaId": "IDEA_2tknuj1",
             "path": "/home/claude/tc-combinator/starter-pack/challenges/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/submissions/SUB_001/Idea-3-Topcoder-AI-Agents.pdf",
             "locator": "p.1",
             "excerpt": "With technology evolving rapidly and new frameworks emerging almost every month, it is vital that our community remains "
@@ -821,7 +821,7 @@
           {
             "kind": "page",
             "submissionId": "SUB_001",
-            "ideaId": "IDEA_26438qy",
+            "ideaId": "IDEA_2tknuj1",
             "path": "/home/claude/tc-combinator/starter-pack/challenges/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/submissions/SUB_001/Idea-3-Topcoder-AI-Agents.pdf",
             "locator": "p.3",
             "excerpt": "Initially, the system will propose challenges that can be manually reviewed and re fi ned to ensure their accuracy and r"
@@ -837,7 +837,7 @@
           {
             "kind": "page",
             "submissionId": "SUB_001",
-            "ideaId": "IDEA_26438qy",
+            "ideaId": "IDEA_2tknuj1",
             "path": "/home/claude/tc-combinator/starter-pack/challenges/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/submissions/SUB_001/Idea-3-Topcoder-AI-Agents.pdf",
             "locator": "p.2",
             "excerpt": "● Continuous Monitoring and Prompt Engineering: To evaluate the volume of existing challenges and optimize the frequency"

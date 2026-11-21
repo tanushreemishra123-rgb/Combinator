@@ -4,11 +4,11 @@
 
 ## Integrated concept
 
-Integrated concept: Agentic AI and Community Enablement in SDLC: an integrated concept combining the accepted elements — Empowering Topcoder community with a standard MCP endpoint for enabling agents; AI-CoPilot for self-service challenges Overview Topcoder in the past enabled self-service; Challenge generator to keep the community engaged; Remediation; AI Powered Design System Assistant; AI Powered Smart Code Reviewer. Bridging statements are labeled as assumptions and no unsupported metrics were added.
+Integrated concept: Agentic AI and Community Enablement in SDLC: an integrated concept combining the accepted elements — Empowering Topcoder community with a standard MCP endpoint for enabling agents. Overview A; AI-CoPilot for self-service challenges Overview Topcoder in the past enabled self-service; Challenge generator to keep the community engaged. Overview Topcoder boasts an exceptional; Remediation; AI Powered Design System Assistant; AI Powered Smart Code Reviewer. Bridging statements are labeled as assumptions and no unsupported metrics were added.
 
 ## Contributing ideas (accepted)
 
-### Empowering Topcoder community with a standard MCP endpoint for enabling agents  _(SUB_001 · IDEA_7s9tg0c)_
+### Empowering Topcoder community with a standard MCP endpoint for enabling agents. Overview A  _(SUB_001 · IDEA_7ua29ty)_
 - **Problem:** Intent Recognition and Decomposition: ○ The agent’s LLM analyzes the query and deduces that the user’s goal is to evaluate their Java submission by comparing it against review feedback from similar challenges. ○ It infers two primary tasks: ■ Retrieve a list of challenges that are associated with the Java programming l… _(source: Idea-1-Topcoder-AI-Agents.pdf p.1)_
 - **Proposed agents:** TopCoder Challenge Submission Agentic AI and Community Enablement in SDLC Idea1: Empowering Topcoder community with a standard MCP endpoint for enabling agents. Overview An AI agent is a computer program that understands its environment and autonomously takes actions to achieve de fi ned goals on behalf of a user or sy…
 - **SDLC phases:** Requirements, Design, Development, Testing/Review, Deployment/Ops
@@ -22,7 +22,7 @@ Integrated concept: Agentic AI and Community Enablement in SDLC: an integrated c
 - **Workflow:** More details on reviewing submissions Reviewing submissions will require some pre-processing, as LLM models cannot take a zip fi le directly. Overall pre-processing steps will be; Data Extraction & File Identi fi cation: ● Decompress the zip fi le in a folder ● Detects and categorizes fi le (source code, documentation,…
 - **Human oversight:** ● Documentation Analysis: ○ Instruct the LLM to review the documentation for clarity, correctness, and completeness. ● Test Evaluation: ○ Use a prompt to identify test classes and evaluate correctness Aggregation of Results: ● The LLM generates a clear scorecard that summarizes: ○ Code quality and logic consistency.
 
-### Challenge generator to keep the community engaged  _(SUB_001 · IDEA_26438qy)_
+### Challenge generator to keep the community engaged. Overview Topcoder boasts an exceptional  _(SUB_001 · IDEA_2tknuj1)_
 - **Problem:** Keeping the community engaged: When there are less challenges available on Topcoder platform, such mock challenges can help new members to be educated while keeping existing members engaged . 2. _(source: Idea-3-Topcoder-AI-Agents.pdf p.1)_
 - **Proposed agents:** Technology Leveraging state-of-the-art LLM platforms such as OpenAI or AWS Bedrock, the AI Agent will incorporate: ● Retrieval-Augmented Generation (RAG): To extract relevant insights from past challenges and inform the creation of new, contextually rich challenges. ● Function Calling Integration: To interface directly…
 - **SDLC phases:** Design, Development, Testing/Review, Deployment/Ops
@@ -54,9 +54,9 @@ Integrated concept: Agentic AI and Community Enablement in SDLC: an integrated c
 
 ## Coverage of mandatory evaluation areas
 
-- **Originality:** addressed by IDEA_7s9tg0c, IDEA_80cdn6x
-- **Feasibility:** addressed by IDEA_7s9tg0c, IDEA_59dfyn4, IDEA_59rnz34, IDEA_743c9rl
-- **Scalability:** addressed by IDEA_7s9tg0c, IDEA_80cdn6x, IDEA_59dfyn4, IDEA_59rnz34, IDEA_743c9rl
-- **Impact Potential:** addressed by IDEA_7s9tg0c, IDEA_80cdn6x, IDEA_26438qy, IDEA_59dfyn4, IDEA_59rnz34, IDEA_743c9rl
-- **Alignment with Scope:** addressed by IDEA_7s9tg0c, IDEA_80cdn6x, IDEA_26438qy, IDEA_59dfyn4, IDEA_59rnz34, IDEA_743c9rl
+- **Originality:** addressed by IDEA_7ua29ty, IDEA_80cdn6x
+- **Feasibility:** addressed by IDEA_7ua29ty, IDEA_59dfyn4, IDEA_59rnz34, IDEA_743c9rl
+- **Scalability:** addressed by IDEA_7ua29ty, IDEA_80cdn6x, IDEA_59dfyn4, IDEA_59rnz34, IDEA_743c9rl
+- **Impact Potential:** addressed by IDEA_7ua29ty, IDEA_80cdn6x, IDEA_2tknuj1, IDEA_59dfyn4, IDEA_59rnz34, IDEA_743c9rl
+- **Alignment with Scope:** addressed by IDEA_7ua29ty, IDEA_80cdn6x, IDEA_2tknuj1, IDEA_59dfyn4, IDEA_59rnz34, IDEA_743c9rl
 

@@ -27,14 +27,33 @@ interface RawIdea {
   doc: ExtractedDocument;
 }
 
-const IDEA_SPLIT = /\b(?:idea|concept)\s{0,4}[-:#]?\s{0,4}(\d{1,3})\b/i;
+/**
+ * ReDoS-free marker detection via string methods (no whitespace-quantifier
+ * regexes). True when text begins with an "Idea"/"Concept" keyword followed
+ * shortly by a digit.
+ */
+function hasIdeaMarker(text: string): boolean {
+  const t = text.trimStart().toLowerCase();
+  const after = t.startsWith("idea") ? 4 : t.startsWith("concept") ? 7 : -1;
+  if (after === -1) return false;
+  return /\d/.test(t.slice(after, after + 8));
+}
+
+/** True when text contains an "Idea … :" / "Concept … -" style label. */
+function hasIdeaLabel(text: string): boolean {
+  const lower = text.toLowerCase();
+  const ideaAt = lower.indexOf("idea");
+  const kwAt = ideaAt !== -1 ? ideaAt : lower.indexOf("concept");
+  if (kwAt === -1) return false;
+  const seg = lower.slice(kwAt, kwAt + 24);
+  return seg.includes(":") || seg.includes("-");
+}
 
 /** Split a document into ideas by "Idea N" markers; else treat as a single idea. */
 function splitIntoIdeas(doc: ExtractedDocument): RawIdea[] {
   const markers: number[] = [];
   doc.blocks.forEach((b, i) => {
-    if (b.kind === "heading" && IDEA_SPLIT.test(b.text)) markers.push(i);
-    else if (/^\s{0,4}(idea|concept)\s{0,4}\d{1,3}/i.test(b.text)) markers.push(i);
+    if (hasIdeaMarker(b.text)) markers.push(i);
   });
   if (markers.length <= 1) {
     const title = deriveTitle(doc);
@@ -54,11 +73,30 @@ const GENERIC_HEADING = /^(the\s+problem|introduction|overview|summary|goals?|ba
 
 function cleanTitle(raw: string, doc: ExtractedDocument): string {
   let t = raw.trim();
-  // Prefer an explicit "Idea N: <name>" / "Concept N: <name>" label if present.
-  const m = t.match(/\b(?:idea|concept)\s*\d*\s*[:\-]\s*([^.\n]{3,90})/i);
-  if (m) t = m[1]!.trim();
-  // Otherwise strip a long boilerplate challenge-submission prefix.
-  else t = t.replace(/^.*?challenge submission[^:]*:?\s*/i, "").trim() || raw.trim();
+  const lower = t.toLowerCase();
+  const ideaAt = lower.indexOf("idea");
+  const kwAt = ideaAt !== -1 ? ideaAt : lower.indexOf("concept");
+  if (kwAt !== -1) {
+    // Prefer the name after the first ':' or '-' within a short window.
+    const windowEnd = Math.min(t.length, kwAt + 24);
+    let sep = -1;
+    for (let i = kwAt; i < windowEnd; i++) {
+      const c = t.charAt(i);
+      if (c === ":" || c === "-") {
+        sep = i;
+        break;
+      }
+    }
+    if (sep !== -1) {
+      const after = t.slice(sep + 1).trim();
+      if (after.length >= 3) t = after;
+    }
+  } else if (lower.includes("challenge submission")) {
+    // Strip a boilerplate challenge-submission prefix.
+    const rest = t.slice(lower.indexOf("challenge submission") + "challenge submission".length);
+    const colon = rest.indexOf(":");
+    t = (colon !== -1 ? rest.slice(colon + 1) : rest).trim() || raw.trim();
+  }
   t = t.replace(/\s+/g, " ").slice(0, 90).trim();
   if (!t || GENERIC_HEADING.test(t)) {
     return doc.fileName.replace(/\.(pdf|docx|pptx)$/i, "").replace(/[-_]/g, " ").trim();
@@ -67,9 +105,9 @@ function cleanTitle(raw: string, doc: ExtractedDocument): string {
 }
 
 function deriveTitle(doc: ExtractedDocument): string {
-  // Look for an "Idea N:" marker anywhere in the first few blocks.
+  // Look for an "Idea N:" label in the first few blocks.
   for (const b of doc.blocks.slice(0, 4)) {
-    if (/\b(?:idea|concept)\s*\d*\s*[:\-]/i.test(b.text)) return cleanTitle(b.text, doc);
+    if (hasIdeaLabel(b.text)) return cleanTitle(b.text, doc);
   }
   const heading = doc.blocks.find((b) => b.kind === "heading" && b.text.length > 3 && !GENERIC_HEADING.test(b.text));
   if (heading) return cleanTitle(heading.text, doc);

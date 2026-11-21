@@ -4,18 +4,18 @@
   "entries": [
     {
       "target": "synthesized-concept/concept.md",
-      "sourceId": "IDEA_7s9tg0c",
+      "sourceId": "IDEA_7ua29ty",
       "sourcePath": "/home/claude/tc-combinator/starter-pack/challenges/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/submissions/SUB_001/Idea-1-Topcoder-AI-Agents.pdf",
-      "decisionId": "DEC_boeyru3",
+      "decisionId": "DEC_dldil24",
       "evidence": [
         {
-          "id": "EV_avabcrq",
-          "statement": "Empowering Topcoder community with a standard MCP endpoint for enabling agents. Intent Recognition and Decomposition: ○ The agent’s LLM analyzes the query and deduces that the user’s goal is to evaluate their Java submission by comparing it",
+          "id": "EV_di3jw2p",
+          "statement": "Empowering Topcoder community with a standard MCP endpoint for enabling agents. Overview A. Intent Recognition and Decomposition: ○ The agent’s LLM analyzes the query and deduces that the user’s goal is to evaluate their Java submission by comparing it",
           "locations": [
             {
               "kind": "page",
               "submissionId": "SUB_001",
-              "ideaId": "IDEA_7s9tg0c",
+              "ideaId": "IDEA_7ua29ty",
               "path": "/home/claude/tc-combinator/starter-pack/challenges/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/submissions/SUB_001/Idea-1-Topcoder-AI-Agents.pdf",
               "locator": "p.1"
             }
@@ -24,16 +24,16 @@
           "confidence": "high"
         },
         {
-          "id": "EV_3tutu45",
-          "statement": "Idea titled \"Empowering Topcoder community with a standard MCP endpoint for enabling agents\"",
+          "id": "EV_c3gqedg",
+          "statement": "Idea titled \"Empowering Topcoder community with a standard MCP endpoint for enabling agents. Overview A\"",
           "locations": [
             {
               "kind": "page",
               "submissionId": "SUB_001",
-              "ideaId": "IDEA_7s9tg0c",
+              "ideaId": "IDEA_7ua29ty",
               "path": "/home/claude/tc-combinator/starter-pack/challenges/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/submissions/SUB_001/Idea-1-Topcoder-AI-Agents.pdf",
               "locator": "p.1",
-              "excerpt": "Empowering Topcoder community with a standard MCP endpoint for enabling agents"
+              "excerpt": "Empowering Topcoder community with a standard MCP endpoint for enabling agents. Overview A"
             }
           ],
           "origin": "source",
@@ -46,7 +46,7 @@
             {
               "kind": "page",
               "submissionId": "SUB_001",
-              "ideaId": "IDEA_7s9tg0c",
+              "ideaId": "IDEA_7ua29ty",
               "path": "/home/claude/tc-combinator/starter-pack/challenges/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/submissions/SUB_001/Idea-1-Topcoder-AI-Agents.pdf",
               "locator": "p.7",
               "excerpt": "Intent Recognition and Decomposition: ○ The agent’s LLM analyzes the query and deduces that the user’s goal is to evalua"
@@ -118,18 +118,18 @@
     },
     {
       "target": "synthesized-concept/concept.md",
-      "sourceId": "IDEA_26438qy",
+      "sourceId": "IDEA_2tknuj1",
       "sourcePath": "/home/claude/tc-combinator/starter-pack/challenges/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/submissions/SUB_001/Idea-3-Topcoder-AI-Agents.pdf",
-      "decisionId": "DEC_4x58wh6",
+      "decisionId": "DEC_12d42ga",
       "evidence": [
         {
-          "id": "EV_6uub99d",
-          "statement": "Challenge generator to keep the community engaged. Keeping the community engaged: When there are less challenges available on Topcoder platform, such mock challenges can help new members to be educated while kee",
+          "id": "EV_dbj3kxj",
+          "statement": "Challenge generator to keep the community engaged. Overview Topcoder boasts an exceptional. Keeping the community engaged: When there are less challenges available on Topcoder platform, such mock challenges can help new members to be educated while kee",
           "locations": [
             {
               "kind": "page",
               "submissionId": "SUB_001",
-              "ideaId": "IDEA_26438qy",
+              "ideaId": "IDEA_2tknuj1",
               "path": "/home/claude/tc-combinator/starter-pack/challenges/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/submissions/SUB_001/Idea-3-Topcoder-AI-Agents.pdf",
               "locator": "p.1"
             }
@@ -138,16 +138,16 @@
           "confidence": "high"
         },
         {
-          "id": "EV_216br3y",
-          "statement": "Idea titled \"Challenge generator to keep the community engaged\"",
+          "id": "EV_6fcpreu",
+          "statement": "Idea titled \"Challenge generator to keep the community engaged. Overview Topcoder boasts an exceptional\"",
           "locations": [
             {
               "kind": "page",
               "submissionId": "SUB_001",
-              "ideaId": "IDEA_26438qy",
+              "ideaId": "IDEA_2tknuj1",
               "path": "/home/claude/tc-combinator/starter-pack/challenges/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/submissions/SUB_001/Idea-3-Topcoder-AI-Agents.pdf",
               "locator": "p.1",
-              "excerpt": "Challenge generator to keep the community engaged"
+              "excerpt": "Challenge generator to keep the community engaged. Overview Topcoder boasts an exceptional"
             }
           ],
           "origin": "source",
@@ -160,7 +160,7 @@
             {
               "kind": "page",
               "submissionId": "SUB_001",
-              "ideaId": "IDEA_26438qy",
+              "ideaId": "IDEA_2tknuj1",
               "path": "/home/claude/tc-combinator/starter-pack/challenges/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/submissions/SUB_001/Idea-3-Topcoder-AI-Agents.pdf",
               "locator": "p.2",
               "excerpt": "Keeping the community engaged: When there are less challenges available on Topcoder platform, such mock challenges can h"

@@ -7,7 +7,7 @@
       "requirementTitle": "Originality",
       "cells": [
         {
-          "sourceId": "IDEA_7s9tg0c",
+          "sourceId": "IDEA_7ua29ty",
           "state": "complete",
           "score": 4,
           "evidence": [
@@ -18,7 +18,7 @@
                 {
                   "kind": "page",
                   "submissionId": "SUB_001",
-                  "ideaId": "IDEA_7s9tg0c",
+                  "ideaId": "IDEA_7ua29ty",
                   "path": "/home/claude/tc-combinator/starter-pack/challenges/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/submissions/SUB_001/Idea-1-Topcoder-AI-Agents.pdf",
                   "locator": "p.2",
                   "excerpt": "In short, the core of this idea is to deploy a fl exible, open framework that enables any member to work with any LLM—ke"
@@ -57,7 +57,7 @@
           "compatibilityRisk": "low"
         },
         {
-          "sourceId": "IDEA_26438qy",
+          "sourceId": "IDEA_2tknuj1",
           "state": "partial",
           "score": 3,
           "evidence": [
@@ -121,8 +121,8 @@
           "compatibilityRisk": "low"
         }
       ],
-      "recommendedSource": "IDEA_7s9tg0c",
-      "reasoning": "IDEA_7s9tg0c best addresses Originality based on grounded document evidence.",
+      "recommendedSource": "IDEA_7ua29ty",
+      "reasoning": "IDEA_7ua29ty best addresses Originality based on grounded document evidence.",
       "confidence": "high",
       "unresolvedConflicts": []
     },
@@ -131,7 +131,7 @@
       "requirementTitle": "Feasibility",
       "cells": [
         {
-          "sourceId": "IDEA_7s9tg0c",
+          "sourceId": "IDEA_7ua29ty",
           "state": "complete",
           "score": 4,
           "evidence": [
@@ -142,7 +142,7 @@
                 {
                   "kind": "page",
                   "submissionId": "SUB_001",
-                  "ideaId": "IDEA_7s9tg0c",
+                  "ideaId": "IDEA_7ua29ty",
                   "path": "/home/claude/tc-combinator/starter-pack/challenges/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/submissions/SUB_001/Idea-1-Topcoder-AI-Agents.pdf",
                   "locator": "p.2",
                   "excerpt": "2 ● Accessing challenge details and listings ● Submitting solutions to challenges ● Performing code reviews ● Managing p"
@@ -172,7 +172,7 @@
           "compatibilityRisk": "low"
         },
         {
-          "sourceId": "IDEA_26438qy",
+          "sourceId": "IDEA_2tknuj1",
           "state": "partial",
           "score": 3,
           "evidence": [
@@ -263,8 +263,8 @@
           "compatibilityRisk": "low"
         }
       ],
-      "recommendedSource": "IDEA_7s9tg0c",
-      "reasoning": "IDEA_7s9tg0c best addresses Feasibility based on grounded document evidence.",
+      "recommendedSource": "IDEA_7ua29ty",
+      "reasoning": "IDEA_7ua29ty best addresses Feasibility based on grounded document evidence.",
       "confidence": "high",
       "unresolvedConflicts": []
     },
@@ -273,7 +273,7 @@
       "requirementTitle": "Scalability",
       "cells": [
         {
-          "sourceId": "IDEA_7s9tg0c",
+          "sourceId": "IDEA_7ua29ty",
           "state": "complete",
           "score": 4,
           "evidence": [
@@ -284,7 +284,7 @@
                 {
                   "kind": "page",
                   "submissionId": "SUB_001",
-                  "ideaId": "IDEA_7s9tg0c",
+                  "ideaId": "IDEA_7ua29ty",
                   "path": "/home/claude/tc-combinator/starter-pack/challenges/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/submissions/SUB_001/Idea-1-Topcoder-AI-Agents.pdf",
                   "locator": "p.1",
                   "excerpt": "The potential applications are limitless, and as large language models (LLMs) become more sophisticated, these agents wi"
@@ -323,7 +323,7 @@
           "compatibilityRisk": "low"
         },
         {
-          "sourceId": "IDEA_26438qy",
+          "sourceId": "IDEA_2tknuj1",
           "state": "partial",
           "score": 3,
           "evidence": [
@@ -414,8 +414,8 @@
           "compatibilityRisk": "low"
         }
       ],
-      "recommendedSource": "IDEA_7s9tg0c",
-      "reasoning": "IDEA_7s9tg0c best addresses Scalability based on grounded document evidence.",
+      "recommendedSource": "IDEA_7ua29ty",
+      "reasoning": "IDEA_7ua29ty best addresses Scalability based on grounded document evidence.",
       "confidence": "high",
       "unresolvedConflicts": []
     },
@@ -424,7 +424,7 @@
       "requirementTitle": "Impact Potential",
       "cells": [
         {
-          "sourceId": "IDEA_7s9tg0c",
+          "sourceId": "IDEA_7ua29ty",
           "state": "complete",
           "score": 4,
           "evidence": [
@@ -435,7 +435,7 @@
                 {
                   "kind": "page",
                   "submissionId": "SUB_001",
-                  "ideaId": "IDEA_7s9tg0c",
+                  "ideaId": "IDEA_7ua29ty",
                   "path": "/home/claude/tc-combinator/starter-pack/challenges/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/submissions/SUB_001/Idea-1-Topcoder-AI-Agents.pdf",
                   "locator": "p.1",
                   "excerpt": "For Topcoder, such agents can enhance the quality of challenge submissions and streamline requirement gathering and clar"
@@ -474,7 +474,7 @@
           "compatibilityRisk": "low"
         },
         {
-          "sourceId": "IDEA_26438qy",
+          "sourceId": "IDEA_2tknuj1",
           "state": "complete",
           "score": 4,
           "evidence": [
@@ -485,7 +485,7 @@
                 {
                   "kind": "page",
                   "submissionId": "SUB_001",
-                  "ideaId": "IDEA_26438qy",
+                  "ideaId": "IDEA_2tknuj1",
                   "path": "/home/claude/tc-combinator/starter-pack/challenges/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/submissions/SUB_001/Idea-3-Topcoder-AI-Agents.pdf",
                   "locator": "p.2",
                   "excerpt": "● Continuous Monitoring and Prompt Engineering: To evaluate the volume of existing challenges and optimize the frequency"
@@ -574,8 +574,8 @@
           "compatibilityRisk": "low"
         }
       ],
-      "recommendedSource": "IDEA_7s9tg0c",
-      "reasoning": "IDEA_7s9tg0c best addresses Impact Potential based on grounded document evidence.",
+      "recommendedSource": "IDEA_7ua29ty",
+      "reasoning": "IDEA_7ua29ty best addresses Impact Potential based on grounded document evidence.",
       "confidence": "high",
       "unresolvedConflicts": []
     },
@@ -584,7 +584,7 @@
       "requirementTitle": "Alignment with Scope",
       "cells": [
         {
-          "sourceId": "IDEA_7s9tg0c",
+          "sourceId": "IDEA_7ua29ty",
           "state": "complete",
           "score": 4,
           "evidence": [
@@ -595,7 +595,7 @@
                 {
                   "kind": "page",
                   "submissionId": "SUB_001",
-                  "ideaId": "IDEA_7s9tg0c",
+                  "ideaId": "IDEA_7ua29ty",
                   "path": "/home/claude/tc-combinator/starter-pack/challenges/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/submissions/SUB_001/Idea-1-Topcoder-AI-Agents.pdf",
                   "locator": "p.2",
                   "excerpt": "2 ● Accessing challenge details and listings ● Submitting solutions to challenges ● Performing code reviews ● Managing p"
@@ -634,7 +634,7 @@
           "compatibilityRisk": "low"
         },
         {
-          "sourceId": "IDEA_26438qy",
+          "sourceId": "IDEA_2tknuj1",
           "state": "complete",
           "score": 4,
           "evidence": [
@@ -645,7 +645,7 @@
                 {
                   "kind": "page",
                   "submissionId": "SUB_001",
-                  "ideaId": "IDEA_26438qy",
+                  "ideaId": "IDEA_2tknuj1",
                   "path": "/home/claude/tc-combinator/starter-pack/challenges/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/submissions/SUB_001/Idea-3-Topcoder-AI-Agents.pdf",
                   "locator": "p.1",
                   "excerpt": "TopCoder Challenge Submission Agentic AI and Community Enablement in SDLC Idea3: Challenge generator to keep the communi"
@@ -734,8 +734,8 @@
           "compatibilityRisk": "low"
         }
       ],
-      "recommendedSource": "IDEA_7s9tg0c",
-      "reasoning": "IDEA_7s9tg0c best addresses Alignment with Scope based on grounded document evidence.",
+      "recommendedSource": "IDEA_7ua29ty",
+      "reasoning": "IDEA_7ua29ty best addresses Alignment with Scope based on grounded document evidence.",
       "confidence": "high",
       "unresolvedConflicts": []
     }
