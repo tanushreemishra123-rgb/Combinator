@@ -1,7 +1,7 @@
 {
   "submissionId": "SUB_002",
   "kind": "code",
-  "rootPath": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002",
+  "rootPath": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002",
   "applications": [
     {
       "path": "submissions/SUB_002/2nd Position",
@@ -82,7 +82,7 @@
           {
             "kind": "file",
             "submissionId": "SUB_002",
-            "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position",
+            "path": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position",
             "excerpt": "application root"
           }
         ],
@@ -96,7 +96,7 @@
           {
             "kind": "file",
             "submissionId": "SUB_002",
-            "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui",
+            "path": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui",
             "excerpt": "application root"
           }
         ],
@@ -110,7 +110,7 @@
           {
             "kind": "file",
             "submissionId": "SUB_002",
-            "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/api",
+            "path": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/api",
             "excerpt": "application root"
           }
         ],
@@ -124,7 +124,7 @@
           {
             "kind": "file",
             "submissionId": "SUB_002",
-            "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/learner-ui",
+            "path": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/learner-ui",
             "excerpt": "application root"
           }
         ],
@@ -156,7 +156,7 @@
           {
             "kind": "file",
             "submissionId": "SUB_002",
-            "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/package.json",
+            "path": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/package.json",
             "excerpt": "package.json scripts"
           }
         ],
@@ -170,7 +170,7 @@
           {
             "kind": "file",
             "submissionId": "SUB_002",
-            "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/api/package.json",
+            "path": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/api/package.json",
             "excerpt": "package.json scripts"
           }
         ],
@@ -184,7 +184,7 @@
           {
             "kind": "file",
             "submissionId": "SUB_002",
-            "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/learner-ui/package.json",
+            "path": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/learner-ui/package.json",
             "excerpt": "package.json scripts"
           }
         ],
@@ -198,7 +198,7 @@
           {
             "kind": "file",
             "submissionId": "SUB_002",
-            "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/package.json",
+            "path": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/package.json",
             "excerpt": "package.json scripts"
           }
         ],
@@ -220,7 +220,7 @@
           {
             "kind": "test",
             "submissionId": "SUB_002",
-            "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/packages/learner/test/ai.test.ts",
+            "path": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/packages/learner/test/ai.test.ts",
             "excerpt": "example of 28 test files"
           }
         ],
@@ -242,25 +242,25 @@
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/AGENTS.md",
+              "path": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/AGENTS.md",
               "excerpt": "matches: learning, adventure, required"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/README.md",
+              "path": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/README.md",
               "excerpt": "matches: browser, learning, adventure, required, users"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/package.json",
+              "path": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/package.json",
               "excerpt": "matches: learning, adventure"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/components/PublishGateDialog.tsx",
+              "path": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/components/PublishGateDialog.tsx",
               "excerpt": "matches: learning, adventure, required, allow"
             }
           ],
@@ -282,25 +282,25 @@
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/README.md",
+              "path": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/README.md",
               "excerpt": "matches: learning, missions, include, mission, title"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/components/PreviewDialog.tsx",
+              "path": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/components/PreviewDialog.tsx",
               "excerpt": "matches: mission, title"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/components/PublishGateDialog.tsx",
+              "path": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/components/PublishGateDialog.tsx",
               "excerpt": "matches: learning, include, mission, title"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/components/layout/AdminShell.tsx",
+              "path": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/components/layout/AdminShell.tsx",
               "excerpt": "matches: missions, mission, title"
             }
           ],
@@ -322,25 +322,25 @@
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/README.md",
+              "path": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/README.md",
               "excerpt": "matches: mission, practice, include, linked, quizzes"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/components/PublishGateDialog.tsx",
+              "path": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/components/PublishGateDialog.tsx",
               "excerpt": "matches: mission, include, linked, flashcards"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/components/layout/AdminShell.tsx",
+              "path": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/components/layout/AdminShell.tsx",
               "excerpt": "matches: mission, flashcards"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/Accordion/Accordion.tsx",
+              "path": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/Accordion/Accordion.tsx",
               "excerpt": "matches: include, provide"
             }
           ],
@@ -362,25 +362,25 @@
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/README.md",
+              "path": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/README.md",
               "excerpt": "matches: tutor, answer, mission, related, questions"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/components/PublishGateDialog.tsx",
+              "path": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/components/PublishGateDialog.tsx",
               "excerpt": "matches: mission, questions"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/components/layout/AdminShell.tsx",
+              "path": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/components/layout/AdminShell.tsx",
               "excerpt": "matches: mission, questions"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/features/assignments/AssignmentBoard.tsx",
+              "path": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/features/assignments/AssignmentBoard.tsx",
               "excerpt": "matches: mission, questions"
             }
           ],
@@ -402,25 +402,25 @@
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/README.md",
+              "path": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/README.md",
               "excerpt": "matches: feedback, support, explanations, hints, recommendations"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/features/settings/SettingsPage.tsx",
+              "path": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/features/settings/SettingsPage.tsx",
               "excerpt": "matches: explanations, learning"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/api/API.md",
+              "path": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/api/API.md",
               "excerpt": "matches: support, learning"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/api/mission-data/flashcards.json",
+              "path": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/api/mission-data/flashcards.json",
               "excerpt": "matches: feedback, support, learning, generic, chatbot"
             }
           ],
@@ -442,25 +442,25 @@
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/README.md",
+              "path": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/README.md",
               "excerpt": "matches: progress, tracking, track, missions, checkpoint"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/components/PublishGateDialog.tsx",
+              "path": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/components/PublishGateDialog.tsx",
               "excerpt": "matches: results, include"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/components/layout/AdminShell.tsx",
+              "path": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/components/layout/AdminShell.tsx",
               "excerpt": "matches: missions, badges"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/README.md",
+              "path": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/components/ui/README.md",
               "excerpt": "matches: progress, missions"
             }
           ],
@@ -482,25 +482,25 @@
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/README.md",
+              "path": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/README.md",
               "excerpt": "matches: management, missions, questions, flashcards, preview"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/components/PublishGateDialog.tsx",
+              "path": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/components/PublishGateDialog.tsx",
               "excerpt": "matches: questions, flashcards, enable, disable, publish"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/components/StatusBadge.tsx",
+              "path": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/components/StatusBadge.tsx",
               "excerpt": "matches: enable, disable, publish"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/components/layout/AdminShell.tsx",
+              "path": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/components/layout/AdminShell.tsx",
               "excerpt": "matches: missions, questions, admins, flashcards"
             }
           ],
@@ -522,25 +522,25 @@
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/README.md",
+              "path": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/README.md",
               "excerpt": "matches: local, review, include, missions, practice"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/components/PreviewDialog.tsx",
+              "path": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/components/PreviewDialog.tsx",
               "excerpt": "matches: local, review, progress"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/components/PublishGateDialog.tsx",
+              "path": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/components/PublishGateDialog.tsx",
               "excerpt": "matches: review, include, flashcards"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/components/layout/AdminShell.tsx",
+              "path": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/components/layout/AdminShell.tsx",
               "excerpt": "matches: missions, flashcards"
             }
           ],
@@ -562,25 +562,25 @@
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/README.md",
+              "path": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/README.md",
               "excerpt": "matches: fallback, provide, sample, clear, setup"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/api/mission-data/flashcards.json",
+              "path": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/api/mission-data/flashcards.json",
               "excerpt": "matches: provide, clear"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/api/mission-data/missions.json",
+              "path": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/api/mission-data/missions.json",
               "excerpt": "matches: provide, clear, guidance, covers"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/api/mission-data/questions.json",
+              "path": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/api/mission-data/questions.json",
               "excerpt": "matches: provide, clear, guidance"
             }
           ],
@@ -607,7 +607,7 @@
         {
           "kind": "reviewer_comment",
           "submissionId": "SUB_002",
-          "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_LEARNING_ADVENTURE/reviews/SUB_002/final-result.json",
+          "path": "challenges/AI_LEARNING_ADVENTURE/reviews/SUB_002/final-result.json",
           "excerpt": "finalScore=100"
         }
       ],

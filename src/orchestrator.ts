@@ -12,6 +12,8 @@ import { join, relative } from "node:path";
 import { mkdirSync } from "node:fs";
 import type { CombinatorConfig } from "./config.js";
 import { Logger, UsageMeter } from "./logger.js";
+import { relativizePaths } from "./util.js";
+import { cleanupDisposable } from "./materialize.js";
 import { SafeFs } from "./fs-safe.js";
 import { discoverChallenge, loadManifest, pkgRelative, type ManifestChallenge } from "./ingest.js";
 import { buildReviewContext } from "./review-context.js";
@@ -77,6 +79,11 @@ export async function runChallenge(
   const fs = new SafeFs({ readRoots: [opts.packRoot, opts.outDir], log });
   fs.allowWrite(wsDir);
 
+  // All artifact JSON is written with absolute paths relativized to the pack /
+  // workspace roots, so generated files are portable and reproducible.
+  const pathRoots = [opts.packRoot, opts.outDir];
+  const writeJsonRel = (p: string, obj: unknown) => fs.writeJson(p, relativizePaths(obj, pathRoots));
+
   const ch = discoverChallenge(fs, opts.packRoot, mc);
   log.info(`[${ch.challengeId}] mode=${ch.mode}, submissions=${ch.submissions.length}`);
 
@@ -85,10 +92,10 @@ export async function runChallenge(
 
   // Review context (+ 4 required artifacts).
   const rc = buildReviewContext(fs, ch);
-  fs.writeJson(join(wsDir, "review-context-status.json"), rc.status);
-  fs.writeJson(join(wsDir, "active-review-context.json"), rc.active);
-  fs.writeJson(join(wsDir, "review-context-reconciliation.json"), rc.reconciliation);
-  fs.writeJson(join(wsDir, "source-location-map.json"), rc.sourceLocationMap);
+  writeJsonRel(join(wsDir, "review-context-status.json"), rc.status);
+  writeJsonRel(join(wsDir, "active-review-context.json"), rc.active);
+  writeJsonRel(join(wsDir, "review-context-reconciliation.json"), rc.reconciliation);
+  writeJsonRel(join(wsDir, "source-location-map.json"), rc.sourceLocationMap);
 
   const reviews = loadReviews(fs, ch);
 
@@ -111,7 +118,7 @@ export async function runChallenge(
         rev?.evidence ?? [],
       );
       codeProfiles.push(p);
-      fs.writeJson(join(wsDir, "submissions", sub.submissionId, "profile.json"), p);
+      writeJsonRel(join(wsDir, "submissions", sub.submissionId, "profile.json"), p);
     }
     matrix = buildCodeMatrix(ch.challengeId, rc.active.requirements, codeProfiles, reviews);
     const decisions = overlay(buildCodeDecisions(ch.challengeId, matrix, codeProfiles), opts.overlayDecisions);
@@ -138,7 +145,7 @@ export async function runChallenge(
       sourceIntegrityOk: true,
     };
     decisions.decisions = result.assemble.updatedDecisions;
-    fs.writeJson(join(wsDir, "decisions.json"), decisions);
+    writeJsonRel(join(wsDir, "decisions.json"), decisions);
     void before2;
   } else {
     const specText = ch.challengeContextPath ? fs.readText(ch.challengeContextPath) : null;
@@ -152,7 +159,7 @@ export async function runChallenge(
     for (const sub of ch.submissions) {
       const profs = await profileIdeationSubmission(ch, sub, rc.active.requirements, maxIdeas, llm);
       ideaProfiles.push(...profs);
-      fs.writeJson(join(wsDir, "submissions", sub.submissionId, "ideas.json"), profs);
+      writeJsonRel(join(wsDir, "submissions", sub.submissionId, "ideas.json"), profs);
     }
     matrix = buildIdeationMatrix(ch.challengeId, rc.active.requirements, ideaProfiles);
     contradictions = detectContradictions(ch.challengeId, ideaProfiles);
@@ -173,32 +180,32 @@ export async function runChallenge(
     fs.writeText(join(wsDir, "synthesized-concept", "concept.md"), synth.conceptMarkdown);
     provenance = synth.provenance;
     verification = synth.verification;
-    fs.writeJson(join(wsDir, "decisions.json"), decisions);
+    writeJsonRel(join(wsDir, "decisions.json"), decisions);
   }
 
   // Requirement matrix (JSON + Markdown).
-  fs.writeJson(join(wsDir, "requirement-matrix.json"), matrix);
+  writeJsonRel(join(wsDir, "requirement-matrix.json"), matrix);
   fs.writeText(join(wsDir, "requirement-matrix.md"), matrixToMarkdown(matrix, ch.title));
 
   // Provenance, contradictions, verification.
-  fs.writeJson(join(wsDir, "provenance.json"), provenance);
-  fs.writeJson(join(wsDir, "contradictions.json"), {
+  writeJsonRel(join(wsDir, "provenance.json"), provenance);
+  writeJsonRel(join(wsDir, "contradictions.json"), {
     challengeId: ch.challengeId,
     mode: ch.mode,
     contradictions: ch.mode === "ideation" ? contradictions : matrix.conflicts,
   });
-  fs.writeJson(join(wsDir, "verification.json"), verification);
+  writeJsonRel(join(wsDir, "verification.json"), verification);
 
   // Integrity — after (sources must be unchanged).
   const after = hashTree(fs, ch.packageRoot);
   const integrity = diffHashes(ch.challengeId, before, after);
-  fs.writeJson(join(wsDir, "integrity", "integrity-report.json"), integrity);
+  writeJsonRel(join(wsDir, "integrity", "integrity-report.json"), integrity);
   if (integrity.critical) log.warn(`[${ch.challengeId}] CRITICAL: source integrity mismatch detected.`);
 
   // Usage report + audit log.
   const usage = meter.report();
-  fs.writeJson(join(wsDir, "usage-report.json"), usage);
-  fs.writeJson(join(wsDir, "audit-log.json"), log.getAudit());
+  writeJsonRel(join(wsDir, "usage-report.json"), usage);
+  writeJsonRel(join(wsDir, "audit-log.json"), log.getAudit());
 
   // Review UI pointer per workspace.
   fs.allowWrite(join(wsDir, "review-ui"));
@@ -242,11 +249,12 @@ export async function runChallenge(
     integrityCritical: integrity.critical,
     verificationOverall: verification.overall,
   };
-  fs.writeJson(join(wsDir, "workspace-manifest.json"), manifest);
+  writeJsonRel(join(wsDir, "workspace-manifest.json"), manifest);
 
   log.info(
     `[${ch.challengeId}] done — verification=${verification.overall}, integrityCritical=${integrity.critical}, llm=${usage.provider}/${usage.model}, calls=${usage.calls}`,
   );
+  cleanupDisposable(); // remove any disposable ZIP-extraction dirs created this run
   return manifest;
 }
 

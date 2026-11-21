@@ -8,6 +8,7 @@
  */
 import { resolve, join, relative } from "node:path";
 import type { SafeFs } from "./fs-safe.js";
+import { materializeSubmission } from "./materialize.js";
 import type { ChallengeMode } from "./types.js";
 
 export interface ManifestChallenge {
@@ -28,7 +29,11 @@ export interface Manifest {
 
 export interface DiscoveredSubmission {
   submissionId: string;
-  rootPath: string; // absolute
+  rootPath: string; // absolute — folder, or disposable dir when extracted from a ZIP
+  /** Original immutable source path (folder or .zip). */
+  originalPath: string;
+  /** True when materialized from a ZIP into a disposable working directory. */
+  extracted: boolean;
   /** For ideation: the actual document files. For code: the project roots. */
   files: string[]; // absolute, excluding node_modules
 }
@@ -102,17 +107,30 @@ export function discoverChallenge(
 
   const submissions: DiscoveredSubmission[] = [];
   for (const sid of mc.submissionIds) {
-    const subRoot = join(submissionsDir, sid);
-    if (!fs.exists(subRoot)) {
+    const folder = join(submissionsDir, sid);
+    // Materialize: use a folder in place, or extract a ZIP into a disposable dir.
+    const mat = materializeSubmission(submissionsDir, sid);
+    if (!fs.exists(mat.rootPath)) {
       // Record an empty submission rather than crash — the pack may ship without
-      // files inserted yet (README: "add untouched ZIPs/docs").
-      submissions.push({ submissionId: sid, rootPath: subRoot, files: [] });
+      // files inserted yet.
+      submissions.push({
+        submissionId: sid,
+        rootPath: folder,
+        originalPath: folder,
+        extracted: false,
+        files: [],
+      });
       continue;
     }
+    // Extracted temp dirs live outside the pack's read roots — register them.
+    if (mat.extracted) fs.allowRead(mat.rootPath);
+    const files = fs.walk(mat.rootPath);
     submissions.push({
       submissionId: sid,
-      rootPath: subRoot,
-      files: fs.walk(subRoot),
+      rootPath: mat.rootPath,
+      originalPath: mat.originalPath,
+      extracted: mat.extracted,
+      files,
     });
   }
 

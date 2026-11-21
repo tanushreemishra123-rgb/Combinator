@@ -17,6 +17,7 @@ import { runChallenge, runAll, type RunOptions } from "./orchestrator.js";
 import { SafeFs } from "./fs-safe.js";
 import { Logger } from "./logger.js";
 import { loadManifest } from "./ingest.js";
+import { resolvePackRoot } from "./materialize.js";
 import { applyDecisionChange } from "./decisions.js";
 import type { DecisionState, DecisionWorkspace } from "./types.js";
 
@@ -34,7 +35,7 @@ function has(flag: string, argv: string[]): boolean {
 async function main() {
   const [, , cmd, ...rest] = process.argv;
   const cfg = loadConfig();
-  const packRoot = resolve(arg(["--pack", "-p"], rest, "./starter-pack")!);
+  const packRoot = resolvePackRoot(arg(["--pack", "-p"], rest, "./starter-pack")!);
   const outDir = resolve(arg(["--out", "-o"], rest, "./workspace")!);
   const opts: RunOptions = {
     packRoot,

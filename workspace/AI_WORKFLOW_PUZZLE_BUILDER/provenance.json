@@ -15,7 +15,7 @@
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position",
+              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position",
               "excerpt": "application root"
             }
           ],
@@ -38,25 +38,25 @@
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_001/submission/README.md",
+              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_001/submission/README.md",
               "excerpt": "matches: reliability, feedback, successful, paths"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_001/submission/backend/app/api/context.py",
+              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_001/submission/backend/app/api/context.py",
               "excerpt": "matches: reliability, successful"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_001/submission/backend/app/api/runs.py",
+              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_001/submission/backend/app/api/runs.py",
               "excerpt": "matches: reliability, successful"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_001/submission/backend/app/engine/executor.py",
+              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_001/submission/backend/app/engine/executor.py",
               "excerpt": "matches: reliability, successful"
             }
           ],

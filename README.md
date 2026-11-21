@@ -41,6 +41,33 @@ Everything above works offline with **zero configuration** (provider defaults to
 
 ---
 
+## The starter pack (external input — not bundled)
+
+Per the challenge Copilot, the organizer's starter pack is an **external input** and
+is **not** committed to this repository. Download `TC_COMBINATOR_STARTER_PACK_new.zip`
+and point `--pack` at **either** the `.zip` **or** its extracted root folder — the tool
+accepts both:
+
+```bash
+# A) extracted folder (extract preserving the included structure, then point at the root)
+npm run combinator -- run-all --pack /path/to/topcoder-combinator-starter-pack --out ./workspace
+
+# B) the zip directly (extracted internally into a disposable working directory)
+npm run combinator -- run-all --pack /path/to/TC_COMBINATOR_STARTER_PACK_new.zip --out ./workspace
+```
+
+There are **no hard-coded absolute paths** anywhere — the pack location is always
+supplied via `--pack` (the UI uses `COMBINATOR_PACK`). Original submissions are treated
+as immutable: a submission delivered as a ZIP is extracted into an **isolated,
+disposable** temp directory for analysis/build/test, and the original is never modified
+(verified by the SHA-256 before/after integrity report). The generated workspaces under
+[`workspace/`](workspace/) **are** committed — they are review deliverables.
+
+See [`docs/REVIEW_CONTEXT_MAP.md`](docs/REVIEW_CONTEXT_MAP.md) for how each of the nine
+review contexts is satisfied, with source-file and artifact evidence.
+
+---
+
 ## Commands
 
 | Command | Purpose |

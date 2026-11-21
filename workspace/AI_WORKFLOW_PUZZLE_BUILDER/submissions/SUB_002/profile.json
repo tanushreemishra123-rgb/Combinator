@@ -1,7 +1,7 @@
 {
   "submissionId": "SUB_002",
   "kind": "code",
-  "rootPath": "/home/claude/tc-combinator/starter-pack/challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002",
+  "rootPath": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002",
   "applications": [
     {
       "path": "submissions/SUB_002/2nd Position",
@@ -23,7 +23,7 @@
           {
             "kind": "file",
             "submissionId": "SUB_002",
-            "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position",
+            "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position",
             "excerpt": "application root"
           }
         ],
@@ -46,7 +46,7 @@
           {
             "kind": "file",
             "submissionId": "SUB_002",
-            "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/package.json",
+            "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/package.json",
             "excerpt": "package.json scripts"
           }
         ],
@@ -68,7 +68,7 @@
           {
             "kind": "test",
             "submissionId": "SUB_002",
-            "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/src/engine/engine.test.ts",
+            "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/src/engine/engine.test.ts",
             "excerpt": "example of 4 test files"
           }
         ],
@@ -90,25 +90,25 @@
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/.github/workflows/deploy-pages.yml",
+              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/.github/workflows/deploy-pages.yml",
               "excerpt": "matches: workflow, configure, steps"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/README.md",
+              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/README.md",
               "excerpt": "matches: visual, workflow, builder, arrange, configure"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/SUBMISSION.md",
+              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/SUBMISSION.md",
               "excerpt": "matches: visual, workflow, builder, configuration"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/docs/REVIEW.md",
+              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/docs/REVIEW.md",
               "excerpt": "matches: workflow, builder, steps, including"
             }
           ],
@@ -130,25 +130,25 @@
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/README.md",
+              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/README.md",
               "excerpt": "matches: seeded, workflow, puzzles, include, across"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/SUBMISSION.md",
+              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/SUBMISSION.md",
               "excerpt": "matches: seeded, workflow, puzzles, puzzle"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/docs/REVIEW.md",
+              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/docs/REVIEW.md",
               "excerpt": "matches: seeded, workflow, puzzles, include, across"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/docs/architecture.md",
+              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/docs/architecture.md",
               "excerpt": "matches: seeded, workflow, puzzles, include, across"
             }
           ],
@@ -170,25 +170,25 @@
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/.github/workflows/deploy-pages.yml",
+              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/.github/workflows/deploy-pages.yml",
               "excerpt": "matches: workflow, every"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/README.md",
+              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/README.md",
               "excerpt": "matches: workflow, execution, trace, every, status"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/SUBMISSION.md",
+              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/SUBMISSION.md",
               "excerpt": "matches: workflow, execution, trace, every, status"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/docs/REVIEW.md",
+              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/docs/REVIEW.md",
               "excerpt": "matches: workflow, execution, trace, every, executed"
             }
           ],
@@ -210,25 +210,25 @@
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/README.md",
+              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/README.md",
               "excerpt": "matches: failure, simulation, support, types, scenarios"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/SUBMISSION.md",
+              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/SUBMISSION.md",
               "excerpt": "matches: failure, simulation, types, scenarios"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/docs/REVIEW.md",
+              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/docs/REVIEW.md",
               "excerpt": "matches: failure, simulation, types, scenarios"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/docs/architecture.md",
+              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/docs/architecture.md",
               "excerpt": "matches: failure, types, scenarios, reproducible"
             }
           ],
@@ -250,25 +250,25 @@
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/README.md",
+              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/README.md",
               "excerpt": "matches: recovery, failure, handling, support, retry"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/SUBMISSION.md",
+              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/SUBMISSION.md",
               "excerpt": "matches: recovery, failure, handling, retry, fallback"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/docs/REVIEW.md",
+              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/docs/REVIEW.md",
               "excerpt": "matches: recovery, failure, handling, retry, fallback"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/docs/architecture.md",
+              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/docs/architecture.md",
               "excerpt": "matches: recovery, failure, handling, retry, fallback"
             }
           ],
@@ -290,25 +290,25 @@
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/README.md",
+              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/README.md",
               "excerpt": "matches: validation, puzzle, structured, failure, recovery"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/SUBMISSION.md",
+              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/SUBMISSION.md",
               "excerpt": "matches: validation, puzzle, failure, recovery"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/docs/REVIEW.md",
+              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/docs/REVIEW.md",
               "excerpt": "matches: validation, puzzle, structured, failure, recovery"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/docs/architecture.md",
+              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/docs/architecture.md",
               "excerpt": "matches: validation, puzzle, validates, structured, failure"
             }
           ],
@@ -330,25 +330,25 @@
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/README.md",
+              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/README.md",
               "excerpt": "matches: human, review, approval, puzzle, supports"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/SUBMISSION.md",
+              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/SUBMISSION.md",
               "excerpt": "matches: human, review, puzzle, decision"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/docs/REVIEW.md",
+              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/docs/REVIEW.md",
               "excerpt": "matches: human, review, approval, puzzle, approve"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/docs/architecture.md",
+              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/docs/architecture.md",
               "excerpt": "matches: human, review, puzzle, approve, reject"
             }
           ],
@@ -370,25 +370,25 @@
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/README.md",
+              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/README.md",
               "excerpt": "matches: reliability, feedback, successful, resilience, unresolved"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/SUBMISSION.md",
+              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/SUBMISSION.md",
               "excerpt": "matches: reliability, feedback"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/docs/REVIEW.md",
+              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/docs/REVIEW.md",
               "excerpt": "matches: reliability, feedback, successful, resilience, unresolved"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/docs/architecture.md",
+              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/docs/architecture.md",
               "excerpt": "matches: reliability, feedback, resilience, unresolved"
             }
           ],
@@ -410,25 +410,25 @@
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/README.md",
+              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/README.md",
               "excerpt": "matches: local, execution, puzzles, locally, committed"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/SUBMISSION.md",
+              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/SUBMISSION.md",
               "excerpt": "matches: local, execution, puzzles, locally, committed"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/docs/REVIEW.md",
+              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/docs/REVIEW.md",
               "excerpt": "matches: local, execution, documentation, puzzles, committed"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/docs/architecture.md",
+              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_002/2nd Position/docs/architecture.md",
               "excerpt": "matches: local, execution, puzzles, committed, inputs"
             }
           ],
@@ -453,7 +453,7 @@
         {
           "kind": "reviewer_comment",
           "submissionId": "SUB_002",
-          "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_WORKFLOW_PUZZLE_BUILDER/reviews/SUB_002/final-result.json",
+          "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/reviews/SUB_002/final-result.json",
           "excerpt": "finalScore=95.6"
         }
       ],

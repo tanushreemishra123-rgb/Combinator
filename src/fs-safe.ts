@@ -54,6 +54,11 @@ export class SafeFs {
     this.readRoots.push(r);
   }
 
+  /** Register an additional subtree as readable (e.g. a disposable extraction dir). */
+  allowRead(root: string): void {
+    this.readRoots.push(resolve(root));
+  }
+
   private resolveForRead(p: string): string {
     const abs = resolve(p);
     const real = existsSync(abs) ? realpathSync(abs) : abs;

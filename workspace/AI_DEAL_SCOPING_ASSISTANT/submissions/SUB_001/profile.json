@@ -1,7 +1,7 @@
 {
   "submissionId": "SUB_001",
   "kind": "code",
-  "rootPath": "/home/claude/tc-combinator/starter-pack/challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001",
+  "rootPath": "challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001",
   "applications": [
     {
       "path": "submissions/SUB_001/deal-scoping-assistant",
@@ -39,7 +39,7 @@
           {
             "kind": "file",
             "submissionId": "SUB_001",
-            "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant",
+            "path": "challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant",
             "excerpt": "application root"
           }
         ],
@@ -53,7 +53,7 @@
           {
             "kind": "file",
             "submissionId": "SUB_001",
-            "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/backend",
+            "path": "challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/backend",
             "excerpt": "application root"
           }
         ],
@@ -67,7 +67,7 @@
           {
             "kind": "file",
             "submissionId": "SUB_001",
-            "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/frontend",
+            "path": "challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/frontend",
             "excerpt": "application root"
           }
         ],
@@ -90,7 +90,7 @@
           {
             "kind": "file",
             "submissionId": "SUB_001",
-            "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/frontend/package.json",
+            "path": "challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/frontend/package.json",
             "excerpt": "package.json scripts"
           }
         ],
@@ -114,7 +114,7 @@
           {
             "kind": "test",
             "submissionId": "SUB_001",
-            "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/backend/tests/api/test_documents.py",
+            "path": "challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/backend/tests/api/test_documents.py",
             "excerpt": "example of 69 test files"
           }
         ],
@@ -136,25 +136,25 @@
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/README.md",
+              "path": "challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/README.md",
               "excerpt": "matches: customer, analysis, source, reference, origin"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/backend/app/ai/context.py",
+              "path": "challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/backend/app/ai/context.py",
               "excerpt": "matches: structured, customer, source, reference"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/backend/app/ai/prompts/_grounding.md",
+              "path": "challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/backend/app/ai/prompts/_grounding.md",
               "excerpt": "matches: structured, customer, source, origin, question"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/backend/app/ai/prompts/ai_strategy.md",
+              "path": "challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/backend/app/ai/prompts/ai_strategy.md",
               "excerpt": "matches: structured, customer, reference"
             }
           ],
@@ -176,25 +176,25 @@
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/README.md",
+              "path": "challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/README.md",
               "excerpt": "matches: scope, review, users, assumptions, downstream"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/backend/app/ai/context.py",
+              "path": "challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/backend/app/ai/context.py",
               "excerpt": "matches: scope, review, controlled, generation, artifacts"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/backend/app/ai/mock_provider.py",
+              "path": "challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/backend/app/ai/mock_provider.py",
               "excerpt": "matches: scope, review, generation, artifacts, model"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/backend/app/ai/prompts/_grounding.md",
+              "path": "challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/backend/app/ai/prompts/_grounding.md",
               "excerpt": "matches: scope, review, assumptions"
             }
           ],
@@ -216,25 +216,25 @@
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/README.md",
+              "path": "challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/README.md",
               "excerpt": "matches: scope, reference, inferred, recommended, assumed"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/backend/app/ai/context.py",
+              "path": "challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/backend/app/ai/context.py",
               "excerpt": "matches: scope, generation, items, reference"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/backend/app/ai/mock_provider.py",
+              "path": "challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/backend/app/ai/mock_provider.py",
               "excerpt": "matches: scope, generation, items, reference"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/backend/app/ai/prompts/_grounding.md",
+              "path": "challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/backend/app/ai/prompts/_grounding.md",
               "excerpt": "matches: scope, items, requested, inferred, recommended"
             }
           ],
@@ -256,25 +256,25 @@
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/README.md",
+              "path": "challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/README.md",
               "excerpt": "matches: cloud, architecture, azure, google, component"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/backend/app/ai/prompts/_grounding.md",
+              "path": "challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/backend/app/ai/prompts/_grounding.md",
               "excerpt": "matches: solution, architecture, assumption"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/backend/app/ai/prompts/ai_strategy.md",
+              "path": "challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/backend/app/ai/prompts/ai_strategy.md",
               "excerpt": "matches: cloud, solution, architecture, azure, services"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/backend/app/ai/prompts/architecture.md",
+              "path": "challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/backend/app/ai/prompts/architecture.md",
               "excerpt": "matches: cloud, solution, architecture, services, component"
             }
           ],
@@ -296,25 +296,25 @@
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/README.md",
+              "path": "challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/README.md",
               "excerpt": "matches: integration, strategy, cases, reference, explain"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/backend/app/ai/prompts/_grounding.md",
+              "path": "challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/backend/app/ai/prompts/_grounding.md",
               "excerpt": "matches: solution, recommendations, rationale"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/backend/app/ai/prompts/ai_strategy.md",
+              "path": "challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/backend/app/ai/prompts/ai_strategy.md",
               "excerpt": "matches: solution, cases, reference, recommendations, rationale"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/backend/app/ai/prompts/architecture.md",
+              "path": "challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/backend/app/ai/prompts/architecture.md",
               "excerpt": "matches: integration, solution, rationale"
             }
           ],
@@ -336,25 +336,25 @@
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/README.md",
+              "path": "challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/README.md",
               "excerpt": "matches: explainable, effort, timeline, estimation, drivers"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/backend/app/ai/prompts/_grounding.md",
+              "path": "challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/backend/app/ai/prompts/_grounding.md",
               "excerpt": "matches: rules, missing, information"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/backend/app/ai/prompts/data_strategy.md",
+              "path": "challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/backend/app/ai/prompts/data_strategy.md",
               "excerpt": "matches: missing, information"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/backend/app/ai/prompts/estimate_drivers.md",
+              "path": "challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/backend/app/ai/prompts/estimate_drivers.md",
               "excerpt": "matches: effort, timeline, estimation, drivers"
             }
           ],
@@ -376,25 +376,25 @@
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/README.md",
+              "path": "challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/README.md",
               "excerpt": "matches: estimation, inputs"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/backend/app/ai/prompts/estimate_drivers.md",
+              "path": "challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/backend/app/ai/prompts/estimate_drivers.md",
               "excerpt": "matches: commercial, estimation"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/backend/app/api/v1/estimation.py",
+              "path": "challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/backend/app/api/v1/estimation.py",
               "excerpt": "matches: estimation, inputs"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/backend/app/change_impact/rules.py",
+              "path": "challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/backend/app/change_impact/rules.py",
               "excerpt": "matches: commercial, estimation, inputs"
             }
           ],
@@ -416,25 +416,25 @@
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/README.md",
+              "path": "challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/README.md",
               "excerpt": "matches: change, impact, traceability, quality, validation"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/backend/app/ai/prompts/data_strategy.md",
+              "path": "challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/backend/app/ai/prompts/data_strategy.md",
               "excerpt": "matches: change, quality, validation"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/backend/app/ai/prompts/gap_analysis.md",
+              "path": "challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/backend/app/ai/prompts/gap_analysis.md",
               "excerpt": "matches: change, impact, affected"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/backend/app/ai/provider.py",
+              "path": "challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/backend/app/ai/provider.py",
               "excerpt": "matches: validation, outputs"
             }
           ],
@@ -456,25 +456,25 @@
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/README.md",
+              "path": "challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/README.md",
               "excerpt": "matches: local, analysis, estimation, validation, stages"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/backend/app/ai/mock_provider.py",
+              "path": "challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/backend/app/ai/mock_provider.py",
               "excerpt": "matches: generation, validation, stages"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/backend/app/ai/prompts/data_strategy.md",
+              "path": "challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/backend/app/ai/prompts/data_strategy.md",
               "excerpt": "matches: product, validation"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/backend/app/ai/prompts/integration_architecture.md",
+              "path": "challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/backend/app/ai/prompts/integration_architecture.md",
               "excerpt": "matches: product, validation"
             }
           ],
@@ -501,7 +501,7 @@
         {
           "kind": "reviewer_comment",
           "submissionId": "SUB_001",
-          "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_DEAL_SCOPING_ASSISTANT/reviews/SUB_001/final-result.json",
+          "path": "challenges/AI_DEAL_SCOPING_ASSISTANT/reviews/SUB_001/final-result.json",
           "excerpt": "finalScore=100"
         }
       ],

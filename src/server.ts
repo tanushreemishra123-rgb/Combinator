@@ -17,13 +17,14 @@ import { loadConfig } from "./config.js";
 import { SafeFs } from "./fs-safe.js";
 import { Logger } from "./logger.js";
 import { loadManifest } from "./ingest.js";
+import { resolvePackRoot } from "./materialize.js";
 import { runChallenge } from "./orchestrator.js";
 import { applyDecisionChange } from "./decisions.js";
 import { pick } from "./util.js";
 import type { DecisionState, DecisionWorkspace } from "./types.js";
 
 const cfg = loadConfig();
-const PACK = resolve(process.env.COMBINATOR_PACK || "./starter-pack");
+const PACK = resolvePackRoot(process.env.COMBINATOR_PACK || "./starter-pack");
 const OUT = resolve(process.env.COMBINATOR_OUT || "./workspace");
 const PUBLIC = resolve(new URL("../public", import.meta.url).pathname);
 

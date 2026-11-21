@@ -1,163 +1,163 @@
 {
   "REQ_inxdtg": {
     "kind": "specification",
-    "path": "/home/claude/tc-combinator/starter-pack/review-context/ai-workflow-puzzle-builder.json",
+    "path": "review-context/ai-workflow-puzzle-builder.json",
     "locator": "requirements[0]",
     "excerpt": "Visual Workflow Builder"
   },
   "CONSTR_ojcd4d": {
     "kind": "specification",
-    "path": "/home/claude/tc-combinator/starter-pack/review-context/ai-workflow-puzzle-builder.json",
+    "path": "review-context/ai-workflow-puzzle-builder.json",
     "locator": "requirements[0].constraints[0]",
     "excerpt": "Users can arrange, connect or configure multiple steps including AI."
   },
   "CONSTR_r3i75s": {
     "kind": "specification",
-    "path": "/home/claude/tc-combinator/starter-pack/review-context/ai-workflow-puzzle-builder.json",
+    "path": "review-context/ai-workflow-puzzle-builder.json",
     "locator": "requirements[0].constraints[1]",
     "excerpt": "Complete workflow and configuration are visible before execution."
   },
   "REQ_77on11": {
     "kind": "specification",
-    "path": "/home/claude/tc-combinator/starter-pack/review-context/ai-workflow-puzzle-builder.json",
+    "path": "review-context/ai-workflow-puzzle-builder.json",
     "locator": "requirements[1]",
     "excerpt": "Pre-Seeded Workflow Puzzles"
   },
   "CONSTR_09n2ge": {
     "kind": "specification",
-    "path": "/home/claude/tc-combinator/starter-pack/review-context/ai-workflow-puzzle-builder.json",
+    "path": "review-context/ai-workflow-puzzle-builder.json",
     "locator": "requirements[1].constraints[0]",
     "excerpt": "Include 5–8 puzzles across three difficulty levels."
   },
   "CONSTR_2bighv": {
     "kind": "specification",
-    "path": "/home/claude/tc-combinator/starter-pack/review-context/ai-workflow-puzzle-builder.json",
+    "path": "review-context/ai-workflow-puzzle-builder.json",
     "locator": "requirements[1].constraints[1]",
     "excerpt": "Each puzzle includes objective, input, blocks, expected result, failure and completion criteria."
   },
   "REQ_nb1r3o": {
     "kind": "specification",
-    "path": "/home/claude/tc-combinator/starter-pack/review-context/ai-workflow-puzzle-builder.json",
+    "path": "review-context/ai-workflow-puzzle-builder.json",
     "locator": "requirements[2]",
     "excerpt": "Workflow Execution and Step Trace"
   },
   "CONSTR_48id11": {
     "kind": "specification",
-    "path": "/home/claude/tc-combinator/starter-pack/review-context/ai-workflow-puzzle-builder.json",
+    "path": "review-context/ai-workflow-puzzle-builder.json",
     "locator": "requirements[2].constraints[0]",
     "excerpt": "Every executed step exposes status, input and output."
   },
   "CONSTR_6z32cr": {
     "kind": "specification",
-    "path": "/home/claude/tc-combinator/starter-pack/review-context/ai-workflow-puzzle-builder.json",
+    "path": "review-context/ai-workflow-puzzle-builder.json",
     "locator": "requirements[2].constraints[1]",
     "excerpt": "Trace records errors, retries, fallbacks, validation and human decisions."
   },
   "REQ_ixo2z1": {
     "kind": "specification",
-    "path": "/home/claude/tc-combinator/starter-pack/review-context/ai-workflow-puzzle-builder.json",
+    "path": "review-context/ai-workflow-puzzle-builder.json",
     "locator": "requirements[3]",
     "excerpt": "Failure Simulation"
   },
   "CONSTR_ks8lbi": {
     "kind": "specification",
-    "path": "/home/claude/tc-combinator/starter-pack/review-context/ai-workflow-puzzle-builder.json",
+    "path": "review-context/ai-workflow-puzzle-builder.json",
     "locator": "requirements[3].constraints[0]",
     "excerpt": "Support at least four failure types."
   },
   "CONSTR_kdv7ve": {
     "kind": "specification",
-    "path": "/home/claude/tc-combinator/starter-pack/review-context/ai-workflow-puzzle-builder.json",
+    "path": "review-context/ai-workflow-puzzle-builder.json",
     "locator": "requirements[3].constraints[1]",
     "excerpt": "Failure scenarios are reproducible."
   },
   "REQ_pk38i1": {
     "kind": "specification",
-    "path": "/home/claude/tc-combinator/starter-pack/review-context/ai-workflow-puzzle-builder.json",
+    "path": "review-context/ai-workflow-puzzle-builder.json",
     "locator": "requirements[4]",
     "excerpt": "Recovery and Safe Failure Handling"
   },
   "CONSTR_zdoqaj": {
     "kind": "specification",
-    "path": "/home/claude/tc-combinator/starter-pack/review-context/ai-workflow-puzzle-builder.json",
+    "path": "review-context/ai-workflow-puzzle-builder.json",
     "locator": "requirements[4].constraints[0]",
     "excerpt": "Support retry, fallback and safe stop."
   },
   "CONSTR_nr4klj": {
     "kind": "specification",
-    "path": "/home/claude/tc-combinator/starter-pack/review-context/ai-workflow-puzzle-builder.json",
+    "path": "review-context/ai-workflow-puzzle-builder.json",
     "locator": "requirements[4].constraints[1]",
     "excerpt": "Recovery actions and outcomes appear in trace."
   },
   "REQ_z79n6r": {
     "kind": "specification",
-    "path": "/home/claude/tc-combinator/starter-pack/review-context/ai-workflow-puzzle-builder.json",
+    "path": "review-context/ai-workflow-puzzle-builder.json",
     "locator": "requirements[5]",
     "excerpt": "Output Validation"
   },
   "CONSTR_2bjzaf": {
     "kind": "specification",
-    "path": "/home/claude/tc-combinator/starter-pack/review-context/ai-workflow-puzzle-builder.json",
+    "path": "review-context/ai-workflow-puzzle-builder.json",
     "locator": "requirements[5].constraints[0]",
     "excerpt": "At least one puzzle validates structured output."
   },
   "CONSTR_lz8erj": {
     "kind": "specification",
-    "path": "/home/claude/tc-combinator/starter-pack/review-context/ai-workflow-puzzle-builder.json",
+    "path": "review-context/ai-workflow-puzzle-builder.json",
     "locator": "requirements[5].constraints[1]",
     "excerpt": "Validation failure triggers recovery or safe termination."
   },
   "REQ_cuzsd2": {
     "kind": "specification",
-    "path": "/home/claude/tc-combinator/starter-pack/review-context/ai-workflow-puzzle-builder.json",
+    "path": "review-context/ai-workflow-puzzle-builder.json",
     "locator": "requirements[6]",
     "excerpt": "Human Review and Approval"
   },
   "CONSTR_9vxh4f": {
     "kind": "specification",
-    "path": "/home/claude/tc-combinator/starter-pack/review-context/ai-workflow-puzzle-builder.json",
+    "path": "review-context/ai-workflow-puzzle-builder.json",
     "locator": "requirements[6].constraints[0]",
     "excerpt": "At least one puzzle supports approve, edit or reject."
   },
   "CONSTR_n8bxtq": {
     "kind": "specification",
-    "path": "/home/claude/tc-combinator/starter-pack/review-context/ai-workflow-puzzle-builder.json",
+    "path": "review-context/ai-workflow-puzzle-builder.json",
     "locator": "requirements[6].constraints[1]",
     "excerpt": "Decision and transition are recorded."
   },
   "REQ_63bstt": {
     "kind": "specification",
-    "path": "/home/claude/tc-combinator/starter-pack/review-context/ai-workflow-puzzle-builder.json",
+    "path": "review-context/ai-workflow-puzzle-builder.json",
     "locator": "requirements[7]",
     "excerpt": "Reliability Feedback"
   },
   "CONSTR_4bhwhw": {
     "kind": "specification",
-    "path": "/home/claude/tc-combinator/starter-pack/review-context/ai-workflow-puzzle-builder.json",
+    "path": "review-context/ai-workflow-puzzle-builder.json",
     "locator": "requirements[7].constraints[0]",
     "excerpt": "Feedback identifies successful resilience behavior."
   },
   "CONSTR_1ip7vk": {
     "kind": "specification",
-    "path": "/home/claude/tc-combinator/starter-pack/review-context/ai-workflow-puzzle-builder.json",
+    "path": "review-context/ai-workflow-puzzle-builder.json",
     "locator": "requirements[7].constraints[1]",
     "excerpt": "Feedback identifies unresolved unsafe paths."
   },
   "REQ_xwax2o": {
     "kind": "specification",
-    "path": "/home/claude/tc-combinator/starter-pack/review-context/ai-workflow-puzzle-builder.json",
+    "path": "review-context/ai-workflow-puzzle-builder.json",
     "locator": "requirements[8]",
     "excerpt": "Local Execution, Mock AI, and Documentation"
   },
   "CONSTR_xit0t9": {
     "kind": "specification",
-    "path": "/home/claude/tc-combinator/starter-pack/review-context/ai-workflow-puzzle-builder.json",
+    "path": "review-context/ai-workflow-puzzle-builder.json",
     "locator": "requirements[8].constraints[0]",
     "excerpt": "All puzzles run locally with committed mock inputs and responses."
   },
   "CONSTR_5pp34t": {
     "kind": "specification",
-    "path": "/home/claude/tc-combinator/starter-pack/review-context/ai-workflow-puzzle-builder.json",
+    "path": "review-context/ai-workflow-puzzle-builder.json",
     "locator": "requirements[8].constraints[1]",
     "excerpt": "README covers setup, execution, failures, recovery, optional AI and mock mode."
   }

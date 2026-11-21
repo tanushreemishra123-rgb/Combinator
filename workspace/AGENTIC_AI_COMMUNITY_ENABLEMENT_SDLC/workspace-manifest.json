@@ -2,7 +2,7 @@
   "challengeId": "AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC",
   "title": "Agentic AI and Community Enablement in SDLC",
   "mode": "ideation",
-  "generatedAt": "2026-11-21T07:57:34.899Z",
+  "generatedAt": "2026-11-21T09:47:35.235Z",
   "combinatorVersion": "1.0.0",
   "reviewContextMode": "specification_derived",
   "artifacts": [
@@ -34,7 +34,7 @@
     "retries": 0,
     "failures": 0,
     "approxCostUsd": 0.000516,
-    "processingMs": 1039
+    "processingMs": 636
   },
   "integrityCritical": false,
   "verificationOverall": "passed"

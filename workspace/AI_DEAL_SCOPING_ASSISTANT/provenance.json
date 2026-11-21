@@ -15,7 +15,7 @@
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant",
+              "path": "challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant",
               "excerpt": "application root"
             }
           ],
@@ -29,7 +29,7 @@
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/backend",
+              "path": "challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/backend",
               "excerpt": "application root"
             }
           ],
@@ -43,7 +43,7 @@
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "/home/claude/tc-combinator/starter-pack/challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/frontend",
+              "path": "challenges/AI_DEAL_SCOPING_ASSISTANT/submissions/SUB_001/deal-scoping-assistant/frontend",
               "excerpt": "application root"
             }
           ],

@@ -3,7 +3,11 @@ dist/
 *.log
 .env
 .DS_Store
-# Generated workspaces are produced by `combinator run`.
-# A delivered copy is committed under workspace/ for review; local re-runs overwrite it.
+# The organizer's starter pack is an EXTERNAL INPUT (pass it via --pack). Per the
+# challenge copilot it must NOT be committed/bundled; keep it out of the repo.
+starter-pack/
+TC_COMBINATOR_STARTER_PACK_new/
+# Generated workspaces ARE deliverables and are committed under workspace/.
+# (Local re-runs overwrite them.)
 /tmp-analysis/
 coverage/
