@@ -2,7 +2,7 @@
  * Base-plus-transplant assembly (challenge §Code Mode).
  *
  *  - Copy the approved base into combined-solution/.
- *  - Apply one approved transplant at a time. Each transplant copies the donor's
+ *  - Apply one Copilot-approved transplant at a time. Each transplant copies the donor's
  *    requirement-grounding files into combined-solution/_transplants/<req>/<donor>/
  *    (namespaced so the base build is never silently broken), records provenance,
  *    and — when dynamic exec is enabled — builds/tests; failures roll back that
@@ -59,18 +59,16 @@ export async function assembleCandidate(
 ): Promise<{ assemble: AssembleResult; verification: Awaited<ReturnType<typeof verifyCodeCandidate>> }> {
   const candidateDir = join(workspaceDir, "combined-solution");
   fs.allowWrite(candidateDir);
+  // Regeneration must never leave a previous candidate visible when the current
+  // decision set has no approved base or transplant.
+  fs.removeInWritable(candidateDir);
+  fs.mkdirp(candidateDir);
 
   const entries: ProvenanceEntry[] = [];
   const updatedDecisions = decisions.decisions.map((d) => ({ ...d }));
 
   // ── Base ─────────────────────────────────────────────────────────────────
   const baseDecision = updatedDecisions.find((d) => d.kind === "base_selection");
-  // Auto-accept the recommendation for an unattended generation pass if still pending.
-  if (baseDecision && baseDecision.state === "pending") {
-    baseDecision.state = "accepted";
-    baseDecision.selectedSource = baseDecision.recommendation;
-    baseDecision.copilotComment = "Auto-accepted agent recommendation (unattended generation pass).";
-  }
   const baseSourceId = baseDecision ? acceptedOptionSourceId(baseDecision) : null;
   const baseProfile = profiles.find((p) => p.submissionId === baseSourceId);
   const baseSub = challenge.submissions.find((s) => s.submissionId === baseSourceId);
@@ -86,7 +84,11 @@ export async function assembleCandidate(
       sourceIntegrityOk,
       exec,
     });
-    if (baseDecision) baseDecision.state = "blocked";
+    // A pending decision is awaiting Copilot action, not a failed candidate.
+    // Preserve it so the UI/CLI can accept or choose an alternative and then
+    // regenerate. A decision that was already approved but cannot be resolved
+    // is a genuine block.
+    if (baseDecision && baseDecision.state !== "pending") baseDecision.state = "blocked";
     return {
       assemble: {
         provenance: { challengeId: challenge.challengeId, mode: "code", entries },
@@ -125,12 +127,6 @@ export async function assembleCandidate(
   const transplantDecisions = updatedDecisions.filter((d) => d.kind === "transplant");
 
   for (const d of transplantDecisions) {
-    if (d.state === "pending") {
-      // Auto-accept recommendation for unattended generation.
-      d.state = "accepted";
-      d.selectedSource = d.recommendation;
-      d.copilotComment = "Auto-accepted agent recommendation (unattended generation pass).";
-    }
     const donorId = acceptedOptionSourceId(d);
     if (!donorId || donorId === baseSourceId) continue; // "keep base" alternative → nothing to copy
     const donorProfile = profiles.find((p) => p.submissionId === donorId);

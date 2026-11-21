@@ -1,31 +1,31 @@
 {
   "REQ_47eryl3": {
     "kind": "specification",
-    "path": "challenges/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/challenge-context.json",
+    "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC\\challenge-context.json",
     "locator": "evaluationCriteria[0]",
     "excerpt": "Originality"
   },
   "REQ_xqo1kk2": {
     "kind": "specification",
-    "path": "challenges/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/challenge-context.json",
+    "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC\\challenge-context.json",
     "locator": "evaluationCriteria[1]",
     "excerpt": "Feasibility"
   },
   "REQ_2v9d8ll": {
     "kind": "specification",
-    "path": "challenges/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/challenge-context.json",
+    "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC\\challenge-context.json",
     "locator": "evaluationCriteria[2]",
     "excerpt": "Scalability"
   },
   "REQ_3twqemh": {
     "kind": "specification",
-    "path": "challenges/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/challenge-context.json",
+    "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC\\challenge-context.json",
     "locator": "evaluationCriteria[3]",
     "excerpt": "Impact Potential"
   },
   "REQ_d1gcam6": {
     "kind": "specification",
-    "path": "challenges/AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC/challenge-context.json",
+    "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC\\challenge-context.json",
     "locator": "evaluationCriteria[4]",
     "excerpt": "Alignment with Scope"
   }

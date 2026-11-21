@@ -27,9 +27,9 @@
       "risk": "low",
       "state": "accepted",
       "selectedSource": "OPT_2j166qh",
-      "copilotComment": "Auto-accepted agent recommendation (unattended generation pass).",
+      "copilotComment": "Accepted by the submission author for the included fixture workspace.",
       "regenerationRequired": true,
-      "updatedAt": "proposed"
+      "updatedAt": "2026-11-21T10:32:09.822Z"
     },
     {
       "id": "DEC_2dk5yqh",
@@ -57,9 +57,9 @@
       "risk": "high",
       "state": "accepted",
       "selectedSource": "OPT_7luweka",
-      "copilotComment": "Auto-accepted agent recommendation (unattended generation pass).",
+      "copilotComment": "Accepted by the submission author for the included fixture workspace.",
       "regenerationRequired": true,
-      "updatedAt": "proposed"
+      "updatedAt": "2026-11-21T10:32:09.823Z"
     }
   ]
 }

@@ -2,7 +2,7 @@
   "challengeId": "AI_DEAL_SCOPING_ASSISTANT",
   "mode": "code",
   "candidate": "combined-solution/",
-  "overall": "partial",
+  "overall": "failed",
   "steps": [
     {
       "name": "Source integrity (before/after SHA-256)",
@@ -17,35 +17,38 @@
     {
       "name": "Dependency installation",
       "command": "npm install --no-audit --no-fund --ignore-scripts",
-      "state": "skipped",
-      "detail": "Dynamic verification not executed in this pass. Re-run with --verify-exec to run it."
+      "state": "failed",
+      "detail": "Exit -4058. stderr tail: ",
+      "durationMs": 14
     },
     {
       "name": "Build",
       "command": "npm run build",
-      "state": "skipped",
-      "detail": "Dynamic verification not executed in this pass. Re-run with --verify-exec to run it."
+      "state": "failed",
+      "detail": "Exit -4058. stderr tail: ",
+      "durationMs": 7
     },
     {
       "name": "Application startup (smoke)",
-      "state": "skipped",
-      "detail": "Dynamic verification not executed in this pass. Re-run with --verify-exec to run it."
+      "state": "not_verifiable",
+      "detail": "No command discovered for this step in the candidate."
     },
     {
       "name": "Organizer smoke tests",
-      "state": "skipped",
-      "detail": "Dynamic verification not executed in this pass. Re-run with --verify-exec to run it."
+      "state": "not_verifiable",
+      "detail": "No command discovered for this step in the candidate."
     },
     {
       "name": "Unit / integration tests",
       "command": "npm test -- --run",
-      "state": "skipped",
-      "detail": "Dynamic verification not executed in this pass. Re-run with --verify-exec to run it."
+      "state": "failed",
+      "detail": "Exit -4058. stderr tail: ",
+      "durationMs": 7
     },
     {
       "name": "Regression comparison vs base",
-      "state": "skipped",
-      "detail": "Requires dynamic execution (--verify-exec)."
+      "state": "not_verifiable",
+      "detail": "Base and candidate test suites must both run to compare; not both available in this environment."
     },
     {
       "name": "Approved-capability verification",
@@ -58,6 +61,6 @@
       "detail": "Starter-pack reviews are normalized score stubs without a re-runnable scorecard; re-evaluation is not possible without the original scorecard definition. Not fabricated."
     }
   ],
-  "honestSummary": "Static and integrity checks passed. Dynamic verification was not executed in this pass (run with --verify-exec); those steps are marked skipped, not passed.",
+  "honestSummary": "Candidate did NOT fully verify. Failed steps are recorded above; the last verified candidate is preserved and affected decisions should be marked blocked. This candidate is not presented as successful.",
   "sourceIntegrityOk": true
 }

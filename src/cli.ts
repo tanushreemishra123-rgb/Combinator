@@ -6,6 +6,7 @@
  *   combinator run    <CHALLENGE_ID> --pack <dir> [--out <dir>] [--verify-exec] [--exec-timeout <ms>]
  *   combinator run-all --pack <dir> [--out <dir>] [--verify-exec]
  *   combinator decide <CHALLENGE_ID> --id <decisionId> --state <state> [--option <optId>] [--comment "..."] --pack <dir>
+ *   combinator approve-recommendations <CHALLENGE_ID> [--comment "..."] --pack <dir>
  *
  * `decide` applies a Copilot decision change and regenerates the affected
  * candidate/workspace (preserving all other decisions).
@@ -17,7 +18,7 @@ import { runChallenge, runAll, type RunOptions } from "./orchestrator.js";
 import { SafeFs } from "./fs-safe.js";
 import { Logger } from "./logger.js";
 import { loadManifest } from "./ingest.js";
-import { resolvePackRoot } from "./materialize.js";
+import { cleanupDisposable, resolvePackRoot } from "./materialize.js";
 import { applyDecisionChange } from "./decisions.js";
 import type { DecisionState, DecisionWorkspace } from "./types.js";
 
@@ -61,8 +62,12 @@ async function main() {
       const m = loadManifest(fs, packRoot);
       const mc = m.challenges.find((c) => c.challengeId === id);
       if (!mc) fail(`challenge not found in manifest: ${id}`);
-      const man = await runChallenge(cfg, mc!, opts);
-      console.log(JSON.stringify({ ok: true, challengeId: man.challengeId, verification: man.verificationOverall, integrityCritical: man.integrityCritical }, null, 2));
+      try {
+        const man = await runChallenge(cfg, mc!, opts);
+        console.log(JSON.stringify({ ok: true, challengeId: man.challengeId, verification: man.verificationOverall, integrityCritical: man.integrityCritical }, null, 2));
+      } finally {
+        cleanupDisposable();
+      }
       break;
     }
     case "run-all": {
@@ -102,6 +107,29 @@ async function main() {
       console.log(JSON.stringify({ ok: true, applied: { decisionId, state }, regenerated: man.challengeId, verification: man.verificationOverall }, null, 2));
       break;
     }
+    case "approve-recommendations": {
+      const id = rest[0];
+      if (!id || id.startsWith("-")) fail("approve-recommendations requires a CHALLENGE_ID");
+      const decisionsPath = join(outDir, id, "decisions.json");
+      if (!existsSync(decisionsPath)) fail(`no decisions.json for ${id}; run it first`);
+      const dw = JSON.parse(readFileSync(decisionsPath, "utf8")) as DecisionWorkspace;
+      const comment = arg(["--comment"], rest, "Copilot accepted the recommended options.")!;
+      let approved = 0;
+      dw.decisions = dw.decisions.map((d) => {
+        if (d.state !== "pending") return d;
+        const result = applyDecisionChange(d, { state: "accepted", comment });
+        if (!result.ok) fail(result.error);
+        approved++;
+        return result.decision;
+      });
+      const fs = new SafeFs({ readRoots: [packRoot], log: new Logger(false) });
+      const m = loadManifest(fs, packRoot);
+      const mc = m.challenges.find((c) => c.challengeId === id);
+      if (!mc) fail(`challenge not found in manifest: ${id}`);
+      const man = await runChallenge(cfg, mc, { ...opts, overlayDecisions: dw });
+      console.log(JSON.stringify({ ok: true, approved, regenerated: man.challengeId, verification: man.verificationOverall }, null, 2));
+      break;
+    }
     default:
       console.log(
         [
@@ -113,6 +141,8 @@ async function main() {
           "  run-all                   Run every challenge in the manifest",
           "  decide <ID> --id <d> --state <s> [--option <o>] [--comment ..]",
           "                            Apply a Copilot decision change and regenerate",
+          "  approve-recommendations <ID> [--comment ..]",
+          "                            Accept every pending recommendation and regenerate",
           "",
           "Flags: --pack <dir> (default ./starter-pack), --out <dir> (default ./workspace),",
           "       --verify-exec (run dynamic build/test steps), --exec-timeout <ms>",

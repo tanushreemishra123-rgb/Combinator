@@ -5,7 +5,7 @@
 - **Requirements/criteria:** 9
 - **Verification:** partial
 - **Source integrity critical:** no (sources unchanged)
-- **LLM:** mock/deterministic-mock-v1, 2 call(s), ≈ $0.000102
+- **LLM:** mock/deterministic-mock-v1, 2 call(s), ≈ $0.000103
 
 ## Submissions
 

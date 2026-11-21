@@ -25,11 +25,11 @@
       "recommendation": "OPT_d145nb0",
       "reasoning": "Idea addresses 5/5 evaluation areas with grounded evidence.",
       "risk": "low",
-      "state": "pending",
+      "state": "accepted",
       "selectedSource": "OPT_d145nb0",
-      "copilotComment": null,
+      "copilotComment": "Accepted by the submission author for the included fixture workspace.",
       "regenerationRequired": true,
-      "updatedAt": "proposed"
+      "updatedAt": "2026-11-21T10:32:31.033Z"
     },
     {
       "id": "DEC_7htth48",
@@ -54,11 +54,11 @@
       "recommendation": "OPT_di1kkhd",
       "reasoning": "Idea addresses 4/5 evaluation areas with grounded evidence.",
       "risk": "low",
-      "state": "pending",
+      "state": "accepted",
       "selectedSource": "OPT_di1kkhd",
-      "copilotComment": null,
+      "copilotComment": "Accepted by the submission author for the included fixture workspace.",
       "regenerationRequired": true,
-      "updatedAt": "proposed"
+      "updatedAt": "2026-11-21T10:32:31.034Z"
     },
     {
       "id": "DEC_12d42ga",
@@ -83,11 +83,11 @@
       "recommendation": "OPT_b4clj4l",
       "reasoning": "Idea addresses 2/5 evaluation areas with grounded evidence.",
       "risk": "low",
-      "state": "pending",
+      "state": "accepted",
       "selectedSource": "OPT_b4clj4l",
-      "copilotComment": null,
+      "copilotComment": "Accepted by the submission author for the included fixture workspace.",
       "regenerationRequired": true,
-      "updatedAt": "proposed"
+      "updatedAt": "2026-11-21T10:32:31.034Z"
     },
     {
       "id": "DEC_1n4bwfo",
@@ -112,11 +112,11 @@
       "recommendation": "OPT_5zc6dzv",
       "reasoning": "Idea addresses 4/5 evaluation areas with grounded evidence.",
       "risk": "low",
-      "state": "pending",
+      "state": "accepted",
       "selectedSource": "OPT_5zc6dzv",
-      "copilotComment": null,
+      "copilotComment": "Accepted by the submission author for the included fixture workspace.",
       "regenerationRequired": true,
-      "updatedAt": "proposed"
+      "updatedAt": "2026-11-21T10:32:31.034Z"
     },
     {
       "id": "DEC_39de0h7",
@@ -141,11 +141,11 @@
       "recommendation": "OPT_9nzfnwg",
       "reasoning": "Idea addresses 4/5 evaluation areas with grounded evidence.",
       "risk": "low",
-      "state": "pending",
+      "state": "accepted",
       "selectedSource": "OPT_9nzfnwg",
-      "copilotComment": null,
+      "copilotComment": "Accepted by the submission author for the included fixture workspace.",
       "regenerationRequired": true,
-      "updatedAt": "proposed"
+      "updatedAt": "2026-11-21T10:32:31.034Z"
     },
     {
       "id": "DEC_7tlopvf",
@@ -170,11 +170,11 @@
       "recommendation": "OPT_9abucw7",
       "reasoning": "Idea addresses 4/5 evaluation areas with grounded evidence.",
       "risk": "low",
-      "state": "pending",
+      "state": "accepted",
       "selectedSource": "OPT_9abucw7",
-      "copilotComment": null,
+      "copilotComment": "Accepted by the submission author for the included fixture workspace.",
       "regenerationRequired": true,
-      "updatedAt": "proposed"
+      "updatedAt": "2026-11-21T10:32:31.034Z"
     }
   ]
 }

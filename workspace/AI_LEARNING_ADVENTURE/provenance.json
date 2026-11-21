@@ -5,17 +5,17 @@
     {
       "target": "combined-solution/ (base)",
       "sourceId": "SUB_001",
-      "sourcePath": "submissions/SUB_001",
+      "sourcePath": "submissions\\SUB_001",
       "decisionId": "DEC_3q68ac4",
       "evidence": [
         {
-          "id": "EV_a28k2f4",
+          "id": "EV_1rb2226",
           "statement": "frontend unit (React, TypeScript, Vite)",
           "locations": [
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_001/signal-and-spark",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark",
               "excerpt": "application root"
             }
           ],
@@ -32,31 +32,31 @@
       "decisionId": "DEC_7atncil",
       "evidence": [
         {
-          "id": "EV_5ikrlqp",
+          "id": "EV_a3fumak",
           "statement": "Grounded evidence for \"Browser-accessible learning adventure landing page\" (214 files, 498 hits, strength 17.3)",
           "locations": [
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/AGENTS.md",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_002\\2nd Position\\AGENTS.md",
               "excerpt": "matches: learning, adventure, required"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/README.md",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_002\\2nd Position\\README.md",
               "excerpt": "matches: browser, learning, adventure, required, users"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/package.json",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_002\\2nd Position\\apps\\admin-ui\\package.json",
               "excerpt": "matches: learning, adventure"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/components/PublishGateDialog.tsx",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_002\\2nd Position\\apps\\admin-ui\\src\\components\\PublishGateDialog.tsx",
               "excerpt": "matches: learning, adventure, required, allow"
             }
           ],
@@ -73,31 +73,31 @@
       "decisionId": "DEC_4881xu3",
       "evidence": [
         {
-          "id": "EV_7hznw3q",
+          "id": "EV_ajvat98",
           "statement": "Grounded evidence for \"AI Only Mode and AI feedback flow\" (50 files, 134 hits, strength 17.7)",
           "locations": [
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/README.md",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_002\\2nd Position\\README.md",
               "excerpt": "matches: feedback, support, explanations, hints, recommendations"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/admin-ui/src/features/settings/SettingsPage.tsx",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_002\\2nd Position\\apps\\admin-ui\\src\\features\\settings\\SettingsPage.tsx",
               "excerpt": "matches: explanations, learning"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/api/API.md",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_002\\2nd Position\\apps\\api\\API.md",
               "excerpt": "matches: support, learning"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/api/mission-data/flashcards.json",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_002\\2nd Position\\apps\\api\\mission-data\\flashcards.json",
               "excerpt": "matches: feedback, support, learning, generic, chatbot"
             }
           ],
@@ -114,31 +114,31 @@
       "decisionId": "DEC_9fqeyum",
       "evidence": [
         {
-          "id": "EV_dcqj945",
+          "id": "EV_cmwoiv1",
           "statement": "Grounded evidence for \"AI fallback and documentation\" (51 files, 153 hits, strength 18.0)",
           "locations": [
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/README.md",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_002\\2nd Position\\README.md",
               "excerpt": "matches: fallback, provide, sample, clear, setup"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/api/mission-data/flashcards.json",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_002\\2nd Position\\apps\\api\\mission-data\\flashcards.json",
               "excerpt": "matches: provide, clear"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/api/mission-data/missions.json",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_002\\2nd Position\\apps\\api\\mission-data\\missions.json",
               "excerpt": "matches: provide, clear, guidance, covers"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "challenges/AI_LEARNING_ADVENTURE/submissions/SUB_002/2nd Position/apps/api/mission-data/questions.json",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_002\\2nd Position\\apps\\api\\mission-data\\questions.json",
               "excerpt": "matches: provide, clear, guidance"
             }
           ],

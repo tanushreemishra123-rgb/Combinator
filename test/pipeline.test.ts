@@ -7,8 +7,9 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import { buildCodeMatrix } from "../src/evidence.js";
 import { buildCodeDecisions } from "../src/decisions.js";
-import { detectContradictions } from "../src/ideation/synthesize.js";
-import type { CodeSubmissionProfile, IdeaProfile, Requirement } from "../src/types.js";
+import { detectContradictions, synthesizeConcept } from "../src/ideation/synthesize.js";
+import type { CodeSubmissionProfile, Decision, IdeaProfile, Requirement } from "../src/types.js";
+import type { LlmAdapter } from "../src/llm/adapter.js";
 
 function req(id: string, title: string): Requirement {
   return { id, title, priority: "high", constraints: [] };
@@ -106,4 +107,33 @@ test("contradiction detection exposes opposing positions", () => {
   ];
   const conflicts = detectContradictions("CH", ideas);
   assert.ok(conflicts.some((c) => c.type === "contradiction"));
+});
+
+test("pending ideation decisions are excluded until a Copilot accepts them", async () => {
+  const pending: Decision = {
+    id: "DEC_idea",
+    kind: "idea_element",
+    title: "Include IDEA_pending",
+    options: [
+      { id: "OPT_include", sourceId: "IDEA_pending", label: "Include", evidence: [], compatibilityRisk: "low" },
+      { id: "OPT_exclude", sourceId: "IDEA_pending:exclude", label: "Exclude", evidence: [], compatibilityRisk: "low" },
+    ],
+    recommendation: "OPT_include",
+    reasoning: "",
+    risk: "low",
+    state: "pending",
+    selectedSource: "OPT_include",
+    copilotComment: null,
+    regenerationRequired: true,
+    updatedAt: "proposed",
+  };
+  const llm: LlmAdapter = {
+    name: "test",
+    model: "test",
+    async complete() { return { text: "Narration", inputTokens: 1, outputTokens: 1, retries: 0 }; },
+  };
+  const result = await synthesizeConcept("CH", "Title", [idea("IDEA_pending", "human oversight")], [], [pending], [], llm);
+  assert.match(result.conceptMarkdown, /No candidate concept has been approved yet/);
+  assert.doesNotMatch(result.conceptMarkdown, /### IDEA_pending/);
+  assert.equal(result.verification.overall, "partial");
 });

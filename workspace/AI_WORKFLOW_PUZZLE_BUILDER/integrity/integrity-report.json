@@ -17,1207 +17,1207 @@
       "bytes": 417
     },
     {
-      "path": "integrity/source-hashes.json",
+      "path": "integrity\\source-hashes.json",
       "sha256": "622aa74cc82c569ce79a641c6dd2d1f2086c48e3c7eaf37e0157f8e91076b3f0",
       "bytes": 101
     },
     {
-      "path": "reviews/SUB_001/final-result.json",
+      "path": "reviews\\SUB_001\\final-result.json",
       "sha256": "01747bc1eddc483d34e69f0f570db276ec6f46d32fcf644e0f2533ee06e0b52c",
       "bytes": 210
     },
     {
-      "path": "reviews/SUB_002/final-result.json",
+      "path": "reviews\\SUB_002\\final-result.json",
       "sha256": "7f708919f00a6a035bd4688fbb7ecfa3e7b997ac41177d46d8bae2388f9b6899",
       "bytes": 211
     },
     {
-      "path": "submissions/SUB_001/submission/.gitignore",
+      "path": "submissions\\SUB_001\\submission\\.gitignore",
       "sha256": "fe21a3b4423da2ae494c06624d2f9cc11fad70ac78271e71767bdfe263bd5e24",
       "bytes": 323
     },
     {
-      "path": "submissions/SUB_001/submission/README.md",
+      "path": "submissions\\SUB_001\\submission\\README.md",
       "sha256": "dd4a99b3cff614297fdcfafa42a9a7fe838be5cfa968444e8bd4999be65ccaae",
       "bytes": 21485
     },
     {
-      "path": "submissions/SUB_001/submission/backend/.dockerignore",
+      "path": "submissions\\SUB_001\\submission\\backend\\.dockerignore",
       "sha256": "14b7e4a2f87c217a9ab7e91eb79cf60c3df7689d8222b1871e4fc900c4d06875",
       "bytes": 463
     },
     {
-      "path": "submissions/SUB_001/submission/backend/.env.example",
+      "path": "submissions\\SUB_001\\submission\\backend\\.env.example",
       "sha256": "7d58c78851d57a0937f7ceeac2539aea53833fcf642c64aad6658230da2d2d71",
       "bytes": 798
     },
     {
-      "path": "submissions/SUB_001/submission/backend/Dockerfile",
+      "path": "submissions\\SUB_001\\submission\\backend\\Dockerfile",
       "sha256": "b2ff8501bbe5d22b7574efc2f18941722d2d6332b725bc5f093ddf236063e6c5",
       "bytes": 907
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/__init__.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\__init__.py",
       "sha256": "81dfbced3ef88f7b3de6fc832d8c131f027dfb4b3803b9df68f4b4b3486aab8b",
       "bytes": 62
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/api/__init__.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\api\\__init__.py",
       "sha256": "e1b0206b9132d4ec4289c327cbf5cc940a05c2fe14f7149924ac5c122c487356",
       "bytes": 470
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/api/context.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\api\\context.py",
       "sha256": "89e8ad0060bfb8cb1e2e7c4dc6d59e95b305ed2307ab9d4c63c03f270e9c821b",
       "bytes": 9977
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/api/deps.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\api\\deps.py",
       "sha256": "183c9995bcd0fd974cec229e9c647e439321fb24d1348161d79f4328cddf8de1",
       "bytes": 842
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/api/puzzles.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\api\\puzzles.py",
       "sha256": "55e294a921a1ddf3a551e1ca8b9c5892556789e2624b90d1ab68c2cd193438e3",
       "bytes": 1578
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/api/runs.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\api\\runs.py",
       "sha256": "fe7824b49b693b293a584124033c048ea41f47d47acfa1d9f8f5704645767dfb",
       "bytes": 11239
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/api/schemas.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\api\\schemas.py",
       "sha256": "4af5900ce9f2a5037b6d7f28959bc4be56d52d0c6c4fe1f74399cd6710bddef3",
       "bytes": 5820
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/api/workflows.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\api\\workflows.py",
       "sha256": "a7dbd6c375ff5fa140ac12a655398d1f7af05c9a49ecac3c6ccf0820485df678",
       "bytes": 698
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/blocks/__init__.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\blocks\\__init__.py",
       "sha256": "0a9927eccb8e73b0143e37a65250a27343af7c56ad117fa5958f808c6b63ff64",
       "bytes": 2714
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/blocks/ai_model.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\blocks\\ai_model.py",
       "sha256": "db85870dc6af58be38178f59ed0c578ccbe7e89189b2ff25f1e40a8c81fb689c",
       "bytes": 2547
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/blocks/base.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\blocks\\base.py",
       "sha256": "43eb45eecb6c1cf68fd0455b9a4d7e2e2bcb91f5a08819c7a3a79069aa9d5c29",
       "bytes": 4300
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/blocks/condition.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\blocks\\condition.py",
       "sha256": "62eb710a360021a31bfc242a0ec703ac0e191c9a20b6c97cab3fa98e41c69123",
       "bytes": 2644
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/blocks/guards.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\blocks\\guards.py",
       "sha256": "5796338cd3bf7500ca3e48a2bb940423ae645dd0e5baff9ebb1fd102e2e3e59d",
       "bytes": 2097
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/blocks/human_review.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\blocks\\human_review.py",
       "sha256": "c90d959d163cc314394f4c9ac31b03ec323dfb504a24c11477baebacd0b5c7a7",
       "bytes": 1510
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/blocks/io.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\blocks\\io.py",
       "sha256": "4ec235fcbcb42abe69be9634f5d9523f390446d63de3a808138c9df141c9dc81",
       "bytes": 1688
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/blocks/retrieval.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\blocks\\retrieval.py",
       "sha256": "967ac276fce6a0dfed93d320f64b6bc25c8d1122895da092136245dfd496c83e",
       "bytes": 1899
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/blocks/safe_stop.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\blocks\\safe_stop.py",
       "sha256": "3190831723e3b7900c4abac27a208d1bf00661e7e0374dbb367bf413b7a151fe",
       "bytes": 1151
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/blocks/tool.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\blocks\\tool.py",
       "sha256": "63f2dbbf85a971f41568a9a45480e1aad125a8ce9cff6c4153cf606c10f59357",
       "bytes": 1667
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/blocks/transform.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\blocks\\transform.py",
       "sha256": "ea6362679d342a9b35f8f490cd91d0dba95fccb5d9aa70458aebbe4c7be8b40f",
       "bytes": 2946
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/blocks/validator.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\blocks\\validator.py",
       "sha256": "cee844289135c1733bbaaca4de4de378af8f2fc1d295c6fca671b3679986bdc0",
       "bytes": 8049
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/engine/__init__.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\engine\\__init__.py",
       "sha256": "fea48dfadbb076b24191927cbf917adfd43ad7038da5669309c5c053c7203075",
       "bytes": 2047
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/engine/errors.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\engine\\errors.py",
       "sha256": "7889bde403bc07ecd901ec89a9c89d5e74ef7e0fabed6e9d20671efcd0ef6cca",
       "bytes": 3092
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/engine/executor.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\engine\\executor.py",
       "sha256": "251c872badd40134baae4f322adfb842e8232f405f53e63847daa4d7f16b8e7a",
       "bytes": 53484
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/engine/graph.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\engine\\graph.py",
       "sha256": "36dd13354c31436532949bbf80342275c0715c4ac67d45f38b66797d0ba07c97",
       "bytes": 13025
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/engine/model.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\engine\\model.py",
       "sha256": "a5ca35183b512c010a698cfda41a247293fafe671f534a776b4f8e4c183d6b6c",
       "bytes": 4080
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/engine/ports.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\engine\\ports.py",
       "sha256": "4e20f96c0c1608a2dc4de8afbd11c2897ba111c5e47da25f51d40bd627c66430",
       "bytes": 3122
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/engine/run.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\engine\\run.py",
       "sha256": "f8c4d08c0a5cf6e078f8c172ac876c3bf8ba4759d4f7395b5afaee423481c412",
       "bytes": 5521
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/engine/store.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\engine\\store.py",
       "sha256": "f87d14d81fb19e01dcc5430c7e4d310421a00d1d05a8ef42e5103bd1da2a7731",
       "bytes": 5734
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/engine/trace.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\engine\\trace.py",
       "sha256": "11bbcd5cd4387ab7101b344692c4b69514101362332674b49126f8092e98d661",
       "bytes": 4187
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/failures/__init__.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\failures\\__init__.py",
       "sha256": "4141b29e2c29eb15e00754bf8310951f9263b3b02023c02f939bce2c734578d8",
       "bytes": 484
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/failures/injector.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\failures\\injector.py",
       "sha256": "50b922a932c2ad3caf00e7b778da639e86030a055dae5698f427f889c6676e2b",
       "bytes": 7216
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/main.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\main.py",
       "sha256": "3f4a967e5b6dc66fb9170f4caaf164a7cef437b18eb47bf66850a25c3ba572fa",
       "bytes": 1914
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/providers/__init__.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\providers\\__init__.py",
       "sha256": "b1f509a8c44b019489bef3c71a8211d9a5f68d0755be982fc9f4a3dedb24a87c",
       "bytes": 891
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/providers/_prompting.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\providers\\_prompting.py",
       "sha256": "0d17882846b261a3a078355a305daab78da861c071ab9781d3d24f12d15516a0",
       "bytes": 5920
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/providers/factory.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\providers\\factory.py",
       "sha256": "f4d26f0105524a30d23d8ee3c926108d928abf75cd08b7ec5586316774c90f11",
       "bytes": 9160
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/providers/groq.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\providers\\groq.py",
       "sha256": "55de7761a7a361cbd2092bebf245f168de43dcb0c81a5f7656904f9664776839",
       "bytes": 9318
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/providers/mock.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\providers\\mock.py",
       "sha256": "782fca91cea038f8328d0d74bca9cade7cf0f78afef6e8603d0d8d4205fd37bc",
       "bytes": 7813
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/providers/openai_compat.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\providers\\openai_compat.py",
       "sha256": "4ac929483099b3157fbe4f389b23f348f5ab526ca27b3f0a0aa6f2ea678689c2",
       "bytes": 9856
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/providers/resilient.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\providers\\resilient.py",
       "sha256": "5fcb04956cecd1668bb0cf633862fccc27b33f186192242ae934dbc1f419a56a",
       "bytes": 7022
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/puzzles/__init__.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\puzzles\\__init__.py",
       "sha256": "cd7df7528e17294447178f6dc813ec1f2ec292024150fb609afb4933272b7e98",
       "bytes": 1198
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/puzzles/data/1_fix-the-meeting-summarizer.json",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\puzzles\\data\\1_fix-the-meeting-summarizer.json",
       "sha256": "89e25d6a399ae83fe63af9790a89b5d7b38c49218fb38e89cb0a45e2e00647c2",
       "bytes": 6543
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/puzzles/data/2_approve-before-sending.json",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\puzzles\\data\\2_approve-before-sending.json",
       "sha256": "965af5892379488a7538a1e7b131663a1667d979e791983b1fe467744328b398",
       "bytes": 4990
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/puzzles/data/3_ground-the-knowledge-assistant.json",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\puzzles\\data\\3_ground-the-knowledge-assistant.json",
       "sha256": "ddcaffcdf22965e88bce68b0a4a94d87ec593783b6c2d0c4b935c57b6443ccfe",
       "bytes": 5303
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/puzzles/data/4_repair-the-ticket-router.json",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\puzzles\\data\\4_repair-the-ticket-router.json",
       "sha256": "50c97b23a5fc9d8daad91bfa8ca0cd548e3fb8f6918cefe17825af94eacb1dcc",
       "bytes": 5577
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/puzzles/data/5_survive-the-research-timeout.json",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\puzzles\\data\\5_survive-the-research-timeout.json",
       "sha256": "a2de354602e2b8b2f3e493af296884a31e6ac8b332334af11984f003e1fd4395",
       "bytes": 6447
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/puzzles/data/6_validate-the-data-extractor.json",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\puzzles\\data\\6_validate-the-data-extractor.json",
       "sha256": "1f8df669023f1bf8598e9b1358de8b1772eb333de860670dd073145f3f751c3c",
       "bytes": 6225
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/puzzles/data/7_activate-the-fallback.json",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\puzzles\\data\\7_activate-the-fallback.json",
       "sha256": "d52b3760aa3231b455e6f792a6e09d1e21c502b7bcbaff6de40b19f076ff7492",
       "bytes": 5625
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/puzzles/data/8_resume-the-interrupted-mission.json",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\puzzles\\data\\8_resume-the-interrupted-mission.json",
       "sha256": "1212765ef4f897d746d24529b565d8db1284cdb31d524e670ed46aff4f30314a",
       "bytes": 7176
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/puzzles/models.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\puzzles\\models.py",
       "sha256": "a8362b691bc7fb705f4995de6bf37364e0605d7007b42ea6657f7af1cbc082ea",
       "bytes": 12391
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/puzzles/registry.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\puzzles\\registry.py",
       "sha256": "e58d24d52065792643828a42e7d0fb877922f53c1962575b1349c444f998a663",
       "bytes": 6378
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/reliability/__init__.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\reliability\\__init__.py",
       "sha256": "0baa4d3f29c4ec665096c032b2af579900c622d99b38fb187a1eeedfcc760ffe",
       "bytes": 559
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/reliability/scorer.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\reliability\\scorer.py",
       "sha256": "0a84b00ceebc112770b370be3f91669c22d86773babc5004507e0dffab3f8f50",
       "bytes": 24442
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/tools/__init__.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\tools\\__init__.py",
       "sha256": "2885a348cf4ff6200ac589cf802881d79a5c4f66c5557a7573855a0080a09f62",
       "bytes": 240
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/tools/retrieval.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\tools\\retrieval.py",
       "sha256": "1e4308df496dc8ec902860aa41a72f2da24b93e7f5255b1860a62e251e48c179",
       "bytes": 3957
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/tools/simulator.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\tools\\simulator.py",
       "sha256": "4ec6b586302b14bea484acd0b79ed0b8cd7bc65bc16174d22a0868183d7f2815",
       "bytes": 13529
     },
     {
-      "path": "submissions/SUB_001/submission/backend/pytest.ini",
+      "path": "submissions\\SUB_001\\submission\\backend\\pytest.ini",
       "sha256": "ea3ce5119c10cda24f113ad6e017355ed0a0f48730d913d201bf623bd1bc0549",
       "bytes": 62
     },
     {
-      "path": "submissions/SUB_001/submission/backend/requirements-dev.txt",
+      "path": "submissions\\SUB_001\\submission\\backend\\requirements-dev.txt",
       "sha256": "af4f31468d4258f299abbbb7f54a74fd59513179346cae0f8287185e2ea7c7cd",
       "bytes": 147
     },
     {
-      "path": "submissions/SUB_001/submission/backend/requirements.lock.txt",
+      "path": "submissions\\SUB_001\\submission\\backend\\requirements.lock.txt",
       "sha256": "a2f455cbddd0fd1afd6110e1bff2b44a92b7dfee70059dffa020a16f11dd07f9",
       "bytes": 597
     },
     {
-      "path": "submissions/SUB_001/submission/backend/requirements.txt",
+      "path": "submissions\\SUB_001\\submission\\backend\\requirements.txt",
       "sha256": "73828ae5f8cf0ecf708663e043c4770939f31d81d144ededdcc651b757fad045",
       "bytes": 107
     },
     {
-      "path": "submissions/SUB_001/submission/backend/ruff.toml",
+      "path": "submissions\\SUB_001\\submission\\backend\\ruff.toml",
       "sha256": "4bfb874139100773c19eff34c1c5ee193cf7da6f038b474b60785c2965795772",
       "bytes": 777
     },
     {
-      "path": "submissions/SUB_001/submission/backend/tests/api_helpers.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\tests\\api_helpers.py",
       "sha256": "409e152f8af3b51cb00abd1978a9564fa4a12e77c80064bed82551052752d68c",
       "bytes": 4898
     },
     {
-      "path": "submissions/SUB_001/submission/backend/tests/conftest.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\tests\\conftest.py",
       "sha256": "f377849973e37bbd86351d15335af7bf8cbe3b9c4529ae8022b45fa3b1dcee92",
       "bytes": 8287
     },
     {
-      "path": "submissions/SUB_001/submission/backend/tests/puzzle_helpers.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\tests\\puzzle_helpers.py",
       "sha256": "9309d063b60f58a783c270a57c708931aa6cc362908610cccd62657b45b167ed",
       "bytes": 5357
     },
     {
-      "path": "submissions/SUB_001/submission/backend/tests/test_api_context.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\tests\\test_api_context.py",
       "sha256": "9d72dec85f21e4a96c97b9a9293edf8dd3ba1024b6bb35e98ab1389ecf4ecabf",
       "bytes": 4170
     },
     {
-      "path": "submissions/SUB_001/submission/backend/tests/test_api_puzzles.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\tests\\test_api_puzzles.py",
       "sha256": "f1a267e31e6a8f65b951af97ce1b518f7d6cc4c5f74b9a2efff7f1f902f2d1ec",
       "bytes": 6071
     },
     {
-      "path": "submissions/SUB_001/submission/backend/tests/test_api_runs.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\tests\\test_api_runs.py",
       "sha256": "6c65cd8aa0cdb7f4f94fa428ca226f040415877c1e7b759e6f3965b889a9fed4",
       "bytes": 20335
     },
     {
-      "path": "submissions/SUB_001/submission/backend/tests/test_api_sse.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\tests\\test_api_sse.py",
       "sha256": "94a9abf857cf30e32396096a16bcc0b726e8aa05b193844238f0bcc43dc41953",
       "bytes": 8167
     },
     {
-      "path": "submissions/SUB_001/submission/backend/tests/test_engine_basic.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\tests\\test_engine_basic.py",
       "sha256": "a8905059672cd796a541ce3a4bc16ab1652557b17a436ed35b0e2ac7a86430e8",
       "bytes": 6440
     },
     {
-      "path": "submissions/SUB_001/submission/backend/tests/test_engine_failures.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\tests\\test_engine_failures.py",
       "sha256": "0947dfa4b6e4655a4ca2ed48e4df7e45d0084088f1e86304a3e878e18228421b",
       "bytes": 5510
     },
     {
-      "path": "submissions/SUB_001/submission/backend/tests/test_engine_graph.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\tests\\test_engine_graph.py",
       "sha256": "e9df3b5d17d0ff3f1d93c1f917e5204900f4ac67577fbb43b8dc0d049b524ef0",
       "bytes": 6206
     },
     {
-      "path": "submissions/SUB_001/submission/backend/tests/test_engine_guards.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\tests\\test_engine_guards.py",
       "sha256": "32d6f2d2cd29b97ed3b55cff3128a0f1b0603463ab59ac4234f9aebe275cc050",
       "bytes": 7826
     },
     {
-      "path": "submissions/SUB_001/submission/backend/tests/test_engine_resume.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\tests\\test_engine_resume.py",
       "sha256": "52472f2a6e722ca361c1ea916fee76be406dca9ee2dbf7e8a33542f7cbe0d5ed",
       "bytes": 6113
     },
     {
-      "path": "submissions/SUB_001/submission/backend/tests/test_engine_review.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\tests\\test_engine_review.py",
       "sha256": "440271348c832f31e141d34c366eae7f059c064898161ca91d0f4e3e808d3806",
       "bytes": 6852
     },
     {
-      "path": "submissions/SUB_001/submission/backend/tests/test_engine_trace.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\tests\\test_engine_trace.py",
       "sha256": "b816a36aa3793f1c5a837deb8d5b69ca6aed0f085c169ffe958529eba7264c84",
       "bytes": 4918
     },
     {
-      "path": "submissions/SUB_001/submission/backend/tests/test_engine_validation.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\tests\\test_engine_validation.py",
       "sha256": "20451fa929c9c10d090f64b224621339712fd38b8abf45095a31453ee2719d4c",
       "bytes": 14442
     },
     {
-      "path": "submissions/SUB_001/submission/backend/tests/test_failures.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\tests\\test_failures.py",
       "sha256": "29142c8b00a8d30bedd0e08ffe325b28931c9a93b1bbf11fbfa0b2d27347264e",
       "bytes": 10787
     },
     {
-      "path": "submissions/SUB_001/submission/backend/tests/test_health.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\tests\\test_health.py",
       "sha256": "e9e7cb0ba0ce373220f9d8f7c8580c269f1bfc9b815a3c971e3fe115aff7114a",
       "bytes": 2546
     },
     {
-      "path": "submissions/SUB_001/submission/backend/tests/test_providers.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\tests\\test_providers.py",
       "sha256": "3cc3910bd064a9c1a0465fdd85fbeffec1c828b478b24ff7a5ce47d6beb61959",
       "bytes": 36819
     },
     {
-      "path": "submissions/SUB_001/submission/backend/tests/test_puzzles.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\tests\\test_puzzles.py",
       "sha256": "6180aeb94b05c7da20591696be6dc62eb156e870d84ef3b83ac2b00196b942a7",
       "bytes": 32626
     },
     {
-      "path": "submissions/SUB_001/submission/backend/tests/test_reliability.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\tests\\test_reliability.py",
       "sha256": "496045adb54533ef70fd23ffa7349ffb567580820ef464b591dcfe60f446c3a3",
       "bytes": 23047
     },
     {
-      "path": "submissions/SUB_001/submission/backend/tests/test_tools.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\tests\\test_tools.py",
       "sha256": "516a8a2ac2aa1d17c9ea178012f4645eca1c1601554f24067ce8d951cd06f45a",
       "bytes": 12668
     },
     {
-      "path": "submissions/SUB_001/submission/docker-compose.yml",
+      "path": "submissions\\SUB_001\\submission\\docker-compose.yml",
       "sha256": "e79f421e999468e003b9a1aed015d31c70dc9638c4caad5407ff5d25e4f4202d",
       "bytes": 1102
     },
     {
-      "path": "submissions/SUB_001/submission/docs/architecture.png",
+      "path": "submissions\\SUB_001\\submission\\docs\\architecture.png",
       "sha256": "b48e5e45e930fc06b53d584c8ce0707250005aed2707459976b292609782713c",
       "bytes": 382098
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/.dockerignore",
+      "path": "submissions\\SUB_001\\submission\\frontend\\.dockerignore",
       "sha256": "4d8450175a1a8087a314c3b64bd800b3884c78bcdb19b380b2790ce698917dcb",
       "bytes": 382
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/.gitignore",
+      "path": "submissions\\SUB_001\\submission\\frontend\\.gitignore",
       "sha256": "fe718e7babb14f3cbad2d97f08889b9ce5215ed3fe0e43b2b8cfbfb3b9b844e8",
       "bytes": 253
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/.oxlintrc.json",
+      "path": "submissions\\SUB_001\\submission\\frontend\\.oxlintrc.json",
       "sha256": "b024cb882299e61c3394c8fdea2746fb2a1f799c02ef28da25e9ef2d1c101e4e",
       "bytes": 291
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/Dockerfile",
+      "path": "submissions\\SUB_001\\submission\\frontend\\Dockerfile",
       "sha256": "7d84244a2884bc56af77fd5cf05d011bf1dc3e7451e3e05ba4bbc7420a7f9f35",
       "bytes": 884
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/components.json",
+      "path": "submissions\\SUB_001\\submission\\frontend\\components.json",
       "sha256": "d0ada54e59710099b766eae59a1a35d31b717a6ec43d73a8814de1815ddc1749",
       "bytes": 516
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/index.html",
+      "path": "submissions\\SUB_001\\submission\\frontend\\index.html",
       "sha256": "f04add958268e1b96ab96fd4e12cae36ce25ffe59ce83634627bb2859d53841e",
       "bytes": 1109
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/package-lock.json",
+      "path": "submissions\\SUB_001\\submission\\frontend\\package-lock.json",
       "sha256": "afc8864967cc5f879dc4a7be6b3bcd90b28516ec431f98c8a76b29c3fe6a7f13",
       "bytes": 286527
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/package.json",
+      "path": "submissions\\SUB_001\\submission\\frontend\\package.json",
       "sha256": "c91c841dcf85f4626513142270e745a69749535c04cc60f071a2eae55aef0f24",
       "bytes": 913
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/public/favicon.svg",
+      "path": "submissions\\SUB_001\\submission\\frontend\\public\\favicon.svg",
       "sha256": "93050d22d50b1b994c5f88b38ae9a159ecedd1097fa3b446f0626a9a692e3bab",
       "bytes": 316
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/App.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\App.tsx",
       "sha256": "9f8bb9cb5a350f8b7a19b1c74b91d8def067f6eff6c73daac1a811689ba6ccba",
       "bytes": 394
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/api/client.ts",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\api\\client.ts",
       "sha256": "9e5ceb87796a316a9b404b43ac2a1e472a8d6bace8f6697343a08045b5e8b9d8",
       "bytes": 8589
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/api/errors.ts",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\api\\errors.ts",
       "sha256": "4fb2fd7b58adccf82f2dde054c17f3b8c277b17550036374e3b15239aa7ebc40",
       "bytes": 278
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/api/fixtures.ts",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\api\\fixtures.ts",
       "sha256": "2d339e2c6b90db06f9548ecd3e0ca99bb7c3451803c33b5dd5c8236286d15a29",
       "bytes": 21600
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/api/mockClient.ts",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\api\\mockClient.ts",
       "sha256": "3cadefe74daeb772cffad21af855c52d2b6efd7eccbee19d600e455ebf9c7cec",
       "bytes": 15933
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/api/mockEngine.ts",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\api\\mockEngine.ts",
       "sha256": "fa26189c070df6d7e6ed102231c2ff5fec9d7e4fc57132dd3438f2aaaca26c35",
       "bytes": 16249
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/api/types.ts",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\api\\types.ts",
       "sha256": "23be78e0dde044d86f8ea5c2a86f9c269747f7fad882472cb7681f47b47854c6",
       "bytes": 9912
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/blocks/catalog.ts",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\blocks\\catalog.ts",
       "sha256": "4d99dea7b8e8e82f3a30c8c4b946739e32f1fa628c97066df9feadacc7e384b8",
       "bytes": 22739
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/builder/ConfigForm.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\builder\\ConfigForm.tsx",
       "sha256": "b27245a5f809ef57f0b37bc4346e1ee1f15d4cbd4c17e7d0161078b9f9a949cb",
       "bytes": 10528
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/builder/Inspector.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\builder\\Inspector.tsx",
       "sha256": "fef2d8c2fe6c262afd6ddee8627e3a86e446f6085ff3adf479aa4cc4428344fc",
       "bytes": 2468
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/builder/Palette.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\builder\\Palette.tsx",
       "sha256": "a3faa86be8fbd8f163f45214cc05568f997c36b0922bb9b9ef082d9cdc235866",
       "bytes": 4675
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/builder/PuzzleBrief.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\builder\\PuzzleBrief.tsx",
       "sha256": "c5a778974215fba67635e27c3aa70fbac414b34b0362f21069965054f25dfc87",
       "bytes": 4019
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/builder/ValidationMessages.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\builder\\ValidationMessages.tsx",
       "sha256": "fafb1606ebf760b3bc0b61fe0ce0b52e0d439f1987c581f1bd81717504ba2bdc",
       "bytes": 1784
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/builder/validationToast.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\builder\\validationToast.tsx",
       "sha256": "5641179f9a4a914d013272e713f92deeed9431a9a5b255b4d6a22f4b417f938f",
       "bytes": 1960
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/canvas/BlockNode.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\canvas\\BlockNode.tsx",
       "sha256": "bab3503959ae23f780cd37b9cc1fa4dcb9ca3125be6ff3c56ccfdd0e18976412",
       "bytes": 6671
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/canvas/WorkflowCanvas.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\canvas\\WorkflowCanvas.tsx",
       "sha256": "131d8d60f4589c89dbd46c3df592b9ddd1504768ce14f3ef655f62328d82ad53",
       "bytes": 13911
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/canvas/canvas.css",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\canvas\\canvas.css",
       "sha256": "c9ed0cfb84555c3be641e74bebb522cc4aa11b66ac4e1e3fbe887396a97ea688",
       "bytes": 10738
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/canvas/graphTypes.ts",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\canvas\\graphTypes.ts",
       "sha256": "545422be00287b4a9d74904d85a0649ccfb8c84aea1c387b31d20d50b0dfeab0",
       "bytes": 1576
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/canvas/layout.ts",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\canvas\\layout.ts",
       "sha256": "3abdcbf45670f8d26399c9be1d8007146e369b8ba274fcec168b527c052f9e49",
       "bytes": 3594
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/canvas/useWorkflowGraph.ts",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\canvas\\useWorkflowGraph.ts",
       "sha256": "04be13f105a16dbbcf46979c9da97c7c259ab08f84aa6ec8c2eef4a0747bbc18",
       "bytes": 12167
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/components/AppHeader.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\components\\AppHeader.tsx",
       "sha256": "5de785e36bfebda61962abd89bfa10516d11d47ceb18e54c5e6a668c480bc93c",
       "bytes": 1150
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/components/CategoryIcon.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\components\\CategoryIcon.tsx",
       "sha256": "d788fc55a29dcb37638d8a3e842ac86d131a6511a42f44245138f956e320476d",
       "bytes": 1333
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/components/DifficultyBadge.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\components\\DifficultyBadge.tsx",
       "sha256": "eda0e59d4a693ebdc9d679342b4c5ee8d146ccdbe809dcb6cf1f4c127be4e284",
       "bytes": 977
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/components/EmptyState.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\components\\EmptyState.tsx",
       "sha256": "f7b00dba1dbf72d23cabb31081ddf5da3629a7629356ec6eb5d46259c2df6146",
       "bytes": 905
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/components/GradeBadge.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\components\\GradeBadge.tsx",
       "sha256": "a3eb67a2c91592115f0726002b4124fac9f039dbcf16a926bcb77d7fedddf7df",
       "bytes": 739
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/components/JsonViewer.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\components\\JsonViewer.tsx",
       "sha256": "d0db1a37347044a61be61206795006373d917254249b56293d5428db46d8b8ba",
       "bytes": 2382
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/components/ModeBadge.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\components\\ModeBadge.tsx",
       "sha256": "f65c2b5ee0554e8372ec1cdcaee45fc3e764fbfa00cbee858f54b7edf13ca0e3",
       "bytes": 1392
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/components/SectionHeading.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\components\\SectionHeading.tsx",
       "sha256": "d825c5b9655c71b31ad4b8da45d30ecf97359099147238b71fc33f1bb7ea4283",
       "bytes": 726
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/components/StatusBadge.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\components\\StatusBadge.tsx",
       "sha256": "c48f1399dd2080e593d1a16f26352158ccd69cd2cd87e1379763ff6cdfd69239",
       "bytes": 1347
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/components/ThemeToggle.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\components\\ThemeToggle.tsx",
       "sha256": "8a6db378f6fb077eccd30c809d5706acc051a6e8c0ec3a9fee1c98c33edf0932",
       "bytes": 1748
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/components/grades.ts",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\components\\grades.ts",
       "sha256": "400b5434d9c2c273b63f39bc4ec98a911eb8cd3d79a65190faa136be7c90691c",
       "bytes": 1636
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/components/status.ts",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\components\\status.ts",
       "sha256": "8b631941bb0ecc5cea3410b0897a15d70dc8500602b7baec0f784e22ce5c6c3c",
       "bytes": 1064
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/components/ui/alert.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\components\\ui\\alert.tsx",
       "sha256": "126a26b401ab2cd3f3855551d012b5dca7a96b7d6984a921add3ce2d441af4b6",
       "bytes": 2048
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/components/ui/badge.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\components\\ui\\badge.tsx",
       "sha256": "1b292cd64608eef62eab1e43621071b32f794988a8c4e40fd1086cfbf8d9ef5d",
       "bytes": 1865
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/components/ui/button.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\components\\ui\\button.tsx",
       "sha256": "9ce417985b97956fbb3a73c84b0eb60230fd0a9844c5111df92e061731440a3f",
       "bytes": 3385
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/components/ui/card.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\components\\ui\\card.tsx",
       "sha256": "d8113cbf964f8d1aadf2649d2944d8bbc6e3cfd49d36746f76868cbc4dde3cfe",
       "bytes": 2630
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/components/ui/dialog.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\components\\ui\\dialog.tsx",
       "sha256": "13a5cddf294c6aa56391ebd5d474ee13e70cf9eebdd1ecf10c100c6555c8745a",
       "bytes": 4234
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/components/ui/dropdown-menu.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\components\\ui\\dropdown-menu.tsx",
       "sha256": "47f754e1ab9e4e34a7ddbab035d7ed665dfac657ff5a2db4f3ab0923d340852b",
       "bytes": 8831
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/components/ui/input.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\components\\ui\\input.tsx",
       "sha256": "c4902a8c4967875e30d9f1198175f4f5348a0cdd17e21b5e3d7c9e81d2996ed9",
       "bytes": 968
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/components/ui/label.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\components\\ui\\label.tsx",
       "sha256": "a9e5ce00e4809f1f6804d0e48de09bf364bddc424947c25d2a276c2fc6514c50",
       "bytes": 592
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/components/ui/resizable.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\components\\ui\\resizable.tsx",
       "sha256": "c6dcc01292ef44006bd1d773054b3386ef9f1a2a17e320ff2914f8b267fca714",
       "bytes": 2671
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/components/ui/scroll-area.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\components\\ui\\scroll-area.tsx",
       "sha256": "fabec1cb78fd578da0d2013ea7e1652f2227d207c5ce80c0fc2e835305d3e4a1",
       "bytes": 1678
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/components/ui/select.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\components\\ui\\select.tsx",
       "sha256": "078c479779746fed4ec80ab5144fd11ac8c258e0f3869cef52be9f0d633f6ab0",
       "bytes": 6665
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/components/ui/separator.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\components\\ui\\separator.tsx",
       "sha256": "c924a82e99fda03684c17238d04eec857edc83977da2ee601795e94e52b4828f",
       "bytes": 644
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/components/ui/sheet.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\components\\ui\\sheet.tsx",
       "sha256": "0f77129671c960b0b833fcb7fa15394df710a04797074c6f8409ffd230234939",
       "bytes": 4556
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/components/ui/skeleton.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\components\\ui\\skeleton.tsx",
       "sha256": "8110bba70d0cb9fe968c0b7bd092ad12258caef40b028b4a87f402bdab907faf",
       "bytes": 275
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/components/ui/sonner.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\components\\ui\\sonner.tsx",
       "sha256": "78792f240655478669af220c28c988b81d5b93ca5ca0ed1cfb635dd3977cac8a",
       "bytes": 1314
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/components/ui/switch.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\components\\ui\\switch.tsx",
       "sha256": "245e0e306b1c0947c4138f38c84c12b018f00a449b209e644313fa4522bc18d0",
       "bytes": 1852
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/components/ui/textarea.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\components\\ui\\textarea.tsx",
       "sha256": "58b58d84fc54ba5f4ca46937870c619349fd9eccc4d494250ac7bc73a94e05e9",
       "bytes": 842
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/components/ui/tooltip.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\components\\ui\\tooltip.tsx",
       "sha256": "f26881e08ed65a973a15ac3bd509bca50c31da1d5b275bc3f9c48b5de1d1c966",
       "bytes": 2111
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/hooks/useHealth.ts",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\hooks\\useHealth.ts",
       "sha256": "97ad48184ae18c5fc1c5586458c7f01cda8eceea842c8553726a41051701701e",
       "bytes": 656
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/hooks/useIsCompact.ts",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\hooks\\useIsCompact.ts",
       "sha256": "9beb425724f79e6e17899bb7f460d4deead539f42489af3877a33089f32f4e16",
       "bytes": 986
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/hooks/usePanelLayout.ts",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\hooks\\usePanelLayout.ts",
       "sha256": "04f0aabb5b98ba90875ee928424d41da4f92157e2bcdc0ef93c78534b1fcde61",
       "bytes": 2604
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/hooks/usePrefersReducedMotion.ts",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\hooks\\usePrefersReducedMotion.ts",
       "sha256": "7ba8b7c51e3a2bcc222ab4730ef490e4b3fb6812990000ca08ac4910b495f827",
       "bytes": 941
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/index.css",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\index.css",
       "sha256": "7a0416c140b0da6e0f2098395f359e459daf585c69425d49924676b5b06f7e19",
       "bytes": 11497
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/lib/utils.ts",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\lib\\utils.ts",
       "sha256": "7c8c3dfc0cdd370d44932828eb067ef771c8fe7996693221d5d4b90af6d54f2d",
       "bytes": 166
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/main.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\main.tsx",
       "sha256": "c973c26ee77308c2f0d54db76262c4fbc4ad076a19a1f14548a540ab14e45634",
       "bytes": 657
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/pages/Builder.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\pages\\Builder.tsx",
       "sha256": "8e88ffcdaefb1e524c118cf79e85eba6bebef06674af98c48c4fc2ec88c7c566",
       "bytes": 23753
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/pages/PuzzleSelect.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\pages\\PuzzleSelect.tsx",
       "sha256": "1d495832cf33cabc83be4e0a391c9a129f7d694ec746b557903833f44d81b8e1",
       "bytes": 5680
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/run/ReliabilityPanel.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\run\\ReliabilityPanel.tsx",
       "sha256": "802f2a5ba913d0bf2ab0ee9d53aec63fd236bc1688e2709a25c577634131d8c8",
       "bytes": 10486
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/run/ReviewModal.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\run\\ReviewModal.tsx",
       "sha256": "01dec876d94f30fc15421f3a35da0a2c68fd0cb94c2ddd03e65bf46e4c805d06",
       "bytes": 7865
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/run/ScenarioToggle.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\run\\ScenarioToggle.tsx",
       "sha256": "347dc1b9b6c6379427cefe0022d0e710d5c5fb23ef04bd07683e80f831ce36f5",
       "bytes": 4111
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/run/StepInspector.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\run\\StepInspector.tsx",
       "sha256": "e8417b6136702da1fa3ffe110b03a0494d02f7dfb389c4ff63825423822edcd4",
       "bytes": 7323
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/run/TraceDrawer.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\run\\TraceDrawer.tsx",
       "sha256": "9c8349643fac2857a81307399bbea76f3b93ad614dea78e17523314036ebb443",
       "bytes": 8332
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/run/payload.ts",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\run\\payload.ts",
       "sha256": "2ca75b9d87420c05230001673ed995ad8fbaac715698d471a7fdb199cffd80af",
       "bytes": 4752
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/run/timeline.ts",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\run\\timeline.ts",
       "sha256": "026b82d4baf212b967a16623a0ee52d7d2bf6ef7dd31bd7b0f7b334b3c050e81",
       "bytes": 2241
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/run/traceLabels.ts",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\run\\traceLabels.ts",
       "sha256": "ac2ea700a00fd896f5059efc2cb3b85509f208c781f4a6891f07951f98861fe2",
       "bytes": 8215
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/run/useRun.ts",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\run\\useRun.ts",
       "sha256": "27c8e849dd1cccbc6f58cf546a077dbcd7541be1a89499bd2bb15318ca480e12",
       "bytes": 7172
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/theme/ThemeProvider.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\theme\\ThemeProvider.tsx",
       "sha256": "3c8bebf7e675c709e97c08e8d792adc8cac02190e56d879125eee1a62b57582e",
       "bytes": 1973
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/theme/theme-context.ts",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\theme\\theme-context.ts",
       "sha256": "9ad2560fb5d13e3cccbbc05e188ce07a7fcd43d83caa8b10df64511d488c4881",
       "bytes": 1374
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/vite-env.d.ts",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\vite-env.d.ts",
       "sha256": "a542643f6524f0c4f8ed396dfb8972d3f0e81220780e7964589e15dcd0580dec",
       "bytes": 236
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/tsconfig.app.json",
+      "path": "submissions\\SUB_001\\submission\\frontend\\tsconfig.app.json",
       "sha256": "78948656d9d146a46d51b071968f62a3f12fb1e963297658dab5bf3a5af42a0c",
       "bytes": 712
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/tsconfig.json",
+      "path": "submissions\\SUB_001\\submission\\frontend\\tsconfig.json",
       "sha256": "23c57da26bcec4996c4168f01187840c8ec08a1d60c2dd0edad6d984f5c33680",
       "bytes": 193
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/tsconfig.node.json",
+      "path": "submissions\\SUB_001\\submission\\frontend\\tsconfig.node.json",
       "sha256": "d366cc0827139db39c61815f22491bbfda56c654354a42ad7795143d314e45e8",
       "bytes": 558
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/vite.config.ts",
+      "path": "submissions\\SUB_001\\submission\\frontend\\vite.config.ts",
       "sha256": "f8bdd8283fa7bb194b1c4433b1faccec3e7e2d5b4369f9e84ae971e1448032ca",
       "bytes": 630
     },
     {
-      "path": "submissions/SUB_001/submission/scripts/dev.sh",
+      "path": "submissions\\SUB_001\\submission\\scripts\\dev.sh",
       "sha256": "268dab6c293932214fc53a00b6a1da7deade1be34d08f6f49c4dc3ed22c7af9c",
       "bytes": 1309
     },
     {
-      "path": "submissions/SUB_002/2nd Position/.github/workflows/deploy-pages.yml",
+      "path": "submissions\\SUB_002\\2nd Position\\.github\\workflows\\deploy-pages.yml",
       "sha256": "67c0761ddf8d749aa0f0ad8bf1bdeec095304e8eb7ac3488f9502162d48abb1e",
       "bytes": 1414
     },
     {
-      "path": "submissions/SUB_002/2nd Position/.gitignore",
+      "path": "submissions\\SUB_002\\2nd Position\\.gitignore",
       "sha256": "7e9b8d13ac67259da9bb4ef22b7ba701f838500aa41638409ad58fe6c30468fc",
       "bytes": 53
     },
     {
-      "path": "submissions/SUB_002/2nd Position/.vercelignore",
+      "path": "submissions\\SUB_002\\2nd Position\\.vercelignore",
       "sha256": "ac5d7e95c579edf1038ac1e1ed264b8d1412d8dc65ac76df18f2cde73554c41e",
       "bytes": 66
     },
     {
-      "path": "submissions/SUB_002/2nd Position/README.md",
+      "path": "submissions\\SUB_002\\2nd Position\\README.md",
       "sha256": "b0e48aface5929cbe6fb5e0a0407106b192500860b2b7ce9980c178f1538dc0c",
       "bytes": 25599
     },
     {
-      "path": "submissions/SUB_002/2nd Position/SUBMISSION.md",
+      "path": "submissions\\SUB_002\\2nd Position\\SUBMISSION.md",
       "sha256": "e133d407096f380dc9d8f725a3bd87a969469fe826eeffaa86ba72b9672af4b0",
       "bytes": 7027
     },
     {
-      "path": "submissions/SUB_002/2nd Position/docs/REVIEW.md",
+      "path": "submissions\\SUB_002\\2nd Position\\docs\\REVIEW.md",
       "sha256": "75a0f8e43777dd5f5a17adbca23bc15958b8c6707eabf8e4af784bccf8a013d0",
       "bytes": 10590
     },
     {
-      "path": "submissions/SUB_002/2nd Position/docs/architecture.md",
+      "path": "submissions\\SUB_002\\2nd Position\\docs\\architecture.md",
       "sha256": "23525e5c662164075467555faa5577be3891dab2d025f7a532037e9f641c2e84",
       "bytes": 9500
     },
     {
-      "path": "submissions/SUB_002/2nd Position/docs/architecture.svg",
+      "path": "submissions\\SUB_002\\2nd Position\\docs\\architecture.svg",
       "sha256": "0b30786beba91c27f7d96d3bd15ba2c3a9cf1193d95a307be8952c8afce00a6f",
       "bytes": 8236
     },
     {
-      "path": "submissions/SUB_002/2nd Position/docs/demo-captions.md",
+      "path": "submissions\\SUB_002\\2nd Position\\docs\\demo-captions.md",
       "sha256": "7ede6c7008c0abbb9fd28cd0048794ff7c3429fdb596a118d723b9939d5b856f",
       "bytes": 7535
     },
     {
-      "path": "submissions/SUB_002/2nd Position/docs/demo-captions.srt",
+      "path": "submissions\\SUB_002\\2nd Position\\docs\\demo-captions.srt",
       "sha256": "79a209921c1eae3df0b5f021dd7e8f1471d85efb519021b620890c9011382ce2",
       "bytes": 3901
     },
     {
-      "path": "submissions/SUB_002/2nd Position/docs/demo-script.md",
+      "path": "submissions\\SUB_002\\2nd Position\\docs\\demo-script.md",
       "sha256": "2fe6d9d83db94b12b60cb79eb49b3067079eb15a5df1804f561e2627eced7694",
       "bytes": 10480
     },
     {
-      "path": "submissions/SUB_002/2nd Position/docs/security-review.md",
+      "path": "submissions\\SUB_002\\2nd Position\\docs\\security-review.md",
       "sha256": "b87bfecabf6449b8982605f5042441cdd3befe4d885134022b8107f27506e6ec",
       "bytes": 6852
     },
     {
-      "path": "submissions/SUB_002/2nd Position/eslint.config.js",
+      "path": "submissions\\SUB_002\\2nd Position\\eslint.config.js",
       "sha256": "4cf1f4125294c4f056a26ed8e1f7bf7d60c6ce2a598ba8dc00a8a95aef680ed1",
       "bytes": 407
     },
     {
-      "path": "submissions/SUB_002/2nd Position/index.html",
+      "path": "submissions\\SUB_002\\2nd Position\\index.html",
       "sha256": "d2ca7a33d46c1e623c20aea6fb23d964a8ac8931ecd0c9e6ed1ce1dcaeb3b3ba",
       "bytes": 643
     },
     {
-      "path": "submissions/SUB_002/2nd Position/netlify.toml",
+      "path": "submissions\\SUB_002\\2nd Position\\netlify.toml",
       "sha256": "31ce20d7e25a96eebaa76152b766ab41e307bf0863375ad267a1a65319c727ed",
       "bytes": 1278
     },
     {
-      "path": "submissions/SUB_002/2nd Position/package-lock.json",
+      "path": "submissions\\SUB_002\\2nd Position\\package-lock.json",
       "sha256": "fb29bd9e94704b756b9c4ee4fd39fc2e5441088e025f3e0c122c477f7f17a2e0",
       "bytes": 95221
     },
     {
-      "path": "submissions/SUB_002/2nd Position/package.json",
+      "path": "submissions\\SUB_002\\2nd Position\\package.json",
       "sha256": "98028c22ea2520e416fecf6343c5cd9cf08fa0135a95d00daa951c8745953ff4",
       "bytes": 1011
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/engine/engine.test.ts",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\engine\\engine.test.ts",
       "sha256": "d9f3ae7d4b0a7d16fd164ba16fc1f88ac719aad4119f19dd3937d14721877ecd",
       "bytes": 10541
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/engine/engine.ts",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\engine\\engine.ts",
       "sha256": "73bb6a53143daff679572dcfbc2b4680277661d0a6a16c850567488594b0fcb8",
       "bytes": 29253
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/engine/types.ts",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\engine\\types.ts",
       "sha256": "8512d3f92732c663d3bc4af8455e25178b28eb7f0695dee956a794d2dd89053c",
       "bytes": 9446
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/engine/util.ts",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\engine\\util.ts",
       "sha256": "84f41d48530eacf927d82ae50ecf8a54ab9a0cf8d07c8755ac20aafc788ec619",
       "bytes": 1259
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/engine/validation.ts",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\engine\\validation.ts",
       "sha256": "fc98718e2b633c90a88b34ab4b75ca3da1bd969db9ceafc80a89d87dd47d8315",
       "bytes": 1822
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/main.tsx",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\main.tsx",
       "sha256": "968cbfb327c9e7192562500771470e11c3e9986b48d3cc454656a4f7199c7e5a",
       "bytes": 359
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/providers/live.ts",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\providers\\live.ts",
       "sha256": "d673d893a476c43d26e7028e87bedb81c576cbdd429625765b1f2c7af45b949b",
       "bytes": 1560
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/puzzles/approval-gate.ts",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\puzzles\\approval-gate.ts",
       "sha256": "9333cd36775ab502fa77d1bd2353b46bf9c958803b031ef987f5aa7906a9c97a",
       "bytes": 8412
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/puzzles/blocks.ts",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\puzzles\\blocks.ts",
       "sha256": "7587df39e99204fb479d67591c70d34b829b5979de5d424bafffea6022ce33a2",
       "bytes": 3698
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/puzzles/data-extractor.ts",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\puzzles\\data-extractor.ts",
       "sha256": "940b4c299fa9227aad184c6344be00f52c0699416fa2bf60d5decafe38195fa6",
       "bytes": 9093
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/puzzles/fallback-drill.ts",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\puzzles\\fallback-drill.ts",
       "sha256": "174eb431056012d49a5ee232984a54e64f2f1805689605e5af1c3fc7d79211c4",
       "bytes": 7839
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/puzzles/index.ts",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\puzzles\\index.ts",
       "sha256": "81e7db3b637bd8f6a9fc5ca96df572b9a6caa3d8bcee18cc7d572b174001bb0e",
       "bytes": 1108
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/puzzles/knowledge-assistant.ts",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\puzzles\\knowledge-assistant.ts",
       "sha256": "be3a5fdc3f7c6b76cdb23ab8e18d9ecdbe461ac45fd62a5d83a718e1b9e08c31",
       "bytes": 8868
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/puzzles/meeting-summarizer.ts",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\puzzles\\meeting-summarizer.ts",
       "sha256": "eecf1ad069ceb1804d4599ae6702c1957d292ac9e1071a95a01d4a08982db535",
       "bytes": 8899
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/puzzles/puzzles.test.ts",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\puzzles\\puzzles.test.ts",
       "sha256": "a0131fb12d8864fdaf0b8c4ae10cd9507fbff3ebb416586ac418a121fe2809d8",
       "bytes": 12421
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/puzzles/research-timeout.ts",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\puzzles\\research-timeout.ts",
       "sha256": "3bf61894dab740fb863cb7d39dde55309a3c2c4f0dc0d750f10de0caea4c0efc",
       "bytes": 9345
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/puzzles/resume-mission.ts",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\puzzles\\resume-mission.ts",
       "sha256": "564c18764dc12374969afaf1a39c1fb519405fa70f221a3b0a0dc7c1d8d0ff8b",
       "bytes": 9168
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/puzzles/ticket-router.ts",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\puzzles\\ticket-router.ts",
       "sha256": "58c88a81f8f2ee5b27ad39507684cc85ec01741fc26bd87538f7805e5d67d207",
       "bytes": 11131
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/puzzles/types.ts",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\puzzles\\types.ts",
       "sha256": "95e3bfc018ab6a460b555a712477bff3b417f7f0a514dfd7974a001ad264fc20",
       "bytes": 7023
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/reliability/report.test.ts",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\reliability\\report.test.ts",
       "sha256": "b17ba7006eac5e4a82f299913d42e30bb03556d083356cad822487208302e619",
       "bytes": 6361
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/reliability/report.ts",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\reliability\\report.ts",
       "sha256": "2e86f415d6e6a3919d15359e003ff63bca269fffb874fc6791ef78d9a954b04e",
       "bytes": 8778
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/state/store.ts",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\state\\store.ts",
       "sha256": "1e803b9f577786c39980273c899669c115a68fcb7a6ec6892f9d3834668bada2",
       "bytes": 19241
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/state/workflowOps.test.ts",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\state\\workflowOps.test.ts",
       "sha256": "ba1f02786d49dab083597e663122ee72cf92b4e99661a15f34596f159865a469",
       "bytes": 7021
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/state/workflowOps.ts",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\state\\workflowOps.ts",
       "sha256": "9f4224462068a747ca45683c519900e2ee68de5d41f67c8cb741c9f574ffcb89",
       "bytes": 6186
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/styles.css",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\styles.css",
       "sha256": "1fdcda8175812f5ff066fb05204aab989b6ca7680fad4cae45e6bba71a867aef",
       "bytes": 36833
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/ui/App.tsx",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\ui\\App.tsx",
       "sha256": "182810ba08f9bc123f96f5dddb80a23ff51969c1f76f5f5c8d8c50bf904343e9",
       "bytes": 3185
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/ui/Canvas.tsx",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\ui\\Canvas.tsx",
       "sha256": "9123f5516c8328cd1db7be721505fc7520c729dc1b5d8a2b365a984bf5984ecd",
       "bytes": 11198
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/ui/Dialog.tsx",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\ui\\Dialog.tsx",
       "sha256": "7ae9a29d7937fb2291d33eeb2dcf929456737d877d4acf3492670e132c5ce4b1",
       "bytes": 2647
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/ui/ErrorBoundary.tsx",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\ui\\ErrorBoundary.tsx",
       "sha256": "36a41426a03be0fd8e0213ab1408b92aacd1ac467485955275bc0b5f888921d6",
       "bytes": 1903
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/ui/GoalsPanel.tsx",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\ui\\GoalsPanel.tsx",
       "sha256": "615ddae31d14368c2fb3717bf7ca76adf1097e41cd671e394c58c58f825334e6",
       "bytes": 2508
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/ui/HomeScreen.tsx",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\ui\\HomeScreen.tsx",
       "sha256": "07cc50659df5dfb625685fe0900f7649c2a5bc17feda51317d7aa5239838d1fc",
       "bytes": 4449
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/ui/HumanReviewModal.tsx",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\ui\\HumanReviewModal.tsx",
       "sha256": "50d773683e7ace6091138e2f9324bc2f5f378a71b8df4d761e1522207b7997cd",
       "bytes": 5351
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/ui/Inspector.tsx",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\ui\\Inspector.tsx",
       "sha256": "d96d73d3068e613c399140fc2c400c258e02da734be210c72860a326a12dc5e3",
       "bytes": 11129
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/ui/Palette.tsx",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\ui\\Palette.tsx",
       "sha256": "13d149f5cf86de6459d9d4524cbaf6d1188bc528e4ec4de07126eda8fd87ba01",
       "bytes": 3928
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/ui/PhaseStrip.tsx",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\ui\\PhaseStrip.tsx",
       "sha256": "023198c14c1d0617993fadaa0465be97cecfa229ca2af1c04a9c43c4abe85816",
       "bytes": 1258
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/ui/PuzzleScreen.tsx",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\ui\\PuzzleScreen.tsx",
       "sha256": "dbe84603f237fed85196c136c537831e3955fb7330d0b455e73a18c3791b9f43",
       "bytes": 8426
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/ui/ReportPanel.tsx",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\ui\\ReportPanel.tsx",
       "sha256": "bc8762ee8b60518c6a2adefe42f2a8c0f38445a51b75ff6182e1afc8f63c964d",
       "bytes": 3662
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/ui/ReviewerGuide.tsx",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\ui\\ReviewerGuide.tsx",
       "sha256": "17ace6607840026423795191975388f4bf404efcde05cfa354d83c4ed6b7242e",
       "bytes": 6646
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/ui/RunPanel.tsx",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\ui\\RunPanel.tsx",
       "sha256": "68110ba2499e2afefa34235e5e8dfcf2185cb1bde1d9c5a8fa066f12c9b05ea2",
       "bytes": 4025
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/ui/SettingsModal.tsx",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\ui\\SettingsModal.tsx",
       "sha256": "efc1c1278748cd62a5476bdd663f122f5e88c8f75f70ed904f947612b819a6e8",
       "bytes": 3366
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/ui/TracePanel.tsx",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\ui\\TracePanel.tsx",
       "sha256": "10afe367b48c4fe5031a52124c31da80032204e5f74b04d9c3f5e7fd32988bd6",
       "bytes": 5950
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/ui/common.tsx",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\ui\\common.tsx",
       "sha256": "83736650f46a7ff7f8232f60336ab9ef801d69cb98b4d346fd5d495fec16268f",
       "bytes": 3383
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/ui/dnd.ts",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\ui\\dnd.ts",
       "sha256": "1b0bd681d99134c99340286634e3ebb4035183d3135892f45c930fe2e8acf604",
       "bytes": 1007
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/ui/useIsMobile.ts",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\ui\\useIsMobile.ts",
       "sha256": "6ca5970d85fd0ee4a434a3e1ed6093c98fc582a2a4a46ffd6e5ccc42f5c68df2",
       "bytes": 741
     },
     {
-      "path": "submissions/SUB_002/2nd Position/tsconfig.json",
+      "path": "submissions\\SUB_002\\2nd Position\\tsconfig.json",
       "sha256": "d98f1ab44956aa73cfe59e3bea37c595d4f6eac2eed87136614f22293009a880",
       "bytes": 531
     },
     {
-      "path": "submissions/SUB_002/2nd Position/vercel.json",
+      "path": "submissions\\SUB_002\\2nd Position\\vercel.json",
       "sha256": "5d28eb8a2ef9e565355aa2e7e4e9e5c5bdd26e61315bfcb4b8c12273bfbbc514",
       "bytes": 895
     },
     {
-      "path": "submissions/SUB_002/2nd Position/vite.config.ts",
+      "path": "submissions\\SUB_002\\2nd Position\\vite.config.ts",
       "sha256": "24a6adb63186519c8be75d1aab78f3ab16f4e30fb74cb4be80fd32301a2f21db",
       "bytes": 808
     },
     {
-      "path": "verification/verification-config.json",
+      "path": "verification\\verification-config.json",
       "sha256": "c2d99e055ca33371d9fa58e005686aec229a36b305aa70828d5c0c800f470ba6",
       "bytes": 300
     }
@@ -1239,1207 +1239,1207 @@
       "bytes": 417
     },
     {
-      "path": "integrity/source-hashes.json",
+      "path": "integrity\\source-hashes.json",
       "sha256": "622aa74cc82c569ce79a641c6dd2d1f2086c48e3c7eaf37e0157f8e91076b3f0",
       "bytes": 101
     },
     {
-      "path": "reviews/SUB_001/final-result.json",
+      "path": "reviews\\SUB_001\\final-result.json",
       "sha256": "01747bc1eddc483d34e69f0f570db276ec6f46d32fcf644e0f2533ee06e0b52c",
       "bytes": 210
     },
     {
-      "path": "reviews/SUB_002/final-result.json",
+      "path": "reviews\\SUB_002\\final-result.json",
       "sha256": "7f708919f00a6a035bd4688fbb7ecfa3e7b997ac41177d46d8bae2388f9b6899",
       "bytes": 211
     },
     {
-      "path": "submissions/SUB_001/submission/.gitignore",
+      "path": "submissions\\SUB_001\\submission\\.gitignore",
       "sha256": "fe21a3b4423da2ae494c06624d2f9cc11fad70ac78271e71767bdfe263bd5e24",
       "bytes": 323
     },
     {
-      "path": "submissions/SUB_001/submission/README.md",
+      "path": "submissions\\SUB_001\\submission\\README.md",
       "sha256": "dd4a99b3cff614297fdcfafa42a9a7fe838be5cfa968444e8bd4999be65ccaae",
       "bytes": 21485
     },
     {
-      "path": "submissions/SUB_001/submission/backend/.dockerignore",
+      "path": "submissions\\SUB_001\\submission\\backend\\.dockerignore",
       "sha256": "14b7e4a2f87c217a9ab7e91eb79cf60c3df7689d8222b1871e4fc900c4d06875",
       "bytes": 463
     },
     {
-      "path": "submissions/SUB_001/submission/backend/.env.example",
+      "path": "submissions\\SUB_001\\submission\\backend\\.env.example",
       "sha256": "7d58c78851d57a0937f7ceeac2539aea53833fcf642c64aad6658230da2d2d71",
       "bytes": 798
     },
     {
-      "path": "submissions/SUB_001/submission/backend/Dockerfile",
+      "path": "submissions\\SUB_001\\submission\\backend\\Dockerfile",
       "sha256": "b2ff8501bbe5d22b7574efc2f18941722d2d6332b725bc5f093ddf236063e6c5",
       "bytes": 907
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/__init__.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\__init__.py",
       "sha256": "81dfbced3ef88f7b3de6fc832d8c131f027dfb4b3803b9df68f4b4b3486aab8b",
       "bytes": 62
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/api/__init__.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\api\\__init__.py",
       "sha256": "e1b0206b9132d4ec4289c327cbf5cc940a05c2fe14f7149924ac5c122c487356",
       "bytes": 470
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/api/context.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\api\\context.py",
       "sha256": "89e8ad0060bfb8cb1e2e7c4dc6d59e95b305ed2307ab9d4c63c03f270e9c821b",
       "bytes": 9977
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/api/deps.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\api\\deps.py",
       "sha256": "183c9995bcd0fd974cec229e9c647e439321fb24d1348161d79f4328cddf8de1",
       "bytes": 842
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/api/puzzles.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\api\\puzzles.py",
       "sha256": "55e294a921a1ddf3a551e1ca8b9c5892556789e2624b90d1ab68c2cd193438e3",
       "bytes": 1578
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/api/runs.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\api\\runs.py",
       "sha256": "fe7824b49b693b293a584124033c048ea41f47d47acfa1d9f8f5704645767dfb",
       "bytes": 11239
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/api/schemas.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\api\\schemas.py",
       "sha256": "4af5900ce9f2a5037b6d7f28959bc4be56d52d0c6c4fe1f74399cd6710bddef3",
       "bytes": 5820
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/api/workflows.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\api\\workflows.py",
       "sha256": "a7dbd6c375ff5fa140ac12a655398d1f7af05c9a49ecac3c6ccf0820485df678",
       "bytes": 698
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/blocks/__init__.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\blocks\\__init__.py",
       "sha256": "0a9927eccb8e73b0143e37a65250a27343af7c56ad117fa5958f808c6b63ff64",
       "bytes": 2714
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/blocks/ai_model.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\blocks\\ai_model.py",
       "sha256": "db85870dc6af58be38178f59ed0c578ccbe7e89189b2ff25f1e40a8c81fb689c",
       "bytes": 2547
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/blocks/base.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\blocks\\base.py",
       "sha256": "43eb45eecb6c1cf68fd0455b9a4d7e2e2bcb91f5a08819c7a3a79069aa9d5c29",
       "bytes": 4300
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/blocks/condition.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\blocks\\condition.py",
       "sha256": "62eb710a360021a31bfc242a0ec703ac0e191c9a20b6c97cab3fa98e41c69123",
       "bytes": 2644
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/blocks/guards.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\blocks\\guards.py",
       "sha256": "5796338cd3bf7500ca3e48a2bb940423ae645dd0e5baff9ebb1fd102e2e3e59d",
       "bytes": 2097
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/blocks/human_review.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\blocks\\human_review.py",
       "sha256": "c90d959d163cc314394f4c9ac31b03ec323dfb504a24c11477baebacd0b5c7a7",
       "bytes": 1510
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/blocks/io.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\blocks\\io.py",
       "sha256": "4ec235fcbcb42abe69be9634f5d9523f390446d63de3a808138c9df141c9dc81",
       "bytes": 1688
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/blocks/retrieval.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\blocks\\retrieval.py",
       "sha256": "967ac276fce6a0dfed93d320f64b6bc25c8d1122895da092136245dfd496c83e",
       "bytes": 1899
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/blocks/safe_stop.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\blocks\\safe_stop.py",
       "sha256": "3190831723e3b7900c4abac27a208d1bf00661e7e0374dbb367bf413b7a151fe",
       "bytes": 1151
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/blocks/tool.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\blocks\\tool.py",
       "sha256": "63f2dbbf85a971f41568a9a45480e1aad125a8ce9cff6c4153cf606c10f59357",
       "bytes": 1667
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/blocks/transform.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\blocks\\transform.py",
       "sha256": "ea6362679d342a9b35f8f490cd91d0dba95fccb5d9aa70458aebbe4c7be8b40f",
       "bytes": 2946
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/blocks/validator.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\blocks\\validator.py",
       "sha256": "cee844289135c1733bbaaca4de4de378af8f2fc1d295c6fca671b3679986bdc0",
       "bytes": 8049
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/engine/__init__.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\engine\\__init__.py",
       "sha256": "fea48dfadbb076b24191927cbf917adfd43ad7038da5669309c5c053c7203075",
       "bytes": 2047
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/engine/errors.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\engine\\errors.py",
       "sha256": "7889bde403bc07ecd901ec89a9c89d5e74ef7e0fabed6e9d20671efcd0ef6cca",
       "bytes": 3092
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/engine/executor.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\engine\\executor.py",
       "sha256": "251c872badd40134baae4f322adfb842e8232f405f53e63847daa4d7f16b8e7a",
       "bytes": 53484
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/engine/graph.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\engine\\graph.py",
       "sha256": "36dd13354c31436532949bbf80342275c0715c4ac67d45f38b66797d0ba07c97",
       "bytes": 13025
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/engine/model.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\engine\\model.py",
       "sha256": "a5ca35183b512c010a698cfda41a247293fafe671f534a776b4f8e4c183d6b6c",
       "bytes": 4080
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/engine/ports.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\engine\\ports.py",
       "sha256": "4e20f96c0c1608a2dc4de8afbd11c2897ba111c5e47da25f51d40bd627c66430",
       "bytes": 3122
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/engine/run.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\engine\\run.py",
       "sha256": "f8c4d08c0a5cf6e078f8c172ac876c3bf8ba4759d4f7395b5afaee423481c412",
       "bytes": 5521
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/engine/store.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\engine\\store.py",
       "sha256": "f87d14d81fb19e01dcc5430c7e4d310421a00d1d05a8ef42e5103bd1da2a7731",
       "bytes": 5734
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/engine/trace.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\engine\\trace.py",
       "sha256": "11bbcd5cd4387ab7101b344692c4b69514101362332674b49126f8092e98d661",
       "bytes": 4187
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/failures/__init__.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\failures\\__init__.py",
       "sha256": "4141b29e2c29eb15e00754bf8310951f9263b3b02023c02f939bce2c734578d8",
       "bytes": 484
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/failures/injector.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\failures\\injector.py",
       "sha256": "50b922a932c2ad3caf00e7b778da639e86030a055dae5698f427f889c6676e2b",
       "bytes": 7216
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/main.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\main.py",
       "sha256": "3f4a967e5b6dc66fb9170f4caaf164a7cef437b18eb47bf66850a25c3ba572fa",
       "bytes": 1914
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/providers/__init__.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\providers\\__init__.py",
       "sha256": "b1f509a8c44b019489bef3c71a8211d9a5f68d0755be982fc9f4a3dedb24a87c",
       "bytes": 891
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/providers/_prompting.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\providers\\_prompting.py",
       "sha256": "0d17882846b261a3a078355a305daab78da861c071ab9781d3d24f12d15516a0",
       "bytes": 5920
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/providers/factory.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\providers\\factory.py",
       "sha256": "f4d26f0105524a30d23d8ee3c926108d928abf75cd08b7ec5586316774c90f11",
       "bytes": 9160
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/providers/groq.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\providers\\groq.py",
       "sha256": "55de7761a7a361cbd2092bebf245f168de43dcb0c81a5f7656904f9664776839",
       "bytes": 9318
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/providers/mock.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\providers\\mock.py",
       "sha256": "782fca91cea038f8328d0d74bca9cade7cf0f78afef6e8603d0d8d4205fd37bc",
       "bytes": 7813
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/providers/openai_compat.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\providers\\openai_compat.py",
       "sha256": "4ac929483099b3157fbe4f389b23f348f5ab526ca27b3f0a0aa6f2ea678689c2",
       "bytes": 9856
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/providers/resilient.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\providers\\resilient.py",
       "sha256": "5fcb04956cecd1668bb0cf633862fccc27b33f186192242ae934dbc1f419a56a",
       "bytes": 7022
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/puzzles/__init__.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\puzzles\\__init__.py",
       "sha256": "cd7df7528e17294447178f6dc813ec1f2ec292024150fb609afb4933272b7e98",
       "bytes": 1198
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/puzzles/data/1_fix-the-meeting-summarizer.json",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\puzzles\\data\\1_fix-the-meeting-summarizer.json",
       "sha256": "89e25d6a399ae83fe63af9790a89b5d7b38c49218fb38e89cb0a45e2e00647c2",
       "bytes": 6543
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/puzzles/data/2_approve-before-sending.json",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\puzzles\\data\\2_approve-before-sending.json",
       "sha256": "965af5892379488a7538a1e7b131663a1667d979e791983b1fe467744328b398",
       "bytes": 4990
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/puzzles/data/3_ground-the-knowledge-assistant.json",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\puzzles\\data\\3_ground-the-knowledge-assistant.json",
       "sha256": "ddcaffcdf22965e88bce68b0a4a94d87ec593783b6c2d0c4b935c57b6443ccfe",
       "bytes": 5303
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/puzzles/data/4_repair-the-ticket-router.json",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\puzzles\\data\\4_repair-the-ticket-router.json",
       "sha256": "50c97b23a5fc9d8daad91bfa8ca0cd548e3fb8f6918cefe17825af94eacb1dcc",
       "bytes": 5577
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/puzzles/data/5_survive-the-research-timeout.json",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\puzzles\\data\\5_survive-the-research-timeout.json",
       "sha256": "a2de354602e2b8b2f3e493af296884a31e6ac8b332334af11984f003e1fd4395",
       "bytes": 6447
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/puzzles/data/6_validate-the-data-extractor.json",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\puzzles\\data\\6_validate-the-data-extractor.json",
       "sha256": "1f8df669023f1bf8598e9b1358de8b1772eb333de860670dd073145f3f751c3c",
       "bytes": 6225
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/puzzles/data/7_activate-the-fallback.json",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\puzzles\\data\\7_activate-the-fallback.json",
       "sha256": "d52b3760aa3231b455e6f792a6e09d1e21c502b7bcbaff6de40b19f076ff7492",
       "bytes": 5625
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/puzzles/data/8_resume-the-interrupted-mission.json",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\puzzles\\data\\8_resume-the-interrupted-mission.json",
       "sha256": "1212765ef4f897d746d24529b565d8db1284cdb31d524e670ed46aff4f30314a",
       "bytes": 7176
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/puzzles/models.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\puzzles\\models.py",
       "sha256": "a8362b691bc7fb705f4995de6bf37364e0605d7007b42ea6657f7af1cbc082ea",
       "bytes": 12391
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/puzzles/registry.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\puzzles\\registry.py",
       "sha256": "e58d24d52065792643828a42e7d0fb877922f53c1962575b1349c444f998a663",
       "bytes": 6378
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/reliability/__init__.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\reliability\\__init__.py",
       "sha256": "0baa4d3f29c4ec665096c032b2af579900c622d99b38fb187a1eeedfcc760ffe",
       "bytes": 559
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/reliability/scorer.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\reliability\\scorer.py",
       "sha256": "0a84b00ceebc112770b370be3f91669c22d86773babc5004507e0dffab3f8f50",
       "bytes": 24442
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/tools/__init__.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\tools\\__init__.py",
       "sha256": "2885a348cf4ff6200ac589cf802881d79a5c4f66c5557a7573855a0080a09f62",
       "bytes": 240
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/tools/retrieval.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\tools\\retrieval.py",
       "sha256": "1e4308df496dc8ec902860aa41a72f2da24b93e7f5255b1860a62e251e48c179",
       "bytes": 3957
     },
     {
-      "path": "submissions/SUB_001/submission/backend/app/tools/simulator.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\app\\tools\\simulator.py",
       "sha256": "4ec6b586302b14bea484acd0b79ed0b8cd7bc65bc16174d22a0868183d7f2815",
       "bytes": 13529
     },
     {
-      "path": "submissions/SUB_001/submission/backend/pytest.ini",
+      "path": "submissions\\SUB_001\\submission\\backend\\pytest.ini",
       "sha256": "ea3ce5119c10cda24f113ad6e017355ed0a0f48730d913d201bf623bd1bc0549",
       "bytes": 62
     },
     {
-      "path": "submissions/SUB_001/submission/backend/requirements-dev.txt",
+      "path": "submissions\\SUB_001\\submission\\backend\\requirements-dev.txt",
       "sha256": "af4f31468d4258f299abbbb7f54a74fd59513179346cae0f8287185e2ea7c7cd",
       "bytes": 147
     },
     {
-      "path": "submissions/SUB_001/submission/backend/requirements.lock.txt",
+      "path": "submissions\\SUB_001\\submission\\backend\\requirements.lock.txt",
       "sha256": "a2f455cbddd0fd1afd6110e1bff2b44a92b7dfee70059dffa020a16f11dd07f9",
       "bytes": 597
     },
     {
-      "path": "submissions/SUB_001/submission/backend/requirements.txt",
+      "path": "submissions\\SUB_001\\submission\\backend\\requirements.txt",
       "sha256": "73828ae5f8cf0ecf708663e043c4770939f31d81d144ededdcc651b757fad045",
       "bytes": 107
     },
     {
-      "path": "submissions/SUB_001/submission/backend/ruff.toml",
+      "path": "submissions\\SUB_001\\submission\\backend\\ruff.toml",
       "sha256": "4bfb874139100773c19eff34c1c5ee193cf7da6f038b474b60785c2965795772",
       "bytes": 777
     },
     {
-      "path": "submissions/SUB_001/submission/backend/tests/api_helpers.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\tests\\api_helpers.py",
       "sha256": "409e152f8af3b51cb00abd1978a9564fa4a12e77c80064bed82551052752d68c",
       "bytes": 4898
     },
     {
-      "path": "submissions/SUB_001/submission/backend/tests/conftest.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\tests\\conftest.py",
       "sha256": "f377849973e37bbd86351d15335af7bf8cbe3b9c4529ae8022b45fa3b1dcee92",
       "bytes": 8287
     },
     {
-      "path": "submissions/SUB_001/submission/backend/tests/puzzle_helpers.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\tests\\puzzle_helpers.py",
       "sha256": "9309d063b60f58a783c270a57c708931aa6cc362908610cccd62657b45b167ed",
       "bytes": 5357
     },
     {
-      "path": "submissions/SUB_001/submission/backend/tests/test_api_context.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\tests\\test_api_context.py",
       "sha256": "9d72dec85f21e4a96c97b9a9293edf8dd3ba1024b6bb35e98ab1389ecf4ecabf",
       "bytes": 4170
     },
     {
-      "path": "submissions/SUB_001/submission/backend/tests/test_api_puzzles.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\tests\\test_api_puzzles.py",
       "sha256": "f1a267e31e6a8f65b951af97ce1b518f7d6cc4c5f74b9a2efff7f1f902f2d1ec",
       "bytes": 6071
     },
     {
-      "path": "submissions/SUB_001/submission/backend/tests/test_api_runs.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\tests\\test_api_runs.py",
       "sha256": "6c65cd8aa0cdb7f4f94fa428ca226f040415877c1e7b759e6f3965b889a9fed4",
       "bytes": 20335
     },
     {
-      "path": "submissions/SUB_001/submission/backend/tests/test_api_sse.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\tests\\test_api_sse.py",
       "sha256": "94a9abf857cf30e32396096a16bcc0b726e8aa05b193844238f0bcc43dc41953",
       "bytes": 8167
     },
     {
-      "path": "submissions/SUB_001/submission/backend/tests/test_engine_basic.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\tests\\test_engine_basic.py",
       "sha256": "a8905059672cd796a541ce3a4bc16ab1652557b17a436ed35b0e2ac7a86430e8",
       "bytes": 6440
     },
     {
-      "path": "submissions/SUB_001/submission/backend/tests/test_engine_failures.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\tests\\test_engine_failures.py",
       "sha256": "0947dfa4b6e4655a4ca2ed48e4df7e45d0084088f1e86304a3e878e18228421b",
       "bytes": 5510
     },
     {
-      "path": "submissions/SUB_001/submission/backend/tests/test_engine_graph.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\tests\\test_engine_graph.py",
       "sha256": "e9df3b5d17d0ff3f1d93c1f917e5204900f4ac67577fbb43b8dc0d049b524ef0",
       "bytes": 6206
     },
     {
-      "path": "submissions/SUB_001/submission/backend/tests/test_engine_guards.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\tests\\test_engine_guards.py",
       "sha256": "32d6f2d2cd29b97ed3b55cff3128a0f1b0603463ab59ac4234f9aebe275cc050",
       "bytes": 7826
     },
     {
-      "path": "submissions/SUB_001/submission/backend/tests/test_engine_resume.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\tests\\test_engine_resume.py",
       "sha256": "52472f2a6e722ca361c1ea916fee76be406dca9ee2dbf7e8a33542f7cbe0d5ed",
       "bytes": 6113
     },
     {
-      "path": "submissions/SUB_001/submission/backend/tests/test_engine_review.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\tests\\test_engine_review.py",
       "sha256": "440271348c832f31e141d34c366eae7f059c064898161ca91d0f4e3e808d3806",
       "bytes": 6852
     },
     {
-      "path": "submissions/SUB_001/submission/backend/tests/test_engine_trace.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\tests\\test_engine_trace.py",
       "sha256": "b816a36aa3793f1c5a837deb8d5b69ca6aed0f085c169ffe958529eba7264c84",
       "bytes": 4918
     },
     {
-      "path": "submissions/SUB_001/submission/backend/tests/test_engine_validation.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\tests\\test_engine_validation.py",
       "sha256": "20451fa929c9c10d090f64b224621339712fd38b8abf45095a31453ee2719d4c",
       "bytes": 14442
     },
     {
-      "path": "submissions/SUB_001/submission/backend/tests/test_failures.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\tests\\test_failures.py",
       "sha256": "29142c8b00a8d30bedd0e08ffe325b28931c9a93b1bbf11fbfa0b2d27347264e",
       "bytes": 10787
     },
     {
-      "path": "submissions/SUB_001/submission/backend/tests/test_health.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\tests\\test_health.py",
       "sha256": "e9e7cb0ba0ce373220f9d8f7c8580c269f1bfc9b815a3c971e3fe115aff7114a",
       "bytes": 2546
     },
     {
-      "path": "submissions/SUB_001/submission/backend/tests/test_providers.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\tests\\test_providers.py",
       "sha256": "3cc3910bd064a9c1a0465fdd85fbeffec1c828b478b24ff7a5ce47d6beb61959",
       "bytes": 36819
     },
     {
-      "path": "submissions/SUB_001/submission/backend/tests/test_puzzles.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\tests\\test_puzzles.py",
       "sha256": "6180aeb94b05c7da20591696be6dc62eb156e870d84ef3b83ac2b00196b942a7",
       "bytes": 32626
     },
     {
-      "path": "submissions/SUB_001/submission/backend/tests/test_reliability.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\tests\\test_reliability.py",
       "sha256": "496045adb54533ef70fd23ffa7349ffb567580820ef464b591dcfe60f446c3a3",
       "bytes": 23047
     },
     {
-      "path": "submissions/SUB_001/submission/backend/tests/test_tools.py",
+      "path": "submissions\\SUB_001\\submission\\backend\\tests\\test_tools.py",
       "sha256": "516a8a2ac2aa1d17c9ea178012f4645eca1c1601554f24067ce8d951cd06f45a",
       "bytes": 12668
     },
     {
-      "path": "submissions/SUB_001/submission/docker-compose.yml",
+      "path": "submissions\\SUB_001\\submission\\docker-compose.yml",
       "sha256": "e79f421e999468e003b9a1aed015d31c70dc9638c4caad5407ff5d25e4f4202d",
       "bytes": 1102
     },
     {
-      "path": "submissions/SUB_001/submission/docs/architecture.png",
+      "path": "submissions\\SUB_001\\submission\\docs\\architecture.png",
       "sha256": "b48e5e45e930fc06b53d584c8ce0707250005aed2707459976b292609782713c",
       "bytes": 382098
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/.dockerignore",
+      "path": "submissions\\SUB_001\\submission\\frontend\\.dockerignore",
       "sha256": "4d8450175a1a8087a314c3b64bd800b3884c78bcdb19b380b2790ce698917dcb",
       "bytes": 382
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/.gitignore",
+      "path": "submissions\\SUB_001\\submission\\frontend\\.gitignore",
       "sha256": "fe718e7babb14f3cbad2d97f08889b9ce5215ed3fe0e43b2b8cfbfb3b9b844e8",
       "bytes": 253
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/.oxlintrc.json",
+      "path": "submissions\\SUB_001\\submission\\frontend\\.oxlintrc.json",
       "sha256": "b024cb882299e61c3394c8fdea2746fb2a1f799c02ef28da25e9ef2d1c101e4e",
       "bytes": 291
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/Dockerfile",
+      "path": "submissions\\SUB_001\\submission\\frontend\\Dockerfile",
       "sha256": "7d84244a2884bc56af77fd5cf05d011bf1dc3e7451e3e05ba4bbc7420a7f9f35",
       "bytes": 884
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/components.json",
+      "path": "submissions\\SUB_001\\submission\\frontend\\components.json",
       "sha256": "d0ada54e59710099b766eae59a1a35d31b717a6ec43d73a8814de1815ddc1749",
       "bytes": 516
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/index.html",
+      "path": "submissions\\SUB_001\\submission\\frontend\\index.html",
       "sha256": "f04add958268e1b96ab96fd4e12cae36ce25ffe59ce83634627bb2859d53841e",
       "bytes": 1109
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/package-lock.json",
+      "path": "submissions\\SUB_001\\submission\\frontend\\package-lock.json",
       "sha256": "afc8864967cc5f879dc4a7be6b3bcd90b28516ec431f98c8a76b29c3fe6a7f13",
       "bytes": 286527
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/package.json",
+      "path": "submissions\\SUB_001\\submission\\frontend\\package.json",
       "sha256": "c91c841dcf85f4626513142270e745a69749535c04cc60f071a2eae55aef0f24",
       "bytes": 913
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/public/favicon.svg",
+      "path": "submissions\\SUB_001\\submission\\frontend\\public\\favicon.svg",
       "sha256": "93050d22d50b1b994c5f88b38ae9a159ecedd1097fa3b446f0626a9a692e3bab",
       "bytes": 316
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/App.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\App.tsx",
       "sha256": "9f8bb9cb5a350f8b7a19b1c74b91d8def067f6eff6c73daac1a811689ba6ccba",
       "bytes": 394
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/api/client.ts",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\api\\client.ts",
       "sha256": "9e5ceb87796a316a9b404b43ac2a1e472a8d6bace8f6697343a08045b5e8b9d8",
       "bytes": 8589
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/api/errors.ts",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\api\\errors.ts",
       "sha256": "4fb2fd7b58adccf82f2dde054c17f3b8c277b17550036374e3b15239aa7ebc40",
       "bytes": 278
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/api/fixtures.ts",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\api\\fixtures.ts",
       "sha256": "2d339e2c6b90db06f9548ecd3e0ca99bb7c3451803c33b5dd5c8236286d15a29",
       "bytes": 21600
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/api/mockClient.ts",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\api\\mockClient.ts",
       "sha256": "3cadefe74daeb772cffad21af855c52d2b6efd7eccbee19d600e455ebf9c7cec",
       "bytes": 15933
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/api/mockEngine.ts",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\api\\mockEngine.ts",
       "sha256": "fa26189c070df6d7e6ed102231c2ff5fec9d7e4fc57132dd3438f2aaaca26c35",
       "bytes": 16249
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/api/types.ts",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\api\\types.ts",
       "sha256": "23be78e0dde044d86f8ea5c2a86f9c269747f7fad882472cb7681f47b47854c6",
       "bytes": 9912
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/blocks/catalog.ts",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\blocks\\catalog.ts",
       "sha256": "4d99dea7b8e8e82f3a30c8c4b946739e32f1fa628c97066df9feadacc7e384b8",
       "bytes": 22739
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/builder/ConfigForm.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\builder\\ConfigForm.tsx",
       "sha256": "b27245a5f809ef57f0b37bc4346e1ee1f15d4cbd4c17e7d0161078b9f9a949cb",
       "bytes": 10528
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/builder/Inspector.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\builder\\Inspector.tsx",
       "sha256": "fef2d8c2fe6c262afd6ddee8627e3a86e446f6085ff3adf479aa4cc4428344fc",
       "bytes": 2468
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/builder/Palette.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\builder\\Palette.tsx",
       "sha256": "a3faa86be8fbd8f163f45214cc05568f997c36b0922bb9b9ef082d9cdc235866",
       "bytes": 4675
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/builder/PuzzleBrief.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\builder\\PuzzleBrief.tsx",
       "sha256": "c5a778974215fba67635e27c3aa70fbac414b34b0362f21069965054f25dfc87",
       "bytes": 4019
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/builder/ValidationMessages.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\builder\\ValidationMessages.tsx",
       "sha256": "fafb1606ebf760b3bc0b61fe0ce0b52e0d439f1987c581f1bd81717504ba2bdc",
       "bytes": 1784
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/builder/validationToast.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\builder\\validationToast.tsx",
       "sha256": "5641179f9a4a914d013272e713f92deeed9431a9a5b255b4d6a22f4b417f938f",
       "bytes": 1960
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/canvas/BlockNode.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\canvas\\BlockNode.tsx",
       "sha256": "bab3503959ae23f780cd37b9cc1fa4dcb9ca3125be6ff3c56ccfdd0e18976412",
       "bytes": 6671
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/canvas/WorkflowCanvas.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\canvas\\WorkflowCanvas.tsx",
       "sha256": "131d8d60f4589c89dbd46c3df592b9ddd1504768ce14f3ef655f62328d82ad53",
       "bytes": 13911
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/canvas/canvas.css",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\canvas\\canvas.css",
       "sha256": "c9ed0cfb84555c3be641e74bebb522cc4aa11b66ac4e1e3fbe887396a97ea688",
       "bytes": 10738
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/canvas/graphTypes.ts",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\canvas\\graphTypes.ts",
       "sha256": "545422be00287b4a9d74904d85a0649ccfb8c84aea1c387b31d20d50b0dfeab0",
       "bytes": 1576
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/canvas/layout.ts",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\canvas\\layout.ts",
       "sha256": "3abdcbf45670f8d26399c9be1d8007146e369b8ba274fcec168b527c052f9e49",
       "bytes": 3594
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/canvas/useWorkflowGraph.ts",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\canvas\\useWorkflowGraph.ts",
       "sha256": "04be13f105a16dbbcf46979c9da97c7c259ab08f84aa6ec8c2eef4a0747bbc18",
       "bytes": 12167
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/components/AppHeader.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\components\\AppHeader.tsx",
       "sha256": "5de785e36bfebda61962abd89bfa10516d11d47ceb18e54c5e6a668c480bc93c",
       "bytes": 1150
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/components/CategoryIcon.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\components\\CategoryIcon.tsx",
       "sha256": "d788fc55a29dcb37638d8a3e842ac86d131a6511a42f44245138f956e320476d",
       "bytes": 1333
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/components/DifficultyBadge.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\components\\DifficultyBadge.tsx",
       "sha256": "eda0e59d4a693ebdc9d679342b4c5ee8d146ccdbe809dcb6cf1f4c127be4e284",
       "bytes": 977
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/components/EmptyState.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\components\\EmptyState.tsx",
       "sha256": "f7b00dba1dbf72d23cabb31081ddf5da3629a7629356ec6eb5d46259c2df6146",
       "bytes": 905
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/components/GradeBadge.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\components\\GradeBadge.tsx",
       "sha256": "a3eb67a2c91592115f0726002b4124fac9f039dbcf16a926bcb77d7fedddf7df",
       "bytes": 739
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/components/JsonViewer.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\components\\JsonViewer.tsx",
       "sha256": "d0db1a37347044a61be61206795006373d917254249b56293d5428db46d8b8ba",
       "bytes": 2382
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/components/ModeBadge.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\components\\ModeBadge.tsx",
       "sha256": "f65c2b5ee0554e8372ec1cdcaee45fc3e764fbfa00cbee858f54b7edf13ca0e3",
       "bytes": 1392
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/components/SectionHeading.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\components\\SectionHeading.tsx",
       "sha256": "d825c5b9655c71b31ad4b8da45d30ecf97359099147238b71fc33f1bb7ea4283",
       "bytes": 726
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/components/StatusBadge.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\components\\StatusBadge.tsx",
       "sha256": "c48f1399dd2080e593d1a16f26352158ccd69cd2cd87e1379763ff6cdfd69239",
       "bytes": 1347
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/components/ThemeToggle.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\components\\ThemeToggle.tsx",
       "sha256": "8a6db378f6fb077eccd30c809d5706acc051a6e8c0ec3a9fee1c98c33edf0932",
       "bytes": 1748
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/components/grades.ts",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\components\\grades.ts",
       "sha256": "400b5434d9c2c273b63f39bc4ec98a911eb8cd3d79a65190faa136be7c90691c",
       "bytes": 1636
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/components/status.ts",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\components\\status.ts",
       "sha256": "8b631941bb0ecc5cea3410b0897a15d70dc8500602b7baec0f784e22ce5c6c3c",
       "bytes": 1064
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/components/ui/alert.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\components\\ui\\alert.tsx",
       "sha256": "126a26b401ab2cd3f3855551d012b5dca7a96b7d6984a921add3ce2d441af4b6",
       "bytes": 2048
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/components/ui/badge.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\components\\ui\\badge.tsx",
       "sha256": "1b292cd64608eef62eab1e43621071b32f794988a8c4e40fd1086cfbf8d9ef5d",
       "bytes": 1865
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/components/ui/button.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\components\\ui\\button.tsx",
       "sha256": "9ce417985b97956fbb3a73c84b0eb60230fd0a9844c5111df92e061731440a3f",
       "bytes": 3385
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/components/ui/card.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\components\\ui\\card.tsx",
       "sha256": "d8113cbf964f8d1aadf2649d2944d8bbc6e3cfd49d36746f76868cbc4dde3cfe",
       "bytes": 2630
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/components/ui/dialog.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\components\\ui\\dialog.tsx",
       "sha256": "13a5cddf294c6aa56391ebd5d474ee13e70cf9eebdd1ecf10c100c6555c8745a",
       "bytes": 4234
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/components/ui/dropdown-menu.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\components\\ui\\dropdown-menu.tsx",
       "sha256": "47f754e1ab9e4e34a7ddbab035d7ed665dfac657ff5a2db4f3ab0923d340852b",
       "bytes": 8831
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/components/ui/input.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\components\\ui\\input.tsx",
       "sha256": "c4902a8c4967875e30d9f1198175f4f5348a0cdd17e21b5e3d7c9e81d2996ed9",
       "bytes": 968
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/components/ui/label.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\components\\ui\\label.tsx",
       "sha256": "a9e5ce00e4809f1f6804d0e48de09bf364bddc424947c25d2a276c2fc6514c50",
       "bytes": 592
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/components/ui/resizable.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\components\\ui\\resizable.tsx",
       "sha256": "c6dcc01292ef44006bd1d773054b3386ef9f1a2a17e320ff2914f8b267fca714",
       "bytes": 2671
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/components/ui/scroll-area.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\components\\ui\\scroll-area.tsx",
       "sha256": "fabec1cb78fd578da0d2013ea7e1652f2227d207c5ce80c0fc2e835305d3e4a1",
       "bytes": 1678
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/components/ui/select.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\components\\ui\\select.tsx",
       "sha256": "078c479779746fed4ec80ab5144fd11ac8c258e0f3869cef52be9f0d633f6ab0",
       "bytes": 6665
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/components/ui/separator.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\components\\ui\\separator.tsx",
       "sha256": "c924a82e99fda03684c17238d04eec857edc83977da2ee601795e94e52b4828f",
       "bytes": 644
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/components/ui/sheet.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\components\\ui\\sheet.tsx",
       "sha256": "0f77129671c960b0b833fcb7fa15394df710a04797074c6f8409ffd230234939",
       "bytes": 4556
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/components/ui/skeleton.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\components\\ui\\skeleton.tsx",
       "sha256": "8110bba70d0cb9fe968c0b7bd092ad12258caef40b028b4a87f402bdab907faf",
       "bytes": 275
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/components/ui/sonner.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\components\\ui\\sonner.tsx",
       "sha256": "78792f240655478669af220c28c988b81d5b93ca5ca0ed1cfb635dd3977cac8a",
       "bytes": 1314
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/components/ui/switch.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\components\\ui\\switch.tsx",
       "sha256": "245e0e306b1c0947c4138f38c84c12b018f00a449b209e644313fa4522bc18d0",
       "bytes": 1852
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/components/ui/textarea.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\components\\ui\\textarea.tsx",
       "sha256": "58b58d84fc54ba5f4ca46937870c619349fd9eccc4d494250ac7bc73a94e05e9",
       "bytes": 842
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/components/ui/tooltip.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\components\\ui\\tooltip.tsx",
       "sha256": "f26881e08ed65a973a15ac3bd509bca50c31da1d5b275bc3f9c48b5de1d1c966",
       "bytes": 2111
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/hooks/useHealth.ts",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\hooks\\useHealth.ts",
       "sha256": "97ad48184ae18c5fc1c5586458c7f01cda8eceea842c8553726a41051701701e",
       "bytes": 656
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/hooks/useIsCompact.ts",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\hooks\\useIsCompact.ts",
       "sha256": "9beb425724f79e6e17899bb7f460d4deead539f42489af3877a33089f32f4e16",
       "bytes": 986
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/hooks/usePanelLayout.ts",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\hooks\\usePanelLayout.ts",
       "sha256": "04f0aabb5b98ba90875ee928424d41da4f92157e2bcdc0ef93c78534b1fcde61",
       "bytes": 2604
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/hooks/usePrefersReducedMotion.ts",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\hooks\\usePrefersReducedMotion.ts",
       "sha256": "7ba8b7c51e3a2bcc222ab4730ef490e4b3fb6812990000ca08ac4910b495f827",
       "bytes": 941
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/index.css",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\index.css",
       "sha256": "7a0416c140b0da6e0f2098395f359e459daf585c69425d49924676b5b06f7e19",
       "bytes": 11497
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/lib/utils.ts",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\lib\\utils.ts",
       "sha256": "7c8c3dfc0cdd370d44932828eb067ef771c8fe7996693221d5d4b90af6d54f2d",
       "bytes": 166
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/main.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\main.tsx",
       "sha256": "c973c26ee77308c2f0d54db76262c4fbc4ad076a19a1f14548a540ab14e45634",
       "bytes": 657
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/pages/Builder.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\pages\\Builder.tsx",
       "sha256": "8e88ffcdaefb1e524c118cf79e85eba6bebef06674af98c48c4fc2ec88c7c566",
       "bytes": 23753
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/pages/PuzzleSelect.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\pages\\PuzzleSelect.tsx",
       "sha256": "1d495832cf33cabc83be4e0a391c9a129f7d694ec746b557903833f44d81b8e1",
       "bytes": 5680
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/run/ReliabilityPanel.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\run\\ReliabilityPanel.tsx",
       "sha256": "802f2a5ba913d0bf2ab0ee9d53aec63fd236bc1688e2709a25c577634131d8c8",
       "bytes": 10486
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/run/ReviewModal.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\run\\ReviewModal.tsx",
       "sha256": "01dec876d94f30fc15421f3a35da0a2c68fd0cb94c2ddd03e65bf46e4c805d06",
       "bytes": 7865
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/run/ScenarioToggle.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\run\\ScenarioToggle.tsx",
       "sha256": "347dc1b9b6c6379427cefe0022d0e710d5c5fb23ef04bd07683e80f831ce36f5",
       "bytes": 4111
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/run/StepInspector.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\run\\StepInspector.tsx",
       "sha256": "e8417b6136702da1fa3ffe110b03a0494d02f7dfb389c4ff63825423822edcd4",
       "bytes": 7323
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/run/TraceDrawer.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\run\\TraceDrawer.tsx",
       "sha256": "9c8349643fac2857a81307399bbea76f3b93ad614dea78e17523314036ebb443",
       "bytes": 8332
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/run/payload.ts",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\run\\payload.ts",
       "sha256": "2ca75b9d87420c05230001673ed995ad8fbaac715698d471a7fdb199cffd80af",
       "bytes": 4752
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/run/timeline.ts",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\run\\timeline.ts",
       "sha256": "026b82d4baf212b967a16623a0ee52d7d2bf6ef7dd31bd7b0f7b334b3c050e81",
       "bytes": 2241
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/run/traceLabels.ts",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\run\\traceLabels.ts",
       "sha256": "ac2ea700a00fd896f5059efc2cb3b85509f208c781f4a6891f07951f98861fe2",
       "bytes": 8215
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/run/useRun.ts",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\run\\useRun.ts",
       "sha256": "27c8e849dd1cccbc6f58cf546a077dbcd7541be1a89499bd2bb15318ca480e12",
       "bytes": 7172
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/theme/ThemeProvider.tsx",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\theme\\ThemeProvider.tsx",
       "sha256": "3c8bebf7e675c709e97c08e8d792adc8cac02190e56d879125eee1a62b57582e",
       "bytes": 1973
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/theme/theme-context.ts",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\theme\\theme-context.ts",
       "sha256": "9ad2560fb5d13e3cccbbc05e188ce07a7fcd43d83caa8b10df64511d488c4881",
       "bytes": 1374
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/src/vite-env.d.ts",
+      "path": "submissions\\SUB_001\\submission\\frontend\\src\\vite-env.d.ts",
       "sha256": "a542643f6524f0c4f8ed396dfb8972d3f0e81220780e7964589e15dcd0580dec",
       "bytes": 236
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/tsconfig.app.json",
+      "path": "submissions\\SUB_001\\submission\\frontend\\tsconfig.app.json",
       "sha256": "78948656d9d146a46d51b071968f62a3f12fb1e963297658dab5bf3a5af42a0c",
       "bytes": 712
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/tsconfig.json",
+      "path": "submissions\\SUB_001\\submission\\frontend\\tsconfig.json",
       "sha256": "23c57da26bcec4996c4168f01187840c8ec08a1d60c2dd0edad6d984f5c33680",
       "bytes": 193
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/tsconfig.node.json",
+      "path": "submissions\\SUB_001\\submission\\frontend\\tsconfig.node.json",
       "sha256": "d366cc0827139db39c61815f22491bbfda56c654354a42ad7795143d314e45e8",
       "bytes": 558
     },
     {
-      "path": "submissions/SUB_001/submission/frontend/vite.config.ts",
+      "path": "submissions\\SUB_001\\submission\\frontend\\vite.config.ts",
       "sha256": "f8bdd8283fa7bb194b1c4433b1faccec3e7e2d5b4369f9e84ae971e1448032ca",
       "bytes": 630
     },
     {
-      "path": "submissions/SUB_001/submission/scripts/dev.sh",
+      "path": "submissions\\SUB_001\\submission\\scripts\\dev.sh",
       "sha256": "268dab6c293932214fc53a00b6a1da7deade1be34d08f6f49c4dc3ed22c7af9c",
       "bytes": 1309
     },
     {
-      "path": "submissions/SUB_002/2nd Position/.github/workflows/deploy-pages.yml",
+      "path": "submissions\\SUB_002\\2nd Position\\.github\\workflows\\deploy-pages.yml",
       "sha256": "67c0761ddf8d749aa0f0ad8bf1bdeec095304e8eb7ac3488f9502162d48abb1e",
       "bytes": 1414
     },
     {
-      "path": "submissions/SUB_002/2nd Position/.gitignore",
+      "path": "submissions\\SUB_002\\2nd Position\\.gitignore",
       "sha256": "7e9b8d13ac67259da9bb4ef22b7ba701f838500aa41638409ad58fe6c30468fc",
       "bytes": 53
     },
     {
-      "path": "submissions/SUB_002/2nd Position/.vercelignore",
+      "path": "submissions\\SUB_002\\2nd Position\\.vercelignore",
       "sha256": "ac5d7e95c579edf1038ac1e1ed264b8d1412d8dc65ac76df18f2cde73554c41e",
       "bytes": 66
     },
     {
-      "path": "submissions/SUB_002/2nd Position/README.md",
+      "path": "submissions\\SUB_002\\2nd Position\\README.md",
       "sha256": "b0e48aface5929cbe6fb5e0a0407106b192500860b2b7ce9980c178f1538dc0c",
       "bytes": 25599
     },
     {
-      "path": "submissions/SUB_002/2nd Position/SUBMISSION.md",
+      "path": "submissions\\SUB_002\\2nd Position\\SUBMISSION.md",
       "sha256": "e133d407096f380dc9d8f725a3bd87a969469fe826eeffaa86ba72b9672af4b0",
       "bytes": 7027
     },
     {
-      "path": "submissions/SUB_002/2nd Position/docs/REVIEW.md",
+      "path": "submissions\\SUB_002\\2nd Position\\docs\\REVIEW.md",
       "sha256": "75a0f8e43777dd5f5a17adbca23bc15958b8c6707eabf8e4af784bccf8a013d0",
       "bytes": 10590
     },
     {
-      "path": "submissions/SUB_002/2nd Position/docs/architecture.md",
+      "path": "submissions\\SUB_002\\2nd Position\\docs\\architecture.md",
       "sha256": "23525e5c662164075467555faa5577be3891dab2d025f7a532037e9f641c2e84",
       "bytes": 9500
     },
     {
-      "path": "submissions/SUB_002/2nd Position/docs/architecture.svg",
+      "path": "submissions\\SUB_002\\2nd Position\\docs\\architecture.svg",
       "sha256": "0b30786beba91c27f7d96d3bd15ba2c3a9cf1193d95a307be8952c8afce00a6f",
       "bytes": 8236
     },
     {
-      "path": "submissions/SUB_002/2nd Position/docs/demo-captions.md",
+      "path": "submissions\\SUB_002\\2nd Position\\docs\\demo-captions.md",
       "sha256": "7ede6c7008c0abbb9fd28cd0048794ff7c3429fdb596a118d723b9939d5b856f",
       "bytes": 7535
     },
     {
-      "path": "submissions/SUB_002/2nd Position/docs/demo-captions.srt",
+      "path": "submissions\\SUB_002\\2nd Position\\docs\\demo-captions.srt",
       "sha256": "79a209921c1eae3df0b5f021dd7e8f1471d85efb519021b620890c9011382ce2",
       "bytes": 3901
     },
     {
-      "path": "submissions/SUB_002/2nd Position/docs/demo-script.md",
+      "path": "submissions\\SUB_002\\2nd Position\\docs\\demo-script.md",
       "sha256": "2fe6d9d83db94b12b60cb79eb49b3067079eb15a5df1804f561e2627eced7694",
       "bytes": 10480
     },
     {
-      "path": "submissions/SUB_002/2nd Position/docs/security-review.md",
+      "path": "submissions\\SUB_002\\2nd Position\\docs\\security-review.md",
       "sha256": "b87bfecabf6449b8982605f5042441cdd3befe4d885134022b8107f27506e6ec",
       "bytes": 6852
     },
     {
-      "path": "submissions/SUB_002/2nd Position/eslint.config.js",
+      "path": "submissions\\SUB_002\\2nd Position\\eslint.config.js",
       "sha256": "4cf1f4125294c4f056a26ed8e1f7bf7d60c6ce2a598ba8dc00a8a95aef680ed1",
       "bytes": 407
     },
     {
-      "path": "submissions/SUB_002/2nd Position/index.html",
+      "path": "submissions\\SUB_002\\2nd Position\\index.html",
       "sha256": "d2ca7a33d46c1e623c20aea6fb23d964a8ac8931ecd0c9e6ed1ce1dcaeb3b3ba",
       "bytes": 643
     },
     {
-      "path": "submissions/SUB_002/2nd Position/netlify.toml",
+      "path": "submissions\\SUB_002\\2nd Position\\netlify.toml",
       "sha256": "31ce20d7e25a96eebaa76152b766ab41e307bf0863375ad267a1a65319c727ed",
       "bytes": 1278
     },
     {
-      "path": "submissions/SUB_002/2nd Position/package-lock.json",
+      "path": "submissions\\SUB_002\\2nd Position\\package-lock.json",
       "sha256": "fb29bd9e94704b756b9c4ee4fd39fc2e5441088e025f3e0c122c477f7f17a2e0",
       "bytes": 95221
     },
     {
-      "path": "submissions/SUB_002/2nd Position/package.json",
+      "path": "submissions\\SUB_002\\2nd Position\\package.json",
       "sha256": "98028c22ea2520e416fecf6343c5cd9cf08fa0135a95d00daa951c8745953ff4",
       "bytes": 1011
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/engine/engine.test.ts",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\engine\\engine.test.ts",
       "sha256": "d9f3ae7d4b0a7d16fd164ba16fc1f88ac719aad4119f19dd3937d14721877ecd",
       "bytes": 10541
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/engine/engine.ts",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\engine\\engine.ts",
       "sha256": "73bb6a53143daff679572dcfbc2b4680277661d0a6a16c850567488594b0fcb8",
       "bytes": 29253
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/engine/types.ts",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\engine\\types.ts",
       "sha256": "8512d3f92732c663d3bc4af8455e25178b28eb7f0695dee956a794d2dd89053c",
       "bytes": 9446
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/engine/util.ts",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\engine\\util.ts",
       "sha256": "84f41d48530eacf927d82ae50ecf8a54ab9a0cf8d07c8755ac20aafc788ec619",
       "bytes": 1259
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/engine/validation.ts",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\engine\\validation.ts",
       "sha256": "fc98718e2b633c90a88b34ab4b75ca3da1bd969db9ceafc80a89d87dd47d8315",
       "bytes": 1822
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/main.tsx",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\main.tsx",
       "sha256": "968cbfb327c9e7192562500771470e11c3e9986b48d3cc454656a4f7199c7e5a",
       "bytes": 359
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/providers/live.ts",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\providers\\live.ts",
       "sha256": "d673d893a476c43d26e7028e87bedb81c576cbdd429625765b1f2c7af45b949b",
       "bytes": 1560
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/puzzles/approval-gate.ts",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\puzzles\\approval-gate.ts",
       "sha256": "9333cd36775ab502fa77d1bd2353b46bf9c958803b031ef987f5aa7906a9c97a",
       "bytes": 8412
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/puzzles/blocks.ts",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\puzzles\\blocks.ts",
       "sha256": "7587df39e99204fb479d67591c70d34b829b5979de5d424bafffea6022ce33a2",
       "bytes": 3698
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/puzzles/data-extractor.ts",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\puzzles\\data-extractor.ts",
       "sha256": "940b4c299fa9227aad184c6344be00f52c0699416fa2bf60d5decafe38195fa6",
       "bytes": 9093
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/puzzles/fallback-drill.ts",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\puzzles\\fallback-drill.ts",
       "sha256": "174eb431056012d49a5ee232984a54e64f2f1805689605e5af1c3fc7d79211c4",
       "bytes": 7839
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/puzzles/index.ts",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\puzzles\\index.ts",
       "sha256": "81e7db3b637bd8f6a9fc5ca96df572b9a6caa3d8bcee18cc7d572b174001bb0e",
       "bytes": 1108
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/puzzles/knowledge-assistant.ts",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\puzzles\\knowledge-assistant.ts",
       "sha256": "be3a5fdc3f7c6b76cdb23ab8e18d9ecdbe461ac45fd62a5d83a718e1b9e08c31",
       "bytes": 8868
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/puzzles/meeting-summarizer.ts",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\puzzles\\meeting-summarizer.ts",
       "sha256": "eecf1ad069ceb1804d4599ae6702c1957d292ac9e1071a95a01d4a08982db535",
       "bytes": 8899
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/puzzles/puzzles.test.ts",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\puzzles\\puzzles.test.ts",
       "sha256": "a0131fb12d8864fdaf0b8c4ae10cd9507fbff3ebb416586ac418a121fe2809d8",
       "bytes": 12421
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/puzzles/research-timeout.ts",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\puzzles\\research-timeout.ts",
       "sha256": "3bf61894dab740fb863cb7d39dde55309a3c2c4f0dc0d750f10de0caea4c0efc",
       "bytes": 9345
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/puzzles/resume-mission.ts",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\puzzles\\resume-mission.ts",
       "sha256": "564c18764dc12374969afaf1a39c1fb519405fa70f221a3b0a0dc7c1d8d0ff8b",
       "bytes": 9168
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/puzzles/ticket-router.ts",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\puzzles\\ticket-router.ts",
       "sha256": "58c88a81f8f2ee5b27ad39507684cc85ec01741fc26bd87538f7805e5d67d207",
       "bytes": 11131
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/puzzles/types.ts",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\puzzles\\types.ts",
       "sha256": "95e3bfc018ab6a460b555a712477bff3b417f7f0a514dfd7974a001ad264fc20",
       "bytes": 7023
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/reliability/report.test.ts",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\reliability\\report.test.ts",
       "sha256": "b17ba7006eac5e4a82f299913d42e30bb03556d083356cad822487208302e619",
       "bytes": 6361
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/reliability/report.ts",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\reliability\\report.ts",
       "sha256": "2e86f415d6e6a3919d15359e003ff63bca269fffb874fc6791ef78d9a954b04e",
       "bytes": 8778
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/state/store.ts",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\state\\store.ts",
       "sha256": "1e803b9f577786c39980273c899669c115a68fcb7a6ec6892f9d3834668bada2",
       "bytes": 19241
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/state/workflowOps.test.ts",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\state\\workflowOps.test.ts",
       "sha256": "ba1f02786d49dab083597e663122ee72cf92b4e99661a15f34596f159865a469",
       "bytes": 7021
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/state/workflowOps.ts",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\state\\workflowOps.ts",
       "sha256": "9f4224462068a747ca45683c519900e2ee68de5d41f67c8cb741c9f574ffcb89",
       "bytes": 6186
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/styles.css",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\styles.css",
       "sha256": "1fdcda8175812f5ff066fb05204aab989b6ca7680fad4cae45e6bba71a867aef",
       "bytes": 36833
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/ui/App.tsx",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\ui\\App.tsx",
       "sha256": "182810ba08f9bc123f96f5dddb80a23ff51969c1f76f5f5c8d8c50bf904343e9",
       "bytes": 3185
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/ui/Canvas.tsx",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\ui\\Canvas.tsx",
       "sha256": "9123f5516c8328cd1db7be721505fc7520c729dc1b5d8a2b365a984bf5984ecd",
       "bytes": 11198
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/ui/Dialog.tsx",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\ui\\Dialog.tsx",
       "sha256": "7ae9a29d7937fb2291d33eeb2dcf929456737d877d4acf3492670e132c5ce4b1",
       "bytes": 2647
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/ui/ErrorBoundary.tsx",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\ui\\ErrorBoundary.tsx",
       "sha256": "36a41426a03be0fd8e0213ab1408b92aacd1ac467485955275bc0b5f888921d6",
       "bytes": 1903
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/ui/GoalsPanel.tsx",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\ui\\GoalsPanel.tsx",
       "sha256": "615ddae31d14368c2fb3717bf7ca76adf1097e41cd671e394c58c58f825334e6",
       "bytes": 2508
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/ui/HomeScreen.tsx",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\ui\\HomeScreen.tsx",
       "sha256": "07cc50659df5dfb625685fe0900f7649c2a5bc17feda51317d7aa5239838d1fc",
       "bytes": 4449
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/ui/HumanReviewModal.tsx",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\ui\\HumanReviewModal.tsx",
       "sha256": "50d773683e7ace6091138e2f9324bc2f5f378a71b8df4d761e1522207b7997cd",
       "bytes": 5351
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/ui/Inspector.tsx",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\ui\\Inspector.tsx",
       "sha256": "d96d73d3068e613c399140fc2c400c258e02da734be210c72860a326a12dc5e3",
       "bytes": 11129
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/ui/Palette.tsx",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\ui\\Palette.tsx",
       "sha256": "13d149f5cf86de6459d9d4524cbaf6d1188bc528e4ec4de07126eda8fd87ba01",
       "bytes": 3928
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/ui/PhaseStrip.tsx",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\ui\\PhaseStrip.tsx",
       "sha256": "023198c14c1d0617993fadaa0465be97cecfa229ca2af1c04a9c43c4abe85816",
       "bytes": 1258
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/ui/PuzzleScreen.tsx",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\ui\\PuzzleScreen.tsx",
       "sha256": "dbe84603f237fed85196c136c537831e3955fb7330d0b455e73a18c3791b9f43",
       "bytes": 8426
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/ui/ReportPanel.tsx",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\ui\\ReportPanel.tsx",
       "sha256": "bc8762ee8b60518c6a2adefe42f2a8c0f38445a51b75ff6182e1afc8f63c964d",
       "bytes": 3662
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/ui/ReviewerGuide.tsx",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\ui\\ReviewerGuide.tsx",
       "sha256": "17ace6607840026423795191975388f4bf404efcde05cfa354d83c4ed6b7242e",
       "bytes": 6646
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/ui/RunPanel.tsx",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\ui\\RunPanel.tsx",
       "sha256": "68110ba2499e2afefa34235e5e8dfcf2185cb1bde1d9c5a8fa066f12c9b05ea2",
       "bytes": 4025
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/ui/SettingsModal.tsx",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\ui\\SettingsModal.tsx",
       "sha256": "efc1c1278748cd62a5476bdd663f122f5e88c8f75f70ed904f947612b819a6e8",
       "bytes": 3366
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/ui/TracePanel.tsx",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\ui\\TracePanel.tsx",
       "sha256": "10afe367b48c4fe5031a52124c31da80032204e5f74b04d9c3f5e7fd32988bd6",
       "bytes": 5950
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/ui/common.tsx",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\ui\\common.tsx",
       "sha256": "83736650f46a7ff7f8232f60336ab9ef801d69cb98b4d346fd5d495fec16268f",
       "bytes": 3383
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/ui/dnd.ts",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\ui\\dnd.ts",
       "sha256": "1b0bd681d99134c99340286634e3ebb4035183d3135892f45c930fe2e8acf604",
       "bytes": 1007
     },
     {
-      "path": "submissions/SUB_002/2nd Position/src/ui/useIsMobile.ts",
+      "path": "submissions\\SUB_002\\2nd Position\\src\\ui\\useIsMobile.ts",
       "sha256": "6ca5970d85fd0ee4a434a3e1ed6093c98fc582a2a4a46ffd6e5ccc42f5c68df2",
       "bytes": 741
     },
     {
-      "path": "submissions/SUB_002/2nd Position/tsconfig.json",
+      "path": "submissions\\SUB_002\\2nd Position\\tsconfig.json",
       "sha256": "d98f1ab44956aa73cfe59e3bea37c595d4f6eac2eed87136614f22293009a880",
       "bytes": 531
     },
     {
-      "path": "submissions/SUB_002/2nd Position/vercel.json",
+      "path": "submissions\\SUB_002\\2nd Position\\vercel.json",
       "sha256": "5d28eb8a2ef9e565355aa2e7e4e9e5c5bdd26e61315bfcb4b8c12273bfbbc514",
       "bytes": 895
     },
     {
-      "path": "submissions/SUB_002/2nd Position/vite.config.ts",
+      "path": "submissions\\SUB_002\\2nd Position\\vite.config.ts",
       "sha256": "24a6adb63186519c8be75d1aab78f3ab16f4e30fb74cb4be80fd32301a2f21db",
       "bytes": 808
     },
     {
-      "path": "verification/verification-config.json",
+      "path": "verification\\verification-config.json",
       "sha256": "c2d99e055ca33371d9fa58e005686aec229a36b305aa70828d5c0c800f470ba6",
       "bytes": 300
     }

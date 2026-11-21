@@ -1,17 +1,17 @@
 {
   "submissionId": "SUB_001",
   "kind": "code",
-  "rootPath": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_001",
+  "rootPath": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001",
   "applications": [
     {
-      "path": "submissions/SUB_001/submission",
+      "path": "submissions\\SUB_001\\submission",
       "stack": [
         "Docker"
       ],
       "role": "infra"
     },
     {
-      "path": "submissions/SUB_001/submission/backend",
+      "path": "submissions\\SUB_001\\submission\\backend",
       "stack": [
         "Docker",
         "Python"
@@ -19,7 +19,7 @@
       "role": "backend"
     },
     {
-      "path": "submissions/SUB_001/submission/frontend",
+      "path": "submissions\\SUB_001\\submission\\frontend",
       "stack": [
         "Docker",
         "React",
@@ -30,16 +30,16 @@
     }
   ],
   "architecture": {
-    "summary": "Detected 3 application unit(s): infra at submissions/SUB_001/submission (Docker); backend at submissions/SUB_001/submission/backend (Docker, Python); frontend at submissions/SUB_001/submission/frontend (Docker, React, TypeScript, Vite). Detected 3 unit(s); languages: Docker, Python, React, TypeScript, Vite.",
+    "summary": "Detected 3 application unit(s): infra at submissions\\SUB_001\\submission (Docker); backend at submissions\\SUB_001\\submission\\backend (Docker, Python); frontend at submissions\\SUB_001\\submission\\frontend (Docker, React, TypeScript, Vite). Detected 3 unit(s); languages: Docker, Python, React, TypeScript, Vite.",
     "evidence": [
       {
-        "id": "EV_9q7vp3w",
+        "id": "EV_b59qqoj",
         "statement": "infra unit (Docker)",
         "locations": [
           {
             "kind": "file",
             "submissionId": "SUB_001",
-            "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_001/submission",
+            "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission",
             "excerpt": "application root"
           }
         ],
@@ -47,13 +47,13 @@
         "confidence": "high"
       },
       {
-        "id": "EV_3ij7bjd",
+        "id": "EV_6zf09c4",
         "statement": "backend unit (Docker, Python)",
         "locations": [
           {
             "kind": "file",
             "submissionId": "SUB_001",
-            "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_001/submission/backend",
+            "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend",
             "excerpt": "application root"
           }
         ],
@@ -61,13 +61,13 @@
         "confidence": "high"
       },
       {
-        "id": "EV_6oxldaj",
+        "id": "EV_9x2rhyt",
         "statement": "frontend unit (Docker, React, TypeScript, Vite)",
         "locations": [
           {
             "kind": "file",
             "submissionId": "SUB_001",
-            "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_001/submission/frontend",
+            "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\frontend",
             "excerpt": "application root"
           }
         ],
@@ -79,18 +79,18 @@
   "build": {
     "state": "complete",
     "commands": [
-      "npm run build  (submission/frontend)",
-      "npm run dev  (submission/frontend)"
+      "npm run build  (submission\\frontend)",
+      "npm run dev  (submission\\frontend)"
     ],
     "evidence": [
       {
-        "id": "EV_byonrja",
+        "id": "EV_775pjqu",
         "statement": "scripts present: dev, build, lint, preview",
         "locations": [
           {
             "kind": "file",
             "submissionId": "SUB_001",
-            "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_001/submission/frontend/package.json",
+            "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\frontend\\package.json",
             "excerpt": "package.json scripts"
           }
         ],
@@ -106,13 +106,13 @@
     ],
     "evidence": [
       {
-        "id": "EV_5wr68ww",
+        "id": "EV_bjzufsj",
         "statement": "18 test file(s) found",
         "locations": [
           {
             "kind": "test",
             "submissionId": "SUB_001",
-            "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_001/submission/backend/tests/test_api_context.py",
+            "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend\\tests\\test_api_context.py",
             "excerpt": "example of 18 test files"
           }
         ],
@@ -128,31 +128,31 @@
       "score": 17.7,
       "evidence": [
         {
-          "id": "EV_62492tu",
+          "id": "EV_czarfvq",
           "statement": "Grounded evidence for \"Visual Workflow Builder\" (49 files, 130 hits, strength 17.7)",
           "locations": [
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_001/submission/README.md",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\README.md",
               "excerpt": "matches: workflow, builder, multiple, steps, including"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_001/submission/backend/app/__init__.py",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend\\app\\__init__.py",
               "excerpt": "matches: workflow, builder"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_001/submission/backend/app/api/context.py",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend\\app\\api\\context.py",
               "excerpt": "matches: workflow, configure, steps"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_001/submission/backend/app/api/schemas.py",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend\\app\\api\\schemas.py",
               "excerpt": "matches: workflow, builder, including"
             }
           ],
@@ -168,31 +168,31 @@
       "score": 18,
       "evidence": [
         {
-          "id": "EV_90mz1og",
+          "id": "EV_dg5zkw1",
           "statement": "Grounded evidence for \"Pre-Seeded Workflow Puzzles\" (61 files, 186 hits, strength 18.0)",
           "locations": [
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_001/submission/README.md",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\README.md",
               "excerpt": "matches: workflow, puzzles, include, across, three"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_001/submission/backend/app/__init__.py",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend\\app\\__init__.py",
               "excerpt": "matches: workflow, puzzle"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_001/submission/backend/app/api/__init__.py",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend\\app\\api\\__init__.py",
               "excerpt": "matches: workflow, puzzles, puzzle"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_001/submission/backend/app/api/context.py",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend\\app\\api\\context.py",
               "excerpt": "matches: workflow, puzzles, three, puzzle"
             }
           ],
@@ -208,31 +208,31 @@
       "score": 19.1,
       "evidence": [
         {
-          "id": "EV_4ed6u72",
+          "id": "EV_do9c1wp",
           "statement": "Grounded evidence for \"Workflow Execution and Step Trace\" (98 files, 401 hits, strength 19.1)",
           "locations": [
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_001/submission/README.md",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\README.md",
               "excerpt": "matches: workflow, execution, trace, every, status"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_001/submission/backend/app/api/__init__.py",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend\\app\\api\\__init__.py",
               "excerpt": "matches: workflow, every, status"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_001/submission/backend/app/api/context.py",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend\\app\\api\\context.py",
               "excerpt": "matches: workflow, execution, trace, every, status"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_001/submission/backend/app/api/puzzles.py",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend\\app\\api\\puzzles.py",
               "excerpt": "matches: every, status"
             }
           ],
@@ -248,31 +248,31 @@
       "score": 17.6,
       "evidence": [
         {
-          "id": "EV_7j6dg2z",
+          "id": "EV_plvqqnd",
           "statement": "Grounded evidence for \"Failure Simulation\" (43 files, 111 hits, strength 17.6)",
           "locations": [
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_001/submission/README.md",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\README.md",
               "excerpt": "matches: failure, simulation, types, scenarios, reproducible"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_001/submission/backend/app/api/context.py",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend\\app\\api\\context.py",
               "excerpt": "matches: failure, support"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_001/submission/backend/app/api/runs.py",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend\\app\\api\\runs.py",
               "excerpt": "matches: failure, scenarios"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_001/submission/backend/app/blocks/validator.py",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend\\app\\blocks\\validator.py",
               "excerpt": "matches: failure, types"
             }
           ],
@@ -288,31 +288,31 @@
       "score": 18.3,
       "evidence": [
         {
-          "id": "EV_4msat6s",
+          "id": "EV_97wcdkk",
           "statement": "Grounded evidence for \"Recovery and Safe Failure Handling\" (64 files, 212 hits, strength 18.3)",
           "locations": [
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_001/submission/README.md",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\README.md",
               "excerpt": "matches: recovery, failure, handling, retry, fallback"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_001/submission/backend/app/api/context.py",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend\\app\\api\\context.py",
               "excerpt": "matches: failure, handling, support, fallback, trace"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_001/submission/backend/app/api/runs.py",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend\\app\\api\\runs.py",
               "excerpt": "matches: failure, actions, trace"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_001/submission/backend/app/api/schemas.py",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend\\app\\api\\schemas.py",
               "excerpt": "matches: actions, trace"
             }
           ],
@@ -328,31 +328,31 @@
       "score": 17.9,
       "evidence": [
         {
-          "id": "EV_393ig4f",
+          "id": "EV_2irsdqo",
           "statement": "Grounded evidence for \"Output Validation\" (56 files, 163 hits, strength 17.9)",
           "locations": [
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_001/submission/README.md",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\README.md",
               "excerpt": "matches: validation, puzzle, failure, recovery"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_001/submission/backend/app/api/context.py",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend\\app\\api\\context.py",
               "excerpt": "matches: validation, puzzle, failure"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_001/submission/backend/app/api/runs.py",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend\\app\\api\\runs.py",
               "excerpt": "matches: puzzle, failure"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_001/submission/backend/app/api/schemas.py",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend\\app\\api\\schemas.py",
               "excerpt": "matches: validation, puzzle, structured"
             }
           ],
@@ -368,31 +368,31 @@
       "score": 18.8,
       "evidence": [
         {
-          "id": "EV_e136x79",
+          "id": "EV_8w6f1xx",
           "statement": "Grounded evidence for \"Human Review and Approval\" (56 files, 211 hits, strength 18.8)",
           "locations": [
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_001/submission/README.md",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\README.md",
               "excerpt": "matches: human, review, puzzle, approve, reject"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_001/submission/backend/app/api/__init__.py",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend\\app\\api\\__init__.py",
               "excerpt": "matches: human, review, puzzle"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_001/submission/backend/app/api/context.py",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend\\app\\api\\context.py",
               "excerpt": "matches: review, puzzle, decision"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_001/submission/backend/app/api/runs.py",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend\\app\\api\\runs.py",
               "excerpt": "matches: human, review, puzzle, decision"
             }
           ],
@@ -408,31 +408,31 @@
       "score": 17.2,
       "evidence": [
         {
-          "id": "EV_bsm8n2x",
+          "id": "EV_64ve8wd",
           "statement": "Grounded evidence for \"Reliability Feedback\" (14 files, 31 hits, strength 17.2)",
           "locations": [
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_001/submission/README.md",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\README.md",
               "excerpt": "matches: reliability, feedback, successful, paths"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_001/submission/backend/app/api/context.py",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend\\app\\api\\context.py",
               "excerpt": "matches: reliability, successful"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_001/submission/backend/app/api/runs.py",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend\\app\\api\\runs.py",
               "excerpt": "matches: reliability, successful"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_001/submission/backend/app/engine/executor.py",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend\\app\\engine\\executor.py",
               "excerpt": "matches: reliability, successful"
             }
           ],
@@ -448,31 +448,31 @@
       "score": 17.7,
       "evidence": [
         {
-          "id": "EV_727evjy",
+          "id": "EV_0p80tvv",
           "statement": "Grounded evidence for \"Local Execution, Mock AI, and Documentation\" (27 files, 73 hits, strength 17.7)",
           "locations": [
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_001/submission/README.md",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\README.md",
               "excerpt": "matches: local, execution, puzzles, locally, committed"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_001/submission/backend/app/api/context.py",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend\\app\\api\\context.py",
               "excerpt": "matches: execution, puzzles, committed, responses"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_001/submission/backend/app/api/runs.py",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend\\app\\api\\runs.py",
               "excerpt": "matches: execution, puzzles, committed, covers"
             },
             {
               "kind": "file",
               "submissionId": "SUB_001",
-              "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/submissions/SUB_001/submission/backend/app/engine/run.py",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend\\app\\engine\\run.py",
               "excerpt": "matches: execution, committed"
             }
           ],
@@ -499,7 +499,7 @@
         {
           "kind": "reviewer_comment",
           "submissionId": "SUB_001",
-          "path": "challenges/AI_WORKFLOW_PUZZLE_BUILDER/reviews/SUB_001/final-result.json",
+          "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\reviews\\SUB_001\\final-result.json",
           "excerpt": "finalScore=100"
         }
       ],

@@ -102,7 +102,7 @@ See [`docs/architecture.svg`](docs/architecture.svg) (or the GitHub-rendered
 ### Code mode — base plus transplants
 1. **Base selection** — the submission that wins the most requirements by grounded
    coverage strength (overall base suitability breaks ties).
-2. **Transplants** — only where a *non-base* source beats the base by a clear margin
+2. **Transplants** — only after the Copilot approves a *non-base* source that beats the base by a clear margin
    for a requirement. Donor grounding files are copied into
    `combined-solution/_transplants/<req>/<donor>/`, **namespaced so the base build is
    never silently broken**.
@@ -112,13 +112,14 @@ See [`docs/architecture.svg`](docs/architecture.svg) (or the GitHub-rendered
    attempted. The tool never claims success merely because files were copied.
 
 ### Ideation mode — synthesis
-1. **Document ingestion** of DOCX / PDF / PPTX with preserved locations (page / slide
+1. **Copilot approval gate** — pending ideas are excluded; a candidate concept is generated only from accepted or explicitly selected ideas.
+2. **Document ingestion** of DOCX / PDF / PPTX with preserved locations (page / slide
    / section) and speaker notes; unreliable extraction is marked `not_verifiable`.
-2. **Idea-level analysis** — up to 3 ideas per submission, each profiled and scored
+3. **Idea-level analysis** — up to 3 ideas per submission, each profiled and scored
    against the five evaluation areas (Originality, Feasibility, Scalability, Impact
    Potential, Alignment with Scope).
-3. **Contradictions** across ideas are exposed as trade-offs, not silently merged.
-4. **Synthesis** of one coherent concept from *accepted* ideas; bridging/assumption
+4. **Contradictions** across ideas are exposed as trade-offs, not silently merged.
+5. **Synthesis** of one coherent concept from *accepted* ideas; bridging/assumption
    statements are explicitly labeled and no unsupported metrics are added.
 
 ---

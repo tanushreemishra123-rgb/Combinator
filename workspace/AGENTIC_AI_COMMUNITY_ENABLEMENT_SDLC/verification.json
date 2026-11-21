@@ -12,7 +12,7 @@
     {
       "name": "Accepted ideas present / rejected ideas absent",
       "state": "passed",
-      "detail": "6 accepted idea(s) represented; 0 rejected idea(s) are not presented as accepted."
+      "detail": "6 accepted idea(s) represented; 0 rejected or unselected idea(s) are not presented as accepted."
     },
     {
       "name": "Contradictions have recorded decisions",

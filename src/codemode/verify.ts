@@ -13,6 +13,8 @@
  * error text.
  */
 import { execFile } from "node:child_process";
+import { existsSync, readdirSync } from "node:fs";
+import { join } from "node:path";
 import type { VerificationStep } from "../types.js";
 
 export interface ExecOptions {
@@ -64,12 +66,28 @@ function skipped(name: string, command?: string): VerificationStep {
   };
 }
 
+/** Locate the runnable Node application, excluding evidence-only transplant copies. */
+function packageRoot(candidateDir: string): string | null {
+  const visit = (dir: string, depth: number): string | null => {
+    if (existsSync(join(dir, "package.json"))) return dir;
+    if (depth === 0) return null;
+    for (const entry of readdirSync(dir, { withFileTypes: true })) {
+      if (!entry.isDirectory() || entry.name === "node_modules" || entry.name === ".git" || entry.name === "_transplants") continue;
+      const found = visit(join(dir, entry.name), depth - 1);
+      if (found) return found;
+    }
+    return null;
+  };
+  return existsSync(candidateDir) ? visit(candidateDir, 5) : null;
+}
+
 export async function verifyCodeCandidate(input: CodeVerifyInput): Promise<{
   steps: VerificationStep[];
   overall: "passed" | "failed" | "partial" | "not_verifiable";
   honestSummary: string;
 }> {
   const steps: VerificationStep[] = [];
+  const appDir = packageRoot(input.candidateDir);
 
   // 1. Source integrity (always evaluated).
   steps.push({
@@ -86,7 +104,7 @@ export async function verifyCodeCandidate(input: CodeVerifyInput): Promise<{
     state: input.baseSourceId ? "passed" : "failed",
     detail: input.baseSourceId
       ? `Base ${input.baseSourceId} copied; ${input.appliedTransplants.length} transplant(s) applied, ${input.rolledBack.length} rolled back.`
-      : "No base could be selected; candidate not assembled.",
+      : "No Copilot-approved base could be selected; candidate not assembled. Accept or select a base decision, then regenerate.",
   });
 
   // 3. Dynamic steps: dependency install, build, startup, smoke, unit/integration.
@@ -112,7 +130,11 @@ export async function verifyCodeCandidate(input: CodeVerifyInput): Promise<{
       continue;
     }
     const started = Date.now();
-    const r = await runCommand(d.cmd[0], d.cmd[1], { cwd: input.candidateDir, timeoutMs: input.exec.timeoutMs });
+    if (!appDir) {
+      steps.push({ name: d.name, state: "not_verifiable", detail: "No runnable package.json was found outside evidence-only transplant directories." });
+      continue;
+    }
+    const r = await runCommand(d.cmd[0], d.cmd[1], { cwd: appDir, timeoutMs: input.exec.timeoutMs });
     steps.push({
       name: d.name,
       command: `${d.cmd[0]} ${d.cmd[1].join(" ")}`,

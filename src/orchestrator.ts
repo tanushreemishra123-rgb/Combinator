@@ -254,7 +254,6 @@ export async function runChallenge(
   log.info(
     `[${ch.challengeId}] done — verification=${verification.overall}, integrityCritical=${integrity.critical}, llm=${usage.provider}/${usage.model}, calls=${usage.calls}`,
   );
-  cleanupDisposable(); // remove any disposable ZIP-extraction dirs created this run
   return manifest;
 }
 
@@ -262,11 +261,17 @@ export async function runAll(cfg: CombinatorConfig, opts: RunOptions): Promise<W
   const bootstrapLog = new Logger(false);
   const bootstrapFs = new SafeFs({ readRoots: [opts.packRoot], log: bootstrapLog });
   const manifest = loadManifest(bootstrapFs, opts.packRoot);
-  const results: WorkspaceManifest[] = [];
-  for (const mc of manifest.challenges) {
-    results.push(await runChallenge(cfg, mc, opts));
+  try {
+    const results: WorkspaceManifest[] = [];
+    for (const mc of manifest.challenges) {
+      results.push(await runChallenge(cfg, mc, opts));
+    }
+    return results;
+  } finally {
+    // A ZIP input is materialized once for the full run. Cleaning it after an
+    // individual fixture makes subsequent manifest paths disappear.
+    cleanupDisposable();
   }
-  return results;
 }
 
 function renderOverview(

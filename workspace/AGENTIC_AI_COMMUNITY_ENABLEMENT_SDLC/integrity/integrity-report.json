@@ -17,62 +17,62 @@
       "bytes": 456
     },
     {
-      "path": "integrity/source-hashes.json",
+      "path": "integrity\\source-hashes.json",
       "sha256": "622aa74cc82c569ce79a641c6dd2d1f2086c48e3c7eaf37e0157f8e91076b3f0",
       "bytes": 101
     },
     {
-      "path": "reviews/SUB_001/final-result.json",
+      "path": "reviews\\SUB_001\\final-result.json",
       "sha256": "0dcc8c8f50747361dfe3d1918714556c3993f18fb18bc9f010626848452c1c46",
       "bytes": 196
     },
     {
-      "path": "reviews/SUB_002/final-result.json",
+      "path": "reviews\\SUB_002\\final-result.json",
       "sha256": "4af79cf75b4a3f523d687c55fa85d37644abe046c9f1aaaa48ddb8d31d3006ff",
       "bytes": 195
     },
     {
-      "path": "reviews/SUB_003/final-result.json",
+      "path": "reviews\\SUB_003\\final-result.json",
       "sha256": "6e7cf238c4026d17b2348feddb9b8ddc5a2378b6605af1ed0b816a11396074ce",
       "bytes": 195
     },
     {
-      "path": "submissions/SUB_001/Idea-1-Topcoder-AI-Agents.pdf",
+      "path": "submissions\\SUB_001\\Idea-1-Topcoder-AI-Agents.pdf",
       "sha256": "eb6ebf0c2eb24f89b02d865079e12182454d1c9b6c5ad40f4541a3a05a2341b2",
       "bytes": 363279
     },
     {
-      "path": "submissions/SUB_001/Idea-2-Topcoder-AI-Agents.pdf",
+      "path": "submissions\\SUB_001\\Idea-2-Topcoder-AI-Agents.pdf",
       "sha256": "8e09dbae439b2b97431ca2134c765cade01613780db379b60a6eb995d83d6375",
       "bytes": 234538
     },
     {
-      "path": "submissions/SUB_001/Idea-3-Topcoder-AI-Agents.pdf",
+      "path": "submissions\\SUB_001\\Idea-3-Topcoder-AI-Agents.pdf",
       "sha256": "55c6bda59f462750a409ad1a631f5fc8bda346f5626fc3f3970b9ce1d95a2328",
       "bytes": 185383
     },
     {
-      "path": "submissions/SUB_002/Topcoder multi agent code review workflow.docx",
+      "path": "submissions\\SUB_002\\Topcoder multi agent code review workflow.docx",
       "sha256": "e849211adabbbc39fb1d5c69fb97915f02b07fb7cd0d3249446c98d30c24e8ec",
       "bytes": 40464
     },
     {
-      "path": "submissions/SUB_002/Topcoder multi agent code review workflow.png",
+      "path": "submissions\\SUB_002\\Topcoder multi agent code review workflow.png",
       "sha256": "71620febcba5bfd38e2765cdc867bd265896c29c5eefe5cbd36adf351fa8b728",
       "bytes": 21827
     },
     {
-      "path": "submissions/SUB_003/AI-Powered Design System Assistant.pdf",
+      "path": "submissions\\SUB_003\\AI-Powered Design System Assistant.pdf",
       "sha256": "9e928845dc268b39923176d6efbae2153e14e0c5e2ef07617e6aaeac8f1ef2ee",
       "bytes": 244848
     },
     {
-      "path": "submissions/SUB_003/AI-Powered Smart Code Reviewer.pdf",
+      "path": "submissions\\SUB_003\\AI-Powered Smart Code Reviewer.pdf",
       "sha256": "9676d592be7506b11e74b830bdc31bb94b09fdee01777379551826dfe15b8be8",
       "bytes": 268353
     },
     {
-      "path": "verification/verification-config.json",
+      "path": "verification\\verification-config.json",
       "sha256": "1475f38bc55c5ca89f8b3d0fba8a62172518a7875a887614ff40f7dea7b087b0",
       "bytes": 292
     }
@@ -94,62 +94,62 @@
       "bytes": 456
     },
     {
-      "path": "integrity/source-hashes.json",
+      "path": "integrity\\source-hashes.json",
       "sha256": "622aa74cc82c569ce79a641c6dd2d1f2086c48e3c7eaf37e0157f8e91076b3f0",
       "bytes": 101
     },
     {
-      "path": "reviews/SUB_001/final-result.json",
+      "path": "reviews\\SUB_001\\final-result.json",
       "sha256": "0dcc8c8f50747361dfe3d1918714556c3993f18fb18bc9f010626848452c1c46",
       "bytes": 196
     },
     {
-      "path": "reviews/SUB_002/final-result.json",
+      "path": "reviews\\SUB_002\\final-result.json",
       "sha256": "4af79cf75b4a3f523d687c55fa85d37644abe046c9f1aaaa48ddb8d31d3006ff",
       "bytes": 195
     },
     {
-      "path": "reviews/SUB_003/final-result.json",
+      "path": "reviews\\SUB_003\\final-result.json",
       "sha256": "6e7cf238c4026d17b2348feddb9b8ddc5a2378b6605af1ed0b816a11396074ce",
       "bytes": 195
     },
     {
-      "path": "submissions/SUB_001/Idea-1-Topcoder-AI-Agents.pdf",
+      "path": "submissions\\SUB_001\\Idea-1-Topcoder-AI-Agents.pdf",
       "sha256": "eb6ebf0c2eb24f89b02d865079e12182454d1c9b6c5ad40f4541a3a05a2341b2",
       "bytes": 363279
     },
     {
-      "path": "submissions/SUB_001/Idea-2-Topcoder-AI-Agents.pdf",
+      "path": "submissions\\SUB_001\\Idea-2-Topcoder-AI-Agents.pdf",
       "sha256": "8e09dbae439b2b97431ca2134c765cade01613780db379b60a6eb995d83d6375",
       "bytes": 234538
     },
     {
-      "path": "submissions/SUB_001/Idea-3-Topcoder-AI-Agents.pdf",
+      "path": "submissions\\SUB_001\\Idea-3-Topcoder-AI-Agents.pdf",
       "sha256": "55c6bda59f462750a409ad1a631f5fc8bda346f5626fc3f3970b9ce1d95a2328",
       "bytes": 185383
     },
     {
-      "path": "submissions/SUB_002/Topcoder multi agent code review workflow.docx",
+      "path": "submissions\\SUB_002\\Topcoder multi agent code review workflow.docx",
       "sha256": "e849211adabbbc39fb1d5c69fb97915f02b07fb7cd0d3249446c98d30c24e8ec",
       "bytes": 40464
     },
     {
-      "path": "submissions/SUB_002/Topcoder multi agent code review workflow.png",
+      "path": "submissions\\SUB_002\\Topcoder multi agent code review workflow.png",
       "sha256": "71620febcba5bfd38e2765cdc867bd265896c29c5eefe5cbd36adf351fa8b728",
       "bytes": 21827
     },
     {
-      "path": "submissions/SUB_003/AI-Powered Design System Assistant.pdf",
+      "path": "submissions\\SUB_003\\AI-Powered Design System Assistant.pdf",
       "sha256": "9e928845dc268b39923176d6efbae2153e14e0c5e2ef07617e6aaeac8f1ef2ee",
       "bytes": 244848
     },
     {
-      "path": "submissions/SUB_003/AI-Powered Smart Code Reviewer.pdf",
+      "path": "submissions\\SUB_003\\AI-Powered Smart Code Reviewer.pdf",
       "sha256": "9676d592be7506b11e74b830bdc31bb94b09fdee01777379551826dfe15b8be8",
       "bytes": 268353
     },
     {
-      "path": "verification/verification-config.json",
+      "path": "verification\\verification-config.json",
       "sha256": "1475f38bc55c5ca89f8b3d0fba8a62172518a7875a887614ff40f7dea7b087b0",
       "bytes": 292
     }
