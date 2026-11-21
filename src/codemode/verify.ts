@@ -29,10 +29,11 @@ export function runCommand(
   opts: { cwd: string; timeoutMs: number },
 ): Promise<{ code: number | null; stdout: string; stderr: string; timedOut: boolean }> {
   return new Promise((resolve) => {
+    // npm is a .cmd shim on Windows and cannot be started by execFile directly.
+    // Invoke it through cmd.exe while keeping the outer process shell-free.
     const windowsNpm = process.platform === "win32" && (cmd === "npm" || cmd === "npm.cmd");
     const executable = windowsNpm ? process.env.ComSpec || "cmd.exe" : cmd;
     const executableArgs = windowsNpm ? ["/d", "/s", "/c", "npm", ...args] : args;
-
     const child = execFile(
       executable,
       executableArgs,

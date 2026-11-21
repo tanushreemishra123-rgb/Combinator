@@ -1,7 +1,7 @@
 {
   "submissionId": "SUB_002",
   "kind": "code",
-  "rootPath": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002",
+  "rootPath": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002",
   "applications": [
     {
       "path": "submissions\\SUB_002\\ai-deal-scoping-assistant",
@@ -23,7 +23,7 @@
           {
             "kind": "file",
             "submissionId": "SUB_002",
-            "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant",
+            "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant",
             "excerpt": "application root"
           }
         ],
@@ -46,7 +46,7 @@
           {
             "kind": "file",
             "submissionId": "SUB_002",
-            "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\package.json",
+            "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\package.json",
             "excerpt": "package.json scripts"
           }
         ],
@@ -69,7 +69,7 @@
           {
             "kind": "test",
             "submissionId": "SUB_002",
-            "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\src\\ai\\jsonExtraction.test.ts",
+            "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\src\\ai\\jsonExtraction.test.ts",
             "excerpt": "example of 230 test files"
           }
         ],
@@ -91,25 +91,25 @@
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\README.md",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\README.md",
               "excerpt": "matches: structured, customer, analysis, source, reference"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\docs\\constraint-evidence.md",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\docs\\constraint-evidence.md",
               "excerpt": "matches: structured, customer, analysis, source, reference"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\samples\\ai-enabled-clinical-intake-assistant.md",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\samples\\ai-enabled-clinical-intake-assistant.md",
               "excerpt": "matches: structured, customer, source, reference, origin"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\samples\\app-modernization-claims-portal.md",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\samples\\app-modernization-claims-portal.md",
               "excerpt": "matches: structured, customer, analysis, source, reference"
             }
           ],
@@ -131,25 +131,25 @@
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\README.md",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\README.md",
               "excerpt": "matches: scope, review, generation, users, assumptions"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\docs\\constraint-evidence.md",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\docs\\constraint-evidence.md",
               "excerpt": "matches: scope, review, generation, users, modify"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\package-lock.json",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\package-lock.json",
               "excerpt": "matches: scope, review"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\package.json",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\package.json",
               "excerpt": "matches: scope, review, model"
             }
           ],
@@ -171,25 +171,25 @@
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\README.md",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\README.md",
               "excerpt": "matches: functional, scope, generation, items, reference"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\docs\\constraint-evidence.md",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\docs\\constraint-evidence.md",
               "excerpt": "matches: functional, scope, generation, items, reference"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\samples\\ai-enabled-clinical-intake-assistant.md",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\samples\\ai-enabled-clinical-intake-assistant.md",
               "excerpt": "matches: functional, scope, generation, items, reference"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\samples\\app-modernization-claims-portal.change-impact.md",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\samples\\app-modernization-claims-portal.change-impact.md",
               "excerpt": "matches: functional, scope, items"
             }
           ],
@@ -211,25 +211,25 @@
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\README.md",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\README.md",
               "excerpt": "matches: cloud, solution, architecture, azure, google"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\docs\\constraint-evidence.md",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\docs\\constraint-evidence.md",
               "excerpt": "matches: cloud, solution, architecture, services, component"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\package.json",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\package.json",
               "excerpt": "matches: cloud, architecture"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\samples\\ai-enabled-clinical-intake-assistant.md",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\samples\\ai-enabled-clinical-intake-assistant.md",
               "excerpt": "matches: cloud, solution, architecture, azure, google"
             }
           ],
@@ -251,25 +251,25 @@
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\README.md",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\README.md",
               "excerpt": "matches: integration, solution, strategy, integrations, cases"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\docs\\constraint-evidence.md",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\docs\\constraint-evidence.md",
               "excerpt": "matches: integration, solution, strategy, integrations, cases"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\samples\\ai-enabled-clinical-intake-assistant.md",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\samples\\ai-enabled-clinical-intake-assistant.md",
               "excerpt": "matches: integration, solution, strategy, integrations, cases"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\samples\\app-modernization-claims-portal.change-impact.md",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\samples\\app-modernization-claims-portal.change-impact.md",
               "excerpt": "matches: integration, solution, strategy, integrations, cases"
             }
           ],
@@ -291,25 +291,25 @@
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\README.md",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\README.md",
               "excerpt": "matches: explainable, effort, timeline, estimation, drivers"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\docs\\constraint-evidence.md",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\docs\\constraint-evidence.md",
               "excerpt": "matches: explainable, effort, timeline, estimation, drivers"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\samples\\ai-enabled-clinical-intake-assistant.md",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\samples\\ai-enabled-clinical-intake-assistant.md",
               "excerpt": "matches: effort, timeline, estimation, drivers, rules"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\samples\\app-modernization-claims-portal.change-impact.md",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\samples\\app-modernization-claims-portal.change-impact.md",
               "excerpt": "matches: effort, timeline, drivers"
             }
           ],
@@ -331,25 +331,25 @@
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\README.md",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\README.md",
               "excerpt": "matches: commercial, estimation, inputs, internal"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\docs\\constraint-evidence.md",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\docs\\constraint-evidence.md",
               "excerpt": "matches: reproducible, commercial, estimation, inputs"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\samples\\ai-enabled-clinical-intake-assistant.md",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\samples\\ai-enabled-clinical-intake-assistant.md",
               "excerpt": "matches: reproducible, commercial, estimation, inputs, internal"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\samples\\app-modernization-claims-portal.change-impact.md",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\samples\\app-modernization-claims-portal.change-impact.md",
               "excerpt": "matches: commercial, inputs, internal"
             }
           ],
@@ -371,25 +371,25 @@
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\README.md",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\README.md",
               "excerpt": "matches: change, impact, traceability, quality, validation"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\docs\\constraint-evidence.md",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\docs\\constraint-evidence.md",
               "excerpt": "matches: change, impact, traceability, quality, validation"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\samples\\ai-enabled-clinical-intake-assistant.md",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\samples\\ai-enabled-clinical-intake-assistant.md",
               "excerpt": "matches: change, traceability, quality, validation, affected"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\samples\\app-modernization-claims-portal.change-impact.md",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\samples\\app-modernization-claims-portal.change-impact.md",
               "excerpt": "matches: change, traceability, quality, validation, affected"
             }
           ],
@@ -411,25 +411,25 @@
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\README.md",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\README.md",
               "excerpt": "matches: product, local, analysis, generation, estimation"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\docs\\constraint-evidence.md",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\docs\\constraint-evidence.md",
               "excerpt": "matches: depth, analysis, generation, estimation, validation"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\samples\\ai-enabled-clinical-intake-assistant.md",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\samples\\ai-enabled-clinical-intake-assistant.md",
               "excerpt": "matches: product, local, generation, estimation, validation"
             },
             {
               "kind": "file",
               "submissionId": "SUB_002",
-              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\samples\\app-modernization-claims-portal.md",
+              "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\samples\\app-modernization-claims-portal.md",
               "excerpt": "matches: product, depth, local, analysis, estimation"
             }
           ],
@@ -454,7 +454,7 @@
         {
           "kind": "reviewer_comment",
           "submissionId": "SUB_002",
-          "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\reviews\\SUB_002\\final-result.json",
+          "path": "C:\\Users\\Tanusri Mishra\\Documents\\Codex\\2026-11-21\\this\\work\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_DEAL_SCOPING_ASSISTANT\\reviews\\SUB_002\\final-result.json",
           "excerpt": "finalScore=100"
         }
       ],

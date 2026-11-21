@@ -13,6 +13,7 @@
 import { createServer } from "node:http";
 import { readFileSync, existsSync, readdirSync, statSync } from "node:fs";
 import { join, resolve, extname } from "node:path";
+import { fileURLToPath } from "node:url";
 import { loadConfig } from "./config.js";
 import { SafeFs } from "./fs-safe.js";
 import { Logger } from "./logger.js";

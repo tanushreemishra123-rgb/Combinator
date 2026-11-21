@@ -27,9 +27,9 @@
       "risk": "low",
       "state": "accepted",
       "selectedSource": "OPT_6rcrzi4",
-      "copilotComment": "Copilot accepted the recommended options.",
+      "copilotComment": "Accepted by the submission author for the included fixture workspace.",
       "regenerationRequired": true,
-      "updatedAt": "2026-11-21T11:25:19.022Z"
+      "updatedAt": "2026-11-21T10:31:43.838Z"
     },
     {
       "id": "DEC_7atncil",
@@ -57,9 +57,9 @@
       "risk": "high",
       "state": "accepted",
       "selectedSource": "OPT_7hxaeqz",
-      "copilotComment": "Copilot accepted the recommended options.",
+      "copilotComment": "Accepted by the submission author for the included fixture workspace.",
       "regenerationRequired": true,
-      "updatedAt": "2026-11-21T11:25:19.023Z"
+      "updatedAt": "2026-11-21T10:31:43.839Z"
     },
     {
       "id": "DEC_4881xu3",
@@ -87,9 +87,9 @@
       "risk": "high",
       "state": "accepted",
       "selectedSource": "OPT_9oahcmd",
-      "copilotComment": "Copilot accepted the recommended options.",
+      "copilotComment": "Accepted by the submission author for the included fixture workspace.",
       "regenerationRequired": true,
-      "updatedAt": "2026-11-21T11:25:19.023Z"
+      "updatedAt": "2026-11-21T10:31:43.839Z"
     },
     {
       "id": "DEC_9fqeyum",
@@ -117,9 +117,9 @@
       "risk": "high",
       "state": "accepted",
       "selectedSource": "OPT_8g2czwa",
-      "copilotComment": "Copilot accepted the recommended options.",
+      "copilotComment": "Accepted by the submission author for the included fixture workspace.",
       "regenerationRequired": true,
-      "updatedAt": "2026-11-21T11:25:19.023Z"
+      "updatedAt": "2026-11-21T10:31:43.839Z"
     }
   ]
 }

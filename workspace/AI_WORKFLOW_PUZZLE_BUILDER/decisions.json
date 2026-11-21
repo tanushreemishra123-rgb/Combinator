@@ -27,9 +27,9 @@
       "risk": "low",
       "state": "accepted",
       "selectedSource": "OPT_2j166qh",
-      "copilotComment": "Copilot accepted the recommended options.",
+      "copilotComment": "Accepted by the submission author for the included fixture workspace.",
       "regenerationRequired": true,
-      "updatedAt": "2026-11-21T11:27:16.590Z"
+      "updatedAt": "2026-11-21T10:32:09.822Z"
     },
     {
       "id": "DEC_2dk5yqh",
@@ -57,9 +57,9 @@
       "risk": "high",
       "state": "accepted",
       "selectedSource": "OPT_7luweka",
-      "copilotComment": null,
+      "copilotComment": "Accepted by the submission author for the included fixture workspace.",
       "regenerationRequired": true,
-      "updatedAt": "2026-11-21T11:10:44.474Z"
+      "updatedAt": "2026-11-21T10:32:09.823Z"
     }
   ]
 }
