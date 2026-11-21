@@ -1,0 +1,21 @@
+# Trivy configuration — auto-loaded by `trivy fs .` from the working directory.
+#
+# Scope the scan to the Combinator's OWN code and dependencies. The excluded
+# paths are third-party inputs (the organizer's starter pack) and generated
+# outputs (workspace copies of that same code), plus build/dependency dirs and
+# CI config — none of which are the solution's own source to remediate.
+scan:
+  skip-dirs:
+    - starter-pack
+    - workspace
+    - node_modules
+    - dist
+    - .github
+
+# Only Critical/High block a submission; keep the report focused on actionable
+# severities while still surfacing secrets at any level.
+severity:
+  - CRITICAL
+  - HIGH
+  - MEDIUM
+  - LOW

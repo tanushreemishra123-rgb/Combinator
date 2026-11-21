@@ -1,0 +1,62 @@
+name: Trivy (CVE / IaC / Secrets)
+
+# Runs the exact deterministic scorecard command and prints a severity summary
+# so you can see what (if anything) needs fixing before submitting.
+# trivy.yaml (repo root) scopes the scan to the Combinator's own code.
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  trivy:
+    name: Trivy fs
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Trivy
+        run: |
+          curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh \
+            | sudo sh -s -- -b /usr/local/bin v0.71.0
+          trivy -v
+
+      - name: Scan
+        run: |
+          trivy fs --timeout 10m --scanners vuln,secret,misconfig,license \
+            --format json --output trivy-results.json .
+
+      - name: Summarize
+        run: |
+          node -e '
+            const r = JSON.parse(require("fs").readFileSync("trivy-results.json","utf8"));
+            const vuln = {CRITICAL:0,HIGH:0,MEDIUM:0,LOW:0,UNKNOWN:0};
+            const mis  = {CRITICAL:0,HIGH:0,MEDIUM:0,LOW:0,UNKNOWN:0};
+            const secrets = [], lic = {CRITICAL:0,HIGH:0,MEDIUM:0,LOW:0,UNKNOWN:0};
+            const hi = [];
+            for (const res of (r.Results||[])) {
+              for (const v of (res.Vulnerabilities||[])) { vuln[v.Severity]=(vuln[v.Severity]||0)+1;
+                if (v.Severity==="CRITICAL"||v.Severity==="HIGH")
+                  hi.push(`  ${v.Severity} ${v.PkgName}@${v.InstalledVersion} ${v.VulnerabilityID} -> fix: ${v.FixedVersion||"none"}  (${res.Target})`); }
+              for (const m of (res.Misconfigurations||[])) { mis[m.Severity]=(mis[m.Severity]||0)+1;
+                if (m.Severity==="CRITICAL"||m.Severity==="HIGH")
+                  hi.push(`  ${m.Severity} misconfig ${m.ID} ${m.Title}  (${res.Target})`); }
+              for (const s of (res.Secrets||[])) secrets.push(`  ${s.Severity} ${s.RuleID} ${res.Target}:${s.StartLine}`);
+              for (const l of (res.Licenses||[])) lic[l.Severity]=(lic[l.Severity]||0)+1;
+            }
+            console.log("================ Trivy summary ================");
+            console.log("Vulnerabilities (CVE):", JSON.stringify(vuln));
+            console.log("Misconfigurations (IaC):", JSON.stringify(mis));
+            console.log("Licenses:", JSON.stringify(lic));
+            console.log("Secrets:", secrets.length);
+            if (secrets.length) { console.log("\nSecret findings:"); secrets.forEach(s=>console.log(s)); }
+            if (hi.length) { console.log("\nCRITICAL/HIGH findings (must fix):"); hi.forEach(s=>console.log(s)); }
+            if (!hi.length && !secrets.length) console.log("\nNo CRITICAL/HIGH and no secrets — scorecard should pass.");
+          '
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: trivy-results
+          path: trivy-results.json
