@@ -1,0 +1,65 @@
+{
+  "disclaimer": "Reference only. Not used in the estimate calculation.",
+  "projects": [
+    {
+      "id": "HP_01",
+      "title": "Life and pensions policy platform migration",
+      "type": "modernization",
+      "duration_weeks": 68,
+      "effort_person_weeks": 412,
+      "team_size": 9,
+      "cloud": "azure",
+      "summary": "Moved a Java monolith with an Oracle database and 38 overnight batch jobs to Azure in four releases. Batch was re-expressed as event-driven services with a scheduled fallback; the batch window fell from five hours to about one. Stored-procedure logic was the largest single source of variance against the original estimate."
+    },
+    {
+      "id": "HP_02",
+      "title": "Claims intake portal and legacy service facade",
+      "type": "portal",
+      "duration_weeks": 32,
+      "effort_person_weeks": 148,
+      "team_size": 6,
+      "cloud": "azure",
+      "summary": "Customer-facing intake portal with document upload, fronting an unchanged on-premises claims system through an API gateway that exposed REST over existing SOAP contracts. Customer identity was delivered with a managed external identity service rather than a custom build."
+    },
+    {
+      "id": "HP_03",
+      "title": "Grocery order and inventory integration hub",
+      "type": "integration",
+      "duration_weeks": 40,
+      "effort_person_weeks": 236,
+      "team_size": 7,
+      "cloud": "aws",
+      "summary": "Fourteen interfaces between an ERP, an e-commerce storefront, a warehouse provider and a data warehouse. Event-driven order and stock flows with scheduled file exchanges, a replay console for operators and a daily three-way reconciliation. Partner file-format changes drove two of the three schedule slips."
+    },
+    {
+      "id": "HP_04",
+      "title": "Wholesale distributor EDI and partner onboarding",
+      "type": "integration",
+      "duration_weeks": 26,
+      "effort_person_weeks": 118,
+      "team_size": 5,
+      "cloud": "aws",
+      "summary": "Managed SFTP and AS2 endpoints, EDI translation, and a self-service partner onboarding flow with test harness. Partner-side readiness, not build effort, set the critical path; onboarding ran for eleven weeks after the platform was complete."
+    },
+    {
+      "id": "HP_05",
+      "title": "Field service agent-assist assistant",
+      "type": "ai",
+      "duration_weeks": 30,
+      "effort_person_weeks": 162,
+      "team_size": 6,
+      "cloud": "gcp",
+      "summary": "Retrieval over 1,800 manuals and six years of work orders, with drafted responses reviewed by an engineer before sending. Roughly a third of the effort went to ingestion, chunking strategy and an evaluation set rather than to the application. Deterministic rules kept priority and entitlement decisions out of the model."
+    },
+    {
+      "id": "HP_06",
+      "title": "Document classification and intake automation",
+      "type": "ai",
+      "duration_weeks": 22,
+      "effort_person_weeks": 96,
+      "team_size": 5,
+      "cloud": "azure",
+      "summary": "Document extraction and classification with a confidence threshold that routed low-confidence items to a human queue. Accuracy targets were agreed against a labelled sample before build started, which avoided a scope dispute at acceptance."
+    }
+  ]
+}

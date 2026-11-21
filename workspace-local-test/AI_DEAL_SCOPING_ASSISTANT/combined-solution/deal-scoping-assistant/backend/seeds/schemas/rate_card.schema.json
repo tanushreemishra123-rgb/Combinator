@@ -1,0 +1,62 @@
+{
+  "$defs": {
+    "RoleRate": {
+      "additionalProperties": false,
+      "properties": {
+        "role": {
+          "description": "Role or skill category.",
+          "minLength": 1,
+          "title": "Role",
+          "type": "string"
+        },
+        "rate_per_person_week": {
+          "description": "Rate for one person-week of that role.",
+          "minimum": 0,
+          "title": "Rate Per Person Week",
+          "type": "number"
+        }
+      },
+      "required": [
+        "role",
+        "rate_per_person_week"
+      ],
+      "title": "RoleRate",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "description": "Rate card id.",
+      "title": "Id",
+      "type": "string"
+    },
+    "name": {
+      "description": "Rate card name.",
+      "title": "Name",
+      "type": "string"
+    },
+    "currency": {
+      "description": "ISO currency code, e.g. USD.",
+      "maxLength": 3,
+      "minLength": 3,
+      "title": "Currency",
+      "type": "string"
+    },
+    "rates": {
+      "description": "Rate per role.",
+      "items": {
+        "$ref": "#/$defs/RoleRate"
+      },
+      "title": "Rates",
+      "type": "array"
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "currency"
+  ],
+  "title": "RateCard",
+  "type": "object"
+}

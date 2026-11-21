@@ -1,0 +1,18 @@
+{
+  "req_ids": [],
+  "basis": "recommended",
+  "validation_required": true,
+  "validation_reason": "No explicit cloud platform preference was specified by the customer.",
+  "recommended": "azure",
+  "rationale": "Azure provides direct regional availability in Norway East and West Europe to satisfy specified target regions and local compliance requirements under Norwegian FSA and DORA.",
+  "alternatives": [
+    {
+      "platform": "aws",
+      "why_not": "AWS does not have a dedicated in-country hyperscale region in Norway to match the specified Norway East target region."
+    },
+    {
+      "platform": "gcp",
+      "why_not": "GCP lacks a dedicated local cloud region in Norway matching the primary geographic requirements."
+    }
+  ]
+}

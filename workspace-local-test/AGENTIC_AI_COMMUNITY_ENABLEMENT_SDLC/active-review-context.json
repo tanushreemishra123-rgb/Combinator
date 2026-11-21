@@ -1,0 +1,73 @@
+{
+  "challengeId": "AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC",
+  "mode": "specification_derived",
+  "recordId": null,
+  "status": null,
+  "requirements": [
+    {
+      "id": "REQ_47eryl3",
+      "title": "Originality",
+      "priority": "high",
+      "constraints": [],
+      "specificationDerived": true,
+      "sourceLocation": {
+        "kind": "specification",
+        "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC\\challenge-context.json",
+        "locator": "evaluationCriteria[0]",
+        "excerpt": "Originality"
+      }
+    },
+    {
+      "id": "REQ_xqo1kk2",
+      "title": "Feasibility",
+      "priority": "high",
+      "constraints": [],
+      "specificationDerived": true,
+      "sourceLocation": {
+        "kind": "specification",
+        "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC\\challenge-context.json",
+        "locator": "evaluationCriteria[1]",
+        "excerpt": "Feasibility"
+      }
+    },
+    {
+      "id": "REQ_2v9d8ll",
+      "title": "Scalability",
+      "priority": "high",
+      "constraints": [],
+      "specificationDerived": true,
+      "sourceLocation": {
+        "kind": "specification",
+        "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC\\challenge-context.json",
+        "locator": "evaluationCriteria[2]",
+        "excerpt": "Scalability"
+      }
+    },
+    {
+      "id": "REQ_3twqemh",
+      "title": "Impact Potential",
+      "priority": "high",
+      "constraints": [],
+      "specificationDerived": true,
+      "sourceLocation": {
+        "kind": "specification",
+        "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC\\challenge-context.json",
+        "locator": "evaluationCriteria[3]",
+        "excerpt": "Impact Potential"
+      }
+    },
+    {
+      "id": "REQ_d1gcam6",
+      "title": "Alignment with Scope",
+      "priority": "high",
+      "constraints": [],
+      "specificationDerived": true,
+      "sourceLocation": {
+        "kind": "specification",
+        "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC\\challenge-context.json",
+        "locator": "evaluationCriteria[4]",
+        "excerpt": "Alignment with Scope"
+      }
+    }
+  ]
+}

@@ -1,0 +1,174 @@
+{
+  "ai_requirements": [
+    {
+      "req_ids": [
+        "SEC_01"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "text": "All AI processing and model hosting must remain strictly within the EU/EEA to comply with GDPR, DORA, and Norwegian FSA regulations."
+    },
+    {
+      "req_ids": [
+        "FR_04"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "text": "The solution must support high-quality multilingual document generation and translation across Norwegian, Swedish, Danish, and English."
+    }
+  ],
+  "use_cases": [
+    {
+      "req_ids": [
+        "FR_04",
+        "INT_08"
+      ],
+      "basis": "inferred",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "AI_01",
+      "name": "Multilingual Document Generation and Translation",
+      "description": "Automates the generation and translation of policy schedules, certificates, and renewal notices into multiple languages.",
+      "processing_class": "ai",
+      "pattern": "Generative Document Assembly and Translation",
+      "model_options": [
+        "Gemini 1.5 Pro",
+        "Gemini 1.5 Flash"
+      ],
+      "retrieval_required": true,
+      "retrieval_notes": "Retrieve policy templates and customer-specific metadata from the Document Asset Repository (ARC_08).",
+      "orchestration": "Step-based workflow orchestration to coordinate template retrieval, translation, and generation.",
+      "prompt_and_structured_output": "System prompts defining legal terminology per language, enforcing JSON output schemas for document metadata.",
+      "evaluation": "Automated translation quality metrics and LLM-as-a-judge evaluation for compliance with regional insurance standards.",
+      "responsible_ai_safety": "Content safety filters to block offensive language and PII masking before sending data to the model.",
+      "monitoring_feedback": "Log generation latency, token usage, and user-initiated correction rates in the Central Observability Platform (ARC_09).",
+      "human_review": "Mandatory human review by regional business operators for any generated policy templates or high-value commercial schedules.",
+      "data_privacy": "Zero data retention policies on the model provider side, with all data processed strictly within EU/EEA regions."
+    },
+    {
+      "req_ids": [
+        "FR_05",
+        "FR_06",
+        "INT_03"
+      ],
+      "basis": "recommended",
+      "validation_required": true,
+      "validation_reason": "Requires customer confirmation on whether automated claims intake is desired for the self-service portal.",
+      "id": "AI_02",
+      "name": "Automated Claims Intake and FNOL Extraction",
+      "description": "Extracts structured claim details from unstructured text and documents uploaded by policyholders during First Notice of Loss.",
+      "processing_class": "ai",
+      "pattern": "Structured Information Extraction",
+      "model_options": [
+        "Gemini 1.5 Flash"
+      ],
+      "retrieval_required": false,
+      "retrieval_notes": "",
+      "orchestration": "Event-driven microservice orchestration triggered by self-service portal uploads.",
+      "prompt_and_structured_output": "Few-shot prompting with strict JSON schema enforcement to extract claim details (date, vehicle, incident description).",
+      "evaluation": "F1-score evaluation against a gold-standard dataset of historical claims to measure extraction accuracy.",
+      "responsible_ai_safety": "Strict input validation and safety filters to prevent prompt injection via user-submitted claim descriptions.",
+      "monitoring_feedback": "Real-time tracking of extraction confidence scores and fallback rates to manual queue.",
+      "human_review": "All extracted FNOL data must be reviewed and confirmed by the policyholder before handover to Guidewire ClaimCenter.",
+      "data_privacy": "PII scrubbing of unstructured text fields prior to model processing, ensuring compliance with GDPR."
+    }
+  ],
+  "deterministic_areas": [
+    {
+      "req_ids": [
+        "FR_03"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "text": "Premium Rating and NCB Calculation must be deterministic to ensure exact calculations based on rating tables."
+    },
+    {
+      "req_ids": [
+        "SEC_02"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "text": "Policy Audit Trail Retention must be deterministic to guarantee immutable audit logs."
+    },
+    {
+      "req_ids": [
+        "INT_04"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "text": "Financial premium postings to SAP S/4HANA must be deterministic to ensure financial reconciliation."
+    }
+  ],
+  "mandatory_human_decisions": [
+    {
+      "req_ids": [
+        "FR_06",
+        "INT_03"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "text": "Claims adjudication decisions must stay with human claims adjusters in Guidewire ClaimCenter."
+    },
+    {
+      "req_ids": [
+        "FR_02",
+        "PER_01"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "text": "Final approval of new insurance product configurations must be performed by business operators."
+    }
+  ],
+  "architecture_pattern": "Event-driven microservices architecture with retrieval-augmented generation (RAG) for document assembly and structured extraction for claims intake.",
+  "provider_options": [
+    {
+      "platform": "gcp",
+      "provider": "Gemini Enterprise Agent Platform",
+      "models": [
+        "Gemini 1.5 Pro",
+        "Gemini 1.5 Flash"
+      ],
+      "rationale": "Provides enterprise-grade generative models with strong multilingual capabilities and native integration with Google Cloud's security and compliance controls."
+    },
+    {
+      "platform": "gcp",
+      "provider": "Model Armor",
+      "models": [],
+      "rationale": "Enables robust prompt safety, content filtering, and PII masking to comply with Norwegian FSA and GDPR requirements."
+    },
+    {
+      "platform": "any",
+      "provider": "Hugging Face (Self-Hosted)",
+      "models": [
+        "Llama 3.1 8B",
+        "Mistral 7B"
+      ],
+      "rationale": "Allows hosting open-weight models within local EU/EEA infrastructure if public cloud APIs do not meet strict regulatory constraints."
+    }
+  ],
+  "framework_recommendations": [
+    {
+      "req_ids": [
+        "SYS_01",
+        "FR_04"
+      ],
+      "basis": "recommended",
+      "validation_required": true,
+      "validation_reason": "Requires validation of the Java team's familiarity with Spring Boot and modern Java frameworks.",
+      "name": "Spring AI",
+      "purpose": "Orchestrate model calls, structured output generation, and document template retrieval within the Java-based backend services.",
+      "rationale": "Leverages the existing Java ecosystem and skills of the Vekter team, minimizing the learning curve and accelerating integration with the core policy system.",
+      "alternatives_considered": [
+        "LangChain (Python)",
+        "Semantic Kernel"
+      ]
+    }
+  ]
+}

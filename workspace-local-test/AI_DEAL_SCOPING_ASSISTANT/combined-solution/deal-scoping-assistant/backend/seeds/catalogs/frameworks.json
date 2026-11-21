@@ -1,0 +1,158 @@
+{
+  "frameworks": [
+    {
+      "name": "Mastra",
+      "language_ecosystems": ["TypeScript", "JavaScript"],
+      "best_for": [
+        "TypeScript teams building agents, workflows and RAG in one codebase",
+        "Node or serverless deployments that share types with a React front end",
+        "Built-in durable workflows, tool calling, memory and evaluation hooks"
+      ],
+      "avoid_when": [
+        "The delivery team is Python or JVM based",
+        "The customer requires a framework with a long enterprise support history"
+      ],
+      "notes": "Open-source TypeScript agent framework. Provider-agnostic model access, typed tools and step-based workflows. Good fit when the whole solution is TypeScript."
+    },
+    {
+      "name": "LangChain",
+      "language_ecosystems": ["Python", "TypeScript"],
+      "best_for": [
+        "Chains with structured output where the work is sequential",
+        "Swapping model providers behind one interface",
+        "Wide connector coverage for loaders, retrievers and vector stores"
+      ],
+      "avoid_when": [
+        "The flow is a single model call with no branching; the abstraction adds no value",
+        "The team needs stable, long-lived APIs and cannot absorb version churn"
+      ],
+      "notes": "Large ecosystem and many integrations. Best used as a thin layer for model access, structured output and retrieval rather than as an application framework."
+    },
+    {
+      "name": "LangGraph",
+      "language_ecosystems": ["Python", "TypeScript"],
+      "best_for": [
+        "Explicit state machines with branching, loops and validate-then-repair cycles",
+        "Long-running flows that need checkpointing, resume and human-in-the-loop pauses",
+        "Multi-agent designs where control flow must be inspectable"
+      ],
+      "avoid_when": [
+        "The workflow is linear and deterministic; a plain function is clearer",
+        "The team is not comfortable modelling explicit graph state"
+      ],
+      "notes": "Graph runtime from the LangChain project. Adds durable state, interrupts and replay. Pairs with LangChain for the model and retrieval layer."
+    },
+    {
+      "name": "Semantic Kernel",
+      "language_ecosystems": [".NET", "Python", "Java"],
+      "best_for": [
+        ".NET estates already using Microsoft identity, hosting and tooling",
+        "Plugin and function-calling patterns with dependency injection",
+        "Solutions that will be operated by a Microsoft-centric platform team"
+      ],
+      "avoid_when": [
+        "The delivery stack is Node or Python-first with no .NET presence",
+        "The customer wants to stay deliberately cloud-neutral"
+      ],
+      "notes": "Microsoft's agent and orchestration SDK. Strongest when the target platform is Azure and Microsoft Foundry, where the operational model matches the rest of the estate."
+    },
+    {
+      "name": "Vercel AI SDK",
+      "language_ecosystems": ["TypeScript", "JavaScript"],
+      "best_for": [
+        "Streaming model output into a React, Next.js or Svelte interface",
+        "Token-by-token UI, tool-call rendering and generative UI components",
+        "Provider-agnostic model calls from a web front end or edge runtime"
+      ],
+      "avoid_when": [
+        "The orchestration is server-side, long-running and stateful",
+        "The back end is Python or JVM and only the UI is TypeScript"
+      ],
+      "notes": "A model and streaming layer for web applications, not a workflow engine. Often combined with a server-side orchestrator rather than used alone."
+    },
+    {
+      "name": "Spring AI",
+      "language_ecosystems": ["Java", "Kotlin"],
+      "best_for": [
+        "Existing Spring Boot services that must add AI features in place",
+        "Reusing Spring configuration, observability, security and testing conventions",
+        "JVM teams that will own the solution long term"
+      ],
+      "avoid_when": [
+        "There is no existing JVM platform and no JVM skills in the delivery team",
+        "The design needs fast-moving agent features ahead of the Spring release cadence"
+      ],
+      "notes": "Brings model calls, structured output, advisors and vector stores into the Spring programming model. The main argument for it is operational fit with an existing Java estate."
+    },
+    {
+      "name": "LlamaIndex",
+      "language_ecosystems": ["Python", "TypeScript"],
+      "best_for": [
+        "Retrieval-heavy solutions over large, mixed document sets",
+        "Ingestion, chunking, metadata filtering and multi-stage retrieval with reranking",
+        "Evaluating retrieval quality separately from generation quality"
+      ],
+      "avoid_when": [
+        "Retrieval is a single vector lookup that the cloud platform already provides",
+        "The main problem is orchestration and tool use rather than retrieval"
+      ],
+      "notes": "Focused on the indexing and retrieval half of a RAG solution. Frequently combined with a separate orchestration layer."
+    },
+    {
+      "name": "Amazon Bedrock and Amazon Bedrock AgentCore",
+      "language_ecosystems": ["Python", "TypeScript", "Java", ".NET"],
+      "best_for": [
+        "AWS-standard customers who want models, guardrails and agent runtime under one bill and one IAM model",
+        "Managed retrieval via Bedrock Knowledge Bases without running an indexing pipeline",
+        "Content filtering and PII redaction through Bedrock Guardrails as a platform control"
+      ],
+      "avoid_when": [
+        "The customer requires portability across clouds or self-hosted open-weight models",
+        "A needed model or model version is not offered in the required region"
+      ],
+      "notes": "Managed AWS AI service family. The strongest argument is operational: existing AWS identity, networking, logging and procurement apply unchanged."
+    },
+    {
+      "name": "Microsoft Foundry",
+      "language_ecosystems": ["Python", ".NET", "TypeScript", "Java"],
+      "best_for": [
+        "Azure-standard customers using Microsoft Entra ID, private networking and Azure Policy",
+        "Managed agents, evaluation and tracing through Foundry Agent Service and Foundry observability",
+        "Retrieval built on Azure AI Search with hybrid and semantic ranking"
+      ],
+      "avoid_when": [
+        "The customer wants cloud-neutral deployment or self-hosted inference",
+        "Regional model availability does not meet a data-residency requirement"
+      ],
+      "notes": "Managed Azure AI platform, formerly Azure AI Foundry. Covers the model catalog, agent runtime, evaluation and content safety with Azure-native governance."
+    },
+    {
+      "name": "Gemini Enterprise Agent Platform",
+      "language_ecosystems": ["Python", "TypeScript", "Java", "Go"],
+      "best_for": [
+        "Google Cloud customers whose data already sits in BigQuery or Cloud Storage",
+        "Managed retrieval through Agent Search and Vertex AI Vector Search",
+        "Model evaluation, tuning and endpoint management inside one platform"
+      ],
+      "avoid_when": [
+        "The customer requires model portability or on-premises inference",
+        "The team has no Google Cloud operating experience"
+      ],
+      "notes": "Managed Google Cloud AI platform, formerly Vertex AI. Includes the Agent Development Kit for building agents and Model Armor for prompt and response screening."
+    },
+    {
+      "name": "Custom orchestration",
+      "language_ecosystems": ["Any"],
+      "best_for": [
+        "A small, fixed number of well-understood model calls",
+        "Strict control over prompts, retries, timeouts and structured-output validation",
+        "Minimising dependencies where the customer's security review is strict"
+      ],
+      "avoid_when": [
+        "The design needs durable state, resume, branching and human-in-the-loop pauses",
+        "The team would end up rebuilding a framework under a different name"
+      ],
+      "notes": "Direct provider SDK calls behind the team's own interfaces. Lowest dependency footprint and easiest to reason about, at the cost of writing state handling, retries and evaluation plumbing."
+    }
+  ]
+}

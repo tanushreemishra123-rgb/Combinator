@@ -1,0 +1,469 @@
+{
+  "submissionId": "SUB_002",
+  "kind": "code",
+  "rootPath": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002",
+  "applications": [
+    {
+      "path": "submissions\\SUB_002\\2nd Position",
+      "stack": [
+        "React",
+        "TypeScript",
+        "Vite"
+      ],
+      "role": "frontend"
+    }
+  ],
+  "architecture": {
+    "summary": "Detected 1 application unit(s): frontend at submissions\\SUB_002\\2nd Position (React, TypeScript, Vite). Detected 1 unit(s); languages: React, TypeScript, Vite.",
+    "evidence": [
+      {
+        "id": "EV_bk3y2yj",
+        "statement": "frontend unit (React, TypeScript, Vite)",
+        "locations": [
+          {
+            "kind": "file",
+            "submissionId": "SUB_002",
+            "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position",
+            "excerpt": "application root"
+          }
+        ],
+        "origin": "source",
+        "confidence": "high"
+      }
+    ]
+  },
+  "build": {
+    "state": "complete",
+    "commands": [
+      "npm run build  (2nd Position)",
+      "npm run dev  (2nd Position)"
+    ],
+    "evidence": [
+      {
+        "id": "EV_8ilrb5p",
+        "statement": "scripts present: dev, build, preview, test, test:watch, typecheck, lint, verify",
+        "locations": [
+          {
+            "kind": "file",
+            "submissionId": "SUB_002",
+            "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\package.json",
+            "excerpt": "package.json scripts"
+          }
+        ],
+        "origin": "source",
+        "confidence": "high"
+      }
+    ]
+  },
+  "tests": {
+    "state": "complete",
+    "frameworks": [
+      "Vitest"
+    ],
+    "evidence": [
+      {
+        "id": "EV_dvilcei",
+        "statement": "4 test file(s) found",
+        "locations": [
+          {
+            "kind": "test",
+            "submissionId": "SUB_002",
+            "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\src\\engine\\engine.test.ts",
+            "excerpt": "example of 4 test files"
+          }
+        ],
+        "origin": "source",
+        "confidence": "high"
+      }
+    ]
+  },
+  "requirementCoverage": [
+    {
+      "requirementId": "REQ_inxdtg",
+      "state": "complete",
+      "score": 17.8,
+      "evidence": [
+        {
+          "id": "EV_3g4kkrz",
+          "statement": "Grounded evidence for \"Visual Workflow Builder\" (30 files, 85 hits, strength 17.8)",
+          "locations": [
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\.github\\workflows\\deploy-pages.yml",
+              "excerpt": "matches: workflow, configure, steps"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\README.md",
+              "excerpt": "matches: visual, workflow, builder, arrange, configure"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\SUBMISSION.md",
+              "excerpt": "matches: visual, workflow, builder, configuration"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\docs\\REVIEW.md",
+              "excerpt": "matches: workflow, builder, steps, including"
+            }
+          ],
+          "origin": "source",
+          "confidence": "high"
+        }
+      ],
+      "notes": "Grounded in 30 file(s); 3 test file(s); strength 17.8."
+    },
+    {
+      "requirementId": "REQ_77on11",
+      "state": "complete",
+      "score": 18.8,
+      "evidence": [
+        {
+          "id": "EV_4zzrrpc",
+          "statement": "Grounded evidence for \"Pre-Seeded Workflow Puzzles\" (45 files, 173 hits, strength 18.8)",
+          "locations": [
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\README.md",
+              "excerpt": "matches: seeded, workflow, puzzles, include, across"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\SUBMISSION.md",
+              "excerpt": "matches: seeded, workflow, puzzles, puzzle"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\docs\\REVIEW.md",
+              "excerpt": "matches: seeded, workflow, puzzles, include, across"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\docs\\architecture.md",
+              "excerpt": "matches: seeded, workflow, puzzles, include, across"
+            }
+          ],
+          "origin": "source",
+          "confidence": "high"
+        }
+      ],
+      "notes": "Grounded in 45 file(s); 4 test file(s); strength 18.8."
+    },
+    {
+      "requirementId": "REQ_nb1r3o",
+      "state": "complete",
+      "score": 19.2,
+      "evidence": [
+        {
+          "id": "EV_bqe69w2",
+          "statement": "Grounded evidence for \"Workflow Execution and Step Trace\" (41 files, 171 hits, strength 19.2)",
+          "locations": [
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\.github\\workflows\\deploy-pages.yml",
+              "excerpt": "matches: workflow, every"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\README.md",
+              "excerpt": "matches: workflow, execution, trace, every, status"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\SUBMISSION.md",
+              "excerpt": "matches: workflow, execution, trace, every, status"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\docs\\REVIEW.md",
+              "excerpt": "matches: workflow, execution, trace, every, executed"
+            }
+          ],
+          "origin": "source",
+          "confidence": "high"
+        }
+      ],
+      "notes": "Grounded in 41 file(s); 4 test file(s); strength 19.2."
+    },
+    {
+      "requirementId": "REQ_ixo2z1",
+      "state": "complete",
+      "score": 18.2,
+      "evidence": [
+        {
+          "id": "EV_6k7uv7e",
+          "statement": "Grounded evidence for \"Failure Simulation\" (32 files, 102 hits, strength 18.2)",
+          "locations": [
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\README.md",
+              "excerpt": "matches: failure, simulation, support, types, scenarios"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\SUBMISSION.md",
+              "excerpt": "matches: failure, simulation, types, scenarios"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\docs\\REVIEW.md",
+              "excerpt": "matches: failure, simulation, types, scenarios"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\docs\\architecture.md",
+              "excerpt": "matches: failure, types, scenarios, reproducible"
+            }
+          ],
+          "origin": "source",
+          "confidence": "high"
+        }
+      ],
+      "notes": "Grounded in 32 file(s); 3 test file(s); strength 18.2."
+    },
+    {
+      "requirementId": "REQ_pk38i1",
+      "state": "complete",
+      "score": 18.9,
+      "evidence": [
+        {
+          "id": "EV_7cxkeaj",
+          "statement": "Grounded evidence for \"Recovery and Safe Failure Handling\" (38 files, 147 hits, strength 18.9)",
+          "locations": [
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\README.md",
+              "excerpt": "matches: recovery, failure, handling, support, retry"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\SUBMISSION.md",
+              "excerpt": "matches: recovery, failure, handling, retry, fallback"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\docs\\REVIEW.md",
+              "excerpt": "matches: recovery, failure, handling, retry, fallback"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\docs\\architecture.md",
+              "excerpt": "matches: recovery, failure, handling, retry, fallback"
+            }
+          ],
+          "origin": "source",
+          "confidence": "high"
+        }
+      ],
+      "notes": "Grounded in 38 file(s); 4 test file(s); strength 18.9."
+    },
+    {
+      "requirementId": "REQ_z79n6r",
+      "state": "complete",
+      "score": 18.4,
+      "evidence": [
+        {
+          "id": "EV_8k1t5so",
+          "statement": "Grounded evidence for \"Output Validation\" (37 files, 127 hits, strength 18.4)",
+          "locations": [
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\README.md",
+              "excerpt": "matches: validation, puzzle, structured, failure, recovery"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\SUBMISSION.md",
+              "excerpt": "matches: validation, puzzle, failure, recovery"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\docs\\REVIEW.md",
+              "excerpt": "matches: validation, puzzle, structured, failure, recovery"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\docs\\architecture.md",
+              "excerpt": "matches: validation, puzzle, validates, structured, failure"
+            }
+          ],
+          "origin": "source",
+          "confidence": "high"
+        }
+      ],
+      "notes": "Grounded in 37 file(s); 3 test file(s); strength 18.4."
+    },
+    {
+      "requirementId": "REQ_cuzsd2",
+      "state": "complete",
+      "score": 19.5,
+      "evidence": [
+        {
+          "id": "EV_82t51f4",
+          "statement": "Grounded evidence for \"Human Review and Approval\" (42 files, 187 hits, strength 19.5)",
+          "locations": [
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\README.md",
+              "excerpt": "matches: human, review, approval, puzzle, supports"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\SUBMISSION.md",
+              "excerpt": "matches: human, review, puzzle, decision"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\docs\\REVIEW.md",
+              "excerpt": "matches: human, review, approval, puzzle, approve"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\docs\\architecture.md",
+              "excerpt": "matches: human, review, puzzle, approve, reject"
+            }
+          ],
+          "origin": "source",
+          "confidence": "high"
+        }
+      ],
+      "notes": "Grounded in 42 file(s); 4 test file(s); strength 19.5."
+    },
+    {
+      "requirementId": "REQ_63bstt",
+      "state": "complete",
+      "score": 12.3,
+      "evidence": [
+        {
+          "id": "EV_1y86x9a",
+          "statement": "Grounded evidence for \"Reliability Feedback\" (10 files, 33 hits, strength 12.3)",
+          "locations": [
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\README.md",
+              "excerpt": "matches: reliability, feedback, successful, resilience, unresolved"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\SUBMISSION.md",
+              "excerpt": "matches: reliability, feedback"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\docs\\REVIEW.md",
+              "excerpt": "matches: reliability, feedback, successful, resilience, unresolved"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\docs\\architecture.md",
+              "excerpt": "matches: reliability, feedback, resilience, unresolved"
+            }
+          ],
+          "origin": "source",
+          "confidence": "high"
+        }
+      ],
+      "notes": "Grounded in 10 file(s); 0 test file(s); strength 12.3."
+    },
+    {
+      "requirementId": "REQ_xwax2o",
+      "state": "complete",
+      "score": 16.4,
+      "evidence": [
+        {
+          "id": "EV_hcr0v78",
+          "statement": "Grounded evidence for \"Local Execution, Mock AI, and Documentation\" (22 files, 75 hits, strength 16.4)",
+          "locations": [
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\README.md",
+              "excerpt": "matches: local, execution, puzzles, locally, committed"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\SUBMISSION.md",
+              "excerpt": "matches: local, execution, puzzles, locally, committed"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\docs\\REVIEW.md",
+              "excerpt": "matches: local, execution, documentation, puzzles, committed"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_002",
+              "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\docs\\architecture.md",
+              "excerpt": "matches: local, execution, puzzles, committed, inputs"
+            }
+          ],
+          "origin": "source",
+          "confidence": "high"
+        }
+      ],
+      "notes": "Grounded in 22 file(s); 2 test file(s); strength 16.4."
+    }
+  ],
+  "strengths": [
+    "Has automated tests (Vitest).",
+    "Build/start scripts are present and discoverable.",
+    "Covers ~100% of active requirements (grounded)."
+  ],
+  "weaknesses": [],
+  "reviewEvidence": [
+    {
+      "id": "EV_36eubvv",
+      "statement": "Normalized review final score: 95.6 (normalized AI review available).",
+      "locations": [
+        {
+          "kind": "reviewer_comment",
+          "submissionId": "SUB_002",
+          "path": "E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\reviews\\SUB_002\\final-result.json",
+          "excerpt": "finalScore=95.6"
+        }
+      ],
+      "origin": "review_ai",
+      "confidence": "medium"
+    }
+  ],
+  "compatibilityRisk": "low",
+  "baseSuitability": {
+    "score": 100,
+    "reasoning": "coverage≈100%, tests=complete, build=present, risk=low."
+  }
+}

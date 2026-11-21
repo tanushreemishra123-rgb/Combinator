@@ -1,0 +1,591 @@
+{
+  "units": [
+    {
+      "unit_id": "CAP_01",
+      "unit_type": "capability",
+      "workstream_id": "WS_01",
+      "complexity": "medium",
+      "drivers": [
+        "Requires embedding within Zendesk agent interface",
+        "Depends on real-time event handling in the sidebar"
+      ]
+    },
+    {
+      "unit_id": "CAP_02",
+      "unit_type": "capability",
+      "workstream_id": "WS_02",
+      "complexity": "high",
+      "drivers": [
+        "Requires high-accuracy grounded response generation",
+        "Needs precise source citation to prevent hallucinations"
+      ]
+    },
+    {
+      "unit_id": "CAP_03",
+      "unit_type": "capability",
+      "workstream_id": "WS_02",
+      "complexity": "medium",
+      "drivers": [
+        "Automated classification based on ticket content",
+        "SLA routing logic integration"
+      ]
+    },
+    {
+      "unit_id": "CAP_04",
+      "unit_type": "capability",
+      "workstream_id": "WS_02",
+      "complexity": "medium",
+      "drivers": [
+        "Vector similarity search implementation",
+        "Filtering out deprecated or outdated ticket solutions"
+      ]
+    },
+    {
+      "unit_id": "CAP_05",
+      "unit_type": "capability",
+      "workstream_id": "WS_03",
+      "complexity": "high",
+      "drivers": [
+        "Ingestion from multiple disparate source systems",
+        "Handling varying document formats and update frequencies"
+      ]
+    },
+    {
+      "unit_id": "CAP_06",
+      "unit_type": "capability",
+      "workstream_id": "WS_03",
+      "complexity": "high",
+      "drivers": [
+        "Strict GDPR compliance requirements",
+        "EU data residency clauses across enterprise contracts"
+      ]
+    },
+    {
+      "unit_id": "CAP_07",
+      "unit_type": "capability",
+      "workstream_id": "WS_02",
+      "complexity": "medium",
+      "drivers": [
+        "Establishing automated evaluation metrics for LLM outputs",
+        "Continuous quality governance framework setup"
+      ]
+    },
+    {
+      "unit_id": "IA_01",
+      "unit_type": "integration",
+      "workstream_id": "WS_01",
+      "complexity": "medium",
+      "drivers": [
+        "Bi-directional Zendesk API communication",
+        "Sidebar application lifecycle management"
+      ]
+    },
+    {
+      "unit_id": "IA_02",
+      "unit_type": "integration",
+      "workstream_id": "WS_03",
+      "complexity": "medium",
+      "drivers": [
+        "Confluence Cloud API authentication and rate limits",
+        "Incremental document updates extraction"
+      ]
+    },
+    {
+      "unit_id": "IA_03",
+      "unit_type": "integration",
+      "workstream_id": "WS_03",
+      "complexity": "low",
+      "drivers": [
+        "Standard markdown parsing from GitHub repositories",
+        "Webhook-triggered ingestion"
+      ]
+    },
+    {
+      "unit_id": "IA_04",
+      "unit_type": "integration",
+      "workstream_id": "WS_03",
+      "complexity": "medium",
+      "drivers": [
+        "SharePoint Graph API integration complexity",
+        "Document permission mapping"
+      ]
+    },
+    {
+      "unit_id": "IA_05",
+      "unit_type": "integration",
+      "workstream_id": "WS_03",
+      "complexity": "medium",
+      "drivers": [
+        "Processing large historical ticket archives",
+        "Data cleaning and schema mapping"
+      ]
+    },
+    {
+      "unit_id": "AI_01",
+      "unit_type": "ai_use_case",
+      "workstream_id": "WS_02",
+      "complexity": "high",
+      "drivers": [
+        "Retrieval-augmented generation orchestration",
+        "Strict citation accuracy and verification"
+      ]
+    },
+    {
+      "unit_id": "AI_02",
+      "unit_type": "ai_use_case",
+      "workstream_id": "WS_02",
+      "complexity": "medium",
+      "drivers": [
+        "Multi-class classification model training",
+        "SLA mapping based on predicted priority"
+      ]
+    },
+    {
+      "unit_id": "AI_03",
+      "unit_type": "ai_use_case",
+      "workstream_id": "WS_02",
+      "complexity": "medium",
+      "drivers": [
+        "Embedding generation and vector indexing",
+        "Metadata filtering for deprecation status"
+      ]
+    },
+    {
+      "unit_id": "ARC_01",
+      "unit_type": "architecture_component",
+      "workstream_id": "WS_01",
+      "complexity": "low",
+      "drivers": [
+        "Standard Zendesk App Framework hosting"
+      ]
+    },
+    {
+      "unit_id": "ARC_02",
+      "unit_type": "architecture_component",
+      "workstream_id": "WS_02",
+      "complexity": "medium",
+      "drivers": [
+        "Orchestrating requests between Zendesk and AI services",
+        "Session state management"
+      ]
+    },
+    {
+      "unit_id": "ARC_03",
+      "unit_type": "architecture_component",
+      "workstream_id": "WS_03",
+      "complexity": "low",
+      "drivers": [
+        "Standard API gateway routing and rate limiting"
+      ]
+    },
+    {
+      "unit_id": "ARC_04",
+      "unit_type": "architecture_component",
+      "workstream_id": "WS_03",
+      "complexity": "medium",
+      "drivers": [
+        "Relational storage for operational metadata",
+        "Audit trail persistence"
+      ]
+    },
+    {
+      "unit_id": "ARC_05",
+      "unit_type": "architecture_component",
+      "workstream_id": "WS_03",
+      "complexity": "medium",
+      "drivers": [
+        "Integration with enterprise identity providers",
+        "Role-based access control enforcement"
+      ]
+    },
+    {
+      "unit_id": "ARC_06",
+      "unit_type": "architecture_component",
+      "workstream_id": "WS_03",
+      "complexity": "medium",
+      "drivers": [
+        "Asynchronous ingestion event handling",
+        "Message durability and retry queues"
+      ]
+    },
+    {
+      "unit_id": "ARC_07",
+      "unit_type": "architecture_component",
+      "workstream_id": "WS_03",
+      "complexity": "high",
+      "drivers": [
+        "Orchestrating multi-source ingestion workflows",
+        "Error handling and partial failure recovery"
+      ]
+    },
+    {
+      "unit_id": "ARC_08",
+      "unit_type": "architecture_component",
+      "workstream_id": "WS_02",
+      "complexity": "high",
+      "drivers": [
+        "Hybrid search index configuration",
+        "Vector database scaling and performance tuning"
+      ]
+    },
+    {
+      "unit_id": "ARC_09",
+      "unit_type": "architecture_component",
+      "workstream_id": "WS_02",
+      "complexity": "high",
+      "drivers": [
+        "Deployment of LLMs within EU regional boundaries",
+        "Compliance with strict data residency clauses"
+      ]
+    },
+    {
+      "unit_id": "ARC_10",
+      "unit_type": "architecture_component",
+      "workstream_id": "WS_03",
+      "complexity": "high",
+      "drivers": [
+        "Real-time PII detection and redaction",
+        "Content safety filtering before LLM processing"
+      ]
+    },
+    {
+      "unit_id": "ARC_11",
+      "unit_type": "architecture_component",
+      "workstream_id": "WS_02",
+      "complexity": "low",
+      "drivers": [
+        "Standard application performance monitoring setup"
+      ]
+    },
+    {
+      "unit_id": "ARC_12",
+      "unit_type": "architecture_component",
+      "workstream_id": "WS_03",
+      "complexity": "medium",
+      "drivers": [
+        "Secure storage of API keys and database credentials",
+        "Key rotation policies"
+      ]
+    },
+    {
+      "unit_id": "ARC_13",
+      "unit_type": "architecture_component",
+      "workstream_id": "WS_03",
+      "complexity": "low",
+      "drivers": [
+        "Standard container registry configuration"
+      ]
+    },
+    {
+      "unit_id": "ARC_14",
+      "unit_type": "architecture_component",
+      "workstream_id": "WS_03",
+      "complexity": "low",
+      "drivers": [
+        "Infrastructure as Code for multiple environments"
+      ]
+    },
+    {
+      "unit_id": "ARC_15",
+      "unit_type": "architecture_component",
+      "workstream_id": "WS_03",
+      "complexity": "medium",
+      "drivers": [
+        "Web Application Firewall configuration",
+        "DDoS protection rules"
+      ]
+    },
+    {
+      "unit_id": "ARC_16",
+      "unit_type": "architecture_component",
+      "workstream_id": "WS_03",
+      "complexity": "low",
+      "drivers": [
+        "Automated backup policies for operational databases"
+      ]
+    },
+    {
+      "unit_id": "DOM_01",
+      "unit_type": "data_domain",
+      "workstream_id": "WS_02",
+      "complexity": "medium",
+      "drivers": [
+        "Modeling support ticket schemas and relationships",
+        "Handling historical ticket archives"
+      ]
+    },
+    {
+      "unit_id": "DOM_02",
+      "unit_type": "data_domain",
+      "workstream_id": "WS_03",
+      "complexity": "medium",
+      "drivers": [
+        "Consolidating knowledge schemas from multiple sources",
+        "Version control and deprecation metadata"
+      ]
+    },
+    {
+      "unit_id": "DOM_03",
+      "unit_type": "data_domain",
+      "workstream_id": "WS_02",
+      "complexity": "low",
+      "drivers": [
+        "Audit trail schema for LLM citations and feedback"
+      ]
+    }
+  ],
+  "workstreams": [
+    {
+      "req_ids": [
+        "FR_05",
+        "INT_01",
+        "PER_01",
+        "PER_02"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "WS_01",
+      "name": "Frontend & Agent Experience Workstream",
+      "capability_ids": [
+        "CAP_01"
+      ],
+      "integration_ids": [
+        "IA_01"
+      ],
+      "ai_use_case_ids": [],
+      "arc_ids": [
+        "ARC_01"
+      ],
+      "domain_ids": [],
+      "derived_complexity": "medium",
+      "roles": [
+        "Frontend Engineer",
+        "Zendesk Developer",
+        "QA Engineer"
+      ],
+      "risks": [
+        "Zendesk App Framework limitations may restrict custom UI components",
+        "Real-time updates in the sidebar might experience latency under heavy agent load"
+      ],
+      "dependencies": [
+        "Core Agent Assist Backend Service APIs must be defined and available"
+      ]
+    },
+    {
+      "req_ids": [
+        "FR_01",
+        "BR_01",
+        "SEC_03",
+        "FR_02",
+        "FR_03",
+        "BR_02",
+        "FR_04",
+        "DATA_01",
+        "SYS_03",
+        "NFR_02",
+        "NFR_04",
+        "NFR_01",
+        "TECH_01",
+        "CON_02",
+        "CON_03"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "WS_02",
+      "name": "AI & Retrieval Engineering Workstream",
+      "capability_ids": [
+        "CAP_02",
+        "CAP_03",
+        "CAP_04",
+        "CAP_07"
+      ],
+      "integration_ids": [],
+      "ai_use_case_ids": [
+        "AI_01",
+        "AI_02",
+        "AI_03"
+      ],
+      "arc_ids": [
+        "ARC_02",
+        "ARC_08",
+        "ARC_09",
+        "ARC_11"
+      ],
+      "domain_ids": [
+        "DOM_01",
+        "DOM_03"
+      ],
+      "derived_complexity": "high",
+      "roles": [
+        "AI Engineer",
+        "Search Engineer",
+        "Backend Engineer",
+        "Data Scientist"
+      ],
+      "risks": [
+        "LLM response latency might exceed agent usability expectations",
+        "Hallucinations in grounded responses could lead to incorrect agent actions"
+      ],
+      "dependencies": [
+        "Vector search index must be populated by the data ingestion pipelines"
+      ]
+    },
+    {
+      "req_ids": [
+        "INT_02",
+        "INT_03",
+        "INT_04",
+        "SYS_01",
+        "SYS_02",
+        "SYS_04",
+        "NFR_03",
+        "DATA_02",
+        "SEC_01",
+        "SEC_02",
+        "SEC_04"
+      ],
+      "basis": "customer",
+      "validation_required": true,
+      "validation_reason": "Requires validation of EU regional cloud boundaries and enterprise contract compliance clauses.",
+      "id": "WS_03",
+      "name": "Data Pipelines & Cloud Security Workstream",
+      "capability_ids": [
+        "CAP_05",
+        "CAP_06"
+      ],
+      "integration_ids": [
+        "IA_02",
+        "IA_03",
+        "IA_04",
+        "IA_05"
+      ],
+      "ai_use_case_ids": [],
+      "arc_ids": [
+        "ARC_03",
+        "ARC_04",
+        "ARC_05",
+        "ARC_06",
+        "ARC_07",
+        "ARC_10",
+        "ARC_12",
+        "ARC_13",
+        "ARC_14",
+        "ARC_15",
+        "ARC_16"
+      ],
+      "domain_ids": [
+        "DOM_02"
+      ],
+      "derived_complexity": "high",
+      "roles": [
+        "Data Engineer",
+        "Cloud Security Architect",
+        "DevOps Engineer"
+      ],
+      "risks": [
+        "Strict EU data residency clauses require complex routing and isolation of data",
+        "API rate limits on source systems may throttle ingestion pipelines"
+      ],
+      "dependencies": [
+        "Access credentials and network paths to Confluence, GitHub, SharePoint, and Zendesk must be provided"
+      ]
+    }
+  ],
+  "phases": [
+    {
+      "name": "Foundation & Secure Ingestion",
+      "workstream_ids": [
+        "WS_03"
+      ],
+      "milestones": [
+        "Secure EU-resident cloud infrastructure and data ingestion pipelines established"
+      ]
+    },
+    {
+      "name": "AI Retrieval & Core Logic",
+      "workstream_ids": [
+        "WS_02"
+      ],
+      "milestones": [
+        "Vector search index populated and grounded response generation models validated"
+      ]
+    },
+    {
+      "name": "Agent Experience & Integration",
+      "workstream_ids": [
+        "WS_01"
+      ],
+      "milestones": [
+        "Zendesk sidebar application fully integrated and end-to-end agent workflow verified"
+      ]
+    }
+  ],
+  "delivery_risks": [
+    {
+      "req_ids": [
+        "SEC_01",
+        "SEC_02",
+        "SEC_04"
+      ],
+      "basis": "customer",
+      "validation_required": true,
+      "validation_reason": "Requires legal and compliance review of specific enterprise contract clauses.",
+      "text": "Strict EU data residency clauses in enterprise contracts require rigorous validation of cloud region boundaries to prevent cross-border data leakage."
+    },
+    {
+      "req_ids": [
+        "INT_02",
+        "INT_03",
+        "INT_04"
+      ],
+      "basis": "inferred",
+      "validation_required": false,
+      "validation_reason": "",
+      "text": "API rate limits on source repositories (Confluence, GitHub, SharePoint) may throttle initial ingestion pipelines and delay search index readiness."
+    }
+  ],
+  "estimation_assumptions": [
+    {
+      "req_ids": [
+        "INT_01",
+        "INT_02",
+        "INT_03",
+        "INT_04"
+      ],
+      "basis": "assumed",
+      "validation_required": true,
+      "validation_reason": "Timely access to customer systems is critical to maintaining the delivery schedule.",
+      "text": "The customer will provide timely access to sandbox environments and API credentials for all third-party systems."
+    },
+    {
+      "req_ids": [],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "text": "No historical data migration is required beyond the ingestion of the Zendesk historical ticket archive."
+    }
+  ],
+  "exclusions": [
+    {
+      "req_ids": [
+        "INT_01",
+        "INT_02",
+        "INT_03",
+        "INT_04"
+      ],
+      "basis": "recommended",
+      "validation_required": true,
+      "validation_reason": "Customer must procure licenses independently.",
+      "text": "Licensing costs for Zendesk, Confluence, GitHub, SharePoint, and LLM foundation models are excluded."
+    },
+    {
+      "req_ids": [],
+      "basis": "recommended",
+      "validation_required": true,
+      "validation_reason": "Cloud hosting costs are the responsibility of the customer.",
+      "text": "Provisioning and cost of cloud infrastructure hosting environments are excluded."
+    }
+  ]
+}

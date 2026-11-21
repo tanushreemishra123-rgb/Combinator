@@ -1,0 +1,41 @@
+{
+  "challengeId": "AI_LEARNING_ADVENTURE",
+  "title": "AI Learning Adventure",
+  "mode": "code",
+  "generatedAt": "2026-11-21T12:40:19.846Z",
+  "combinatorVersion": "1.0.0",
+  "reviewContextMode": "provided_with_spec_reconciliation",
+  "artifacts": [
+    "workspace-manifest.json",
+    "review-context-status.json",
+    "active-review-context.json",
+    "review-context-reconciliation.json",
+    "source-location-map.json",
+    "overview.md",
+    "requirement-matrix.json",
+    "requirement-matrix.md",
+    "decisions.json",
+    "provenance.json",
+    "contradictions.json",
+    "verification.json",
+    "usage-report.json",
+    "audit-log.json",
+    "integrity/integrity-report.json",
+    "combined-solution/",
+    "submissions/",
+    "review-ui/"
+  ],
+  "usage": {
+    "provider": "mock",
+    "model": "deterministic-mock-v1",
+    "calls": 2,
+    "inputTokens": 380,
+    "outputTokens": 239,
+    "retries": 0,
+    "failures": 0,
+    "approxCostUsd": 0.0002,
+    "processingMs": 29457
+  },
+  "integrityCritical": false,
+  "verificationOverall": "partial"
+}

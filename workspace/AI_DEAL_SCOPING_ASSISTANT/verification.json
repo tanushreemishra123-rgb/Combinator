@@ -2,7 +2,7 @@
   "challengeId": "AI_DEAL_SCOPING_ASSISTANT",
   "mode": "code",
   "candidate": "combined-solution/",
-  "overall": "failed",
+  "overall": "partial",
   "steps": [
     {
       "name": "Source integrity (before/after SHA-256)",
@@ -17,16 +17,16 @@
     {
       "name": "Dependency installation",
       "command": "npm install --no-audit --no-fund --ignore-scripts",
-      "state": "failed",
-      "detail": "Exit -4058. stderr tail: ",
-      "durationMs": 14
+      "state": "passed",
+      "detail": "Completed with exit code 0.",
+      "durationMs": 13258
     },
     {
       "name": "Build",
       "command": "npm run build",
-      "state": "failed",
-      "detail": "Exit -4058. stderr tail: ",
-      "durationMs": 7
+      "state": "passed",
+      "detail": "Completed with exit code 0.",
+      "durationMs": 7490
     },
     {
       "name": "Application startup (smoke)",
@@ -41,9 +41,9 @@
     {
       "name": "Unit / integration tests",
       "command": "npm test -- --run",
-      "state": "failed",
-      "detail": "Exit -4058. stderr tail: ",
-      "durationMs": 7
+      "state": "passed",
+      "detail": "Completed with exit code 0.",
+      "durationMs": 14399
     },
     {
       "name": "Regression comparison vs base",
@@ -61,6 +61,6 @@
       "detail": "Starter-pack reviews are normalized score stubs without a re-runnable scorecard; re-evaluation is not possible without the original scorecard definition. Not fabricated."
     }
   ],
-  "honestSummary": "Candidate did NOT fully verify. Failed steps are recorded above; the last verified candidate is preserved and affected decisions should be marked blocked. This candidate is not presented as successful.",
+  "honestSummary": "Dynamic steps that could run are recorded with real results; steps that could not be verified are marked not_verifiable (never passed). No step is reported as successful without evidence.",
   "sourceIntegrityOk": true
 }

@@ -1,0 +1,504 @@
+[
+  {
+    "at": "2026-11-21T12:40:31.463Z",
+    "op": "write",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\review-context-status.json",
+    "detail": "249 bytes"
+  },
+  {
+    "at": "2026-11-21T12:40:31.464Z",
+    "op": "write",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\active-review-context.json",
+    "detail": "13716 bytes"
+  },
+  {
+    "at": "2026-11-21T12:40:31.464Z",
+    "op": "write",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\review-context-reconciliation.json",
+    "detail": "281 bytes"
+  },
+  {
+    "at": "2026-11-21T12:40:31.464Z",
+    "op": "write",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\source-location-map.json",
+    "detail": "7717 bytes"
+  },
+  {
+    "at": "2026-11-21T12:40:31.740Z",
+    "op": "write",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\profile.json",
+    "detail": "21661 bytes"
+  },
+  {
+    "at": "2026-11-21T12:40:31.834Z",
+    "op": "write",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\profile.json",
+    "detail": "20337 bytes"
+  },
+  {
+    "at": "2026-11-21T12:40:31.836Z",
+    "op": "delete",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution"
+  },
+  {
+    "at": "2026-11-21T12:40:31.836Z",
+    "op": "mkdir",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution"
+  },
+  {
+    "at": "2026-11-21T12:40:31.838Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\.github\\workflows\\deploy-pages.yml",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\.github\\workflows\\deploy-pages.yml"
+  },
+  {
+    "at": "2026-11-21T12:40:31.839Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\.gitignore",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\.gitignore"
+  },
+  {
+    "at": "2026-11-21T12:40:31.840Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\.vercelignore",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\.vercelignore"
+  },
+  {
+    "at": "2026-11-21T12:40:31.840Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\README.md",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\README.md"
+  },
+  {
+    "at": "2026-11-21T12:40:31.841Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\SUBMISSION.md",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\SUBMISSION.md"
+  },
+  {
+    "at": "2026-11-21T12:40:31.841Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\docs\\REVIEW.md",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\docs\\REVIEW.md"
+  },
+  {
+    "at": "2026-11-21T12:40:31.842Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\docs\\architecture.md",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\docs\\architecture.md"
+  },
+  {
+    "at": "2026-11-21T12:40:31.843Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\docs\\architecture.svg",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\docs\\architecture.svg"
+  },
+  {
+    "at": "2026-11-21T12:40:31.843Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\docs\\demo-captions.md",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\docs\\demo-captions.md"
+  },
+  {
+    "at": "2026-11-21T12:40:31.844Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\docs\\demo-captions.srt",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\docs\\demo-captions.srt"
+  },
+  {
+    "at": "2026-11-21T12:40:31.850Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\docs\\demo-script.md",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\docs\\demo-script.md"
+  },
+  {
+    "at": "2026-11-21T12:40:31.851Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\docs\\security-review.md",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\docs\\security-review.md"
+  },
+  {
+    "at": "2026-11-21T12:40:31.853Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\eslint.config.js",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\eslint.config.js"
+  },
+  {
+    "at": "2026-11-21T12:40:31.853Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\index.html",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\index.html"
+  },
+  {
+    "at": "2026-11-21T12:40:31.854Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\netlify.toml",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\netlify.toml"
+  },
+  {
+    "at": "2026-11-21T12:40:31.856Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\package-lock.json",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\package-lock.json"
+  },
+  {
+    "at": "2026-11-21T12:40:31.857Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\package.json",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\package.json"
+  },
+  {
+    "at": "2026-11-21T12:40:31.858Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\src\\engine\\engine.test.ts",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\src\\engine\\engine.test.ts"
+  },
+  {
+    "at": "2026-11-21T12:40:31.859Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\src\\engine\\engine.ts",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\src\\engine\\engine.ts"
+  },
+  {
+    "at": "2026-11-21T12:40:31.859Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\src\\engine\\types.ts",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\src\\engine\\types.ts"
+  },
+  {
+    "at": "2026-11-21T12:40:31.860Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\src\\engine\\util.ts",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\src\\engine\\util.ts"
+  },
+  {
+    "at": "2026-11-21T12:40:31.861Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\src\\engine\\validation.ts",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\src\\engine\\validation.ts"
+  },
+  {
+    "at": "2026-11-21T12:40:31.862Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\src\\main.tsx",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\src\\main.tsx"
+  },
+  {
+    "at": "2026-11-21T12:40:31.862Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\src\\providers\\live.ts",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\src\\providers\\live.ts"
+  },
+  {
+    "at": "2026-11-21T12:40:31.863Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\src\\puzzles\\approval-gate.ts",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\src\\puzzles\\approval-gate.ts"
+  },
+  {
+    "at": "2026-11-21T12:40:31.863Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\src\\puzzles\\blocks.ts",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\src\\puzzles\\blocks.ts"
+  },
+  {
+    "at": "2026-11-21T12:40:31.864Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\src\\puzzles\\data-extractor.ts",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\src\\puzzles\\data-extractor.ts"
+  },
+  {
+    "at": "2026-11-21T12:40:31.864Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\src\\puzzles\\fallback-drill.ts",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\src\\puzzles\\fallback-drill.ts"
+  },
+  {
+    "at": "2026-11-21T12:40:31.865Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\src\\puzzles\\index.ts",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\src\\puzzles\\index.ts"
+  },
+  {
+    "at": "2026-11-21T12:40:31.866Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\src\\puzzles\\knowledge-assistant.ts",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\src\\puzzles\\knowledge-assistant.ts"
+  },
+  {
+    "at": "2026-11-21T12:40:31.866Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\src\\puzzles\\meeting-summarizer.ts",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\src\\puzzles\\meeting-summarizer.ts"
+  },
+  {
+    "at": "2026-11-21T12:40:31.867Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\src\\puzzles\\puzzles.test.ts",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\src\\puzzles\\puzzles.test.ts"
+  },
+  {
+    "at": "2026-11-21T12:40:31.867Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\src\\puzzles\\research-timeout.ts",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\src\\puzzles\\research-timeout.ts"
+  },
+  {
+    "at": "2026-11-21T12:40:31.869Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\src\\puzzles\\resume-mission.ts",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\src\\puzzles\\resume-mission.ts"
+  },
+  {
+    "at": "2026-11-21T12:40:31.869Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\src\\puzzles\\ticket-router.ts",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\src\\puzzles\\ticket-router.ts"
+  },
+  {
+    "at": "2026-11-21T12:40:31.870Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\src\\puzzles\\types.ts",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\src\\puzzles\\types.ts"
+  },
+  {
+    "at": "2026-11-21T12:40:31.870Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\src\\reliability\\report.test.ts",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\src\\reliability\\report.test.ts"
+  },
+  {
+    "at": "2026-11-21T12:40:31.871Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\src\\reliability\\report.ts",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\src\\reliability\\report.ts"
+  },
+  {
+    "at": "2026-11-21T12:40:31.871Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\src\\state\\store.ts",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\src\\state\\store.ts"
+  },
+  {
+    "at": "2026-11-21T12:40:31.872Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\src\\state\\workflowOps.test.ts",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\src\\state\\workflowOps.test.ts"
+  },
+  {
+    "at": "2026-11-21T12:40:31.872Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\src\\state\\workflowOps.ts",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\src\\state\\workflowOps.ts"
+  },
+  {
+    "at": "2026-11-21T12:40:31.873Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\src\\styles.css",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\src\\styles.css"
+  },
+  {
+    "at": "2026-11-21T12:40:31.873Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\src\\ui\\App.tsx",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\src\\ui\\App.tsx"
+  },
+  {
+    "at": "2026-11-21T12:40:31.874Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\src\\ui\\Canvas.tsx",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\src\\ui\\Canvas.tsx"
+  },
+  {
+    "at": "2026-11-21T12:40:31.874Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\src\\ui\\Dialog.tsx",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\src\\ui\\Dialog.tsx"
+  },
+  {
+    "at": "2026-11-21T12:40:31.875Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\src\\ui\\ErrorBoundary.tsx",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\src\\ui\\ErrorBoundary.tsx"
+  },
+  {
+    "at": "2026-11-21T12:40:31.875Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\src\\ui\\GoalsPanel.tsx",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\src\\ui\\GoalsPanel.tsx"
+  },
+  {
+    "at": "2026-11-21T12:40:31.876Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\src\\ui\\HomeScreen.tsx",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\src\\ui\\HomeScreen.tsx"
+  },
+  {
+    "at": "2026-11-21T12:40:31.876Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\src\\ui\\HumanReviewModal.tsx",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\src\\ui\\HumanReviewModal.tsx"
+  },
+  {
+    "at": "2026-11-21T12:40:31.877Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\src\\ui\\Inspector.tsx",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\src\\ui\\Inspector.tsx"
+  },
+  {
+    "at": "2026-11-21T12:40:31.877Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\src\\ui\\Palette.tsx",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\src\\ui\\Palette.tsx"
+  },
+  {
+    "at": "2026-11-21T12:40:31.878Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\src\\ui\\PhaseStrip.tsx",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\src\\ui\\PhaseStrip.tsx"
+  },
+  {
+    "at": "2026-11-21T12:40:31.878Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\src\\ui\\PuzzleScreen.tsx",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\src\\ui\\PuzzleScreen.tsx"
+  },
+  {
+    "at": "2026-11-21T12:40:31.878Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\src\\ui\\ReportPanel.tsx",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\src\\ui\\ReportPanel.tsx"
+  },
+  {
+    "at": "2026-11-21T12:40:31.879Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\src\\ui\\ReviewerGuide.tsx",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\src\\ui\\ReviewerGuide.tsx"
+  },
+  {
+    "at": "2026-11-21T12:40:31.879Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\src\\ui\\RunPanel.tsx",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\src\\ui\\RunPanel.tsx"
+  },
+  {
+    "at": "2026-11-21T12:40:31.880Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\src\\ui\\SettingsModal.tsx",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\src\\ui\\SettingsModal.tsx"
+  },
+  {
+    "at": "2026-11-21T12:40:31.880Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\src\\ui\\TracePanel.tsx",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\src\\ui\\TracePanel.tsx"
+  },
+  {
+    "at": "2026-11-21T12:40:31.881Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\src\\ui\\common.tsx",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\src\\ui\\common.tsx"
+  },
+  {
+    "at": "2026-11-21T12:40:31.881Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\src\\ui\\dnd.ts",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\src\\ui\\dnd.ts"
+  },
+  {
+    "at": "2026-11-21T12:40:31.882Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\src\\ui\\useIsMobile.ts",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\src\\ui\\useIsMobile.ts"
+  },
+  {
+    "at": "2026-11-21T12:40:31.882Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\tsconfig.json",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\tsconfig.json"
+  },
+  {
+    "at": "2026-11-21T12:40:31.883Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\vercel.json",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\vercel.json"
+  },
+  {
+    "at": "2026-11-21T12:40:31.883Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\2nd Position\\vite.config.ts",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\vite.config.ts"
+  },
+  {
+    "at": "2026-11-21T12:40:31.886Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\_transplants\\REQ_63bstt\\SUB_001\\submission\\README.md",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\README.md"
+  },
+  {
+    "at": "2026-11-21T12:40:31.887Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\_transplants\\REQ_63bstt\\SUB_001\\submission\\backend\\app\\api\\context.py",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend\\app\\api\\context.py"
+  },
+  {
+    "at": "2026-11-21T12:40:31.888Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\_transplants\\REQ_63bstt\\SUB_001\\submission\\backend\\app\\api\\runs.py",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend\\app\\api\\runs.py"
+  },
+  {
+    "at": "2026-11-21T12:40:31.889Z",
+    "op": "copy",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\combined-solution\\_transplants\\REQ_63bstt\\SUB_001\\submission\\backend\\app\\engine\\executor.py",
+    "detail": "from E:\\top-coder\\starter-pack\\TC_COMBINATOR_STARTER_PACK_new\\challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend\\app\\engine\\executor.py"
+  },
+  {
+    "at": "2026-11-21T12:40:46.871Z",
+    "op": "write",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\decisions.json",
+    "detail": "2094 bytes"
+  },
+  {
+    "at": "2026-11-21T12:40:46.872Z",
+    "op": "write",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\requirement-matrix.json",
+    "detail": "39472 bytes"
+  },
+  {
+    "at": "2026-11-21T12:40:46.873Z",
+    "op": "write",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\requirement-matrix.md",
+    "detail": "1015 bytes"
+  },
+  {
+    "at": "2026-11-21T12:40:46.874Z",
+    "op": "write",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\provenance.json",
+    "detail": "2832 bytes"
+  },
+  {
+    "at": "2026-11-21T12:40:46.874Z",
+    "op": "write",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\contradictions.json",
+    "detail": "92 bytes"
+  },
+  {
+    "at": "2026-11-21T12:40:46.875Z",
+    "op": "write",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\verification.json",
+    "detail": "2358 bytes"
+  },
+  {
+    "at": "2026-11-21T12:40:46.990Z",
+    "op": "write",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\integrity\\integrity-report.json",
+    "detail": "97416 bytes"
+  },
+  {
+    "at": "2026-11-21T12:40:46.991Z",
+    "op": "write",
+    "target": "E:\\top-coder\\tc-combinator\\workspace-local-test\\AI_WORKFLOW_PUZZLE_BUILDER\\usage-report.json",
+    "detail": "207 bytes"
+  }
+]
