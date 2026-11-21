@@ -12,21 +12,21 @@
     {
       "name": "Candidate assembled (base + approved transplants)",
       "state": "passed",
-      "detail": "Base SUB_002 copied; 1 transplant(s) applied, 0 rolled back."
+      "detail": "Base SUB_002 copied; 0 transplant(s) applied, 0 rolled back."
     },
     {
       "name": "Dependency installation",
       "command": "npm install --no-audit --no-fund --ignore-scripts",
       "state": "passed",
       "detail": "Completed with exit code 0.",
-      "durationMs": 1004
+      "durationMs": 3484
     },
     {
       "name": "Build",
       "command": "npm run build",
       "state": "passed",
       "detail": "Completed with exit code 0.",
-      "durationMs": 3127
+      "durationMs": 3485
     },
     {
       "name": "Application startup (smoke)",
@@ -43,7 +43,7 @@
       "command": "npm test -- --run",
       "state": "passed",
       "detail": "Completed with exit code 0.",
-      "durationMs": 1537
+      "durationMs": 2139
     },
     {
       "name": "Regression comparison vs base",
@@ -52,8 +52,8 @@
     },
     {
       "name": "Approved-capability verification",
-      "state": "partial",
-      "detail": "Transplanted capabilities present in candidate under _transplants/: REQ_63bstt. Functional confirmation requires dynamic tests."
+      "state": "not_verifiable",
+      "detail": "No transplants applied; base capabilities only."
     },
     {
       "name": "Original scorecard re-evaluation",

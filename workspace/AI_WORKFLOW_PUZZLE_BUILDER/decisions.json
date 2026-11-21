@@ -55,11 +55,11 @@
       "recommendation": "OPT_7luweka",
       "reasoning": "SUB_001 covers \"Reliability Feedback\" more strongly than the base. SUB_001 shows the strongest grounded coverage (complete) for this requirement.",
       "risk": "high",
-      "state": "accepted",
-      "selectedSource": "OPT_7luweka",
+      "state": "alternative_selected",
+      "selectedSource": "OPT_54agltz",
       "copilotComment": "Accepted by the submission author for the included fixture workspace.",
       "regenerationRequired": true,
-      "updatedAt": "2026-11-21T10:32:09.823Z"
+      "updatedAt": "2026-11-21T12:58:21.851Z"
     }
   ]
 }
