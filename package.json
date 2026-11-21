@@ -20,8 +20,8 @@
   },
   "dependencies": {
     "@aws-sdk/client-bedrock-runtime": "3.705.0",
-    "adm-zip": "0.5.16",
-    "fast-xml-parser": "4.5.1",
+    "adm-zip": "0.6.1",
+    "fast-xml-parser": "4.5.5",
     "mammoth": "1.8.0",
     "openai": "4.77.0",
     "pdfjs-dist": "4.9.155",
@@ -32,5 +32,9 @@
     "@types/node": "22.10.2",
     "tsx": "4.19.2",
     "typescript": "5.7.2"
+  },
+  "overrides": {
+    "fast-xml-parser": "4.5.5",
+    "adm-zip": "0.6.1"
   }
 }
