@@ -14,6 +14,7 @@ import {
 } from "@aws-sdk/client-bedrock-runtime";
 import type { CombinatorConfig } from "../config.js";
 import { estimateTokens, type LlmAdapter, type LlmRequest, type LlmResponse } from "./adapter.js";
+import { groundingToText } from "../util.js";
 
 export class BedrockAdapter implements LlmAdapter {
   readonly name = "bedrock";
@@ -31,10 +32,8 @@ export class BedrockAdapter implements LlmAdapter {
 
   async complete(req: LlmRequest): Promise<LlmResponse> {
     const grounded = req.grounding
-      ? `${req.user}\n\nGrounding (stay strictly faithful; do not add facts):\n${JSON.stringify(
+      ? `${req.user}\n\nGrounding (stay strictly faithful; do not add facts):\n${groundingToText(
           req.grounding,
-          null,
-          2,
         )}`
       : req.user;
     const messages: Message[] = [{ role: "user", content: [{ text: grounded }] }];

@@ -8,6 +8,7 @@
  */
 import { readFileSync, existsSync } from "node:fs";
 import { resolve } from "node:path";
+import { pick, put } from "./util.js";
 
 export type ProviderName = "mock" | "openai" | "bedrock";
 
@@ -36,12 +37,12 @@ function loadDotEnv(cwd: string): void {
     if ((val.startsWith('"') && val.endsWith('"')) || (val.startsWith("'") && val.endsWith("'"))) {
       val = val.slice(1, -1);
     }
-    if (process.env[key] === undefined) process.env[key] = val;
+    if (pick(process.env, key) === undefined) put(process.env, key, val);
   }
 }
 
 function num(name: string, dflt: number): number {
-  const v = process.env[name];
+  const v = pick<string>(process.env, name);
   if (v === undefined || v === "") return dflt;
   const n = Number(v);
   return Number.isFinite(n) ? n : dflt;

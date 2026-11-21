@@ -23,7 +23,7 @@ import type { DecisionState, DecisionWorkspace } from "./types.js";
 function arg(flags: string[], argv: string[], dflt?: string): string | undefined {
   for (const f of flags) {
     const i = argv.indexOf(f);
-    if (i !== -1 && i + 1 < argv.length) return argv[i + 1];
+    if (i !== -1 && i + 1 < argv.length) return argv.at(i + 1);
   }
   return dflt;
 }

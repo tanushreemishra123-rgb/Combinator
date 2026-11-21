@@ -12,6 +12,7 @@
  * contradiction.
  */
 import { stableId } from "./ids.js";
+import { pick } from "./util.js";
 import type { CodeSubmissionProfile, IdeaProfile } from "./types.js";
 import type {
   Decision,
@@ -198,7 +199,8 @@ export function applyDecisionChange(
   d: Decision,
   change: { state: DecisionState; selectedOptionId?: string; comment?: string },
 ): { ok: true; decision: Decision } | { ok: false; error: string } {
-  if (!ALLOWED[d.state].includes(change.state) && change.state !== d.state) {
+  const allowed = pick<DecisionState[]>(ALLOWED, d.state) ?? [];
+  if (!allowed.includes(change.state) && change.state !== d.state) {
     return { ok: false, error: `Illegal transition ${d.state} → ${change.state}` };
   }
   let selectedSource = d.selectedSource;

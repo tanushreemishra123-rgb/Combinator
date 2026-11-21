@@ -13,6 +13,7 @@
  *   labeled, internal consistency, provenance completeness.
  */
 import { stableId } from "./../ids.js";
+import { pick } from "../util.js";
 import type { LlmAdapter } from "../llm/adapter.js";
 import type {
   Conflict,
@@ -233,7 +234,7 @@ function critKey(title: string): keyof IdeaProfile["evaluation"] | null {
     "Impact Potential": "impact_potential",
     "Alignment with Scope": "alignment_with_scope",
   };
-  return map[title] ?? null;
+  return pick<keyof IdeaProfile["evaluation"]>(map, title) ?? null;
 }
 
 function renderConcept(

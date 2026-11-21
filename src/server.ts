@@ -19,6 +19,7 @@ import { Logger } from "./logger.js";
 import { loadManifest } from "./ingest.js";
 import { runChallenge } from "./orchestrator.js";
 import { applyDecisionChange } from "./decisions.js";
+import { pick } from "./util.js";
 import type { DecisionState, DecisionWorkspace } from "./types.js";
 
 const cfg = loadConfig();
@@ -95,7 +96,7 @@ const server = createServer(async (req, res) => {
     }
     if (path.startsWith("/static/")) {
       const file = join(PUBLIC, path.slice("/static/".length));
-      if (existsSync(file)) return send(res, 200, readFileSync(file, "utf8"), MIME[extname(file)] ?? "text/plain");
+      if (existsSync(file)) return send(res, 200, readFileSync(file, "utf8"), pick<string>(MIME, extname(file)) ?? "text/plain");
       return send(res, 404, { error: "not found" });
     }
     if (path === "/api/challenges") {

@@ -16,6 +16,7 @@
 import type { DiscoveredChallenge, DiscoveredSubmission } from "../ingest.js";
 import { pkgRelative } from "../ingest.js";
 import { stableId } from "../ids.js";
+import { pick, put } from "../util.js";
 import type { LlmAdapter } from "../llm/adapter.js";
 import type { AssessmentState, Evidence, IdeaProfile, Requirement, SourceLocation } from "../types.js";
 import { extractDocument, type ContentBlock, type ExtractedDocument } from "../ideation/docingest.js";
@@ -26,14 +27,14 @@ interface RawIdea {
   doc: ExtractedDocument;
 }
 
-const IDEA_SPLIT = /\b(?:idea|concept)\s*[-:#]?\s*(\d+)\b/i;
+const IDEA_SPLIT = /\b(?:idea|concept)\s{0,4}[-:#]?\s{0,4}(\d{1,3})\b/i;
 
 /** Split a document into ideas by "Idea N" markers; else treat as a single idea. */
 function splitIntoIdeas(doc: ExtractedDocument): RawIdea[] {
   const markers: number[] = [];
   doc.blocks.forEach((b, i) => {
     if (b.kind === "heading" && IDEA_SPLIT.test(b.text)) markers.push(i);
-    else if (/^\s*(idea|concept)\s*\d+/i.test(b.text)) markers.push(i);
+    else if (/^\s{0,4}(idea|concept)\s{0,4}\d{1,3}/i.test(b.text)) markers.push(i);
   });
   if (markers.length <= 1) {
     const title = deriveTitle(doc);
@@ -41,8 +42,8 @@ function splitIntoIdeas(doc: ExtractedDocument): RawIdea[] {
   }
   const ideas: RawIdea[] = [];
   for (let m = 0; m < markers.length; m++) {
-    const start = markers[m]!;
-    const end = m + 1 < markers.length ? markers[m + 1]! : doc.blocks.length;
+    const start = markers.at(m)!;
+    const end = m + 1 < markers.length ? markers.at(m + 1)! : doc.blocks.length;
     const blocks = doc.blocks.slice(start, end);
     ideas.push({ title: (blocks[0]?.text ?? `Idea ${m + 1}`).slice(0, 80), blocks, doc });
   }
@@ -96,9 +97,10 @@ function findField(
   keywords: RegExp,
 ): { text: string; location: SourceLocation } | null {
   let best: { block: ContentBlock; score: number } | null = null;
-  const global = new RegExp(keywords.source, "gi");
   for (const b of idea.blocks) {
-    const matches = (b.text.match(global) ?? []).length;
+    // Count keyword hits via split (no dynamically-built RegExp). The field
+    // keyword patterns contain no capture groups, so split segments == hits + 1.
+    const matches = b.text.split(keywords).length - 1;
     if (matches > 0 && (!best || matches > best.score)) best = { block: b, score: matches };
   }
   if (!best) return null;
@@ -179,7 +181,11 @@ export async function profileIdeationSubmission(
       /test|qa|review/i,
       /deploy|release|ops|monitor/i,
     ]
-      .map((re, i) => (re.test(allText) ? ["Requirements", "Design", "Development", "Testing/Review", "Deployment/Ops"][i]! : null))
+      .map((re, i) =>
+        re.test(allText)
+          ? ["Requirements", "Design", "Development", "Testing/Review", "Deployment/Ops"].at(i)!
+          : null,
+      )
       .filter((x): x is string => x !== null);
 
     // Evaluation against the five mandatory areas.
@@ -192,9 +198,9 @@ export async function profileIdeationSubmission(
       ["alignment_with_scope", "Alignment with Scope"],
     ];
     for (const [key, label] of critMap) {
-      const hit = findField(idea, sub.submissionId, ideaId, CRITERION_SIGNALS[label]!);
+      const hit = findField(idea, sub.submissionId, ideaId, pick<RegExp>(CRITERION_SIGNALS, label)!);
       const state: AssessmentState = !reliable ? "not_verifiable" : hit ? "complete" : "partial";
-      evaluation[key] = {
+      put(evaluation, key, {
         state,
         reasoning: hit
           ? `Document addresses ${label} at ${hit.location.locator}.`
@@ -202,7 +208,7 @@ export async function profileIdeationSubmission(
             ? `No explicit ${label} discussion found; inferred weak.`
             : "Document extraction unreliable; manual review required.",
         evidence: [ev(label, `${label} signal`, hit?.location ?? null, reliable)],
-      };
+      });
     }
 
     const evidence: Evidence[] = [];

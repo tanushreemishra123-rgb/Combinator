@@ -43,16 +43,16 @@ test("SafeFs rejects symlink escape on read", () => {
   const root = mkdtempSync(join(tmpdir(), "combi-"));
   const inside = join(root, "inside");
   mkdirSync(inside, { recursive: true });
-  const secretDir = mkdtempSync(join(tmpdir(), "secret-"));
-  writeFileSync(join(secretDir, "secret.txt"), "top secret");
+  const outsideDir = mkdtempSync(join(tmpdir(), "outside-"));
+  writeFileSync(join(outsideDir, "data.txt"), "out-of-tree data");
   const link = join(inside, "link");
   try {
-    symlinkSync(secretDir, link);
+    symlinkSync(outsideDir, link);
   } catch {
     return; // symlinks unsupported here; skip
   }
   const fs = new SafeFs({ readRoots: [inside], log: new Logger(false) });
-  assert.throws(() => fs.readText(join(link, "secret.txt")), SourceProtectionError);
+  assert.throws(() => fs.readText(join(link, "data.txt")), SourceProtectionError);
 });
 
 test("integrity diff flags source hash mismatch as critical", () => {

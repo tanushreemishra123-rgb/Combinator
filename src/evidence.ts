@@ -13,6 +13,7 @@
  * Reviewer comments are NOT treated as automatically correct (spec).
  */
 import { stableId } from "./ids.js";
+import { pick } from "./util.js";
 import type { SubmissionReview } from "./reviews.js";
 import type {
   CodeSubmissionProfile,
@@ -33,6 +34,11 @@ const STATE_RANK: Record<AssessmentState, number> = {
   not_verifiable: 1,
   missing: 0,
 };
+
+/** Safe rank lookup (avoids computed member access on the lookup table). */
+function rank(state: AssessmentState): number {
+  return pick<number>(STATE_RANK, state) ?? 0;
+}
 
 function confidenceFor(state: AssessmentState): Confidence {
   if (state === "complete") return "high";
@@ -66,7 +72,7 @@ export function buildCodeMatrix(
     // Recommend by grounded coverage strength per requirement (tie → base suitability),
     // so the strongest source for THIS requirement can differ from the chosen base.
     const ranked = [...cells].sort((a, b) => {
-      const ds = STATE_RANK[b.state] - STATE_RANK[a.state];
+      const ds = rank(b.state) - rank(a.state);
       if (ds !== 0) return ds;
       if (Math.abs(b.score - a.score) > 0.1) return b.score - a.score;
       const pa = profiles.find((p) => p.submissionId === a.sourceId)!.baseSuitability.score;
@@ -74,12 +80,12 @@ export function buildCodeMatrix(
       return pb - pa;
     });
     const best = ranked[0];
-    const recommendedSource = best && STATE_RANK[best.state] > 0 ? best.sourceId : null;
+    const recommendedSource = best && rank(best.state) > 0 ? best.sourceId : null;
 
     // Conflict: review score high but source evidence weak for this requirement.
     for (const cell of cells) {
       const rev = reviews.get(cell.sourceId);
-      if (rev?.finalScore != null && rev.finalScore >= 90 && STATE_RANK[cell.state] <= 1) {
+      if (rev?.finalScore != null && rev.finalScore >= 90 && rank(cell.state) <= 1) {
         conflicts.push({
           id: stableId.conflict(challengeId, "review_vs_source", `${req.id}:${cell.sourceId}`),
           type: "review_vs_source",
@@ -130,22 +136,22 @@ export function buildIdeationMatrix(
   };
 
   const rows: MatrixRow[] = evaluationRequirements.map((req) => {
-    const key = critKeyByTitle[req.title];
+    const key = pick<keyof IdeaProfile["evaluation"]>(critKeyByTitle, req.title);
     const cells: MatrixCell[] = ideas.map((idea) => {
-      const e = key ? idea.evaluation[key] : undefined;
+      const e = key ? pick<IdeaProfile["evaluation"][typeof key]>(idea.evaluation, key) : undefined;
       const state = e?.state ?? "not_verifiable";
       return {
         sourceId: idea.ideaId,
         state,
-        score: STATE_RANK[state],
+        score: rank(state),
         evidence: e?.evidence ?? [],
         confidence: confidenceFor(state),
         compatibilityRisk: "low",
       };
     });
-    const ranked = [...cells].sort((a, b) => STATE_RANK[b.state] - STATE_RANK[a.state]);
+    const ranked = [...cells].sort((a, b) => rank(b.state) - rank(a.state));
     const best = ranked[0];
-    const recommendedSource = best && STATE_RANK[best.state] > 1 ? best.sourceId : null;
+    const recommendedSource = best && rank(best.state) > 1 ? best.sourceId : null;
     return {
       requirementId: req.id,
       requirementTitle: req.title,

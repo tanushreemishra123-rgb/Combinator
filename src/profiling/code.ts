@@ -18,6 +18,7 @@ import type { SafeFs } from "../fs-safe.js";
 import type { DiscoveredChallenge, DiscoveredSubmission } from "../ingest.js";
 import { pkgRelative } from "../ingest.js";
 import { stableId } from "../ids.js";
+import { pick } from "../util.js";
 import type { LlmAdapter } from "../llm/adapter.js";
 import type {
   AssessmentState,
@@ -105,7 +106,7 @@ function discoverBuildCommands(fs: SafeFs, sub: DiscoveredSubmission): { command
         const pkg = JSON.parse(fs.readText(file));
         const scripts = pkg.scripts ?? {};
         for (const key of ["build", "start", "dev"]) {
-          if (scripts[key]) {
+          if (pick(scripts, key)) {
             commands.push(`npm run ${key}  (${relative(sub.rootPath, dirname(file)) || "."})`);
           }
         }

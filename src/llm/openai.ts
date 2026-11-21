@@ -5,6 +5,7 @@
 import OpenAI from "openai";
 import type { CombinatorConfig } from "../config.js";
 import { estimateTokens, type LlmAdapter, type LlmRequest, type LlmResponse } from "./adapter.js";
+import { groundingToText } from "../util.js";
 
 export class OpenAiAdapter implements LlmAdapter {
   readonly name = "openai";
@@ -32,10 +33,8 @@ export class OpenAiAdapter implements LlmAdapter {
     let retries = 0;
     let lastErr: unknown;
     const grounded = req.grounding
-      ? `${req.user}\n\nGrounding (stay strictly faithful; do not add facts):\n${JSON.stringify(
+      ? `${req.user}\n\nGrounding (stay strictly faithful; do not add facts):\n${groundingToText(
           req.grounding,
-          null,
-          2,
         )}`
       : req.user;
     while (retries <= this.cfg.maxRetries) {
@@ -44,6 +43,9 @@ export class OpenAiAdapter implements LlmAdapter {
           model: this.model,
           temperature: this.cfg.temperature,
           max_tokens: this.cfg.maxTokens,
+          // Stable per-tool end-user identifier (abuse-monitoring best practice);
+          // carries no personal data.
+          user: "tc-combinator",
           messages: [
             { role: "system", content: req.system },
             { role: "user", content: grounded },

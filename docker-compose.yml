@@ -24,7 +24,8 @@ services:
       COMBINATOR_LLM_PROVIDER: ${COMBINATOR_LLM_PROVIDER:-mock}
       COMBINATOR_UI_PORT: 4600
     ports:
-      - "4600:4600"
+      # Bind to loopback only — the review UI is a local tool, not a public service.
+      - "127.0.0.1:4600:4600"
     volumes:
       - ./starter-pack:/app/starter-pack:ro
       - ./workspace:/app/workspace

@@ -28,4 +28,9 @@ ENV COMBINATOR_LLM_PROVIDER=mock \
     COMBINATOR_PACK=/app/starter-pack \
     COMBINATOR_OUT=/app/workspace
 EXPOSE 4600
+
+# Run as the built-in unprivileged "node" user (never root).
+RUN chown -R node:node /app
+USER node
+
 CMD ["node", "dist/server.js"]

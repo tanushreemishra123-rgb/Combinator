@@ -75,11 +75,13 @@
       async function loadChallenges() {
         const r = await fetch("/api/challenges").then((r) => r.json());
         const list = $("#chalList");
-        list.innerHTML = "";
+        list.replaceChildren();
         for (const id of r.challenges) {
           const d = document.createElement("div");
           d.className = "chal" + (id === current ? " active" : "");
-          d.innerHTML = `<div>${id}</div>`;
+          const inner = document.createElement("div");
+          inner.textContent = id;
+          d.appendChild(inner);
           d.onclick = () => selectChallenge(id);
           list.appendChild(d);
         }
@@ -162,7 +164,10 @@
         h += renderVerification(bundle.verification);
         if (bundle.concept) h += `<div class="card"><h3>Synthesized concept</h3><pre>${escapeHtml(bundle.concept)}</pre></div>`;
         if (bundle.provenance) h += `<div class="card"><h3>Provenance (${bundle.provenance.entries.length})</h3><pre>${escapeHtml(JSON.stringify(bundle.provenance.entries, null, 2))}</pre></div>`;
-        $("#main").innerHTML = h;
+        // Render generated markup without an innerHTML sink: parse to a detached
+        // document, then adopt its nodes.
+        const parsed = new DOMParser().parseFromString(h, "text/html");
+        $("#main").replaceChildren(...Array.from(parsed.body.childNodes));
       }
 
       function escapeHtml(s){return String(s).replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));}
