@@ -26,6 +26,7 @@ import { assembleCandidate } from "./codemode/transplant.js";
 import { detectContradictions, synthesizeConcept } from "./ideation/synthesize.js";
 import { createAdapter } from "./llm/adapter.js";
 import { hashTree, diffHashes } from "./integrity.js";
+import { validateProfileEvidence } from "./evidence-validation.js";
 import type {
   CodeSubmissionProfile,
   IdeaProfile,
@@ -191,6 +192,12 @@ export async function runChallenge(
   // Requirement matrix (JSON + Markdown).
   writeJsonRel(join(wsDir, "requirement-matrix.json"), matrix);
   fs.writeText(join(wsDir, "requirement-matrix.md"), matrixToMarkdown(matrix, ch.title));
+  // Evidence references are validated against the actually discovered inputs.
+  // Invalid locations are reported; they are never silently treated as support.
+  writeJsonRel(
+    join(wsDir, "evidence-validation.json"),
+    validateProfileEvidence(fs, ch, codeProfiles, ideaProfiles),
+  );
 
   // Provenance, contradictions, verification.
   writeJsonRel(join(wsDir, "provenance.json"), provenance);
@@ -236,6 +243,7 @@ export async function runChallenge(
       "active-review-context.json",
       "review-context-reconciliation.json",
       "source-location-map.json",
+      "evidence-validation.json",
       "overview.md",
       "requirement-matrix.json",
       "requirement-matrix.md",

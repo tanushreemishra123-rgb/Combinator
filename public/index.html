@@ -50,6 +50,7 @@
       .st{font-size:11px; padding:2px 8px; border-radius:999px; background:var(--chip);}
       pre{white-space:pre-wrap; background:var(--panel2); padding:12px; border-radius:8px; font-size:12.5px; overflow:auto; max-height:420px;}
       .evi{font-size:12px; color:var(--muted); margin-top:4px;}
+      .evidence-button{font:inherit; color:var(--accent); padding:0; border:0; background:transparent; text-decoration:underline;}
       .spin{color:var(--muted); font-size:12px;}
       a{color:var(--accent);}
     </style>
@@ -108,12 +109,29 @@
           h += `<tr><td>${escapeHtml(row.requirementTitle)}<div class="evi">${escapeHtml(row.requirementId)}</div></td>`;
           for (const s of sources) {
             const c = row.cells.find((c) => c.sourceId === s);
-            h += `<td>${c ? `<span class="state-${c.state}">${c.state}</span> <span class="muted">${c.score ?? ""}</span>` : "—"}</td>`;
+            h += `<td>${c ? `<button class="evidence-button" onclick="showMatrixEvidence(${m.rows.indexOf(row)},'${escapeHtml(s)}')"><span class="state-${c.state}">${c.state}</span> <span class="muted">${c.score ?? ""}</span></button>` : "—"}</td>`;
           }
           h += `<td><b>${escapeHtml(row.recommendedSource ?? "—")}</b></td><td class="muted">${escapeHtml(row.confidence)}</td></tr>`;
         }
         h += `</tbody></table></div>`;
         return h;
+      }
+
+      function showMatrixEvidence(rowIndex, sourceId) {
+        const row = bundle?.matrix?.rows?.[rowIndex];
+        const cell = row?.cells?.find(c => c.sourceId === sourceId);
+        if (!row || !cell) return;
+        const panel = document.createElement("div");
+        panel.className = "card";
+        const heading = document.createElement("h3");
+        heading.textContent = `Evidence — ${row.requirementTitle} / ${sourceId}`;
+        const pre = document.createElement("pre");
+        pre.textContent = JSON.stringify({ reasoning: row.reasoning, confidence: row.confidence, evidence: cell.evidence }, null, 2);
+        panel.append(heading, pre);
+        const existing = document.getElementById("evidence-panel");
+        panel.id = "evidence-panel";
+        if (existing) existing.replaceWith(panel); else $("#main").prepend(panel);
+        panel.scrollIntoView({ behavior: "smooth", block: "start" });
       }
 
       function renderDecisions(dw) {
@@ -123,7 +141,7 @@
           const opts = d.options.map((o) => `<option value="${escapeHtml(o.id)}">${escapeHtml(o.label)}</option>`).join("");
           h += `<div class="decision">
             <div class="row"><span class="title">${escapeHtml(d.title)}</span> ${stateTag(d.state)} <span class="muted">${escapeHtml(d.kind)}</span></div>
-            <div class="evi">${escapeHtml(d.reasoning)}</div>
+            <div class="evi">Requirement: ${escapeHtml(d.requirementId || "candidate-wide")} · compatibility risk: ${escapeHtml(d.risk)}<br>${escapeHtml(d.reasoning)}</div>
             <div class="btns">
               <button class="p" onclick="decide('${d.id}','accepted')">Accept</button>
               <button onclick="decide('${d.id}','rejected')">Reject</button>
@@ -131,12 +149,30 @@
               <select data-alt="${d.id}">${opts}</select>
               <button onclick="decide('${d.id}','blocked')">Block</button>
               <button onclick="decide('${d.id}','manual_review')">Manual</button>
+              <button onclick="showDecisionEvidence(${dw.decisions.indexOf(d)})">Evidence</button>
             </div>
+            <input id="comment-${d.id}" type="text" placeholder="Optional Copilot comment" aria-label="Copilot comment for ${escapeHtml(d.title)}">
             ${d.copilotComment ? `<div class="evi">💬 ${escapeHtml(d.copilotComment)}</div>` : ""}
           </div>`;
         }
         h += `</div>`;
         return h;
+      }
+
+      function showDecisionEvidence(index) {
+        const decision = bundle?.decisions?.decisions?.[index];
+        if (!decision) return;
+        const panel = document.createElement("div");
+        panel.className = "card";
+        panel.id = "evidence-panel";
+        const heading = document.createElement("h3");
+        heading.textContent = `Decision evidence — ${decision.title}`;
+        const pre = document.createElement("pre");
+        pre.textContent = JSON.stringify({ requirementId: decision.requirementId, options: decision.options }, null, 2);
+        panel.append(heading, pre);
+        const existing = document.getElementById("evidence-panel");
+        if (existing) existing.replaceWith(panel); else $("#main").prepend(panel);
+        panel.scrollIntoView({ behavior: "smooth", block: "start" });
       }
 
       function renderVerification(v) {
@@ -189,6 +225,12 @@
         return `<div class="card"><h3>Contradictions and trade-offs</h3><pre>${escapeHtml(JSON.stringify(items, null, 2))}</pre></div>`;
       }
 
+      function renderEvidenceValidation(report) {
+        if (!report) return "";
+        const tone = report.unresolved ? "warn" : "good";
+        return `<div class="card"><h3>Evidence validation <span class="tag ${tone}">${report.unresolved || 0} unresolved</span></h3><p class="evi">${report.valid || 0} valid · ${report.locatorOnly || 0} document locators · ${report.total || 0} checked.</p>${report.unresolved ? `<pre>${escapeHtml(JSON.stringify(report.findings.filter(f => f.state === "unresolved"), null, 2))}</pre>` : ""}</div>`;
+      }
+
       function render() {
         if (!bundle) return;
         const m = bundle.manifest || {};
@@ -203,6 +245,7 @@
         h += renderReviewContext(bundle.reviewContextStatus, bundle.activeReviewContext, bundle.reconciliation, bundle.sourceLocationMap);
         h += renderProfiles(bundle.profiles);
         h += renderMatrix(bundle.matrix);
+        h += renderEvidenceValidation(bundle.evidenceValidation);
         h += renderContradictions(bundle.contradictions);
         h += renderDecisions(bundle.decisions);
         h += renderVerification(bundle.verification);
@@ -217,7 +260,7 @@
       function escapeHtml(s){return String(s).replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));}
 
       async function decide(decisionId, state, selectedOptionId) {
-        const comment = state === "blocked" || state === "manual_review" ? prompt("Comment (optional):") || undefined : undefined;
+        const comment = document.getElementById("comment-" + decisionId)?.value || undefined;
         busy(true);
         const res = await fetch("/api/decide/" + current, {
           method: "POST", headers: { "content-type": "application/json" },

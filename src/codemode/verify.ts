@@ -16,36 +16,69 @@ import { execFile } from "node:child_process";
 import { existsSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 import type { VerificationStep } from "../types.js";
+import { pick } from "../util.js";
 
 export interface ExecOptions {
   enabled: boolean;
   cwd: string;
   timeoutMs: number;
+  /** Audit hook supplied by the assembly pipeline; never persisted in a workspace object. */
+  audit?: (detail: string) => void;
+}
+
+/**
+ * Child candidates never inherit the host process environment. In particular,
+ * LLM, cloud and token credentials are not available to untrusted builds/tests.
+ * Network containment is performed by a container runner when configured; on a
+ * host-only run we label the policy instead of claiming kernel-level isolation.
+ */
+function restrictedEnvironment(): NodeJS.ProcessEnv {
+  const allowed = new Set([
+    "PATH", "SYSTEMROOT", "COMSPEC", "PATHEXT", "TEMP", "TMP", "WINDIR",
+    "PROGRAMFILES", "PROGRAMFILES(X86)", "APPDATA", "LOCALAPPDATA", "HOME",
+    "USERPROFILE", "NODE_PATH",
+  ]);
+  const environment: NodeJS.ProcessEnv = {};
+  for (const [key, value] of Object.entries(process.env)) {
+    if (allowed.has(key.toUpperCase()) && value !== undefined) Reflect.set(environment, key, value);
+  }
+  // Inform cooperating tooling; this is not represented as a network sandbox.
+  Reflect.set(environment, "COMBINATOR_NETWORK_POLICY", "restricted-host");
+  Reflect.set(environment, "COMBINATOR_CHILD_PROCESS", "1");
+  return environment;
 }
 
 export function runCommand(
   cmd: string,
   args: string[],
-  opts: { cwd: string; timeoutMs: number },
+  opts: Pick<ExecOptions, "cwd" | "timeoutMs" | "audit">,
 ): Promise<{ code: number | null; stdout: string; stderr: string; timedOut: boolean }> {
   return new Promise((resolve) => {
     // npm is a .cmd shim on Windows and cannot be started by execFile directly.
     // Invoke it through cmd.exe while keeping the outer process shell-free.
     const windowsNpm = process.platform === "win32" && (cmd === "npm" || cmd === "npm.cmd");
-    const executable = windowsNpm ? process.env.ComSpec || "cmd.exe" : cmd;
+    const executable = windowsNpm ? pick<string>(process.env, "ComSpec") || "cmd.exe" : cmd;
     const executableArgs = windowsNpm ? ["/d", "/s", "/c", "npm", ...args] : args;
     const child = execFile(
       executable,
       executableArgs,
-      { cwd: opts.cwd, timeout: opts.timeoutMs, maxBuffer: 8 * 1024 * 1024, shell: false },
+      {
+        cwd: opts.cwd,
+        timeout: opts.timeoutMs,
+        maxBuffer: 8 * 1024 * 1024,
+        shell: false,
+        env: restrictedEnvironment(),
+      },
       (err, stdout, stderr) => {
         const timedOut = !!err && (err as NodeJS.ErrnoException).code === "ETIMEDOUT";
-        resolve({
+        const result = {
           code: child.exitCode,
           stdout: String(stdout).slice(-4000),
           stderr: String(stderr).slice(-4000),
           timedOut,
-        });
+        };
+        opts.audit?.(`command=${cmd} ${args.join(" ")}; cwd=${opts.cwd}; exit=${result.code}; timeout=${result.timedOut}`);
+        resolve(result);
       },
     );
   });
@@ -153,7 +186,11 @@ export async function verifyCodeCandidate(input: CodeVerifyInput): Promise<{
       steps.push({ name: d.name, state: "not_verifiable", detail: "No runnable package.json was found outside evidence-only transplant directories." });
       continue;
     }
-    const r = await runCommand(d.cmd[0], d.cmd[1], { cwd: appDir, timeoutMs: input.exec.timeoutMs });
+    const r = await runCommand(d.cmd[0], d.cmd[1], {
+      cwd: appDir,
+      timeoutMs: input.exec.timeoutMs,
+      audit: input.exec.audit,
+    });
     steps.push({
       name: d.name,
       command: `${d.cmd[0]} ${d.cmd[1].join(" ")}`,

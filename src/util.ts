@@ -19,7 +19,16 @@ export function pick<T = unknown>(obj: object, key: PropertyKey): T | undefined 
  * paths". Deterministic.
  */
 export function relativizePaths<T>(value: T, roots: string[]): T {
-  const norm = roots.filter(Boolean).map((r) => (r.endsWith("/") ? r : r + "/"));
+  // A workspace may be generated on Windows and reviewed elsewhere. Keep both
+  // native and slash-normalized prefixes so generated JSON never leaks an
+  // absolute machine path simply because its separator differs from "/".
+  const norm = roots
+    .filter(Boolean)
+    .flatMap((r) => {
+      const native = r.endsWith("/") || r.endsWith("\\") ? r : r + "\\";
+      const portable = r.replace(/\\/g, "/").replace(/\/$/, "") + "/";
+      return [native, portable];
+    });
   const walk = (v: unknown): unknown => {
     if (typeof v === "string") {
       let s = v;

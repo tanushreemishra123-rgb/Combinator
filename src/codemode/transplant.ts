@@ -83,6 +83,10 @@ export async function assembleCandidate(
 
   const entries: ProvenanceEntry[] = [];
   const verificationCommands = fixtureCommands(fs, challenge);
+  const auditedExec: ExecOptions = {
+    ...exec,
+    audit: (detail) => log.recordAudit({ op: "exec", target: "combined-solution/", detail }),
+  };
   const updatedDecisions = decisions.decisions.map((d) => ({ ...d }));
 
   // ── Base ─────────────────────────────────────────────────────────────────
@@ -101,7 +105,7 @@ export async function assembleCandidate(
       rolledBack: [],
       sourceIntegrityOk,
       fixtureCommands: verificationCommands,
-      exec,
+      exec: auditedExec,
     });
     // A pending decision is awaiting Copilot action, not a failed candidate.
     // Preserve it so the UI/CLI can accept or choose an alternative and then
@@ -195,7 +199,7 @@ export async function assembleCandidate(
         rolledBack,
         sourceIntegrityOk,
         fixtureCommands: verificationCommands,
-        exec,
+        exec: auditedExec,
       });
       if (check.overall === "failed") {
         fs.removeInWritable(destBase);
@@ -218,7 +222,7 @@ export async function assembleCandidate(
     rolledBack,
     sourceIntegrityOk,
     fixtureCommands: verificationCommands,
-    exec,
+    exec: auditedExec,
   });
 
   return {

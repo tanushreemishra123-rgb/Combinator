@@ -70,6 +70,7 @@ function workspaceBundle(id: string): unknown {
     activeReviewContext: read("active-review-context.json"),
     reconciliation: read("review-context-reconciliation.json"),
     sourceLocationMap: read("source-location-map.json"),
+    evidenceValidation: read("evidence-validation.json"),
     profiles,
     matrix: read("requirement-matrix.json"),
     decisions: read("decisions.json"),
