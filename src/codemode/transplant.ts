@@ -35,6 +35,22 @@ export interface AssembleResult {
   updatedDecisions: Decision[];
 }
 
+function fixtureCommands(fs: SafeFs, challenge: DiscoveredChallenge): Partial<Record<"install" | "build" | "start" | "test" | "smokeTest", string>> {
+  if (!challenge.verificationConfigPath) return {};
+  try {
+    const parsed = JSON.parse(fs.readText(challenge.verificationConfigPath)) as { commands?: Record<string, unknown> };
+    const commands = parsed.commands ?? {};
+    return Object.fromEntries(
+      ["install", "build", "start", "test", "smokeTest"].flatMap((key) => {
+        const value = commands[key];
+        return typeof value === "string" ? [[key, value]] : [];
+      }),
+    ) as Partial<Record<"install" | "build" | "start" | "test" | "smokeTest", string>>;
+  } catch {
+    return {};
+  }
+}
+
 function acceptedOptionSourceId(d: Decision): string | null {
   if (d.state === "accepted") {
     const rec = d.options.find((o) => o.id === d.recommendation);
@@ -65,6 +81,7 @@ export async function assembleCandidate(
   fs.mkdirp(candidateDir);
 
   const entries: ProvenanceEntry[] = [];
+  const verificationCommands = fixtureCommands(fs, challenge);
   const updatedDecisions = decisions.decisions.map((d) => ({ ...d }));
 
   // ── Base ─────────────────────────────────────────────────────────────────
@@ -82,6 +99,7 @@ export async function assembleCandidate(
       appliedTransplants: [],
       rolledBack: [],
       sourceIntegrityOk,
+      fixtureCommands: verificationCommands,
       exec,
     });
     // A pending decision is awaiting Copilot action, not a failed candidate.
@@ -175,6 +193,7 @@ export async function assembleCandidate(
         appliedTransplants: [...applied, d.requirementId ?? donorId],
         rolledBack,
         sourceIntegrityOk,
+        fixtureCommands: verificationCommands,
         exec,
       });
       if (check.overall === "failed") {
@@ -197,6 +216,7 @@ export async function assembleCandidate(
     appliedTransplants: applied,
     rolledBack,
     sourceIntegrityOk,
+    fixtureCommands: verificationCommands,
     exec,
   });
 

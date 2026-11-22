@@ -17,7 +17,7 @@ import { fileURLToPath } from "node:url";
 import { loadConfig } from "./config.js";
 import { SafeFs } from "./fs-safe.js";
 import { Logger } from "./logger.js";
-import { loadManifest } from "./ingest.js";
+import { bundledSpecificationsDir, loadManifest } from "./ingest.js";
 import { resolvePackRoot } from "./materialize.js";
 import { runChallenge } from "./orchestrator.js";
 import { applyDecisionChange } from "./decisions.js";
@@ -52,12 +52,25 @@ function listChallenges(): string[] {
 function workspaceBundle(id: string): unknown {
   const dir = join(OUT, id);
   const read = (f: string) => readJsonSafe(join(dir, f));
+  const submissionsDir = join(dir, "submissions");
+  const profiles = existsSync(submissionsDir)
+    ? readdirSync(submissionsDir)
+        .filter((name) => statSync(join(submissionsDir, name)).isDirectory())
+        .map((submissionId) => ({
+          submissionId,
+          profile: readJsonSafe(join(submissionsDir, submissionId, "profile.json")),
+          ideas: readJsonSafe(join(submissionsDir, submissionId, "ideas.json")),
+        }))
+    : [];
   const conceptPath = join(dir, "synthesized-concept", "concept.md");
   return {
     manifest: read("workspace-manifest.json"),
     overview: existsSync(join(dir, "overview.md")) ? readFileSync(join(dir, "overview.md"), "utf8") : null,
     reviewContextStatus: read("review-context-status.json"),
+    activeReviewContext: read("active-review-context.json"),
     reconciliation: read("review-context-reconciliation.json"),
+    sourceLocationMap: read("source-location-map.json"),
+    profiles,
     matrix: read("requirement-matrix.json"),
     decisions: read("decisions.json"),
     provenance: read("provenance.json"),
@@ -75,7 +88,7 @@ function send(res: import("node:http").ServerResponse, code: number, body: unkno
 }
 
 async function regenerate(id: string, dw: DecisionWorkspace) {
-  const fs = new SafeFs({ readRoots: [PACK], log: new Logger(false) });
+  const fs = new SafeFs({ readRoots: [PACK, OUT, bundledSpecificationsDir()], log: new Logger(false) });
   const manifest = loadManifest(fs, PACK);
   const mc = manifest.challenges.find((c) => c.challengeId === id);
   if (!mc) throw new Error(`unknown challenge ${id}`);

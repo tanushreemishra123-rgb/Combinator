@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "1.0.0",
+  "source": "Bundled visible-fixture snapshot of the official challenge specification",
+  "challengeId": "AI_WORKFLOW_PUZZLE_BUILDER",
+  "title": "AI Workflow Puzzle Builder",
+  "challengeMode": "code",
+  "requirements": [
+    { "id": "REQ_inxdtg", "title": "Visual Workflow Builder", "priority": "high" },
+    { "id": "REQ_77on11", "title": "Pre-Seeded Workflow Puzzles", "priority": "high" },
+    { "id": "REQ_nb1r3o", "title": "Workflow Execution and Step Trace", "priority": "high" },
+    { "id": "REQ_ixo2z1", "title": "Failure Simulation", "priority": "high" },
+    { "id": "REQ_pk38i1", "title": "Recovery and Safe Failure Handling", "priority": "high" },
+    { "id": "REQ_z79n6r", "title": "Output Validation", "priority": "high" },
+    { "id": "REQ_cuzsd2", "title": "Human Review and Approval", "priority": "medium" },
+    { "id": "REQ_63bstt", "title": "Reliability Feedback", "priority": "medium" },
+    { "id": "REQ_xwax2o", "title": "Local Execution, Mock AI, and Documentation", "priority": "high" }
+  ]
+}

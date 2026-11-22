@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0.0",
+  "source": "Bundled visible-fixture snapshot of the official challenge specification",
+  "challengeId": "AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC",
+  "title": "Agentic AI and Community Enablement in SDLC",
+  "challengeMode": "ideation",
+  "objectives": [
+    "Propose Agentic AI ideas for planning, analysis, design, implementation, testing, deployment, or maintenance.",
+    "Improve operational efficiency, productivity, or competitive advantage for Topcoder, Wipro, the community, or customers.",
+    "Improve the community's ability to deliver work effectively through the platform.",
+    "Provide a useful toolbox of agents for developers, designers, and other participants."
+  ],
+  "acceptedFormats": ["docx", "pdf", "pptx"],
+  "maximumIdeasPerSubmission": 3,
+  "evaluationCriteria": ["Originality", "Feasibility", "Scalability", "Impact Potential", "Alignment with Scope"]
+}

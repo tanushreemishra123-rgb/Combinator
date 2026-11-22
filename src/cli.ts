@@ -5,6 +5,7 @@
  *   combinator list   --pack <dir>
  *   combinator run    <CHALLENGE_ID> --pack <dir> [--out <dir>] [--verify-exec] [--exec-timeout <ms>]
  *   combinator run-all --pack <dir> [--out <dir>] [--verify-exec]
+ *                      [--spec-dir <directory>]
  *   combinator decide <CHALLENGE_ID> --id <decisionId> --state <state> [--option <optId>] [--comment "..."] --pack <dir>
  *   combinator approve-recommendations <CHALLENGE_ID> [--comment "..."] --pack <dir>
  *
@@ -43,6 +44,10 @@ async function main() {
     outDir,
     verifyExec: has("--verify-exec", rest),
     execTimeoutMs: Number(arg(["--exec-timeout"], rest, "120000")),
+    specificationDir: (() => {
+      const p = arg(["--spec-dir"], rest, process.env.COMBINATOR_SPEC_DIR);
+      return p ? resolve(p) : undefined;
+    })(),
   };
 
   switch (cmd) {
@@ -146,6 +151,7 @@ async function main() {
           "",
           "Flags: --pack <dir> (default ./starter-pack), --out <dir> (default ./workspace),",
           "       --verify-exec (run dynamic build/test steps), --exec-timeout <ms>",
+          "       --spec-dir <directory> (optional final-spec files named <challenge-id>.json/.md/.txt)",
         ].join("\n"),
       );
   }

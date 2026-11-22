@@ -6,7 +6,8 @@
  * manifest drives which challenges and submissions exist, their modes, and where
  * review context lives. Path traversal / escapes are rejected by SafeFs.
  */
-import { resolve, join, relative } from "node:path";
+import { resolve, join, relative, dirname } from "node:path";
+import { fileURLToPath } from "node:url";
 import type { SafeFs } from "./fs-safe.js";
 import { materializeSubmission } from "./materialize.js";
 import type { ChallengeMode } from "./types.js";
@@ -17,6 +18,8 @@ export interface ManifestChallenge {
   mode: ChallengeMode;
   path: string;
   reviewContextRef: string;
+  /** Optional final specification supplied with this starter pack. */
+  specificationRef?: string;
   submissionIds: string[];
 }
 
@@ -44,11 +47,22 @@ export interface DiscoveredChallenge {
   mode: ChallengeMode;
   packageRoot: string; // absolute
   challengeContextPath: string | null;
+  /**
+   * The actual final challenge specification selected under the documented
+   * precedence policy. This is deliberately distinct from challenge-context.
+   */
+  specificationPath: string | null;
+  specificationSource: "pack_provided" | "explicit_config" | "bundled_visible_snapshot" | null;
   reviewContextPath: string | null; // absolute, resolved from ref (may be absent)
   submissions: DiscoveredSubmission[];
   reviewsDir: string | null;
   verificationConfigPath: string | null;
   integrityPath: string | null;
+}
+
+/** Bundled snapshots are only a reproducible fallback for the four visible fixtures. */
+export function bundledSpecificationsDir(): string {
+  return resolve(dirname(fileURLToPath(import.meta.url)), "..", "specifications");
 }
 
 export class IngestError extends Error {}
@@ -86,10 +100,51 @@ function resolveReviewContext(packageRoot: string, ref: string, fs: SafeFs): str
   return fs.exists(abs) ? abs : null;
 }
 
+function firstExisting(fs: SafeFs, candidates: string[]): string | null {
+  return candidates.find((p) => fs.exists(p)) ?? null;
+}
+
+/**
+ * Final-specification precedence published by the challenge Copilot:
+ *  1) pack-provided specification, 2) explicit configured directory,
+ *  3) bundled snapshot for the visible fixtures, 4) no specification (error).
+ */
+function resolveSpecification(
+  fs: SafeFs,
+  packageRoot: string,
+  mc: ManifestChallenge,
+  paths: Record<string, string>,
+  specificationDir?: string,
+): Pick<DiscoveredChallenge, "specificationPath" | "specificationSource"> {
+  const packRef = mc.specificationRef ?? paths.specification ?? paths.spec ?? "";
+  const fromPack = packRef ? resolve(packageRoot, packRef) : null;
+  if (fromPack && fs.exists(fromPack)) {
+    return { specificationPath: fromPack, specificationSource: "pack_provided" };
+  }
+
+  if (specificationDir) {
+    const configured = firstExisting(fs, [
+      join(specificationDir, `${mc.challengeId}.json`),
+      join(specificationDir, `${mc.challengeId}.md`),
+      join(specificationDir, `${mc.challengeId}.txt`),
+    ]);
+    if (configured) return { specificationPath: configured, specificationSource: "explicit_config" };
+  }
+
+  const bundled = firstExisting(fs, [
+    join(bundledSpecificationsDir(), `${mc.challengeId}.json`),
+    join(bundledSpecificationsDir(), `${mc.challengeId}.md`),
+    join(bundledSpecificationsDir(), `${mc.challengeId}.txt`),
+  ]);
+  if (bundled) return { specificationPath: bundled, specificationSource: "bundled_visible_snapshot" };
+  return { specificationPath: null, specificationSource: null };
+}
+
 export function discoverChallenge(
   fs: SafeFs,
   packRoot: string,
   mc: ManifestChallenge,
+  specificationDir?: string,
 ): DiscoveredChallenge {
   const packageRoot = resolve(packRoot, mc.path);
   if (!fs.exists(packageRoot)) throw new IngestError(`challenge path missing: ${mc.path}`);
@@ -138,12 +193,15 @@ export function discoverChallenge(
   const verCfg = join(verificationDir, "verification-config.json");
   const integ = join(integrityDir, "source-hashes.json");
 
+  const specification = resolveSpecification(fs, packageRoot, mc, paths, specificationDir);
+
   return {
     challengeId: mc.challengeId,
     title: mc.title,
     mode: mc.mode,
     packageRoot,
     challengeContextPath: fs.exists(ccPath) ? ccPath : null,
+    ...specification,
     reviewContextPath: resolveReviewContext(packageRoot, mc.reviewContextRef, fs),
     submissions,
     reviewsDir: fs.exists(reviewsDir) ? reviewsDir : null,

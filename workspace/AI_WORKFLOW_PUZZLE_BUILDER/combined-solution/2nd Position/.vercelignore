@@ -1,7 +1,0 @@
-node_modules
-dist
-docs/recordings
-scripts
-.claude
-*.log
-.DS_Store

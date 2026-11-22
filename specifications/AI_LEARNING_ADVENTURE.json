@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "1.0.0",
+  "source": "Bundled visible-fixture snapshot of the official challenge specification",
+  "challengeId": "AI_LEARNING_ADVENTURE",
+  "title": "AI Learning Adventure",
+  "challengeMode": "code",
+  "requirements": [
+    { "id": "REQ_kk9ov4", "title": "Browser-accessible learning adventure landing page", "priority": "high" },
+    { "id": "REQ_6gf9j9", "title": "Pre-seeded AI learning missions", "priority": "high" },
+    { "id": "REQ_jj1gly", "title": "Mission practice activities", "priority": "high" },
+    { "id": "REQ_ittjzz", "title": "Personalized AI tutor", "priority": "high" },
+    { "id": "REQ_7xz6vy", "title": "AI Only Mode and AI feedback flow", "priority": "high" },
+    { "id": "REQ_la65cg", "title": "Progress tracking and gamification", "priority": "medium" },
+    { "id": "REQ_tsgt7r", "title": "Content management for missions and questions", "priority": "medium" },
+    { "id": "REQ_1s0p7i", "title": "Seed content and local review reliability", "priority": "high" },
+    { "id": "REQ_eb283y", "title": "AI fallback and documentation", "priority": "high" }
+  ]
+}

@@ -102,15 +102,15 @@
         if (!m) return "";
         const sources = [...new Set(m.rows.flatMap((r) => r.cells.map((c) => c.sourceId)))];
         let h = `<div class="card"><h3>Requirement matrix <span class="muted">(${m.mode})</span></h3><table><thead><tr><th>Requirement</th>`;
-        for (const s of sources) h += `<th>${s}</th>`;
+        for (const s of sources) h += `<th>${escapeHtml(s)}</th>`;
         h += `<th>Recommended</th><th>Conf.</th></tr></thead><tbody>`;
         for (const row of m.rows) {
-          h += `<tr><td>${row.requirementTitle}<div class="evi">${row.requirementId}</div></td>`;
+          h += `<tr><td>${escapeHtml(row.requirementTitle)}<div class="evi">${escapeHtml(row.requirementId)}</div></td>`;
           for (const s of sources) {
             const c = row.cells.find((c) => c.sourceId === s);
             h += `<td>${c ? `<span class="state-${c.state}">${c.state}</span> <span class="muted">${c.score ?? ""}</span>` : "—"}</td>`;
           }
-          h += `<td><b>${row.recommendedSource ?? "—"}</b></td><td class="muted">${row.confidence}</td></tr>`;
+          h += `<td><b>${escapeHtml(row.recommendedSource ?? "—")}</b></td><td class="muted">${escapeHtml(row.confidence)}</td></tr>`;
         }
         h += `</tbody></table></div>`;
         return h;
@@ -120,10 +120,10 @@
         if (!dw) return "";
         let h = `<div class="card"><h3>Copilot decisions <span class="muted">(${dw.decisions.length})</span></h3>`;
         for (const d of dw.decisions) {
-          const opts = d.options.map((o) => `<option value="${o.id}">${o.label}</option>`).join("");
+          const opts = d.options.map((o) => `<option value="${escapeHtml(o.id)}">${escapeHtml(o.label)}</option>`).join("");
           h += `<div class="decision">
-            <div class="row"><span class="title">${d.title}</span> ${stateTag(d.state)} <span class="muted">${d.kind}</span></div>
-            <div class="evi">${d.reasoning}</div>
+            <div class="row"><span class="title">${escapeHtml(d.title)}</span> ${stateTag(d.state)} <span class="muted">${escapeHtml(d.kind)}</span></div>
+            <div class="evi">${escapeHtml(d.reasoning)}</div>
             <div class="btns">
               <button class="p" onclick="decide('${d.id}','accepted')">Accept</button>
               <button onclick="decide('${d.id}','rejected')">Reject</button>
@@ -132,7 +132,7 @@
               <button onclick="decide('${d.id}','blocked')">Block</button>
               <button onclick="decide('${d.id}','manual_review')">Manual</button>
             </div>
-            ${d.copilotComment ? `<div class="evi">💬 ${d.copilotComment}</div>` : ""}
+            ${d.copilotComment ? `<div class="evi">💬 ${escapeHtml(d.copilotComment)}</div>` : ""}
           </div>`;
         }
         h += `</div>`;
@@ -143,24 +143,68 @@
         if (!v) return "";
         let h = `<div class="card"><h3>Verification <span class="st state-${v.overall}">${v.overall}</span></h3>`;
         h += `<table><tbody>`;
-        for (const s of v.steps) h += `<tr><td>${s.name}</td><td class="state-${s.state}">${s.state}</td><td class="muted">${s.detail}</td></tr>`;
-        h += `</tbody></table><div class="evi" style="margin-top:8px">${v.honestSummary}</div></div>`;
+        for (const s of v.steps) h += `<tr><td>${escapeHtml(s.name)}</td><td class="state-${s.state}">${escapeHtml(s.state)}</td><td class="muted">${escapeHtml(s.detail)}</td></tr>`;
+        h += `</tbody></table><div class="evi" style="margin-top:8px">${escapeHtml(v.honestSummary)}</div></div>`;
         return h;
+      }
+
+      function renderReviewContext(status, active, reconciliation, locations) {
+        if (!status) return "";
+        let h = `<div class="card"><h3>Review context and reconciliation</h3>`;
+        h += `<div class="row">${stateTag(status.status)} <span class="tag">${escapeHtml(status.mode)}</span></div>`;
+        h += `<p class="evi">${escapeHtml(status.detail || "")}</p>`;
+        if (active?.requirements?.length) {
+          h += `<table><thead><tr><th>Requirement</th><th>Priority</th><th>Specification evidence</th></tr></thead><tbody>`;
+          for (const r of active.requirements) {
+            const l = r.sourceLocation || locations?.[r.id];
+            const place = l ? `${l.path || ""}${l.locator ? " · " + l.locator : ""}` : "No locator";
+            h += `<tr><td>${escapeHtml(r.title)}<div class="evi">${escapeHtml(r.id)}</div></td><td>${escapeHtml(r.priority)}</td><td class="evi">${escapeHtml(place)}</td></tr>`;
+          }
+          h += `</tbody></table>`;
+        }
+        if (reconciliation) {
+          const material = [...(reconciliation.missingInContext || []), ...(reconciliation.missingInSpecification || []), ...(reconciliation.conflicts || []).map(c => `${c.id}: ${c.field}`)];
+          h += `<p class="evi">Reconciliation: ${material.length ? escapeHtml(material.join("; ")) : "no material differences"}.</p>`;
+        }
+        return h + `</div>`;
+      }
+
+      function renderProfiles(profiles) {
+        if (!profiles?.length) return "";
+        let h = `<div class="card"><h3>Submission profiles and evidence</h3>`;
+        for (const entry of profiles) {
+          const profile = entry.profile;
+          const ideas = entry.ideas;
+          h += `<div class="decision"><div class="title">${escapeHtml(entry.submissionId)}</div>`;
+          if (profile) h += `<div class="evi">${escapeHtml(profile.architecture?.summary || "Profile available.")} · build: ${escapeHtml(profile.build?.state || "unknown")} · tests: ${escapeHtml(profile.tests?.state || "unknown")}</div>`;
+          if (Array.isArray(ideas)) h += `<div class="evi">${ideas.map(i => escapeHtml(i.title || i.ideaId)).join(" · ") || "No extracted ideas."}</div>`;
+          h += `</div>`;
+        }
+        return h + `</div>`;
+      }
+
+      function renderContradictions(c) {
+        const items = c?.contradictions || [];
+        if (!items.length) return "";
+        return `<div class="card"><h3>Contradictions and trade-offs</h3><pre>${escapeHtml(JSON.stringify(items, null, 2))}</pre></div>`;
       }
 
       function render() {
         if (!bundle) return;
         const m = bundle.manifest || {};
         let h = `<div class="row" style="margin-bottom:14px">
-          <h2 style="margin:0">${(m.title) || current}</h2>
-          <span class="tag">${m.mode}</span>
+          <h2 style="margin:0">${escapeHtml((m.title) || current)}</h2>
+          <span class="tag">${escapeHtml(m.mode)}</span>
           <span class="tag ${m.integrityCritical ? "bad" : "good"}">integrity ${m.integrityCritical ? "CRITICAL" : "ok"}</span>
-          <span class="tag">review-context: ${m.reviewContextMode || "?"}</span>
+          <span class="tag">review-context: ${escapeHtml(m.reviewContextMode || "?")}</span>
           <span class="tag ${m.verificationOverall === "passed" ? "good" : m.verificationOverall === "failed" ? "bad" : "warn"}">verify: ${m.verificationOverall}</span>
           ${bundle.usage ? `<span class="tag">LLM ${bundle.usage.provider}/${bundle.usage.model} · ${bundle.usage.calls} calls · ~$${bundle.usage.approxCostUsd}</span>` : ""}
         </div>`;
-        h += renderDecisions(bundle.decisions);
+        h += renderReviewContext(bundle.reviewContextStatus, bundle.activeReviewContext, bundle.reconciliation, bundle.sourceLocationMap);
+        h += renderProfiles(bundle.profiles);
         h += renderMatrix(bundle.matrix);
+        h += renderContradictions(bundle.contradictions);
+        h += renderDecisions(bundle.decisions);
         h += renderVerification(bundle.verification);
         if (bundle.concept) h += `<div class="card"><h3>Synthesized concept</h3><pre>${escapeHtml(bundle.concept)}</pre></div>`;
         if (bundle.provenance) h += `<div class="card"><h3>Provenance (${bundle.provenance.entries.length})</h3><pre>${escapeHtml(JSON.stringify(bundle.provenance.entries, null, 2))}</pre></div>`;

@@ -82,6 +82,19 @@ Flags: `--verify-exec` runs the dynamic build/test steps (install/build/test);
 `--exec-timeout <ms>` bounds each. Without it, dynamic steps are recorded as
 `skipped` (never `passed`).
 
+### Final specification resolution
+
+The final challenge specification is resolved in this fixed order: a specification
+inside the starter pack, a caller-supplied `--spec-dir <directory>` (or
+`COMBINATOR_SPEC_DIR`), then this repository's `specifications/` snapshot for the
+four public fixtures. Specification files in an explicit directory are named
+`<CHALLENGE_ID>.json`, `.md`, or `.txt`. The run fails clearly if none is available;
+`challenge-context.json` is never silently treated as the final specification.
+
+```bash
+npm run combinator -- run-all --pack /path/to/starter-pack --spec-dir /path/to/final-specifications --out ./workspace
+```
+
 Decision states: `pending · accepted · rejected · alternative_selected · blocked ·
 manual_review · unresolved`.
 

@@ -18,7 +18,7 @@
  *   review-context-reconciliation.json, source-location-map.json
  */
 import type { SafeFs } from "./fs-safe.js";
-import type { DiscoveredChallenge } from "./ingest.js";
+import { IngestError, type DiscoveredChallenge } from "./ingest.js";
 import { stableId } from "./ids.js";
 import type {
   ActiveReviewContext,
@@ -63,9 +63,9 @@ export interface ReviewContextResult {
 }
 
 function readSpec(fs: SafeFs, ch: DiscoveredChallenge): ChallengeContext | null {
-  if (!ch.challengeContextPath) return null;
+  if (!ch.specificationPath) return null;
   try {
-    return JSON.parse(fs.readText(ch.challengeContextPath)) as ChallengeContext;
+    return JSON.parse(fs.readText(ch.specificationPath)) as ChallengeContext;
   } catch {
     return null;
   }
@@ -145,7 +145,13 @@ function ideationCriteriaToActive(
 
 export function buildReviewContext(fs: SafeFs, ch: DiscoveredChallenge): ReviewContextResult {
   const spec = readSpec(fs, ch);
-  const specPath = ch.challengeContextPath ?? "(no challenge-context.json)";
+  const specPath = ch.specificationPath ?? "(no final specification resolved)";
+  if (!spec) {
+    throw new IngestError(
+      `No usable final specification for ${ch.challengeId}. Provide one in the pack, ` +
+        `pass --spec-dir <directory>, or add a supported bundled visible-fixture snapshot.`,
+    );
+  }
 
   // Read supplied context (if the ref resolved to a file).
   let supplied: SuppliedContext | null = null;
@@ -177,8 +183,8 @@ export function buildReviewContext(fs: SafeFs, ch: DiscoveredChallenge): ReviewC
         mode,
         detail:
           supplied?.status === "NOT_PROVIDED"
-            ? "Review context explicitly NOT_PROVIDED; derived from final specification."
-            : "No usable supplied review context; derived from final specification.",
+            ? `Review context explicitly NOT_PROVIDED; derived from final specification (${ch.specificationSource}).`
+            : `No usable supplied review context; derived from final specification (${ch.specificationSource}).`,
       },
       active: {
         challengeId: ch.challengeId,
@@ -200,6 +206,7 @@ export function buildReviewContext(fs: SafeFs, ch: DiscoveredChallenge): ReviewC
             ? "Derived requirements correspond to the mandatory ideation evaluation criteria."
             : "Derived requirements correspond to specification requirements.",
           "All derived fields are labeled specification_derived. No weights, reviewer comments or platform IDs were invented.",
+          `Final specification source: ${ch.specificationSource}.`,
         ],
       },
       sourceLocationMap: built.locations,
@@ -263,6 +270,7 @@ export function buildReviewContext(fs: SafeFs, ch: DiscoveredChallenge): ReviewC
         conflicts.length === 0 && missingInContext.length === 0 && missingInSpecification.length === 0
           ? "Supplied review context is fully consistent with the specification."
           : "Material differences reported above rather than silently resolved.",
+        `Final specification source: ${ch.specificationSource}.`,
       ],
     },
     sourceLocationMap: { ...specBuilt.locations, ...suppliedBuilt.locations },

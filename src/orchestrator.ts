@@ -15,7 +15,7 @@ import { Logger, UsageMeter } from "./logger.js";
 import { relativizePaths } from "./util.js";
 import { cleanupDisposable } from "./materialize.js";
 import { SafeFs } from "./fs-safe.js";
-import { discoverChallenge, loadManifest, pkgRelative, type ManifestChallenge } from "./ingest.js";
+import { bundledSpecificationsDir, discoverChallenge, loadManifest, pkgRelative, type ManifestChallenge } from "./ingest.js";
 import { buildReviewContext } from "./review-context.js";
 import { loadReviews } from "./reviews.js";
 import { profileCodeSubmission } from "./profiling/code.js";
@@ -42,6 +42,8 @@ export interface RunOptions {
   outDir: string; // workspace/
   verifyExec: boolean;
   execTimeoutMs: number;
+  /** Optional directory containing <challenge-id>.json/.md/.txt final specifications. */
+  specificationDir?: string;
   /** Copilot decision states to overlay onto freshly-built decisions (regeneration). */
   overlayDecisions?: import("./types.js").DecisionWorkspace;
 }
@@ -76,15 +78,18 @@ export async function runChallenge(
   const wsDir = join(opts.outDir, mc.challengeId);
   mkdirSync(wsDir, { recursive: true });
 
-  const fs = new SafeFs({ readRoots: [opts.packRoot, opts.outDir], log });
+  const readRoots = [opts.packRoot, opts.outDir, bundledSpecificationsDir()];
+  if (opts.specificationDir) readRoots.push(opts.specificationDir);
+  const fs = new SafeFs({ readRoots, log });
   fs.allowWrite(wsDir);
 
   // All artifact JSON is written with absolute paths relativized to the pack /
   // workspace roots, so generated files are portable and reproducible.
-  const pathRoots = [opts.packRoot, opts.outDir];
+  const pathRoots = [opts.packRoot, opts.outDir, bundledSpecificationsDir()];
+  if (opts.specificationDir) pathRoots.push(opts.specificationDir);
   const writeJsonRel = (p: string, obj: unknown) => fs.writeJson(p, relativizePaths(obj, pathRoots));
 
-  const ch = discoverChallenge(fs, opts.packRoot, mc);
+  const ch = discoverChallenge(fs, opts.packRoot, mc, opts.specificationDir);
   log.info(`[${ch.challengeId}] mode=${ch.mode}, submissions=${ch.submissions.length}`);
 
   // Integrity — before.
@@ -148,7 +153,7 @@ export async function runChallenge(
     writeJsonRel(join(wsDir, "decisions.json"), decisions);
     void before2;
   } else {
-    const specText = ch.challengeContextPath ? fs.readText(ch.challengeContextPath) : null;
+    const specText = ch.specificationPath ? fs.readText(ch.specificationPath) : null;
     const maxIdeas = (() => {
       try {
         return specText ? (JSON.parse(specText).maximumIdeasPerSubmission ?? 3) : 3;

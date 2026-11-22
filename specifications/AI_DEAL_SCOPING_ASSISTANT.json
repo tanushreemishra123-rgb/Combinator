@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "1.0.0",
+  "source": "Bundled visible-fixture snapshot of the official challenge specification",
+  "challengeId": "AI_DEAL_SCOPING_ASSISTANT",
+  "title": "AI Deal Scoping Assistant",
+  "challengeMode": "code",
+  "requirements": [
+    { "id": "REQ_gbl6ad", "title": "Structured Customer Requirements Analysis", "priority": "high" },
+    { "id": "REQ_r2gz0o", "title": "Scope Review and Controlled Generation", "priority": "high" },
+    { "id": "REQ_eegp6z", "title": "PRD and Functional Scope Generation", "priority": "high" },
+    { "id": "REQ_rxv80y", "title": "Cloud-Specific Solution Architecture", "priority": "high" },
+    { "id": "REQ_438x3f", "title": "Data, Integration, and AI Solution Strategy", "priority": "high" },
+    { "id": "REQ_pzutnc", "title": "Explainable Effort and Timeline Estimation", "priority": "high" },
+    { "id": "REQ_grfmw8", "title": "Reproducible ROM Commercial Estimation", "priority": "high" },
+    { "id": "REQ_2zr71d", "title": "Change Impact, Traceability, and Quality Validation", "priority": "medium" },
+    { "id": "REQ_rcsmw9", "title": "Product Depth, Local Reviewability, and Documentation", "priority": "medium" }
+  ]
+}

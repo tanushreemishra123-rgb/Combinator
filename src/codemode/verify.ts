@@ -59,7 +59,20 @@ export interface CodeVerifyInput {
   appliedTransplants: string[];
   rolledBack: string[];
   sourceIntegrityOk: boolean;
+  /** Commands supplied by the fixture verification-config.json. "TBD" is ignored. */
+  fixtureCommands?: Partial<Record<"install" | "build" | "start" | "test" | "smokeTest", string>>;
   exec: ExecOptions;
+}
+
+type Command = [string, string[]];
+
+/** Convert a trusted fixture command to execFile arguments without invoking a shell. */
+function fixtureCommand(command: string | undefined): Command | undefined {
+  const text = command?.trim();
+  if (!text || /^TBD$/i.test(text)) return undefined;
+  const parts = text.match(/(?:[^\s"']+|"[^"]*"|'[^']*')+/g)?.map((p) => p.replace(/^(?:"|')|(?:"|')$/g, ""));
+  if (!parts?.length) return undefined;
+  return [parts[0]!, parts.slice(1)];
 }
 
 function skipped(name: string, command?: string): VerificationStep {
@@ -113,12 +126,13 @@ export async function verifyCodeCandidate(input: CodeVerifyInput): Promise<{
   });
 
   // 3. Dynamic steps: dependency install, build, startup, smoke, unit/integration.
-  const dyn: Array<{ name: string; cmd?: [string, string[]] }> = [
-    { name: "Dependency installation", cmd: ["npm", ["install", "--no-audit", "--no-fund", "--ignore-scripts"]] },
-    { name: "Build", cmd: input.buildCommands.some((c) => c.includes("build")) ? ["npm", ["run", "build"]] : undefined },
-    { name: "Application startup (smoke)", cmd: undefined },
-    { name: "Organizer smoke tests", cmd: undefined },
-    { name: "Unit / integration tests", cmd: input.hasTests ? ["npm", ["test", "--", "--run"]] : undefined },
+  const fromFixture = input.fixtureCommands ?? {};
+  const dyn: Array<{ name: string; cmd?: Command }> = [
+    { name: "Dependency installation", cmd: fixtureCommand(fromFixture.install) ?? ["npm", ["install", "--no-audit", "--no-fund", "--ignore-scripts"]] },
+    { name: "Build", cmd: fixtureCommand(fromFixture.build) ?? (input.buildCommands.some((c) => c.includes("build")) ? ["npm", ["run", "build"]] : undefined) },
+    { name: "Application startup (smoke)", cmd: fixtureCommand(fromFixture.start) },
+    { name: "Organizer smoke tests", cmd: fixtureCommand(fromFixture.smokeTest) },
+    { name: "Unit / integration tests", cmd: fixtureCommand(fromFixture.test) ?? (input.hasTests ? ["npm", ["test", "--", "--run"]] : undefined) },
   ];
 
   for (const d of dyn) {
