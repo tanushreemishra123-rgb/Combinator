@@ -16,6 +16,7 @@ import { join, relative } from "node:path";
 import type { SafeFs } from "../fs-safe.js";
 import type { DiscoveredChallenge } from "../ingest.js";
 import type { Logger } from "../logger.js";
+import { pick } from "../util.js";
 import type {
   CodeSubmissionProfile,
   Decision,
@@ -42,7 +43,7 @@ function fixtureCommands(fs: SafeFs, challenge: DiscoveredChallenge): Partial<Re
     const commands = parsed.commands ?? {};
     return Object.fromEntries(
       ["install", "build", "start", "test", "smokeTest"].flatMap((key) => {
-        const value = commands[key];
+        const value = pick(commands, key);
         return typeof value === "string" ? [[key, value]] : [];
       }),
     ) as Partial<Record<"install" | "build" | "start" | "test" | "smokeTest", string>>;
