@@ -1,0 +1,8 @@
+{
+  "kind": "decision_coverage_estimate_not_original_scorecard",
+  "challengeId": "AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC",
+  "activeRequirements": 5,
+  "requirementsWithCopilotDecision": 0,
+  "decisionCoveragePercent": 0,
+  "note": "Computed from current Copilot decisions only. No organizer scorecard weights or points were invented."
+}

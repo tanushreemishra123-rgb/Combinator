@@ -1,0 +1,14 @@
+{
+  "default_rate_card_id": "usd-standard",
+  "default_contingency_pct": 15,
+  "blended_rate_mode": "role_mix",
+  "notes": [
+    "Rates are blended per person-week and assume a five-day week of productive delivery time.",
+    "A rate card carries its own currency. ROM is calculated in that currency and no exchange-rate conversion is applied.",
+    "blended_rate_mode role_mix weights each role's rate by that role's share of the workstream effort. Mode explicit uses a single blended rate entered by the user.",
+    "Contingency is applied once, to the base effort cost, and is shown as a separate line in the ROM breakdown.",
+    "ROM excludes cloud consumption, third-party licences and software subscriptions, customer-side effort, travel and expenses, and any run or managed-service charges after handover.",
+    "If a role used by the estimate has no rate in the selected rate card, the affected ROM line is blocked rather than defaulted.",
+    "Figures are a rough order of magnitude for internal planning. They are not a quotation or a contractual commitment."
+  ]
+}

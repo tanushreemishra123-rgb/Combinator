@@ -1,0 +1,26 @@
+[
+  {
+    "step": "Dependency installation",
+    "command": "npm install --no-audit --no-fund --ignore-scripts",
+    "exitCode": 0,
+    "timedOut": false,
+    "stdoutTail": "\nadded 108 packages in 6s\n",
+    "stderrTail": "npm warn deprecated whatwg-encoding@3.1.1: Use @exodus/bytes instead for a more spec-conformant and faster implementation\n"
+  },
+  {
+    "step": "Build",
+    "command": "npm run build",
+    "exitCode": 0,
+    "timedOut": false,
+    "stdoutTail": "\n> signal-and-spark@1.0.0 build\n> tsc -b && vite build\n\n\u001b[36mvite v8.2.1 \u001b[32mbuilding client environment for production...\u001b[36m\u001b[39m\n\u001b[2K\rtransforming...✓ 1806 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/index.html                   0.55 kB │ gzip:  0.32 kB\ndist/assets/index-B-lUxYej.css   35.33 kB │ gzip:  7.34 kB\ndist/assets/index-B-o0YnFV.js   272.30 kB │ gzip: 84.58 kB\n\n\u001b[32m✓ built in 450ms\u001b[39m\n",
+    "stderrTail": ""
+  },
+  {
+    "step": "Unit / integration tests",
+    "command": "npm test -- --run",
+    "exitCode": 0,
+    "timedOut": false,
+    "stdoutTail": "\n> signal-and-spark@1.0.0 test\n> vitest run --run\n\n\n\u001b[1m\u001b[30m\u001b[46m RUN \u001b[49m\u001b[39m\u001b[22m \u001b[36mv4.1.10 \u001b[39m\u001b[90mAI_LEARNING_ADVENTURE/combined-solution/signal-and-spark\u001b[39m\n\n \u001b[32m✓\u001b[39m src/data/seed.test.ts \u001b[2m(\u001b[22m\u001b[2m3 tests\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 11\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m✓\u001b[39m src/lib/tutor.test.ts \u001b[2m(\u001b[22m\u001b[2m3 tests\u001b[22m\u001b[2m)\u001b[22m\u001b[32m 4\u001b[2mms\u001b[22m\u001b[39m\n \u001b[32m✓\u001b[39m src/App.test.tsx \u001b[2m(\u001b[22m\u001b[2m6 tests\u001b[22m\u001b[2m)\u001b[22m\u001b[33m 560\u001b[2mms\u001b[22m\u001b[39m\n\n\u001b[2m Test Files \u001b[22m \u001b[1m\u001b[32m3 passed\u001b[39m\u001b[22m\u001b[90m (3)\u001b[39m\n\u001b[2m      Tests \u001b[22m \u001b[1m\u001b[32m12 passed\u001b[39m\u001b[22m\u001b[90m (12)\u001b[39m\n\u001b[2m   Start at \u001b[22m 10:14:17\n\u001b[2m   Duration \u001b[22m 2.07s\u001b[2m (transform 229ms, setup 0ms, import 681ms, tests 575ms, environment 2.25s)\u001b[22m\n\n",
+    "stderrTail": "\u001b[90mstderr\u001b[2m | src/App.test.tsx\u001b[2m > \u001b[22m\u001b[2mSignal & Spark app\u001b[2m > \u001b[22m\u001b[2mlabels the tutor as a local sample fallback\n\u001b[22m\u001b[39mEncountered two children with the same key, `test-uuid`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.\n\n"
+  }
+]

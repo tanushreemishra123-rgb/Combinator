@@ -1,0 +1,187 @@
+1
+00:00:00,000 --> 00:00:04,850
+Workflow Puzzle Lab — learn to build AI workflows that don't fall over
+
+2
+00:00:05,000 --> 00:00:09,850
+8 puzzles · beginner → advanced
+
+3
+00:00:10,000 --> 00:00:14,850
+Runs fully offline in mock AI mode — no API key, no backend
+
+4
+00:00:15,000 --> 00:00:19,850
+Reviewer guide: one click jumps to any capability, failure pre-armed
+
+5
+00:00:20,000 --> 00:00:25,350
+Every puzzle opens with objective, expected output, and completion goals
+
+6
+00:00:25,500 --> 00:00:30,850
+The loop: understand → run → break → repair → prove
+
+7
+00:00:31,000 --> 00:00:36,350
+The starting workflow is naive on purpose: input → AI → output
+
+8
+00:00:36,500 --> 00:00:41,850
+Run it clean first
+
+9
+00:00:42,000 --> 00:00:47,350
+80 / 100 · Resilient
+
+10
+00:00:47,500 --> 00:00:52,850
+Now inject a controlled failure — deterministic, repeats every run
+
+11
+00:00:53,000 --> 00:00:58,350
+The model wraps its answer in markdown chatter
+
+12
+00:00:58,500 --> 00:01:03,850
+It says completed. Green checkmarks. And it shipped invalid data.
+
+13
+00:01:04,000 --> 00:01:09,350
+Output integrity 0 / 20 — the most dangerous failure mode
+
+14
+00:01:09,500 --> 00:01:14,850
+Nothing in this design was watching for it
+
+15
+00:01:15,000 --> 00:01:19,225
+Add a Validator between the model and the output
+
+16
+00:01:19,375 --> 00:01:23,600
+It checks the output against a schema, then escalates
+
+17
+00:01:23,750 --> 00:01:27,975
+41 → 100 (+59) · one retry fixed the formatting fluke
+
+18
+00:01:28,125 --> 00:01:32,350
+The AI step recovered — the trace shows both attempts
+
+19
+00:01:32,500 --> 00:01:36,725
+Different failure: a missing owner, on every attempt
+
+20
+00:01:36,875 --> 00:01:41,100
+Retrying can't fix it — so it stopped safely instead
+
+21
+00:01:41,250 --> 00:01:45,475
+Repair handles what retrying can't
+
+22
+00:01:45,625 --> 00:01:49,850
+Solved · all three goals met
+
+23
+00:01:50,000 --> 00:01:55,475
+Some failures no schema can catch
+
+24
+00:01:55,625 --> 00:02:01,100
+Put a human in front of the send step
+
+25
+00:02:01,250 --> 00:02:06,725
+The run pauses before anything leaves the building
+
+26
+00:02:06,875 --> 00:02:12,350
+It guarantees this will never recur and refunds a full year
+
+27
+00:02:12,500 --> 00:02:17,975
+Approve, edit, or reject — edits are schema-checked live
+
+28
+00:02:18,125 --> 00:02:23,600
+Every decision, with its note, lands in the trace
+
+29
+00:02:23,750 --> 00:02:29,225
+And a rejection is respected
+
+30
+00:02:29,375 --> 00:02:34,850
+Stopped safely at 87. The send step never ran.
+
+31
+00:02:35,000 --> 00:02:39,225
+The flagship model times out
+
+32
+00:02:39,375 --> 00:02:43,600
+One timeout, whole run dead
+
+33
+00:02:43,750 --> 00:02:47,975
+Give it a bounded retry budget
+
+34
+00:02:48,125 --> 00:02:52,350
+Retries ride out a brownout — the trace shows all three attempts
+
+35
+00:02:52,500 --> 00:02:56,725
+Now the model is down hard
+
+36
+00:02:56,875 --> 00:03:01,100
+Retries just hammer a dead service
+
+37
+00:03:01,250 --> 00:03:05,475
+So fall back to a smaller model that's actually up
+
+38
+00:03:05,625 --> 00:03:09,850
+A plainer answer that still passes the schema
+
+39
+00:03:10,000 --> 00:03:17,350
+A solar flare kills the pipeline mid-run
+
+40
+00:03:17,500 --> 00:03:24,850
+But a checkpoint saved every completed step
+
+41
+00:03:25,000 --> 00:03:32,350
+Three steps restored, not re-executed — it continues where it died
+
+42
+00:03:32,500 --> 00:03:39,850
+An interruption becomes a pause, not a restart
+
+43
+00:03:40,000 --> 00:03:43,850
+Every run is scored: outcome, integrity, chaos handling, design hygiene
+
+44
+00:03:44,000 --> 00:03:47,850
+What survived — and what's still fragile in the design
+
+45
+00:03:48,000 --> 00:03:51,850
+All of this ran offline in mock mode
+
+46
+00:03:52,000 --> 00:03:55,850
+A real model is optional, never required
+
+47
+00:03:56,000 --> 00:03:59,850
+Eight puzzles. Retries, fallbacks, validation, human review, resume.

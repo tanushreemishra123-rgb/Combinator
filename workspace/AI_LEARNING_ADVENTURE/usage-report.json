@@ -1,0 +1,11 @@
+{
+  "provider": "mock",
+  "model": "deterministic-mock-v1",
+  "calls": 2,
+  "inputTokens": 380,
+  "outputTokens": 239,
+  "retries": 0,
+  "failures": 0,
+  "approxCostUsd": 0.0002,
+  "processingMs": 14694
+}

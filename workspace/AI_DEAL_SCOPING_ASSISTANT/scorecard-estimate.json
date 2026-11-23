@@ -1,0 +1,8 @@
+{
+  "kind": "decision_coverage_estimate_not_original_scorecard",
+  "challengeId": "AI_DEAL_SCOPING_ASSISTANT",
+  "activeRequirements": 9,
+  "requirementsWithCopilotDecision": 0,
+  "decisionCoveragePercent": 0,
+  "note": "Computed from current Copilot decisions only. No organizer scorecard weights or points were invented."
+}

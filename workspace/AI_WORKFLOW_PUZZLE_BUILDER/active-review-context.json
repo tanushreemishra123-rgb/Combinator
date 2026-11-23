@@ -1,0 +1,332 @@
+{
+  "challengeId": "AI_WORKFLOW_PUZZLE_BUILDER",
+  "mode": "provided_with_spec_reconciliation",
+  "recordId": "TtxBpA4eMhKfwy",
+  "status": "HUMAN_APPROVED",
+  "requirements": [
+    {
+      "id": "REQ_inxdtg",
+      "title": "Visual Workflow Builder",
+      "priority": "high",
+      "constraints": [
+        {
+          "id": "CONSTR_ojcd4d",
+          "text": "Users can arrange, connect or configure multiple steps including AI.",
+          "specificationDerived": false,
+          "sourceLocation": {
+            "kind": "specification",
+            "path": "review-context\\ai-workflow-puzzle-builder.json",
+            "locator": "requirements[0].constraints[0]",
+            "excerpt": "Users can arrange, connect or configure multiple steps including AI."
+          }
+        },
+        {
+          "id": "CONSTR_r3i75s",
+          "text": "Complete workflow and configuration are visible before execution.",
+          "specificationDerived": false,
+          "sourceLocation": {
+            "kind": "specification",
+            "path": "review-context\\ai-workflow-puzzle-builder.json",
+            "locator": "requirements[0].constraints[1]",
+            "excerpt": "Complete workflow and configuration are visible before execution."
+          }
+        }
+      ],
+      "specificationDerived": false,
+      "sourceLocation": {
+        "kind": "specification",
+        "path": "review-context\\ai-workflow-puzzle-builder.json",
+        "locator": "requirements[0]",
+        "excerpt": "Visual Workflow Builder"
+      }
+    },
+    {
+      "id": "REQ_77on11",
+      "title": "Pre-Seeded Workflow Puzzles",
+      "priority": "high",
+      "constraints": [
+        {
+          "id": "CONSTR_09n2ge",
+          "text": "Include 5–8 puzzles across three difficulty levels.",
+          "specificationDerived": false,
+          "sourceLocation": {
+            "kind": "specification",
+            "path": "review-context\\ai-workflow-puzzle-builder.json",
+            "locator": "requirements[1].constraints[0]",
+            "excerpt": "Include 5–8 puzzles across three difficulty levels."
+          }
+        },
+        {
+          "id": "CONSTR_2bighv",
+          "text": "Each puzzle includes objective, input, blocks, expected result, failure and completion criteria.",
+          "specificationDerived": false,
+          "sourceLocation": {
+            "kind": "specification",
+            "path": "review-context\\ai-workflow-puzzle-builder.json",
+            "locator": "requirements[1].constraints[1]",
+            "excerpt": "Each puzzle includes objective, input, blocks, expected result, failure and completion criteria."
+          }
+        }
+      ],
+      "specificationDerived": false,
+      "sourceLocation": {
+        "kind": "specification",
+        "path": "review-context\\ai-workflow-puzzle-builder.json",
+        "locator": "requirements[1]",
+        "excerpt": "Pre-Seeded Workflow Puzzles"
+      }
+    },
+    {
+      "id": "REQ_nb1r3o",
+      "title": "Workflow Execution and Step Trace",
+      "priority": "high",
+      "constraints": [
+        {
+          "id": "CONSTR_48id11",
+          "text": "Every executed step exposes status, input and output.",
+          "specificationDerived": false,
+          "sourceLocation": {
+            "kind": "specification",
+            "path": "review-context\\ai-workflow-puzzle-builder.json",
+            "locator": "requirements[2].constraints[0]",
+            "excerpt": "Every executed step exposes status, input and output."
+          }
+        },
+        {
+          "id": "CONSTR_6z32cr",
+          "text": "Trace records errors, retries, fallbacks, validation and human decisions.",
+          "specificationDerived": false,
+          "sourceLocation": {
+            "kind": "specification",
+            "path": "review-context\\ai-workflow-puzzle-builder.json",
+            "locator": "requirements[2].constraints[1]",
+            "excerpt": "Trace records errors, retries, fallbacks, validation and human decisions."
+          }
+        }
+      ],
+      "specificationDerived": false,
+      "sourceLocation": {
+        "kind": "specification",
+        "path": "review-context\\ai-workflow-puzzle-builder.json",
+        "locator": "requirements[2]",
+        "excerpt": "Workflow Execution and Step Trace"
+      }
+    },
+    {
+      "id": "REQ_ixo2z1",
+      "title": "Failure Simulation",
+      "priority": "high",
+      "constraints": [
+        {
+          "id": "CONSTR_ks8lbi",
+          "text": "Support at least four failure types.",
+          "specificationDerived": false,
+          "sourceLocation": {
+            "kind": "specification",
+            "path": "review-context\\ai-workflow-puzzle-builder.json",
+            "locator": "requirements[3].constraints[0]",
+            "excerpt": "Support at least four failure types."
+          }
+        },
+        {
+          "id": "CONSTR_kdv7ve",
+          "text": "Failure scenarios are reproducible.",
+          "specificationDerived": false,
+          "sourceLocation": {
+            "kind": "specification",
+            "path": "review-context\\ai-workflow-puzzle-builder.json",
+            "locator": "requirements[3].constraints[1]",
+            "excerpt": "Failure scenarios are reproducible."
+          }
+        }
+      ],
+      "specificationDerived": false,
+      "sourceLocation": {
+        "kind": "specification",
+        "path": "review-context\\ai-workflow-puzzle-builder.json",
+        "locator": "requirements[3]",
+        "excerpt": "Failure Simulation"
+      }
+    },
+    {
+      "id": "REQ_pk38i1",
+      "title": "Recovery and Safe Failure Handling",
+      "priority": "high",
+      "constraints": [
+        {
+          "id": "CONSTR_zdoqaj",
+          "text": "Support retry, fallback and safe stop.",
+          "specificationDerived": false,
+          "sourceLocation": {
+            "kind": "specification",
+            "path": "review-context\\ai-workflow-puzzle-builder.json",
+            "locator": "requirements[4].constraints[0]",
+            "excerpt": "Support retry, fallback and safe stop."
+          }
+        },
+        {
+          "id": "CONSTR_nr4klj",
+          "text": "Recovery actions and outcomes appear in trace.",
+          "specificationDerived": false,
+          "sourceLocation": {
+            "kind": "specification",
+            "path": "review-context\\ai-workflow-puzzle-builder.json",
+            "locator": "requirements[4].constraints[1]",
+            "excerpt": "Recovery actions and outcomes appear in trace."
+          }
+        }
+      ],
+      "specificationDerived": false,
+      "sourceLocation": {
+        "kind": "specification",
+        "path": "review-context\\ai-workflow-puzzle-builder.json",
+        "locator": "requirements[4]",
+        "excerpt": "Recovery and Safe Failure Handling"
+      }
+    },
+    {
+      "id": "REQ_z79n6r",
+      "title": "Output Validation",
+      "priority": "high",
+      "constraints": [
+        {
+          "id": "CONSTR_2bjzaf",
+          "text": "At least one puzzle validates structured output.",
+          "specificationDerived": false,
+          "sourceLocation": {
+            "kind": "specification",
+            "path": "review-context\\ai-workflow-puzzle-builder.json",
+            "locator": "requirements[5].constraints[0]",
+            "excerpt": "At least one puzzle validates structured output."
+          }
+        },
+        {
+          "id": "CONSTR_lz8erj",
+          "text": "Validation failure triggers recovery or safe termination.",
+          "specificationDerived": false,
+          "sourceLocation": {
+            "kind": "specification",
+            "path": "review-context\\ai-workflow-puzzle-builder.json",
+            "locator": "requirements[5].constraints[1]",
+            "excerpt": "Validation failure triggers recovery or safe termination."
+          }
+        }
+      ],
+      "specificationDerived": false,
+      "sourceLocation": {
+        "kind": "specification",
+        "path": "review-context\\ai-workflow-puzzle-builder.json",
+        "locator": "requirements[5]",
+        "excerpt": "Output Validation"
+      }
+    },
+    {
+      "id": "REQ_cuzsd2",
+      "title": "Human Review and Approval",
+      "priority": "medium",
+      "constraints": [
+        {
+          "id": "CONSTR_9vxh4f",
+          "text": "At least one puzzle supports approve, edit or reject.",
+          "specificationDerived": false,
+          "sourceLocation": {
+            "kind": "specification",
+            "path": "review-context\\ai-workflow-puzzle-builder.json",
+            "locator": "requirements[6].constraints[0]",
+            "excerpt": "At least one puzzle supports approve, edit or reject."
+          }
+        },
+        {
+          "id": "CONSTR_n8bxtq",
+          "text": "Decision and transition are recorded.",
+          "specificationDerived": false,
+          "sourceLocation": {
+            "kind": "specification",
+            "path": "review-context\\ai-workflow-puzzle-builder.json",
+            "locator": "requirements[6].constraints[1]",
+            "excerpt": "Decision and transition are recorded."
+          }
+        }
+      ],
+      "specificationDerived": false,
+      "sourceLocation": {
+        "kind": "specification",
+        "path": "review-context\\ai-workflow-puzzle-builder.json",
+        "locator": "requirements[6]",
+        "excerpt": "Human Review and Approval"
+      }
+    },
+    {
+      "id": "REQ_63bstt",
+      "title": "Reliability Feedback",
+      "priority": "medium",
+      "constraints": [
+        {
+          "id": "CONSTR_4bhwhw",
+          "text": "Feedback identifies successful resilience behavior.",
+          "specificationDerived": false,
+          "sourceLocation": {
+            "kind": "specification",
+            "path": "review-context\\ai-workflow-puzzle-builder.json",
+            "locator": "requirements[7].constraints[0]",
+            "excerpt": "Feedback identifies successful resilience behavior."
+          }
+        },
+        {
+          "id": "CONSTR_1ip7vk",
+          "text": "Feedback identifies unresolved unsafe paths.",
+          "specificationDerived": false,
+          "sourceLocation": {
+            "kind": "specification",
+            "path": "review-context\\ai-workflow-puzzle-builder.json",
+            "locator": "requirements[7].constraints[1]",
+            "excerpt": "Feedback identifies unresolved unsafe paths."
+          }
+        }
+      ],
+      "specificationDerived": false,
+      "sourceLocation": {
+        "kind": "specification",
+        "path": "review-context\\ai-workflow-puzzle-builder.json",
+        "locator": "requirements[7]",
+        "excerpt": "Reliability Feedback"
+      }
+    },
+    {
+      "id": "REQ_xwax2o",
+      "title": "Local Execution, Mock AI, and Documentation",
+      "priority": "high",
+      "constraints": [
+        {
+          "id": "CONSTR_xit0t9",
+          "text": "All puzzles run locally with committed mock inputs and responses.",
+          "specificationDerived": false,
+          "sourceLocation": {
+            "kind": "specification",
+            "path": "review-context\\ai-workflow-puzzle-builder.json",
+            "locator": "requirements[8].constraints[0]",
+            "excerpt": "All puzzles run locally with committed mock inputs and responses."
+          }
+        },
+        {
+          "id": "CONSTR_5pp34t",
+          "text": "README covers setup, execution, failures, recovery, optional AI and mock mode.",
+          "specificationDerived": false,
+          "sourceLocation": {
+            "kind": "specification",
+            "path": "review-context\\ai-workflow-puzzle-builder.json",
+            "locator": "requirements[8].constraints[1]",
+            "excerpt": "README covers setup, execution, failures, recovery, optional AI and mock mode."
+          }
+        }
+      ],
+      "specificationDerived": false,
+      "sourceLocation": {
+        "kind": "specification",
+        "path": "review-context\\ai-workflow-puzzle-builder.json",
+        "locator": "requirements[8]",
+        "excerpt": "Local Execution, Mock AI, and Documentation"
+      }
+    }
+  ]
+}

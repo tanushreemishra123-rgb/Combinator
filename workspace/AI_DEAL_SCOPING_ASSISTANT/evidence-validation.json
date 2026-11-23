@@ -1,0 +1,993 @@
+{
+  "challengeId": "AI_DEAL_SCOPING_ASSISTANT",
+  "total": 82,
+  "valid": 82,
+  "unresolved": 0,
+  "locatorOnly": 0,
+  "findings": [
+    {
+      "evidenceId": "EV_b59qqoj",
+      "statement": "infra unit (Docker)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant",
+        "excerpt": "application root"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_6zf09c4",
+      "statement": "backend unit (Docker, Python)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\backend",
+        "excerpt": "application root"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_9x2rhyt",
+      "statement": "frontend unit (Docker, React, TypeScript, Vite)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\frontend",
+        "excerpt": "application root"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_3hp7dra",
+      "statement": "scripts present: dev, build, preview, lint, typecheck, format, format:check, test, gen:api",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\frontend\\package.json",
+        "excerpt": "package.json scripts"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_6m1db6i",
+      "statement": "69 test file(s) found",
+      "location": {
+        "kind": "test",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\backend\\tests\\api\\test_documents.py",
+        "excerpt": "example of 69 test files"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_4f60gbk",
+      "statement": "Normalized review final score: 100 (normalized AI review available).",
+      "location": {
+        "kind": "reviewer_comment",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\reviews\\SUB_001\\final-result.json",
+        "excerpt": "finalScore=100"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_cdycgzw",
+      "statement": "Grounded evidence for \"Structured Customer Requirements Analysis\" (208 files, 698 hits, strength 18.4)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\README.md",
+        "excerpt": "matches: customer, analysis, source, reference, origin"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_cdycgzw",
+      "statement": "Grounded evidence for \"Structured Customer Requirements Analysis\" (208 files, 698 hits, strength 18.4)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\backend\\app\\ai\\context.py",
+        "excerpt": "matches: structured, customer, source, reference"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_cdycgzw",
+      "statement": "Grounded evidence for \"Structured Customer Requirements Analysis\" (208 files, 698 hits, strength 18.4)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\backend\\app\\ai\\prompts\\_grounding.md",
+        "excerpt": "matches: structured, customer, source, origin, question"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_cdycgzw",
+      "statement": "Grounded evidence for \"Structured Customer Requirements Analysis\" (208 files, 698 hits, strength 18.4)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\backend\\app\\ai\\prompts\\ai_strategy.md",
+        "excerpt": "matches: structured, customer, reference"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_mnfj9q9",
+      "statement": "Grounded evidence for \"Scope Review and Controlled Generation\" (281 files, 863 hits, strength 18.1)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\README.md",
+        "excerpt": "matches: scope, review, users, assumptions, downstream"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_mnfj9q9",
+      "statement": "Grounded evidence for \"Scope Review and Controlled Generation\" (281 files, 863 hits, strength 18.1)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\backend\\app\\ai\\context.py",
+        "excerpt": "matches: scope, review, controlled, generation, artifacts"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_mnfj9q9",
+      "statement": "Grounded evidence for \"Scope Review and Controlled Generation\" (281 files, 863 hits, strength 18.1)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\backend\\app\\ai\\mock_provider.py",
+        "excerpt": "matches: scope, review, generation, artifacts, model"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_mnfj9q9",
+      "statement": "Grounded evidence for \"Scope Review and Controlled Generation\" (281 files, 863 hits, strength 18.1)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\backend\\app\\ai\\prompts\\_grounding.md",
+        "excerpt": "matches: scope, review, assumptions"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_2falinm",
+      "statement": "Grounded evidence for \"PRD and Functional Scope Generation\" (273 files, 965 hits, strength 18.5)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\README.md",
+        "excerpt": "matches: scope, reference, inferred, recommended, assumed"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_2falinm",
+      "statement": "Grounded evidence for \"PRD and Functional Scope Generation\" (273 files, 965 hits, strength 18.5)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\backend\\app\\ai\\context.py",
+        "excerpt": "matches: scope, generation, items, reference"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_2falinm",
+      "statement": "Grounded evidence for \"PRD and Functional Scope Generation\" (273 files, 965 hits, strength 18.5)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\backend\\app\\ai\\mock_provider.py",
+        "excerpt": "matches: scope, generation, items, reference"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_2falinm",
+      "statement": "Grounded evidence for \"PRD and Functional Scope Generation\" (273 files, 965 hits, strength 18.5)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\backend\\app\\ai\\prompts\\_grounding.md",
+        "excerpt": "matches: scope, items, requested, inferred, recommended"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_3xn2vbe",
+      "statement": "Grounded evidence for \"Cloud-Specific Solution Architecture\" (227 files, 809 hits, strength 18.6)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\README.md",
+        "excerpt": "matches: cloud, architecture, azure, google, component"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_3xn2vbe",
+      "statement": "Grounded evidence for \"Cloud-Specific Solution Architecture\" (227 files, 809 hits, strength 18.6)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\backend\\app\\ai\\prompts\\_grounding.md",
+        "excerpt": "matches: solution, architecture, assumption"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_3xn2vbe",
+      "statement": "Grounded evidence for \"Cloud-Specific Solution Architecture\" (227 files, 809 hits, strength 18.6)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\backend\\app\\ai\\prompts\\ai_strategy.md",
+        "excerpt": "matches: cloud, solution, architecture, azure, services"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_3xn2vbe",
+      "statement": "Grounded evidence for \"Cloud-Specific Solution Architecture\" (227 files, 809 hits, strength 18.6)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\backend\\app\\ai\\prompts\\architecture.md",
+        "excerpt": "matches: cloud, solution, architecture, services, component"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_7kgyacw",
+      "statement": "Grounded evidence for \"Data, Integration, and AI Solution Strategy\" (170 files, 560 hits, strength 18.3)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\README.md",
+        "excerpt": "matches: integration, strategy, cases, reference, explain"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_7kgyacw",
+      "statement": "Grounded evidence for \"Data, Integration, and AI Solution Strategy\" (170 files, 560 hits, strength 18.3)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\backend\\app\\ai\\prompts\\_grounding.md",
+        "excerpt": "matches: solution, recommendations, rationale"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_7kgyacw",
+      "statement": "Grounded evidence for \"Data, Integration, and AI Solution Strategy\" (170 files, 560 hits, strength 18.3)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\backend\\app\\ai\\prompts\\ai_strategy.md",
+        "excerpt": "matches: solution, cases, reference, recommendations, rationale"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_7kgyacw",
+      "statement": "Grounded evidence for \"Data, Integration, and AI Solution Strategy\" (170 files, 560 hits, strength 18.3)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\backend\\app\\ai\\prompts\\architecture.md",
+        "excerpt": "matches: integration, solution, rationale"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_c55v7vv",
+      "statement": "Grounded evidence for \"Explainable Effort and Timeline Estimation\" (129 files, 479 hits, strength 18.7)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\README.md",
+        "excerpt": "matches: explainable, effort, timeline, estimation, drivers"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_c55v7vv",
+      "statement": "Grounded evidence for \"Explainable Effort and Timeline Estimation\" (129 files, 479 hits, strength 18.7)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\backend\\app\\ai\\prompts\\_grounding.md",
+        "excerpt": "matches: rules, missing, information"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_c55v7vv",
+      "statement": "Grounded evidence for \"Explainable Effort and Timeline Estimation\" (129 files, 479 hits, strength 18.7)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\backend\\app\\ai\\prompts\\data_strategy.md",
+        "excerpt": "matches: missing, information"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_c55v7vv",
+      "statement": "Grounded evidence for \"Explainable Effort and Timeline Estimation\" (129 files, 479 hits, strength 18.7)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\backend\\app\\ai\\prompts\\estimate_drivers.md",
+        "excerpt": "matches: effort, timeline, estimation, drivers"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_c3bdyjj",
+      "statement": "Grounded evidence for \"Reproducible ROM Commercial Estimation\" (63 files, 161 hits, strength 17.6)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\README.md",
+        "excerpt": "matches: estimation, inputs"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_c3bdyjj",
+      "statement": "Grounded evidence for \"Reproducible ROM Commercial Estimation\" (63 files, 161 hits, strength 17.6)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\backend\\app\\ai\\prompts\\estimate_drivers.md",
+        "excerpt": "matches: commercial, estimation"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_c3bdyjj",
+      "statement": "Grounded evidence for \"Reproducible ROM Commercial Estimation\" (63 files, 161 hits, strength 17.6)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\backend\\app\\api\\v1\\estimation.py",
+        "excerpt": "matches: estimation, inputs"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_c3bdyjj",
+      "statement": "Grounded evidence for \"Reproducible ROM Commercial Estimation\" (63 files, 161 hits, strength 17.6)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\backend\\app\\change_impact\\rules.py",
+        "excerpt": "matches: commercial, estimation, inputs"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_7rhzlfc",
+      "statement": "Grounded evidence for \"Change Impact, Traceability, and Quality Validation\" (154 files, 435 hits, strength 17.8)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\README.md",
+        "excerpt": "matches: change, impact, traceability, quality, validation"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_7rhzlfc",
+      "statement": "Grounded evidence for \"Change Impact, Traceability, and Quality Validation\" (154 files, 435 hits, strength 17.8)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\backend\\app\\ai\\prompts\\data_strategy.md",
+        "excerpt": "matches: change, quality, validation"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_7rhzlfc",
+      "statement": "Grounded evidence for \"Change Impact, Traceability, and Quality Validation\" (154 files, 435 hits, strength 17.8)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\backend\\app\\ai\\prompts\\gap_analysis.md",
+        "excerpt": "matches: change, impact, affected"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_7rhzlfc",
+      "statement": "Grounded evidence for \"Change Impact, Traceability, and Quality Validation\" (154 files, 435 hits, strength 17.8)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\backend\\app\\ai\\provider.py",
+        "excerpt": "matches: validation, outputs"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_jpnk678",
+      "statement": "Grounded evidence for \"Product Depth, Local Reviewability, and Documentation\" (150 files, 397 hits, strength 17.6)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\README.md",
+        "excerpt": "matches: local, analysis, estimation, validation, stages"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_jpnk678",
+      "statement": "Grounded evidence for \"Product Depth, Local Reviewability, and Documentation\" (150 files, 397 hits, strength 17.6)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\backend\\app\\ai\\mock_provider.py",
+        "excerpt": "matches: generation, validation, stages"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_jpnk678",
+      "statement": "Grounded evidence for \"Product Depth, Local Reviewability, and Documentation\" (150 files, 397 hits, strength 17.6)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\backend\\app\\ai\\prompts\\data_strategy.md",
+        "excerpt": "matches: product, validation"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_jpnk678",
+      "statement": "Grounded evidence for \"Product Depth, Local Reviewability, and Documentation\" (150 files, 397 hits, strength 17.6)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\backend\\app\\ai\\prompts\\integration_architecture.md",
+        "excerpt": "matches: product, validation"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_bk3y2yj",
+      "statement": "frontend unit (React, TypeScript, Vite)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant",
+        "excerpt": "application root"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_5cbsn4v",
+      "statement": "scripts present: dev, build, preview, typecheck, lint, test, test:watch, verify",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\package.json",
+        "excerpt": "package.json scripts"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_9meqyst",
+      "statement": "230 test file(s) found",
+      "location": {
+        "kind": "test",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\src\\ai\\jsonExtraction.test.ts",
+        "excerpt": "example of 230 test files"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_5u44feu",
+      "statement": "Normalized review final score: 100 (normalized AI review available).",
+      "location": {
+        "kind": "reviewer_comment",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\reviews\\SUB_002\\final-result.json",
+        "excerpt": "finalScore=100"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_5u6az9i",
+      "statement": "Grounded evidence for \"Structured Customer Requirements Analysis\" (242 files, 792 hits, strength 18.3)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\README.md",
+        "excerpt": "matches: structured, customer, analysis, source, reference"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_5u6az9i",
+      "statement": "Grounded evidence for \"Structured Customer Requirements Analysis\" (242 files, 792 hits, strength 18.3)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\docs\\constraint-evidence.md",
+        "excerpt": "matches: structured, customer, analysis, source, reference"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_5u6az9i",
+      "statement": "Grounded evidence for \"Structured Customer Requirements Analysis\" (242 files, 792 hits, strength 18.3)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\samples\\ai-enabled-clinical-intake-assistant.md",
+        "excerpt": "matches: structured, customer, source, reference, origin"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_5u6az9i",
+      "statement": "Grounded evidence for \"Structured Customer Requirements Analysis\" (242 files, 792 hits, strength 18.3)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\samples\\app-modernization-claims-portal.md",
+        "excerpt": "matches: structured, customer, analysis, source, reference"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_4wt1vn6",
+      "statement": "Grounded evidence for \"Scope Review and Controlled Generation\" (398 files, 1217 hits, strength 18.1)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\README.md",
+        "excerpt": "matches: scope, review, generation, users, assumptions"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_4wt1vn6",
+      "statement": "Grounded evidence for \"Scope Review and Controlled Generation\" (398 files, 1217 hits, strength 18.1)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\docs\\constraint-evidence.md",
+        "excerpt": "matches: scope, review, generation, users, modify"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_4wt1vn6",
+      "statement": "Grounded evidence for \"Scope Review and Controlled Generation\" (398 files, 1217 hits, strength 18.1)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\package-lock.json",
+        "excerpt": "matches: scope, review"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_4wt1vn6",
+      "statement": "Grounded evidence for \"Scope Review and Controlled Generation\" (398 files, 1217 hits, strength 18.1)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\package.json",
+        "excerpt": "matches: scope, review, model"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_48pxbfg",
+      "statement": "Grounded evidence for \"PRD and Functional Scope Generation\" (349 files, 1149 hits, strength 18.3)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\README.md",
+        "excerpt": "matches: functional, scope, generation, items, reference"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_48pxbfg",
+      "statement": "Grounded evidence for \"PRD and Functional Scope Generation\" (349 files, 1149 hits, strength 18.3)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\docs\\constraint-evidence.md",
+        "excerpt": "matches: functional, scope, generation, items, reference"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_48pxbfg",
+      "statement": "Grounded evidence for \"PRD and Functional Scope Generation\" (349 files, 1149 hits, strength 18.3)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\samples\\ai-enabled-clinical-intake-assistant.md",
+        "excerpt": "matches: functional, scope, generation, items, reference"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_48pxbfg",
+      "statement": "Grounded evidence for \"PRD and Functional Scope Generation\" (349 files, 1149 hits, strength 18.3)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\samples\\app-modernization-claims-portal.change-impact.md",
+        "excerpt": "matches: functional, scope, items"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_3q231a8",
+      "statement": "Grounded evidence for \"Cloud-Specific Solution Architecture\" (277 files, 955 hits, strength 18.4)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\README.md",
+        "excerpt": "matches: cloud, solution, architecture, azure, google"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_3q231a8",
+      "statement": "Grounded evidence for \"Cloud-Specific Solution Architecture\" (277 files, 955 hits, strength 18.4)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\docs\\constraint-evidence.md",
+        "excerpt": "matches: cloud, solution, architecture, services, component"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_3q231a8",
+      "statement": "Grounded evidence for \"Cloud-Specific Solution Architecture\" (277 files, 955 hits, strength 18.4)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\package.json",
+        "excerpt": "matches: cloud, architecture"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_3q231a8",
+      "statement": "Grounded evidence for \"Cloud-Specific Solution Architecture\" (277 files, 955 hits, strength 18.4)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\samples\\ai-enabled-clinical-intake-assistant.md",
+        "excerpt": "matches: cloud, solution, architecture, azure, google"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_ctsc46x",
+      "statement": "Grounded evidence for \"Data, Integration, and AI Solution Strategy\" (277 files, 880 hits, strength 18.2)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\README.md",
+        "excerpt": "matches: integration, solution, strategy, integrations, cases"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_ctsc46x",
+      "statement": "Grounded evidence for \"Data, Integration, and AI Solution Strategy\" (277 files, 880 hits, strength 18.2)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\docs\\constraint-evidence.md",
+        "excerpt": "matches: integration, solution, strategy, integrations, cases"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_ctsc46x",
+      "statement": "Grounded evidence for \"Data, Integration, and AI Solution Strategy\" (277 files, 880 hits, strength 18.2)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\samples\\ai-enabled-clinical-intake-assistant.md",
+        "excerpt": "matches: integration, solution, strategy, integrations, cases"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_ctsc46x",
+      "statement": "Grounded evidence for \"Data, Integration, and AI Solution Strategy\" (277 files, 880 hits, strength 18.2)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\samples\\app-modernization-claims-portal.change-impact.md",
+        "excerpt": "matches: integration, solution, strategy, integrations, cases"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_88pkymb",
+      "statement": "Grounded evidence for \"Explainable Effort and Timeline Estimation\" (192 files, 654 hits, strength 18.4)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\README.md",
+        "excerpt": "matches: explainable, effort, timeline, estimation, drivers"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_88pkymb",
+      "statement": "Grounded evidence for \"Explainable Effort and Timeline Estimation\" (192 files, 654 hits, strength 18.4)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\docs\\constraint-evidence.md",
+        "excerpt": "matches: explainable, effort, timeline, estimation, drivers"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_88pkymb",
+      "statement": "Grounded evidence for \"Explainable Effort and Timeline Estimation\" (192 files, 654 hits, strength 18.4)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\samples\\ai-enabled-clinical-intake-assistant.md",
+        "excerpt": "matches: effort, timeline, estimation, drivers, rules"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_88pkymb",
+      "statement": "Grounded evidence for \"Explainable Effort and Timeline Estimation\" (192 files, 654 hits, strength 18.4)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\samples\\app-modernization-claims-portal.change-impact.md",
+        "excerpt": "matches: effort, timeline, drivers"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_cyos6ok",
+      "statement": "Grounded evidence for \"Reproducible ROM Commercial Estimation\" (117 files, 293 hits, strength 17.5)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\README.md",
+        "excerpt": "matches: commercial, estimation, inputs, internal"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_cyos6ok",
+      "statement": "Grounded evidence for \"Reproducible ROM Commercial Estimation\" (117 files, 293 hits, strength 17.5)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\docs\\constraint-evidence.md",
+        "excerpt": "matches: reproducible, commercial, estimation, inputs"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_cyos6ok",
+      "statement": "Grounded evidence for \"Reproducible ROM Commercial Estimation\" (117 files, 293 hits, strength 17.5)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\samples\\ai-enabled-clinical-intake-assistant.md",
+        "excerpt": "matches: reproducible, commercial, estimation, inputs, internal"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_cyos6ok",
+      "statement": "Grounded evidence for \"Reproducible ROM Commercial Estimation\" (117 files, 293 hits, strength 17.5)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\samples\\app-modernization-claims-portal.change-impact.md",
+        "excerpt": "matches: commercial, inputs, internal"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_pgkfasw",
+      "statement": "Grounded evidence for \"Change Impact, Traceability, and Quality Validation\" (205 files, 610 hits, strength 18.0)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\README.md",
+        "excerpt": "matches: change, impact, traceability, quality, validation"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_pgkfasw",
+      "statement": "Grounded evidence for \"Change Impact, Traceability, and Quality Validation\" (205 files, 610 hits, strength 18.0)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\docs\\constraint-evidence.md",
+        "excerpt": "matches: change, impact, traceability, quality, validation"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_pgkfasw",
+      "statement": "Grounded evidence for \"Change Impact, Traceability, and Quality Validation\" (205 files, 610 hits, strength 18.0)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\samples\\ai-enabled-clinical-intake-assistant.md",
+        "excerpt": "matches: change, traceability, quality, validation, affected"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_pgkfasw",
+      "statement": "Grounded evidence for \"Change Impact, Traceability, and Quality Validation\" (205 files, 610 hits, strength 18.0)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\samples\\app-modernization-claims-portal.change-impact.md",
+        "excerpt": "matches: change, traceability, quality, validation, affected"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_68d9eb8",
+      "statement": "Grounded evidence for \"Product Depth, Local Reviewability, and Documentation\" (169 files, 431 hits, strength 17.6)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\README.md",
+        "excerpt": "matches: product, local, analysis, generation, estimation"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_68d9eb8",
+      "statement": "Grounded evidence for \"Product Depth, Local Reviewability, and Documentation\" (169 files, 431 hits, strength 17.6)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\docs\\constraint-evidence.md",
+        "excerpt": "matches: depth, analysis, generation, estimation, validation"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_68d9eb8",
+      "statement": "Grounded evidence for \"Product Depth, Local Reviewability, and Documentation\" (169 files, 431 hits, strength 17.6)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\samples\\ai-enabled-clinical-intake-assistant.md",
+        "excerpt": "matches: product, local, generation, estimation, validation"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_68d9eb8",
+      "statement": "Grounded evidence for \"Product Depth, Local Reviewability, and Documentation\" (169 files, 431 hits, strength 17.6)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_002\\ai-deal-scoping-assistant\\samples\\app-modernization-claims-portal.md",
+        "excerpt": "matches: product, depth, local, analysis, estimation"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    }
+  ]
+}

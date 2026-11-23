@@ -1,0 +1,873 @@
+{
+  "units": [
+    {
+      "unit_id": "CAP_01",
+      "unit_type": "capability",
+      "workstream_id": "WS_01",
+      "complexity": "high",
+      "drivers": [
+        "high throughput (NFR_03)",
+        "low latency (NFR_04)",
+        "high availability (NFR_09)",
+        "integration with external Shopify and SAP S/4HANA"
+      ]
+    },
+    {
+      "unit_id": "CAP_02",
+      "unit_type": "capability",
+      "workstream_id": "WS_01",
+      "complexity": "high",
+      "drivers": [
+        "real-time processing (NFR_11)",
+        "high availability (NFR_09)",
+        "integration with external Nordkap Logistics"
+      ]
+    },
+    {
+      "unit_id": "CAP_03",
+      "unit_type": "capability",
+      "workstream_id": "WS_01",
+      "complexity": "medium",
+      "drivers": [
+        "file-based integration",
+        "tracking updates"
+      ]
+    },
+    {
+      "unit_id": "CAP_04",
+      "unit_type": "capability",
+      "workstream_id": "WS_01",
+      "complexity": "medium",
+      "drivers": [
+        "real-time data synchronization",
+        "integration with external systems"
+      ]
+    },
+    {
+      "unit_id": "CAP_05",
+      "unit_type": "capability",
+      "workstream_id": "WS_01",
+      "complexity": "very_high",
+      "drivers": [
+        "real-time (NFR_01)",
+        "high volume (NFR_05)",
+        "multiple target systems (Shopify, POS)",
+        "complex business rules (BR_02, CON_03)"
+      ]
+    },
+    {
+      "unit_id": "CAP_06",
+      "unit_type": "capability",
+      "workstream_id": "WS_01",
+      "complexity": "high",
+      "drivers": [
+        "low latency (NFR_06)",
+        "distribution to multiple external systems (Shopify, Salesforce)"
+      ]
+    },
+    {
+      "unit_id": "CAP_07",
+      "unit_type": "capability",
+      "workstream_id": "WS_01",
+      "complexity": "medium",
+      "drivers": [
+        "new business process automation"
+      ]
+    },
+    {
+      "unit_id": "CAP_08",
+      "unit_type": "capability",
+      "workstream_id": "WS_01",
+      "complexity": "medium",
+      "drivers": [
+        "file-based integration",
+        "financial data sensitivity"
+      ]
+    },
+    {
+      "unit_id": "CAP_09",
+      "unit_type": "capability",
+      "workstream_id": "WS_02",
+      "complexity": "high",
+      "drivers": [
+        "complex business logic (FR_06, FR_07)",
+        "data aggregation from multiple sources (DATA_03)",
+        "AI use case for break analysis"
+      ]
+    },
+    {
+      "unit_id": "CAP_10",
+      "unit_type": "capability",
+      "workstream_id": "WS_02",
+      "complexity": "medium",
+      "drivers": [
+        "batch and event-driven data feeds",
+        "integration with Snowflake"
+      ]
+    },
+    {
+      "unit_id": "CAP_11",
+      "unit_type": "capability",
+      "workstream_id": "WS_03",
+      "complexity": "high",
+      "drivers": [
+        "comprehensive monitoring (NFR_07)",
+        "robust error handling (NFR_08)",
+        "security monitoring (NFR_10)",
+        "multiple environments"
+      ]
+    },
+    {
+      "unit_id": "CAP_12",
+      "unit_type": "capability",
+      "workstream_id": "WS_01",
+      "complexity": "very_high",
+      "drivers": [
+        "foundational setup for all capabilities",
+        "multi-region deployment (eu-north-1, eu-west-1)",
+        "3 environments",
+        "security requirements (SEC_01, SEC_02)",
+        "compliance (GDPR)"
+      ]
+    },
+    {
+      "unit_id": "IA_01",
+      "unit_type": "integration",
+      "workstream_id": "WS_01",
+      "complexity": "high",
+      "drivers": [
+        "API integration",
+        "high throughput (NFR_03)",
+        "low latency (NFR_04)"
+      ]
+    },
+    {
+      "unit_id": "IA_02",
+      "unit_type": "integration",
+      "workstream_id": "WS_01",
+      "complexity": "medium",
+      "drivers": [
+        "file-based integration",
+        "real-time expectation (NFR_11)"
+      ]
+    },
+    {
+      "unit_id": "IA_03",
+      "unit_type": "integration",
+      "workstream_id": "WS_01",
+      "complexity": "low",
+      "drivers": [
+        "file-based integration",
+        "standard processing"
+      ]
+    },
+    {
+      "unit_id": "IA_04",
+      "unit_type": "integration",
+      "workstream_id": "WS_01",
+      "complexity": "very_high",
+      "drivers": [
+        "API integration",
+        "real-time (NFR_01)",
+        "high volume (NFR_05)",
+        "multiple target systems"
+      ]
+    },
+    {
+      "unit_id": "IA_05",
+      "unit_type": "integration",
+      "workstream_id": "WS_02",
+      "complexity": "low",
+      "drivers": [
+        "batch integration",
+        "standard ETL"
+      ]
+    },
+    {
+      "unit_id": "IA_06",
+      "unit_type": "integration",
+      "workstream_id": "WS_02",
+      "complexity": "medium",
+      "drivers": [
+        "event-driven integration",
+        "intraday frequency"
+      ]
+    },
+    {
+      "unit_id": "IA_07",
+      "unit_type": "integration",
+      "workstream_id": "WS_01",
+      "complexity": "high",
+      "drivers": [
+        "API integration",
+        "low latency (NFR_06)",
+        "multiple target systems"
+      ]
+    },
+    {
+      "unit_id": "IA_08",
+      "unit_type": "integration",
+      "workstream_id": "WS_01",
+      "complexity": "medium",
+      "drivers": [
+        "file-based integration",
+        "financial data"
+      ]
+    },
+    {
+      "unit_id": "AI_01",
+      "unit_type": "ai_use_case",
+      "workstream_id": "WS_02",
+      "complexity": "high",
+      "drivers": [
+        "complex AI model development",
+        "integration with financial data",
+        "business logic for triage"
+      ]
+    },
+    {
+      "unit_id": "AI_02",
+      "unit_type": "ai_use_case",
+      "workstream_id": "WS_01",
+      "complexity": "medium",
+      "drivers": [
+        "AI model development",
+        "real-time context generation"
+      ]
+    },
+    {
+      "unit_id": "ARC_01",
+      "unit_type": "architecture_component",
+      "workstream_id": "WS_01",
+      "complexity": "medium",
+      "drivers": [
+        "central entry point",
+        "security enforcement",
+        "traffic management"
+      ]
+    },
+    {
+      "unit_id": "ARC_02",
+      "unit_type": "architecture_component",
+      "workstream_id": "WS_01",
+      "complexity": "high",
+      "drivers": [
+        "complex routing",
+        "transformation",
+        "protocol mediation for multiple integrations"
+      ]
+    },
+    {
+      "unit_id": "ARC_03",
+      "unit_type": "architecture_component",
+      "workstream_id": "WS_01",
+      "complexity": "medium",
+      "drivers": [
+        "runtime for core logic",
+        "scalability"
+      ]
+    },
+    {
+      "unit_id": "ARC_04",
+      "unit_type": "architecture_component",
+      "workstream_id": "WS_01",
+      "complexity": "low",
+      "drivers": [
+        "standard file transfer and storage"
+      ]
+    },
+    {
+      "unit_id": "ARC_05",
+      "unit_type": "architecture_component",
+      "workstream_id": "WS_01",
+      "complexity": "high",
+      "drivers": [
+        "managing complex multi-step business processes"
+      ]
+    },
+    {
+      "unit_id": "ARC_06",
+      "unit_type": "architecture_component",
+      "workstream_id": "WS_02",
+      "complexity": "medium",
+      "drivers": [
+        "critical data storage",
+        "supports reconciliation logic"
+      ]
+    },
+    {
+      "unit_id": "ARC_07",
+      "unit_type": "architecture_component",
+      "workstream_id": "WS_01",
+      "complexity": "medium",
+      "drivers": [
+        "user interface development",
+        "operational visibility"
+      ]
+    },
+    {
+      "unit_id": "ARC_08",
+      "unit_type": "architecture_component",
+      "workstream_id": "WS_01",
+      "complexity": "medium",
+      "drivers": [
+        "central authentication and authorization",
+        "security"
+      ]
+    },
+    {
+      "unit_id": "ARC_09",
+      "unit_type": "architecture_component",
+      "workstream_id": "WS_01",
+      "complexity": "medium",
+      "drivers": [
+        "secure key storage",
+        "compliance"
+      ]
+    },
+    {
+      "unit_id": "ARC_10",
+      "unit_type": "architecture_component",
+      "workstream_id": "WS_03",
+      "complexity": "medium",
+      "drivers": [
+        "aggregation and visualization of monitoring data"
+      ]
+    },
+    {
+      "unit_id": "ARC_11",
+      "unit_type": "architecture_component",
+      "workstream_id": "WS_03",
+      "complexity": "medium",
+      "drivers": [
+        "multi-region setup",
+        "network segmentation for security"
+      ]
+    },
+    {
+      "unit_id": "ARC_12",
+      "unit_type": "architecture_component",
+      "workstream_id": "WS_03",
+      "complexity": "medium",
+      "drivers": [
+        "automated deployments across 3 environments"
+      ]
+    },
+    {
+      "unit_id": "ARC_13",
+      "unit_type": "architecture_component",
+      "workstream_id": "WS_03",
+      "complexity": "high",
+      "drivers": [
+        "high availability",
+        "scalability for variable loads",
+        "multi-region deployment"
+      ]
+    },
+    {
+      "unit_id": "ARC_14",
+      "unit_type": "architecture_component",
+      "workstream_id": "WS_03",
+      "complexity": "low",
+      "drivers": [
+        "standard backup and recovery"
+      ]
+    },
+    {
+      "unit_id": "DOM_01",
+      "unit_type": "data_domain",
+      "workstream_id": "WS_01",
+      "complexity": "medium",
+      "drivers": [
+        "distribution to multiple systems",
+        "data consistency"
+      ]
+    },
+    {
+      "unit_id": "DOM_02",
+      "unit_type": "data_domain",
+      "workstream_id": "WS_01",
+      "complexity": "high",
+      "drivers": [
+        "high volume",
+        "high velocity",
+        "critical for multiple integrations",
+        "GDPR implications"
+      ]
+    },
+    {
+      "unit_id": "DOM_03",
+      "unit_type": "data_domain",
+      "workstream_id": "WS_01",
+      "complexity": "high",
+      "drivers": [
+        "real-time",
+        "high volume",
+        "critical for sales"
+      ]
+    },
+    {
+      "unit_id": "DOM_04",
+      "unit_type": "data_domain",
+      "workstream_id": "WS_02",
+      "complexity": "medium",
+      "drivers": [
+        "GDPR implications",
+        "batch processing"
+      ]
+    },
+    {
+      "unit_id": "DOM_05",
+      "unit_type": "data_domain",
+      "workstream_id": "WS_01",
+      "complexity": "medium",
+      "drivers": [
+        "file-based",
+        "tracking information"
+      ]
+    },
+    {
+      "unit_id": "DOM_06",
+      "unit_type": "data_domain",
+      "workstream_id": "WS_02",
+      "complexity": "medium",
+      "drivers": [
+        "critical for reconciliation",
+        "financial accuracy"
+      ]
+    },
+    {
+      "unit_id": "DOM_07",
+      "unit_type": "data_domain",
+      "workstream_id": "WS_03",
+      "complexity": "medium",
+      "drivers": [
+        "supports observability and resilience",
+        "data volume from logs/metrics"
+      ]
+    }
+  ],
+  "workstreams": [
+    {
+      "req_ids": [
+        "INT_01",
+        "NFR_03",
+        "NFR_04",
+        "NFR_09",
+        "INT_02",
+        "CON_01",
+        "NFR_11",
+        "INT_03",
+        "FR_02",
+        "FR_08",
+        "FR_09",
+        "FR_01",
+        "NFR_02",
+        "INT_04",
+        "NFR_01",
+        "NFR_05",
+        "FR_03",
+        "BR_02",
+        "CON_03",
+        "INT_07",
+        "NFR_06",
+        "DATA_01",
+        "FR_04",
+        "INT_08",
+        "BR_01",
+        "SEC_01",
+        "SEC_02",
+        "TECH_02",
+        "TECH_03",
+        "TECH_04",
+        "TECH_05",
+        "TECH_06"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "WS_01",
+      "name": "Core Integration Development",
+      "capability_ids": [
+        "CAP_01",
+        "CAP_02",
+        "CAP_03",
+        "CAP_04",
+        "CAP_05",
+        "CAP_06",
+        "CAP_07",
+        "CAP_08",
+        "CAP_12"
+      ],
+      "integration_ids": [
+        "IA_01",
+        "IA_02",
+        "IA_03",
+        "IA_04",
+        "IA_07",
+        "IA_08"
+      ],
+      "ai_use_case_ids": [
+        "AI_02"
+      ],
+      "arc_ids": [
+        "ARC_01",
+        "ARC_02",
+        "ARC_03",
+        "ARC_04",
+        "ARC_05",
+        "ARC_07",
+        "ARC_08",
+        "ARC_09"
+      ],
+      "domain_ids": [
+        "DOM_01",
+        "DOM_02",
+        "DOM_03",
+        "DOM_05"
+      ],
+      "derived_complexity": "very_high",
+      "roles": [
+        "Solution Architect",
+        "Integration Engineer",
+        "Backend Engineer",
+        "Security Engineer",
+        "QA Engineer"
+      ],
+      "risks": [
+        "Complex real-time requirements across multiple external systems",
+        "Potential data consistency challenges across integrated systems",
+        "Dependency on external system availability and API stability"
+      ],
+      "dependencies": [
+        "Availability of external system APIs/SFTP endpoints",
+        "Clear data models and transformation rules from source systems",
+        "Customer resources for functional validation"
+      ]
+    },
+    {
+      "req_ids": [
+        "FR_06",
+        "FR_07",
+        "DATA_03",
+        "INT_05",
+        "INT_06",
+        "FR_05",
+        "FR_01",
+        "NFR_02"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "WS_02",
+      "name": "Data & Reporting",
+      "capability_ids": [
+        "CAP_09",
+        "CAP_10"
+      ],
+      "integration_ids": [
+        "IA_05",
+        "IA_06"
+      ],
+      "ai_use_case_ids": [
+        "AI_01"
+      ],
+      "arc_ids": [
+        "ARC_06"
+      ],
+      "domain_ids": [
+        "DOM_04",
+        "DOM_06"
+      ],
+      "derived_complexity": "high",
+      "roles": [
+        "Data Engineer",
+        "Data Scientist",
+        "Solution Architect",
+        "QA Engineer"
+      ],
+      "risks": [
+        "Ensuring data quality and completeness from source systems",
+        "Complexity of reconciliation logic and reporting requirements",
+        "Performance of data processing for large volumes"
+      ],
+      "dependencies": [
+        "Stable and consistent data feeds from operational systems",
+        "Clear and unambiguous reconciliation rules from business stakeholders"
+      ]
+    },
+    {
+      "req_ids": [
+        "FR_05",
+        "NFR_07",
+        "NFR_08",
+        "NFR_10",
+        "DATA_02",
+        "BR_01",
+        "SEC_01",
+        "SEC_02",
+        "TECH_02",
+        "TECH_03",
+        "TECH_04",
+        "TECH_05",
+        "TECH_06"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "WS_03",
+      "name": "Platform Operations & Monitoring",
+      "capability_ids": [
+        "CAP_11"
+      ],
+      "integration_ids": [],
+      "ai_use_case_ids": [],
+      "arc_ids": [
+        "ARC_10",
+        "ARC_11",
+        "ARC_12",
+        "ARC_13",
+        "ARC_14"
+      ],
+      "domain_ids": [
+        "DOM_07"
+      ],
+      "derived_complexity": "high",
+      "roles": [
+        "DevOps Engineer",
+        "Cloud Engineer",
+        "Site Reliability Engineer",
+        "Security Engineer"
+      ],
+      "risks": [
+        "Ensuring high availability and performance across multiple regions",
+        "Maintaining security compliance and operational resilience",
+        "Managing infrastructure as code across three environments"
+      ],
+      "dependencies": [
+        "Clear non-functional requirements for performance, scalability, and security",
+        "Customer IT team collaboration for network and security configurations"
+      ]
+    }
+  ],
+  "phases": [
+    {
+      "name": "Inception & Design",
+      "workstream_ids": [
+        "WS_01",
+        "WS_02",
+        "WS_03"
+      ],
+      "milestones": [
+        "Architecture Approved",
+        "Detailed Design Complete"
+      ]
+    },
+    {
+      "name": "Platform Build & Core Integrations",
+      "workstream_ids": [
+        "WS_01",
+        "WS_03"
+      ],
+      "milestones": [
+        "Core Platform Ready",
+        "Key Integrations Developed"
+      ]
+    },
+    {
+      "name": "Data & Reporting Development",
+      "workstream_ids": [
+        "WS_02"
+      ],
+      "milestones": [
+        "Data Pipelines Operational",
+        "Reconciliation Logic Implemented"
+      ]
+    },
+    {
+      "name": "Testing & Refinement",
+      "workstream_ids": [
+        "WS_01",
+        "WS_02",
+        "WS_03"
+      ],
+      "milestones": [
+        "System Integration Testing Complete",
+        "User Acceptance Testing Complete"
+      ]
+    },
+    {
+      "name": "Deployment & Go-Live",
+      "workstream_ids": [
+        "WS_01",
+        "WS_02",
+        "WS_03"
+      ],
+      "milestones": [
+        "Production System Live",
+        "Hypercare Handover"
+      ]
+    }
+  ],
+  "delivery_risks": [
+    {
+      "req_ids": [
+        "INT_01",
+        "INT_02",
+        "INT_03",
+        "INT_04",
+        "INT_07",
+        "INT_08"
+      ],
+      "basis": "inferred",
+      "validation_required": false,
+      "validation_reason": "",
+      "text": "Integration with multiple external systems (Shopify, SAP S/4HANA, Nordkap Logistics, Salesforce, Payment Provider, Snowflake) may encounter API limitations, data format discrepancies, or unexpected behavior."
+    },
+    {
+      "req_ids": [
+        "NFR_01",
+        "NFR_03",
+        "NFR_04",
+        "NFR_05",
+        "NFR_06",
+        "NFR_09",
+        "NFR_11"
+      ],
+      "basis": "inferred",
+      "validation_required": false,
+      "validation_reason": "",
+      "text": "Meeting stringent non-functional requirements for real-time processing, high throughput, low latency, and high availability requires extensive performance testing and optimization."
+    },
+    {
+      "req_ids": [
+        "DATA_01",
+        "DATA_02",
+        "DATA_03",
+        "BR_02",
+        "CON_03"
+      ],
+      "basis": "inferred",
+      "validation_required": false,
+      "validation_reason": "",
+      "text": "Ensuring data consistency and accuracy across all integrated systems, especially for inventory and order data, is critical and complex."
+    },
+    {
+      "req_ids": [],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "text": "Compliance with GDPR for customer and order data requires careful handling and validation."
+    },
+    {
+      "req_ids": [
+        "FR_06",
+        "FR_07",
+        "FR_05"
+      ],
+      "basis": "inferred",
+      "validation_required": false,
+      "validation_reason": "",
+      "text": "Complexity of automated reconciliation logic and AI model development for financial data."
+    },
+    {
+      "req_ids": [],
+      "basis": "recommended",
+      "validation_required": true,
+      "validation_reason": "Customer resource availability is a common project risk that needs explicit confirmation.",
+      "text": "Customer resource availability for user acceptance testing, data validation, and dependency resolution may impact delivery timelines."
+    }
+  ],
+  "estimation_assumptions": [
+    {
+      "req_ids": [],
+      "basis": "recommended",
+      "validation_required": true,
+      "validation_reason": "Access to external systems is a critical dependency that needs explicit confirmation.",
+      "text": "Customer will provide timely access to all required external system documentation, APIs, and test environments."
+    },
+    {
+      "req_ids": [
+        "FR_06",
+        "FR_07"
+      ],
+      "basis": "inferred",
+      "validation_required": true,
+      "validation_reason": "Clarity on business rules is essential for accurate implementation and estimation.",
+      "text": "Customer will provide clear and unambiguous business rules for reconciliation and data transformation."
+    },
+    {
+      "req_ids": [],
+      "basis": "recommended",
+      "validation_required": true,
+      "validation_reason": "Third-party vendor management is typically a customer responsibility.",
+      "text": "Customer will manage all third-party vendor relationships and any associated costs for licenses or API access."
+    },
+    {
+      "req_ids": [
+        "SEC_01",
+        "SEC_02",
+        "TECH_02",
+        "TECH_03",
+        "TECH_04",
+        "TECH_05",
+        "TECH_06"
+      ],
+      "basis": "inferred",
+      "validation_required": true,
+      "validation_reason": "Customer IT involvement for security and network is a key dependency.",
+      "text": "All necessary security policies and network configurations on the customer side will be provided and implemented in a timely manner."
+    },
+    {
+      "req_ids": [],
+      "basis": "assumed",
+      "validation_required": true,
+      "validation_reason": "The interpretation of 'standard' security and testing levels needs customer validation.",
+      "text": "The scope of 'standard' security level and 'standard' testing level is aligned with industry best practices for retail integration platforms."
+    }
+  ],
+  "exclusions": [
+    {
+      "req_ids": [],
+      "basis": "recommended",
+      "validation_required": true,
+      "validation_reason": "License costs are typically separate from implementation services.",
+      "text": "Third-party software licenses and subscriptions (e.g., Shopify, SAP, Salesforce, Snowflake, payment provider)."
+    },
+    {
+      "req_ids": [],
+      "basis": "recommended",
+      "validation_required": true,
+      "validation_reason": "Cloud consumption costs are typically separate from implementation services.",
+      "text": "Cloud infrastructure consumption costs (e.g., AWS, Azure, GCP)."
+    },
+    {
+      "req_ids": [],
+      "basis": "recommended",
+      "validation_required": true,
+      "validation_reason": "Customer-side effort is a standard exclusion for service engagements.",
+      "text": "Customer-side effort for project management, business analysis, data preparation, and user acceptance testing."
+    },
+    {
+      "req_ids": [],
+      "basis": "recommended",
+      "validation_required": true,
+      "validation_reason": "Changes to existing customer systems are typically out of scope for integration projects unless explicitly defined.",
+      "text": "Any changes to existing customer systems (e.g., SAP S/4HANA, Shopify, Salesforce) required to support integrations."
+    },
+    {
+      "req_ids": [],
+      "basis": "recommended",
+      "validation_required": true,
+      "validation_reason": "Ongoing support is usually a separate service offering.",
+      "text": "Ongoing operational support and maintenance post-hypercare period."
+    },
+    {
+      "req_ids": [],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "text": "Data migration activities beyond the defined integrations."
+    }
+  ]
+}

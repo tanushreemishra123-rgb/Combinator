@@ -1,0 +1,65 @@
+{
+  "challengeId": "AI_WORKFLOW_PUZZLE_BUILDER",
+  "mode": "code",
+  "decisions": [
+    {
+      "id": "DEC_5z1kl56",
+      "kind": "base_selection",
+      "title": "Select the runnable base",
+      "options": [
+        {
+          "id": "OPT_2j166qh",
+          "sourceId": "SUB_002",
+          "label": "SUB_002 (wins 7 req(s), suitability 100)",
+          "evidence": [],
+          "compatibilityRisk": "low"
+        },
+        {
+          "id": "OPT_6rcrzi4",
+          "sourceId": "SUB_001",
+          "label": "SUB_001 (wins 2 req(s), suitability 90)",
+          "evidence": [],
+          "compatibilityRisk": "high"
+        }
+      ],
+      "recommendation": "OPT_2j166qh",
+      "reasoning": "SUB_002 has the highest grounded base suitability (100): coverage≈100%, tests=complete, build=present, risk=low.",
+      "risk": "low",
+      "state": "accepted",
+      "selectedSource": "OPT_2j166qh",
+      "copilotComment": "Copilot accepted the recommended options.",
+      "regenerationRequired": true,
+      "updatedAt": "2026-11-23T04:45:22.249Z"
+    },
+    {
+      "id": "DEC_2dk5yqh",
+      "kind": "transplant",
+      "title": "Transplant for \"Reliability Feedback\"",
+      "requirementId": "REQ_63bstt",
+      "options": [
+        {
+          "id": "OPT_7luweka",
+          "sourceId": "SUB_001",
+          "label": "Transplant from SUB_001",
+          "evidence": [],
+          "compatibilityRisk": "high"
+        },
+        {
+          "id": "OPT_54agltz",
+          "sourceId": "SUB_002",
+          "label": "Keep base (SUB_002) as-is",
+          "evidence": [],
+          "compatibilityRisk": "low"
+        }
+      ],
+      "recommendation": "OPT_7luweka",
+      "reasoning": "SUB_001 covers \"Reliability Feedback\" more strongly than the base. SUB_001 shows the strongest grounded coverage (complete) for this requirement.",
+      "risk": "high",
+      "state": "manual_review",
+      "selectedSource": "OPT_7luweka",
+      "copilotComment": "No compatible donor-to-base source path was found. Copilot must select or map a safe integration path.",
+      "regenerationRequired": true,
+      "updatedAt": "2026-11-23T04:45:22.249Z"
+    }
+  ]
+}

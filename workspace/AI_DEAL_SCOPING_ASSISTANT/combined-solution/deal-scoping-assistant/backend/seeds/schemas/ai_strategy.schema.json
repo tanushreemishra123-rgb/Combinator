@@ -1,0 +1,354 @@
+{
+  "$defs": {
+    "AiUseCase": {
+      "additionalProperties": false,
+      "properties": {
+        "req_ids": {
+          "description": "Scope item ids this element is grounded in.",
+          "items": {
+            "type": "string"
+          },
+          "title": "Req Ids",
+          "type": "array"
+        },
+        "basis": {
+          "$ref": "#/$defs/Basis",
+          "description": "customer, inferred, assumed or recommended."
+        },
+        "validation_required": {
+          "default": false,
+          "description": "True when a human must validate this element before use.",
+          "title": "Validation Required",
+          "type": "boolean"
+        },
+        "validation_reason": {
+          "default": "",
+          "description": "Why human validation is required, when it is.",
+          "title": "Validation Reason",
+          "type": "string"
+        },
+        "id": {
+          "description": "AI use case id such as AI_01.",
+          "title": "Id",
+          "type": "string"
+        },
+        "name": {
+          "description": "Use case name.",
+          "title": "Name",
+          "type": "string"
+        },
+        "description": {
+          "description": "What the use case does.",
+          "title": "Description",
+          "type": "string"
+        },
+        "processing_class": {
+          "$ref": "#/$defs/ProcessingClass",
+          "description": "ai, deterministic or human_decision processing."
+        },
+        "pattern": {
+          "description": "AI pattern, for example retrieval-augmented generation.",
+          "title": "Pattern",
+          "type": "string"
+        },
+        "model_options": {
+          "description": "Candidate models.",
+          "items": {
+            "type": "string"
+          },
+          "title": "Model Options",
+          "type": "array"
+        },
+        "retrieval_required": {
+          "default": false,
+          "description": "Whether retrieval is needed.",
+          "title": "Retrieval Required",
+          "type": "boolean"
+        },
+        "retrieval_notes": {
+          "default": "",
+          "description": "Retrieval approach, when required.",
+          "title": "Retrieval Notes",
+          "type": "string"
+        },
+        "orchestration": {
+          "default": "",
+          "description": "Agent or workflow orchestration.",
+          "title": "Orchestration",
+          "type": "string"
+        },
+        "prompt_and_structured_output": {
+          "default": "",
+          "description": "Prompt and structured-output management.",
+          "title": "Prompt And Structured Output",
+          "type": "string"
+        },
+        "evaluation": {
+          "default": "",
+          "description": "Evaluation approach.",
+          "title": "Evaluation",
+          "type": "string"
+        },
+        "responsible_ai_safety": {
+          "default": "",
+          "description": "Responsible-AI and safety considerations.",
+          "title": "Responsible Ai Safety",
+          "type": "string"
+        },
+        "monitoring_feedback": {
+          "default": "",
+          "description": "Monitoring and feedback loop.",
+          "title": "Monitoring Feedback",
+          "type": "string"
+        },
+        "human_review": {
+          "default": "",
+          "description": "Human-review requirements.",
+          "title": "Human Review",
+          "type": "string"
+        },
+        "data_privacy": {
+          "default": "",
+          "description": "Data privacy considerations.",
+          "title": "Data Privacy",
+          "type": "string"
+        }
+      },
+      "required": [
+        "basis",
+        "id",
+        "name",
+        "description",
+        "processing_class",
+        "pattern"
+      ],
+      "title": "AiUseCase",
+      "type": "object"
+    },
+    "Basis": {
+      "enum": [
+        "customer",
+        "inferred",
+        "assumed",
+        "recommended"
+      ],
+      "title": "Basis",
+      "type": "string"
+    },
+    "FrameworkRecommendation": {
+      "additionalProperties": false,
+      "properties": {
+        "req_ids": {
+          "description": "Scope item ids this element is grounded in.",
+          "items": {
+            "type": "string"
+          },
+          "title": "Req Ids",
+          "type": "array"
+        },
+        "basis": {
+          "$ref": "#/$defs/Basis",
+          "description": "customer, inferred, assumed or recommended."
+        },
+        "validation_required": {
+          "default": false,
+          "description": "True when a human must validate this element before use.",
+          "title": "Validation Required",
+          "type": "boolean"
+        },
+        "validation_reason": {
+          "default": "",
+          "description": "Why human validation is required, when it is.",
+          "title": "Validation Reason",
+          "type": "string"
+        },
+        "name": {
+          "description": "Framework or service name.",
+          "title": "Name",
+          "type": "string"
+        },
+        "purpose": {
+          "description": "What it is used for in this solution.",
+          "title": "Purpose",
+          "type": "string"
+        },
+        "rationale": {
+          "description": "Solution-specific reason for the recommendation.",
+          "title": "Rationale",
+          "type": "string"
+        },
+        "alternatives_considered": {
+          "description": "Alternatives that were considered.",
+          "items": {
+            "type": "string"
+          },
+          "title": "Alternatives Considered",
+          "type": "array"
+        }
+      },
+      "required": [
+        "basis",
+        "name",
+        "purpose",
+        "rationale"
+      ],
+      "title": "FrameworkRecommendation",
+      "type": "object"
+    },
+    "ProcessingClass": {
+      "enum": [
+        "ai",
+        "deterministic",
+        "human_decision"
+      ],
+      "title": "ProcessingClass",
+      "type": "string"
+    },
+    "ProviderOption": {
+      "additionalProperties": false,
+      "properties": {
+        "platform": {
+          "$ref": "#/$defs/ProviderPlatformScope",
+          "description": "Platform this option applies to."
+        },
+        "provider": {
+          "description": "Model or service provider.",
+          "title": "Provider",
+          "type": "string"
+        },
+        "models": {
+          "description": "Models offered by the provider.",
+          "items": {
+            "type": "string"
+          },
+          "title": "Models",
+          "type": "array"
+        },
+        "rationale": {
+          "description": "Why this option fits the solution.",
+          "title": "Rationale",
+          "type": "string"
+        }
+      },
+      "required": [
+        "platform",
+        "provider",
+        "rationale"
+      ],
+      "title": "ProviderOption",
+      "type": "object"
+    },
+    "ProviderPlatformScope": {
+      "enum": [
+        "aws",
+        "azure",
+        "gcp",
+        "any"
+      ],
+      "title": "ProviderPlatformScope",
+      "type": "string"
+    },
+    "Statement": {
+      "additionalProperties": false,
+      "description": "A single grounded sentence used for list sections.",
+      "properties": {
+        "req_ids": {
+          "description": "Scope item ids this element is grounded in.",
+          "items": {
+            "type": "string"
+          },
+          "title": "Req Ids",
+          "type": "array"
+        },
+        "basis": {
+          "$ref": "#/$defs/Basis",
+          "description": "customer, inferred, assumed or recommended."
+        },
+        "validation_required": {
+          "default": false,
+          "description": "True when a human must validate this element before use.",
+          "title": "Validation Required",
+          "type": "boolean"
+        },
+        "validation_reason": {
+          "default": "",
+          "description": "Why human validation is required, when it is.",
+          "title": "Validation Reason",
+          "type": "string"
+        },
+        "text": {
+          "description": "The statement itself.",
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "basis",
+        "text"
+      ],
+      "title": "Statement",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "ai_requirements": {
+      "description": "AI-specific requirements such as accuracy or latency.",
+      "items": {
+        "$ref": "#/$defs/Statement"
+      },
+      "title": "Ai Requirements",
+      "type": "array"
+    },
+    "use_cases": {
+      "description": "Suitable AI use cases.",
+      "items": {
+        "$ref": "#/$defs/AiUseCase"
+      },
+      "title": "Use Cases",
+      "type": "array"
+    },
+    "deterministic_areas": {
+      "description": "Areas better served by deterministic processing.",
+      "items": {
+        "$ref": "#/$defs/Statement"
+      },
+      "title": "Deterministic Areas",
+      "type": "array"
+    },
+    "mandatory_human_decisions": {
+      "description": "Decisions that must stay with a human.",
+      "items": {
+        "$ref": "#/$defs/Statement"
+      },
+      "title": "Mandatory Human Decisions",
+      "type": "array"
+    },
+    "architecture_pattern": {
+      "description": "Recommended AI architecture pattern.",
+      "title": "Architecture Pattern",
+      "type": "string"
+    },
+    "provider_options": {
+      "description": "Model or provider options per platform.",
+      "items": {
+        "$ref": "#/$defs/ProviderOption"
+      },
+      "title": "Provider Options",
+      "type": "array"
+    },
+    "framework_recommendations": {
+      "description": "Recommended frameworks or services.",
+      "items": {
+        "$ref": "#/$defs/FrameworkRecommendation"
+      },
+      "title": "Framework Recommendations",
+      "type": "array"
+    }
+  },
+  "required": [
+    "architecture_pattern"
+  ],
+  "title": "AiStrategy",
+  "type": "object"
+}

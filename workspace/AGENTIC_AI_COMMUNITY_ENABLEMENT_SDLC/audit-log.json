@@ -1,0 +1,116 @@
+[
+  {
+    "at": "2026-11-23T04:45:35.140Z",
+    "op": "write",
+    "target": "AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC\\review-context-status.json",
+    "detail": "233 bytes"
+  },
+  {
+    "at": "2026-11-23T04:45:35.141Z",
+    "op": "write",
+    "target": "AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC\\active-review-context.json",
+    "detail": "1995 bytes"
+  },
+  {
+    "at": "2026-11-23T04:45:35.141Z",
+    "op": "write",
+    "target": "AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC\\review-context-reconciliation.json",
+    "detail": "561 bytes"
+  },
+  {
+    "at": "2026-11-23T04:45:35.142Z",
+    "op": "write",
+    "target": "AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC\\source-location-map.json",
+    "detail": "912 bytes"
+  },
+  {
+    "at": "2026-11-23T04:45:35.827Z",
+    "op": "write",
+    "target": "AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC\\submissions\\SUB_001\\ideas.json",
+    "detail": "38415 bytes"
+  },
+  {
+    "at": "2026-11-23T04:45:35.870Z",
+    "op": "write",
+    "target": "AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC\\submissions\\SUB_002\\ideas.json",
+    "detail": "12805 bytes"
+  },
+  {
+    "at": "2026-11-23T04:45:35.889Z",
+    "op": "write",
+    "target": "AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC\\submissions\\SUB_003\\ideas.json",
+    "detail": "23572 bytes"
+  },
+  {
+    "at": "2026-11-23T04:45:35.892Z",
+    "op": "write",
+    "target": "AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC\\synthesized-concept\\concept.md",
+    "detail": "9901 bytes"
+  },
+  {
+    "at": "2026-11-23T04:45:35.893Z",
+    "op": "write",
+    "target": "AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC\\decisions.json",
+    "detail": "6137 bytes"
+  },
+  {
+    "at": "2026-11-23T04:45:35.893Z",
+    "op": "write",
+    "target": "AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC\\requirement-matrix.json",
+    "detail": "26111 bytes"
+  },
+  {
+    "at": "2026-11-23T04:45:35.894Z",
+    "op": "write",
+    "target": "AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC\\requirement-matrix.md",
+    "detail": "974 bytes"
+  },
+  {
+    "at": "2026-11-23T04:45:35.894Z",
+    "op": "write",
+    "target": "AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC\\scorecard-estimate.json",
+    "detail": "337 bytes"
+  },
+  {
+    "at": "2026-11-23T04:45:35.908Z",
+    "op": "write",
+    "target": "AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC\\evidence-validation.json",
+    "detail": "49033 bytes"
+  },
+  {
+    "at": "2026-11-23T04:45:35.908Z",
+    "op": "write",
+    "target": "AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC\\provenance.json",
+    "detail": "14508 bytes"
+  },
+  {
+    "at": "2026-11-23T04:45:35.909Z",
+    "op": "write",
+    "target": "AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC\\contradictions.json",
+    "detail": "106 bytes"
+  },
+  {
+    "at": "2026-11-23T04:45:35.909Z",
+    "op": "write",
+    "target": "AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC\\verification.json",
+    "detail": "1493 bytes"
+  },
+  {
+    "at": "2026-11-23T04:45:35.909Z",
+    "op": "write",
+    "target": "AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC\\verification-logs.json",
+    "detail": "3 bytes"
+  },
+  {
+    "at": "2026-11-23T04:45:35.919Z",
+    "op": "write",
+    "target": "AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC\\integrity\\integrity-report.json",
+    "detail": "5452 bytes"
+  },
+  {
+    "at": "2026-11-23T04:45:35.920Z",
+    "op": "write",
+    "target": "AGENTIC_AI_COMMUNITY_ENABLEMENT_SDLC\\usage-report.json",
+    "detail": "206 bytes"
+  }
+]

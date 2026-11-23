@@ -1,0 +1,613 @@
+{
+  "components": [
+    {
+      "req_ids": [
+        "INT_01",
+        "INT_04",
+        "INT_07"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "ARC_01",
+      "name": "API Gateway",
+      "area": "apis",
+      "cloud_service": "API Gateway",
+      "purpose": "Exposes secure REST endpoints for external system integrations including Shopify and Salesforce.",
+      "supported_ids": [
+        "INT_01",
+        "INT_04",
+        "INT_07"
+      ],
+      "rationale": "API Gateway provides managed API routing, authentication, and rate limiting out of the box.",
+      "trade_offs": [
+        "Limited native protocol translation compared to full iPaaS"
+      ],
+      "dependencies": [
+        "ARC_03"
+      ],
+      "security_considerations": "Authenticates incoming requests via API keys and OAuth tokens.",
+      "environments": [
+        "dev",
+        "test",
+        "prod"
+      ]
+    },
+    {
+      "req_ids": [
+        "INT_01",
+        "INT_06",
+        "NFR_07",
+        "NFR_08"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "ARC_02",
+      "name": "Enterprise Messaging Hub",
+      "area": "messaging_and_event_processing",
+      "cloud_service": "Pub/Sub",
+      "purpose": "Decouples integration components through asynchronous event streaming and dead-letter queuing.",
+      "supported_ids": [
+        "INT_01",
+        "INT_06",
+        "NFR_07",
+        "NFR_08"
+      ],
+      "rationale": "Pub/Sub delivers serverless messaging with automatic scaling to handle peak traffic spikes seamlessly.",
+      "trade_offs": [
+        "Message ordering requires explicit ordering key configurations"
+      ],
+      "dependencies": [],
+      "security_considerations": "Enforces fine-grained IAM controls and encrypts message topics using customer-managed keys.",
+      "environments": [
+        "dev",
+        "test",
+        "prod"
+      ]
+    },
+    {
+      "req_ids": [
+        "INT_01",
+        "INT_04",
+        "FR_03",
+        "FR_08",
+        "FR_09"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "ARC_03",
+      "name": "Integration Microservices Execution",
+      "area": "backend_services",
+      "cloud_service": "Cloud Run",
+      "purpose": "Executes business logic for transformations, sequence validation, duplicate checking, and ATP calculation.",
+      "supported_ids": [
+        "INT_01",
+        "INT_04",
+        "FR_03",
+        "FR_08",
+        "FR_09"
+      ],
+      "rationale": "Cloud Run provides serverless container execution that scales automatically to zero when idle.",
+      "trade_offs": [
+        "Cold starts can impact response latency if instances scale to zero"
+      ],
+      "dependencies": [
+        "ARC_02",
+        "ARC_06",
+        "ARC_09"
+      ],
+      "security_considerations": "Runs within private VPC networks with least-privilege service account credentials.",
+      "environments": [
+        "dev",
+        "test",
+        "prod"
+      ]
+    },
+    {
+      "req_ids": [
+        "INT_02",
+        "INT_03",
+        "TECH_01",
+        "INT_08"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "ARC_04",
+      "name": "SFTP File Storage and Integration",
+      "area": "integration_components",
+      "cloud_service": "Cloud Storage",
+      "purpose": "Receives and stores SFTP file drops from Nordkap 3PL and payment provider settlement files.",
+      "supported_ids": [
+        "INT_02",
+        "INT_03",
+        "TECH_01",
+        "INT_08"
+      ],
+      "rationale": "Cloud Storage offers highly durable object storage with lifecycle management for incoming/outgoing files.",
+      "trade_offs": [
+        "Requires file transfer mechanism or connector to bridge external SFTP connections"
+      ],
+      "dependencies": [
+        "ARC_11"
+      ],
+      "security_considerations": "Restricts bucket access using IAM policies and encrypts data at rest automatically.",
+      "environments": [
+        "dev",
+        "test",
+        "prod"
+      ]
+    },
+    {
+      "req_ids": [
+        "FR_04",
+        "FR_06",
+        "INT_05",
+        "CON_01"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "ARC_05",
+      "name": "Integration Workflow Orchestrator",
+      "area": "integration_components",
+      "cloud_service": "Workflows",
+      "purpose": "Orchestrates multi-step integration workflows, scheduled batch jobs, and 3-way reconciliations.",
+      "supported_ids": [
+        "FR_04",
+        "FR_06",
+        "INT_05",
+        "CON_01"
+      ],
+      "rationale": "Workflows provides serverless, stateful workflow orchestration with built-in retries and HTTP call capabilities.",
+      "trade_offs": [
+        "Complex logic requires external microservice execution"
+      ],
+      "dependencies": [
+        "ARC_03"
+      ],
+      "security_considerations": "Executes with dedicated IAM roles to access downstream services securely.",
+      "environments": [
+        "dev",
+        "test",
+        "prod"
+      ]
+    },
+    {
+      "req_ids": [
+        "DATA_02",
+        "DATA_03",
+        "FR_06",
+        "FR_07"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "ARC_06",
+      "name": "Operational & Reconciliation Database",
+      "area": "databases_and_storage",
+      "cloud_service": "Cloud SQL for PostgreSQL",
+      "purpose": "Stores 90-day integration payload logs and 7-year reconciliation audit records.",
+      "supported_ids": [
+        "DATA_02",
+        "DATA_03",
+        "FR_06",
+        "FR_07"
+      ],
+      "rationale": "Cloud SQL for PostgreSQL provides managed relational database capabilities with automated backups and failover.",
+      "trade_offs": [
+        "Requires provisioned capacity management for relational storage"
+      ],
+      "dependencies": [
+        "ARC_11"
+      ],
+      "security_considerations": "Encrypts storage at rest and uses private IP connectivity inside the VPC.",
+      "environments": [
+        "dev",
+        "test",
+        "prod"
+      ]
+    },
+    {
+      "req_ids": [
+        "FR_05",
+        "PER_06"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "ARC_07",
+      "name": "Web Management Portal",
+      "area": "user_facing_applications",
+      "cloud_service": "Cloud Run",
+      "purpose": "Serves web frontend for operations staff to inspect failed messages and trigger replays.",
+      "supported_ids": [
+        "FR_05",
+        "PER_06"
+      ],
+      "rationale": "Cloud Run hosts containerized web applications efficiently with minimal management overhead.",
+      "trade_offs": [
+        "Requires custom UI container maintenance"
+      ],
+      "dependencies": [
+        "ARC_08",
+        "ARC_03"
+      ],
+      "security_considerations": "Authenticates operator users via Cloud Identity and restricts network access via IAP.",
+      "environments": [
+        "dev",
+        "test",
+        "prod"
+      ]
+    },
+    {
+      "req_ids": [
+        "FR_05",
+        "SEC_01"
+      ],
+      "basis": "inferred",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "ARC_08",
+      "name": "Identity Provider",
+      "area": "identity_and_access_management",
+      "cloud_service": "Identity-Aware Proxy",
+      "purpose": "Controls access to the internal operator portal based on user identity and context.",
+      "supported_ids": [
+        "FR_05",
+        "SEC_01"
+      ],
+      "rationale": "Identity-Aware Proxy provides context-aware access control without needing a VPN.",
+      "trade_offs": [
+        "Tightly coupled to Google Identity ecosystem"
+      ],
+      "dependencies": [
+        "ARC_07"
+      ],
+      "security_considerations": "Enforces multi-factor authentication and strict access policies per user role.",
+      "environments": [
+        "dev",
+        "test",
+        "prod"
+      ]
+    },
+    {
+      "req_ids": [
+        "SEC_01",
+        "ASM_02"
+      ],
+      "basis": "assumed",
+      "validation_required": true,
+      "validation_reason": "Based on security standards assumption.",
+      "id": "ARC_09",
+      "name": "Key Management Service",
+      "area": "security_controls",
+      "cloud_service": "Secret Manager",
+      "purpose": "Centralizes secure management of API keys, SFTP credentials, and database passwords.",
+      "supported_ids": [
+        "SEC_01",
+        "ASM_02"
+      ],
+      "rationale": "Secret Manager offers versioned, encrypted storage for sensitive configuration values.",
+      "trade_offs": [
+        "API latency overhead when fetching secrets dynamically"
+      ],
+      "dependencies": [],
+      "security_considerations": "Encrypts secrets at rest and audits access events via Cloud Logging.",
+      "environments": [
+        "dev",
+        "test",
+        "prod"
+      ]
+    },
+    {
+      "req_ids": [
+        "NFR_10",
+        "FR_05"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "ARC_10",
+      "name": "Observability Dashboard",
+      "area": "observability_and_monitoring",
+      "cloud_service": "Google Cloud Managed Service for Prometheus",
+      "purpose": "Collects system metrics and exports observability data to the existing Grafana dashboard.",
+      "supported_ids": [
+        "NFR_10",
+        "FR_05"
+      ],
+      "rationale": "Google Cloud Managed Service for Prometheus integrates seamlessly with existing Grafana setups.",
+      "trade_offs": [
+        "Metric ingestion volume requires cost monitoring"
+      ],
+      "dependencies": [
+        "ARC_03"
+      ],
+      "security_considerations": "Protects metric endpoints using IAM and encrypted transport tunnels.",
+      "environments": [
+        "dev",
+        "test",
+        "prod"
+      ]
+    },
+    {
+      "req_ids": [
+        "SEC_01",
+        "TECH_05"
+      ],
+      "basis": "inferred",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "ARC_11",
+      "name": "Virtual Network",
+      "area": "deployment_and_runtime",
+      "cloud_service": "Virtual Private Cloud",
+      "purpose": "Isolates backend computing and data services within secure network boundaries.",
+      "supported_ids": [
+        "SEC_01",
+        "TECH_05"
+      ],
+      "rationale": "Virtual Private Cloud enables granular subnetting, private service access, and firewall controls.",
+      "trade_offs": [
+        "Requires networking management for multi-region or hybrid routing"
+      ],
+      "dependencies": [],
+      "security_considerations": "Denies external ingress by default and restricts egress to allowed destinations.",
+      "environments": [
+        "dev",
+        "test",
+        "prod"
+      ]
+    },
+    {
+      "req_ids": [
+        "CON_04",
+        "ASM_06"
+      ],
+      "basis": "assumed",
+      "validation_required": true,
+      "validation_reason": "Deployment workflow assumes standard three-tier strategy.",
+      "id": "ARC_12",
+      "name": "CI/CD Pipeline & Deployment Automation",
+      "area": "environments_dev_test_prod",
+      "cloud_service": "Cloud Build",
+      "purpose": "Automates building, testing, and deploying integration containers across dev, test, and prod.",
+      "supported_ids": [
+        "CON_04",
+        "ASM_06"
+      ],
+      "rationale": "Cloud Build provides serverless CI/CD pipelines tightly integrated with GCP services.",
+      "trade_offs": [
+        "Build time subject to concurrent container compilation limits"
+      ],
+      "dependencies": [],
+      "security_considerations": "Scans container images for vulnerabilities and signs build artifacts before deployment.",
+      "environments": [
+        "dev",
+        "test",
+        "prod"
+      ]
+    },
+    {
+      "req_ids": [
+        "NFR_04",
+        "NFR_09"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "ARC_13",
+      "name": "Auto-scaling Container Platform",
+      "area": "availability_and_scalability",
+      "cloud_service": "Cloud Load Balancing",
+      "purpose": "Distributes incoming traffic and scales compute instances during peak events like Black Friday.",
+      "supported_ids": [
+        "NFR_04",
+        "NFR_09"
+      ],
+      "rationale": "Cloud Load Balancing delivers high-capacity global traffic routing with health checking.",
+      "trade_offs": [
+        "Configuration complexity for path-based routing rules"
+      ],
+      "dependencies": [
+        "ARC_01",
+        "ARC_03"
+      ],
+      "security_considerations": "Terminates TLS connections securely and mitigates DDoS attacks.",
+      "environments": [
+        "dev",
+        "test",
+        "prod"
+      ]
+    },
+    {
+      "req_ids": [
+        "DATA_03",
+        "ASM_02"
+      ],
+      "basis": "assumed",
+      "validation_required": true,
+      "validation_reason": "Assumes standard backup retention implementation.",
+      "id": "ARC_14",
+      "name": "Automated Backup Service",
+      "area": "backup_and_disaster_recovery",
+      "cloud_service": "Backup and DR Service",
+      "purpose": "Manages centralized backup schedules and disaster recovery protection for data repositories.",
+      "supported_ids": [
+        "DATA_03",
+        "ASM_02"
+      ],
+      "rationale": "Backup and DR Service provides automated centralized backup management across Google Cloud resources.",
+      "trade_offs": [
+        "Storage cost scales with retention periods"
+      ],
+      "dependencies": [
+        "ARC_06"
+      ],
+      "security_considerations": "Stores immutable backup copies with cross-region replication for disaster resilience.",
+      "environments": [
+        "dev",
+        "test",
+        "prod"
+      ]
+    }
+  ],
+  "flows": [
+    {
+      "from_id": "Shopify Storefront",
+      "to_id": "ARC_01",
+      "label": "Submit Customer Orders",
+      "protocol": "HTTPS REST"
+    },
+    {
+      "from_id": "ARC_01",
+      "to_id": "ARC_02",
+      "label": "Publish Order Events",
+      "protocol": "gRPC"
+    },
+    {
+      "from_id": "ARC_02",
+      "to_id": "ARC_03",
+      "label": "Consume Order Messages",
+      "protocol": "HTTPS Push"
+    },
+    {
+      "from_id": "ARC_03",
+      "to_id": "SAP S/4HANA",
+      "label": "Create Sales Orders",
+      "protocol": "HTTPS OData"
+    },
+    {
+      "from_id": "ARC_05",
+      "to_id": "ARC_04",
+      "label": "Generate Batch Files",
+      "protocol": "SFTP"
+    },
+    {
+      "from_id": "ARC_04",
+      "to_id": "Nordkap Logistics",
+      "label": "Transfer Drop Files",
+      "protocol": "SFTP"
+    },
+    {
+      "from_id": "Nordkap Logistics",
+      "to_id": "ARC_04",
+      "label": "Upload Dispatch Files",
+      "protocol": "SFTP"
+    },
+    {
+      "from_id": "ARC_03",
+      "to_id": "ARC_06",
+      "label": "Write Operational Data",
+      "protocol": "JDBC"
+    },
+    {
+      "from_id": "ARC_03",
+      "to_id": "Snowflake Warehouse",
+      "label": "Stream Intraday Events",
+      "protocol": "HTTPS REST"
+    },
+    {
+      "from_id": "ARC_07",
+      "to_id": "ARC_08",
+      "label": "Authenticate Operator Session",
+      "protocol": "HTTPS OAuth2"
+    },
+    {
+      "from_id": "ARC_03",
+      "to_id": "ARC_10",
+      "label": "Export Metrics Data",
+      "protocol": "PromQL"
+    },
+    {
+      "from_id": "ARC_10",
+      "to_id": "Grafana Instance",
+      "label": "Push Monitoring Metrics",
+      "protocol": "HTTPS REST"
+    }
+  ],
+  "environments": {
+    "dev": "Development environment isolated in separate GCP project with scaled-down Cloud Run and single-zone Cloud SQL.",
+    "test": "Staging and test environment mirroring production architecture for integration and performance testing.",
+    "prod": "Production environment deployed across primary regional zones with high availability, full auto-scaling, and failover."
+  },
+  "deployment_runtime": {
+    "req_ids": [
+      "CON_04",
+      "TECH_05",
+      "ASM_06"
+    ],
+    "basis": "inferred",
+    "validation_required": false,
+    "validation_reason": "",
+    "text": "The runtime architecture relies on serverless Cloud Run services and Pub/Sub messaging deployed inside a Virtual Private Cloud. Deployment pipelines are managed via Cloud Build, ensuring automated artifact scanning and code freeze enforcement.",
+    "arc_ids": [
+      "ARC_03",
+      "ARC_11",
+      "ARC_12"
+    ]
+  },
+  "availability_scalability": {
+    "req_ids": [
+      "NFR_04",
+      "NFR_09"
+    ],
+    "basis": "customer",
+    "validation_required": false,
+    "validation_reason": "",
+    "text": "The platform auto-scales serverless containers and message queues to absorb Black Friday peak volumes of 68,000 orders daily. Cloud Load Balancing distributes traffic seamlessly across available regional instances.",
+    "arc_ids": [
+      "ARC_02",
+      "ARC_03",
+      "ARC_13"
+    ]
+  },
+  "backup_dr": {
+    "req_ids": [
+      "DATA_03",
+      "ASM_02"
+    ],
+    "basis": "assumed",
+    "validation_required": true,
+    "validation_reason": "Assumes cross-region DR targets fulfill continuity requirements.",
+    "text": "Automated backups for Cloud SQL and Cloud Storage are configured using Backup and DR Service with cross-region replication. Operational databases maintain automated daily snapshots with point-in-time recovery to guarantee 7-year audit retention.",
+    "arc_ids": [
+      "ARC_04",
+      "ARC_06",
+      "ARC_14"
+    ]
+  },
+  "observability": {
+    "req_ids": [
+      "NFR_10",
+      "FR_05"
+    ],
+    "basis": "customer",
+    "validation_required": false,
+    "validation_reason": "",
+    "text": "Google Cloud Managed Service for Prometheus collects processing metrics and exposes dashboards directly to the customer's existing Grafana instance. Operational failures trigger alerts and allow message replay via the custom Web Management Portal.",
+    "arc_ids": [
+      "ARC_07",
+      "ARC_10"
+    ]
+  },
+  "security_controls": {
+    "req_ids": [
+      "SEC_01",
+      "SEC_02",
+      "ASM_02"
+    ],
+    "basis": "customer",
+    "validation_required": false,
+    "validation_reason": "",
+    "text": "GDPR-compliant data protection is enforced using automated encryption at rest and in transit across all services. Identity-Aware Proxy restricts operator access while Secret Manager safely handles credentials.",
+    "arc_ids": [
+      "ARC_08",
+      "ARC_09",
+      "ARC_11"
+    ]
+  }
+}

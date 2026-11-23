@@ -1,0 +1,517 @@
+{
+  "submissionId": "SUB_001",
+  "kind": "code",
+  "rootPath": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001",
+  "applications": [
+    {
+      "path": "submissions\\SUB_001\\deal-scoping-assistant",
+      "stack": [
+        "Docker"
+      ],
+      "role": "infra"
+    },
+    {
+      "path": "submissions\\SUB_001\\deal-scoping-assistant\\backend",
+      "stack": [
+        "Docker",
+        "Python"
+      ],
+      "role": "backend"
+    },
+    {
+      "path": "submissions\\SUB_001\\deal-scoping-assistant\\frontend",
+      "stack": [
+        "Docker",
+        "React",
+        "TypeScript",
+        "Vite"
+      ],
+      "role": "frontend"
+    }
+  ],
+  "architecture": {
+    "summary": "Detected 3 application unit(s): infra at submissions\\SUB_001\\deal-scoping-assistant (Docker); backend at submissions\\SUB_001\\deal-scoping-assistant\\backend (Docker, Python); frontend at submissions\\SUB_001\\deal-scoping-assistant\\frontend (Docker, React, TypeScript, Vite). Detected 3 unit(s); languages: Docker, Python, React, TypeScript, Vite.",
+    "evidence": [
+      {
+        "id": "EV_b59qqoj",
+        "statement": "infra unit (Docker)",
+        "locations": [
+          {
+            "kind": "file",
+            "submissionId": "SUB_001",
+            "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant",
+            "excerpt": "application root"
+          }
+        ],
+        "origin": "source",
+        "confidence": "high"
+      },
+      {
+        "id": "EV_6zf09c4",
+        "statement": "backend unit (Docker, Python)",
+        "locations": [
+          {
+            "kind": "file",
+            "submissionId": "SUB_001",
+            "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\backend",
+            "excerpt": "application root"
+          }
+        ],
+        "origin": "source",
+        "confidence": "high"
+      },
+      {
+        "id": "EV_9x2rhyt",
+        "statement": "frontend unit (Docker, React, TypeScript, Vite)",
+        "locations": [
+          {
+            "kind": "file",
+            "submissionId": "SUB_001",
+            "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\frontend",
+            "excerpt": "application root"
+          }
+        ],
+        "origin": "source",
+        "confidence": "high"
+      }
+    ]
+  },
+  "build": {
+    "state": "complete",
+    "commands": [
+      "npm run build  (deal-scoping-assistant\\frontend)",
+      "npm run dev  (deal-scoping-assistant\\frontend)"
+    ],
+    "evidence": [
+      {
+        "id": "EV_3hp7dra",
+        "statement": "scripts present: dev, build, preview, lint, typecheck, format, format:check, test, gen:api",
+        "locations": [
+          {
+            "kind": "file",
+            "submissionId": "SUB_001",
+            "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\frontend\\package.json",
+            "excerpt": "package.json scripts"
+          }
+        ],
+        "origin": "source",
+        "confidence": "high"
+      }
+    ]
+  },
+  "tests": {
+    "state": "complete",
+    "frameworks": [
+      "pytest",
+      "Jest",
+      "Vitest"
+    ],
+    "evidence": [
+      {
+        "id": "EV_6m1db6i",
+        "statement": "69 test file(s) found",
+        "locations": [
+          {
+            "kind": "test",
+            "submissionId": "SUB_001",
+            "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\backend\\tests\\api\\test_documents.py",
+            "excerpt": "example of 69 test files"
+          }
+        ],
+        "origin": "source",
+        "confidence": "high"
+      }
+    ]
+  },
+  "requirementCoverage": [
+    {
+      "requirementId": "REQ_gbl6ad",
+      "state": "complete",
+      "score": 18.4,
+      "evidence": [
+        {
+          "id": "EV_cdycgzw",
+          "statement": "Grounded evidence for \"Structured Customer Requirements Analysis\" (208 files, 698 hits, strength 18.4)",
+          "locations": [
+            {
+              "kind": "file",
+              "submissionId": "SUB_001",
+              "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\README.md",
+              "excerpt": "matches: customer, analysis, source, reference, origin"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_001",
+              "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\backend\\app\\ai\\context.py",
+              "excerpt": "matches: structured, customer, source, reference"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_001",
+              "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\backend\\app\\ai\\prompts\\_grounding.md",
+              "excerpt": "matches: structured, customer, source, origin, question"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_001",
+              "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\backend\\app\\ai\\prompts\\ai_strategy.md",
+              "excerpt": "matches: structured, customer, reference"
+            }
+          ],
+          "origin": "source",
+          "confidence": "high"
+        }
+      ],
+      "notes": "Grounded in 208 file(s); 28 test file(s); strength 18.4."
+    },
+    {
+      "requirementId": "REQ_r2gz0o",
+      "state": "complete",
+      "score": 18.1,
+      "evidence": [
+        {
+          "id": "EV_mnfj9q9",
+          "statement": "Grounded evidence for \"Scope Review and Controlled Generation\" (281 files, 863 hits, strength 18.1)",
+          "locations": [
+            {
+              "kind": "file",
+              "submissionId": "SUB_001",
+              "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\README.md",
+              "excerpt": "matches: scope, review, users, assumptions, downstream"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_001",
+              "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\backend\\app\\ai\\context.py",
+              "excerpt": "matches: scope, review, controlled, generation, artifacts"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_001",
+              "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\backend\\app\\ai\\mock_provider.py",
+              "excerpt": "matches: scope, review, generation, artifacts, model"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_001",
+              "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\backend\\app\\ai\\prompts\\_grounding.md",
+              "excerpt": "matches: scope, review, assumptions"
+            }
+          ],
+          "origin": "source",
+          "confidence": "high"
+        }
+      ],
+      "notes": "Grounded in 281 file(s); 43 test file(s); strength 18.1."
+    },
+    {
+      "requirementId": "REQ_eegp6z",
+      "state": "complete",
+      "score": 18.5,
+      "evidence": [
+        {
+          "id": "EV_2falinm",
+          "statement": "Grounded evidence for \"PRD and Functional Scope Generation\" (273 files, 965 hits, strength 18.5)",
+          "locations": [
+            {
+              "kind": "file",
+              "submissionId": "SUB_001",
+              "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\README.md",
+              "excerpt": "matches: scope, reference, inferred, recommended, assumed"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_001",
+              "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\backend\\app\\ai\\context.py",
+              "excerpt": "matches: scope, generation, items, reference"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_001",
+              "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\backend\\app\\ai\\mock_provider.py",
+              "excerpt": "matches: scope, generation, items, reference"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_001",
+              "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\backend\\app\\ai\\prompts\\_grounding.md",
+              "excerpt": "matches: scope, items, requested, inferred, recommended"
+            }
+          ],
+          "origin": "source",
+          "confidence": "high"
+        }
+      ],
+      "notes": "Grounded in 273 file(s); 36 test file(s); strength 18.5."
+    },
+    {
+      "requirementId": "REQ_rxv80y",
+      "state": "complete",
+      "score": 18.6,
+      "evidence": [
+        {
+          "id": "EV_3xn2vbe",
+          "statement": "Grounded evidence for \"Cloud-Specific Solution Architecture\" (227 files, 809 hits, strength 18.6)",
+          "locations": [
+            {
+              "kind": "file",
+              "submissionId": "SUB_001",
+              "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\README.md",
+              "excerpt": "matches: cloud, architecture, azure, google, component"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_001",
+              "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\backend\\app\\ai\\prompts\\_grounding.md",
+              "excerpt": "matches: solution, architecture, assumption"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_001",
+              "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\backend\\app\\ai\\prompts\\ai_strategy.md",
+              "excerpt": "matches: cloud, solution, architecture, azure, services"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_001",
+              "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\backend\\app\\ai\\prompts\\architecture.md",
+              "excerpt": "matches: cloud, solution, architecture, services, component"
+            }
+          ],
+          "origin": "source",
+          "confidence": "high"
+        }
+      ],
+      "notes": "Grounded in 227 file(s); 32 test file(s); strength 18.6."
+    },
+    {
+      "requirementId": "REQ_438x3f",
+      "state": "complete",
+      "score": 18.3,
+      "evidence": [
+        {
+          "id": "EV_7kgyacw",
+          "statement": "Grounded evidence for \"Data, Integration, and AI Solution Strategy\" (170 files, 560 hits, strength 18.3)",
+          "locations": [
+            {
+              "kind": "file",
+              "submissionId": "SUB_001",
+              "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\README.md",
+              "excerpt": "matches: integration, strategy, cases, reference, explain"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_001",
+              "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\backend\\app\\ai\\prompts\\_grounding.md",
+              "excerpt": "matches: solution, recommendations, rationale"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_001",
+              "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\backend\\app\\ai\\prompts\\ai_strategy.md",
+              "excerpt": "matches: solution, cases, reference, recommendations, rationale"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_001",
+              "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\backend\\app\\ai\\prompts\\architecture.md",
+              "excerpt": "matches: integration, solution, rationale"
+            }
+          ],
+          "origin": "source",
+          "confidence": "high"
+        }
+      ],
+      "notes": "Grounded in 170 file(s); 14 test file(s); strength 18.3."
+    },
+    {
+      "requirementId": "REQ_pzutnc",
+      "state": "complete",
+      "score": 18.7,
+      "evidence": [
+        {
+          "id": "EV_c55v7vv",
+          "statement": "Grounded evidence for \"Explainable Effort and Timeline Estimation\" (129 files, 479 hits, strength 18.7)",
+          "locations": [
+            {
+              "kind": "file",
+              "submissionId": "SUB_001",
+              "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\README.md",
+              "excerpt": "matches: explainable, effort, timeline, estimation, drivers"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_001",
+              "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\backend\\app\\ai\\prompts\\_grounding.md",
+              "excerpt": "matches: rules, missing, information"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_001",
+              "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\backend\\app\\ai\\prompts\\data_strategy.md",
+              "excerpt": "matches: missing, information"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_001",
+              "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\backend\\app\\ai\\prompts\\estimate_drivers.md",
+              "excerpt": "matches: effort, timeline, estimation, drivers"
+            }
+          ],
+          "origin": "source",
+          "confidence": "high"
+        }
+      ],
+      "notes": "Grounded in 129 file(s); 20 test file(s); strength 18.7."
+    },
+    {
+      "requirementId": "REQ_grfmw8",
+      "state": "complete",
+      "score": 17.6,
+      "evidence": [
+        {
+          "id": "EV_c3bdyjj",
+          "statement": "Grounded evidence for \"Reproducible ROM Commercial Estimation\" (63 files, 161 hits, strength 17.6)",
+          "locations": [
+            {
+              "kind": "file",
+              "submissionId": "SUB_001",
+              "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\README.md",
+              "excerpt": "matches: estimation, inputs"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_001",
+              "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\backend\\app\\ai\\prompts\\estimate_drivers.md",
+              "excerpt": "matches: commercial, estimation"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_001",
+              "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\backend\\app\\api\\v1\\estimation.py",
+              "excerpt": "matches: estimation, inputs"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_001",
+              "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\backend\\app\\change_impact\\rules.py",
+              "excerpt": "matches: commercial, estimation, inputs"
+            }
+          ],
+          "origin": "source",
+          "confidence": "high"
+        }
+      ],
+      "notes": "Grounded in 63 file(s); 10 test file(s); strength 17.6."
+    },
+    {
+      "requirementId": "REQ_2zr71d",
+      "state": "complete",
+      "score": 17.8,
+      "evidence": [
+        {
+          "id": "EV_7rhzlfc",
+          "statement": "Grounded evidence for \"Change Impact, Traceability, and Quality Validation\" (154 files, 435 hits, strength 17.8)",
+          "locations": [
+            {
+              "kind": "file",
+              "submissionId": "SUB_001",
+              "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\README.md",
+              "excerpt": "matches: change, impact, traceability, quality, validation"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_001",
+              "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\backend\\app\\ai\\prompts\\data_strategy.md",
+              "excerpt": "matches: change, quality, validation"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_001",
+              "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\backend\\app\\ai\\prompts\\gap_analysis.md",
+              "excerpt": "matches: change, impact, affected"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_001",
+              "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\backend\\app\\ai\\provider.py",
+              "excerpt": "matches: validation, outputs"
+            }
+          ],
+          "origin": "source",
+          "confidence": "high"
+        }
+      ],
+      "notes": "Grounded in 154 file(s); 19 test file(s); strength 17.8."
+    },
+    {
+      "requirementId": "REQ_rcsmw9",
+      "state": "complete",
+      "score": 17.6,
+      "evidence": [
+        {
+          "id": "EV_jpnk678",
+          "statement": "Grounded evidence for \"Product Depth, Local Reviewability, and Documentation\" (150 files, 397 hits, strength 17.6)",
+          "locations": [
+            {
+              "kind": "file",
+              "submissionId": "SUB_001",
+              "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\README.md",
+              "excerpt": "matches: local, analysis, estimation, validation, stages"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_001",
+              "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\backend\\app\\ai\\mock_provider.py",
+              "excerpt": "matches: generation, validation, stages"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_001",
+              "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\backend\\app\\ai\\prompts\\data_strategy.md",
+              "excerpt": "matches: product, validation"
+            },
+            {
+              "kind": "file",
+              "submissionId": "SUB_001",
+              "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\submissions\\SUB_001\\deal-scoping-assistant\\backend\\app\\ai\\prompts\\integration_architecture.md",
+              "excerpt": "matches: product, validation"
+            }
+          ],
+          "origin": "source",
+          "confidence": "high"
+        }
+      ],
+      "notes": "Grounded in 150 file(s); 20 test file(s); strength 17.6."
+    }
+  ],
+  "strengths": [
+    "Has automated tests (pytest, Jest, Vitest).",
+    "Build/start scripts are present and discoverable.",
+    "Covers ~100% of active requirements (grounded)."
+  ],
+  "weaknesses": [
+    "Integration risk high (3 app units, langs: Docker, Python, React, TypeScript, Vite)."
+  ],
+  "reviewEvidence": [
+    {
+      "id": "EV_4f60gbk",
+      "statement": "Normalized review final score: 100 (normalized AI review available).",
+      "locations": [
+        {
+          "kind": "reviewer_comment",
+          "submissionId": "SUB_001",
+          "path": "challenges\\AI_DEAL_SCOPING_ASSISTANT\\reviews\\SUB_001\\final-result.json",
+          "excerpt": "finalScore=100"
+        }
+      ],
+      "origin": "review_ai",
+      "confidence": "medium"
+    }
+  ],
+  "compatibilityRisk": "high",
+  "baseSuitability": {
+    "score": 90,
+    "reasoning": "coverage≈100%, tests=complete, build=present, risk=high."
+  }
+}

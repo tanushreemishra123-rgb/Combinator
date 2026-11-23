@@ -1,0 +1,312 @@
+[
+  {
+    "at": "2026-11-23T04:44:06.113Z",
+    "op": "write",
+    "target": "AI_LEARNING_ADVENTURE\\review-context-status.json",
+    "detail": "242 bytes"
+  },
+  {
+    "at": "2026-11-23T04:44:06.113Z",
+    "op": "write",
+    "target": "AI_LEARNING_ADVENTURE\\active-review-context.json",
+    "detail": "12513 bytes"
+  },
+  {
+    "at": "2026-11-23T04:44:06.114Z",
+    "op": "write",
+    "target": "AI_LEARNING_ADVENTURE\\review-context-reconciliation.json",
+    "detail": "337 bytes"
+  },
+  {
+    "at": "2026-11-23T04:44:06.114Z",
+    "op": "write",
+    "target": "AI_LEARNING_ADVENTURE\\source-location-map.json",
+    "detail": "6228 bytes"
+  },
+  {
+    "at": "2026-11-23T04:44:06.270Z",
+    "op": "write",
+    "target": "AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\profile.json",
+    "detail": "17174 bytes"
+  },
+  {
+    "at": "2026-11-23T04:44:08.236Z",
+    "op": "write",
+    "target": "AI_LEARNING_ADVENTURE\\submissions\\SUB_002\\profile.json",
+    "detail": "23358 bytes"
+  },
+  {
+    "at": "2026-11-23T04:44:08.238Z",
+    "op": "delete",
+    "target": "AI_LEARNING_ADVENTURE\\combined-solution"
+  },
+  {
+    "at": "2026-11-23T04:44:08.238Z",
+    "op": "mkdir",
+    "target": "AI_LEARNING_ADVENTURE\\combined-solution"
+  },
+  {
+    "at": "2026-11-23T04:44:08.245Z",
+    "op": "copy",
+    "target": "AI_LEARNING_ADVENTURE\\combined-solution\\signal-and-spark\\.gitignore",
+    "detail": "from challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\.gitignore"
+  },
+  {
+    "at": "2026-11-23T04:44:08.246Z",
+    "op": "copy",
+    "target": "AI_LEARNING_ADVENTURE\\combined-solution\\signal-and-spark\\README.md",
+    "detail": "from challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\README.md"
+  },
+  {
+    "at": "2026-11-23T04:44:08.247Z",
+    "op": "copy",
+    "target": "AI_LEARNING_ADVENTURE\\combined-solution\\signal-and-spark\\THIRD_PARTY_NOTICES.txt",
+    "detail": "from challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\THIRD_PARTY_NOTICES.txt"
+  },
+  {
+    "at": "2026-11-23T04:44:08.247Z",
+    "op": "copy",
+    "target": "AI_LEARNING_ADVENTURE\\combined-solution\\signal-and-spark\\index.html",
+    "detail": "from challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\index.html"
+  },
+  {
+    "at": "2026-11-23T04:44:08.266Z",
+    "op": "copy",
+    "target": "AI_LEARNING_ADVENTURE\\combined-solution\\signal-and-spark\\package-lock.json",
+    "detail": "from challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\package-lock.json"
+  },
+  {
+    "at": "2026-11-23T04:44:08.269Z",
+    "op": "copy",
+    "target": "AI_LEARNING_ADVENTURE\\combined-solution\\signal-and-spark\\package.json",
+    "detail": "from challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\package.json"
+  },
+  {
+    "at": "2026-11-23T04:44:08.269Z",
+    "op": "copy",
+    "target": "AI_LEARNING_ADVENTURE\\combined-solution\\signal-and-spark\\src\\App.test.tsx",
+    "detail": "from challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\App.test.tsx"
+  },
+  {
+    "at": "2026-11-23T04:44:08.271Z",
+    "op": "copy",
+    "target": "AI_LEARNING_ADVENTURE\\combined-solution\\signal-and-spark\\src\\App.tsx",
+    "detail": "from challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\App.tsx"
+  },
+  {
+    "at": "2026-11-23T04:44:08.272Z",
+    "op": "copy",
+    "target": "AI_LEARNING_ADVENTURE\\combined-solution\\signal-and-spark\\src\\components\\Brand.tsx",
+    "detail": "from challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\components\\Brand.tsx"
+  },
+  {
+    "at": "2026-11-23T04:44:08.272Z",
+    "op": "copy",
+    "target": "AI_LEARNING_ADVENTURE\\combined-solution\\signal-and-spark\\src\\components\\Header.tsx",
+    "detail": "from challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\components\\Header.tsx"
+  },
+  {
+    "at": "2026-11-23T04:44:08.274Z",
+    "op": "copy",
+    "target": "AI_LEARNING_ADVENTURE\\combined-solution\\signal-and-spark\\src\\components\\Ui.tsx",
+    "detail": "from challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\components\\Ui.tsx"
+  },
+  {
+    "at": "2026-11-23T04:44:08.275Z",
+    "op": "copy",
+    "target": "AI_LEARNING_ADVENTURE\\combined-solution\\signal-and-spark\\src\\data\\seed.test.ts",
+    "detail": "from challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\data\\seed.test.ts"
+  },
+  {
+    "at": "2026-11-23T04:44:08.276Z",
+    "op": "copy",
+    "target": "AI_LEARNING_ADVENTURE\\combined-solution\\signal-and-spark\\src\\data\\seed.ts",
+    "detail": "from challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\data\\seed.ts"
+  },
+  {
+    "at": "2026-11-23T04:44:08.276Z",
+    "op": "copy",
+    "target": "AI_LEARNING_ADVENTURE\\combined-solution\\signal-and-spark\\src\\features\\AdminView.tsx",
+    "detail": "from challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\features\\AdminView.tsx"
+  },
+  {
+    "at": "2026-11-23T04:44:08.277Z",
+    "op": "copy",
+    "target": "AI_LEARNING_ADVENTURE\\combined-solution\\signal-and-spark\\src\\features\\JourneyView.tsx",
+    "detail": "from challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\features\\JourneyView.tsx"
+  },
+  {
+    "at": "2026-11-23T04:44:08.277Z",
+    "op": "copy",
+    "target": "AI_LEARNING_ADVENTURE\\combined-solution\\signal-and-spark\\src\\features\\MissionView.tsx",
+    "detail": "from challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\features\\MissionView.tsx"
+  },
+  {
+    "at": "2026-11-23T04:44:08.278Z",
+    "op": "copy",
+    "target": "AI_LEARNING_ADVENTURE\\combined-solution\\signal-and-spark\\src\\features\\PracticeView.tsx",
+    "detail": "from challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\features\\PracticeView.tsx"
+  },
+  {
+    "at": "2026-11-23T04:44:08.279Z",
+    "op": "copy",
+    "target": "AI_LEARNING_ADVENTURE\\combined-solution\\signal-and-spark\\src\\features\\ProgressView.tsx",
+    "detail": "from challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\features\\ProgressView.tsx"
+  },
+  {
+    "at": "2026-11-23T04:44:08.279Z",
+    "op": "copy",
+    "target": "AI_LEARNING_ADVENTURE\\combined-solution\\signal-and-spark\\src\\features\\TutorView.tsx",
+    "detail": "from challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\features\\TutorView.tsx"
+  },
+  {
+    "at": "2026-11-23T04:44:08.281Z",
+    "op": "copy",
+    "target": "AI_LEARNING_ADVENTURE\\combined-solution\\signal-and-spark\\src\\lib\\storage.ts",
+    "detail": "from challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\lib\\storage.ts"
+  },
+  {
+    "at": "2026-11-23T04:44:08.281Z",
+    "op": "copy",
+    "target": "AI_LEARNING_ADVENTURE\\combined-solution\\signal-and-spark\\src\\lib\\tutor.test.ts",
+    "detail": "from challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\lib\\tutor.test.ts"
+  },
+  {
+    "at": "2026-11-23T04:44:08.281Z",
+    "op": "copy",
+    "target": "AI_LEARNING_ADVENTURE\\combined-solution\\signal-and-spark\\src\\lib\\tutor.ts",
+    "detail": "from challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\lib\\tutor.ts"
+  },
+  {
+    "at": "2026-11-23T04:44:08.282Z",
+    "op": "copy",
+    "target": "AI_LEARNING_ADVENTURE\\combined-solution\\signal-and-spark\\src\\main.tsx",
+    "detail": "from challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\main.tsx"
+  },
+  {
+    "at": "2026-11-23T04:44:08.282Z",
+    "op": "copy",
+    "target": "AI_LEARNING_ADVENTURE\\combined-solution\\signal-and-spark\\src\\styles.css",
+    "detail": "from challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\styles.css"
+  },
+  {
+    "at": "2026-11-23T04:44:08.283Z",
+    "op": "copy",
+    "target": "AI_LEARNING_ADVENTURE\\combined-solution\\signal-and-spark\\src\\types.ts",
+    "detail": "from challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\types.ts"
+  },
+  {
+    "at": "2026-11-23T04:44:08.283Z",
+    "op": "copy",
+    "target": "AI_LEARNING_ADVENTURE\\combined-solution\\signal-and-spark\\src\\vite-env.d.ts",
+    "detail": "from challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\src\\vite-env.d.ts"
+  },
+  {
+    "at": "2026-11-23T04:44:08.284Z",
+    "op": "copy",
+    "target": "AI_LEARNING_ADVENTURE\\combined-solution\\signal-and-spark\\tsconfig.app.json",
+    "detail": "from challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\tsconfig.app.json"
+  },
+  {
+    "at": "2026-11-23T04:44:08.284Z",
+    "op": "copy",
+    "target": "AI_LEARNING_ADVENTURE\\combined-solution\\signal-and-spark\\tsconfig.json",
+    "detail": "from challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\tsconfig.json"
+  },
+  {
+    "at": "2026-11-23T04:44:08.285Z",
+    "op": "copy",
+    "target": "AI_LEARNING_ADVENTURE\\combined-solution\\signal-and-spark\\tsconfig.node.json",
+    "detail": "from challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\tsconfig.node.json"
+  },
+  {
+    "at": "2026-11-23T04:44:08.285Z",
+    "op": "copy",
+    "target": "AI_LEARNING_ADVENTURE\\combined-solution\\signal-and-spark\\vite.config.ts",
+    "detail": "from challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark\\vite.config.ts"
+  },
+  {
+    "at": "2026-11-23T04:44:14.563Z",
+    "op": "exec",
+    "target": "combined-solution/",
+    "detail": "command=npm install --no-audit --no-fund --ignore-scripts; cwd=AI_LEARNING_ADVENTURE\\combined-solution\\signal-and-spark; exit=0; timeout=false"
+  },
+  {
+    "at": "2026-11-23T04:44:16.883Z",
+    "op": "exec",
+    "target": "combined-solution/",
+    "detail": "command=npm run build; cwd=AI_LEARNING_ADVENTURE\\combined-solution\\signal-and-spark; exit=0; timeout=false"
+  },
+  {
+    "at": "2026-11-23T04:44:19.784Z",
+    "op": "exec",
+    "target": "combined-solution/",
+    "detail": "command=npm test -- --run; cwd=AI_LEARNING_ADVENTURE\\combined-solution\\signal-and-spark; exit=0; timeout=false"
+  },
+  {
+    "at": "2026-11-23T04:44:19.785Z",
+    "op": "write",
+    "target": "AI_LEARNING_ADVENTURE\\verification-logs.json",
+    "detail": "2703 bytes"
+  },
+  {
+    "at": "2026-11-23T04:44:19.785Z",
+    "op": "write",
+    "target": "AI_LEARNING_ADVENTURE\\decisions.json",
+    "detail": "4446 bytes"
+  },
+  {
+    "at": "2026-11-23T04:44:19.786Z",
+    "op": "write",
+    "target": "AI_LEARNING_ADVENTURE\\requirement-matrix.json",
+    "detail": "35030 bytes"
+  },
+  {
+    "at": "2026-11-23T04:44:19.786Z",
+    "op": "write",
+    "target": "AI_LEARNING_ADVENTURE\\requirement-matrix.md",
+    "detail": "1079 bytes"
+  },
+  {
+    "at": "2026-11-23T04:44:19.787Z",
+    "op": "write",
+    "target": "AI_LEARNING_ADVENTURE\\scorecard-estimate.json",
+    "detail": "322 bytes"
+  },
+  {
+    "at": "2026-11-23T04:44:19.804Z",
+    "op": "write",
+    "target": "AI_LEARNING_ADVENTURE\\evidence-validation.json",
+    "detail": "42519 bytes"
+  },
+  {
+    "at": "2026-11-23T04:44:19.804Z",
+    "op": "write",
+    "target": "AI_LEARNING_ADVENTURE\\provenance.json",
+    "detail": "809 bytes"
+  },
+  {
+    "at": "2026-11-23T04:44:19.804Z",
+    "op": "write",
+    "target": "AI_LEARNING_ADVENTURE\\contradictions.json",
+    "detail": "87 bytes"
+  },
+  {
+    "at": "2026-11-23T04:44:19.805Z",
+    "op": "write",
+    "target": "AI_LEARNING_ADVENTURE\\verification.json",
+    "detail": "2280 bytes"
+  },
+  {
+    "at": "2026-11-23T04:44:20.356Z",
+    "op": "write",
+    "target": "AI_LEARNING_ADVENTURE\\integrity\\integrity-report.json",
+    "detail": "197643 bytes"
+  },
+  {
+    "at": "2026-11-23T04:44:20.356Z",
+    "op": "write",
+    "target": "AI_LEARNING_ADVENTURE\\usage-report.json",
+    "detail": "205 bytes"
+  }
+]

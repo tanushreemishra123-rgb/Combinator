@@ -1,0 +1,993 @@
+{
+  "challengeId": "AI_WORKFLOW_PUZZLE_BUILDER",
+  "total": 82,
+  "valid": 82,
+  "unresolved": 0,
+  "locatorOnly": 0,
+  "findings": [
+    {
+      "evidenceId": "EV_b59qqoj",
+      "statement": "infra unit (Docker)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission",
+        "excerpt": "application root"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_6zf09c4",
+      "statement": "backend unit (Docker, Python)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend",
+        "excerpt": "application root"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_9x2rhyt",
+      "statement": "frontend unit (Docker, React, TypeScript, Vite)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\frontend",
+        "excerpt": "application root"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_775pjqu",
+      "statement": "scripts present: dev, build, lint, preview",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\frontend\\package.json",
+        "excerpt": "package.json scripts"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_bjzufsj",
+      "statement": "18 test file(s) found",
+      "location": {
+        "kind": "test",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend\\tests\\test_api_context.py",
+        "excerpt": "example of 18 test files"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_4f60gbk",
+      "statement": "Normalized review final score: 100 (normalized AI review available).",
+      "location": {
+        "kind": "reviewer_comment",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\reviews\\SUB_001\\final-result.json",
+        "excerpt": "finalScore=100"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_czarfvq",
+      "statement": "Grounded evidence for \"Visual Workflow Builder\" (49 files, 130 hits, strength 17.7)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\README.md",
+        "excerpt": "matches: workflow, builder, multiple, steps, including"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_czarfvq",
+      "statement": "Grounded evidence for \"Visual Workflow Builder\" (49 files, 130 hits, strength 17.7)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend\\app\\__init__.py",
+        "excerpt": "matches: workflow, builder"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_czarfvq",
+      "statement": "Grounded evidence for \"Visual Workflow Builder\" (49 files, 130 hits, strength 17.7)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend\\app\\api\\context.py",
+        "excerpt": "matches: workflow, configure, steps"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_czarfvq",
+      "statement": "Grounded evidence for \"Visual Workflow Builder\" (49 files, 130 hits, strength 17.7)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend\\app\\api\\schemas.py",
+        "excerpt": "matches: workflow, builder, including"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_dg5zkw1",
+      "statement": "Grounded evidence for \"Pre-Seeded Workflow Puzzles\" (61 files, 186 hits, strength 18.0)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\README.md",
+        "excerpt": "matches: workflow, puzzles, include, across, three"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_dg5zkw1",
+      "statement": "Grounded evidence for \"Pre-Seeded Workflow Puzzles\" (61 files, 186 hits, strength 18.0)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend\\app\\__init__.py",
+        "excerpt": "matches: workflow, puzzle"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_dg5zkw1",
+      "statement": "Grounded evidence for \"Pre-Seeded Workflow Puzzles\" (61 files, 186 hits, strength 18.0)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend\\app\\api\\__init__.py",
+        "excerpt": "matches: workflow, puzzles, puzzle"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_dg5zkw1",
+      "statement": "Grounded evidence for \"Pre-Seeded Workflow Puzzles\" (61 files, 186 hits, strength 18.0)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend\\app\\api\\context.py",
+        "excerpt": "matches: workflow, puzzles, three, puzzle"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_do9c1wp",
+      "statement": "Grounded evidence for \"Workflow Execution and Step Trace\" (98 files, 401 hits, strength 19.1)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\README.md",
+        "excerpt": "matches: workflow, execution, trace, every, status"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_do9c1wp",
+      "statement": "Grounded evidence for \"Workflow Execution and Step Trace\" (98 files, 401 hits, strength 19.1)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend\\app\\api\\__init__.py",
+        "excerpt": "matches: workflow, every, status"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_do9c1wp",
+      "statement": "Grounded evidence for \"Workflow Execution and Step Trace\" (98 files, 401 hits, strength 19.1)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend\\app\\api\\context.py",
+        "excerpt": "matches: workflow, execution, trace, every, status"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_do9c1wp",
+      "statement": "Grounded evidence for \"Workflow Execution and Step Trace\" (98 files, 401 hits, strength 19.1)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend\\app\\api\\puzzles.py",
+        "excerpt": "matches: every, status"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_plvqqnd",
+      "statement": "Grounded evidence for \"Failure Simulation\" (43 files, 111 hits, strength 17.6)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\README.md",
+        "excerpt": "matches: failure, simulation, types, scenarios, reproducible"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_plvqqnd",
+      "statement": "Grounded evidence for \"Failure Simulation\" (43 files, 111 hits, strength 17.6)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend\\app\\api\\context.py",
+        "excerpt": "matches: failure, support"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_plvqqnd",
+      "statement": "Grounded evidence for \"Failure Simulation\" (43 files, 111 hits, strength 17.6)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend\\app\\api\\runs.py",
+        "excerpt": "matches: failure, scenarios"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_plvqqnd",
+      "statement": "Grounded evidence for \"Failure Simulation\" (43 files, 111 hits, strength 17.6)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend\\app\\blocks\\validator.py",
+        "excerpt": "matches: failure, types"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_97wcdkk",
+      "statement": "Grounded evidence for \"Recovery and Safe Failure Handling\" (64 files, 212 hits, strength 18.3)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\README.md",
+        "excerpt": "matches: recovery, failure, handling, retry, fallback"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_97wcdkk",
+      "statement": "Grounded evidence for \"Recovery and Safe Failure Handling\" (64 files, 212 hits, strength 18.3)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend\\app\\api\\context.py",
+        "excerpt": "matches: failure, handling, support, fallback, trace"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_97wcdkk",
+      "statement": "Grounded evidence for \"Recovery and Safe Failure Handling\" (64 files, 212 hits, strength 18.3)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend\\app\\api\\runs.py",
+        "excerpt": "matches: failure, actions, trace"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_97wcdkk",
+      "statement": "Grounded evidence for \"Recovery and Safe Failure Handling\" (64 files, 212 hits, strength 18.3)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend\\app\\api\\schemas.py",
+        "excerpt": "matches: actions, trace"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_2irsdqo",
+      "statement": "Grounded evidence for \"Output Validation\" (56 files, 163 hits, strength 17.9)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\README.md",
+        "excerpt": "matches: validation, puzzle, failure, recovery"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_2irsdqo",
+      "statement": "Grounded evidence for \"Output Validation\" (56 files, 163 hits, strength 17.9)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend\\app\\api\\context.py",
+        "excerpt": "matches: validation, puzzle, failure"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_2irsdqo",
+      "statement": "Grounded evidence for \"Output Validation\" (56 files, 163 hits, strength 17.9)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend\\app\\api\\runs.py",
+        "excerpt": "matches: puzzle, failure"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_2irsdqo",
+      "statement": "Grounded evidence for \"Output Validation\" (56 files, 163 hits, strength 17.9)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend\\app\\api\\schemas.py",
+        "excerpt": "matches: validation, puzzle, structured"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_8w6f1xx",
+      "statement": "Grounded evidence for \"Human Review and Approval\" (56 files, 211 hits, strength 18.8)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\README.md",
+        "excerpt": "matches: human, review, puzzle, approve, reject"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_8w6f1xx",
+      "statement": "Grounded evidence for \"Human Review and Approval\" (56 files, 211 hits, strength 18.8)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend\\app\\api\\__init__.py",
+        "excerpt": "matches: human, review, puzzle"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_8w6f1xx",
+      "statement": "Grounded evidence for \"Human Review and Approval\" (56 files, 211 hits, strength 18.8)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend\\app\\api\\context.py",
+        "excerpt": "matches: review, puzzle, decision"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_8w6f1xx",
+      "statement": "Grounded evidence for \"Human Review and Approval\" (56 files, 211 hits, strength 18.8)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend\\app\\api\\runs.py",
+        "excerpt": "matches: human, review, puzzle, decision"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_64ve8wd",
+      "statement": "Grounded evidence for \"Reliability Feedback\" (14 files, 31 hits, strength 17.2)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\README.md",
+        "excerpt": "matches: reliability, feedback, successful, paths"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_64ve8wd",
+      "statement": "Grounded evidence for \"Reliability Feedback\" (14 files, 31 hits, strength 17.2)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend\\app\\api\\context.py",
+        "excerpt": "matches: reliability, successful"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_64ve8wd",
+      "statement": "Grounded evidence for \"Reliability Feedback\" (14 files, 31 hits, strength 17.2)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend\\app\\api\\runs.py",
+        "excerpt": "matches: reliability, successful"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_64ve8wd",
+      "statement": "Grounded evidence for \"Reliability Feedback\" (14 files, 31 hits, strength 17.2)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend\\app\\engine\\executor.py",
+        "excerpt": "matches: reliability, successful"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_0p80tvv",
+      "statement": "Grounded evidence for \"Local Execution, Mock AI, and Documentation\" (27 files, 73 hits, strength 17.7)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\README.md",
+        "excerpt": "matches: local, execution, puzzles, locally, committed"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_0p80tvv",
+      "statement": "Grounded evidence for \"Local Execution, Mock AI, and Documentation\" (27 files, 73 hits, strength 17.7)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend\\app\\api\\context.py",
+        "excerpt": "matches: execution, puzzles, committed, responses"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_0p80tvv",
+      "statement": "Grounded evidence for \"Local Execution, Mock AI, and Documentation\" (27 files, 73 hits, strength 17.7)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend\\app\\api\\runs.py",
+        "excerpt": "matches: execution, puzzles, committed, covers"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_0p80tvv",
+      "statement": "Grounded evidence for \"Local Execution, Mock AI, and Documentation\" (27 files, 73 hits, strength 17.7)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_001",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_001\\submission\\backend\\app\\engine\\run.py",
+        "excerpt": "matches: execution, committed"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_bk3y2yj",
+      "statement": "frontend unit (React, TypeScript, Vite)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position",
+        "excerpt": "application root"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_8ilrb5p",
+      "statement": "scripts present: dev, build, preview, test, test:watch, typecheck, lint, verify",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\package.json",
+        "excerpt": "package.json scripts"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_dvilcei",
+      "statement": "4 test file(s) found",
+      "location": {
+        "kind": "test",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\src\\engine\\engine.test.ts",
+        "excerpt": "example of 4 test files"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_36eubvv",
+      "statement": "Normalized review final score: 95.6 (normalized AI review available).",
+      "location": {
+        "kind": "reviewer_comment",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\reviews\\SUB_002\\final-result.json",
+        "excerpt": "finalScore=95.6"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_3g4kkrz",
+      "statement": "Grounded evidence for \"Visual Workflow Builder\" (30 files, 85 hits, strength 17.8)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\.github\\workflows\\deploy-pages.yml",
+        "excerpt": "matches: workflow, configure, steps"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_3g4kkrz",
+      "statement": "Grounded evidence for \"Visual Workflow Builder\" (30 files, 85 hits, strength 17.8)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\README.md",
+        "excerpt": "matches: visual, workflow, builder, arrange, configure"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_3g4kkrz",
+      "statement": "Grounded evidence for \"Visual Workflow Builder\" (30 files, 85 hits, strength 17.8)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\SUBMISSION.md",
+        "excerpt": "matches: visual, workflow, builder, configuration"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_3g4kkrz",
+      "statement": "Grounded evidence for \"Visual Workflow Builder\" (30 files, 85 hits, strength 17.8)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\docs\\REVIEW.md",
+        "excerpt": "matches: workflow, builder, steps, including"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_4zzrrpc",
+      "statement": "Grounded evidence for \"Pre-Seeded Workflow Puzzles\" (45 files, 173 hits, strength 18.8)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\README.md",
+        "excerpt": "matches: seeded, workflow, puzzles, include, across"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_4zzrrpc",
+      "statement": "Grounded evidence for \"Pre-Seeded Workflow Puzzles\" (45 files, 173 hits, strength 18.8)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\SUBMISSION.md",
+        "excerpt": "matches: seeded, workflow, puzzles, puzzle"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_4zzrrpc",
+      "statement": "Grounded evidence for \"Pre-Seeded Workflow Puzzles\" (45 files, 173 hits, strength 18.8)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\docs\\REVIEW.md",
+        "excerpt": "matches: seeded, workflow, puzzles, include, across"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_4zzrrpc",
+      "statement": "Grounded evidence for \"Pre-Seeded Workflow Puzzles\" (45 files, 173 hits, strength 18.8)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\docs\\architecture.md",
+        "excerpt": "matches: seeded, workflow, puzzles, include, across"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_bqe69w2",
+      "statement": "Grounded evidence for \"Workflow Execution and Step Trace\" (41 files, 171 hits, strength 19.2)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\.github\\workflows\\deploy-pages.yml",
+        "excerpt": "matches: workflow, every"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_bqe69w2",
+      "statement": "Grounded evidence for \"Workflow Execution and Step Trace\" (41 files, 171 hits, strength 19.2)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\README.md",
+        "excerpt": "matches: workflow, execution, trace, every, status"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_bqe69w2",
+      "statement": "Grounded evidence for \"Workflow Execution and Step Trace\" (41 files, 171 hits, strength 19.2)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\SUBMISSION.md",
+        "excerpt": "matches: workflow, execution, trace, every, status"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_bqe69w2",
+      "statement": "Grounded evidence for \"Workflow Execution and Step Trace\" (41 files, 171 hits, strength 19.2)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\docs\\REVIEW.md",
+        "excerpt": "matches: workflow, execution, trace, every, executed"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_6k7uv7e",
+      "statement": "Grounded evidence for \"Failure Simulation\" (32 files, 102 hits, strength 18.2)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\README.md",
+        "excerpt": "matches: failure, simulation, support, types, scenarios"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_6k7uv7e",
+      "statement": "Grounded evidence for \"Failure Simulation\" (32 files, 102 hits, strength 18.2)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\SUBMISSION.md",
+        "excerpt": "matches: failure, simulation, types, scenarios"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_6k7uv7e",
+      "statement": "Grounded evidence for \"Failure Simulation\" (32 files, 102 hits, strength 18.2)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\docs\\REVIEW.md",
+        "excerpt": "matches: failure, simulation, types, scenarios"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_6k7uv7e",
+      "statement": "Grounded evidence for \"Failure Simulation\" (32 files, 102 hits, strength 18.2)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\docs\\architecture.md",
+        "excerpt": "matches: failure, types, scenarios, reproducible"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_7cxkeaj",
+      "statement": "Grounded evidence for \"Recovery and Safe Failure Handling\" (38 files, 147 hits, strength 18.9)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\README.md",
+        "excerpt": "matches: recovery, failure, handling, support, retry"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_7cxkeaj",
+      "statement": "Grounded evidence for \"Recovery and Safe Failure Handling\" (38 files, 147 hits, strength 18.9)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\SUBMISSION.md",
+        "excerpt": "matches: recovery, failure, handling, retry, fallback"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_7cxkeaj",
+      "statement": "Grounded evidence for \"Recovery and Safe Failure Handling\" (38 files, 147 hits, strength 18.9)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\docs\\REVIEW.md",
+        "excerpt": "matches: recovery, failure, handling, retry, fallback"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_7cxkeaj",
+      "statement": "Grounded evidence for \"Recovery and Safe Failure Handling\" (38 files, 147 hits, strength 18.9)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\docs\\architecture.md",
+        "excerpt": "matches: recovery, failure, handling, retry, fallback"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_8k1t5so",
+      "statement": "Grounded evidence for \"Output Validation\" (37 files, 127 hits, strength 18.4)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\README.md",
+        "excerpt": "matches: validation, puzzle, structured, failure, recovery"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_8k1t5so",
+      "statement": "Grounded evidence for \"Output Validation\" (37 files, 127 hits, strength 18.4)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\SUBMISSION.md",
+        "excerpt": "matches: validation, puzzle, failure, recovery"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_8k1t5so",
+      "statement": "Grounded evidence for \"Output Validation\" (37 files, 127 hits, strength 18.4)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\docs\\REVIEW.md",
+        "excerpt": "matches: validation, puzzle, structured, failure, recovery"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_8k1t5so",
+      "statement": "Grounded evidence for \"Output Validation\" (37 files, 127 hits, strength 18.4)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\docs\\architecture.md",
+        "excerpt": "matches: validation, puzzle, validates, structured, failure"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_82t51f4",
+      "statement": "Grounded evidence for \"Human Review and Approval\" (42 files, 187 hits, strength 19.5)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\README.md",
+        "excerpt": "matches: human, review, approval, puzzle, supports"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_82t51f4",
+      "statement": "Grounded evidence for \"Human Review and Approval\" (42 files, 187 hits, strength 19.5)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\SUBMISSION.md",
+        "excerpt": "matches: human, review, puzzle, decision"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_82t51f4",
+      "statement": "Grounded evidence for \"Human Review and Approval\" (42 files, 187 hits, strength 19.5)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\docs\\REVIEW.md",
+        "excerpt": "matches: human, review, approval, puzzle, approve"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_82t51f4",
+      "statement": "Grounded evidence for \"Human Review and Approval\" (42 files, 187 hits, strength 19.5)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\docs\\architecture.md",
+        "excerpt": "matches: human, review, puzzle, approve, reject"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_1y86x9a",
+      "statement": "Grounded evidence for \"Reliability Feedback\" (10 files, 33 hits, strength 12.3)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\README.md",
+        "excerpt": "matches: reliability, feedback, successful, resilience, unresolved"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_1y86x9a",
+      "statement": "Grounded evidence for \"Reliability Feedback\" (10 files, 33 hits, strength 12.3)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\SUBMISSION.md",
+        "excerpt": "matches: reliability, feedback"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_1y86x9a",
+      "statement": "Grounded evidence for \"Reliability Feedback\" (10 files, 33 hits, strength 12.3)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\docs\\REVIEW.md",
+        "excerpt": "matches: reliability, feedback, successful, resilience, unresolved"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_1y86x9a",
+      "statement": "Grounded evidence for \"Reliability Feedback\" (10 files, 33 hits, strength 12.3)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\docs\\architecture.md",
+        "excerpt": "matches: reliability, feedback, resilience, unresolved"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_hcr0v78",
+      "statement": "Grounded evidence for \"Local Execution, Mock AI, and Documentation\" (22 files, 75 hits, strength 16.4)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\README.md",
+        "excerpt": "matches: local, execution, puzzles, locally, committed"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_hcr0v78",
+      "statement": "Grounded evidence for \"Local Execution, Mock AI, and Documentation\" (22 files, 75 hits, strength 16.4)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\SUBMISSION.md",
+        "excerpt": "matches: local, execution, puzzles, locally, committed"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_hcr0v78",
+      "statement": "Grounded evidence for \"Local Execution, Mock AI, and Documentation\" (22 files, 75 hits, strength 16.4)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\docs\\REVIEW.md",
+        "excerpt": "matches: local, execution, documentation, puzzles, committed"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    },
+    {
+      "evidenceId": "EV_hcr0v78",
+      "statement": "Grounded evidence for \"Local Execution, Mock AI, and Documentation\" (22 files, 75 hits, strength 16.4)",
+      "location": {
+        "kind": "file",
+        "submissionId": "SUB_002",
+        "path": "challenges\\AI_WORKFLOW_PUZZLE_BUILDER\\submissions\\SUB_002\\2nd Position\\docs\\architecture.md",
+        "excerpt": "matches: local, execution, puzzles, committed, inputs"
+      },
+      "state": "valid",
+      "detail": "Referenced source location exists."
+    }
+  ]
+}

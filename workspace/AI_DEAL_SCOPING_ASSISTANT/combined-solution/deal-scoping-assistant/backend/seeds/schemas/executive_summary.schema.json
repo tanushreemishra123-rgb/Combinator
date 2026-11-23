@@ -1,0 +1,106 @@
+{
+  "$defs": {
+    "Basis": {
+      "enum": [
+        "customer",
+        "inferred",
+        "assumed",
+        "recommended"
+      ],
+      "title": "Basis",
+      "type": "string"
+    },
+    "Statement": {
+      "additionalProperties": false,
+      "description": "A single grounded sentence used for list sections.",
+      "properties": {
+        "req_ids": {
+          "description": "Scope item ids this element is grounded in.",
+          "items": {
+            "type": "string"
+          },
+          "title": "Req Ids",
+          "type": "array"
+        },
+        "basis": {
+          "$ref": "#/$defs/Basis",
+          "description": "customer, inferred, assumed or recommended."
+        },
+        "validation_required": {
+          "default": false,
+          "description": "True when a human must validate this element before use.",
+          "title": "Validation Required",
+          "type": "boolean"
+        },
+        "validation_reason": {
+          "default": "",
+          "description": "Why human validation is required, when it is.",
+          "title": "Validation Reason",
+          "type": "string"
+        },
+        "text": {
+          "description": "The statement itself.",
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "basis",
+        "text"
+      ],
+      "title": "Statement",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "overview": {
+      "description": "One-paragraph summary of the proposed solution.",
+      "title": "Overview",
+      "type": "string"
+    },
+    "customer_objectives": {
+      "description": "What the customer wants to achieve.",
+      "items": {
+        "$ref": "#/$defs/Statement"
+      },
+      "title": "Customer Objectives",
+      "type": "array"
+    },
+    "solution_highlights": {
+      "description": "Key points of the proposed solution.",
+      "items": {
+        "$ref": "#/$defs/Statement"
+      },
+      "title": "Solution Highlights",
+      "type": "array"
+    },
+    "commercial_summary": {
+      "default": "",
+      "description": "Effort, timeline and ROM in one paragraph.",
+      "title": "Commercial Summary",
+      "type": "string"
+    },
+    "key_risks": {
+      "description": "Key risks to flag.",
+      "items": {
+        "$ref": "#/$defs/Statement"
+      },
+      "title": "Key Risks",
+      "type": "array"
+    },
+    "next_steps": {
+      "description": "Recommended next steps.",
+      "items": {
+        "$ref": "#/$defs/Statement"
+      },
+      "title": "Next Steps",
+      "type": "array"
+    }
+  },
+  "required": [
+    "overview"
+  ],
+  "title": "ExecutiveSummary",
+  "type": "object"
+}

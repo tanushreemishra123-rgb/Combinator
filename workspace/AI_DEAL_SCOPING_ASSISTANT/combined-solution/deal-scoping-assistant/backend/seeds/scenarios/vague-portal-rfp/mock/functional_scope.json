@@ -1,0 +1,450 @@
+{
+  "capabilities": [
+    {
+      "req_ids": [
+        "FR_01",
+        "NFR_01",
+        "BR_01",
+        "PER_02"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "CAP_01",
+      "name": "Shipment Tracking Portal",
+      "description": "Provides logged-in customers with a modern, mobile-responsive interface to view their active shipments and current locations.",
+      "included_req_ids": [
+        "FR_01",
+        "NFR_01"
+      ],
+      "priority": "must",
+      "dependencies": [
+        "CAP_03"
+      ],
+      "module": "MOD_01",
+      "workstream_id": "WS_01",
+      "delivery_package_id": "DP_01",
+      "scope_class": "customer_requested"
+    },
+    {
+      "req_ids": [
+        "FR_02",
+        "BR_01",
+        "PER_02"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "CAP_02",
+      "name": "Invoice Management Portal",
+      "description": "Enables customers to view and download their invoices directly from the portal, reducing manual queries for the operations team.",
+      "included_req_ids": [
+        "FR_02"
+      ],
+      "priority": "must",
+      "dependencies": [
+        "CAP_04"
+      ],
+      "module": "MOD_01",
+      "workstream_id": "WS_01",
+      "delivery_package_id": "DP_01",
+      "scope_class": "customer_requested"
+    },
+    {
+      "req_ids": [
+        "INT_01",
+        "SYS_01",
+        "DEP_01",
+        "ASM_02"
+      ],
+      "basis": "assumed",
+      "validation_required": true,
+      "validation_reason": "Depends on confirmation of TMS API details (ASM_02) and IT Manager availability (DEP_01).",
+      "id": "CAP_03",
+      "name": "TMS Tracking Integration",
+      "description": "Integrates the portal with the existing Transportation Management System (TMS) to retrieve real-time shipment tracking details.",
+      "included_req_ids": [
+        "INT_01",
+        "SYS_01"
+      ],
+      "priority": "must",
+      "dependencies": [],
+      "module": "MOD_02",
+      "workstream_id": "WS_02",
+      "delivery_package_id": "DP_01",
+      "scope_class": "assumption_pending"
+    },
+    {
+      "req_ids": [
+        "INT_02",
+        "DEP_01",
+        "ASM_02"
+      ],
+      "basis": "assumed",
+      "validation_required": true,
+      "validation_reason": "Depends on confirmation of Finance System API details (ASM_02) and IT Manager availability (DEP_01).",
+      "id": "CAP_04",
+      "name": "Finance System Invoice Integration",
+      "description": "Integrates the portal with the finance system to retrieve invoice documents for customer access.",
+      "included_req_ids": [
+        "INT_02"
+      ],
+      "priority": "high",
+      "dependencies": [],
+      "module": "MOD_02",
+      "workstream_id": "WS_02",
+      "delivery_package_id": "DP_01",
+      "scope_class": "assumption_pending"
+    },
+    {
+      "req_ids": [
+        "FR_03",
+        "ASM_03"
+      ],
+      "basis": "assumed",
+      "validation_required": true,
+      "validation_reason": "Depends on selection of payment gateway (ASM_03).",
+      "id": "CAP_05",
+      "name": "Online Invoice Payment",
+      "description": "Provides customers with the option to pay their invoices online through a secure payment gateway integrated with the portal.",
+      "included_req_ids": [
+        "FR_03"
+      ],
+      "priority": "low",
+      "dependencies": [
+        "CAP_04"
+      ],
+      "module": "MOD_01",
+      "workstream_id": "WS_02",
+      "delivery_package_id": "DP_02",
+      "scope_class": "assumption_pending"
+    },
+    {
+      "req_ids": [
+        "FR_04",
+        "BR_02",
+        "PER_02"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "CAP_06",
+      "name": "Online Shipment Query Submission",
+      "description": "Allows customers to submit support queries regarding specific shipments directly within the portal, reducing operational workload.",
+      "included_req_ids": [
+        "FR_04"
+      ],
+      "priority": "medium",
+      "dependencies": [],
+      "module": "MOD_01",
+      "workstream_id": "WS_01",
+      "delivery_package_id": "DP_01",
+      "scope_class": "customer_requested"
+    },
+    {
+      "req_ids": [
+        "FR_05",
+        "PER_02"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "CAP_07",
+      "name": "Online Collection Booking",
+      "description": "Enables customers to book cargo collections online through the portal.",
+      "included_req_ids": [
+        "FR_05"
+      ],
+      "priority": "low",
+      "dependencies": [],
+      "module": "MOD_01",
+      "workstream_id": "WS_01",
+      "delivery_package_id": "DP_02",
+      "scope_class": "customer_requested"
+    },
+    {
+      "req_ids": [
+        "FR_06",
+        "PER_02"
+      ],
+      "basis": "customer",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "CAP_08",
+      "name": "Monthly Volume Reporting",
+      "description": "Provides customers with monthly summaries of their shipment volumes.",
+      "included_req_ids": [
+        "FR_06"
+      ],
+      "priority": "low",
+      "dependencies": [
+        "CAP_03"
+      ],
+      "module": "MOD_01",
+      "workstream_id": "WS_01",
+      "delivery_package_id": "DP_02",
+      "scope_class": "customer_requested"
+    },
+    {
+      "req_ids": [
+        "BR_01",
+        "NFR_01",
+        "ASM_01",
+        "ASM_04",
+        "ASM_05"
+      ],
+      "basis": "assumed",
+      "validation_required": true,
+      "validation_reason": "Depends on confirmation of user/shipment volumes (ASM_01), target cloud platform (ASM_04), and security standards (ASM_05).",
+      "id": "CAP_09",
+      "name": "Portal Infrastructure & Security",
+      "description": "Establishes the underlying cloud infrastructure, deployment, and standard security measures for the customer portal.",
+      "included_req_ids": [
+        "NFR_01"
+      ],
+      "priority": "high",
+      "dependencies": [],
+      "module": "MOD_03",
+      "workstream_id": "WS_03",
+      "delivery_package_id": "DP_01",
+      "scope_class": "assumption_pending"
+    }
+  ],
+  "modules": [
+    {
+      "req_ids": [
+        "BR_01",
+        "PER_02"
+      ],
+      "basis": "inferred",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "MOD_01",
+      "name": "Customer Self-Service Portal",
+      "description": "Groups all customer-facing functionalities for self-service and interaction.",
+      "capability_ids": [
+        "CAP_01",
+        "CAP_02",
+        "CAP_05",
+        "CAP_06",
+        "CAP_07",
+        "CAP_08"
+      ]
+    },
+    {
+      "req_ids": [
+        "INT_01",
+        "INT_02",
+        "SYS_01"
+      ],
+      "basis": "inferred",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "MOD_02",
+      "name": "Core Integrations",
+      "description": "Manages all integrations with external and internal systems to power portal data.",
+      "capability_ids": [
+        "CAP_03",
+        "CAP_04"
+      ]
+    },
+    {
+      "req_ids": [
+        "BR_01",
+        "NFR_01",
+        "ASM_04",
+        "ASM_05"
+      ],
+      "basis": "inferred",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "MOD_03",
+      "name": "Platform & Infrastructure",
+      "description": "Covers the foundational technical components, hosting, and security aspects of the portal.",
+      "capability_ids": [
+        "CAP_09"
+      ]
+    }
+  ],
+  "workstreams": [
+    {
+      "req_ids": [
+        "BR_01",
+        "NFR_01",
+        "PER_02"
+      ],
+      "basis": "inferred",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "WS_01",
+      "name": "Frontend Development",
+      "capability_ids": [
+        "CAP_01",
+        "CAP_02",
+        "CAP_06",
+        "CAP_07",
+        "CAP_08"
+      ]
+    },
+    {
+      "req_ids": [
+        "INT_01",
+        "INT_02",
+        "SYS_01",
+        "FR_03"
+      ],
+      "basis": "inferred",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "WS_02",
+      "name": "Backend & Integration Development",
+      "capability_ids": [
+        "CAP_03",
+        "CAP_04",
+        "CAP_05"
+      ]
+    },
+    {
+      "req_ids": [
+        "BR_01",
+        "NFR_01",
+        "ASM_04",
+        "ASM_05"
+      ],
+      "basis": "inferred",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "WS_03",
+      "name": "DevOps & Infrastructure",
+      "capability_ids": [
+        "CAP_09"
+      ]
+    }
+  ],
+  "delivery_packages": [
+    {
+      "req_ids": [
+        "BR_01",
+        "FR_01",
+        "FR_02",
+        "INT_01",
+        "INT_02",
+        "FR_04",
+        "NFR_01"
+      ],
+      "basis": "inferred",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "DP_01",
+      "name": "Customer Portal MVP",
+      "capability_ids": [
+        "CAP_01",
+        "CAP_02",
+        "CAP_03",
+        "CAP_04",
+        "CAP_06",
+        "CAP_09"
+      ],
+      "engagement_model": "delivery_package"
+    },
+    {
+      "req_ids": [
+        "FR_03",
+        "FR_05",
+        "FR_06"
+      ],
+      "basis": "inferred",
+      "validation_required": false,
+      "validation_reason": "",
+      "id": "DP_02",
+      "name": "Advanced Self-Service Features",
+      "capability_ids": [
+        "CAP_05",
+        "CAP_07",
+        "CAP_08"
+      ],
+      "engagement_model": "delivery_package"
+    }
+  ],
+  "out_of_scope": [
+    {
+      "req_ids": [],
+      "basis": "inferred",
+      "validation_required": false,
+      "validation_reason": "",
+      "text": "Migration or modernization of existing TMS or Finance systems.",
+      "reason": "The project scope is limited to the new customer portal and its integrations, not the underlying legacy systems."
+    },
+    {
+      "req_ids": [
+        "FR_06"
+      ],
+      "basis": "inferred",
+      "validation_required": false,
+      "validation_reason": "",
+      "text": "Ad-hoc or highly customizable reporting capabilities beyond monthly volume summaries.",
+      "reason": "FR_06 specifies 'monthly summaries' of shipment volumes, not a full business intelligence reporting suite."
+    },
+    {
+      "req_ids": [],
+      "basis": "inferred",
+      "validation_required": false,
+      "validation_reason": "",
+      "text": "Multi-language support for the portal interface.",
+      "reason": "No customer requirement was stated for multi-language support."
+    }
+  ],
+  "recommended_enhancements": [
+    {
+      "req_ids": [],
+      "basis": "recommended",
+      "validation_required": true,
+      "validation_reason": "This is a recommendation beyond the stated scope and requires customer validation.",
+      "id": "ENH_01",
+      "description": "Implement proactive notifications for shipment status updates via email or SMS.",
+      "rationale": "This builds on the shipment tracking capability (FR_01) and further reduces the operations team's workload (BR_02) by automatically informing customers of key events, minimizing inbound inquiries.",
+      "related_req_ids": [
+        "FR_01",
+        "BR_02"
+      ]
+    },
+    {
+      "req_ids": [],
+      "basis": "recommended",
+      "validation_required": true,
+      "validation_reason": "This is a recommendation beyond the stated scope and requires customer validation.",
+      "id": "ENH_02",
+      "description": "Introduce user role management within the portal to allow different levels of access or features for various customer types or internal users.",
+      "rationale": "While PER_02 broadly defines 'Customers', different client needs or internal roles (PER_01) could benefit from tailored access, enhancing security and personalization.",
+      "related_req_ids": [
+        "PER_02",
+        "PER_01"
+      ]
+    },
+    {
+      "req_ids": [],
+      "basis": "recommended",
+      "validation_required": true,
+      "validation_reason": "This is a recommendation beyond the stated scope and requires customer validation.",
+      "id": "ENH_03",
+      "description": "Integrate a customer feedback mechanism (e.g., surveys, rating system) directly into the portal.",
+      "rationale": "This directly supports the 'Customer Portal Initiative' (BR_01) by providing continuous insights into customer satisfaction and areas for improvement, fostering a data-driven approach to UX enhancements.",
+      "related_req_ids": [
+        "BR_01"
+      ]
+    },
+    {
+      "req_ids": [],
+      "basis": "recommended",
+      "validation_required": true,
+      "validation_reason": "This is a recommendation beyond the stated scope and requires customer validation.",
+      "id": "ENH_04",
+      "description": "Develop an AI-powered chatbot to handle common customer inquiries and provide instant answers.",
+      "rationale": "This directly addresses the goal to 'Reduce Operations Workload' (BR_02) and complements 'Online Shipment Queries' (FR_04) by automating responses to frequently asked questions, further freeing up the operations team.",
+      "related_req_ids": [
+        "BR_02",
+        "FR_04"
+      ]
+    }
+  ]
+}

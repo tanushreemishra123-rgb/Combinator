@@ -1,0 +1,30 @@
+{
+  "challengeId": "AI_LEARNING_ADVENTURE",
+  "mode": "code",
+  "entries": [
+    {
+      "target": "combined-solution/ (base)",
+      "sourceId": "SUB_001",
+      "sourcePath": "submissions\\SUB_001",
+      "decisionId": "DEC_3q68ac4",
+      "evidence": [
+        {
+          "id": "EV_1rb2226",
+          "statement": "frontend unit (React, TypeScript, Vite)",
+          "locations": [
+            {
+              "kind": "file",
+              "submissionId": "SUB_001",
+              "path": "challenges\\AI_LEARNING_ADVENTURE\\submissions\\SUB_001\\signal-and-spark",
+              "excerpt": "application root"
+            }
+          ],
+          "origin": "source",
+          "confidence": "high"
+        }
+      ],
+      "generated": false,
+      "note": "Base copied verbatim (30 files)."
+    }
+  ]
+}
