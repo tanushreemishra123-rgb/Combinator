@@ -69,29 +69,29 @@ function markdownSpecification(text: string, ch: DiscoveredChallenge): Challenge
   const sectionAt = (name: RegExp) => lines.findIndex((line) => name.test(line));
   const requirementStart = sectionAt(/^#{1,3}\s*(functional )?requirements/i);
   const stopAt = (from: number) => {
-    for (let i = from + 1; i < lines.length; i++) {
-      if (/^#{1,2}\s*(technical|deliverables|evaluation|success|important|technology)/i.test(lines[i]!)) return i;
-    }
-    return lines.length;
+    const offset = lines
+      .slice(from + 1)
+      .findIndex((line) => /^#{1,2}\s*(technical|deliverables|evaluation|success|important|technology)/i.test(line));
+    return offset < 0 ? lines.length : from + 1 + offset;
   };
   const requirements: SpecRequirement[] = [];
   if (requirementStart >= 0) {
     const end = stopAt(requirementStart);
-    for (let i = requirementStart + 1; i < end; i++) {
-      const match = lines[i]!.match(/^\s*(?:#{2,6}\s+|\d+\.\s+)([^:#]+?)(?::\s*)?$/);
+    for (const [offset, line] of lines.slice(requirementStart + 1, end).entries()) {
+      const match = line.match(/^\s*(?:#{2,6}\s+|\d+\.\s+)([^:#]+?)(?::\s*)?$/);
       if (!match) continue;
-      const item = match[1]!.trim();
-      if (item.length >= 3 && item.length <= 140) requirements.push({ title: item, locator: `line ${i + 1}` });
+      const item = match.at(1)?.trim();
+      if (item && item.length >= 3 && item.length <= 140) requirements.push({ title: item, locator: `line ${requirementStart + offset + 2}` });
     }
   }
   const criteriaStart = sectionAt(/^#{1,3}\s*evaluation criteria/i);
   const evaluationCriteria: string[] = [];
   if (criteriaStart >= 0) {
     const end = stopAt(criteriaStart);
-    for (let i = criteriaStart + 1; i < end; i++) {
-      const line = lines[i]!.trim();
-      const list = line.match(/^[-*]\s+(.+)$/)?.[1];
-      const table = line.startsWith("|") ? line.split("|")[1]?.trim() : undefined;
+    for (const rawLine of lines.slice(criteriaStart + 1, end)) {
+      const line = rawLine.trim();
+      const list = line.match(/^[-*]\s+(.+)$/)?.at(1);
+      const table = line.startsWith("|") ? line.split("|").at(1)?.trim() : undefined;
       const candidate = list ?? table;
       if (candidate && candidate.length >= 3 && !/^criteria$/i.test(candidate) && !/^[-: ]+$/.test(candidate)) evaluationCriteria.push(candidate);
     }
