@@ -2,17 +2,17 @@
  * Base-plus-transplant assembly (challenge §Code Mode).
  *
  *  - Copy the approved base into combined-solution/.
- *  - Apply one Copilot-approved transplant at a time. Each transplant copies the donor's
- *    requirement-grounding files into combined-solution/_transplants/<req>/<donor>/
- *    (namespaced so the base build is never silently broken), records provenance,
- *    and — when dynamic exec is enabled — builds/tests; failures roll back that
- *    transplant and mark its decision blocked, preserving the last verified state.
+ *  - Apply one Copilot-approved transplant at a time. A transplant is permitted
+ *    only when an evidence file maps to an existing, same-type source path in
+ *    the runnable base. The target is snapshotted, replaced, verified, then
+ *    restored on failure. Unsafe cross-stack copies remain manual review.
  *  - Nothing outside combined-solution/ is written (enforced by SafeFs).
  *
  * This deliberately avoids free-form merging / cross-language porting (explicitly
  * not required) and never claims success merely because files were copied.
  */
-import { join, relative } from "node:path";
+import { extname, join, relative } from "node:path";
+import { existsSync, readdirSync } from "node:fs";
 import type { SafeFs } from "../fs-safe.js";
 import type { DiscoveredChallenge } from "../ingest.js";
 import type { Logger } from "../logger.js";
@@ -60,6 +60,34 @@ function acceptedOptionSourceId(d: Decision): string | null {
   if (d.state === "alternative_selected" && d.selectedSource) {
     const opt = d.options.find((o) => o.id === d.selectedSource);
     return opt?.sourceId ?? null;
+  }
+  return null;
+}
+
+/** A path inside a source tree that can safely be mapped between compatible apps. */
+function logicalSourceSuffix(path: string): string | null {
+  const normalized = path.replace(/\\/g, "/");
+  for (const anchor of ["/src/", "/app/", "/lib/", "/components/"]) {
+    const index = normalized.lastIndexOf(anchor);
+    if (index >= 0) return normalized.slice(index + 1);
+  }
+  return null;
+}
+
+function candidateApplicationRoot(candidateDir: string): string | null {
+  const queue: Array<{ path: string; depth: number }> = [{ path: candidateDir, depth: 0 }];
+  while (queue.length) {
+    const current = queue.shift()!;
+    if (current.depth > 5) continue;
+    if (existsSync(join(current.path, "package.json"))) return current.path;
+    try {
+      for (const entry of readdirSync(current.path, { withFileTypes: true })) {
+        if (!entry.isDirectory() || ["node_modules", ".git", ".combinator-snapshots"].includes(entry.name)) continue;
+        queue.push({ path: join(current.path, entry.name), depth: current.depth + 1 });
+      }
+    } catch {
+      // An unreadable directory simply cannot be a transplant target.
+    }
   }
   return null;
 }
@@ -148,6 +176,7 @@ export async function assembleCandidate(
   const applied: string[] = [];
   const rolledBack: string[] = [];
   const transplantDecisions = updatedDecisions.filter((d) => d.kind === "transplant");
+  const appRoot = candidateApplicationRoot(candidateDir);
 
   for (const d of transplantDecisions) {
     const donorId = acceptedOptionSourceId(d);
@@ -159,34 +188,43 @@ export async function assembleCandidate(
       .map((l) => l.path)
       .filter((p): p is string => !!p);
 
-    const destBase = join(candidateDir, "_transplants", d.requirementId ?? "req", donorId);
-    let n = 0;
+    const snapshotDir = join(candidateDir, ".combinator-snapshots", d.id);
+    const changed: Array<{ source: string; target: string; snapshot: string }> = [];
     for (const abs of [...new Set(donorFilesRel)]) {
       if (!fs.exists(abs)) continue;
-      const donorSub = challenge.submissions.find((s) => s.submissionId === donorId);
-      const rel = donorSub ? relative(donorSub.rootPath, abs) : abs.split("/").pop()!;
+      const suffix = logicalSourceSuffix(abs);
+      if (!suffix || !appRoot) continue;
+      const target = join(appRoot, suffix);
+      // Never add an orphan file or overwrite a different language. A Copilot
+      // must explicitly resolve those cases rather than the tool guessing.
+      if (!fs.exists(target) || extname(abs).toLowerCase() !== extname(target).toLowerCase()) continue;
       try {
-        fs.copyInto(abs, join(destBase, rel));
-        n++;
+        const snapshot = join(snapshotDir, suffix);
+        fs.copyInto(target, snapshot);
+        fs.copyInto(abs, target);
+        changed.push({ source: abs, target, snapshot });
       } catch {
         /* skip unreadable */
       }
     }
 
-    if (n === 0) {
+    if (changed.length === 0) {
       d.state = "manual_review";
-      d.copilotComment = "No concrete donor files resolved for this transplant; needs manual selection.";
+      d.copilotComment = "No compatible donor-to-base source path was found. Copilot must select or map a safe integration path.";
       continue;
     }
 
-    entries.push({
-      target: `combined-solution/_transplants/${d.requirementId}/${donorId}/`,
-      sourceId: donorId,
-      decisionId: d.id,
-      evidence: cov?.evidence ?? [],
-      generated: false,
-      note: `Transplanted ${n} grounding file(s) for ${d.requirementId} (namespaced to protect base build).`,
-    });
+    for (const change of changed) {
+      entries.push({
+        target: relative(workspaceDir, change.target),
+        sourceId: donorId,
+        sourcePath: relative(challenge.packageRoot, change.source),
+        decisionId: d.id,
+        evidence: cov?.evidence ?? [],
+        generated: false,
+        note: `Compatible source replacement for ${d.requirementId}; snapshot retained until verification completes.`,
+      });
+    }
 
     // Verify after this transplant when exec is enabled; roll back on failure.
     if (exec.enabled) {
@@ -202,14 +240,16 @@ export async function assembleCandidate(
         exec: auditedExec,
       });
       if (check.overall === "failed") {
-        fs.removeInWritable(destBase);
-        log.recordAudit({ op: "rollback", target: destBase, detail: `transplant ${d.id} failed verification` });
+        for (const change of changed) fs.copyInto(change.snapshot, change.target);
+        fs.removeInWritable(snapshotDir);
+        log.recordAudit({ op: "rollback", target: snapshotDir, detail: `transplant ${d.id} failed verification; restored ${changed.length} file(s)` });
         d.state = "blocked";
         d.copilotComment = "Transplant rolled back: candidate failed verification after applying it.";
         rolledBack.push(d.requirementId ?? donorId);
         continue;
       }
     }
+    fs.removeInWritable(snapshotDir);
     applied.push(d.requirementId ?? donorId);
   }
 

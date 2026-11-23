@@ -33,6 +33,7 @@ interface SpecRequirement {
   id?: string;
   title: string;
   priority?: string;
+  locator?: string;
   constraints?: Array<{ id?: string; text: string }>;
 }
 
@@ -62,10 +63,55 @@ export interface ReviewContextResult {
   sourceLocationMap: Record<string, SourceLocation>;
 }
 
+function markdownSpecification(text: string, ch: DiscoveredChallenge): ChallengeContext {
+  const lines = text.split(/\r?\n/);
+  const title = lines.find((line) => /^#\s+/.test(line))?.replace(/^#\s+/, "").trim() || ch.title;
+  const sectionAt = (name: RegExp) => lines.findIndex((line) => name.test(line));
+  const requirementStart = sectionAt(/^#{1,3}\s*(functional )?requirements/i);
+  const stopAt = (from: number) => {
+    for (let i = from + 1; i < lines.length; i++) {
+      if (/^#{1,2}\s*(technical|deliverables|evaluation|success|important|technology)/i.test(lines[i]!)) return i;
+    }
+    return lines.length;
+  };
+  const requirements: SpecRequirement[] = [];
+  if (requirementStart >= 0) {
+    const end = stopAt(requirementStart);
+    for (let i = requirementStart + 1; i < end; i++) {
+      const match = lines[i]!.match(/^\s*(?:#{2,6}\s+|\d+\.\s+)([^:#]+?)(?::\s*)?$/);
+      if (!match) continue;
+      const item = match[1]!.trim();
+      if (item.length >= 3 && item.length <= 140) requirements.push({ title: item, locator: `line ${i + 1}` });
+    }
+  }
+  const criteriaStart = sectionAt(/^#{1,3}\s*evaluation criteria/i);
+  const evaluationCriteria: string[] = [];
+  if (criteriaStart >= 0) {
+    const end = stopAt(criteriaStart);
+    for (let i = criteriaStart + 1; i < end; i++) {
+      const line = lines[i]!.trim();
+      const list = line.match(/^[-*]\s+(.+)$/)?.[1];
+      const table = line.startsWith("|") ? line.split("|")[1]?.trim() : undefined;
+      const candidate = list ?? table;
+      if (candidate && candidate.length >= 3 && !/^criteria$/i.test(candidate) && !/^[-: ]+$/.test(candidate)) evaluationCriteria.push(candidate);
+    }
+  }
+  return {
+    challengeId: ch.challengeId,
+    title,
+    challengeMode: ch.mode,
+    requirements,
+    evaluationCriteria: [...new Set(evaluationCriteria)],
+  };
+}
+
 function readSpec(fs: SafeFs, ch: DiscoveredChallenge): ChallengeContext | null {
   if (!ch.specificationPath) return null;
   try {
-    return JSON.parse(fs.readText(ch.specificationPath)) as ChallengeContext;
+    const text = fs.readText(ch.specificationPath);
+    if (/\.json$/i.test(ch.specificationPath)) return JSON.parse(text) as ChallengeContext;
+    if (/\.(md|markdown|txt)$/i.test(ch.specificationPath)) return markdownSpecification(text, ch);
+    return null;
   } catch {
     return null;
   }
@@ -84,7 +130,7 @@ function specRequirementsToActive(
     locations[id] = {
       kind: "specification",
       path: specPath,
-      locator: `requirements[${i}]`,
+      locator: r.locator ?? `requirements[${i}]`,
       excerpt: r.title,
     };
     const constraints: Constraint[] = (r.constraints ?? []).map((c, j) => {

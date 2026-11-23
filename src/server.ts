@@ -73,6 +73,7 @@ function workspaceBundle(id: string): unknown {
     evidenceValidation: read("evidence-validation.json"),
     profiles,
     matrix: read("requirement-matrix.json"),
+    scorecardEstimate: read("scorecard-estimate.json"),
     decisions: read("decisions.json"),
     provenance: read("provenance.json"),
     contradictions: read("contradictions.json"),

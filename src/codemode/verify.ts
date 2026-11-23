@@ -136,8 +136,10 @@ export async function verifyCodeCandidate(input: CodeVerifyInput): Promise<{
   steps: VerificationStep[];
   overall: "passed" | "failed" | "partial" | "not_verifiable";
   honestSummary: string;
+  logs: Array<{ step: string; command: string; exitCode: number | null; timedOut: boolean; stdoutTail: string; stderrTail: string }>;
 }> {
   const steps: VerificationStep[] = [];
+  const logs: Array<{ step: string; command: string; exitCode: number | null; timedOut: boolean; stdoutTail: string; stderrTail: string }> = [];
   const appDir = packageRoot(input.candidateDir);
 
   // 1. Source integrity (always evaluated).
@@ -191,6 +193,14 @@ export async function verifyCodeCandidate(input: CodeVerifyInput): Promise<{
       timeoutMs: input.exec.timeoutMs,
       audit: input.exec.audit,
     });
+    logs.push({
+      step: d.name,
+      command: `${d.cmd[0]} ${d.cmd[1].join(" ")}`,
+      exitCode: r.code,
+      timedOut: r.timedOut,
+      stdoutTail: r.stdout,
+      stderrTail: r.stderr,
+    });
     steps.push({
       name: d.name,
       command: `${d.cmd[0]} ${d.cmd[1].join(" ")}`,
@@ -243,5 +253,5 @@ export async function verifyCodeCandidate(input: CodeVerifyInput): Promise<{
       ? "Dynamic steps that could run are recorded with real results; steps that could not be verified are marked not_verifiable (never passed). No step is reported as successful without evidence."
       : "Static and integrity checks passed. Dynamic verification was not executed in this pass (run with --verify-exec); those steps are marked skipped, not passed.";
 
-  return { steps, overall, honestSummary };
+  return { steps, overall, honestSummary, logs };
 }

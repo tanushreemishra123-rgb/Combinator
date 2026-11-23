@@ -7,6 +7,7 @@ RUN npm install --no-audit --no-fund
 COPY tsconfig.json ./
 COPY src ./src
 COPY public ./public
+COPY specifications ./specifications
 RUN npm run build
 
 FROM node:22-slim AS runtime
@@ -17,6 +18,7 @@ COPY package.json package-lock.json* ./
 RUN npm install --omit=dev --no-audit --no-fund
 COPY --from=build /app/dist ./dist
 COPY --from=build /app/public ./public
+COPY --from=build /app/specifications ./specifications
 
 # Default: serve the review UI. Mount a starter pack at /app/starter-pack and a
 # writable workspace at /app/workspace. Run the CLI by overriding the command, e.g.

@@ -14,6 +14,10 @@ services:
     volumes:
       - ./starter-pack:/app/starter-pack:ro      # sources mounted READ-ONLY
       - ./workspace:/app/workspace
+    # The pipeline's default mock-mode analysis needs no internet. This also
+    # prevents untrusted candidate install/build/test processes from reaching
+    # the network while they run in this disposable container.
+    network_mode: none
     command: ["node", "dist/cli.js", "run-all", "--pack", "./starter-pack", "--out", "./workspace"]
 
   # Long-running: the Copilot review UI.

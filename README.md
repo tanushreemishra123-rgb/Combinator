@@ -91,6 +91,22 @@ four public fixtures. Specification files in an explicit directory are named
 `<CHALLENGE_ID>.json`, `.md`, or `.txt`. The run fails clearly if none is available;
 `challenge-context.json` is never silently treated as the final specification.
 
+For hidden/future packs, the supported package-level contract is:
+
+```json
+{
+  "specification": {
+    "path": "final-challenge-specification.md",
+    "format": "markdown",
+    "required": true
+  }
+}
+```
+
+`path` is relative to the folder containing `challenge-package.json`. Markdown is
+required and TXT is also accepted; specifications are read locally and never fetched
+from a public URL during evaluation.
+
 ```bash
 npm run combinator -- run-all --pack /path/to/starter-pack --spec-dir /path/to/final-specifications --out ./workspace
 ```

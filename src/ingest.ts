@@ -114,12 +114,19 @@ function resolveSpecification(
   packageRoot: string,
   mc: ManifestChallenge,
   paths: Record<string, string>,
+  packageSpecification: { path?: string; format?: string; required?: boolean } | undefined,
   specificationDir?: string,
 ): Pick<DiscoveredChallenge, "specificationPath" | "specificationSource"> {
-  const packRef = mc.specificationRef ?? paths.specification ?? paths.spec ?? "";
+  // Published hidden-pack contract: challenge-package.json has
+  // specification.path relative to the package itself. The older paths.* and
+  // manifest field forms remain supported for compatibility with visible packs.
+  const packRef = packageSpecification?.path ?? mc.specificationRef ?? paths.specification ?? paths.spec ?? "";
   const fromPack = packRef ? resolve(packageRoot, packRef) : null;
   if (fromPack && fs.exists(fromPack)) {
     return { specificationPath: fromPack, specificationSource: "pack_provided" };
+  }
+  if (packageSpecification?.required) {
+    throw new IngestError(`Required specification is missing for ${mc.challengeId}: ${packRef || "specification.path"}`);
   }
 
   if (specificationDir) {
@@ -152,7 +159,7 @@ export function discoverChallenge(
   // challenge-package.json is the authority for sub-paths; fall back to defaults.
   const pkgPath = join(packageRoot, "challenge-package.json");
   const pkg = fs.exists(pkgPath)
-    ? parseJson<{ paths?: Record<string, string> }>(fs, pkgPath)
+    ? parseJson<{ paths?: Record<string, string>; specification?: { path?: string; format?: string; required?: boolean } }>(fs, pkgPath)
     : { paths: {} };
   const paths = pkg.paths ?? {};
   const submissionsDir = resolve(packageRoot, paths.submissions ?? "submissions");
@@ -193,7 +200,7 @@ export function discoverChallenge(
   const verCfg = join(verificationDir, "verification-config.json");
   const integ = join(integrityDir, "source-hashes.json");
 
-  const specification = resolveSpecification(fs, packageRoot, mc, paths, specificationDir);
+  const specification = resolveSpecification(fs, packageRoot, mc, paths, pkg.specification, specificationDir);
 
   return {
     challengeId: mc.challengeId,

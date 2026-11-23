@@ -34,6 +34,7 @@ import type {
   RequirementMatrix,
   Verification,
   WorkspaceManifest,
+  DecisionWorkspace,
 } from "./types.js";
 
 const VERSION = "1.0.0";
@@ -47,6 +48,31 @@ export interface RunOptions {
   specificationDir?: string;
   /** Copilot decision states to overlay onto freshly-built decisions (regeneration). */
   overlayDecisions?: import("./types.js").DecisionWorkspace;
+}
+
+/**
+ * Transparent decision-coverage estimate. This is deliberately not presented
+ * as an organizer scorecard: the visible pack provides no executable scorecard
+ * weights. It gives the UI a reproducible before/after value on regeneration.
+ */
+function decisionCoverageEstimate(matrix: RequirementMatrix, decisions: DecisionWorkspace | null) {
+  const decisionByRequirement = new Map(
+    (decisions?.decisions ?? [])
+      .filter((d) => !!d.requirementId)
+      .map((d) => [d.requirementId!, d]),
+  );
+  const selected = matrix.rows.filter((row) => {
+    const d = decisionByRequirement.get(row.requirementId);
+    return d ? d.state === "accepted" || d.state === "alternative_selected" : false;
+  }).length;
+  return {
+    kind: "decision_coverage_estimate_not_original_scorecard",
+    challengeId: matrix.challengeId,
+    activeRequirements: matrix.rows.length,
+    requirementsWithCopilotDecision: selected,
+    decisionCoveragePercent: matrix.rows.length ? Math.round((selected / matrix.rows.length) * 1000) / 10 : 0,
+    note: "Computed from current Copilot decisions only. No organizer scorecard weights or points were invented.",
+  };
 }
 
 /** Overlay saved copilot states (by decision id) onto freshly-built decisions. */
@@ -111,6 +137,7 @@ export async function runChallenge(
   let codeProfiles: CodeSubmissionProfile[] = [];
   let ideaProfiles: IdeaProfile[] = [];
   let contradictions = [] as RequirementMatrix["conflicts"];
+  let finalDecisions: DecisionWorkspace | null = null;
 
   if (ch.mode === "code") {
     for (const sub of ch.submissions) {
@@ -150,8 +177,10 @@ export async function runChallenge(
       honestSummary: result.verification.honestSummary,
       sourceIntegrityOk: true,
     };
+    writeJsonRel(join(wsDir, "verification-logs.json"), result.verification.logs);
     decisions.decisions = result.assemble.updatedDecisions;
     writeJsonRel(join(wsDir, "decisions.json"), decisions);
+    finalDecisions = decisions;
     void before2;
   } else {
     const specText = ch.specificationPath ? fs.readText(ch.specificationPath) : null;
@@ -187,11 +216,13 @@ export async function runChallenge(
     provenance = synth.provenance;
     verification = synth.verification;
     writeJsonRel(join(wsDir, "decisions.json"), decisions);
+    finalDecisions = decisions;
   }
 
   // Requirement matrix (JSON + Markdown).
   writeJsonRel(join(wsDir, "requirement-matrix.json"), matrix);
   fs.writeText(join(wsDir, "requirement-matrix.md"), matrixToMarkdown(matrix, ch.title));
+  writeJsonRel(join(wsDir, "scorecard-estimate.json"), decisionCoverageEstimate(matrix, finalDecisions));
   // Evidence references are validated against the actually discovered inputs.
   // Invalid locations are reported; they are never silently treated as support.
   writeJsonRel(
@@ -207,6 +238,9 @@ export async function runChallenge(
     contradictions: ch.mode === "ideation" ? contradictions : matrix.conflicts,
   });
   writeJsonRel(join(wsDir, "verification.json"), verification);
+  if (ch.mode === "ideation") {
+    writeJsonRel(join(wsDir, "verification-logs.json"), []);
+  }
 
   // Integrity — after (sources must be unchanged).
   const after = hashTree(fs, ch.packageRoot);
@@ -247,10 +281,12 @@ export async function runChallenge(
       "overview.md",
       "requirement-matrix.json",
       "requirement-matrix.md",
+      "scorecard-estimate.json",
       "decisions.json",
       "provenance.json",
       "contradictions.json",
       "verification.json",
+      "verification-logs.json",
       "usage-report.json",
       "audit-log.json",
       "integrity/integrity-report.json",

@@ -52,6 +52,8 @@
       .evi{font-size:12px; color:var(--muted); margin-top:4px;}
       .evidence-button{font:inherit; color:var(--accent); padding:0; border:0; background:transparent; text-decoration:underline;}
       .spin{color:var(--muted); font-size:12px;}
+      .viewnav{display:flex; flex-wrap:wrap; gap:6px; margin:0 0 14px;}
+      .viewnav button{font-size:12px;}
       a{color:var(--accent);}
     </style>
   </head>
@@ -92,9 +94,14 @@
         current = id;
         await loadChallenges();
         busy(true);
-        bundle = await fetch("/api/workspace/" + id).then((r) => r.json());
-        busy(false);
-        render();
+        try {
+          const response = await fetch("/api/workspace/" + id);
+          bundle = await response.json();
+          if (!response.ok || bundle.error) throw new Error(bundle.error || "Workspace could not be loaded.");
+          render();
+        } catch (error) {
+          $("#main").textContent = `Could not load ${id}: ${error.message}`;
+        } finally { busy(false); }
       }
 
       function stateTag(s) { return `<span class="st state-${s}">${s}</span>`; }
@@ -102,7 +109,7 @@
       function renderMatrix(m) {
         if (!m) return "";
         const sources = [...new Set(m.rows.flatMap((r) => r.cells.map((c) => c.sourceId)))];
-        let h = `<div class="card"><h3>Requirement matrix <span class="muted">(${m.mode})</span></h3><table><thead><tr><th>Requirement</th>`;
+        let h = `<div class="card" id="matrix"><h3>Requirement matrix <span class="muted">(${m.mode})</span></h3><table><thead><tr><th>Requirement</th>`;
         for (const s of sources) h += `<th>${escapeHtml(s)}</th>`;
         h += `<th>Recommended</th><th>Conf.</th></tr></thead><tbody>`;
         for (const row of m.rows) {
@@ -136,7 +143,7 @@
 
       function renderDecisions(dw) {
         if (!dw) return "";
-        let h = `<div class="card"><h3>Copilot decisions <span class="muted">(${dw.decisions.length})</span></h3>`;
+        let h = `<div class="card" id="decisions"><h3>Copilot decisions <span class="muted">(${dw.decisions.length})</span></h3>`;
         for (const d of dw.decisions) {
           const opts = d.options.map((o) => `<option value="${escapeHtml(o.id)}">${escapeHtml(o.label)}</option>`).join("");
           h += `<div class="decision">
@@ -177,7 +184,7 @@
 
       function renderVerification(v) {
         if (!v) return "";
-        let h = `<div class="card"><h3>Verification <span class="st state-${v.overall}">${v.overall}</span></h3>`;
+        let h = `<div class="card" id="verification"><h3>Verification <span class="st state-${v.overall}">${v.overall}</span></h3>`;
         h += `<table><tbody>`;
         for (const s of v.steps) h += `<tr><td>${escapeHtml(s.name)}</td><td class="state-${s.state}">${escapeHtml(s.state)}</td><td class="muted">${escapeHtml(s.detail)}</td></tr>`;
         h += `</tbody></table><div class="evi" style="margin-top:8px">${escapeHtml(v.honestSummary)}</div></div>`;
@@ -186,7 +193,7 @@
 
       function renderReviewContext(status, active, reconciliation, locations) {
         if (!status) return "";
-        let h = `<div class="card"><h3>Review context and reconciliation</h3>`;
+        let h = `<div class="card" id="overview"><h3>Review context and reconciliation</h3>`;
         h += `<div class="row">${stateTag(status.status)} <span class="tag">${escapeHtml(status.mode)}</span></div>`;
         h += `<p class="evi">${escapeHtml(status.detail || "")}</p>`;
         if (active?.requirements?.length) {
@@ -207,7 +214,7 @@
 
       function renderProfiles(profiles) {
         if (!profiles?.length) return "";
-        let h = `<div class="card"><h3>Submission profiles and evidence</h3>`;
+        let h = `<div class="card" id="profiles"><h3>Submission profiles and evidence</h3>`;
         for (const entry of profiles) {
           const profile = entry.profile;
           const ideas = entry.ideas;
@@ -222,13 +229,18 @@
       function renderContradictions(c) {
         const items = c?.contradictions || [];
         if (!items.length) return "";
-        return `<div class="card"><h3>Contradictions and trade-offs</h3><pre>${escapeHtml(JSON.stringify(items, null, 2))}</pre></div>`;
+        return `<div class="card" id="contradictions"><h3>Contradictions and trade-offs</h3><pre>${escapeHtml(JSON.stringify(items, null, 2))}</pre></div>`;
       }
 
       function renderEvidenceValidation(report) {
         if (!report) return "";
         const tone = report.unresolved ? "warn" : "good";
-        return `<div class="card"><h3>Evidence validation <span class="tag ${tone}">${report.unresolved || 0} unresolved</span></h3><p class="evi">${report.valid || 0} valid · ${report.locatorOnly || 0} document locators · ${report.total || 0} checked.</p>${report.unresolved ? `<pre>${escapeHtml(JSON.stringify(report.findings.filter(f => f.state === "unresolved"), null, 2))}</pre>` : ""}</div>`;
+        return `<div class="card" id="evidence"><h3>Evidence validation <span class="tag ${tone}">${report.unresolved || 0} unresolved</span></h3><p class="evi">${report.valid || 0} valid · ${report.locatorOnly || 0} document locators · ${report.total || 0} checked.</p>${report.unresolved ? `<pre>${escapeHtml(JSON.stringify(report.findings.filter(f => f.state === "unresolved"), null, 2))}</pre>` : ""}</div>`;
+      }
+
+      function renderDecisionEstimate(estimate) {
+        if (!estimate) return "";
+        return `<div class="card"><h3>Decision coverage estimate</h3><p class="evi">${escapeHtml(estimate.requirementsWithCopilotDecision)} of ${escapeHtml(estimate.activeRequirements)} requirements have a current Copilot decision (${escapeHtml(estimate.decisionCoveragePercent)}%).</p><p class="evi">${escapeHtml(estimate.note)}</p></div>`;
       }
 
       function render() {
@@ -245,16 +257,26 @@
         h += renderReviewContext(bundle.reviewContextStatus, bundle.activeReviewContext, bundle.reconciliation, bundle.sourceLocationMap);
         h += renderProfiles(bundle.profiles);
         h += renderMatrix(bundle.matrix);
+        h += renderDecisionEstimate(bundle.scorecardEstimate);
         h += renderEvidenceValidation(bundle.evidenceValidation);
         h += renderContradictions(bundle.contradictions);
         h += renderDecisions(bundle.decisions);
         h += renderVerification(bundle.verification);
-        if (bundle.concept) h += `<div class="card"><h3>Synthesized concept</h3><pre>${escapeHtml(bundle.concept)}</pre></div>`;
-        if (bundle.provenance) h += `<div class="card"><h3>Provenance (${bundle.provenance.entries.length})</h3><pre>${escapeHtml(JSON.stringify(bundle.provenance.entries, null, 2))}</pre></div>`;
+        if (bundle.concept) h += `<div class="card" id="candidate"><h3>Synthesized concept</h3><pre>${escapeHtml(bundle.concept)}</pre></div>`;
+        if (bundle.provenance) h += `<div class="card" id="provenance"><h3>Provenance (${bundle.provenance.entries.length})</h3><pre>${escapeHtml(JSON.stringify(bundle.provenance.entries, null, 2))}</pre></div>`;
         // Render generated markup without an innerHTML sink: parse to a detached
         // document, then adopt its nodes.
         const parsed = new DOMParser().parseFromString(h, "text/html");
         $("#main").replaceChildren(...Array.from(parsed.body.childNodes));
+        const nav = document.createElement("nav");
+        nav.className = "viewnav";
+        for (const [id, label] of [["overview","Overview"],["profiles","Profiles"],["matrix","Matrix"],["decisions","Decisions"],["contradictions","Contradictions"],["candidate","Candidate"],["verification","Verification"],["provenance","Provenance"]]) {
+          const button = document.createElement("button");
+          button.textContent = label;
+          button.onclick = () => document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+          nav.append(button);
+        }
+        $("#main").prepend(nav);
       }
 
       function escapeHtml(s){return String(s).replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));}
