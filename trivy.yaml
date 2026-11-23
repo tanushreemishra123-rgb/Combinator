@@ -8,6 +8,7 @@ scan:
   skip-dirs:
     - starter-pack
     - workspace
+    - workspace-local-test
     - node_modules
     - dist
     - .github

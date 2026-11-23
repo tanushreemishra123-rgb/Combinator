@@ -33,7 +33,8 @@ jobs:
             const r = JSON.parse(require("fs").readFileSync("trivy-results.json","utf8"));
             const vuln = {CRITICAL:0,HIGH:0,MEDIUM:0,LOW:0,UNKNOWN:0};
             const mis  = {CRITICAL:0,HIGH:0,MEDIUM:0,LOW:0,UNKNOWN:0};
-            const secrets = [], lic = {CRITICAL:0,HIGH:0,MEDIUM:0,LOW:0,UNKNOWN:0};
+            const sec  = {CRITICAL:0,HIGH:0,MEDIUM:0,LOW:0,UNKNOWN:0};
+            const lic  = {CRITICAL:0,HIGH:0,MEDIUM:0,LOW:0,UNKNOWN:0};
             const hi = [];
             for (const res of (r.Results||[])) {
               for (const v of (res.Vulnerabilities||[])) { vuln[v.Severity]=(vuln[v.Severity]||0)+1;
@@ -42,17 +43,29 @@ jobs:
               for (const m of (res.Misconfigurations||[])) { mis[m.Severity]=(mis[m.Severity]||0)+1;
                 if (m.Severity==="CRITICAL"||m.Severity==="HIGH")
                   hi.push(`  ${m.Severity} misconfig ${m.ID} ${m.Title}  (${res.Target})`); }
-              for (const s of (res.Secrets||[])) secrets.push(`  ${s.Severity} ${s.RuleID} ${res.Target}:${s.StartLine}`);
+              for (const s of (res.Secrets||[])) { const severity=s.Severity||"UNKNOWN"; sec[severity]=(sec[severity]||0)+1;
+                if (severity==="CRITICAL"||severity==="HIGH") hi.push(`  ${severity} secret ${s.RuleID} (${res.Target}:${s.StartLine})`); }
               for (const l of (res.Licenses||[])) lic[l.Severity]=(lic[l.Severity]||0)+1;
             }
+            const score = count => count>=10?0:count>=5?1:count>=3?2:count===2?3:count===1?4:5;
+            const restVulnerabilities = Object.entries(vuln).filter(([severity]) => severity!=="CRITICAL"&&severity!=="HIGH").reduce((sum,[,count])=>sum+count,0);
+            const highRiskLicenses = lic.CRITICAL + lic.HIGH;
             console.log("================ Trivy summary ================");
             console.log("Vulnerabilities (CVE):", JSON.stringify(vuln));
             console.log("Misconfigurations (IaC):", JSON.stringify(mis));
+            console.log("Secrets:", JSON.stringify(sec));
             console.log("Licenses:", JSON.stringify(lic));
-            console.log("Secrets:", secrets.length);
-            if (secrets.length) { console.log("\nSecret findings:"); secrets.forEach(s=>console.log(s)); }
+            console.log("\n================ Scorecard counts / scores ================");
+            console.log(`Vulnerability CRITICAL: ${vuln.CRITICAL} → ${score(vuln.CRITICAL)}/5`);
+            console.log(`Vulnerability HIGH: ${vuln.HIGH} → ${score(vuln.HIGH)}/5`);
+            console.log(`Vulnerability other: ${restVulnerabilities} → ${score(restVulnerabilities)}/5`);
+            console.log(`Misconfiguration CRITICAL: ${mis.CRITICAL} → ${score(mis.CRITICAL)}/5`);
+            console.log(`Misconfiguration HIGH: ${mis.HIGH} → ${score(mis.HIGH)}/5`);
+            console.log(`Secret CRITICAL: ${sec.CRITICAL} → ${score(sec.CRITICAL)}/5`);
+            console.log(`Secret HIGH: ${sec.HIGH} → ${score(sec.HIGH)}/5`);
+            console.log(`License CRITICAL+HIGH: ${highRiskLicenses} → ${score(highRiskLicenses)}/5`);
             if (hi.length) { console.log("\nCRITICAL/HIGH findings (must fix):"); hi.forEach(s=>console.log(s)); }
-            if (!hi.length && !secrets.length) console.log("\nNo CRITICAL/HIGH and no secrets — scorecard should pass.");
+            if (!hi.length) console.log("\nNo CRITICAL/HIGH findings.");
           '
 
       - uses: actions/upload-artifact@v4
